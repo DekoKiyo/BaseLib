@@ -8,7 +8,7 @@ namespace BaseLib;
 #pragma warning disable CS1591
 
 /// <summary>
-/// Date this file was generated: 2024/07/15 13:02:03
+/// Date this file was generated: 2024/07/15 18:43:21
 /// </summary>
 public static class Natives
 {
@@ -57,7 +57,7 @@ public static class Natives
 	/// </summary>
 	public static int START_NEW_SCRIPT(string scriptName, int stackSize)
 	{
-		return NativeFunction.Natives.START_NEW_SCRIPT(scriptName, stackSize);
+		return NativeFunction.Natives.START_NEW_SCRIPT<int>(scriptName, stackSize);
 	}
 	/// <summary>
 	/// 	return : script thread id, 0 if failed<br/>
@@ -65,26 +65,26 @@ public static class Natives
 	/// </summary>
 	public static int START_NEW_SCRIPT_WITH_ARGS(string scriptName, int argCount, int stackSize)
 	{
-		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_ARGS(scriptName, 0, argCount, stackSize);
+		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_ARGS<int>(scriptName, 0, argCount, stackSize);
 	}
 	public static int START_NEW_SCRIPT_WITH_NAME_HASH(ulong scriptHash, int stackSize)
 	{
-		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_NAME_HASH(scriptHash, stackSize);
+		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_NAME_HASH<int>(scriptHash, stackSize);
 	}
 	public static int START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(ulong scriptHash, int argCount, int stackSize)
 	{
-		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(scriptHash, 0, argCount, stackSize);
+		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS<int>(scriptHash, 0, argCount, stackSize);
 	}
 	/// <summary>
 	/// 	Counts up. Every 1000 is 1 real-time second. Use SETTIMERA(int value) to set the timer (e.g.: SETTIMERA(0)).
 	/// </summary>
 	public static int TIMERA()
 	{
-		return NativeFunction.Natives.TIMERA();
+		return NativeFunction.Natives.TIMERA<int>();
 	}
 	public static int TIMERB()
 	{
-		return NativeFunction.Natives.TIMERB();
+		return NativeFunction.Natives.TIMERB<int>();
 	}
 	public static void SETTIMERA(int value)
 	{
@@ -99,82 +99,82 @@ public static class Natives
 	/// </summary>
 	public static float TIMESTEP()
 	{
-		return NativeFunction.Natives.TIMESTEP();
+		return NativeFunction.Natives.TIMESTEP<float>();
 	}
 	public static float SIN(float value)
 	{
-		return NativeFunction.Natives.SIN(value);
+		return NativeFunction.Natives.SIN<float>(value);
 	}
 	public static float COS(float value)
 	{
-		return NativeFunction.Natives.COS(value);
+		return NativeFunction.Natives.COS<float>(value);
 	}
 	public static float SQRT(float value)
 	{
-		return NativeFunction.Natives.SQRT(value);
+		return NativeFunction.Natives.SQRT<float>(value);
 	}
 	public static float POW(float _base, float exponent)
 	{
-		return NativeFunction.Natives.POW(_base, exponent);
+		return NativeFunction.Natives.POW<float>(_base, exponent);
 	}
 	public static float LOG10(float value)
 	{
-		return NativeFunction.Natives.LOG10(value);
+		return NativeFunction.Natives.LOG10<float>(value);
 	}
 	/// <summary>
 	/// 	Calculates the magnitude of a vector.
 	/// </summary>
 	public static float VMAG(float x, float y, float z)
 	{
-		return NativeFunction.Natives.VMAG(x, y, z);
+		return NativeFunction.Natives.VMAG<float>(x, y, z);
 	}
 	/// <summary>
 	/// 	Calculates the magnitude of a vector but does not perform Sqrt operations. (Its way faster)
 	/// </summary>
 	public static float VMAG2(float x, float y, float z)
 	{
-		return NativeFunction.Natives.VMAG2(x, y, z);
+		return NativeFunction.Natives.VMAG2<float>(x, y, z);
 	}
 	/// <summary>
 	/// 	Calculates distance between vectors.
 	/// </summary>
 	public static float VDIST(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.VDIST(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.VDIST<float>(x1, y1, z1, x2, y2, z2);
 	}
 	/// <summary>
 	/// 	Calculates distance between vectors but does not perform Sqrt operations. (Its way faster)
 	/// </summary>
 	public static float VDIST2(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.VDIST2(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.VDIST2<float>(x1, y1, z1, x2, y2, z2);
 	}
 	public static int SHIFT_LEFT(int value, int bitShift)
 	{
-		return NativeFunction.Natives.SHIFT_LEFT(value, bitShift);
+		return NativeFunction.Natives.SHIFT_LEFT<int>(value, bitShift);
 	}
 	public static int SHIFT_RIGHT(int value, int bitShift)
 	{
-		return NativeFunction.Natives.SHIFT_RIGHT(value, bitShift);
+		return NativeFunction.Natives.SHIFT_RIGHT<int>(value, bitShift);
 	}
 	public static int FLOOR(float value)
 	{
-		return NativeFunction.Natives.FLOOR(value);
+		return NativeFunction.Natives.FLOOR<int>(value);
 	}
 	/// <summary>
 	/// 	I&amp;apos;m guessing this rounds a float value up to the next whole number, and FLOOR rounds it down
 	/// </summary>
 	public static int CEIL(float value)
 	{
-		return NativeFunction.Natives.CEIL(value);
+		return NativeFunction.Natives.CEIL<int>(value);
 	}
 	public static int ROUND(float value)
 	{
-		return NativeFunction.Natives.ROUND(value);
+		return NativeFunction.Natives.ROUND<int>(value);
 	}
 	public static float TO_FLOAT(int value)
 	{
-		return NativeFunction.Natives.TO_FLOAT(value);
+		return NativeFunction.Natives.TO_FLOAT<float>(value);
 	}
 	/// <summary>
 	/// 	THREAD_PRIO_HIGHEST = 0<br/>
@@ -191,19 +191,19 @@ public static class Natives
 	*/
 	public static bool APP_DATA_VALID()
 	{
-		return NativeFunction.Natives.APP_DATA_VALID();
+		return NativeFunction.Natives.APP_DATA_VALID<bool>();
 	}
 	public static int APP_GET_INT(string property)
 	{
-		return NativeFunction.Natives.APP_GET_INT(property);
+		return NativeFunction.Natives.APP_GET_INT<int>(property);
 	}
 	public static float APP_GET_FLOAT(string property)
 	{
-		return NativeFunction.Natives.APP_GET_FLOAT(property);
+		return NativeFunction.Natives.APP_GET_FLOAT<float>(property);
 	}
 	public static string APP_GET_STRING(string property)
 	{
-		return NativeFunction.Natives.APP_GET_STRING(property);
+		return NativeFunction.Natives.APP_GET_STRING<string>(property);
 	}
 	public static void APP_SET_INT(string property, int value)
 	{
@@ -244,11 +244,11 @@ public static class Natives
 	}
 	public static bool APP_HAS_LINKED_SOCIAL_CLUB_ACCOUNT()
 	{
-		return NativeFunction.Natives.APP_HAS_LINKED_SOCIAL_CLUB_ACCOUNT();
+		return NativeFunction.Natives.APP_HAS_LINKED_SOCIAL_CLUB_ACCOUNT<bool>();
 	}
 	public static bool APP_HAS_SYNCED_DATA(string appName)
 	{
-		return NativeFunction.Natives.APP_HAS_SYNCED_DATA(appName);
+		return NativeFunction.Natives.APP_HAS_SYNCED_DATA<bool>(appName);
 	}
 	public static void APP_SAVE_DATA()
 	{
@@ -256,11 +256,11 @@ public static class Natives
 	}
 	public static int APP_GET_DELETED_FILE_STATUS()
 	{
-		return NativeFunction.Natives.APP_GET_DELETED_FILE_STATUS();
+		return NativeFunction.Natives.APP_GET_DELETED_FILE_STATUS<int>();
 	}
 	public static bool APP_DELETE_APP_DATA(string appName)
 	{
-		return NativeFunction.Natives.APP_DELETE_APP_DATA(appName);
+		return NativeFunction.Natives.APP_DELETE_APP_DATA<bool>(appName);
 	}
 	/*
 		AUDIO
@@ -278,7 +278,7 @@ public static class Natives
 	}
 	public static bool IS_PED_RINGTONE_PLAYING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RINGTONE_PLAYING(ped);
+		return NativeFunction.Natives.IS_PED_RINGTONE_PLAYING<bool>(ped);
 	}
 	public static void STOP_PED_RINGTONE(Ped ped)
 	{
@@ -286,15 +286,15 @@ public static class Natives
 	}
 	public static bool IS_MOBILE_PHONE_CALL_ONGOING()
 	{
-		return NativeFunction.Natives.IS_MOBILE_PHONE_CALL_ONGOING();
+		return NativeFunction.Natives.IS_MOBILE_PHONE_CALL_ONGOING<bool>();
 	}
 	public static bool IS_MOBILE_INTERFERENCE_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_MOBILE_INTERFERENCE_ACTIVE();
+		return NativeFunction.Natives.IS_MOBILE_INTERFERENCE_ACTIVE<bool>();
 	}
 	public static int GET_CURRENT_TV_SHOW_PLAY_TIME()
 	{
-		return NativeFunction.Natives.GET_CURRENT_TV_SHOW_PLAY_TIME();
+		return NativeFunction.Natives.GET_CURRENT_TV_SHOW_PLAY_TIME<int>();
 	}
 	public static void CREATE_NEW_SCRIPTED_CONVERSATION()
 	{
@@ -383,19 +383,19 @@ public static class Natives
 	}
 	public static bool GET_IS_PRELOADED_CONVERSATION_READY()
 	{
-		return NativeFunction.Natives.GET_IS_PRELOADED_CONVERSATION_READY();
+		return NativeFunction.Natives.GET_IS_PRELOADED_CONVERSATION_READY<bool>();
 	}
 	public static bool IS_SCRIPTED_CONVERSATION_ONGOING()
 	{
-		return NativeFunction.Natives.IS_SCRIPTED_CONVERSATION_ONGOING();
+		return NativeFunction.Natives.IS_SCRIPTED_CONVERSATION_ONGOING<bool>();
 	}
 	public static bool IS_SCRIPTED_CONVERSATION_LOADED()
 	{
-		return NativeFunction.Natives.IS_SCRIPTED_CONVERSATION_LOADED();
+		return NativeFunction.Natives.IS_SCRIPTED_CONVERSATION_LOADED<bool>();
 	}
 	public static int GET_CURRENT_SCRIPTED_CONVERSATION_LINE()
 	{
-		return NativeFunction.Natives.GET_CURRENT_SCRIPTED_CONVERSATION_LINE();
+		return NativeFunction.Natives.GET_CURRENT_SCRIPTED_CONVERSATION_LINE<int>();
 	}
 	public static void PAUSE_SCRIPTED_CONVERSATION(bool p0)
 	{
@@ -407,7 +407,7 @@ public static class Natives
 	}
 	public static int STOP_SCRIPTED_CONVERSATION(bool p0)
 	{
-		return NativeFunction.Natives.STOP_SCRIPTED_CONVERSATION(p0);
+		return NativeFunction.Natives.STOP_SCRIPTED_CONVERSATION<int>(p0);
 	}
 	public static void SKIP_TO_NEXT_SCRIPTED_CONVERSATION_LINE()
 	{
@@ -432,7 +432,7 @@ public static class Natives
 	}
 	public static int GET_VARIATION_CHOSEN_FOR_SCRIPTED_LINE()
 	{
-		return NativeFunction.Natives.GET_VARIATION_CHOSEN_FOR_SCRIPTED_LINE(0);
+		return NativeFunction.Natives.GET_VARIATION_CHOSEN_FOR_SCRIPTED_LINE<int>(0);
 	}
 	public static void SET_NO_DUCKING_FOR_CONVERSATION(bool p0)
 	{
@@ -459,7 +459,7 @@ public static class Natives
 	/// </summary>
 	public static bool REQUEST_MISSION_AUDIO_BANK(string audioBank, bool p1)
 	{
-		return NativeFunction.Natives.REQUEST_MISSION_AUDIO_BANK(audioBank, p1, 0);
+		return NativeFunction.Natives.REQUEST_MISSION_AUDIO_BANK<bool>(audioBank, p1, 0);
 	}
 	/// <summary>
 	/// 	All occurrences and usages found in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/XZ1tmGEz<br/>
@@ -468,7 +468,7 @@ public static class Natives
 	/// </summary>
 	public static bool REQUEST_AMBIENT_AUDIO_BANK(string audioBank, bool p1)
 	{
-		return NativeFunction.Natives.REQUEST_AMBIENT_AUDIO_BANK(audioBank, p1, 0);
+		return NativeFunction.Natives.REQUEST_AMBIENT_AUDIO_BANK<bool>(audioBank, p1, 0);
 	}
 	/// <summary>
 	/// 	All occurrences and usages found in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/AkmDAVn6<br/>
@@ -477,28 +477,28 @@ public static class Natives
 	/// </summary>
 	public static bool REQUEST_SCRIPT_AUDIO_BANK(string audioBank, bool p1)
 	{
-		return NativeFunction.Natives.REQUEST_SCRIPT_AUDIO_BANK(audioBank, p1, 0);
+		return NativeFunction.Natives.REQUEST_SCRIPT_AUDIO_BANK<bool>(audioBank, p1, 0);
 	}
 	/// <summary>
 	/// 	p2 is always -1
 	/// </summary>
 	public static bool HINT_MISSION_AUDIO_BANK(string audioBank, bool p1)
 	{
-		return NativeFunction.Natives.HINT_MISSION_AUDIO_BANK(audioBank, p1, 0);
+		return NativeFunction.Natives.HINT_MISSION_AUDIO_BANK<bool>(audioBank, p1, 0);
 	}
 	/// <summary>
 	/// 	p2 is always -1
 	/// </summary>
 	public static bool HINT_AMBIENT_AUDIO_BANK(string audioBank, bool p1)
 	{
-		return NativeFunction.Natives.HINT_AMBIENT_AUDIO_BANK(audioBank, p1, 0);
+		return NativeFunction.Natives.HINT_AMBIENT_AUDIO_BANK<bool>(audioBank, p1, 0);
 	}
 	/// <summary>
 	/// 	p2 is always -1
 	/// </summary>
 	public static bool HINT_SCRIPT_AUDIO_BANK(string audioBank, bool p1)
 	{
-		return NativeFunction.Natives.HINT_SCRIPT_AUDIO_BANK(audioBank, p1, 0);
+		return NativeFunction.Natives.HINT_SCRIPT_AUDIO_BANK<bool>(audioBank, p1, 0);
 	}
 	public static void RELEASE_MISSION_AUDIO_BANK()
 	{
@@ -533,7 +533,7 @@ public static class Natives
 	}
 	public static int GET_SOUND_ID()
 	{
-		return NativeFunction.Natives.GET_SOUND_ID();
+		return NativeFunction.Natives.GET_SOUND_ID<int>();
 	}
 	public static void RELEASE_SOUND_ID(int soundId)
 	{
@@ -615,11 +615,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_NETWORK_ID_FROM_SOUND_ID(int soundId)
 	{
-		return NativeFunction.Natives.GET_NETWORK_ID_FROM_SOUND_ID(soundId);
+		return NativeFunction.Natives.GET_NETWORK_ID_FROM_SOUND_ID<int>(soundId);
 	}
 	public static int GET_SOUND_ID_FROM_NETWORK_ID(int netId)
 	{
-		return NativeFunction.Natives.GET_SOUND_ID_FROM_NETWORK_ID(netId);
+		return NativeFunction.Natives.GET_SOUND_ID_FROM_NETWORK_ID<int>(netId);
 	}
 	public static void SET_VARIABLE_ON_SOUND(int soundId, string variable, float p2)
 	{
@@ -651,7 +651,7 @@ public static class Natives
 	}
 	public static bool HAS_SOUND_FINISHED(int soundId)
 	{
-		return NativeFunction.Natives.HAS_SOUND_FINISHED(soundId);
+		return NativeFunction.Natives.HAS_SOUND_FINISHED<bool>(soundId);
 	}
 	/// <summary>
 	/// 	Plays ambient speech. See also _0x444180DB.<br/>
@@ -817,7 +817,7 @@ public static class Natives
 	}
 	public static ulong GET_AMBIENT_VOICE_NAME_HASH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_AMBIENT_VOICE_NAME_HASH(ped);
+		return NativeFunction.Natives.GET_AMBIENT_VOICE_NAME_HASH<ulong>(ped);
 	}
 	/// <summary>
 	/// 	Assigns some ambient voice to the ped.
@@ -866,30 +866,30 @@ public static class Natives
 	}
 	public static bool IS_AMBIENT_SPEECH_PLAYING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_AMBIENT_SPEECH_PLAYING(ped);
+		return NativeFunction.Natives.IS_AMBIENT_SPEECH_PLAYING<bool>(ped);
 	}
 	public static bool IS_SCRIPTED_SPEECH_PLAYING(Ped p0)
 	{
-		return NativeFunction.Natives.IS_SCRIPTED_SPEECH_PLAYING(p0);
+		return NativeFunction.Natives.IS_SCRIPTED_SPEECH_PLAYING<bool>(p0);
 	}
 	public static bool IS_ANY_SPEECH_PLAYING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_ANY_SPEECH_PLAYING(ped);
+		return NativeFunction.Natives.IS_ANY_SPEECH_PLAYING<bool>(ped);
 	}
 	public static bool IS_ANY_POSITIONAL_SPEECH_PLAYING()
 	{
-		return NativeFunction.Natives.IS_ANY_POSITIONAL_SPEECH_PLAYING();
+		return NativeFunction.Natives.IS_ANY_POSITIONAL_SPEECH_PLAYING<bool>();
 	}
 	/// <summary>
 	/// 	Checks if the ped can play the speech or has the speech file, p2 is usually false.
 	/// </summary>
 	public static bool DOES_CONTEXT_EXIST_FOR_THIS_PED(Ped ped, string speechName, bool p2)
 	{
-		return NativeFunction.Natives.DOES_CONTEXT_EXIST_FOR_THIS_PED(ped, speechName, p2);
+		return NativeFunction.Natives.DOES_CONTEXT_EXIST_FOR_THIS_PED<bool>(ped, speechName, p2);
 	}
 	public static bool IS_PED_IN_CURRENT_CONVERSATION(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_CURRENT_CONVERSATION(ped);
+		return NativeFunction.Natives.IS_PED_IN_CURRENT_CONVERSATION<bool>(ped);
 	}
 	/// <summary>
 	/// 	Sets the ped drunk sounds.  Only works with PLAYER_PED_ID<br/>
@@ -928,7 +928,7 @@ public static class Natives
 	}
 	public static bool IS_ANIMAL_VOCALIZATION_PLAYING(Ped pedHandle)
 	{
-		return NativeFunction.Natives.IS_ANIMAL_VOCALIZATION_PLAYING(pedHandle);
+		return NativeFunction.Natives.IS_ANIMAL_VOCALIZATION_PLAYING<bool>(pedHandle);
 	}
 	/// <summary>
 	/// 	mood can be 0 or 1 (it&amp;apos;s not a boolean value!). Effects audio of the animal.
@@ -939,7 +939,7 @@ public static class Natives
 	}
 	public static bool IS_MOBILE_PHONE_RADIO_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_MOBILE_PHONE_RADIO_ACTIVE();
+		return NativeFunction.Natives.IS_MOBILE_PHONE_RADIO_ACTIVE<bool>();
 	}
 	public static void SET_MOBILE_PHONE_RADIO_STATE(bool state)
 	{
@@ -950,33 +950,33 @@ public static class Natives
 	/// </summary>
 	public static int GET_PLAYER_RADIO_STATION_INDEX()
 	{
-		return NativeFunction.Natives.GET_PLAYER_RADIO_STATION_INDEX();
+		return NativeFunction.Natives.GET_PLAYER_RADIO_STATION_INDEX<int>();
 	}
 	/// <summary>
 	/// 	Returns active radio station name
 	/// </summary>
 	public static string GET_PLAYER_RADIO_STATION_NAME()
 	{
-		return NativeFunction.Natives.GET_PLAYER_RADIO_STATION_NAME();
+		return NativeFunction.Natives.GET_PLAYER_RADIO_STATION_NAME<string>();
 	}
 	/// <summary>
 	/// 	Converts radio station index to string. Use HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION to get the user-readable text.
 	/// </summary>
 	public static string GET_RADIO_STATION_NAME(int radioStation)
 	{
-		return NativeFunction.Natives.GET_RADIO_STATION_NAME(radioStation);
+		return NativeFunction.Natives.GET_RADIO_STATION_NAME<string>(radioStation);
 	}
 	public static int GET_PLAYER_RADIO_STATION_GENRE()
 	{
-		return NativeFunction.Natives.GET_PLAYER_RADIO_STATION_GENRE();
+		return NativeFunction.Natives.GET_PLAYER_RADIO_STATION_GENRE<int>();
 	}
 	public static bool IS_RADIO_RETUNING()
 	{
-		return NativeFunction.Natives.IS_RADIO_RETUNING();
+		return NativeFunction.Natives.IS_RADIO_RETUNING<bool>();
 	}
 	public static bool IS_RADIO_FADED_OUT()
 	{
-		return NativeFunction.Natives.IS_RADIO_FADED_OUT();
+		return NativeFunction.Natives.IS_RADIO_FADED_OUT<bool>();
 	}
 	/// <summary>
 	/// 	Tune Forward...
@@ -1014,7 +1014,7 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_RADIO_ON(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_RADIO_ON(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_RADIO_ON<bool>(vehicle);
 	}
 	public static void SET_VEH_FORCED_RADIO_THIS_FRAME(Vehicle vehicle)
 	{
@@ -1066,11 +1066,11 @@ public static class Natives
 	}
 	public static bool IS_MISSION_NEWS_STORY_UNLOCKED(int newsStory)
 	{
-		return NativeFunction.Natives.IS_MISSION_NEWS_STORY_UNLOCKED(newsStory);
+		return NativeFunction.Natives.IS_MISSION_NEWS_STORY_UNLOCKED<bool>(newsStory);
 	}
 	public static int GET_AUDIBLE_MUSIC_TRACK_TEXT_ID()
 	{
-		return NativeFunction.Natives.GET_AUDIBLE_MUSIC_TRACK_TEXT_ID();
+		return NativeFunction.Natives.GET_AUDIBLE_MUSIC_TRACK_TEXT_ID<int>();
 	}
 	public static void PLAY_END_CREDITS_MUSIC(bool play)
 	{
@@ -1124,7 +1124,7 @@ public static class Natives
 	}
 	public static bool CAN_VEHICLE_RECEIVE_CB_RADIO(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.CAN_VEHICLE_RECEIVE_CB_RADIO(vehicle);
+		return NativeFunction.Natives.CAN_VEHICLE_RECEIVE_CB_RADIO<bool>(vehicle);
 	}
 	public static void SET_MOBILE_RADIO_ENABLED_DURING_GAMEPLAY(bool toggle)
 	{
@@ -1132,11 +1132,11 @@ public static class Natives
 	}
 	public static bool DOES_PLAYER_VEH_HAVE_RADIO()
 	{
-		return NativeFunction.Natives.DOES_PLAYER_VEH_HAVE_RADIO();
+		return NativeFunction.Natives.DOES_PLAYER_VEH_HAVE_RADIO<bool>();
 	}
 	public static bool IS_PLAYER_VEH_RADIO_ENABLE()
 	{
-		return NativeFunction.Natives.IS_PLAYER_VEH_RADIO_ENABLE();
+		return NativeFunction.Natives.IS_PLAYER_VEH_RADIO_ENABLE<bool>();
 	}
 	/// <summary>
 	/// 	can&amp;apos;t seem to enable radio on cop cars etc
@@ -1177,11 +1177,11 @@ public static class Natives
 	}
 	public static int GET_NUM_UNLOCKED_RADIO_STATIONS()
 	{
-		return NativeFunction.Natives.GET_NUM_UNLOCKED_RADIO_STATIONS();
+		return NativeFunction.Natives.GET_NUM_UNLOCKED_RADIO_STATIONS<int>();
 	}
 	public static int FIND_RADIO_STATION_INDEX(ulong stationNameHash)
 	{
-		return NativeFunction.Natives.FIND_RADIO_STATION_INDEX(stationNameHash);
+		return NativeFunction.Natives.FIND_RADIO_STATION_INDEX<int>(stationNameHash);
 	}
 	/// <summary>
 	/// 	6 calls in the b617d scripts, removed identical lines:<br/>
@@ -1232,11 +1232,11 @@ public static class Natives
 	}
 	public static bool IS_RADIO_STATION_FAVOURITED(string radioStation)
 	{
-		return NativeFunction.Natives.IS_RADIO_STATION_FAVOURITED(radioStation);
+		return NativeFunction.Natives.IS_RADIO_STATION_FAVOURITED<bool>(radioStation);
 	}
 	public static bool GET_NEXT_AUDIBLE_BEAT(out float out1, out float out2, out int out3)
 	{
-		return NativeFunction.Natives.GET_NEXT_AUDIBLE_BEAT(out out1, out out2, out out3);
+		return NativeFunction.Natives.GET_NEXT_AUDIBLE_BEAT<bool>(out out1, out out2, out out3);
 	}
 	/// <summary>
 	/// 	Changes start time of a tracklist (milliseconds)<br/>
@@ -1248,11 +1248,11 @@ public static class Natives
 	}
 	public static int GET_CURRENT_TRACK_PLAY_TIME(string radioStationName)
 	{
-		return NativeFunction.Natives.GET_CURRENT_TRACK_PLAY_TIME(radioStationName);
+		return NativeFunction.Natives.GET_CURRENT_TRACK_PLAY_TIME<int>(radioStationName);
 	}
 	public static ulong GET_CURRENT_TRACK_SOUND_NAME(string radioStationName)
 	{
-		return NativeFunction.Natives.GET_CURRENT_TRACK_SOUND_NAME(radioStationName);
+		return NativeFunction.Natives.GET_CURRENT_TRACK_SOUND_NAME<ulong>(radioStationName);
 	}
 	public static void SET_VEHICLE_MISSILE_WARNING_ENABLED(Vehicle vehicle, bool toggle)
 	{
@@ -1303,7 +1303,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_AMBIENT_ZONE_ENABLED(string ambientZone)
 	{
-		return NativeFunction.Natives.IS_AMBIENT_ZONE_ENABLED(ambientZone);
+		return NativeFunction.Natives.IS_AMBIENT_ZONE_ENABLED<bool>(ambientZone);
 	}
 	public static void REFRESH_CLOSEST_OCEAN_SHORELINE()
 	{
@@ -1333,7 +1333,7 @@ public static class Natives
 	/// </summary>
 	public static int PLAY_POLICE_REPORT(string name, float p1)
 	{
-		return NativeFunction.Natives.PLAY_POLICE_REPORT(name, p1);
+		return NativeFunction.Natives.PLAY_POLICE_REPORT<int>(name, p1);
 	}
 	public static void CANCEL_ALL_POLICE_REPORTS()
 	{
@@ -1364,7 +1364,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_HORN_ACTIVE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_HORN_ACTIVE(vehicle);
+		return NativeFunction.Natives.IS_HORN_ACTIVE<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Makes pedestrians sound their horn longer, faster and more agressive when they use their horn.
@@ -1393,11 +1393,11 @@ public static class Natives
 	}
 	public static bool IS_STREAM_PLAYING()
 	{
-		return NativeFunction.Natives.IS_STREAM_PLAYING();
+		return NativeFunction.Natives.IS_STREAM_PLAYING<bool>();
 	}
 	public static int GET_STREAM_PLAY_TIME()
 	{
-		return NativeFunction.Natives.GET_STREAM_PLAY_TIME();
+		return NativeFunction.Natives.GET_STREAM_PLAY_TIME<int>();
 	}
 	/// <summary>
 	/// 	Example:<br/>
@@ -1413,7 +1413,7 @@ public static class Natives
 	/// </summary>
 	public static bool LOAD_STREAM(string streamName, string soundSet)
 	{
-		return NativeFunction.Natives.LOAD_STREAM(streamName, soundSet);
+		return NativeFunction.Natives.LOAD_STREAM<bool>(streamName, soundSet);
 	}
 	/// <summary>
 	/// 	Example:<br/>
@@ -1425,7 +1425,7 @@ public static class Natives
 	/// </summary>
 	public static bool LOAD_STREAM_WITH_START_OFFSET(string streamName, int startOffset, string soundSet)
 	{
-		return NativeFunction.Natives.LOAD_STREAM_WITH_START_OFFSET(streamName, startOffset, soundSet);
+		return NativeFunction.Natives.LOAD_STREAM_WITH_START_OFFSET<bool>(streamName, startOffset, soundSet);
 	}
 	public static void PLAY_STREAM_FROM_PED(Ped ped)
 	{
@@ -1486,7 +1486,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_AMBIENT_SPEECH_DISABLED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_AMBIENT_SPEECH_DISABLED(ped);
+		return NativeFunction.Natives.IS_AMBIENT_SPEECH_DISABLED<bool>(ped);
 	}
 	public static void BLOCK_SPEECH_CONTEXT_GROUP(string p0, int p1)
 	{
@@ -1559,7 +1559,7 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_AUDIBLY_DAMAGED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_AUDIBLY_DAMAGED(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_AUDIBLY_DAMAGED<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_AUDIO_ENGINE_DAMAGE_FACTOR(Vehicle vehicle, float damageFactor)
 	{
@@ -1636,7 +1636,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_GAME_IN_CONTROL_OF_MUSIC()
 	{
-		return NativeFunction.Natives.IS_GAME_IN_CONTROL_OF_MUSIC();
+		return NativeFunction.Natives.IS_GAME_IN_CONTROL_OF_MUSIC<bool>();
 	}
 	public static void SET_GPS_ACTIVE(bool active)
 	{
@@ -1657,11 +1657,11 @@ public static class Natives
 	}
 	public static bool IS_MISSION_COMPLETE_PLAYING()
 	{
-		return NativeFunction.Natives.IS_MISSION_COMPLETE_PLAYING();
+		return NativeFunction.Natives.IS_MISSION_COMPLETE_PLAYING<bool>();
 	}
 	public static bool IS_MISSION_COMPLETE_READY_FOR_UI()
 	{
-		return NativeFunction.Natives.IS_MISSION_COMPLETE_READY_FOR_UI();
+		return NativeFunction.Natives.IS_MISSION_COMPLETE_READY_FOR_UI<bool>();
 	}
 	public static void BLOCK_DEATH_JINGLE(bool toggle)
 	{
@@ -1675,7 +1675,7 @@ public static class Natives
 	/// </summary>
 	public static bool START_AUDIO_SCENE(string scene)
 	{
-		return NativeFunction.Natives.START_AUDIO_SCENE(scene);
+		return NativeFunction.Natives.START_AUDIO_SCENE<bool>(scene);
 	}
 	/// <summary>
 	/// 	Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
@@ -1696,7 +1696,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_AUDIO_SCENE_ACTIVE(string scene)
 	{
-		return NativeFunction.Natives.IS_AUDIO_SCENE_ACTIVE(scene);
+		return NativeFunction.Natives.IS_AUDIO_SCENE_ACTIVE<bool>(scene);
 	}
 	/// <summary>
 	/// 	Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
@@ -1723,14 +1723,14 @@ public static class Natives
 	}
 	public static bool AUDIO_IS_MUSIC_PLAYING()
 	{
-		return NativeFunction.Natives.AUDIO_IS_MUSIC_PLAYING();
+		return NativeFunction.Natives.AUDIO_IS_MUSIC_PLAYING<bool>();
 	}
 	/// <summary>
 	/// 	This is an alias of AUDIO_IS_MUSIC_PLAYING.
 	/// </summary>
 	public static bool AUDIO_IS_SCRIPTED_MUSIC_PLAYING()
 	{
-		return NativeFunction.Natives.AUDIO_IS_SCRIPTED_MUSIC_PLAYING();
+		return NativeFunction.Natives.AUDIO_IS_SCRIPTED_MUSIC_PLAYING<bool>();
 	}
 	/// <summary>
 	/// 	All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P<br/>
@@ -1738,7 +1738,7 @@ public static class Natives
 	/// </summary>
 	public static bool PREPARE_MUSIC_EVENT(string eventName)
 	{
-		return NativeFunction.Natives.PREPARE_MUSIC_EVENT(eventName);
+		return NativeFunction.Natives.PREPARE_MUSIC_EVENT<bool>(eventName);
 	}
 	/// <summary>
 	/// 	All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P<br/>
@@ -1746,7 +1746,7 @@ public static class Natives
 	/// </summary>
 	public static bool CANCEL_MUSIC_EVENT(string eventName)
 	{
-		return NativeFunction.Natives.CANCEL_MUSIC_EVENT(eventName);
+		return NativeFunction.Natives.CANCEL_MUSIC_EVENT<bool>(eventName);
 	}
 	/// <summary>
 	/// 	List of all usable event names found in b617d used with this native. Sorted alphabetically and identical names removed: https://pastebin.com/RzDFmB1W<br/>
@@ -1756,15 +1756,15 @@ public static class Natives
 	/// </summary>
 	public static bool TRIGGER_MUSIC_EVENT(string eventName)
 	{
-		return NativeFunction.Natives.TRIGGER_MUSIC_EVENT(eventName);
+		return NativeFunction.Natives.TRIGGER_MUSIC_EVENT<bool>(eventName);
 	}
 	public static bool IS_MUSIC_ONESHOT_PLAYING()
 	{
-		return NativeFunction.Natives.IS_MUSIC_ONESHOT_PLAYING();
+		return NativeFunction.Natives.IS_MUSIC_ONESHOT_PLAYING<bool>();
 	}
 	public static int GET_MUSIC_PLAYTIME()
 	{
-		return NativeFunction.Natives.GET_MUSIC_PLAYTIME();
+		return NativeFunction.Natives.GET_MUSIC_PLAYTIME<int>();
 	}
 	public static void SET_GLOBAL_RADIO_SIGNAL_LEVEL()
 	{
@@ -1802,7 +1802,7 @@ public static class Natives
 	/// </summary>
 	public static bool PREPARE_ALARM(string alarmName)
 	{
-		return NativeFunction.Natives.PREPARE_ALARM(alarmName);
+		return NativeFunction.Natives.PREPARE_ALARM<bool>(alarmName);
 	}
 	/// <summary>
 	/// 	Example:<br/>
@@ -1868,7 +1868,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ALARM_PLAYING(string alarmName)
 	{
-		return NativeFunction.Natives.IS_ALARM_PLAYING(alarmName);
+		return NativeFunction.Natives.IS_ALARM_PLAYING<bool>(alarmName);
 	}
 	/// <summary>
 	/// 	Returns hash of default vehicle horn<br/>
@@ -1877,11 +1877,11 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_VEHICLE_DEFAULT_HORN(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN<ulong>(vehicle);
 	}
 	public static ulong GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS<ulong>(vehicle);
 	}
 	public static void RESET_PED_AUDIO_FLAGS(Ped ped)
 	{
@@ -2063,19 +2063,19 @@ public static class Natives
 	/// </summary>
 	public static bool PREPARE_SYNCHRONIZED_AUDIO_EVENT(string audioEvent)
 	{
-		return NativeFunction.Natives.PREPARE_SYNCHRONIZED_AUDIO_EVENT(audioEvent, 0);
+		return NativeFunction.Natives.PREPARE_SYNCHRONIZED_AUDIO_EVENT<bool>(audioEvent, 0);
 	}
 	public static bool PREPARE_SYNCHRONIZED_AUDIO_EVENT_FOR_SCENE(int sceneID, string audioEvent)
 	{
-		return NativeFunction.Natives.PREPARE_SYNCHRONIZED_AUDIO_EVENT_FOR_SCENE(sceneID, audioEvent);
+		return NativeFunction.Natives.PREPARE_SYNCHRONIZED_AUDIO_EVENT_FOR_SCENE<bool>(sceneID, audioEvent);
 	}
 	public static bool PLAY_SYNCHRONIZED_AUDIO_EVENT(int sceneID)
 	{
-		return NativeFunction.Natives.PLAY_SYNCHRONIZED_AUDIO_EVENT(sceneID);
+		return NativeFunction.Natives.PLAY_SYNCHRONIZED_AUDIO_EVENT<bool>(sceneID);
 	}
 	public static bool STOP_SYNCHRONIZED_AUDIO_EVENT(int sceneID)
 	{
-		return NativeFunction.Natives.STOP_SYNCHRONIZED_AUDIO_EVENT(sceneID);
+		return NativeFunction.Natives.STOP_SYNCHRONIZED_AUDIO_EVENT<bool>(sceneID);
 	}
 	public static void INIT_SYNCH_SCENE_AUDIO_WITH_POSITION(string audioEvent, float x, float y, float z)
 	{
@@ -2132,7 +2132,7 @@ public static class Natives
 	}
 	public static int GET_MUSIC_VOL_SLIDER()
 	{
-		return NativeFunction.Natives.GET_MUSIC_VOL_SLIDER();
+		return NativeFunction.Natives.GET_MUSIC_VOL_SLIDER<int>();
 	}
 	public static void REQUEST_TENNIS_BANKS(Ped ped)
 	{
@@ -2152,15 +2152,15 @@ public static class Natives
 	}
 	public static bool HAS_LOADED_MP_DATA_SET()
 	{
-		return NativeFunction.Natives.HAS_LOADED_MP_DATA_SET();
+		return NativeFunction.Natives.HAS_LOADED_MP_DATA_SET<bool>();
 	}
 	public static bool HAS_LOADED_SP_DATA_SET()
 	{
-		return NativeFunction.Natives.HAS_LOADED_SP_DATA_SET();
+		return NativeFunction.Natives.HAS_LOADED_SP_DATA_SET<bool>();
 	}
 	public static int GET_VEHICLE_HORN_SOUND_INDEX(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_HORN_SOUND_INDEX(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_HORN_SOUND_INDEX<int>(vehicle);
 	}
 	public static void SET_VEHICLE_HORN_SOUND_INDEX(Vehicle vehicle, int value)
 	{
@@ -2195,7 +2195,7 @@ public static class Natives
 	}
 	public static bool IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(Object _object)
 	{
-		return NativeFunction.Natives.IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(_object);
+		return NativeFunction.Natives.IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE<bool>(_object);
 	}
 	public static void REGISTER_WORLD_POINT_SCRIPT_BRAIN(string scriptName, float activationRange, int p2)
 	{
@@ -2206,7 +2206,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE()
 	{
-		return NativeFunction.Natives.IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE();
+		return NativeFunction.Natives.IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE<bool>();
 	}
 	public static void ENABLE_SCRIPT_BRAIN_SET(int brainSet)
 	{
@@ -2301,7 +2301,7 @@ public static class Natives
 	/// </summary>
 	public static Camera CREATE_CAM(string camName, bool p1)
 	{
-		return NativeFunction.Natives.CREATE_CAM(camName, p1);
+		return NativeFunction.Natives.CREATE_CAM<Camera>(camName, p1);
 	}
 	/// <summary>
 	/// 	camName is always set to &amp;quot;DEFAULT_SCRIPTED_CAMERA&amp;quot; in Rockstar&amp;apos;s scripts.<br/>
@@ -2316,18 +2316,18 @@ public static class Natives
 	/// </summary>
 	public static Camera CREATE_CAM_WITH_PARAMS(string camName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8, int p9)
 	{
-		return NativeFunction.Natives.CREATE_CAM_WITH_PARAMS(camName, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, p9);
+		return NativeFunction.Natives.CREATE_CAM_WITH_PARAMS<Camera>(camName, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, p9);
 	}
 	public static Camera CREATE_CAMERA(ulong camHash, bool p1)
 	{
-		return NativeFunction.Natives.CREATE_CAMERA(camHash, p1);
+		return NativeFunction.Natives.CREATE_CAMERA<Camera>(camHash, p1);
 	}
 	/// <summary>
 	/// 	p9 uses 2 by default
 	/// </summary>
 	public static Camera CREATE_CAMERA_WITH_PARAMS(ulong camHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8)
 	{
-		return NativeFunction.Natives.CREATE_CAMERA_WITH_PARAMS(camHash, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, 0);
+		return NativeFunction.Natives.CREATE_CAMERA_WITH_PARAMS<Camera>(camHash, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, 0);
 	}
 	/// <summary>
 	/// 	BOOL param indicates whether the cam should be destroyed if it belongs to the calling script.
@@ -2348,7 +2348,7 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_CAM_EXIST(Camera cam)
 	{
-		return NativeFunction.Natives.DOES_CAM_EXIST(cam);
+		return NativeFunction.Natives.DOES_CAM_EXIST<bool>(cam);
 	}
 	/// <summary>
 	/// 	Set camera as active/inactive.
@@ -2362,50 +2362,50 @@ public static class Natives
 	/// </summary>
 	public static bool IS_CAM_ACTIVE(Camera cam)
 	{
-		return NativeFunction.Natives.IS_CAM_ACTIVE(cam);
+		return NativeFunction.Natives.IS_CAM_ACTIVE<bool>(cam);
 	}
 	public static bool IS_CAM_RENDERING(Camera cam)
 	{
-		return NativeFunction.Natives.IS_CAM_RENDERING(cam);
+		return NativeFunction.Natives.IS_CAM_RENDERING<bool>(cam);
 	}
 	public static Camera GET_RENDERING_CAM()
 	{
-		return NativeFunction.Natives.GET_RENDERING_CAM();
+		return NativeFunction.Natives.GET_RENDERING_CAM<Camera>();
 	}
 	public static Vector3 GET_CAM_COORD(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_COORD(cam);
+		return NativeFunction.Natives.GET_CAM_COORD<Vector3>(cam);
 	}
 	/// <summary>
 	/// 	The last parameter, as in other &amp;quot;ROT&amp;quot; methods, is usually 2.
 	/// </summary>
 	public static Vector3 GET_CAM_ROT(Camera cam, int rotationOrder)
 	{
-		return NativeFunction.Natives.GET_CAM_ROT(cam, rotationOrder);
+		return NativeFunction.Natives.GET_CAM_ROT<Vector3>(cam, rotationOrder);
 	}
 	public static float GET_CAM_FOV(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_FOV(cam);
+		return NativeFunction.Natives.GET_CAM_FOV<float>(cam);
 	}
 	public static float GET_CAM_NEAR_CLIP(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_NEAR_CLIP(cam);
+		return NativeFunction.Natives.GET_CAM_NEAR_CLIP<float>(cam);
 	}
 	public static float GET_CAM_FAR_CLIP(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_FAR_CLIP(cam);
+		return NativeFunction.Natives.GET_CAM_FAR_CLIP<float>(cam);
 	}
 	public static float GET_CAM_NEAR_DOF(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_NEAR_DOF(cam);
+		return NativeFunction.Natives.GET_CAM_NEAR_DOF<float>(cam);
 	}
 	public static float GET_CAM_FAR_DOF(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_FAR_DOF(cam);
+		return NativeFunction.Natives.GET_CAM_FAR_DOF<float>(cam);
 	}
 	public static float GET_CAM_DOF_STRENGTH(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_DOF_STRENGTH(cam);
+		return NativeFunction.Natives.GET_CAM_DOF_STRENGTH<float>(cam);
 	}
 	public static void SET_CAM_PARAMS(Camera cam, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fieldOfView, int p9, int p10, int p11)
 	{
@@ -2639,7 +2639,7 @@ public static class Natives
 	}
 	public static Camera GET_DEBUG_CAM()
 	{
-		return NativeFunction.Natives.GET_DEBUG_CAM();
+		return NativeFunction.Natives.GET_DEBUG_CAM<Camera>();
 	}
 	/// <summary>
 	/// 	I filled p1-p6 (the floats) as they are as other natives with 6 floats in a row are similar and I see no other method. So if a test from anyone proves them wrong please correct.<br/>
@@ -2690,14 +2690,14 @@ public static class Natives
 	/// </summary>
 	public static float GET_CAM_SPLINE_PHASE(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_SPLINE_PHASE(cam);
+		return NativeFunction.Natives.GET_CAM_SPLINE_PHASE<float>(cam);
 	}
 	/// <summary>
 	/// 	I&amp;apos;m pretty sure the parameter is the camera as usual, but I am not certain so I&amp;apos;m going to leave it as is.
 	/// </summary>
 	public static float GET_CAM_SPLINE_NODE_PHASE(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_SPLINE_NODE_PHASE(cam);
+		return NativeFunction.Natives.GET_CAM_SPLINE_NODE_PHASE<float>(cam);
 	}
 	/// <summary>
 	/// 	I named p1 as timeDuration as it is obvious. I&amp;apos;m assuming tho it is ran in ms(Milliseconds) as usual.
@@ -2712,7 +2712,7 @@ public static class Natives
 	}
 	public static int GET_CAM_SPLINE_NODE_INDEX(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_SPLINE_NODE_INDEX(cam);
+		return NativeFunction.Natives.GET_CAM_SPLINE_NODE_INDEX<int>(cam);
 	}
 	public static void SET_CAM_SPLINE_NODE_EASE(Camera cam, int easingFunction, int p2, float p3)
 	{
@@ -2739,7 +2739,7 @@ public static class Natives
 	}
 	public static bool IS_CAM_SPLINE_PAUSED(Camera cam)
 	{
-		return NativeFunction.Natives.IS_CAM_SPLINE_PAUSED(cam);
+		return NativeFunction.Natives.IS_CAM_SPLINE_PAUSED<bool>(cam);
 	}
 	public static void _INTERPOLATE_CAM_WITH_PARAMS(Camera camera, float camPosX, float camPosY, float camPosZ, float camRotX, float camRotY, float camRotZ, float fov, int duration, int posCurveType, int rotCurveType, int rotOrder, int fovCurveType)
 	{
@@ -2759,7 +2759,7 @@ public static class Natives
 	}
 	public static bool IS_CAM_INTERPOLATING(Camera cam)
 	{
-		return NativeFunction.Natives.IS_CAM_INTERPOLATING(cam);
+		return NativeFunction.Natives.IS_CAM_INTERPOLATING<bool>(cam);
 	}
 	/// <summary>
 	/// 	Possible shake types (updated b617d):<br/>
@@ -2793,7 +2793,7 @@ public static class Natives
 	}
 	public static bool IS_CAM_SHAKING(Camera cam)
 	{
-		return NativeFunction.Natives.IS_CAM_SHAKING(cam);
+		return NativeFunction.Natives.IS_CAM_SHAKING<bool>(cam);
 	}
 	public static void SET_CAM_SHAKE_AMPLITUDE(Camera cam, float amplitude)
 	{
@@ -2829,7 +2829,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_SCRIPT_GLOBAL_SHAKING()
 	{
-		return NativeFunction.Natives.IS_SCRIPT_GLOBAL_SHAKING();
+		return NativeFunction.Natives.IS_SCRIPT_GLOBAL_SHAKING<bool>();
 	}
 	/// <summary>
 	/// 	In drunk_controller.c4, sub_309<br/>
@@ -2858,11 +2858,11 @@ public static class Natives
 	/// </summary>
 	public static bool PLAY_CAM_ANIM(Camera cam, string animName, string animDictionary, float x, float y, float z, float xRot, float yRot, float zRot, bool p9, int p10)
 	{
-		return NativeFunction.Natives.PLAY_CAM_ANIM(cam, animName, animDictionary, x, y, z, xRot, yRot, zRot, p9, p10);
+		return NativeFunction.Natives.PLAY_CAM_ANIM<bool>(cam, animName, animDictionary, x, y, z, xRot, yRot, zRot, p9, p10);
 	}
 	public static bool IS_CAM_PLAYING_ANIM(Camera cam, string animName, string animDictionary)
 	{
-		return NativeFunction.Natives.IS_CAM_PLAYING_ANIM(cam, animName, animDictionary);
+		return NativeFunction.Natives.IS_CAM_PLAYING_ANIM<bool>(cam, animName, animDictionary);
 	}
 	public static void SET_CAM_ANIM_CURRENT_PHASE(Camera cam, float phase)
 	{
@@ -2870,7 +2870,7 @@ public static class Natives
 	}
 	public static float GET_CAM_ANIM_CURRENT_PHASE(Camera cam)
 	{
-		return NativeFunction.Natives.GET_CAM_ANIM_CURRENT_PHASE(cam);
+		return NativeFunction.Natives.GET_CAM_ANIM_CURRENT_PHASE<float>(cam);
 	}
 	/// <summary>
 	/// 	Examples:<br/>
@@ -2881,7 +2881,7 @@ public static class Natives
 	/// </summary>
 	public static bool PLAY_SYNCHRONIZED_CAM_ANIM(string animName, string animDictionary)
 	{
-		return NativeFunction.Natives.PLAY_SYNCHRONIZED_CAM_ANIM(0, 0, animName, animDictionary);
+		return NativeFunction.Natives.PLAY_SYNCHRONIZED_CAM_ANIM<bool>(0, 0, animName, animDictionary);
 	}
 	public static void SET_FLY_CAM_HORIZONTAL_RESPONSE(Camera cam, float p1, float p2, float p3)
 	{
@@ -2905,23 +2905,23 @@ public static class Natives
 	}
 	public static bool WAS_FLY_CAM_CONSTRAINED_ON_PREVIOUS_UDPATE(Camera cam)
 	{
-		return NativeFunction.Natives.WAS_FLY_CAM_CONSTRAINED_ON_PREVIOUS_UDPATE(cam);
+		return NativeFunction.Natives.WAS_FLY_CAM_CONSTRAINED_ON_PREVIOUS_UDPATE<bool>(cam);
 	}
 	public static bool IS_SCREEN_FADED_OUT()
 	{
-		return NativeFunction.Natives.IS_SCREEN_FADED_OUT();
+		return NativeFunction.Natives.IS_SCREEN_FADED_OUT<bool>();
 	}
 	public static bool IS_SCREEN_FADED_IN()
 	{
-		return NativeFunction.Natives.IS_SCREEN_FADED_IN();
+		return NativeFunction.Natives.IS_SCREEN_FADED_IN<bool>();
 	}
 	public static bool IS_SCREEN_FADING_OUT()
 	{
-		return NativeFunction.Natives.IS_SCREEN_FADING_OUT();
+		return NativeFunction.Natives.IS_SCREEN_FADING_OUT<bool>();
 	}
 	public static bool IS_SCREEN_FADING_IN()
 	{
-		return NativeFunction.Natives.IS_SCREEN_FADING_IN();
+		return NativeFunction.Natives.IS_SCREEN_FADING_IN<bool>();
 	}
 	/// <summary>
 	/// 	Fades the screen in.<br/>
@@ -2947,11 +2947,11 @@ public static class Natives
 	}
 	public static bool ARE_WIDESCREEN_BORDERS_ACTIVE()
 	{
-		return NativeFunction.Natives.ARE_WIDESCREEN_BORDERS_ACTIVE();
+		return NativeFunction.Natives.ARE_WIDESCREEN_BORDERS_ACTIVE<bool>();
 	}
 	public static Vector3 GET_GAMEPLAY_CAM_COORD()
 	{
-		return NativeFunction.Natives.GET_GAMEPLAY_CAM_COORD();
+		return NativeFunction.Natives.GET_GAMEPLAY_CAM_COORD<Vector3>();
 	}
 	/// <summary>
 	/// 	p0 dosen&amp;apos;t seem to change much, I tried it with 0, 1, 2:<br/>
@@ -2967,11 +2967,11 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_GAMEPLAY_CAM_ROT(int rotationOrder)
 	{
-		return NativeFunction.Natives.GET_GAMEPLAY_CAM_ROT(rotationOrder);
+		return NativeFunction.Natives.GET_GAMEPLAY_CAM_ROT<Vector3>(rotationOrder);
 	}
 	public static float GET_GAMEPLAY_CAM_FOV()
 	{
-		return NativeFunction.Natives.GET_GAMEPLAY_CAM_FOV();
+		return NativeFunction.Natives.GET_GAMEPLAY_CAM_FOV<float>();
 	}
 	/// <summary>
 	/// 	some camera effect that is used in the drunk-cheat, and turned off (by setting it to 0.0) along with the shaking effects once the drunk cheat is disabled.
@@ -2989,7 +2989,7 @@ public static class Natives
 	}
 	public static float GET_GAMEPLAY_CAM_RELATIVE_HEADING()
 	{
-		return NativeFunction.Natives.GET_GAMEPLAY_CAM_RELATIVE_HEADING();
+		return NativeFunction.Natives.GET_GAMEPLAY_CAM_RELATIVE_HEADING<float>();
 	}
 	/// <summary>
 	/// 	Sets the camera position relative to heading in float from -360 to +360.<br/>
@@ -3002,7 +3002,7 @@ public static class Natives
 	}
 	public static float GET_GAMEPLAY_CAM_RELATIVE_PITCH()
 	{
-		return NativeFunction.Natives.GET_GAMEPLAY_CAM_RELATIVE_PITCH();
+		return NativeFunction.Natives.GET_GAMEPLAY_CAM_RELATIVE_PITCH<float>();
 	}
 	/// <summary>
 	/// 	This native sets the camera&amp;apos;s pitch (rotation on the x-axis).
@@ -3061,7 +3061,7 @@ public static class Natives
 	}
 	public static bool IS_GAMEPLAY_CAM_SHAKING()
 	{
-		return NativeFunction.Natives.IS_GAMEPLAY_CAM_SHAKING();
+		return NativeFunction.Natives.IS_GAMEPLAY_CAM_SHAKING<bool>();
 	}
 	/// <summary>
 	/// 	Sets the amplitude for the gameplay (i.e. 3rd or 1st) camera to shake. Used in script &amp;quot;drunk_controller.ysc.c4&amp;quot; to simulate making the player drunk.
@@ -3090,15 +3090,15 @@ public static class Natives
 	/// </summary>
 	public static bool IS_GAMEPLAY_CAM_RENDERING()
 	{
-		return NativeFunction.Natives.IS_GAMEPLAY_CAM_RENDERING();
+		return NativeFunction.Natives.IS_GAMEPLAY_CAM_RENDERING<bool>();
 	}
 	public static bool IS_INTERPOLATING_FROM_SCRIPT_CAMS()
 	{
-		return NativeFunction.Natives.IS_INTERPOLATING_FROM_SCRIPT_CAMS();
+		return NativeFunction.Natives.IS_INTERPOLATING_FROM_SCRIPT_CAMS<bool>();
 	}
 	public static bool IS_INTERPOLATING_TO_SCRIPT_CAMS()
 	{
-		return NativeFunction.Natives.IS_INTERPOLATING_TO_SCRIPT_CAMS();
+		return NativeFunction.Natives.IS_INTERPOLATING_TO_SCRIPT_CAMS<bool>();
 	}
 	public static void SET_GAMEPLAY_CAM_ALTITUDE_FOV_SCALING_STATE(bool p0)
 	{
@@ -3113,7 +3113,7 @@ public static class Natives
 	}
 	public static bool IS_GAMEPLAY_CAM_LOOKING_BEHIND()
 	{
-		return NativeFunction.Natives.IS_GAMEPLAY_CAM_LOOKING_BEHIND();
+		return NativeFunction.Natives.IS_GAMEPLAY_CAM_LOOKING_BEHIND<bool>();
 	}
 	public static void SET_GAMEPLAY_CAM_IGNORE_ENTITY_COLLISION_THIS_UPDATE(Entity entity)
 	{
@@ -3144,11 +3144,11 @@ public static class Natives
 	}
 	public static bool IS_SPHERE_VISIBLE(float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.IS_SPHERE_VISIBLE(x, y, z, radius);
+		return NativeFunction.Natives.IS_SPHERE_VISIBLE<bool>(x, y, z, radius);
 	}
 	public static bool IS_FOLLOW_PED_CAM_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_FOLLOW_PED_CAM_ACTIVE();
+		return NativeFunction.Natives.IS_FOLLOW_PED_CAM_ACTIVE<bool>();
 	}
 	/// <summary>
 	/// 	From the scripts:<br/>
@@ -3162,7 +3162,7 @@ public static class Natives
 	/// </summary>
 	public static bool SET_FOLLOW_PED_CAM_THIS_UPDATE(string camName, int p1)
 	{
-		return NativeFunction.Natives.SET_FOLLOW_PED_CAM_THIS_UPDATE(camName, p1);
+		return NativeFunction.Natives.SET_FOLLOW_PED_CAM_THIS_UPDATE<bool>(camName, p1);
 	}
 	public static void USE_SCRIPT_CAM_FOR_AMBIENT_POPULATION_ORIGIN_THIS_FRAME(bool p0, bool p1)
 	{
@@ -3219,11 +3219,11 @@ public static class Natives
 	}
 	public static float _GET_THIRD_PERSON_CAM_MIN_ORBIT_DISTANCE_SPRING()
 	{
-		return NativeFunction.Natives._GET_THIRD_PERSON_CAM_MIN_ORBIT_DISTANCE_SPRING();
+		return NativeFunction.Natives._GET_THIRD_PERSON_CAM_MIN_ORBIT_DISTANCE_SPRING<float>();
 	}
 	public static float _GET_THIRD_PERSON_CAM_MAX_ORBIT_DISTANCE_SPRING()
 	{
-		return NativeFunction.Natives._GET_THIRD_PERSON_CAM_MAX_ORBIT_DISTANCE_SPRING();
+		return NativeFunction.Natives._GET_THIRD_PERSON_CAM_MAX_ORBIT_DISTANCE_SPRING<float>();
 	}
 	/// <summary>
 	/// 	Forces gameplay cam to specified vehicle as if you were in it
@@ -3253,14 +3253,14 @@ public static class Natives
 	}
 	public static int GET_FOLLOW_PED_CAM_ZOOM_LEVEL()
 	{
-		return NativeFunction.Natives.GET_FOLLOW_PED_CAM_ZOOM_LEVEL();
+		return NativeFunction.Natives.GET_FOLLOW_PED_CAM_ZOOM_LEVEL<int>();
 	}
 	/// <summary>
 	/// 	See viewmode enum in CAM.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE for return value
 	/// </summary>
 	public static int GET_FOLLOW_PED_CAM_VIEW_MODE()
 	{
-		return NativeFunction.Natives.GET_FOLLOW_PED_CAM_VIEW_MODE();
+		return NativeFunction.Natives.GET_FOLLOW_PED_CAM_VIEW_MODE<int>();
 	}
 	/// <summary>
 	/// 	Sets the type of Player camera:<br/>
@@ -3276,7 +3276,7 @@ public static class Natives
 	}
 	public static bool IS_FOLLOW_VEHICLE_CAM_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_FOLLOW_VEHICLE_CAM_ACTIVE();
+		return NativeFunction.Natives.IS_FOLLOW_VEHICLE_CAM_ACTIVE<bool>();
 	}
 	public static void SET_FOLLOW_VEHICLE_CAM_HIGH_ANGLE_MODE_THIS_UPDATE(bool p0)
 	{
@@ -3288,11 +3288,11 @@ public static class Natives
 	}
 	public static bool SET_TABLE_GAMES_CAMERA_THIS_UPDATE(ulong hash)
 	{
-		return NativeFunction.Natives.SET_TABLE_GAMES_CAMERA_THIS_UPDATE(hash);
+		return NativeFunction.Natives.SET_TABLE_GAMES_CAMERA_THIS_UPDATE<bool>(hash);
 	}
 	public static int GET_FOLLOW_VEHICLE_CAM_ZOOM_LEVEL()
 	{
-		return NativeFunction.Natives.GET_FOLLOW_VEHICLE_CAM_ZOOM_LEVEL();
+		return NativeFunction.Natives.GET_FOLLOW_VEHICLE_CAM_ZOOM_LEVEL<int>();
 	}
 	public static void SET_FOLLOW_VEHICLE_CAM_ZOOM_LEVEL(int zoomLevel)
 	{
@@ -3312,7 +3312,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_FOLLOW_VEHICLE_CAM_VIEW_MODE()
 	{
-		return NativeFunction.Natives.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE();
+		return NativeFunction.Natives.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE<int>();
 	}
 	/// <summary>
 	/// 	Sets the type of Player camera in vehicles:<br/>
@@ -3327,7 +3327,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_CAM_VIEW_MODE_FOR_CONTEXT(int context)
 	{
-		return NativeFunction.Natives.GET_CAM_VIEW_MODE_FOR_CONTEXT(context);
+		return NativeFunction.Natives.GET_CAM_VIEW_MODE_FOR_CONTEXT<int>(context);
 	}
 	/// <summary>
 	/// 	context: see _GET_CAM_ACTIVE_VIEW_MODE_CONTEXT, viewmode: see CAM.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE
@@ -3351,7 +3351,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()
 	{
-		return NativeFunction.Natives.GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
+		return NativeFunction.Natives.GET_CAM_ACTIVE_VIEW_MODE_CONTEXT<int>();
 	}
 	public static void USE_VEHICLE_CAM_STUNT_SETTINGS_THIS_UPDATE()
 	{
@@ -3374,15 +3374,15 @@ public static class Natives
 	}
 	public static bool IS_AIM_CAM_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_AIM_CAM_ACTIVE();
+		return NativeFunction.Natives.IS_AIM_CAM_ACTIVE<bool>();
 	}
 	public static bool IS_AIM_CAM_ACTIVE_IN_ACCURATE_MODE()
 	{
-		return NativeFunction.Natives.IS_AIM_CAM_ACTIVE_IN_ACCURATE_MODE();
+		return NativeFunction.Natives.IS_AIM_CAM_ACTIVE_IN_ACCURATE_MODE<bool>();
 	}
 	public static bool IS_FIRST_PERSON_AIM_CAM_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_FIRST_PERSON_AIM_CAM_ACTIVE();
+		return NativeFunction.Natives.IS_FIRST_PERSON_AIM_CAM_ACTIVE<bool>();
 	}
 	public static void DISABLE_AIM_CAM_THIS_UPDATE()
 	{
@@ -3390,7 +3390,7 @@ public static class Natives
 	}
 	public static float GET_FIRST_PERSON_AIM_CAM_ZOOM_FACTOR()
 	{
-		return NativeFunction.Natives.GET_FIRST_PERSON_AIM_CAM_ZOOM_FACTOR();
+		return NativeFunction.Natives.GET_FIRST_PERSON_AIM_CAM_ZOOM_FACTOR<float>();
 	}
 	public static void SET_FIRST_PERSON_AIM_CAM_ZOOM_FACTOR(float zoomFactor)
 	{
@@ -3426,7 +3426,7 @@ public static class Natives
 	}
 	public static Vector3 GET_FINAL_RENDERED_CAM_COORD()
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_COORD();
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_COORD<Vector3>();
 	}
 	/// <summary>
 	/// 	p0 seems to consistently be 2 across scripts<br/>
@@ -3435,42 +3435,42 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_FINAL_RENDERED_CAM_ROT(int rotationOrder)
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_ROT(rotationOrder);
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_ROT<Vector3>(rotationOrder);
 	}
 	public static Vector3 GET_FINAL_RENDERED_REMOTE_PLAYER_CAM_ROT(Player player, int rotationOrder)
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_REMOTE_PLAYER_CAM_ROT(player, rotationOrder);
+		return NativeFunction.Natives.GET_FINAL_RENDERED_REMOTE_PLAYER_CAM_ROT<Vector3>(player, rotationOrder);
 	}
 	/// <summary>
 	/// 	Gets some camera fov
 	/// </summary>
 	public static float GET_FINAL_RENDERED_CAM_FOV()
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_FOV();
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_FOV<float>();
 	}
 	public static float GET_FINAL_RENDERED_REMOTE_PLAYER_CAM_FOV(Player player)
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_REMOTE_PLAYER_CAM_FOV(player);
+		return NativeFunction.Natives.GET_FINAL_RENDERED_REMOTE_PLAYER_CAM_FOV<float>(player);
 	}
 	public static float GET_FINAL_RENDERED_CAM_NEAR_CLIP()
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_NEAR_CLIP();
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_NEAR_CLIP<float>();
 	}
 	public static float GET_FINAL_RENDERED_CAM_FAR_CLIP()
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_FAR_CLIP();
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_FAR_CLIP<float>();
 	}
 	public static float GET_FINAL_RENDERED_CAM_NEAR_DOF()
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_NEAR_DOF();
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_NEAR_DOF<float>();
 	}
 	public static float GET_FINAL_RENDERED_CAM_FAR_DOF()
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_FAR_DOF();
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_FAR_DOF<float>();
 	}
 	public static float GET_FINAL_RENDERED_CAM_MOTION_BLUR_STRENGTH()
 	{
-		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_MOTION_BLUR_STRENGTH();
+		return NativeFunction.Natives.GET_FINAL_RENDERED_CAM_MOTION_BLUR_STRENGTH<float>();
 	}
 	public static void SET_GAMEPLAY_COORD_HINT(float x, float y, float z, int duration, int blendOutDuration, int blendInDuration, int p6)
 	{
@@ -3504,7 +3504,7 @@ public static class Natives
 	}
 	public static bool IS_GAMEPLAY_HINT_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_GAMEPLAY_HINT_ACTIVE();
+		return NativeFunction.Natives.IS_GAMEPLAY_HINT_ACTIVE<bool>();
 	}
 	public static void STOP_GAMEPLAY_HINT(bool p0)
 	{
@@ -3523,7 +3523,7 @@ public static class Natives
 	}
 	public static bool IS_CODE_GAMEPLAY_HINT_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_CODE_GAMEPLAY_HINT_ACTIVE();
+		return NativeFunction.Natives.IS_CODE_GAMEPLAY_HINT_ACTIVE<bool>();
 	}
 	public static void SET_GAMEPLAY_HINT_FOV(float FOV)
 	{
@@ -3555,7 +3555,7 @@ public static class Natives
 	}
 	public static bool IS_CINEMATIC_CAM_RENDERING()
 	{
-		return NativeFunction.Natives.IS_CINEMATIC_CAM_RENDERING();
+		return NativeFunction.Natives.IS_CINEMATIC_CAM_RENDERING<bool>();
 	}
 	/// <summary>
 	/// 	p0 argument found in the b617d scripts: &amp;quot;DRUNK_SHAKE&amp;quot;<br/>
@@ -3568,7 +3568,7 @@ public static class Natives
 	}
 	public static bool IS_CINEMATIC_CAM_SHAKING()
 	{
-		return NativeFunction.Natives.IS_CINEMATIC_CAM_SHAKING();
+		return NativeFunction.Natives.IS_CINEMATIC_CAM_SHAKING<bool>();
 	}
 	public static void SET_CINEMATIC_CAM_SHAKE_AMPLITUDE(float p0)
 	{
@@ -3602,11 +3602,11 @@ public static class Natives
 	}
 	public static bool IS_CINEMATIC_IDLE_CAM_RENDERING()
 	{
-		return NativeFunction.Natives.IS_CINEMATIC_IDLE_CAM_RENDERING();
+		return NativeFunction.Natives.IS_CINEMATIC_IDLE_CAM_RENDERING<bool>();
 	}
 	public static bool IS_CINEMATIC_FIRST_PERSON_VEHICLE_INTERIOR_CAM_RENDERING()
 	{
-		return NativeFunction.Natives.IS_CINEMATIC_FIRST_PERSON_VEHICLE_INTERIOR_CAM_RENDERING();
+		return NativeFunction.Natives.IS_CINEMATIC_FIRST_PERSON_VEHICLE_INTERIOR_CAM_RENDERING<bool>();
 	}
 	/// <summary>
 	/// 	hash is always JOAAT(&amp;quot;CAMERA_MAN_SHOT&amp;quot;) in decompiled scripts
@@ -3620,7 +3620,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_CINEMATIC_SHOT_ACTIVE(ulong p0)
 	{
-		return NativeFunction.Natives.IS_CINEMATIC_SHOT_ACTIVE(p0);
+		return NativeFunction.Natives.IS_CINEMATIC_SHOT_ACTIVE<bool>(p0);
 	}
 	/// <summary>
 	/// 	Only used once in carsteal3 with p0 set to -1096069633 (CAMERA_MAN_SHOT)
@@ -3646,22 +3646,22 @@ public static class Natives
 	}
 	public static bool IS_IN_VEHICLE_MOBILE_PHONE_CAMERA_RENDERING()
 	{
-		return NativeFunction.Natives.IS_IN_VEHICLE_MOBILE_PHONE_CAMERA_RENDERING();
+		return NativeFunction.Natives.IS_IN_VEHICLE_MOBILE_PHONE_CAMERA_RENDERING<bool>();
 	}
 	public static bool DISABLE_CINEMATIC_SLOW_MO_THIS_UPDATE()
 	{
-		return NativeFunction.Natives.DISABLE_CINEMATIC_SLOW_MO_THIS_UPDATE();
+		return NativeFunction.Natives.DISABLE_CINEMATIC_SLOW_MO_THIS_UPDATE<bool>();
 	}
 	public static bool IS_BONNET_CINEMATIC_CAM_RENDERING()
 	{
-		return NativeFunction.Natives.IS_BONNET_CINEMATIC_CAM_RENDERING();
+		return NativeFunction.Natives.IS_BONNET_CINEMATIC_CAM_RENDERING<bool>();
 	}
 	/// <summary>
 	/// 	Tests some cinematic camera flags
 	/// </summary>
 	public static bool IS_CINEMATIC_CAM_INPUT_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_CINEMATIC_CAM_INPUT_ACTIVE();
+		return NativeFunction.Natives.IS_CINEMATIC_CAM_INPUT_ACTIVE<bool>();
 	}
 	public static void IGNORE_MENU_PREFERENCE_FOR_BONNET_CAMERA_THIS_UPDATE()
 	{
@@ -3684,7 +3684,7 @@ public static class Natives
 	}
 	public static Ped GET_FOCUS_PED_ON_SCREEN(float p0, int p1, float p2, float p3, float p4, float p5, float p6, int p7, int p8)
 	{
-		return NativeFunction.Natives.GET_FOCUS_PED_ON_SCREEN(p0, p1, p2, p3, p4, p5, p6, p7, p8);
+		return NativeFunction.Natives.GET_FOCUS_PED_ON_SCREEN<Ped>(p0, p1, p2, p3, p4, p5, p6, p7, p8);
 	}
 	public static void DISABLE_NEAR_CLIP_SCAN_THIS_UPDATE()
 	{
@@ -3722,7 +3722,7 @@ public static class Natives
 	}
 	public static bool IS_ALLOWED_INDEPENDENT_CAMERA_MODES()
 	{
-		return NativeFunction.Natives.IS_ALLOWED_INDEPENDENT_CAMERA_MODES();
+		return NativeFunction.Natives.IS_ALLOWED_INDEPENDENT_CAMERA_MODES<bool>();
 	}
 	public static void CAMERA_PREVENT_COLLISION_SETTINGS_FOR_TRIPLEHEAD_IN_INTERIORS_THIS_UPDATE()
 	{
@@ -3730,7 +3730,7 @@ public static class Natives
 	}
 	public static float REPLAY_GET_MAX_DISTANCE_ALLOWED_FROM_PLAYER()
 	{
-		return NativeFunction.Natives.REPLAY_GET_MAX_DISTANCE_ALLOWED_FROM_PLAYER();
+		return NativeFunction.Natives.REPLAY_GET_MAX_DISTANCE_ALLOWED_FROM_PLAYER<float>();
 	}
 	/*
 		CLOCK
@@ -3759,21 +3759,21 @@ public static class Natives
 	/// </summary>
 	public static int GET_CLOCK_HOURS()
 	{
-		return NativeFunction.Natives.GET_CLOCK_HOURS();
+		return NativeFunction.Natives.GET_CLOCK_HOURS<int>();
 	}
 	/// <summary>
 	/// 	Gets the current ingame clock minute.
 	/// </summary>
 	public static int GET_CLOCK_MINUTES()
 	{
-		return NativeFunction.Natives.GET_CLOCK_MINUTES();
+		return NativeFunction.Natives.GET_CLOCK_MINUTES<int>();
 	}
 	/// <summary>
 	/// 	Gets the current ingame clock second. Note that ingame clock seconds change really fast since a day in GTA is only 48 minutes in real life.
 	/// </summary>
 	public static int GET_CLOCK_SECONDS()
 	{
-		return NativeFunction.Natives.GET_CLOCK_SECONDS();
+		return NativeFunction.Natives.GET_CLOCK_SECONDS<int>();
 	}
 	public static void SET_CLOCK_DATE(int day, int month, int year)
 	{
@@ -3792,23 +3792,23 @@ public static class Natives
 	/// </summary>
 	public static int GET_CLOCK_DAY_OF_WEEK()
 	{
-		return NativeFunction.Natives.GET_CLOCK_DAY_OF_WEEK();
+		return NativeFunction.Natives.GET_CLOCK_DAY_OF_WEEK<int>();
 	}
 	public static int GET_CLOCK_DAY_OF_MONTH()
 	{
-		return NativeFunction.Natives.GET_CLOCK_DAY_OF_MONTH();
+		return NativeFunction.Natives.GET_CLOCK_DAY_OF_MONTH<int>();
 	}
 	public static int GET_CLOCK_MONTH()
 	{
-		return NativeFunction.Natives.GET_CLOCK_MONTH();
+		return NativeFunction.Natives.GET_CLOCK_MONTH<int>();
 	}
 	public static int GET_CLOCK_YEAR()
 	{
-		return NativeFunction.Natives.GET_CLOCK_YEAR();
+		return NativeFunction.Natives.GET_CLOCK_YEAR<int>();
 	}
 	public static int GET_MILLISECONDS_PER_GAME_MINUTE()
 	{
-		return NativeFunction.Natives.GET_MILLISECONDS_PER_GAME_MINUTE();
+		return NativeFunction.Natives.GET_MILLISECONDS_PER_GAME_MINUTE<int>();
 	}
 	/// <summary>
 	/// 	Gets system time as year, month, day, hour, minute and second.<br/>
@@ -3884,14 +3884,14 @@ public static class Natives
 	}
 	public static bool HAS_CUTSCENE_LOADED()
 	{
-		return NativeFunction.Natives.HAS_CUTSCENE_LOADED();
+		return NativeFunction.Natives.HAS_CUTSCENE_LOADED<bool>();
 	}
 	/// <summary>
 	/// 	Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
 	/// </summary>
 	public static bool HAS_THIS_CUTSCENE_LOADED(string cutsceneName)
 	{
-		return NativeFunction.Natives.HAS_THIS_CUTSCENE_LOADED(cutsceneName);
+		return NativeFunction.Natives.HAS_THIS_CUTSCENE_LOADED<bool>(cutsceneName);
 	}
 	/// <summary>
 	/// 	Sets the cutscene&amp;apos;s owning thread ID.
@@ -3902,11 +3902,11 @@ public static class Natives
 	}
 	public static bool CAN_REQUEST_ASSETS_FOR_CUTSCENE_ENTITY()
 	{
-		return NativeFunction.Natives.CAN_REQUEST_ASSETS_FOR_CUTSCENE_ENTITY();
+		return NativeFunction.Natives.CAN_REQUEST_ASSETS_FOR_CUTSCENE_ENTITY<bool>();
 	}
 	public static bool IS_CUTSCENE_PLAYBACK_FLAG_SET(int flag)
 	{
-		return NativeFunction.Natives.IS_CUTSCENE_PLAYBACK_FLAG_SET(flag);
+		return NativeFunction.Natives.IS_CUTSCENE_PLAYBACK_FLAG_SET<bool>(flag);
 	}
 	public static void SET_CUTSCENE_ENTITY_STREAMING_FLAGS(string cutsceneEntName, int p1, int p2)
 	{
@@ -3926,7 +3926,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_CUT_FILE_LOADED(string cutsceneName)
 	{
-		return NativeFunction.Natives.HAS_CUT_FILE_LOADED(cutsceneName);
+		return NativeFunction.Natives.HAS_CUT_FILE_LOADED<bool>(cutsceneName);
 	}
 	/// <summary>
 	/// 	Simply unloads the cutscene and doesn&amp;apos;t do extra stuff that REMOVE_CUTSCENE does.<br/>
@@ -3941,7 +3941,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_CUT_FILE_CONCAT_COUNT(string cutsceneName)
 	{
-		return NativeFunction.Natives.GET_CUT_FILE_CONCAT_COUNT(cutsceneName);
+		return NativeFunction.Natives.GET_CUT_FILE_CONCAT_COUNT<int>(cutsceneName);
 	}
 	/// <summary>
 	/// 	flags: Usually 0.
@@ -3978,62 +3978,62 @@ public static class Natives
 	}
 	public static int GET_CUTSCENE_TIME()
 	{
-		return NativeFunction.Natives.GET_CUTSCENE_TIME();
+		return NativeFunction.Natives.GET_CUTSCENE_TIME<int>();
 	}
 	public static int GET_CUTSCENE_PLAY_TIME()
 	{
-		return NativeFunction.Natives.GET_CUTSCENE_PLAY_TIME();
+		return NativeFunction.Natives.GET_CUTSCENE_PLAY_TIME<int>();
 	}
 	public static int GET_CUTSCENE_TOTAL_DURATION()
 	{
-		return NativeFunction.Natives.GET_CUTSCENE_TOTAL_DURATION();
+		return NativeFunction.Natives.GET_CUTSCENE_TOTAL_DURATION<int>();
 	}
 	public static int GET_CUTSCENE_END_TIME()
 	{
-		return NativeFunction.Natives.GET_CUTSCENE_END_TIME();
+		return NativeFunction.Natives.GET_CUTSCENE_END_TIME<int>();
 	}
 	public static int GET_CUTSCENE_PLAY_DURATION()
 	{
-		return NativeFunction.Natives.GET_CUTSCENE_PLAY_DURATION();
+		return NativeFunction.Natives.GET_CUTSCENE_PLAY_DURATION<int>();
 	}
 	public static bool WAS_CUTSCENE_SKIPPED()
 	{
-		return NativeFunction.Natives.WAS_CUTSCENE_SKIPPED();
+		return NativeFunction.Natives.WAS_CUTSCENE_SKIPPED<bool>();
 	}
 	public static bool HAS_CUTSCENE_FINISHED()
 	{
-		return NativeFunction.Natives.HAS_CUTSCENE_FINISHED();
+		return NativeFunction.Natives.HAS_CUTSCENE_FINISHED<bool>();
 	}
 	public static bool IS_CUTSCENE_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_CUTSCENE_ACTIVE();
+		return NativeFunction.Natives.IS_CUTSCENE_ACTIVE<bool>();
 	}
 	public static bool IS_CUTSCENE_PLAYING()
 	{
-		return NativeFunction.Natives.IS_CUTSCENE_PLAYING();
+		return NativeFunction.Natives.IS_CUTSCENE_PLAYING<bool>();
 	}
 	public static int GET_CUTSCENE_SECTION_PLAYING()
 	{
-		return NativeFunction.Natives.GET_CUTSCENE_SECTION_PLAYING();
+		return NativeFunction.Natives.GET_CUTSCENE_SECTION_PLAYING<int>();
 	}
 	public static Entity GET_ENTITY_INDEX_OF_CUTSCENE_ENTITY(string cutsceneEntName, ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_ENTITY_INDEX_OF_CUTSCENE_ENTITY(cutsceneEntName, modelHash);
+		return NativeFunction.Natives.GET_ENTITY_INDEX_OF_CUTSCENE_ENTITY<Entity>(cutsceneEntName, modelHash);
 	}
 	public static int GET_CUTSCENE_CONCAT_SECTION_PLAYING()
 	{
-		return NativeFunction.Natives.GET_CUTSCENE_CONCAT_SECTION_PLAYING();
+		return NativeFunction.Natives.GET_CUTSCENE_CONCAT_SECTION_PLAYING<int>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool IS_CUTSCENE_AUTHORIZED(string cutsceneName)
 	{
-		return NativeFunction.Natives.IS_CUTSCENE_AUTHORIZED(cutsceneName);
+		return NativeFunction.Natives.IS_CUTSCENE_AUTHORIZED<bool>(cutsceneName);
 	}
 	public static int DOES_CUTSCENE_HANDLE_EXIST(int cutsceneHandle)
 	{
-		return NativeFunction.Natives.DOES_CUTSCENE_HANDLE_EXIST(cutsceneHandle);
+		return NativeFunction.Natives.DOES_CUTSCENE_HANDLE_EXIST<int>(cutsceneHandle);
 	}
 	public static void REGISTER_ENTITY_FOR_CUTSCENE(Ped cutscenePed, string cutsceneEntName, int p2, ulong modelHash, int p4)
 	{
@@ -4041,7 +4041,7 @@ public static class Natives
 	}
 	public static Entity GET_ENTITY_INDEX_OF_REGISTERED_ENTITY(string cutsceneEntName, ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_ENTITY_INDEX_OF_REGISTERED_ENTITY(cutsceneEntName, modelHash);
+		return NativeFunction.Natives.GET_ENTITY_INDEX_OF_REGISTERED_ENTITY<Entity>(cutsceneEntName, modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
@@ -4062,15 +4062,15 @@ public static class Natives
 	/// </summary>
 	public static bool CAN_SET_ENTER_STATE_FOR_REGISTERED_ENTITY(string cutsceneEntName, ulong modelHash)
 	{
-		return NativeFunction.Natives.CAN_SET_ENTER_STATE_FOR_REGISTERED_ENTITY(cutsceneEntName, modelHash);
+		return NativeFunction.Natives.CAN_SET_ENTER_STATE_FOR_REGISTERED_ENTITY<bool>(cutsceneEntName, modelHash);
 	}
 	public static bool CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY(string cutsceneEntName, ulong modelHash)
 	{
-		return NativeFunction.Natives.CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY(cutsceneEntName, modelHash);
+		return NativeFunction.Natives.CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY<bool>(cutsceneEntName, modelHash);
 	}
 	public static bool CAN_SET_EXIT_STATE_FOR_CAMERA(bool p0)
 	{
-		return NativeFunction.Natives.CAN_SET_EXIT_STATE_FOR_CAMERA(p0);
+		return NativeFunction.Natives.CAN_SET_EXIT_STATE_FOR_CAMERA<bool>(p0);
 	}
 	/// <summary>
 	/// 	Toggles a value (bool) for cutscenes.
@@ -4093,7 +4093,7 @@ public static class Natives
 	}
 	public static bool IS_MULTIHEAD_FADE_UP()
 	{
-		return NativeFunction.Natives.IS_MULTIHEAD_FADE_UP();
+		return NativeFunction.Natives.IS_MULTIHEAD_FADE_UP<bool>();
 	}
 	/// <summary>
 	/// 	Stops current cutscene with a fade transition<br/>
@@ -4111,7 +4111,7 @@ public static class Natives
 	}
 	public static bool CAN_USE_MOBILE_PHONE_DURING_CUTSCENE()
 	{
-		return NativeFunction.Natives.CAN_USE_MOBILE_PHONE_DURING_CUTSCENE();
+		return NativeFunction.Natives.CAN_USE_MOBILE_PHONE_DURING_CUTSCENE<bool>();
 	}
 	public static void SET_CUTSCENE_CAN_BE_SKIPPED(bool p0)
 	{
@@ -4134,7 +4134,7 @@ public static class Natives
 	}
 	public static bool DOES_CUTSCENE_ENTITY_EXIST(string cutsceneEntName, ulong modelHash)
 	{
-		return NativeFunction.Natives.DOES_CUTSCENE_ENTITY_EXIST(cutsceneEntName, modelHash);
+		return NativeFunction.Natives.DOES_CUTSCENE_ENTITY_EXIST<bool>(cutsceneEntName, modelHash);
 	}
 	/// <summary>
 	/// 	Thanks R*! ;)<br/>
@@ -4155,7 +4155,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_CUTSCENE_CUT_THIS_FRAME()
 	{
-		return NativeFunction.Natives.HAS_CUTSCENE_CUT_THIS_FRAME();
+		return NativeFunction.Natives.HAS_CUTSCENE_CUT_THIS_FRAME<bool>();
 	}
 	/*
 		DATAFILE
@@ -4173,59 +4173,59 @@ public static class Natives
 	}
 	public static bool DATAFILE_IS_VALID_REQUEST_ID(int index)
 	{
-		return NativeFunction.Natives.DATAFILE_IS_VALID_REQUEST_ID(index);
+		return NativeFunction.Natives.DATAFILE_IS_VALID_REQUEST_ID<bool>(index);
 	}
 	public static bool DATAFILE_HAS_LOADED_FILE_DATA(int requestId)
 	{
-		return NativeFunction.Natives.DATAFILE_HAS_LOADED_FILE_DATA(requestId);
+		return NativeFunction.Natives.DATAFILE_HAS_LOADED_FILE_DATA<bool>(requestId);
 	}
 	public static bool DATAFILE_HAS_VALID_FILE_DATA(int requestId)
 	{
-		return NativeFunction.Natives.DATAFILE_HAS_VALID_FILE_DATA(requestId);
+		return NativeFunction.Natives.DATAFILE_HAS_VALID_FILE_DATA<bool>(requestId);
 	}
 	public static bool DATAFILE_SELECT_ACTIVE_FILE(int requestId)
 	{
-		return NativeFunction.Natives.DATAFILE_SELECT_ACTIVE_FILE(requestId, 0);
+		return NativeFunction.Natives.DATAFILE_SELECT_ACTIVE_FILE<bool>(requestId, 0);
 	}
 	public static bool DATAFILE_DELETE_REQUESTED_FILE(int requestId)
 	{
-		return NativeFunction.Natives.DATAFILE_DELETE_REQUESTED_FILE(requestId);
+		return NativeFunction.Natives.DATAFILE_DELETE_REQUESTED_FILE<bool>(requestId);
 	}
 	public static bool UGC_CREATE_CONTENT(int dataCount, string contentName, string description, string tagsCsv, string contentTypeName, bool publish)
 	{
-		return NativeFunction.Natives.UGC_CREATE_CONTENT(0, dataCount, contentName, description, tagsCsv, contentTypeName, publish, 0);
+		return NativeFunction.Natives.UGC_CREATE_CONTENT<bool>(0, dataCount, contentName, description, tagsCsv, contentTypeName, publish, 0);
 	}
 	public static bool UGC_CREATE_MISSION(string contentName, string description, string tagsCsv, string contentTypeName, bool publish)
 	{
-		return NativeFunction.Natives.UGC_CREATE_MISSION(contentName, description, tagsCsv, contentTypeName, publish, 0);
+		return NativeFunction.Natives.UGC_CREATE_MISSION<bool>(contentName, description, tagsCsv, contentTypeName, publish, 0);
 	}
 	public static bool UGC_UPDATE_CONTENT(string contentId, int dataCount, string contentName, string description, string tagsCsv, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_UPDATE_CONTENT(contentId, 0, dataCount, contentName, description, tagsCsv, contentTypeName, 0);
+		return NativeFunction.Natives.UGC_UPDATE_CONTENT<bool>(contentId, 0, dataCount, contentName, description, tagsCsv, contentTypeName, 0);
 	}
 	public static bool UGC_UPDATE_MISSION(string contentId, string contentName, string description, string tagsCsv, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_UPDATE_MISSION(contentId, contentName, description, tagsCsv, contentTypeName, 0);
+		return NativeFunction.Natives.UGC_UPDATE_MISSION<bool>(contentId, contentName, description, tagsCsv, contentTypeName, 0);
 	}
 	public static bool UGC_SET_PLAYER_DATA(string contentId, float rating, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_SET_PLAYER_DATA(contentId, rating, contentTypeName, 0);
+		return NativeFunction.Natives.UGC_SET_PLAYER_DATA<bool>(contentId, rating, contentTypeName, 0);
 	}
 	public static bool DATAFILE_SELECT_UGC_DATA(int p0)
 	{
-		return NativeFunction.Natives.DATAFILE_SELECT_UGC_DATA(p0, 0);
+		return NativeFunction.Natives.DATAFILE_SELECT_UGC_DATA<bool>(p0, 0);
 	}
 	public static bool DATAFILE_SELECT_UGC_STATS(int p0, bool p1)
 	{
-		return NativeFunction.Natives.DATAFILE_SELECT_UGC_STATS(p0, p1, 0);
+		return NativeFunction.Natives.DATAFILE_SELECT_UGC_STATS<bool>(p0, p1, 0);
 	}
 	public static bool DATAFILE_SELECT_UGC_PLAYER_DATA(int p0)
 	{
-		return NativeFunction.Natives.DATAFILE_SELECT_UGC_PLAYER_DATA(p0, 0);
+		return NativeFunction.Natives.DATAFILE_SELECT_UGC_PLAYER_DATA<bool>(p0, 0);
 	}
 	public static bool DATAFILE_SELECT_CREATOR_STATS(int p0)
 	{
-		return NativeFunction.Natives.DATAFILE_SELECT_CREATOR_STATS(p0, 0);
+		return NativeFunction.Natives.DATAFILE_SELECT_CREATOR_STATS<bool>(p0, 0);
 	}
 	/// <summary>
 	/// 	Loads a User-Generated Content (UGC) file. These files can be found in &amp;quot;[GTA5]\data\ugc&amp;quot; and &amp;quot;[GTA5]\common\patch\ugc&amp;quot;. They seem to follow a naming convention, most likely of &amp;quot;[name]_[part].ugc&amp;quot;. See example below for usage.<br/>
@@ -4237,7 +4237,7 @@ public static class Natives
 	/// </summary>
 	public static bool DATAFILE_LOAD_OFFLINE_UGC(string filename)
 	{
-		return NativeFunction.Natives.DATAFILE_LOAD_OFFLINE_UGC(filename, 0);
+		return NativeFunction.Natives.DATAFILE_LOAD_OFFLINE_UGC<bool>(filename, 0);
 	}
 	public static void DATAFILE_CREATE(int p0)
 	{
@@ -4257,23 +4257,23 @@ public static class Natives
 	}
 	public static int DATAFILE_GET_FILE_DICT(int p0)
 	{
-		return NativeFunction.Natives.DATAFILE_GET_FILE_DICT(p0);
+		return NativeFunction.Natives.DATAFILE_GET_FILE_DICT<int>(p0);
 	}
 	public static bool DATAFILE_START_SAVE_TO_CLOUD(string filename)
 	{
-		return NativeFunction.Natives.DATAFILE_START_SAVE_TO_CLOUD(filename, 0);
+		return NativeFunction.Natives.DATAFILE_START_SAVE_TO_CLOUD<bool>(filename, 0);
 	}
-	public static bool DATAFILE_UPDATE_SAVE_TO_CLOUD(bool p0)
+	public static bool DATAFILE_UPDATE_SAVE_TO_CLOUD(out bool p0)
 	{
-		return NativeFunction.Natives.DATAFILE_UPDATE_SAVE_TO_CLOUD(p0);
+		return NativeFunction.Natives.DATAFILE_UPDATE_SAVE_TO_CLOUD<bool>(out p0);
 	}
 	public static bool DATAFILE_IS_SAVE_PENDING()
 	{
-		return NativeFunction.Natives.DATAFILE_IS_SAVE_PENDING();
+		return NativeFunction.Natives.DATAFILE_IS_SAVE_PENDING<bool>();
 	}
 	public static bool DATAFILE_LOAD_OFFLINE_UGC_FOR_ADDITIONAL_DATA_FILE()
 	{
-		return NativeFunction.Natives.DATAFILE_LOAD_OFFLINE_UGC_FOR_ADDITIONAL_DATA_FILE(0, 0);
+		return NativeFunction.Natives.DATAFILE_LOAD_OFFLINE_UGC_FOR_ADDITIONAL_DATA_FILE<bool>(0, 0);
 	}
 	public static void DATAFILE_DELETE_FOR_ADDITIONAL_DATA_FILE()
 	{
@@ -4281,7 +4281,7 @@ public static class Natives
 	}
 	public static int DATAFILE_GET_FILE_DICT_FOR_ADDITIONAL_DATA_FILE()
 	{
-		return NativeFunction.Natives.DATAFILE_GET_FILE_DICT_FOR_ADDITIONAL_DATA_FILE(0);
+		return NativeFunction.Natives.DATAFILE_GET_FILE_DICT_FOR_ADDITIONAL_DATA_FILE<int>(0);
 	}
 	public static void DATADICT_SET_BOOL(string key, bool value)
 	{
@@ -4305,39 +4305,39 @@ public static class Natives
 	}
 	public static int DATADICT_CREATE_DICT(string key)
 	{
-		return NativeFunction.Natives.DATADICT_CREATE_DICT(0, key);
+		return NativeFunction.Natives.DATADICT_CREATE_DICT<int>(0, key);
 	}
 	public static int DATADICT_CREATE_ARRAY(string key)
 	{
-		return NativeFunction.Natives.DATADICT_CREATE_ARRAY(0, key);
+		return NativeFunction.Natives.DATADICT_CREATE_ARRAY<int>(0, key);
 	}
 	public static bool DATADICT_GET_BOOL(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_BOOL(0, key);
+		return NativeFunction.Natives.DATADICT_GET_BOOL<bool>(0, key);
 	}
 	public static int DATADICT_GET_INT(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_INT(0, key);
+		return NativeFunction.Natives.DATADICT_GET_INT<int>(0, key);
 	}
 	public static float DATADICT_GET_FLOAT(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_FLOAT(0, key);
+		return NativeFunction.Natives.DATADICT_GET_FLOAT<float>(0, key);
 	}
 	public static string DATADICT_GET_STRING(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_STRING(0, key);
+		return NativeFunction.Natives.DATADICT_GET_STRING<string>(0, key);
 	}
 	public static Vector3 DATADICT_GET_VECTOR(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_VECTOR(0, key);
+		return NativeFunction.Natives.DATADICT_GET_VECTOR<Vector3>(0, key);
 	}
 	public static int DATADICT_GET_DICT(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_DICT(0, key);
+		return NativeFunction.Natives.DATADICT_GET_DICT<int>(0, key);
 	}
 	public static int DATADICT_GET_ARRAY(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_ARRAY(0, key);
+		return NativeFunction.Natives.DATADICT_GET_ARRAY<int>(0, key);
 	}
 	/// <summary>
 	/// 	Types:<br/>
@@ -4351,7 +4351,7 @@ public static class Natives
 	/// </summary>
 	public static int DATADICT_GET_TYPE(string key)
 	{
-		return NativeFunction.Natives.DATADICT_GET_TYPE(0, key);
+		return NativeFunction.Natives.DATADICT_GET_TYPE<int>(0, key);
 	}
 	public static void DATAARRAY_ADD_BOOL(bool value)
 	{
@@ -4375,35 +4375,35 @@ public static class Natives
 	}
 	public static int DATAARRAY_ADD_DICT()
 	{
-		return NativeFunction.Natives.DATAARRAY_ADD_DICT(0);
+		return NativeFunction.Natives.DATAARRAY_ADD_DICT<int>(0);
 	}
 	public static bool DATAARRAY_GET_BOOL(int arrayIndex)
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_BOOL(0, arrayIndex);
+		return NativeFunction.Natives.DATAARRAY_GET_BOOL<bool>(0, arrayIndex);
 	}
 	public static int DATAARRAY_GET_INT(int arrayIndex)
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_INT(0, arrayIndex);
+		return NativeFunction.Natives.DATAARRAY_GET_INT<int>(0, arrayIndex);
 	}
 	public static float DATAARRAY_GET_FLOAT(int arrayIndex)
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_FLOAT(0, arrayIndex);
+		return NativeFunction.Natives.DATAARRAY_GET_FLOAT<float>(0, arrayIndex);
 	}
 	public static string DATAARRAY_GET_STRING(int arrayIndex)
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_STRING(0, arrayIndex);
+		return NativeFunction.Natives.DATAARRAY_GET_STRING<string>(0, arrayIndex);
 	}
 	public static Vector3 DATAARRAY_GET_VECTOR(int arrayIndex)
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_VECTOR(0, arrayIndex);
+		return NativeFunction.Natives.DATAARRAY_GET_VECTOR<Vector3>(0, arrayIndex);
 	}
 	public static int DATAARRAY_GET_DICT(int arrayIndex)
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_DICT(0, arrayIndex);
+		return NativeFunction.Natives.DATAARRAY_GET_DICT<int>(0, arrayIndex);
 	}
 	public static int DATAARRAY_GET_COUNT()
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_COUNT(0);
+		return NativeFunction.Natives.DATAARRAY_GET_COUNT<int>(0);
 	}
 	/// <summary>
 	/// 	Types:<br/>
@@ -4417,14 +4417,14 @@ public static class Natives
 	/// </summary>
 	public static int DATAARRAY_GET_TYPE(int arrayIndex)
 	{
-		return NativeFunction.Natives.DATAARRAY_GET_TYPE(0, arrayIndex);
+		return NativeFunction.Natives.DATAARRAY_GET_TYPE<int>(0, arrayIndex);
 	}
 	/*
 		DECORATOR
 	*/
 	public static bool DECOR_SET_TIME(Entity entity, string propertyName, int timestamp)
 	{
-		return NativeFunction.Natives.DECOR_SET_TIME(entity, propertyName, timestamp);
+		return NativeFunction.Natives.DECOR_SET_TIME<bool>(entity, propertyName, timestamp);
 	}
 	/// <summary>
 	/// 	This function sets metadata of type bool to specified entity.<br/>
@@ -4432,41 +4432,41 @@ public static class Natives
 	/// </summary>
 	public static bool DECOR_SET_BOOL(Entity entity, string propertyName, bool value)
 	{
-		return NativeFunction.Natives.DECOR_SET_BOOL(entity, propertyName, value);
+		return NativeFunction.Natives.DECOR_SET_BOOL<bool>(entity, propertyName, value);
 	}
 	public static bool DECOR_SET_FLOAT(Entity entity, string propertyName, float value)
 	{
-		return NativeFunction.Natives.DECOR_SET_FLOAT(entity, propertyName, value);
+		return NativeFunction.Natives.DECOR_SET_FLOAT<bool>(entity, propertyName, value);
 	}
 	/// <summary>
 	/// 	Sets property to int.
 	/// </summary>
 	public static bool DECOR_SET_INT(Entity entity, string propertyName, int value)
 	{
-		return NativeFunction.Natives.DECOR_SET_INT(entity, propertyName, value);
+		return NativeFunction.Natives.DECOR_SET_INT<bool>(entity, propertyName, value);
 	}
 	public static bool DECOR_GET_BOOL(Entity entity, string propertyName)
 	{
-		return NativeFunction.Natives.DECOR_GET_BOOL(entity, propertyName);
+		return NativeFunction.Natives.DECOR_GET_BOOL<bool>(entity, propertyName);
 	}
 	public static float DECOR_GET_FLOAT(Entity entity, string propertyName)
 	{
-		return NativeFunction.Natives.DECOR_GET_FLOAT(entity, propertyName);
+		return NativeFunction.Natives.DECOR_GET_FLOAT<float>(entity, propertyName);
 	}
 	public static int DECOR_GET_INT(Entity entity, string propertyName)
 	{
-		return NativeFunction.Natives.DECOR_GET_INT(entity, propertyName);
+		return NativeFunction.Natives.DECOR_GET_INT<int>(entity, propertyName);
 	}
 	/// <summary>
 	/// 	Returns whether or not the specified property is set for the entity.
 	/// </summary>
 	public static bool DECOR_EXIST_ON(Entity entity, string propertyName)
 	{
-		return NativeFunction.Natives.DECOR_EXIST_ON(entity, propertyName);
+		return NativeFunction.Natives.DECOR_EXIST_ON<bool>(entity, propertyName);
 	}
 	public static bool DECOR_REMOVE(Entity entity, string propertyName)
 	{
-		return NativeFunction.Natives.DECOR_REMOVE(entity, propertyName);
+		return NativeFunction.Natives.DECOR_REMOVE<bool>(entity, propertyName);
 	}
 	/// <summary>
 	/// 	https://alloc8or.re/gta5/doc/enums/eDecorType.txt
@@ -4480,7 +4480,7 @@ public static class Natives
 	/// </summary>
 	public static bool DECOR_IS_REGISTERED_AS_TYPE(string propertyName, int type)
 	{
-		return NativeFunction.Natives.DECOR_IS_REGISTERED_AS_TYPE(propertyName, type);
+		return NativeFunction.Natives.DECOR_IS_REGISTERED_AS_TYPE<bool>(propertyName, type);
 	}
 	/// <summary>
 	/// 	Called after all decorator type initializations.
@@ -4494,55 +4494,55 @@ public static class Natives
 	*/
 	public static bool ARE_ANY_CCS_PENDING()
 	{
-		return NativeFunction.Natives.ARE_ANY_CCS_PENDING();
+		return NativeFunction.Natives.ARE_ANY_CCS_PENDING<bool>();
 	}
 	/// <summary>
 	/// 	Returns true if the given DLC pack is present.
 	/// </summary>
 	public static bool IS_DLC_PRESENT(ulong dlcHash)
 	{
-		return NativeFunction.Natives.IS_DLC_PRESENT(dlcHash);
+		return NativeFunction.Natives.IS_DLC_PRESENT<bool>(dlcHash);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool DLC_CHECK_CLOUD_DATA_CORRECT()
 	{
-		return NativeFunction.Natives.DLC_CHECK_CLOUD_DATA_CORRECT();
+		return NativeFunction.Natives.DLC_CHECK_CLOUD_DATA_CORRECT<bool>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static int GET_EXTRACONTENT_CLOUD_RESULT()
 	{
-		return NativeFunction.Natives.GET_EXTRACONTENT_CLOUD_RESULT();
+		return NativeFunction.Natives.GET_EXTRACONTENT_CLOUD_RESULT<int>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool DLC_CHECK_COMPAT_PACK_CONFIGURATION()
 	{
-		return NativeFunction.Natives.DLC_CHECK_COMPAT_PACK_CONFIGURATION();
+		return NativeFunction.Natives.DLC_CHECK_COMPAT_PACK_CONFIGURATION<bool>();
 	}
 	public static bool GET_EVER_HAD_BAD_PACK_ORDER()
 	{
-		return NativeFunction.Natives.GET_EVER_HAD_BAD_PACK_ORDER();
+		return NativeFunction.Natives.GET_EVER_HAD_BAD_PACK_ORDER<bool>();
 	}
 	public static bool GET_IS_LOADING_SCREEN_ACTIVE()
 	{
-		return NativeFunction.Natives.GET_IS_LOADING_SCREEN_ACTIVE();
+		return NativeFunction.Natives.GET_IS_LOADING_SCREEN_ACTIVE<bool>();
 	}
 	public static bool GET_IS_INITIAL_LOADING_SCREEN_ACTIVE()
 	{
-		return NativeFunction.Natives.GET_IS_INITIAL_LOADING_SCREEN_ACTIVE();
+		return NativeFunction.Natives.GET_IS_INITIAL_LOADING_SCREEN_ACTIVE<bool>();
 	}
 	/// <summary>
 	/// 	Sets the value of the specified variable to 0.<br/>
 	/// 	Always returns true.
 	/// </summary>
-	public static bool HAS_CLOUD_REQUESTS_FINISHED(bool p0, int unused)
+	public static bool HAS_CLOUD_REQUESTS_FINISHED(out bool p0, int unused)
 	{
-		return NativeFunction.Natives.HAS_CLOUD_REQUESTS_FINISHED(p0, unused);
+		return NativeFunction.Natives.HAS_CLOUD_REQUESTS_FINISHED<bool>(out p0, unused);
 	}
 	/// <summary>
 	/// 	Unloads GROUP_MAP (GTAO/MP) DLC data and loads GROUP_MAP_SP DLC. Neither are loaded by default, ON_ENTER_MP is a cognate to this function and loads MP DLC (and unloads SP DLC by extension).<br/>
@@ -4569,27 +4569,27 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_ENTITY_EXIST(Entity entity)
 	{
-		return NativeFunction.Natives.DOES_ENTITY_EXIST(entity);
+		return NativeFunction.Natives.DOES_ENTITY_EXIST<bool>(entity);
 	}
 	public static bool DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Entity entity, bool p1)
 	{
-		return NativeFunction.Natives.DOES_ENTITY_BELONG_TO_THIS_SCRIPT(entity, p1);
+		return NativeFunction.Natives.DOES_ENTITY_BELONG_TO_THIS_SCRIPT<bool>(entity, p1);
 	}
 	public static bool DOES_ENTITY_HAVE_DRAWABLE(Entity entity)
 	{
-		return NativeFunction.Natives.DOES_ENTITY_HAVE_DRAWABLE(entity);
+		return NativeFunction.Natives.DOES_ENTITY_HAVE_DRAWABLE<bool>(entity);
 	}
 	public static bool DOES_ENTITY_HAVE_PHYSICS(Entity entity)
 	{
-		return NativeFunction.Natives.DOES_ENTITY_HAVE_PHYSICS(entity);
+		return NativeFunction.Natives.DOES_ENTITY_HAVE_PHYSICS<bool>(entity);
 	}
 	public static bool DOES_ENTITY_HAVE_SKELETON(Entity entity)
 	{
-		return NativeFunction.Natives.DOES_ENTITY_HAVE_SKELETON(entity);
+		return NativeFunction.Natives.DOES_ENTITY_HAVE_SKELETON<bool>(entity);
 	}
 	public static bool DOES_ENTITY_HAVE_ANIM_DIRECTOR(Entity entity)
 	{
-		return NativeFunction.Natives.DOES_ENTITY_HAVE_ANIM_DIRECTOR(entity);
+		return NativeFunction.Natives.DOES_ENTITY_HAVE_ANIM_DIRECTOR<bool>(entity);
 	}
 	/// <summary>
 	/// 	P3 is always 3 as far as i cant tell<br/>
@@ -4598,19 +4598,19 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ENTITY_ANIM_FINISHED(Entity entity, string animDict, string animName, int p3)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_ANIM_FINISHED(entity, animDict, animName, p3);
+		return NativeFunction.Natives.HAS_ENTITY_ANIM_FINISHED<bool>(entity, animDict, animName, p3);
 	}
 	public static bool HAS_ENTITY_BEEN_DAMAGED_BY_ANY_OBJECT(Entity entity)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ANY_OBJECT(entity);
+		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ANY_OBJECT<bool>(entity);
 	}
 	public static bool HAS_ENTITY_BEEN_DAMAGED_BY_ANY_PED(Entity entity)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ANY_PED(entity);
+		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ANY_PED<bool>(entity);
 	}
 	public static bool HAS_ENTITY_BEEN_DAMAGED_BY_ANY_VEHICLE(Entity entity)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ANY_VEHICLE(entity);
+		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ANY_VEHICLE<bool>(entity);
 	}
 	/// <summary>
 	/// 	Entity 1 = Victim<br/>
@@ -4620,7 +4620,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Entity entity1, Entity entity2, bool p2)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(entity1, entity2, p2);
+		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY<bool>(entity1, entity2, p2);
 	}
 	/// <summary>
 	/// 	traceType is always 17 in the scripts.<br/>
@@ -4632,11 +4632,11 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ENTITY_CLEAR_LOS_TO_ENTITY(Entity entity1, Entity entity2, int traceType)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_CLEAR_LOS_TO_ENTITY(entity1, entity2, traceType);
+		return NativeFunction.Natives.HAS_ENTITY_CLEAR_LOS_TO_ENTITY<bool>(entity1, entity2, traceType);
 	}
 	public static bool HAS_ENTITY_CLEAR_LOS_TO_ENTITY_ADJUST_FOR_COVER(Entity entity1, Entity entity2, int traceType)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_CLEAR_LOS_TO_ENTITY_ADJUST_FOR_COVER(entity1, entity2, traceType);
+		return NativeFunction.Natives.HAS_ENTITY_CLEAR_LOS_TO_ENTITY_ADJUST_FOR_COVER<bool>(entity1, entity2, traceType);
 	}
 	/// <summary>
 	/// 	Has the entity1 got a clear line of sight to the other entity2 from the direction entity1 is facing.<br/>
@@ -4644,7 +4644,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ENTITY_CLEAR_LOS_TO_ENTITY_IN_FRONT(Entity entity1, Entity entity2)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_CLEAR_LOS_TO_ENTITY_IN_FRONT(entity1, entity2);
+		return NativeFunction.Natives.HAS_ENTITY_CLEAR_LOS_TO_ENTITY_IN_FRONT<bool>(entity1, entity2);
 	}
 	/// <summary>
 	/// 	Called on tick.<br/>
@@ -4654,19 +4654,19 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ENTITY_COLLIDED_WITH_ANYTHING(Entity entity)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_COLLIDED_WITH_ANYTHING(entity);
+		return NativeFunction.Natives.HAS_ENTITY_COLLIDED_WITH_ANYTHING<bool>(entity);
 	}
 	public static Entity _GET_LAST_ENTITY_HIT_BY_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives._GET_LAST_ENTITY_HIT_BY_ENTITY(entity);
+		return NativeFunction.Natives._GET_LAST_ENTITY_HIT_BY_ENTITY<Entity>(entity);
 	}
 	public static ulong GET_LAST_MATERIAL_HIT_BY_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_LAST_MATERIAL_HIT_BY_ENTITY(entity);
+		return NativeFunction.Natives.GET_LAST_MATERIAL_HIT_BY_ENTITY<ulong>(entity);
 	}
 	public static Vector3 GET_COLLISION_NORMAL_OF_LAST_HIT_FOR_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_COLLISION_NORMAL_OF_LAST_HIT_FOR_ENTITY(entity);
+		return NativeFunction.Natives.GET_COLLISION_NORMAL_OF_LAST_HIT_FOR_ENTITY<Vector3>(entity);
 	}
 	/// <summary>
 	/// 	Based on carmod_shop script decompile this takes a vehicle parameter. It is called when repair is done on initial enter.
@@ -4687,7 +4687,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_ENTITY_ANIM_CURRENT_TIME(Entity entity, string animDict, string animName)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ANIM_CURRENT_TIME(entity, animDict, animName);
+		return NativeFunction.Natives.GET_ENTITY_ANIM_CURRENT_TIME<float>(entity, animDict, animName);
 	}
 	/// <summary>
 	/// 	Returns a float value representing animation&amp;apos;s total playtime in milliseconds.<br/>
@@ -4700,18 +4700,18 @@ public static class Natives
 	/// </summary>
 	public static float GET_ENTITY_ANIM_TOTAL_TIME(Entity entity, string animDict, string animName)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ANIM_TOTAL_TIME(entity, animDict, animName);
+		return NativeFunction.Natives.GET_ENTITY_ANIM_TOTAL_TIME<float>(entity, animDict, animName);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
 	/// </summary>
 	public static float GET_ANIM_DURATION(string animDict, string animName)
 	{
-		return NativeFunction.Natives.GET_ANIM_DURATION(animDict, animName);
+		return NativeFunction.Natives.GET_ANIM_DURATION<float>(animDict, animName);
 	}
 	public static Entity GET_ENTITY_ATTACHED_TO(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ATTACHED_TO(entity);
+		return NativeFunction.Natives.GET_ENTITY_ATTACHED_TO<Entity>(entity);
 	}
 	/// <summary>
 	/// 	Gets the current coordinates for a specified entity.<br/>
@@ -4720,35 +4720,35 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_ENTITY_COORDS(Entity entity, bool alive)
 	{
-		return NativeFunction.Natives.GET_ENTITY_COORDS(entity, alive);
+		return NativeFunction.Natives.GET_ENTITY_COORDS<Vector3>(entity, alive);
 	}
 	/// <summary>
 	/// 	Gets the entity&amp;apos;s forward vector.
 	/// </summary>
 	public static Vector3 GET_ENTITY_FORWARD_VECTOR(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_FORWARD_VECTOR(entity);
+		return NativeFunction.Natives.GET_ENTITY_FORWARD_VECTOR<Vector3>(entity);
 	}
 	/// <summary>
 	/// 	Gets the X-component of the entity&amp;apos;s forward vector.
 	/// </summary>
 	public static float GET_ENTITY_FORWARD_X(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_FORWARD_X(entity);
+		return NativeFunction.Natives.GET_ENTITY_FORWARD_X<float>(entity);
 	}
 	/// <summary>
 	/// 	Gets the Y-component of the entity&amp;apos;s forward vector.
 	/// </summary>
 	public static float GET_ENTITY_FORWARD_Y(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_FORWARD_Y(entity);
+		return NativeFunction.Natives.GET_ENTITY_FORWARD_Y<float>(entity);
 	}
 	/// <summary>
 	/// 	Returns the heading of the entity in degrees. Also know as the &amp;quot;Yaw&amp;quot; of an entity.
 	/// </summary>
 	public static float GET_ENTITY_HEADING(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_HEADING(entity);
+		return NativeFunction.Natives.GET_ENTITY_HEADING<float>(entity);
 	}
 	/// <summary>
 	/// 	Gets the heading of the entity physics in degrees, which tends to be more accurate than just &amp;quot;GET_ENTITY_HEADING&amp;quot;. This can be clearly seen while, for example, ragdolling a ped/player.<br/>
@@ -4757,7 +4757,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_ENTITY_HEADING_FROM_EULERS(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_HEADING_FROM_EULERS(entity);
+		return NativeFunction.Natives.GET_ENTITY_HEADING_FROM_EULERS<float>(entity);
 	}
 	/// <summary>
 	/// 	Returns an integer value of entity&amp;apos;s current health.<br/>
@@ -4774,7 +4774,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_ENTITY_HEALTH(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_HEALTH(entity);
+		return NativeFunction.Natives.GET_ENTITY_HEALTH<int>(entity);
 	}
 	/// <summary>
 	/// 	Return an integer value of entity&amp;apos;s maximum health.<br/>
@@ -4785,7 +4785,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_ENTITY_MAX_HEALTH(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_MAX_HEALTH(entity);
+		return NativeFunction.Natives.GET_ENTITY_MAX_HEALTH<int>(entity);
 	}
 	/// <summary>
 	/// 	For instance: ENTITY::SET_ENTITY_MAX_HEALTH(PLAYER::PLAYER_PED_ID(), 200); // director_mode.c4: 67849
@@ -4796,7 +4796,7 @@ public static class Natives
 	}
 	public static float GET_ENTITY_HEIGHT(Entity entity, float X, float Y, float Z, bool atTop, bool inWorldCoords)
 	{
-		return NativeFunction.Natives.GET_ENTITY_HEIGHT(entity, X, Y, Z, atTop, inWorldCoords);
+		return NativeFunction.Natives.GET_ENTITY_HEIGHT<float>(entity, X, Y, Z, atTop, inWorldCoords);
 	}
 	/// <summary>
 	/// 	Return height (z-dimension) above ground. <br/>
@@ -4807,7 +4807,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_ENTITY_HEIGHT_ABOVE_GROUND(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_HEIGHT_ABOVE_GROUND(entity);
+		return NativeFunction.Natives.GET_ENTITY_HEIGHT_ABOVE_GROUND<float>(entity);
 	}
 	public static void GET_ENTITY_MATRIX(Entity entity, out Vector3 forwardVector, out Vector3 rightVector, out Vector3 upVector, out Vector3 position)
 	{
@@ -4818,7 +4818,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_ENTITY_MODEL(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_MODEL(entity);
+		return NativeFunction.Natives.GET_ENTITY_MODEL<ulong>(entity);
 	}
 	/// <summary>
 	/// 	Converts world coords (posX - Z) to coords relative to the entity<br/>
@@ -4830,7 +4830,7 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(Entity entity, float posX, float posY, float posZ)
 	{
-		return NativeFunction.Natives.GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(entity, posX, posY, posZ);
+		return NativeFunction.Natives.GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS<Vector3>(entity, posX, posY, posZ);
 	}
 	/// <summary>
 	/// 	Offset values are relative to the entity.<br/>
@@ -4841,11 +4841,11 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(Entity entity, float offsetX, float offsetY, float offsetZ)
 	{
-		return NativeFunction.Natives.GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(entity, offsetX, offsetY, offsetZ);
+		return NativeFunction.Natives.GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS<Vector3>(entity, offsetX, offsetY, offsetZ);
 	}
 	public static float GET_ENTITY_PITCH(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_PITCH(entity);
+		return NativeFunction.Natives.GET_ENTITY_PITCH<float>(entity);
 	}
 	/// <summary>
 	/// 	w is the correct parameter name!
@@ -4860,7 +4860,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_ENTITY_ROLL(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ROLL(entity);
+		return NativeFunction.Natives.GET_ENTITY_ROLL<float>(entity);
 	}
 	/// <summary>
 	/// 	rotationOrder is the order yaw, pitch and roll is applied. Usually 2. Returns a vector where the Z coordinate is the yaw.<br/>
@@ -4880,18 +4880,18 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_ENTITY_ROTATION(Entity entity, int rotationOrder)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ROTATION(entity, rotationOrder);
+		return NativeFunction.Natives.GET_ENTITY_ROTATION<Vector3>(entity, rotationOrder);
 	}
 	public static Vector3 GET_ENTITY_ROTATION_VELOCITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ROTATION_VELOCITY(entity);
+		return NativeFunction.Natives.GET_ENTITY_ROTATION_VELOCITY<Vector3>(entity);
 	}
 	/// <summary>
 	/// 	Returns the name of the script that owns/created the entity or nullptr. Second parameter is unused, can just be a nullptr.
 	/// </summary>
-	public static string GET_ENTITY_SCRIPT(Entity entity, uint script)
+	public static string GET_ENTITY_SCRIPT(Entity entity, out uint script)
 	{
-		return NativeFunction.Natives.GET_ENTITY_SCRIPT(entity, script);
+		return NativeFunction.Natives.GET_ENTITY_SCRIPT<string>(entity, out script);
 	}
 	/// <summary>
 	/// 	result is in meters per second<br/>
@@ -4906,62 +4906,62 @@ public static class Natives
 	/// </summary>
 	public static float GET_ENTITY_SPEED(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_SPEED(entity);
+		return NativeFunction.Natives.GET_ENTITY_SPEED<float>(entity);
 	}
 	/// <summary>
 	/// 	Relative can be used for getting speed relative to the frame of the vehicle, to determine for example, if you are going in reverse (-y speed) or not (+y speed). 
 	/// </summary>
 	public static Vector3 GET_ENTITY_SPEED_VECTOR(Entity entity, bool relative)
 	{
-		return NativeFunction.Natives.GET_ENTITY_SPEED_VECTOR(entity, relative);
+		return NativeFunction.Natives.GET_ENTITY_SPEED_VECTOR<Vector3>(entity, relative);
 	}
 	public static float GET_ENTITY_UPRIGHT_VALUE(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_UPRIGHT_VALUE(entity);
+		return NativeFunction.Natives.GET_ENTITY_UPRIGHT_VALUE<float>(entity);
 	}
 	public static Vector3 GET_ENTITY_VELOCITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_VELOCITY(entity);
+		return NativeFunction.Natives.GET_ENTITY_VELOCITY<Vector3>(entity);
 	}
 	/// <summary>
 	/// 	Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
 	/// </summary>
 	public static Object GET_OBJECT_INDEX_FROM_ENTITY_INDEX(Entity entity)
 	{
-		return NativeFunction.Natives.GET_OBJECT_INDEX_FROM_ENTITY_INDEX(entity);
+		return NativeFunction.Natives.GET_OBJECT_INDEX_FROM_ENTITY_INDEX<Object>(entity);
 	}
 	/// <summary>
 	/// 	Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
 	/// </summary>
 	public static Ped GET_PED_INDEX_FROM_ENTITY_INDEX(Entity entity)
 	{
-		return NativeFunction.Natives.GET_PED_INDEX_FROM_ENTITY_INDEX(entity);
+		return NativeFunction.Natives.GET_PED_INDEX_FROM_ENTITY_INDEX<Ped>(entity);
 	}
 	/// <summary>
 	/// 	Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
 	/// </summary>
 	public static Vehicle GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Entity entity)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(entity);
+		return NativeFunction.Natives.GET_VEHICLE_INDEX_FROM_ENTITY_INDEX<Vehicle>(entity);
 	}
 	/// <summary>
 	/// 	Returns the coordinates of an entity-bone.
 	/// </summary>
 	public static Vector3 GET_WORLD_POSITION_OF_ENTITY_BONE(Entity entity, int boneIndex)
 	{
-		return NativeFunction.Natives.GET_WORLD_POSITION_OF_ENTITY_BONE(entity, boneIndex);
+		return NativeFunction.Natives.GET_WORLD_POSITION_OF_ENTITY_BONE<Vector3>(entity, boneIndex);
 	}
 	public static Player GET_NEAREST_PLAYER_TO_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_NEAREST_PLAYER_TO_ENTITY(entity);
+		return NativeFunction.Natives.GET_NEAREST_PLAYER_TO_ENTITY<Player>(entity);
 	}
 	public static Player GET_NEAREST_PLAYER_TO_ENTITY_ON_TEAM(Entity entity, int team)
 	{
-		return NativeFunction.Natives.GET_NEAREST_PLAYER_TO_ENTITY_ON_TEAM(entity, team);
+		return NativeFunction.Natives.GET_NEAREST_PLAYER_TO_ENTITY_ON_TEAM<Player>(entity, team);
 	}
 	public static int GET_NEAREST_PARTICIPANT_TO_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_NEAREST_PARTICIPANT_TO_ENTITY(entity);
+		return NativeFunction.Natives.GET_NEAREST_PARTICIPANT_TO_ENTITY<int>(entity);
 	}
 	/// <summary>
 	/// 	Returns:<br/>
@@ -4972,34 +4972,34 @@ public static class Natives
 	/// </summary>
 	public static int GET_ENTITY_TYPE(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_TYPE(entity);
+		return NativeFunction.Natives.GET_ENTITY_TYPE<int>(entity);
 	}
 	/// <summary>
 	/// 	A population type, from the following enum: https://alloc8or.re/gta5/doc/enums/ePopulationType.txt
 	/// </summary>
 	public static int GET_ENTITY_POPULATION_TYPE(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_POPULATION_TYPE(entity);
+		return NativeFunction.Natives.GET_ENTITY_POPULATION_TYPE<int>(entity);
 	}
 	public static bool IS_AN_ENTITY(uint handle)
 	{
-		return NativeFunction.Natives.IS_AN_ENTITY(handle);
+		return NativeFunction.Natives.IS_AN_ENTITY<bool>(handle);
 	}
 	public static bool IS_ENTITY_A_PED(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_A_PED(entity);
+		return NativeFunction.Natives.IS_ENTITY_A_PED<bool>(entity);
 	}
 	public static bool IS_ENTITY_A_MISSION_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_A_MISSION_ENTITY(entity);
+		return NativeFunction.Natives.IS_ENTITY_A_MISSION_ENTITY<bool>(entity);
 	}
 	public static bool IS_ENTITY_A_VEHICLE(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_A_VEHICLE(entity);
+		return NativeFunction.Natives.IS_ENTITY_A_VEHICLE<bool>(entity);
 	}
 	public static bool IS_ENTITY_AN_OBJECT(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_AN_OBJECT(entity);
+		return NativeFunction.Natives.IS_ENTITY_AN_OBJECT<bool>(entity);
 	}
 	/// <summary>
 	/// 	Checks if entity is within x/y/zSize distance of x/y/z. <br/>
@@ -5008,7 +5008,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ENTITY_AT_COORD(Entity entity, float xPos, float yPos, float zPos, float xSize, float ySize, float zSize, bool p7, bool p8, int p9)
 	{
-		return NativeFunction.Natives.IS_ENTITY_AT_COORD(entity, xPos, yPos, zPos, xSize, ySize, zSize, p7, p8, p9);
+		return NativeFunction.Natives.IS_ENTITY_AT_COORD<bool>(entity, xPos, yPos, zPos, xSize, ySize, zSize, p7, p8, p9);
 	}
 	/// <summary>
 	/// 	Checks if entity1 is within the box defined by x/y/zSize of entity2.<br/>
@@ -5017,38 +5017,38 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ENTITY_AT_ENTITY(Entity entity1, Entity entity2, float xSize, float ySize, float zSize, bool p5, bool p6, int p7)
 	{
-		return NativeFunction.Natives.IS_ENTITY_AT_ENTITY(entity1, entity2, xSize, ySize, zSize, p5, p6, p7);
+		return NativeFunction.Natives.IS_ENTITY_AT_ENTITY<bool>(entity1, entity2, xSize, ySize, zSize, p5, p6, p7);
 	}
 	/// <summary>
 	/// 	Whether the entity is attached to any other entity.
 	/// </summary>
 	public static bool IS_ENTITY_ATTACHED(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ATTACHED(entity);
+		return NativeFunction.Natives.IS_ENTITY_ATTACHED<bool>(entity);
 	}
 	public static bool IS_ENTITY_ATTACHED_TO_ANY_OBJECT(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ANY_OBJECT(entity);
+		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ANY_OBJECT<bool>(entity);
 	}
 	public static bool IS_ENTITY_ATTACHED_TO_ANY_PED(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ANY_PED(entity);
+		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ANY_PED<bool>(entity);
 	}
 	public static bool IS_ENTITY_ATTACHED_TO_ANY_VEHICLE(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ANY_VEHICLE(entity);
+		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ANY_VEHICLE<bool>(entity);
 	}
 	public static bool IS_ENTITY_ATTACHED_TO_ENTITY(Entity from, Entity to)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ENTITY(from, to);
+		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_ENTITY<bool>(from, to);
 	}
 	public static bool IS_ENTITY_DEAD(Entity entity, bool p1)
 	{
-		return NativeFunction.Natives.IS_ENTITY_DEAD(entity, p1);
+		return NativeFunction.Natives.IS_ENTITY_DEAD<bool>(entity, p1);
 	}
 	public static bool IS_ENTITY_IN_AIR(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_IN_AIR(entity);
+		return NativeFunction.Natives.IS_ENTITY_IN_AIR<bool>(entity);
 	}
 	/// <summary>
 	/// 	`p8` is a debug flag invoking functions in the same path as ``DRAW_MARKER``<br/>
@@ -5057,29 +5057,29 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ENTITY_IN_ANGLED_AREA(Entity entity, float x1, float y1, float z1, float x2, float y2, float z2, float width, bool debug, bool includeZ)
 	{
-		return NativeFunction.Natives.IS_ENTITY_IN_ANGLED_AREA(entity, x1, y1, z1, x2, y2, z2, width, debug, includeZ, 0);
+		return NativeFunction.Natives.IS_ENTITY_IN_ANGLED_AREA<bool>(entity, x1, y1, z1, x2, y2, z2, width, debug, includeZ, 0);
 	}
 	public static bool IS_ENTITY_IN_AREA(Entity entity, float x1, float y1, float z1, float x2, float y2, float z2, bool p7, bool p8)
 	{
-		return NativeFunction.Natives.IS_ENTITY_IN_AREA(entity, x1, y1, z1, x2, y2, z2, p7, p8, 0);
+		return NativeFunction.Natives.IS_ENTITY_IN_AREA<bool>(entity, x1, y1, z1, x2, y2, z2, p7, p8, 0);
 	}
 	/// <summary>
 	/// 	Full list of zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/zones.json
 	/// </summary>
 	public static bool IS_ENTITY_IN_ZONE(Entity entity, string zone)
 	{
-		return NativeFunction.Natives.IS_ENTITY_IN_ZONE(entity, zone);
+		return NativeFunction.Natives.IS_ENTITY_IN_ZONE<bool>(entity, zone);
 	}
 	public static bool IS_ENTITY_IN_WATER(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_IN_WATER(entity);
+		return NativeFunction.Natives.IS_ENTITY_IN_WATER<bool>(entity);
 	}
 	/// <summary>
 	/// 	Get how much of the entity is submerged.  1.0f is whole entity.
 	/// </summary>
 	public static float GET_ENTITY_SUBMERGED_LEVEL(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_SUBMERGED_LEVEL(entity);
+		return NativeFunction.Natives.GET_ENTITY_SUBMERGED_LEVEL<float>(entity);
 	}
 	public static void SET_ENTITY_REQUIRES_MORE_EXPENSIVE_RIVER_CHECK(Entity entity, bool toggle)
 	{
@@ -5092,7 +5092,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ENTITY_ON_SCREEN(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ON_SCREEN(entity);
+		return NativeFunction.Natives.IS_ENTITY_ON_SCREEN<bool>(entity);
 	}
 	/// <summary>
 	/// 	See also PED::IS_SCRIPTED_SCENARIO_PED_USING_CONDITIONAL_ANIM 0x6EC47A344923E1ED 0x3C30B447<br/>
@@ -5105,7 +5105,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ENTITY_PLAYING_ANIM(Entity entity, string animDict, string animName, int taskFlag)
 	{
-		return NativeFunction.Natives.IS_ENTITY_PLAYING_ANIM(entity, animDict, animName, taskFlag);
+		return NativeFunction.Natives.IS_ENTITY_PLAYING_ANIM<bool>(entity, animDict, animName, taskFlag);
 	}
 	/// <summary>
 	/// 	a static ped will not react to natives like &amp;quot;APPLY_FORCE_TO_ENTITY&amp;quot; or &amp;quot;SET_ENTITY_VELOCITY&amp;quot; and oftentimes will not react to task-natives like &amp;quot;TASK::TASK_COMBAT_PED&amp;quot;. The only way I know of to make one of these peds react is to ragdoll them (or sometimes to use CLEAR_PED_TASKS_IMMEDIATELY(). Static peds include almost all far-away peds, beach-combers, peds in certain scenarios, peds crossing a crosswalk, peds walking to get back into their cars, and others. If anyone knows how to make a ped non-static without ragdolling them, please edit this with the solution.<br/>
@@ -5114,43 +5114,43 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ENTITY_STATIC(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_STATIC(entity);
+		return NativeFunction.Natives.IS_ENTITY_STATIC<bool>(entity);
 	}
 	public static bool IS_ENTITY_TOUCHING_ENTITY(Entity entity, Entity targetEntity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_TOUCHING_ENTITY(entity, targetEntity);
+		return NativeFunction.Natives.IS_ENTITY_TOUCHING_ENTITY<bool>(entity, targetEntity);
 	}
 	public static bool IS_ENTITY_TOUCHING_MODEL(Entity entity, ulong modelHash)
 	{
-		return NativeFunction.Natives.IS_ENTITY_TOUCHING_MODEL(entity, modelHash);
+		return NativeFunction.Natives.IS_ENTITY_TOUCHING_MODEL<bool>(entity, modelHash);
 	}
 	public static bool IS_ENTITY_UPRIGHT(Entity entity, float angle)
 	{
-		return NativeFunction.Natives.IS_ENTITY_UPRIGHT(entity, angle);
+		return NativeFunction.Natives.IS_ENTITY_UPRIGHT<bool>(entity, angle);
 	}
 	public static bool IS_ENTITY_UPSIDEDOWN(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_UPSIDEDOWN(entity);
+		return NativeFunction.Natives.IS_ENTITY_UPSIDEDOWN<bool>(entity);
 	}
 	public static bool IS_ENTITY_VISIBLE(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_VISIBLE(entity);
+		return NativeFunction.Natives.IS_ENTITY_VISIBLE<bool>(entity);
 	}
 	public static bool IS_ENTITY_VISIBLE_TO_SCRIPT(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_VISIBLE_TO_SCRIPT(entity);
+		return NativeFunction.Natives.IS_ENTITY_VISIBLE_TO_SCRIPT<bool>(entity);
 	}
 	public static bool IS_ENTITY_OCCLUDED(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_OCCLUDED(entity);
+		return NativeFunction.Natives.IS_ENTITY_OCCLUDED<bool>(entity);
 	}
 	public static bool WOULD_ENTITY_BE_OCCLUDED(ulong entityModelHash, float x, float y, float z, bool p4)
 	{
-		return NativeFunction.Natives.WOULD_ENTITY_BE_OCCLUDED(entityModelHash, x, y, z, p4);
+		return NativeFunction.Natives.WOULD_ENTITY_BE_OCCLUDED<bool>(entityModelHash, x, y, z, p4);
 	}
 	public static bool IS_ENTITY_WAITING_FOR_WORLD_COLLISION(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_WAITING_FOR_WORLD_COLLISION(entity);
+		return NativeFunction.Natives.IS_ENTITY_WAITING_FOR_WORLD_COLLISION<bool>(entity);
 	}
 	/// <summary>
 	/// 	Applies a force to the specified entity.<br/>
@@ -5307,7 +5307,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_ENTITY_BONE_INDEX_BY_NAME(Entity entity, string boneName)
 	{
-		return NativeFunction.Natives.GET_ENTITY_BONE_INDEX_BY_NAME(entity, boneName);
+		return NativeFunction.Natives.GET_ENTITY_BONE_INDEX_BY_NAME<int>(entity, boneName);
 	}
 	public static void CLEAR_ENTITY_LAST_DAMAGE_ENTITY(Entity entity)
 	{
@@ -5353,7 +5353,7 @@ public static class Natives
 	/// </summary>
 	public static bool PLAY_ENTITY_ANIM(Entity entity, string animName, string animDict, float p3, bool loop, bool stayInAnim, bool p6, float delta)
 	{
-		return NativeFunction.Natives.PLAY_ENTITY_ANIM(entity, animName, animDict, p3, loop, stayInAnim, p6, delta, 0);
+		return NativeFunction.Natives.PLAY_ENTITY_ANIM<bool>(entity, animName, animDict, p3, loop, stayInAnim, p6, delta, 0);
 	}
 	/// <summary>
 	/// 	p4 and p7 are usually 1000.0f.<br/>
@@ -5362,7 +5362,7 @@ public static class Natives
 	/// </summary>
 	public static bool PLAY_SYNCHRONIZED_ENTITY_ANIM(Entity entity, int syncedScene, string animation, string propName, float p4, float p5, float p7)
 	{
-		return NativeFunction.Natives.PLAY_SYNCHRONIZED_ENTITY_ANIM(entity, syncedScene, animation, propName, p4, p5, 0, p7);
+		return NativeFunction.Natives.PLAY_SYNCHRONIZED_ENTITY_ANIM<bool>(entity, syncedScene, animation, propName, p4, p5, 0, p7);
 	}
 	/// <summary>
 	/// 	p6,p7 probably animname and animdict<br/>
@@ -5371,11 +5371,11 @@ public static class Natives
 	/// </summary>
 	public static bool PLAY_SYNCHRONIZED_MAP_ENTITY_ANIM(float x1, float y1, float z1, float x2, float z2, string p6, string p7, float p8, float p9, float p11)
 	{
-		return NativeFunction.Natives.PLAY_SYNCHRONIZED_MAP_ENTITY_ANIM(x1, y1, z1, x2, 0, z2, p6, p7, p8, p9, 0, p11);
+		return NativeFunction.Natives.PLAY_SYNCHRONIZED_MAP_ENTITY_ANIM<bool>(x1, y1, z1, x2, 0, z2, p6, p7, p8, p9, 0, p11);
 	}
 	public static bool STOP_SYNCHRONIZED_MAP_ENTITY_ANIM(float x1, float y1, float z1, float x2, float z2)
 	{
-		return NativeFunction.Natives.STOP_SYNCHRONIZED_MAP_ENTITY_ANIM(x1, y1, z1, x2, 0, z2);
+		return NativeFunction.Natives.STOP_SYNCHRONIZED_MAP_ENTITY_ANIM<bool>(x1, y1, z1, x2, 0, z2);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json<br/>
@@ -5384,21 +5384,21 @@ public static class Natives
 	/// </summary>
 	public static bool STOP_ENTITY_ANIM(Entity entity, string animation, string animGroup, float p3)
 	{
-		return NativeFunction.Natives.STOP_ENTITY_ANIM(entity, animation, animGroup, p3);
+		return NativeFunction.Natives.STOP_ENTITY_ANIM<bool>(entity, animation, animGroup, p3);
 	}
 	/// <summary>
 	/// 	p1 sync task id?
 	/// </summary>
 	public static bool STOP_SYNCHRONIZED_ENTITY_ANIM(Entity entity, float p1, bool p2)
 	{
-		return NativeFunction.Natives.STOP_SYNCHRONIZED_ENTITY_ANIM(entity, p1, p2);
+		return NativeFunction.Natives.STOP_SYNCHRONIZED_ENTITY_ANIM<bool>(entity, p1, p2);
 	}
 	/// <summary>
 	/// 	if (ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY(&amp;quot;CreateObject&amp;quot;)))
 	/// </summary>
 	public static bool HAS_ANIM_EVENT_FIRED(Entity entity, ulong actionHash)
 	{
-		return NativeFunction.Natives.HAS_ANIM_EVENT_FIRED(entity, actionHash);
+		return NativeFunction.Natives.HAS_ANIM_EVENT_FIRED<bool>(entity, actionHash);
 	}
 	/// <summary>
 	/// 	In the script &amp;quot;player_scene_t_bbfight.c4&amp;quot;:<br/>
@@ -5414,7 +5414,7 @@ public static class Natives
 	/// </summary>
 	public static bool FIND_ANIM_EVENT_PHASE(string animDictionary, string animName, string p2)
 	{
-		return NativeFunction.Natives.FIND_ANIM_EVENT_PHASE(animDictionary, animName, p2, 0, 0);
+		return NativeFunction.Natives.FIND_ANIM_EVENT_PHASE<bool>(animDictionary, animName, p2, 0, 0);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -5491,7 +5491,7 @@ public static class Natives
 	}
 	public static bool GET_ENTITY_CAN_BE_DAMAGED(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_CAN_BE_DAMAGED(entity);
+		return NativeFunction.Natives.GET_ENTITY_CAN_BE_DAMAGED<bool>(entity);
 	}
 	public static void SET_ENTITY_CAN_BE_DAMAGED_BY_RELATIONSHIP_GROUP(Entity entity, bool bCanBeDamaged, int relGroup)
 	{
@@ -5514,7 +5514,7 @@ public static class Natives
 	}
 	public static bool GET_ENTITY_COLLISION_DISABLED(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_COLLISION_DISABLED(entity);
+		return NativeFunction.Natives.GET_ENTITY_COLLISION_DISABLED<bool>(entity);
 	}
 	public static void SET_ENTITY_COMPLETELY_DISABLE_COLLISION(Entity entity, bool toggle, bool keepPhysics)
 	{
@@ -5604,7 +5604,7 @@ public static class Natives
 	}
 	public static bool HAS_COLLISION_LOADED_AROUND_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.HAS_COLLISION_LOADED_AROUND_ENTITY(entity);
+		return NativeFunction.Natives.HAS_COLLISION_LOADED_AROUND_ENTITY<bool>(entity);
 	}
 	public static void SET_ENTITY_MAX_SPEED(Entity entity, float speed)
 	{
@@ -5630,9 +5630,9 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_ENTITY_PROOFS(entity, bulletProof, fireProof, explosionProof, collisionProof, meleeProof, steamProof, p7, waterProof);
 	}
-	public static bool GET_ENTITY_PROOFS(Entity entity, bool bulletProof, bool fireProof, bool explosionProof, bool collisionProof, bool meleeProof, bool steamProof, bool p7, bool drownProof)
+	public static bool GET_ENTITY_PROOFS(Entity entity, out bool bulletProof, out bool fireProof, out bool explosionProof, out bool collisionProof, out bool meleeProof, out bool steamProof, out bool p7, out bool drownProof)
 	{
-		return NativeFunction.Natives.GET_ENTITY_PROOFS(entity, bulletProof, fireProof, explosionProof, collisionProof, meleeProof, steamProof, p7, drownProof);
+		return NativeFunction.Natives.GET_ENTITY_PROOFS<bool>(entity, out bulletProof, out fireProof, out explosionProof, out collisionProof, out meleeProof, out steamProof, out p7, out drownProof);
 	}
 	/// <summary>
 	/// 	w is the correct parameter name!
@@ -5699,7 +5699,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_ENTITY_LOD_DIST(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_LOD_DIST(entity);
+		return NativeFunction.Natives.GET_ENTITY_LOD_DIST<int>(entity);
 	}
 	/// <summary>
 	/// 	skin - everything alpha except skin<br/>
@@ -5711,7 +5711,7 @@ public static class Natives
 	}
 	public static int GET_ENTITY_ALPHA(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ALPHA(entity);
+		return NativeFunction.Natives.GET_ENTITY_ALPHA<int>(entity);
 	}
 	public static void RESET_ENTITY_ALPHA(Entity entity)
 	{
@@ -5855,29 +5855,29 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_ENTITY_BONE_ROTATION(Entity entity, int boneIndex)
 	{
-		return NativeFunction.Natives.GET_ENTITY_BONE_ROTATION(entity, boneIndex);
+		return NativeFunction.Natives.GET_ENTITY_BONE_ROTATION<Vector3>(entity, boneIndex);
 	}
 	/// <summary>
 	/// 	Gets the world position of the specified bone of the specified entity.
 	/// </summary>
 	public static Vector3 GET_ENTITY_BONE_POSTION(Entity entity, int boneIndex)
 	{
-		return NativeFunction.Natives.GET_ENTITY_BONE_POSTION(entity, boneIndex);
+		return NativeFunction.Natives.GET_ENTITY_BONE_POSTION<Vector3>(entity, boneIndex);
 	}
 	/// <summary>
 	/// 	Gets the local rotation of the specified bone of the specified entity.
 	/// </summary>
 	public static Vector3 GET_ENTITY_BONE_OBJECT_ROTATION(Entity entity, int boneIndex)
 	{
-		return NativeFunction.Natives.GET_ENTITY_BONE_OBJECT_ROTATION(entity, boneIndex);
+		return NativeFunction.Natives.GET_ENTITY_BONE_OBJECT_ROTATION<Vector3>(entity, boneIndex);
 	}
 	public static Vector3 GET_ENTITY_BONE_OBJECT_POSTION(Entity entity, int boneIndex)
 	{
-		return NativeFunction.Natives.GET_ENTITY_BONE_OBJECT_POSTION(entity, boneIndex);
+		return NativeFunction.Natives.GET_ENTITY_BONE_OBJECT_POSTION<Vector3>(entity, boneIndex);
 	}
 	public static int GET_ENTITY_BONE_COUNT(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_BONE_COUNT(entity);
+		return NativeFunction.Natives.GET_ENTITY_BONE_COUNT<int>(entity);
 	}
 	public static void ENABLE_ENTITY_BULLET_COLLISION(Entity entity)
 	{
@@ -5908,7 +5908,7 @@ public static class Natives
 	/// </summary>
 	public static Entity GET_ENTITY_OF_TYPE_ATTACHED_TO_ENTITY(Entity entity, ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_ENTITY_OF_TYPE_ATTACHED_TO_ENTITY(entity, modelHash);
+		return NativeFunction.Natives.GET_ENTITY_OF_TYPE_ATTACHED_TO_ENTITY<Entity>(entity, modelHash);
 	}
 	public static void SET_PICK_UP_BY_CARGOBOB_DISABLED(Entity entity, bool toggle)
 	{
@@ -5949,25 +5949,25 @@ public static class Natives
 	/// </summary>
 	public static int ADD_SHOCKING_EVENT_AT_POSITION(int eventType, float x, float y, float z, float duration)
 	{
-		return NativeFunction.Natives.ADD_SHOCKING_EVENT_AT_POSITION(eventType, x, y, z, duration);
+		return NativeFunction.Natives.ADD_SHOCKING_EVENT_AT_POSITION<int>(eventType, x, y, z, duration);
 	}
 	/// <summary>
 	/// 	eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
 	/// </summary>
 	public static int ADD_SHOCKING_EVENT_FOR_ENTITY(int eventType, Entity entity, float duration)
 	{
-		return NativeFunction.Natives.ADD_SHOCKING_EVENT_FOR_ENTITY(eventType, entity, duration);
+		return NativeFunction.Natives.ADD_SHOCKING_EVENT_FOR_ENTITY<int>(eventType, entity, duration);
 	}
 	/// <summary>
 	/// 	eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
 	/// </summary>
 	public static bool IS_SHOCKING_EVENT_IN_SPHERE(int eventType, float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.IS_SHOCKING_EVENT_IN_SPHERE(eventType, x, y, z, radius);
+		return NativeFunction.Natives.IS_SHOCKING_EVENT_IN_SPHERE<bool>(eventType, x, y, z, radius);
 	}
 	public static bool REMOVE_SHOCKING_EVENT(uint _event)
 	{
-		return NativeFunction.Natives.REMOVE_SHOCKING_EVENT(_event);
+		return NativeFunction.Natives.REMOVE_SHOCKING_EVENT<bool>(_event);
 	}
 	public static void REMOVE_ALL_SHOCKING_EVENTS(bool p0)
 	{
@@ -6005,7 +6005,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUM_TATTOO_SHOP_DLC_ITEMS(int character)
 	{
-		return NativeFunction.Natives.GET_NUM_TATTOO_SHOP_DLC_ITEMS(character);
+		return NativeFunction.Natives.GET_NUM_TATTOO_SHOP_DLC_ITEMS<int>(character);
 	}
 	/// <summary>
 	/// 	Character types:<br/>
@@ -6043,7 +6043,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_TATTOO_SHOP_DLC_ITEM_DATA(int characterType, int decorationIndex)
 	{
-		return NativeFunction.Natives.GET_TATTOO_SHOP_DLC_ITEM_DATA(characterType, decorationIndex, 0);
+		return NativeFunction.Natives.GET_TATTOO_SHOP_DLC_ITEM_DATA<bool>(characterType, decorationIndex, 0);
 	}
 	/// <summary>
 	/// 	Returns some sort of index/offset for overlays/decorations.<br/>
@@ -6057,7 +6057,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_TATTOO_SHOP_DLC_ITEM_INDEX(ulong overlayHash, int character)
 	{
-		return NativeFunction.Natives.GET_TATTOO_SHOP_DLC_ITEM_INDEX(overlayHash, 0, character);
+		return NativeFunction.Natives.GET_TATTOO_SHOP_DLC_ITEM_INDEX<int>(overlayHash, 0, character);
 	}
 	public static void INIT_SHOP_PED_COMPONENT()
 	{
@@ -6069,7 +6069,7 @@ public static class Natives
 	}
 	public static int SETUP_SHOP_PED_APPAREL_QUERY(int p0, int p1, int p2, int p3)
 	{
-		return NativeFunction.Natives.SETUP_SHOP_PED_APPAREL_QUERY(p0, p1, p2, p3);
+		return NativeFunction.Natives.SETUP_SHOP_PED_APPAREL_QUERY<int>(p0, p1, p2, p3);
 	}
 	/// <summary>
 	/// 	character is 0 for Michael, 1 for Franklin, 2 for Trevor, 3 for freemode male, and 4 for freemode female.<br/>
@@ -6088,7 +6088,7 @@ public static class Natives
 	/// </summary>
 	public static int SETUP_SHOP_PED_APPAREL_QUERY_TU(int character, int p1, int p2, bool p3, int p4, int componentId)
 	{
-		return NativeFunction.Natives.SETUP_SHOP_PED_APPAREL_QUERY_TU(character, p1, p2, p3, p4, componentId);
+		return NativeFunction.Natives.SETUP_SHOP_PED_APPAREL_QUERY_TU<int>(character, p1, p2, p3, p4, componentId);
 	}
 	/// <summary>
 	/// 	See https://git.io/JtcRf for example and structs.
@@ -6103,7 +6103,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_SHOP_PED_QUERY_COMPONENT_INDEX(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_QUERY_COMPONENT_INDEX(componentHash);
+		return NativeFunction.Natives.GET_SHOP_PED_QUERY_COMPONENT_INDEX<int>(componentHash);
 	}
 	/// <summary>
 	/// 	More info here: https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86
@@ -6125,7 +6125,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_SHOP_PED_QUERY_PROP_INDEX(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_QUERY_PROP_INDEX(componentHash);
+		return NativeFunction.Natives.GET_SHOP_PED_QUERY_PROP_INDEX<int>(componentHash);
 	}
 	/// <summary>
 	/// 	More info here: https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86
@@ -6136,15 +6136,15 @@ public static class Natives
 	}
 	public static ulong GET_HASH_NAME_FOR_COMPONENT(Entity entity, int componentId, int drawableVariant, int textureVariant)
 	{
-		return NativeFunction.Natives.GET_HASH_NAME_FOR_COMPONENT(entity, componentId, drawableVariant, textureVariant);
+		return NativeFunction.Natives.GET_HASH_NAME_FOR_COMPONENT<ulong>(entity, componentId, drawableVariant, textureVariant);
 	}
 	public static ulong GET_HASH_NAME_FOR_PROP(Entity entity, int componentId, int propIndex, int propTextureIndex)
 	{
-		return NativeFunction.Natives.GET_HASH_NAME_FOR_PROP(entity, componentId, propIndex, propTextureIndex);
+		return NativeFunction.Natives.GET_HASH_NAME_FOR_PROP<ulong>(entity, componentId, propIndex, propTextureIndex);
 	}
 	public static int GET_SHOP_PED_APPAREL_VARIANT_COMPONENT_COUNT(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_VARIANT_COMPONENT_COUNT(componentHash);
+		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_VARIANT_COMPONENT_COUNT<int>(componentHash);
 	}
 	/// <summary>
 	/// 	`propHash`: Ped helmet prop hash?<br/>
@@ -6152,37 +6152,37 @@ public static class Natives
 	/// </summary>
 	public static int GET_SHOP_PED_APPAREL_VARIANT_PROP_COUNT(ulong propHash)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_VARIANT_PROP_COUNT(propHash);
+		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_VARIANT_PROP_COUNT<int>(propHash);
 	}
-	public static void GET_VARIANT_COMPONENT(ulong componentHash, int variantComponentIndex, ulong nameHash, out int enumValue, out int componentType)
+	public static void GET_VARIANT_COMPONENT(ulong componentHash, int variantComponentIndex, out ulong nameHash, out int enumValue, out int componentType)
 	{
-		NativeFunction.Natives.GET_VARIANT_COMPONENT(componentHash, variantComponentIndex, nameHash, out enumValue, out componentType);
+		NativeFunction.Natives.GET_VARIANT_COMPONENT(componentHash, variantComponentIndex, out nameHash, out enumValue, out componentType);
 	}
-	public static void GET_VARIANT_PROP(ulong componentHash, int variantPropIndex, ulong nameHash, out int enumValue, out int anchorPoint)
+	public static void GET_VARIANT_PROP(ulong componentHash, int variantPropIndex, out ulong nameHash, out int enumValue, out int anchorPoint)
 	{
-		NativeFunction.Natives.GET_VARIANT_PROP(componentHash, variantPropIndex, nameHash, out enumValue, out anchorPoint);
+		NativeFunction.Natives.GET_VARIANT_PROP(componentHash, variantPropIndex, out nameHash, out enumValue, out anchorPoint);
 	}
 	/// <summary>
 	/// 	Returns number of possible values of the forcedComponentIndex argument of GET_FORCED_COMPONENT.
 	/// </summary>
 	public static int GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT(componentHash);
+		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT<int>(componentHash);
 	}
 	/// <summary>
 	/// 	Returns number of possible values of the forcedPropIndex argument of GET_FORCED_PROP.
 	/// </summary>
 	public static int GET_SHOP_PED_APPAREL_FORCED_PROP_COUNT(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_FORCED_PROP_COUNT(componentHash);
+		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_FORCED_PROP_COUNT<int>(componentHash);
 	}
-	public static void GET_FORCED_COMPONENT(ulong componentHash, int forcedComponentIndex, ulong nameHash, out int enumValue, out int componentType)
+	public static void GET_FORCED_COMPONENT(ulong componentHash, int forcedComponentIndex, out ulong nameHash, out int enumValue, out int componentType)
 	{
-		NativeFunction.Natives.GET_FORCED_COMPONENT(componentHash, forcedComponentIndex, nameHash, out enumValue, out componentType);
+		NativeFunction.Natives.GET_FORCED_COMPONENT(componentHash, forcedComponentIndex, out nameHash, out enumValue, out componentType);
 	}
-	public static void GET_FORCED_PROP(ulong componentHash, int forcedPropIndex, ulong nameHash, out int enumValue, out int anchorPoint)
+	public static void GET_FORCED_PROP(ulong componentHash, int forcedPropIndex, out ulong nameHash, out int enumValue, out int anchorPoint)
 	{
-		NativeFunction.Natives.GET_FORCED_PROP(componentHash, forcedPropIndex, nameHash, out enumValue, out anchorPoint);
+		NativeFunction.Natives.GET_FORCED_PROP(componentHash, forcedPropIndex, out nameHash, out enumValue, out anchorPoint);
 	}
 	/// <summary>
 	/// 	Full list of restriction tags by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedApparelRestrictionTags.json<br/>
@@ -6191,15 +6191,15 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(ulong componentHash, ulong restrictionTagHash, int componentId)
 	{
-		return NativeFunction.Natives.DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(componentHash, restrictionTagHash, componentId);
+		return NativeFunction.Natives.DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG<bool>(componentHash, restrictionTagHash, componentId);
 	}
 	public static bool DOES_CURRENT_PED_COMPONENT_HAVE_RESTRICTION_TAG(Ped ped, int componentId, ulong restrictionTagHash)
 	{
-		return NativeFunction.Natives.DOES_CURRENT_PED_COMPONENT_HAVE_RESTRICTION_TAG(ped, componentId, restrictionTagHash);
+		return NativeFunction.Natives.DOES_CURRENT_PED_COMPONENT_HAVE_RESTRICTION_TAG<bool>(ped, componentId, restrictionTagHash);
 	}
 	public static bool DOES_CURRENT_PED_PROP_HAVE_RESTRICTION_TAG(Ped ped, int componentId, ulong restrictionTagHash)
 	{
-		return NativeFunction.Natives.DOES_CURRENT_PED_PROP_HAVE_RESTRICTION_TAG(ped, componentId, restrictionTagHash);
+		return NativeFunction.Natives.DOES_CURRENT_PED_PROP_HAVE_RESTRICTION_TAG<bool>(ped, componentId, restrictionTagHash);
 	}
 	/// <summary>
 	/// 	characters<br/>
@@ -6212,7 +6212,7 @@ public static class Natives
 	/// </summary>
 	public static int SETUP_SHOP_PED_OUTFIT_QUERY(int character, bool p1)
 	{
-		return NativeFunction.Natives.SETUP_SHOP_PED_OUTFIT_QUERY(character, p1);
+		return NativeFunction.Natives.SETUP_SHOP_PED_OUTFIT_QUERY<int>(character, p1);
 	}
 	/// <summary>
 	/// 	outfitIndex: from 0 to SETUP_SHOP_PED_OUTFIT_QUERY(characterIndex, false) - 1.<br/>
@@ -6228,32 +6228,32 @@ public static class Natives
 	}
 	public static int GET_SHOP_PED_OUTFIT_LOCATE()
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_LOCATE(0);
+		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_LOCATE<int>(0);
 	}
 	/// <summary>
 	/// 	See https://git.io/JtcBH for example and structs.
 	/// </summary>
 	public static bool GET_SHOP_PED_OUTFIT_PROP_VARIANT(ulong outfitHash, int variantIndex)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_PROP_VARIANT(outfitHash, variantIndex, 0);
+		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_PROP_VARIANT<bool>(outfitHash, variantIndex, 0);
 	}
 	/// <summary>
 	/// 	See https://git.io/JtcBH for example and structs.
 	/// </summary>
 	public static bool GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(ulong outfitHash, int variantIndex)
 	{
-		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(outfitHash, variantIndex, 0);
+		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT<bool>(outfitHash, variantIndex, 0);
 	}
 	public static int GET_NUM_DLC_VEHICLES()
 	{
-		return NativeFunction.Natives.GET_NUM_DLC_VEHICLES();
+		return NativeFunction.Natives.GET_NUM_DLC_VEHICLES<int>();
 	}
 	/// <summary>
 	/// 	dlcVehicleIndex is 0 to GET_NUM_DLC_VEHICLS() - 1
 	/// </summary>
 	public static ulong GET_DLC_VEHICLE_MODEL(int dlcVehicleIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_VEHICLE_MODEL(dlcVehicleIndex);
+		return NativeFunction.Natives.GET_DLC_VEHICLE_MODEL<ulong>(dlcVehicleIndex);
 	}
 	/// <summary>
 	/// 	dlcVehicleIndex takes a number from 0 - GET_NUM_DLC_VEHICLES() - 1.<br/>
@@ -6262,25 +6262,25 @@ public static class Natives
 	/// </summary>
 	public static bool GET_DLC_VEHICLE_DATA(int dlcVehicleIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_VEHICLE_DATA(dlcVehicleIndex, 0);
+		return NativeFunction.Natives.GET_DLC_VEHICLE_DATA<bool>(dlcVehicleIndex, 0);
 	}
 	public static int GET_DLC_VEHICLE_FLAGS(int dlcVehicleIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_VEHICLE_FLAGS(dlcVehicleIndex);
+		return NativeFunction.Natives.GET_DLC_VEHICLE_FLAGS<int>(dlcVehicleIndex);
 	}
 	/// <summary>
 	/// 	Returns the total number of DLC weapons.
 	/// </summary>
 	public static int GET_NUM_DLC_WEAPONS()
 	{
-		return NativeFunction.Natives.GET_NUM_DLC_WEAPONS();
+		return NativeFunction.Natives.GET_NUM_DLC_WEAPONS<int>();
 	}
 	/// <summary>
 	/// 	Returns the total number of DLC weapons that are available in SP (availableInSP field in shop_weapon.meta).
 	/// </summary>
 	public static int GET_NUM_DLC_WEAPONS_SP()
 	{
-		return NativeFunction.Natives.GET_NUM_DLC_WEAPONS_SP();
+		return NativeFunction.Natives.GET_NUM_DLC_WEAPONS_SP<int>();
 	}
 	/// <summary>
 	/// 	<br/>
@@ -6309,28 +6309,28 @@ public static class Natives
 	/// </summary>
 	public static bool GET_DLC_WEAPON_DATA(int dlcWeaponIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_WEAPON_DATA(dlcWeaponIndex, 0);
+		return NativeFunction.Natives.GET_DLC_WEAPON_DATA<bool>(dlcWeaponIndex, 0);
 	}
 	/// <summary>
 	/// 	Same as GET_DLC_WEAPON_DATA but only works for DLC weapons that are available in SP.
 	/// </summary>
 	public static bool GET_DLC_WEAPON_DATA_SP(int dlcWeaponIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_WEAPON_DATA_SP(dlcWeaponIndex, 0);
+		return NativeFunction.Natives.GET_DLC_WEAPON_DATA_SP<bool>(dlcWeaponIndex, 0);
 	}
 	/// <summary>
 	/// 	Returns the total number of DLC weapon components.
 	/// </summary>
 	public static int GET_NUM_DLC_WEAPON_COMPONENTS(int dlcWeaponIndex)
 	{
-		return NativeFunction.Natives.GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex);
+		return NativeFunction.Natives.GET_NUM_DLC_WEAPON_COMPONENTS<int>(dlcWeaponIndex);
 	}
 	/// <summary>
 	/// 	Returns the total number of DLC weapon components that are available in SP.
 	/// </summary>
 	public static int GET_NUM_DLC_WEAPON_COMPONENTS_SP(int dlcWeaponIndex)
 	{
-		return NativeFunction.Natives.GET_NUM_DLC_WEAPON_COMPONENTS_SP(dlcWeaponIndex);
+		return NativeFunction.Natives.GET_NUM_DLC_WEAPON_COMPONENTS_SP<int>(dlcWeaponIndex);
 	}
 	/// <summary>
 	/// 	p0 seems to be the weapon index<br/>
@@ -6355,26 +6355,26 @@ public static class Natives
 	/// </summary>
 	public static bool GET_DLC_WEAPON_COMPONENT_DATA(int dlcWeaponIndex, int dlcWeapCompIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, dlcWeapCompIndex, 0);
+		return NativeFunction.Natives.GET_DLC_WEAPON_COMPONENT_DATA<bool>(dlcWeaponIndex, dlcWeapCompIndex, 0);
 	}
 	/// <summary>
 	/// 	Same as GET_DLC_WEAPON_COMPONENT_DATA but only works for DLC components that are available in SP.
 	/// </summary>
 	public static bool GET_DLC_WEAPON_COMPONENT_DATA_SP(int dlcWeaponIndex, int dlcWeapCompIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_WEAPON_COMPONENT_DATA_SP(dlcWeaponIndex, dlcWeapCompIndex, 0);
+		return NativeFunction.Natives.GET_DLC_WEAPON_COMPONENT_DATA_SP<bool>(dlcWeaponIndex, dlcWeapCompIndex, 0);
 	}
 	public static bool IS_CONTENT_ITEM_LOCKED(ulong itemHash)
 	{
-		return NativeFunction.Natives.IS_CONTENT_ITEM_LOCKED(itemHash);
+		return NativeFunction.Natives.IS_CONTENT_ITEM_LOCKED<bool>(itemHash);
 	}
 	public static bool IS_DLC_VEHICLE_MOD(ulong hash)
 	{
-		return NativeFunction.Natives.IS_DLC_VEHICLE_MOD(hash);
+		return NativeFunction.Natives.IS_DLC_VEHICLE_MOD<bool>(hash);
 	}
 	public static ulong GET_DLC_VEHICLE_MOD_LOCK_HASH(ulong hash)
 	{
-		return NativeFunction.Natives.GET_DLC_VEHICLE_MOD_LOCK_HASH(hash);
+		return NativeFunction.Natives.GET_DLC_VEHICLE_MOD_LOCK_HASH<ulong>(hash);
 	}
 	/// <summary>
 	/// 	From fm_deathmatch_creator and fm_race_creator:<br/>
@@ -6408,7 +6408,7 @@ public static class Natives
 	/// </summary>
 	public static Fire START_SCRIPT_FIRE(float X, float Y, float Z, int maxChildren, bool isGasFire)
 	{
-		return NativeFunction.Natives.START_SCRIPT_FIRE(X, Y, Z, maxChildren, isGasFire);
+		return NativeFunction.Natives.START_SCRIPT_FIRE<Fire>(X, Y, Z, maxChildren, isGasFire);
 	}
 	public static void REMOVE_SCRIPT_FIRE(Fire fireHandle)
 	{
@@ -6416,7 +6416,7 @@ public static class Natives
 	}
 	public static Fire START_ENTITY_FIRE(Entity entity)
 	{
-		return NativeFunction.Natives.START_ENTITY_FIRE(entity);
+		return NativeFunction.Natives.START_ENTITY_FIRE<Fire>(entity);
 	}
 	public static void STOP_ENTITY_FIRE(Entity entity)
 	{
@@ -6424,11 +6424,11 @@ public static class Natives
 	}
 	public static bool IS_ENTITY_ON_FIRE(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ON_FIRE(entity);
+		return NativeFunction.Natives.IS_ENTITY_ON_FIRE<bool>(entity);
 	}
 	public static int GET_NUMBER_OF_FIRES_IN_RANGE(float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_FIRES_IN_RANGE(x, y, z, radius);
+		return NativeFunction.Natives.GET_NUMBER_OF_FIRES_IN_RANGE<int>(x, y, z, radius);
 	}
 	public static void SET_FLAMMABILITY_MULTIPLIER(float p0)
 	{
@@ -6443,7 +6443,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_CLOSEST_FIRE_POS(out Vector3 outPosition, float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_FIRE_POS(out outPosition, x, y, z);
+		return NativeFunction.Natives.GET_CLOSEST_FIRE_POS<bool>(out outPosition, x, y, z);
 	}
 	/// <summary>
 	/// 	BOOL isAudible = If explosion makes a sound.<br/>
@@ -6478,28 +6478,28 @@ public static class Natives
 	/// </summary>
 	public static bool IS_EXPLOSION_IN_AREA(int explosionType, float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.IS_EXPLOSION_IN_AREA(explosionType, x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.IS_EXPLOSION_IN_AREA<bool>(explosionType, x1, y1, z1, x2, y2, z2);
 	}
 	/// <summary>
 	/// 	explosionType: See ADD_EXPLOSION.
 	/// </summary>
 	public static bool IS_EXPLOSION_ACTIVE_IN_AREA(int explosionType, float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.IS_EXPLOSION_ACTIVE_IN_AREA(explosionType, x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.IS_EXPLOSION_ACTIVE_IN_AREA<bool>(explosionType, x1, y1, z1, x2, y2, z2);
 	}
 	/// <summary>
 	/// 	explosionType: See ADD_EXPLOSION.
 	/// </summary>
 	public static bool IS_EXPLOSION_IN_SPHERE(int explosionType, float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.IS_EXPLOSION_IN_SPHERE(explosionType, x, y, z, radius);
+		return NativeFunction.Natives.IS_EXPLOSION_IN_SPHERE<bool>(explosionType, x, y, z, radius);
 	}
 	/// <summary>
 	/// 	explosionType: See ADD_EXPLOSION.
 	/// </summary>
 	public static Entity GET_OWNER_OF_EXPLOSION_IN_SPHERE(int explosionType, float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.GET_OWNER_OF_EXPLOSION_IN_SPHERE(explosionType, x, y, z, radius);
+		return NativeFunction.Natives.GET_OWNER_OF_EXPLOSION_IN_SPHERE<Entity>(explosionType, x, y, z, radius);
 	}
 	/// <summary>
 	/// 	explosionType: See ADD_EXPLOSION, -1 for any explosion type<br/>
@@ -6507,7 +6507,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_EXPLOSION_IN_ANGLED_AREA(int explosionType, float x1, float y1, float z1, float x2, float y2, float z2, float width)
 	{
-		return NativeFunction.Natives.IS_EXPLOSION_IN_ANGLED_AREA(explosionType, x1, y1, z1, x2, y2, z2, width);
+		return NativeFunction.Natives.IS_EXPLOSION_IN_ANGLED_AREA<bool>(explosionType, x1, y1, z1, x2, y2, z2, width);
 	}
 	/// <summary>
 	/// 	Returns a handle to the first entity within the a circle spawned inside the 2 points from a radius.<br/>
@@ -6516,7 +6516,7 @@ public static class Natives
 	/// </summary>
 	public static Entity GET_OWNER_OF_EXPLOSION_IN_ANGLED_AREA(int explosionType, float x1, float y1, float z1, float x2, float y2, float z2, float radius)
 	{
-		return NativeFunction.Natives.GET_OWNER_OF_EXPLOSION_IN_ANGLED_AREA(explosionType, x1, y1, z1, x2, y2, z2, radius);
+		return NativeFunction.Natives.GET_OWNER_OF_EXPLOSION_IN_ANGLED_AREA<Entity>(explosionType, x1, y1, z1, x2, y2, z2, radius);
 	}
 	/*
 		GRAPHICS
@@ -6673,11 +6673,11 @@ public static class Natives
 	}
 	public static bool BEGIN_TAKE_MISSION_CREATOR_PHOTO()
 	{
-		return NativeFunction.Natives.BEGIN_TAKE_MISSION_CREATOR_PHOTO();
+		return NativeFunction.Natives.BEGIN_TAKE_MISSION_CREATOR_PHOTO<bool>();
 	}
 	public static int GET_STATUS_OF_TAKE_MISSION_CREATOR_PHOTO()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_TAKE_MISSION_CREATOR_PHOTO();
+		return NativeFunction.Natives.GET_STATUS_OF_TAKE_MISSION_CREATOR_PHOTO<int>();
 	}
 	public static void FREE_MEMORY_FOR_MISSION_CREATOR_PHOTO()
 	{
@@ -6685,19 +6685,19 @@ public static class Natives
 	}
 	public static bool LOAD_MISSION_CREATOR_PHOTO()
 	{
-		return NativeFunction.Natives.LOAD_MISSION_CREATOR_PHOTO(0, 0, 0, 0);
+		return NativeFunction.Natives.LOAD_MISSION_CREATOR_PHOTO<bool>(0, 0, 0, 0);
 	}
 	public static int GET_STATUS_OF_LOAD_MISSION_CREATOR_PHOTO()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_LOAD_MISSION_CREATOR_PHOTO(0);
+		return NativeFunction.Natives.GET_STATUS_OF_LOAD_MISSION_CREATOR_PHOTO<int>(0);
 	}
 	public static bool BEGIN_CREATE_MISSION_CREATOR_PHOTO_PREVIEW()
 	{
-		return NativeFunction.Natives.BEGIN_CREATE_MISSION_CREATOR_PHOTO_PREVIEW();
+		return NativeFunction.Natives.BEGIN_CREATE_MISSION_CREATOR_PHOTO_PREVIEW<bool>();
 	}
 	public static int GET_STATUS_OF_CREATE_MISSION_CREATOR_PHOTO_PREVIEW()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_CREATE_MISSION_CREATOR_PHOTO_PREVIEW();
+		return NativeFunction.Natives.GET_STATUS_OF_CREATE_MISSION_CREATOR_PHOTO_PREVIEW<int>();
 	}
 	public static void FREE_MEMORY_FOR_MISSION_CREATOR_PHOTO_PREVIEW()
 	{
@@ -6705,11 +6705,11 @@ public static class Natives
 	}
 	public static bool BEGIN_TAKE_HIGH_QUALITY_PHOTO()
 	{
-		return NativeFunction.Natives.BEGIN_TAKE_HIGH_QUALITY_PHOTO();
+		return NativeFunction.Natives.BEGIN_TAKE_HIGH_QUALITY_PHOTO<bool>();
 	}
 	public static int GET_STATUS_OF_TAKE_HIGH_QUALITY_PHOTO()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_TAKE_HIGH_QUALITY_PHOTO();
+		return NativeFunction.Natives.GET_STATUS_OF_TAKE_HIGH_QUALITY_PHOTO<int>();
 	}
 	public static void FREE_MEMORY_FOR_HIGH_QUALITY_PHOTO()
 	{
@@ -6733,19 +6733,19 @@ public static class Natives
 	/// </summary>
 	public static bool SAVE_HIGH_QUALITY_PHOTO(int unused)
 	{
-		return NativeFunction.Natives.SAVE_HIGH_QUALITY_PHOTO(unused);
+		return NativeFunction.Natives.SAVE_HIGH_QUALITY_PHOTO<bool>(unused);
 	}
 	public static int GET_STATUS_OF_SAVE_HIGH_QUALITY_PHOTO()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_SAVE_HIGH_QUALITY_PHOTO();
+		return NativeFunction.Natives.GET_STATUS_OF_SAVE_HIGH_QUALITY_PHOTO<int>();
 	}
 	public static bool BEGIN_CREATE_LOW_QUALITY_COPY_OF_PHOTO()
 	{
-		return NativeFunction.Natives.BEGIN_CREATE_LOW_QUALITY_COPY_OF_PHOTO(0);
+		return NativeFunction.Natives.BEGIN_CREATE_LOW_QUALITY_COPY_OF_PHOTO<bool>(0);
 	}
 	public static int GET_STATUS_OF_CREATE_LOW_QUALITY_COPY_OF_PHOTO(int p0)
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_CREATE_LOW_QUALITY_COPY_OF_PHOTO(p0);
+		return NativeFunction.Natives.GET_STATUS_OF_CREATE_LOW_QUALITY_COPY_OF_PHOTO<int>(p0);
 	}
 	public static void FREE_MEMORY_FOR_LOW_QUALITY_PHOTO()
 	{
@@ -6760,25 +6760,25 @@ public static class Natives
 	/// </summary>
 	public static int GET_MAXIMUM_NUMBER_OF_PHOTOS()
 	{
-		return NativeFunction.Natives.GET_MAXIMUM_NUMBER_OF_PHOTOS();
+		return NativeFunction.Natives.GET_MAXIMUM_NUMBER_OF_PHOTOS<int>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 96.
 	/// </summary>
 	public static int GET_MAXIMUM_NUMBER_OF_CLOUD_PHOTOS()
 	{
-		return NativeFunction.Natives.GET_MAXIMUM_NUMBER_OF_CLOUD_PHOTOS();
+		return NativeFunction.Natives.GET_MAXIMUM_NUMBER_OF_CLOUD_PHOTOS<int>();
 	}
 	public static int GET_CURRENT_NUMBER_OF_CLOUD_PHOTOS()
 	{
-		return NativeFunction.Natives.GET_CURRENT_NUMBER_OF_CLOUD_PHOTOS();
+		return NativeFunction.Natives.GET_CURRENT_NUMBER_OF_CLOUD_PHOTOS<int>();
 	}
 	/// <summary>
 	/// 	2 matches across 2 scripts. Only showed in appcamera &amp; appmedia. Both were 0.
 	/// </summary>
 	public static bool QUEUE_OPERATION_TO_CREATE_SORTED_LIST_OF_PHOTOS()
 	{
-		return NativeFunction.Natives.QUEUE_OPERATION_TO_CREATE_SORTED_LIST_OF_PHOTOS(0);
+		return NativeFunction.Natives.QUEUE_OPERATION_TO_CREATE_SORTED_LIST_OF_PHOTOS<bool>(0);
 	}
 	/// <summary>
 	/// 	3 matches across 3 scripts. First 2 were 0, 3rd was 1. Possibly a bool.<br/>
@@ -6786,7 +6786,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_STATUS_OF_SORTED_LIST_OPERATION()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_SORTED_LIST_OPERATION(0);
+		return NativeFunction.Natives.GET_STATUS_OF_SORTED_LIST_OPERATION<int>(0);
 	}
 	public static void CLEAR_STATUS_OF_SORTED_LIST_OPERATION()
 	{
@@ -6797,21 +6797,21 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_THIS_PHOTO_SLOT_CONTAIN_A_VALID_PHOTO()
 	{
-		return NativeFunction.Natives.DOES_THIS_PHOTO_SLOT_CONTAIN_A_VALID_PHOTO(0);
+		return NativeFunction.Natives.DOES_THIS_PHOTO_SLOT_CONTAIN_A_VALID_PHOTO<bool>(0);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static bool LOAD_HIGH_QUALITY_PHOTO()
 	{
-		return NativeFunction.Natives.LOAD_HIGH_QUALITY_PHOTO(0);
+		return NativeFunction.Natives.LOAD_HIGH_QUALITY_PHOTO<bool>(0);
 	}
 	/// <summary>
 	/// 	Hardcoded to always return 2.
 	/// </summary>
 	public static int GET_LOAD_HIGH_QUALITY_PHOTO_STATUS(int p0)
 	{
-		return NativeFunction.Natives.GET_LOAD_HIGH_QUALITY_PHOTO_STATUS(p0);
+		return NativeFunction.Natives.GET_LOAD_HIGH_QUALITY_PHOTO_STATUS<int>(p0);
 	}
 	public static void DRAW_LIGHT_WITH_RANGEEX(float x, float y, float z, int r, int g, int b, float range, float intensity, float shadow)
 	{
@@ -6862,7 +6862,7 @@ public static class Natives
 	}
 	public static float GET_LIGHT_OVERRIDE_MAX_INTENSITY_SCALE()
 	{
-		return NativeFunction.Natives.GET_LIGHT_OVERRIDE_MAX_INTENSITY_SCALE();
+		return NativeFunction.Natives.GET_LIGHT_OVERRIDE_MAX_INTENSITY_SCALE<float>();
 	}
 	/// <summary>
 	/// 	enum MarkerTypes<br/>
@@ -6986,7 +6986,7 @@ public static class Natives
 	/// </summary>
 	public static int CREATE_CHECKPOINT(int type, float posX1, float posY1, float posZ1, float posX2, float posY2, float posZ2, float diameter, int red, int green, int blue, int alpha, int reserved)
 	{
-		return NativeFunction.Natives.CREATE_CHECKPOINT(type, posX1, posY1, posZ1, posX2, posY2, posZ2, diameter, red, green, blue, alpha, reserved);
+		return NativeFunction.Natives.CREATE_CHECKPOINT<int>(type, posX1, posY1, posZ1, posX2, posY2, posZ2, diameter, red, green, blue, alpha, reserved);
 	}
 	public static void SET_CHECKPOINT_INSIDE_CYLINDER_HEIGHT_SCALE(int checkpoint, float scale)
 	{
@@ -7075,7 +7075,7 @@ public static class Natives
 	}
 	public static bool HAS_STREAMED_TEXTURE_DICT_LOADED(string textureDict)
 	{
-		return NativeFunction.Natives.HAS_STREAMED_TEXTURE_DICT_LOADED(textureDict);
+		return NativeFunction.Natives.HAS_STREAMED_TEXTURE_DICT_LOADED<bool>(textureDict);
 	}
 	public static void SET_STREAMED_TEXTURE_DICT_AS_NO_LONGER_NEEDED(string textureDict)
 	{
@@ -7173,7 +7173,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_SAFE_ZONE_SIZE()
 	{
-		return NativeFunction.Natives.GET_SAFE_ZONE_SIZE();
+		return NativeFunction.Natives.GET_SAFE_ZONE_SIZE<float>();
 	}
 	/// <summary>
 	/// 	Draws a 2D sprite on the screen.<br/>
@@ -7247,7 +7247,7 @@ public static class Natives
 	/// </summary>
 	public static int ADD_ENTITY_ICON(Entity entity, string icon)
 	{
-		return NativeFunction.Natives.ADD_ENTITY_ICON(entity, icon);
+		return NativeFunction.Natives.ADD_ENTITY_ICON<int>(entity, icon);
 	}
 	public static void SET_ENTITY_ICON_VISIBILITY(Entity entity, bool toggle)
 	{
@@ -7291,7 +7291,7 @@ public static class Natives
 	}
 	public static int SET_BINK_MOVIE(string name)
 	{
-		return NativeFunction.Natives.SET_BINK_MOVIE(name);
+		return NativeFunction.Natives.SET_BINK_MOVIE<int>(name);
 	}
 	public static void PLAY_BINK_MOVIE(int binkMovie)
 	{
@@ -7321,7 +7321,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_BINK_MOVIE_TIME(int binkMovie)
 	{
-		return NativeFunction.Natives.GET_BINK_MOVIE_TIME(binkMovie);
+		return NativeFunction.Natives.GET_BINK_MOVIE_TIME<float>(binkMovie);
 	}
 	/// <summary>
 	/// 	binkMovie: Is return value from _SET_BINK_MOVIE. Has something to do with bink volume? (audRequestedSettings::SetVolumeCurveScale)
@@ -7354,7 +7354,7 @@ public static class Natives
 	}
 	public static int LOAD_MOVIE_MESH_SET(string movieMeshSetName)
 	{
-		return NativeFunction.Natives.LOAD_MOVIE_MESH_SET(movieMeshSetName);
+		return NativeFunction.Natives.LOAD_MOVIE_MESH_SET<int>(movieMeshSetName);
 	}
 	public static void RELEASE_MOVIE_MESH_SET(int movieMeshSet)
 	{
@@ -7362,7 +7362,7 @@ public static class Natives
 	}
 	public static int QUERY_MOVIE_MESH_SET_STATE()
 	{
-		return NativeFunction.Natives.QUERY_MOVIE_MESH_SET_STATE(0);
+		return NativeFunction.Natives.QUERY_MOVIE_MESH_SET_STATE<int>(0);
 	}
 	/// <summary>
 	/// 	int screenresx,screenresy;<br/>
@@ -7381,11 +7381,11 @@ public static class Natives
 	}
 	public static float GET_ASPECT_RATIO(bool b)
 	{
-		return NativeFunction.Natives.GET_ASPECT_RATIO(b);
+		return NativeFunction.Natives.GET_ASPECT_RATIO<float>(b);
 	}
 	public static float GET_SCREEN_ASPECT_RATIO()
 	{
-		return NativeFunction.Natives.GET_SCREEN_ASPECT_RATIO();
+		return NativeFunction.Natives.GET_SCREEN_ASPECT_RATIO<float>();
 	}
 	/// <summary>
 	/// 	Setting Aspect Ratio Manually in game will return:<br/>
@@ -7397,7 +7397,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_WIDESCREEN()
 	{
-		return NativeFunction.Natives.GET_IS_WIDESCREEN();
+		return NativeFunction.Natives.GET_IS_WIDESCREEN<bool>();
 	}
 	/// <summary>
 	/// 	false = Any resolution &amp;lt; 1280x720<br/>
@@ -7405,7 +7405,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_HIDEF()
 	{
-		return NativeFunction.Natives.GET_IS_HIDEF();
+		return NativeFunction.Natives.GET_IS_HIDEF<bool>();
 	}
 	public static void ADJUST_NEXT_POS_SIZE_AS_NORMALIZED_16_9()
 	{
@@ -7428,11 +7428,11 @@ public static class Natives
 	}
 	public static bool GET_REQUESTINGNIGHTVISION()
 	{
-		return NativeFunction.Natives.GET_REQUESTINGNIGHTVISION();
+		return NativeFunction.Natives.GET_REQUESTINGNIGHTVISION<bool>();
 	}
 	public static bool GET_USINGNIGHTVISION()
 	{
-		return NativeFunction.Natives.GET_USINGNIGHTVISION();
+		return NativeFunction.Natives.GET_USINGNIGHTVISION<bool>();
 	}
 	public static void SET_EXPOSURETWEAK(bool toggle)
 	{
@@ -7489,7 +7489,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_SCREEN_COORD_FROM_WORLD_COORD(float worldX, float worldY, float worldZ, out float screenX, out float screenY)
 	{
-		return NativeFunction.Natives.GET_SCREEN_COORD_FROM_WORLD_COORD(worldX, worldY, worldZ, out screenX, out screenY);
+		return NativeFunction.Natives.GET_SCREEN_COORD_FROM_WORLD_COORD<bool>(worldX, worldY, worldZ, out screenX, out screenY);
 	}
 	/// <summary>
 	/// 	Returns the texture resolution of the passed texture dict+name.<br/>
@@ -7498,14 +7498,14 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_TEXTURE_RESOLUTION(string textureDict, string textureName)
 	{
-		return NativeFunction.Natives.GET_TEXTURE_RESOLUTION(textureDict, textureName);
+		return NativeFunction.Natives.GET_TEXTURE_RESOLUTION<Vector3>(textureDict, textureName);
 	}
 	/// <summary>
 	/// 	Overriding ped badge texture to a passed texture. It&amp;apos;s synced between players (even custom textures!), don&amp;apos;t forget to request used dict on *all* clients to make it sync properly. Can be removed by passing empty strings.
 	/// </summary>
 	public static bool OVERRIDE_PED_CREW_LOGO_TEXTURE(Ped ped, string txd, string txn)
 	{
-		return NativeFunction.Natives.OVERRIDE_PED_CREW_LOGO_TEXTURE(ped, txd, txn);
+		return NativeFunction.Natives.OVERRIDE_PED_CREW_LOGO_TEXTURE<bool>(ped, txd, txn);
 	}
 	public static void SET_DISTANCE_BLUR_STRENGTH_OVERRIDE(float p0)
 	{
@@ -7550,7 +7550,7 @@ public static class Natives
 	/// </summary>
 	public static int CREATE_TRACKED_POINT()
 	{
-		return NativeFunction.Natives.CREATE_TRACKED_POINT();
+		return NativeFunction.Natives.CREATE_TRACKED_POINT<int>();
 	}
 	public static void SET_TRACKED_POINT_INFO(int point, float x, float y, float z, float radius)
 	{
@@ -7558,7 +7558,7 @@ public static class Natives
 	}
 	public static bool IS_TRACKED_POINT_VISIBLE(int point)
 	{
-		return NativeFunction.Natives.IS_TRACKED_POINT_VISIBLE(point);
+		return NativeFunction.Natives.IS_TRACKED_POINT_VISIBLE<bool>(point);
 	}
 	public static void DESTROY_TRACKED_POINT(int point)
 	{
@@ -7569,7 +7569,7 @@ public static class Natives
 	/// </summary>
 	public static int SET_GRASS_CULL_SPHERE(float p0, float p1, float p2, float p3)
 	{
-		return NativeFunction.Natives.SET_GRASS_CULL_SPHERE(p0, p1, p2, p3);
+		return NativeFunction.Natives.SET_GRASS_CULL_SPHERE<int>(p0, p1, p2, p3);
 	}
 	/// <summary>
 	/// 	This native does absolutely nothing, just a nullsub
@@ -7588,7 +7588,7 @@ public static class Natives
 	}
 	public static bool PROCGRASS_IS_CULLSPHERE_ENABLED(int handle)
 	{
-		return NativeFunction.Natives.PROCGRASS_IS_CULLSPHERE_ENABLED(handle);
+		return NativeFunction.Natives.PROCGRASS_IS_CULLSPHERE_ENABLED<bool>(handle);
 	}
 	public static void PROCGRASS_ENABLE_AMBSCALESCAN()
 	{
@@ -7764,11 +7764,11 @@ public static class Natives
 	}
 	public static float GOLF_TRAIL_GET_MAX_HEIGHT()
 	{
-		return NativeFunction.Natives.GOLF_TRAIL_GET_MAX_HEIGHT();
+		return NativeFunction.Natives.GOLF_TRAIL_GET_MAX_HEIGHT<float>();
 	}
 	public static Vector3 GOLF_TRAIL_GET_VISUAL_CONTROL_POINT(int p0)
 	{
-		return NativeFunction.Natives.GOLF_TRAIL_GET_VISUAL_CONTROL_POINT(p0);
+		return NativeFunction.Natives.GOLF_TRAIL_GET_VISUAL_CONTROL_POINT<Vector3>(p0);
 	}
 	/// <summary>
 	/// 	Toggles Heatvision on/off.
@@ -7779,7 +7779,7 @@ public static class Natives
 	}
 	public static bool GET_USINGSEETHROUGH()
 	{
-		return NativeFunction.Natives.GET_USINGSEETHROUGH();
+		return NativeFunction.Natives.GET_USINGSEETHROUGH<bool>();
 	}
 	public static void SEETHROUGH_RESET()
 	{
@@ -7795,7 +7795,7 @@ public static class Natives
 	}
 	public static float SEETHROUGH_GET_MAX_THICKNESS()
 	{
-		return NativeFunction.Natives.SEETHROUGH_GET_MAX_THICKNESS();
+		return NativeFunction.Natives.SEETHROUGH_GET_MAX_THICKNESS<float>();
 	}
 	/// <summary>
 	/// 	0.0 = you will not be able to see people behind the walls. 50.0 and more = you will see everyone through the walls. More value is &amp;quot;better&amp;quot; view. See https://gfycat.com/FirmFlippantGourami<br/>
@@ -7846,7 +7846,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_MOTIONBLUR_MAX_VEL_SCALER()
 	{
-		return NativeFunction.Natives.GET_MOTIONBLUR_MAX_VEL_SCALER();
+		return NativeFunction.Natives.GET_MOTIONBLUR_MAX_VEL_SCALER<float>();
 	}
 	public static void SET_FORCE_MOTIONBLUR(bool toggle)
 	{
@@ -7868,14 +7868,14 @@ public static class Natives
 	/// </summary>
 	public static bool TRIGGER_SCREENBLUR_FADE_IN(float transitionTime)
 	{
-		return NativeFunction.Natives.TRIGGER_SCREENBLUR_FADE_IN(transitionTime);
+		return NativeFunction.Natives.TRIGGER_SCREENBLUR_FADE_IN<bool>(transitionTime);
 	}
 	/// <summary>
 	/// 	time in ms to transition from fully blurred to normal
 	/// </summary>
 	public static bool TRIGGER_SCREENBLUR_FADE_OUT(float transitionTime)
 	{
-		return NativeFunction.Natives.TRIGGER_SCREENBLUR_FADE_OUT(transitionTime);
+		return NativeFunction.Natives.TRIGGER_SCREENBLUR_FADE_OUT<bool>(transitionTime);
 	}
 	public static void DISABLE_SCREENBLUR_FADE()
 	{
@@ -7883,14 +7883,14 @@ public static class Natives
 	}
 	public static float GET_SCREENBLUR_FADE_CURRENT_TIME()
 	{
-		return NativeFunction.Natives.GET_SCREENBLUR_FADE_CURRENT_TIME();
+		return NativeFunction.Natives.GET_SCREENBLUR_FADE_CURRENT_TIME<float>();
 	}
 	/// <summary>
 	/// 	Returns whether screen transition to blur/from blur is running.
 	/// </summary>
 	public static bool IS_SCREENBLUR_FADE_RUNNING()
 	{
-		return NativeFunction.Natives.IS_SCREENBLUR_FADE_RUNNING();
+		return NativeFunction.Natives.IS_SCREENBLUR_FADE_RUNNING<bool>();
 	}
 	public static void TOGGLE_PAUSED_RENDERPHASES(bool toggle)
 	{
@@ -7898,7 +7898,7 @@ public static class Natives
 	}
 	public static bool GET_TOGGLE_PAUSED_RENDERPHASES_STATUS()
 	{
-		return NativeFunction.Natives.GET_TOGGLE_PAUSED_RENDERPHASES_STATUS();
+		return NativeFunction.Natives.GET_TOGGLE_PAUSED_RENDERPHASES_STATUS<bool>();
 	}
 	public static void RESET_PAUSED_RENDERPHASES()
 	{
@@ -7918,15 +7918,15 @@ public static class Natives
 	}
 	public static bool PHONEPHOTOEDITOR_TOGGLE(bool p0)
 	{
-		return NativeFunction.Natives.PHONEPHOTOEDITOR_TOGGLE(p0);
+		return NativeFunction.Natives.PHONEPHOTOEDITOR_TOGGLE<bool>(p0);
 	}
 	public static bool PHONEPHOTOEDITOR_IS_ACTIVE()
 	{
-		return NativeFunction.Natives.PHONEPHOTOEDITOR_IS_ACTIVE();
+		return NativeFunction.Natives.PHONEPHOTOEDITOR_IS_ACTIVE<bool>();
 	}
 	public static bool PHONEPHOTOEDITOR_SET_FRAME_TXD(string textureDict, bool p1)
 	{
-		return NativeFunction.Natives.PHONEPHOTOEDITOR_SET_FRAME_TXD(textureDict, p1);
+		return NativeFunction.Natives.PHONEPHOTOEDITOR_SET_FRAME_TXD<bool>(textureDict, p1);
 	}
 	/// <summary>
 	/// 	GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD(&amp;quot;scr_paleto_roof_impact&amp;quot;, -140.8576f, 6420.789f, 41.1391f, 0f, 0f, 267.3957f, 0x3F800000, 0, 0, 0);<br/>
@@ -7956,14 +7956,14 @@ public static class Natives
 	/// </summary>
 	public static bool START_PARTICLE_FX_NON_LOOPED_AT_COORD(string effectName, float xPos, float yPos, float zPos, float xRot, float yRot, float zRot, float scale, bool xAxis, bool yAxis, bool zAxis)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_AT_COORD(effectName, xPos, yPos, zPos, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis);
+		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_AT_COORD<bool>(effectName, xPos, yPos, zPos, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static bool START_NETWORKED_PARTICLE_FX_NON_LOOPED_AT_COORD(string effectName, float xPos, float yPos, float zPos, float xRot, float yRot, float zRot, float scale, bool xAxis, bool yAxis, bool zAxis, bool p11)
 	{
-		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_NON_LOOPED_AT_COORD(effectName, xPos, yPos, zPos, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis, p11);
+		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_NON_LOOPED_AT_COORD<bool>(effectName, xPos, yPos, zPos, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis, p11);
 	}
 	/// <summary>
 	/// 	GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE(&amp;quot;scr_sh_bong_smoke&amp;quot;, PLAYER::PLAYER_PED_ID(), -0.025f, 0.13f, 0f, 0f, 0f, 0f, 31086, 0x3F800000, 0, 0, 0);<br/>
@@ -7974,14 +7974,14 @@ public static class Natives
 	/// </summary>
 	public static bool START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE(string effectName, Ped ped, float offsetX, float offsetY, float offsetZ, float rotX, float rotY, float rotZ, int boneIndex, float scale, bool axisX, bool axisY, bool axisZ)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE(effectName, ped, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, boneIndex, scale, axisX, axisY, axisZ);
+		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE<bool>(effectName, ped, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, boneIndex, scale, axisX, axisY, axisZ);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static bool START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_PED_BONE(string effectName, Ped ped, float offsetX, float offsetY, float offsetZ, float rotX, float rotY, float rotZ, int boneIndex, float scale, bool axisX, bool axisY, bool axisZ)
 	{
-		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_PED_BONE(effectName, ped, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, boneIndex, scale, axisX, axisY, axisZ);
+		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_PED_BONE<bool>(effectName, ped, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, boneIndex, scale, axisX, axisY, axisZ);
 	}
 	/// <summary>
 	/// 	Starts a particle effect on an entity for example your player.<br/>
@@ -7999,21 +7999,21 @@ public static class Natives
 	/// </summary>
 	public static bool START_PARTICLE_FX_NON_LOOPED_ON_ENTITY(string effectName, Entity entity, float offsetX, float offsetY, float offsetZ, float rotX, float rotY, float rotZ, float scale, bool axisX, bool axisY, bool axisZ)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_ON_ENTITY(effectName, entity, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, scale, axisX, axisY, axisZ);
+		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_ON_ENTITY<bool>(effectName, entity, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, scale, axisX, axisY, axisZ);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static bool START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITY(string effectName, Entity entity, float offsetX, float offsetY, float offsetZ, float rotX, float rotY, float rotZ, float scale, bool axisX, bool axisY, bool axisZ)
 	{
-		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITY(effectName, entity, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, scale, axisX, axisY, axisZ);
+		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITY<bool>(effectName, entity, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, scale, axisX, axisY, axisZ);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static bool START_PARTICLE_FX_NON_LOOPED_ON_ENTITY_BONE(string effectName, Entity entity, float offsetX, float offsetY, float offsetZ, float rotX, float rotY, float rotZ, int boneIndex, float scale, bool axisX, bool axisY, bool axisZ)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_ON_ENTITY_BONE(effectName, entity, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, boneIndex, scale, axisX, axisY, axisZ);
+		return NativeFunction.Natives.START_PARTICLE_FX_NON_LOOPED_ON_ENTITY_BONE<bool>(effectName, entity, offsetX, offsetY, offsetZ, rotX, rotY, rotZ, boneIndex, scale, axisX, axisY, axisZ);
 	}
 	/// <summary>
 	/// 	only works on some fx&amp;apos;s, not networked
@@ -8058,42 +8058,42 @@ public static class Natives
 	/// </summary>
 	public static int START_PARTICLE_FX_LOOPED_AT_COORD(string effectName, float x, float y, float z, float xRot, float yRot, float zRot, float scale, bool xAxis, bool yAxis, bool zAxis, bool p11)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_AT_COORD(effectName, x, y, z, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis, p11);
+		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_AT_COORD<int>(effectName, x, y, z, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis, p11);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static int START_PARTICLE_FX_LOOPED_ON_PED_BONE(string effectName, Ped ped, float xOffset, float yOffset, float zOffset, float xRot, float yRot, float zRot, int boneIndex, float scale, bool xAxis, bool yAxis, bool zAxis)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_ON_PED_BONE(effectName, ped, xOffset, yOffset, zOffset, xRot, yRot, zRot, boneIndex, scale, xAxis, yAxis, zAxis);
+		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_ON_PED_BONE<int>(effectName, ped, xOffset, yOffset, zOffset, xRot, yRot, zRot, boneIndex, scale, xAxis, yAxis, zAxis);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static int START_PARTICLE_FX_LOOPED_ON_ENTITY(string effectName, Entity entity, float xOffset, float yOffset, float zOffset, float xRot, float yRot, float zRot, float scale, bool xAxis, bool yAxis, bool zAxis)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_ON_ENTITY(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis);
+		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_ON_ENTITY<int>(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static int START_PARTICLE_FX_LOOPED_ON_ENTITY_BONE(string effectName, Entity entity, float xOffset, float yOffset, float zOffset, float xRot, float yRot, float zRot, int boneIndex, float scale, bool xAxis, bool yAxis, bool zAxis)
 	{
-		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_ON_ENTITY_BONE(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, boneIndex, scale, xAxis, yAxis, zAxis);
+		return NativeFunction.Natives.START_PARTICLE_FX_LOOPED_ON_ENTITY_BONE<int>(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, boneIndex, scale, xAxis, yAxis, zAxis);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static int START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY(string effectName, Entity entity, float xOffset, float yOffset, float zOffset, float xRot, float yRot, float zRot, float scale, bool xAxis, bool yAxis, bool zAxis, float r, float g, float b, float a)
 	{
-		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis, r, g, b, a);
+		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY<int>(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, scale, xAxis, yAxis, zAxis, r, g, b, a);
 	}
 	/// <summary>
 	/// 	Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
 	/// </summary>
 	public static int START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY_BONE(string effectName, Entity entity, float xOffset, float yOffset, float zOffset, float xRot, float yRot, float zRot, int boneIndex, float scale, bool xAxis, bool yAxis, bool zAxis, float r, float g, float b, float a)
 	{
-		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY_BONE(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, boneIndex, scale, xAxis, yAxis, zAxis, r, g, b, a);
+		return NativeFunction.Natives.START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY_BONE<int>(effectName, entity, xOffset, yOffset, zOffset, xRot, yRot, zRot, boneIndex, scale, xAxis, yAxis, zAxis, r, g, b, a);
 	}
 	/// <summary>
 	/// 	p1 is always 0 in the native scripts
@@ -8120,7 +8120,7 @@ public static class Natives
 	}
 	public static bool DOES_PARTICLE_FX_LOOPED_EXIST(int ptfxHandle)
 	{
-		return NativeFunction.Natives.DOES_PARTICLE_FX_LOOPED_EXIST(ptfxHandle);
+		return NativeFunction.Natives.DOES_PARTICLE_FX_LOOPED_EXIST<bool>(ptfxHandle);
 	}
 	public static void SET_PARTICLE_FX_LOOPED_OFFSETS(int ptfxHandle, float x, float y, float z, float rotX, float rotY, float rotZ)
 	{
@@ -8283,7 +8283,7 @@ public static class Natives
 	/// </summary>
 	public static int _START_VEHICLE_PARTICLE_FX_LOOPED(Vehicle vehicle, string effectName, bool frontBack, bool leftRight, bool localOnly)
 	{
-		return NativeFunction.Natives._START_VEHICLE_PARTICLE_FX_LOOPED(vehicle, effectName, frontBack, leftRight, localOnly);
+		return NativeFunction.Natives._START_VEHICLE_PARTICLE_FX_LOOPED<int>(vehicle, effectName, frontBack, leftRight, localOnly);
 	}
 	public static void SET_WEATHER_PTFX_USE_OVERRIDE_SETTINGS(bool p0)
 	{
@@ -8388,15 +8388,15 @@ public static class Natives
 	/// </summary>
 	public static int ADD_DECAL(int decalType, float posX, float posY, float posZ, float p4, float p5, float p6, float p7, float p8, float p9, float width, float height, float rCoef, float gCoef, float bCoef, float opacity, float timeout, bool p17, bool p18, bool p19)
 	{
-		return NativeFunction.Natives.ADD_DECAL(decalType, posX, posY, posZ, p4, p5, p6, p7, p8, p9, width, height, rCoef, gCoef, bCoef, opacity, timeout, p17, p18, p19);
+		return NativeFunction.Natives.ADD_DECAL<int>(decalType, posX, posY, posZ, p4, p5, p6, p7, p8, p9, width, height, rCoef, gCoef, bCoef, opacity, timeout, p17, p18, p19);
 	}
 	public static int ADD_PETROL_DECAL(float x, float y, float z, float groundLvl, float width, float transparency)
 	{
-		return NativeFunction.Natives.ADD_PETROL_DECAL(x, y, z, groundLvl, width, transparency);
+		return NativeFunction.Natives.ADD_PETROL_DECAL<int>(x, y, z, groundLvl, width, transparency);
 	}
 	public static int ADD_OIL_DECAL(float x, float y, float z, float groundLvl, float width, float transparency)
 	{
-		return NativeFunction.Natives.ADD_OIL_DECAL(x, y, z, groundLvl, width, transparency);
+		return NativeFunction.Natives.ADD_OIL_DECAL<int>(x, y, z, groundLvl, width, transparency);
 	}
 	public static void START_PETROL_TRAIL_DECALS(float p0)
 	{
@@ -8416,11 +8416,11 @@ public static class Natives
 	}
 	public static bool IS_DECAL_ALIVE(int decal)
 	{
-		return NativeFunction.Natives.IS_DECAL_ALIVE(decal);
+		return NativeFunction.Natives.IS_DECAL_ALIVE<bool>(decal);
 	}
 	public static float GET_DECAL_WASH_LEVEL(int decal)
 	{
-		return NativeFunction.Natives.GET_DECAL_WASH_LEVEL(decal);
+		return NativeFunction.Natives.GET_DECAL_WASH_LEVEL<float>(decal);
 	}
 	public static void SET_DISABLE_PETROL_DECALS_IGNITING_THIS_FRAME()
 	{
@@ -8436,7 +8436,7 @@ public static class Natives
 	}
 	public static bool GET_IS_PETROL_DECAL_IN_RANGE(float xCoord, float yCoord, float zCoord, float radius)
 	{
-		return NativeFunction.Natives.GET_IS_PETROL_DECAL_IN_RANGE(xCoord, yCoord, zCoord, radius);
+		return NativeFunction.Natives.GET_IS_PETROL_DECAL_IN_RANGE<bool>(xCoord, yCoord, zCoord, radius);
 	}
 	public static void PATCH_DECAL_DIFFUSE_MAP(int decalType, string textureDict, string textureName)
 	{
@@ -8455,11 +8455,11 @@ public static class Natives
 	/// </summary>
 	public static bool ADD_VEHICLE_CREW_EMBLEM(Vehicle vehicle, Ped ped, int boneIndex, float x1, float x2, float x3, float y1, float y2, float y3, float z1, float z2, float z3, float scale, int alpha)
 	{
-		return NativeFunction.Natives.ADD_VEHICLE_CREW_EMBLEM(vehicle, ped, boneIndex, x1, x2, x3, y1, y2, y3, z1, z2, z3, scale, 0, alpha);
+		return NativeFunction.Natives.ADD_VEHICLE_CREW_EMBLEM<bool>(vehicle, ped, boneIndex, x1, x2, x3, y1, y2, y3, z1, z2, z3, scale, 0, alpha);
 	}
 	public static bool ABORT_VEHICLE_CREW_EMBLEM_REQUEST(out int p0)
 	{
-		return NativeFunction.Natives.ABORT_VEHICLE_CREW_EMBLEM_REQUEST(out p0);
+		return NativeFunction.Natives.ABORT_VEHICLE_CREW_EMBLEM_REQUEST<bool>(out p0);
 	}
 	public static void REMOVE_VEHICLE_CREW_EMBLEM(Vehicle vehicle, int p1)
 	{
@@ -8467,11 +8467,11 @@ public static class Natives
 	}
 	public static int GET_VEHICLE_CREW_EMBLEM_REQUEST_STATE(Vehicle vehicle, int p1)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CREW_EMBLEM_REQUEST_STATE(vehicle, p1);
+		return NativeFunction.Natives.GET_VEHICLE_CREW_EMBLEM_REQUEST_STATE<int>(vehicle, p1);
 	}
 	public static bool DOES_VEHICLE_HAVE_CREW_EMBLEM(Vehicle vehicle, int p1)
 	{
-		return NativeFunction.Natives.DOES_VEHICLE_HAVE_CREW_EMBLEM(vehicle, p1);
+		return NativeFunction.Natives.DOES_VEHICLE_HAVE_CREW_EMBLEM<bool>(vehicle, p1);
 	}
 	public static void DISABLE_COMPOSITE_SHOTGUN_DECALS(bool toggle)
 	{
@@ -8589,15 +8589,15 @@ public static class Natives
 	/// </summary>
 	public static int GET_TIMECYCLE_MODIFIER_INDEX()
 	{
-		return NativeFunction.Natives.GET_TIMECYCLE_MODIFIER_INDEX();
+		return NativeFunction.Natives.GET_TIMECYCLE_MODIFIER_INDEX<int>();
 	}
 	public static int GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX()
 	{
-		return NativeFunction.Natives.GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX();
+		return NativeFunction.Natives.GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX<int>();
 	}
 	public static bool GET_IS_TIMECYCLE_TRANSITIONING_OUT()
 	{
-		return NativeFunction.Natives.GET_IS_TIMECYCLE_TRANSITIONING_OUT();
+		return NativeFunction.Natives.GET_IS_TIMECYCLE_TRANSITIONING_OUT<bool>();
 	}
 	public static void PUSH_TIMECYCLE_MODIFIER()
 	{
@@ -8647,7 +8647,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_EXTRA_TCMODIFIER()
 	{
-		return NativeFunction.Natives.GET_EXTRA_TCMODIFIER();
+		return NativeFunction.Natives.GET_EXTRA_TCMODIFIER<int>();
 	}
 	/// <summary>
 	/// 	The same as SET_TIMECYCLE_MODIFIER_STRENGTH but for the secondary timecycle modifier.
@@ -8665,18 +8665,18 @@ public static class Natives
 	}
 	public static int REQUEST_SCALEFORM_MOVIE(string scaleformName)
 	{
-		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE(scaleformName);
+		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE<int>(scaleformName);
 	}
 	/// <summary>
 	/// 	Another REQUEST_SCALEFORM_MOVIE equivalent.
 	/// </summary>
 	public static int REQUEST_SCALEFORM_MOVIE_WITH_IGNORE_SUPER_WIDESCREEN(string scaleformName)
 	{
-		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE_WITH_IGNORE_SUPER_WIDESCREEN(scaleformName);
+		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE_WITH_IGNORE_SUPER_WIDESCREEN<int>(scaleformName);
 	}
 	public static int REQUEST_SCALEFORM_MOVIE_INSTANCE(string scaleformName)
 	{
-		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE_INSTANCE(scaleformName);
+		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE_INSTANCE<int>(scaleformName);
 	}
 	/// <summary>
 	/// 	Similar to REQUEST_SCALEFORM_MOVIE, but seems to be some kind of &amp;quot;interactive&amp;quot; scaleform movie?<br/>
@@ -8693,25 +8693,25 @@ public static class Natives
 	/// </summary>
 	public static int REQUEST_SCALEFORM_MOVIE_SKIP_RENDER_WHILE_PAUSED(string scaleformName)
 	{
-		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE_SKIP_RENDER_WHILE_PAUSED(scaleformName);
+		return NativeFunction.Natives.REQUEST_SCALEFORM_MOVIE_SKIP_RENDER_WHILE_PAUSED<int>(scaleformName);
 	}
 	public static bool HAS_SCALEFORM_MOVIE_LOADED(int scaleformHandle)
 	{
-		return NativeFunction.Natives.HAS_SCALEFORM_MOVIE_LOADED(scaleformHandle);
+		return NativeFunction.Natives.HAS_SCALEFORM_MOVIE_LOADED<bool>(scaleformHandle);
 	}
 	/// <summary>
 	/// 	val is 1-20 (0 will return false)
 	/// </summary>
 	public static bool IS_ACTIVE_SCALEFORM_MOVIE_DELETING(int val)
 	{
-		return NativeFunction.Natives.IS_ACTIVE_SCALEFORM_MOVIE_DELETING(val);
+		return NativeFunction.Natives.IS_ACTIVE_SCALEFORM_MOVIE_DELETING<bool>(val);
 	}
 	/// <summary>
 	/// 	val is 1-20. Return is related to INSTRUCTIONAL_BUTTONS, COLOUR_SWITCHER_02, etc?
 	/// </summary>
 	public static bool IS_SCALEFORM_MOVIE_DELETING(int val)
 	{
-		return NativeFunction.Natives.IS_SCALEFORM_MOVIE_DELETING(val);
+		return NativeFunction.Natives.IS_SCALEFORM_MOVIE_DELETING<bool>(val);
 	}
 	/// <summary>
 	/// 	Only values used in the scripts are:<br/>
@@ -8723,11 +8723,11 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_SCALEFORM_MOVIE_FILENAME_LOADED(string scaleformName)
 	{
-		return NativeFunction.Natives.HAS_SCALEFORM_MOVIE_FILENAME_LOADED(scaleformName);
+		return NativeFunction.Natives.HAS_SCALEFORM_MOVIE_FILENAME_LOADED<bool>(scaleformName);
 	}
 	public static bool HAS_SCALEFORM_CONTAINER_MOVIE_LOADED_INTO_PARENT(int scaleformHandle)
 	{
-		return NativeFunction.Natives.HAS_SCALEFORM_CONTAINER_MOVIE_LOADED_INTO_PARENT(scaleformHandle);
+		return NativeFunction.Natives.HAS_SCALEFORM_CONTAINER_MOVIE_LOADED_INTO_PARENT<bool>(scaleformHandle);
 	}
 	public static void SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(out int scaleformHandle)
 	{
@@ -8825,7 +8825,7 @@ public static class Natives
 	/// </summary>
 	public static bool BEGIN_SCALEFORM_SCRIPT_HUD_MOVIE_METHOD(int hudComponent, string methodName)
 	{
-		return NativeFunction.Natives.BEGIN_SCALEFORM_SCRIPT_HUD_MOVIE_METHOD(hudComponent, methodName);
+		return NativeFunction.Natives.BEGIN_SCALEFORM_SCRIPT_HUD_MOVIE_METHOD<bool>(hudComponent, methodName);
 	}
 	/// <summary>
 	/// 	Push a function from the Scaleform onto the stack<br/>
@@ -8833,7 +8833,7 @@ public static class Natives
 	/// </summary>
 	public static bool BEGIN_SCALEFORM_MOVIE_METHOD(int scaleform, string methodName)
 	{
-		return NativeFunction.Natives.BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, methodName);
+		return NativeFunction.Natives.BEGIN_SCALEFORM_MOVIE_METHOD<bool>(scaleform, methodName);
 	}
 	/// <summary>
 	/// 	Starts frontend (pause menu) scaleform movie methods.<br/>
@@ -8842,7 +8842,7 @@ public static class Natives
 	/// </summary>
 	public static bool BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND(string methodName)
 	{
-		return NativeFunction.Natives.BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND(methodName);
+		return NativeFunction.Natives.BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND<bool>(methodName);
 	}
 	/// <summary>
 	/// 	Starts frontend (pause menu) scaleform movie methods for header options.<br/>
@@ -8850,7 +8850,7 @@ public static class Natives
 	/// </summary>
 	public static bool BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND_HEADER(string methodName)
 	{
-		return NativeFunction.Natives.BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND_HEADER(methodName);
+		return NativeFunction.Natives.BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND_HEADER<bool>(methodName);
 	}
 	/// <summary>
 	/// 	Pops and calls the Scaleform function on the stack
@@ -8861,7 +8861,7 @@ public static class Natives
 	}
 	public static int END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE()
 	{
-		return NativeFunction.Natives.END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE();
+		return NativeFunction.Natives.END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE<int>();
 	}
 	/// <summary>
 	/// 	methodReturn: The return value of this native: END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE<br/>
@@ -8869,7 +8869,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(int methodReturn)
 	{
-		return NativeFunction.Natives.IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(methodReturn);
+		return NativeFunction.Natives.IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY<bool>(methodReturn);
 	}
 	/// <summary>
 	/// 	methodReturn: The return value of this native: END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE<br/>
@@ -8877,14 +8877,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT(int methodReturn)
 	{
-		return NativeFunction.Natives.GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT(methodReturn);
+		return NativeFunction.Natives.GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT<int>(methodReturn);
 	}
 	/// <summary>
 	/// 	methodReturn: The return value of this native: END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE
 	/// </summary>
 	public static bool GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_BOOL(int methodReturn)
 	{
-		return NativeFunction.Natives.GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_BOOL(methodReturn);
+		return NativeFunction.Natives.GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_BOOL<bool>(methodReturn);
 	}
 	/// <summary>
 	/// 	methodReturn: The return value of this native: END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE<br/>
@@ -8892,7 +8892,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_STRING(int methodReturn)
 	{
-		return NativeFunction.Natives.GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_STRING(methodReturn);
+		return NativeFunction.Natives.GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_STRING<string>(methodReturn);
 	}
 	/// <summary>
 	/// 	Pushes an integer for the Scaleform function onto the stack.
@@ -8971,7 +8971,7 @@ public static class Natives
 	}
 	public static bool DOES_LATEST_BRIEF_STRING_EXIST(int p0)
 	{
-		return NativeFunction.Natives.DOES_LATEST_BRIEF_STRING_EXIST(p0);
+		return NativeFunction.Natives.DOES_LATEST_BRIEF_STRING_EXIST<bool>(p0);
 	}
 	public static void SCALEFORM_MOVIE_METHOD_ADD_PARAM_LATEST_BRIEF_STRING(int value)
 	{
@@ -8983,7 +8983,7 @@ public static class Natives
 	}
 	public static bool HAS_SCALEFORM_SCRIPT_HUD_MOVIE_LOADED(int hudComponent)
 	{
-		return NativeFunction.Natives.HAS_SCALEFORM_SCRIPT_HUD_MOVIE_LOADED(hudComponent);
+		return NativeFunction.Natives.HAS_SCALEFORM_SCRIPT_HUD_MOVIE_LOADED<bool>(hudComponent);
 	}
 	public static void REMOVE_SCALEFORM_SCRIPT_HUD_MOVIE(int hudComponent)
 	{
@@ -8991,7 +8991,7 @@ public static class Natives
 	}
 	public static bool PASS_KEYBOARD_INPUT_TO_SCALEFORM(int scaleformHandle)
 	{
-		return NativeFunction.Natives.PASS_KEYBOARD_INPUT_TO_SCALEFORM(scaleformHandle);
+		return NativeFunction.Natives.PASS_KEYBOARD_INPUT_TO_SCALEFORM<bool>(scaleformHandle);
 	}
 	public static void SET_TV_CHANNEL(int channel)
 	{
@@ -8999,7 +8999,7 @@ public static class Natives
 	}
 	public static int GET_TV_CHANNEL()
 	{
-		return NativeFunction.Natives.GET_TV_CHANNEL();
+		return NativeFunction.Natives.GET_TV_CHANNEL<int>();
 	}
 	public static void SET_TV_VOLUME(float volume)
 	{
@@ -9007,7 +9007,7 @@ public static class Natives
 	}
 	public static float GET_TV_VOLUME()
 	{
-		return NativeFunction.Natives.GET_TV_VOLUME();
+		return NativeFunction.Natives.GET_TV_VOLUME<float>();
 	}
 	/// <summary>
 	/// 	All calls to this native are preceded by calls to GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER and GRAPHICS::SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU, respectively.<br/>
@@ -9090,11 +9090,11 @@ public static class Natives
 	}
 	public static bool IS_PLAYLIST_ON_CHANNEL(int tvChannel)
 	{
-		return NativeFunction.Natives.IS_PLAYLIST_ON_CHANNEL(tvChannel, 0);
+		return NativeFunction.Natives.IS_PLAYLIST_ON_CHANNEL<bool>(tvChannel, 0);
 	}
 	public static bool IS_TVSHOW_CURRENTLY_PLAYING(ulong videoCliphash)
 	{
-		return NativeFunction.Natives.IS_TVSHOW_CURRENTLY_PLAYING(videoCliphash);
+		return NativeFunction.Natives.IS_TVSHOW_CURRENTLY_PLAYING<bool>(videoCliphash);
 	}
 	public static void ENABLE_MOVIE_KEYFRAME_WAIT(bool toggle)
 	{
@@ -9106,7 +9106,7 @@ public static class Natives
 	}
 	public static ulong GET_CURRENT_TV_CLIP_NAMEHASH()
 	{
-		return NativeFunction.Natives.GET_CURRENT_TV_CLIP_NAMEHASH();
+		return NativeFunction.Natives.GET_CURRENT_TV_CLIP_NAMEHASH<ulong>();
 	}
 	public static void ENABLE_MOVIE_SUBTITLES(bool toggle)
 	{
@@ -9114,14 +9114,14 @@ public static class Natives
 	}
 	public static bool UI3DSCENE_IS_AVAILABLE()
 	{
-		return NativeFunction.Natives.UI3DSCENE_IS_AVAILABLE();
+		return NativeFunction.Natives.UI3DSCENE_IS_AVAILABLE<bool>();
 	}
 	/// <summary>
 	/// 	All presets can be found in common\data\ui\uiscenes.meta
 	/// </summary>
 	public static bool UI3DSCENE_PUSH_PRESET(string presetName)
 	{
-		return NativeFunction.Natives.UI3DSCENE_PUSH_PRESET(presetName);
+		return NativeFunction.Natives.UI3DSCENE_PUSH_PRESET<bool>(presetName);
 	}
 	/// <summary>
 	/// 	It&amp;apos;s called after UI3DSCENE_IS_AVAILABLE and UI3DSCENE_PUSH_PRESET<br/>
@@ -9131,7 +9131,7 @@ public static class Natives
 	/// </summary>
 	public static bool UI3DSCENE_ASSIGN_PED_TO_SLOT(string presetName, Ped ped, int slot, float posX, float posY, float posZ)
 	{
-		return NativeFunction.Natives.UI3DSCENE_ASSIGN_PED_TO_SLOT(presetName, ped, slot, posX, posY, posZ);
+		return NativeFunction.Natives.UI3DSCENE_ASSIGN_PED_TO_SLOT<bool>(presetName, ped, slot, posX, posY, posZ);
 	}
 	public static void UI3DSCENE_CLEAR_PATCHED_DATA()
 	{
@@ -9200,7 +9200,7 @@ public static class Natives
 	/// </summary>
 	public static float ANIMPOSTFX_GET_CURRENT_TIME(string effectName)
 	{
-		return NativeFunction.Natives.ANIMPOSTFX_GET_CURRENT_TIME(effectName);
+		return NativeFunction.Natives.ANIMPOSTFX_GET_CURRENT_TIME<float>(effectName);
 	}
 	/// <summary>
 	/// 	Returns whether the specified effect is active.<br/>
@@ -9210,7 +9210,7 @@ public static class Natives
 	/// </summary>
 	public static bool ANIMPOSTFX_IS_RUNNING(string effectName)
 	{
-		return NativeFunction.Natives.ANIMPOSTFX_IS_RUNNING(effectName);
+		return NativeFunction.Natives.ANIMPOSTFX_IS_RUNNING<bool>(effectName);
 	}
 	/// <summary>
 	/// 	Stops ALL currently playing effects.
@@ -9301,11 +9301,11 @@ public static class Natives
 	}
 	public static bool BUSYSPINNER_IS_ON()
 	{
-		return NativeFunction.Natives.BUSYSPINNER_IS_ON();
+		return NativeFunction.Natives.BUSYSPINNER_IS_ON<bool>();
 	}
 	public static bool BUSYSPINNER_IS_DISPLAYING()
 	{
-		return NativeFunction.Natives.BUSYSPINNER_IS_DISPLAYING();
+		return NativeFunction.Natives.BUSYSPINNER_IS_DISPLAYING<bool>();
 	}
 	public static void DISABLE_PAUSEMENU_SPINNER(bool p0)
 	{
@@ -9341,11 +9341,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_MOUSE_ROLLED_OVER_INSTRUCTIONAL_BUTTONS()
 	{
-		return NativeFunction.Natives.IS_MOUSE_ROLLED_OVER_INSTRUCTIONAL_BUTTONS();
+		return NativeFunction.Natives.IS_MOUSE_ROLLED_OVER_INSTRUCTIONAL_BUTTONS<bool>();
 	}
 	public static bool GET_MOUSE_EVENT(int scaleformHandle)
 	{
-		return NativeFunction.Natives.GET_MOUSE_EVENT(scaleformHandle, 0, 0, 0);
+		return NativeFunction.Natives.GET_MOUSE_EVENT<bool>(scaleformHandle, 0, 0, 0);
 	}
 	public static void THEFEED_ONLY_SHOW_TOOLTIPS(bool toggle)
 	{
@@ -9408,7 +9408,7 @@ public static class Natives
 	}
 	public static bool THEFEED_IS_PAUSED()
 	{
-		return NativeFunction.Natives.THEFEED_IS_PAUSED();
+		return NativeFunction.Natives.THEFEED_IS_PAUSED<bool>();
 	}
 	public static void THEFEED_REPORT_LOGO_ON()
 	{
@@ -9423,7 +9423,7 @@ public static class Natives
 	/// </summary>
 	public static int THEFEED_GET_LAST_SHOWN_PHONE_ACTIVATABLE_FEED_ID()
 	{
-		return NativeFunction.Natives.THEFEED_GET_LAST_SHOWN_PHONE_ACTIVATABLE_FEED_ID();
+		return NativeFunction.Natives.THEFEED_GET_LAST_SHOWN_PHONE_ACTIVATABLE_FEED_ID<int>();
 	}
 	/// <summary>
 	/// 	Enables loading screen tips to be be shown (`THEFEED_SHOW`), blocks other kinds of notifications from being displayed (at least from current script). Call `THEFEED_AUTO_POST_GAMETIPS_OFF` to display those again.
@@ -9517,7 +9517,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_STATS(string statTitle, int iconEnum, bool stepVal, int barValue, bool isImportant, string pictureTextureDict, string pictureTextureName)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_STATS(statTitle, iconEnum, stepVal, barValue, isImportant, pictureTextureDict, pictureTextureName);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_STATS<int>(statTitle, iconEnum, stepVal, barValue, isImportant, pictureTextureDict, pictureTextureName);
 	}
 	/// <summary>
 	/// 	This function can show pictures of every texture that can be requested by REQUEST_STREAMED_TEXTURE_DICT.<br/>
@@ -9542,7 +9542,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT(string txdName, string textureName, bool flash, int iconType, string sender, string subject)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT(txdName, textureName, flash, iconType, sender, subject);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT<int>(txdName, textureName, flash, iconType, sender, subject);
 	}
 	/// <summary>
 	/// 	This function can show pictures of every texture that can be requested by REQUEST_STREAMED_TEXTURE_DICT.<br/>
@@ -9555,7 +9555,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_SUBTITLE_LABEL(string txdName, string textureName, bool flash, int iconType, string sender, string subject)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_SUBTITLE_LABEL(txdName, textureName, flash, iconType, sender, subject);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_SUBTITLE_LABEL<int>(txdName, textureName, flash, iconType, sender, subject);
 	}
 	/// <summary>
 	/// 	This function can show pictures of every texture that can be requested by REQUEST_STREAMED_TEXTURE_DICT.<br/>
@@ -9567,7 +9567,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_TU(string txdName, string textureName, bool flash, int iconType, string sender, string subject, float duration)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_TU(txdName, textureName, flash, iconType, sender, subject, duration);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_TU<int>(txdName, textureName, flash, iconType, sender, subject, duration);
 	}
 	/// <summary>
 	/// 	This function can show pictures of every texture that can be requested by REQUEST_STREAMED_TEXTURE_DICT.<br/>
@@ -9593,7 +9593,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_WITH_CREW_TAG(string txdName, string textureName, bool flash, int iconType, string sender, string subject, float duration, string clanTag)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_WITH_CREW_TAG(txdName, textureName, flash, iconType, sender, subject, duration, clanTag);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_WITH_CREW_TAG<int>(txdName, textureName, flash, iconType, sender, subject, duration, clanTag);
 	}
 	/// <summary>
 	/// 	This function can show pictures of every texture that can be requested by REQUEST_STREAMED_TEXTURE_DICT.<br/>
@@ -9629,19 +9629,19 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_WITH_CREW_TAG_AND_ADDITIONAL_ICON(string txdName, string textureName, bool flash, int iconType1, string sender, string subject, float duration, string clanTag, int iconType2, int p9)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_WITH_CREW_TAG_AND_ADDITIONAL_ICON(txdName, textureName, flash, iconType1, sender, subject, duration, clanTag, iconType2, p9);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_WITH_CREW_TAG_AND_ADDITIONAL_ICON<int>(txdName, textureName, flash, iconType1, sender, subject, duration, clanTag, iconType2, p9);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_TICKER(bool blink, bool p1)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_TICKER(blink, p1);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_TICKER<int>(blink, p1);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_TICKER_FORCED(bool blink, bool p1)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_TICKER_FORCED(blink, p1);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_TICKER_FORCED<int>(blink, p1);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_TICKER_WITH_TOKENS(bool blink, bool p1)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_TICKER_WITH_TOKENS(blink, p1);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_TICKER_WITH_TOKENS<int>(blink, p1);
 	}
 	/// <summary>
 	/// 	Shows an &amp;quot;award&amp;quot; notification above the minimap, example: https://i.imgur.com/e2DNaKX.png<br/>
@@ -9652,35 +9652,35 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_AWARD(string textureDict, string textureName, int rpBonus, int colorOverlay, string titleLabel)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_AWARD(textureDict, textureName, rpBonus, colorOverlay, titleLabel);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_AWARD<int>(textureDict, textureName, rpBonus, colorOverlay, titleLabel);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_CREWTAG(bool p0, bool p1, out int p2, int p3, bool isLeader, bool unk0, int clanDesc, int R, int G, int B)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_CREWTAG(p0, p1, out p2, p3, isLeader, unk0, clanDesc, R, G, B);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_CREWTAG<int>(p0, p1, out p2, p3, isLeader, unk0, clanDesc, R, G, B);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_CREWTAG_WITH_GAME_NAME(bool p0, bool p1, out int p2, int p3, bool isLeader, bool unk0, int clanDesc, string playerName, int R, int G, int B)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_CREWTAG_WITH_GAME_NAME(p0, p1, out p2, p3, isLeader, unk0, clanDesc, playerName, R, G, B);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_CREWTAG_WITH_GAME_NAME<int>(p0, p1, out p2, p3, isLeader, unk0, clanDesc, playerName, R, G, B);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_UNLOCK(string gxtLabel1, int p1, string gxtLabel2)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_UNLOCK(gxtLabel1, p1, gxtLabel2);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_UNLOCK<int>(gxtLabel1, p1, gxtLabel2);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_UNLOCK_TU(string gxtLabel1, int p1, string gxtLabel2, int p3)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_UNLOCK_TU(gxtLabel1, p1, gxtLabel2, p3);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_UNLOCK_TU<int>(gxtLabel1, p1, gxtLabel2, p3);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_UNLOCK_TU_WITH_COLOR()
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_UNLOCK_TU_WITH_COLOR(0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_UNLOCK_TU_WITH_COLOR<int>(0, 0, 0, 0, 0, 0);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_MPTICKER(bool blink, bool p1)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MPTICKER(blink, p1);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_MPTICKER<int>(blink, p1);
 	}
 	public static int END_TEXT_COMMAND_THEFEED_POST_CREW_RANKUP_WITH_LITERAL_FLAG(string p0, string p1, string p2, bool p3, bool p4)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_CREW_RANKUP_WITH_LITERAL_FLAG(p0, p1, p2, p3, p4);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_CREW_RANKUP_WITH_LITERAL_FLAG<int>(p0, p1, p2, p3, p4);
 	}
 	/// <summary>
 	/// 	This function can show pictures of every texture that can be requested by REQUEST_STREAMED_TEXTURE_DICT.<br/>
@@ -9692,7 +9692,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_VERSUS_TU(string txdName1, string textureName1, int count1, string txdName2, string textureName2, int count2, int hudColor1, int hudColor2)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_VERSUS_TU(txdName1, textureName1, count1, txdName2, textureName2, count2, hudColor1, hudColor2);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_VERSUS_TU<int>(txdName1, textureName1, count1, txdName2, textureName2, count2, hudColor1, hudColor2);
 	}
 	/// <summary>
 	/// 	returns a notification handle, prints out a notification like below:<br/>
@@ -9705,7 +9705,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_REPLAY(int type, int image, string text)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_REPLAY(type, image, text);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_REPLAY<int>(type, image, text);
 	}
 	/// <summary>
 	/// 	returns a notification handle, prints out a notification like below:<br/>
@@ -9726,7 +9726,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_THEFEED_POST_REPLAY_INPUT(int type, string button, string text)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_REPLAY_INPUT(type, button, text);
+		return NativeFunction.Natives.END_TEXT_COMMAND_THEFEED_POST_REPLAY_INPUT<int>(type, button, text);
 	}
 	/// <summary>
 	/// 	void ShowSubtitle(const char *text)<br/>
@@ -9769,7 +9769,7 @@ public static class Natives
 	}
 	public static bool END_TEXT_COMMAND_IS_MESSAGE_DISPLAYED()
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_IS_MESSAGE_DISPLAYED();
+		return NativeFunction.Natives.END_TEXT_COMMAND_IS_MESSAGE_DISPLAYED<bool>();
 	}
 	/// <summary>
 	/// 	The following were found in the decompiled script files:<br/>
@@ -9799,7 +9799,7 @@ public static class Natives
 	}
 	public static float END_TEXT_COMMAND_GET_SCREEN_WIDTH_OF_DISPLAY_TEXT(bool p0)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_GET_SCREEN_WIDTH_OF_DISPLAY_TEXT(p0);
+		return NativeFunction.Natives.END_TEXT_COMMAND_GET_SCREEN_WIDTH_OF_DISPLAY_TEXT<float>(p0);
 	}
 	/// <summary>
 	/// 	int GetLineCount(char *text, float x, float y)<br/>
@@ -9819,7 +9819,7 @@ public static class Natives
 	/// </summary>
 	public static int END_TEXT_COMMAND_GET_NUMBER_OF_LINES_FOR_STRING(float x, float y)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_GET_NUMBER_OF_LINES_FOR_STRING(x, y);
+		return NativeFunction.Natives.END_TEXT_COMMAND_GET_NUMBER_OF_LINES_FOR_STRING<int>(x, y);
 	}
 	/// <summary>
 	/// 	Used to be known as _SET_TEXT_COMPONENT_FORMAT
@@ -9865,7 +9865,7 @@ public static class Natives
 	}
 	public static bool END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(int p0)
 	{
-		return NativeFunction.Natives.END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(p0);
+		return NativeFunction.Natives.END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED<bool>(p0);
 	}
 	/// <summary>
 	/// 	Starts a text command to change the name of a blip displayed in the pause menu.<br/>
@@ -9983,7 +9983,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME(string text, int position, int length)
 	{
-		return NativeFunction.Natives.GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME(text, position, length);
+		return NativeFunction.Natives.GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME<string>(text, position, length);
 	}
 	/// <summary>
 	/// 	Returns a substring of a specified length starting at a specified position. The result is guaranteed not to exceed the specified max length.<br/>
@@ -10010,7 +10010,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_WITH_BYTE_LIMIT(string text, int position, int length, int maxLength)
 	{
-		return NativeFunction.Natives.GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_WITH_BYTE_LIMIT(text, position, length, maxLength);
+		return NativeFunction.Natives.GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_WITH_BYTE_LIMIT<string>(text, position, length, maxLength);
 	}
 	/// <summary>
 	/// 	Returns a substring that is between two specified positions. The length of the string will be calculated using (endPosition - startPosition).<br/>
@@ -10023,14 +10023,14 @@ public static class Natives
 	/// </summary>
 	public static string GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_BYTES(string text, int startPosition, int endPosition)
 	{
-		return NativeFunction.Natives.GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_BYTES(text, startPosition, endPosition);
+		return NativeFunction.Natives.GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_BYTES<string>(text, startPosition, endPosition);
 	}
 	/// <summary>
 	/// 	Gets a localized string literal from a label name. Can be used for output of e.g. VEHICLE::GET_LIVERY_NAME. To check if a GXT label can be localized with this, HUD::DOES_TEXT_LABEL_EXIST can be used.
 	/// </summary>
 	public static string GET_FILENAME_FOR_AUDIO_CONVERSATION(string labelName)
 	{
-		return NativeFunction.Natives.GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName);
+		return NativeFunction.Natives.GET_FILENAME_FOR_AUDIO_CONVERSATION<string>(labelName);
 	}
 	public static void CLEAR_PRINTS()
 	{
@@ -10057,7 +10057,7 @@ public static class Natives
 	}
 	public static bool DOES_TEXT_BLOCK_EXIST(string gxt)
 	{
-		return NativeFunction.Natives.DOES_TEXT_BLOCK_EXIST(gxt);
+		return NativeFunction.Natives.DOES_TEXT_BLOCK_EXIST<bool>(gxt);
 	}
 	/// <summary>
 	/// 	Request a gxt into the passed slot.
@@ -10072,7 +10072,7 @@ public static class Natives
 	}
 	public static bool HAS_ADDITIONAL_TEXT_LOADED(int slot)
 	{
-		return NativeFunction.Natives.HAS_ADDITIONAL_TEXT_LOADED(slot);
+		return NativeFunction.Natives.HAS_ADDITIONAL_TEXT_LOADED<bool>(slot);
 	}
 	public static void CLEAR_ADDITIONAL_TEXT(int p0, bool p1)
 	{
@@ -10080,47 +10080,47 @@ public static class Natives
 	}
 	public static bool IS_STREAMING_ADDITIONAL_TEXT(int p0)
 	{
-		return NativeFunction.Natives.IS_STREAMING_ADDITIONAL_TEXT(p0);
+		return NativeFunction.Natives.IS_STREAMING_ADDITIONAL_TEXT<bool>(p0);
 	}
 	/// <summary>
 	/// 	Checks if the specified gxt has loaded into the passed slot.
 	/// </summary>
 	public static bool HAS_THIS_ADDITIONAL_TEXT_LOADED(string gxt, int slot)
 	{
-		return NativeFunction.Natives.HAS_THIS_ADDITIONAL_TEXT_LOADED(gxt, slot);
+		return NativeFunction.Natives.HAS_THIS_ADDITIONAL_TEXT_LOADED<bool>(gxt, slot);
 	}
 	public static bool IS_MESSAGE_BEING_DISPLAYED()
 	{
-		return NativeFunction.Natives.IS_MESSAGE_BEING_DISPLAYED();
+		return NativeFunction.Natives.IS_MESSAGE_BEING_DISPLAYED<bool>();
 	}
 	/// <summary>
 	/// 	Checks if the passed gxt name exists in the game files.
 	/// </summary>
 	public static bool DOES_TEXT_LABEL_EXIST(string gxt)
 	{
-		return NativeFunction.Natives.DOES_TEXT_LABEL_EXIST(gxt);
+		return NativeFunction.Natives.DOES_TEXT_LABEL_EXIST<bool>(gxt);
 	}
 	public static string GET_FIRST_N_CHARACTERS_OF_LITERAL_STRING(string _string, int length)
 	{
-		return NativeFunction.Natives.GET_FIRST_N_CHARACTERS_OF_LITERAL_STRING(_string, length);
+		return NativeFunction.Natives.GET_FIRST_N_CHARACTERS_OF_LITERAL_STRING<string>(_string, length);
 	}
 	/// <summary>
 	/// 	Returns the string length of the string from the gxt string .
 	/// </summary>
 	public static int GET_LENGTH_OF_STRING_WITH_THIS_TEXT_LABEL(string gxt)
 	{
-		return NativeFunction.Natives.GET_LENGTH_OF_STRING_WITH_THIS_TEXT_LABEL(gxt);
+		return NativeFunction.Natives.GET_LENGTH_OF_STRING_WITH_THIS_TEXT_LABEL<int>(gxt);
 	}
 	/// <summary>
 	/// 	Returns the length of the string passed (much like strlen).
 	/// </summary>
 	public static int GET_LENGTH_OF_LITERAL_STRING(string _string)
 	{
-		return NativeFunction.Natives.GET_LENGTH_OF_LITERAL_STRING(_string);
+		return NativeFunction.Natives.GET_LENGTH_OF_LITERAL_STRING<int>(_string);
 	}
 	public static int GET_LENGTH_OF_LITERAL_STRING_IN_BYTES(string _string)
 	{
-		return NativeFunction.Natives.GET_LENGTH_OF_LITERAL_STRING_IN_BYTES(_string);
+		return NativeFunction.Natives.GET_LENGTH_OF_LITERAL_STRING_IN_BYTES<int>(_string);
 	}
 	/// <summary>
 	/// 	This functions converts the hash of a street name into a readable string.<br/>
@@ -10129,19 +10129,19 @@ public static class Natives
 	/// </summary>
 	public static string GET_STREET_NAME_FROM_HASH_KEY(ulong hash)
 	{
-		return NativeFunction.Natives.GET_STREET_NAME_FROM_HASH_KEY(hash);
+		return NativeFunction.Natives.GET_STREET_NAME_FROM_HASH_KEY<string>(hash);
 	}
 	public static bool IS_HUD_PREFERENCE_SWITCHED_ON()
 	{
-		return NativeFunction.Natives.IS_HUD_PREFERENCE_SWITCHED_ON();
+		return NativeFunction.Natives.IS_HUD_PREFERENCE_SWITCHED_ON<bool>();
 	}
 	public static bool IS_RADAR_PREFERENCE_SWITCHED_ON()
 	{
-		return NativeFunction.Natives.IS_RADAR_PREFERENCE_SWITCHED_ON();
+		return NativeFunction.Natives.IS_RADAR_PREFERENCE_SWITCHED_ON<bool>();
 	}
 	public static bool IS_SUBTITLE_PREFERENCE_SWITCHED_ON()
 	{
-		return NativeFunction.Natives.IS_SUBTITLE_PREFERENCE_SWITCHED_ON();
+		return NativeFunction.Natives.IS_SUBTITLE_PREFERENCE_SWITCHED_ON<bool>();
 	}
 	/// <summary>
 	/// 	If Hud should be displayed
@@ -10180,19 +10180,19 @@ public static class Natives
 	/// </summary>
 	public static bool GET_FAKE_SPECTATOR_MODE()
 	{
-		return NativeFunction.Natives.GET_FAKE_SPECTATOR_MODE();
+		return NativeFunction.Natives.GET_FAKE_SPECTATOR_MODE<bool>();
 	}
 	public static bool IS_HUD_HIDDEN()
 	{
-		return NativeFunction.Natives.IS_HUD_HIDDEN();
+		return NativeFunction.Natives.IS_HUD_HIDDEN<bool>();
 	}
 	public static bool IS_RADAR_HIDDEN()
 	{
-		return NativeFunction.Natives.IS_RADAR_HIDDEN();
+		return NativeFunction.Natives.IS_RADAR_HIDDEN<bool>();
 	}
 	public static bool IS_MINIMAP_RENDERING()
 	{
-		return NativeFunction.Natives.IS_MINIMAP_RENDERING();
+		return NativeFunction.Natives.IS_MINIMAP_RENDERING<bool>();
 	}
 	public static void USE_VEHICLE_TARGETING_RETICULE()
 	{
@@ -10336,7 +10336,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_RENDERED_CHARACTER_HEIGHT(float size, int font)
 	{
-		return NativeFunction.Natives.GET_RENDERED_CHARACTER_HEIGHT(size, font);
+		return NativeFunction.Natives.GET_RENDERED_CHARACTER_HEIGHT<float>(size, font);
 	}
 	/// <summary>
 	/// 	Size range : 0F to 1.0F<br/>
@@ -10438,19 +10438,19 @@ public static class Natives
 	/// </summary>
 	public static int GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID()
 	{
-		return NativeFunction.Natives.GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID();
+		return NativeFunction.Natives.GET_DEFAULT_SCRIPT_RENDERTARGET_RENDER_ID<int>();
 	}
 	public static bool REGISTER_NAMED_RENDERTARGET(string name, bool p1)
 	{
-		return NativeFunction.Natives.REGISTER_NAMED_RENDERTARGET(name, p1);
+		return NativeFunction.Natives.REGISTER_NAMED_RENDERTARGET<bool>(name, p1);
 	}
 	public static bool IS_NAMED_RENDERTARGET_REGISTERED(string name)
 	{
-		return NativeFunction.Natives.IS_NAMED_RENDERTARGET_REGISTERED(name);
+		return NativeFunction.Natives.IS_NAMED_RENDERTARGET_REGISTERED<bool>(name);
 	}
 	public static bool RELEASE_NAMED_RENDERTARGET(string name)
 	{
-		return NativeFunction.Natives.RELEASE_NAMED_RENDERTARGET(name);
+		return NativeFunction.Natives.RELEASE_NAMED_RENDERTARGET<bool>(name);
 	}
 	public static void LINK_NAMED_RENDERTARGET(ulong modelHash)
 	{
@@ -10458,11 +10458,11 @@ public static class Natives
 	}
 	public static int GET_NAMED_RENDERTARGET_RENDER_ID(string name)
 	{
-		return NativeFunction.Natives.GET_NAMED_RENDERTARGET_RENDER_ID(name);
+		return NativeFunction.Natives.GET_NAMED_RENDERTARGET_RENDER_ID<int>(name);
 	}
 	public static bool IS_NAMED_RENDERTARGET_LINKED(ulong modelHash)
 	{
-		return NativeFunction.Natives.IS_NAMED_RENDERTARGET_LINKED(modelHash);
+		return NativeFunction.Natives.IS_NAMED_RENDERTARGET_LINKED<bool>(modelHash);
 	}
 	public static void CLEAR_HELP(bool toggle)
 	{
@@ -10470,19 +10470,19 @@ public static class Natives
 	}
 	public static bool IS_HELP_MESSAGE_ON_SCREEN()
 	{
-		return NativeFunction.Natives.IS_HELP_MESSAGE_ON_SCREEN();
+		return NativeFunction.Natives.IS_HELP_MESSAGE_ON_SCREEN<bool>();
 	}
 	public static bool HAS_SCRIPT_HIDDEN_HELP_THIS_FRAME()
 	{
-		return NativeFunction.Natives.HAS_SCRIPT_HIDDEN_HELP_THIS_FRAME();
+		return NativeFunction.Natives.HAS_SCRIPT_HIDDEN_HELP_THIS_FRAME<bool>();
 	}
 	public static bool IS_HELP_MESSAGE_BEING_DISPLAYED()
 	{
-		return NativeFunction.Natives.IS_HELP_MESSAGE_BEING_DISPLAYED();
+		return NativeFunction.Natives.IS_HELP_MESSAGE_BEING_DISPLAYED<bool>();
 	}
 	public static bool IS_HELP_MESSAGE_FADING_OUT()
 	{
-		return NativeFunction.Natives.IS_HELP_MESSAGE_FADING_OUT();
+		return NativeFunction.Natives.IS_HELP_MESSAGE_FADING_OUT<bool>();
 	}
 	public static void SET_HELP_MESSAGE_STYLE(int style, int hudColor, int alpha, int p3, int p4)
 	{
@@ -10490,35 +10490,35 @@ public static class Natives
 	}
 	public static int GET_STANDARD_BLIP_ENUM_ID()
 	{
-		return NativeFunction.Natives.GET_STANDARD_BLIP_ENUM_ID();
+		return NativeFunction.Natives.GET_STANDARD_BLIP_ENUM_ID<int>();
 	}
 	public static int GET_WAYPOINT_BLIP_ENUM_ID()
 	{
-		return NativeFunction.Natives.GET_WAYPOINT_BLIP_ENUM_ID();
+		return NativeFunction.Natives.GET_WAYPOINT_BLIP_ENUM_ID<int>();
 	}
 	public static int GET_NUMBER_OF_ACTIVE_BLIPS()
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_ACTIVE_BLIPS();
+		return NativeFunction.Natives.GET_NUMBER_OF_ACTIVE_BLIPS<int>();
 	}
 	public static Blip GET_NEXT_BLIP_INFO_ID(int blipSprite)
 	{
-		return NativeFunction.Natives.GET_NEXT_BLIP_INFO_ID(blipSprite);
+		return NativeFunction.Natives.GET_NEXT_BLIP_INFO_ID<Blip>(blipSprite);
 	}
 	public static Blip GET_FIRST_BLIP_INFO_ID(int blipSprite)
 	{
-		return NativeFunction.Natives.GET_FIRST_BLIP_INFO_ID(blipSprite);
+		return NativeFunction.Natives.GET_FIRST_BLIP_INFO_ID<Blip>(blipSprite);
 	}
 	public static Blip GET_CLOSEST_BLIP_INFO_ID(int blipSprite)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_BLIP_INFO_ID(blipSprite);
+		return NativeFunction.Natives.GET_CLOSEST_BLIP_INFO_ID<Blip>(blipSprite);
 	}
 	public static Vector3 GET_BLIP_INFO_ID_COORD(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_INFO_ID_COORD(blip);
+		return NativeFunction.Natives.GET_BLIP_INFO_ID_COORD<Vector3>(blip);
 	}
 	public static int GET_BLIP_INFO_ID_DISPLAY(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_INFO_ID_DISPLAY(blip);
+		return NativeFunction.Natives.GET_BLIP_INFO_ID_DISPLAY<int>(blip);
 	}
 	/// <summary>
 	/// 	Returns a value based on what the blip is attached to<br/>
@@ -10532,29 +10532,29 @@ public static class Natives
 	/// </summary>
 	public static int GET_BLIP_INFO_ID_TYPE(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_INFO_ID_TYPE(blip);
+		return NativeFunction.Natives.GET_BLIP_INFO_ID_TYPE<int>(blip);
 	}
 	public static Entity GET_BLIP_INFO_ID_ENTITY_INDEX(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_INFO_ID_ENTITY_INDEX(blip);
+		return NativeFunction.Natives.GET_BLIP_INFO_ID_ENTITY_INDEX<Entity>(blip);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static uint GET_BLIP_INFO_ID_PICKUP_INDEX(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_INFO_ID_PICKUP_INDEX(blip);
+		return NativeFunction.Natives.GET_BLIP_INFO_ID_PICKUP_INDEX<uint>(blip);
 	}
 	/// <summary>
 	/// 	Returns the Blip handle of given Entity.
 	/// </summary>
 	public static Blip GET_BLIP_FROM_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_BLIP_FROM_ENTITY(entity);
+		return NativeFunction.Natives.GET_BLIP_FROM_ENTITY<Blip>(entity);
 	}
 	public static Blip ADD_BLIP_FOR_RADIUS(float posX, float posY, float posZ, float radius)
 	{
-		return NativeFunction.Natives.ADD_BLIP_FOR_RADIUS(posX, posY, posZ, radius);
+		return NativeFunction.Natives.ADD_BLIP_FOR_RADIUS<Blip>(posX, posY, posZ, radius);
 	}
 	/// <summary>
 	/// 	Adds a rectangular blip for the specified coordinates/area.<br/>
@@ -10571,7 +10571,7 @@ public static class Natives
 	/// </summary>
 	public static Blip ADD_BLIP_FOR_AREA(float x, float y, float z, float width, float height)
 	{
-		return NativeFunction.Natives.ADD_BLIP_FOR_AREA(x, y, z, width, height);
+		return NativeFunction.Natives.ADD_BLIP_FOR_AREA<Blip>(x, y, z, width, height);
 	}
 	/// <summary>
 	/// 	Returns red ( default ) blip attached to entity.<br/>
@@ -10583,18 +10583,18 @@ public static class Natives
 	/// </summary>
 	public static Blip ADD_BLIP_FOR_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.ADD_BLIP_FOR_ENTITY(entity);
+		return NativeFunction.Natives.ADD_BLIP_FOR_ENTITY<Blip>(entity);
 	}
 	public static Blip ADD_BLIP_FOR_PICKUP(uint pickup)
 	{
-		return NativeFunction.Natives.ADD_BLIP_FOR_PICKUP(pickup);
+		return NativeFunction.Natives.ADD_BLIP_FOR_PICKUP<Blip>(pickup);
 	}
 	/// <summary>
 	/// 	Creates an orange ( default ) Blip-object. Returns a Blip-object which can then be modified.
 	/// </summary>
 	public static Blip ADD_BLIP_FOR_COORD(float x, float y, float z)
 	{
-		return NativeFunction.Natives.ADD_BLIP_FOR_COORD(x, y, z);
+		return NativeFunction.Natives.ADD_BLIP_FOR_COORD<Blip>(x, y, z);
 	}
 	public static void TRIGGER_SONAR_BLIP(float posX, float posY, float posZ, float radius, int p4)
 	{
@@ -10610,7 +10610,7 @@ public static class Natives
 	}
 	public static Vector3 GET_BLIP_COORDS(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_COORDS(blip);
+		return NativeFunction.Natives.GET_BLIP_COORDS<Vector3>(blip);
 	}
 	/// <summary>
 	/// 	Sets the displayed sprite for a specific blip..<br/>
@@ -10631,7 +10631,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_BLIP_SPRITE(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_SPRITE(blip);
+		return NativeFunction.Natives.GET_BLIP_SPRITE<int>(blip);
 	}
 	public static void SET_COP_BLIP_SPRITE(int p0, float p1)
 	{
@@ -10668,7 +10668,7 @@ public static class Natives
 	}
 	public static int GET_BLIP_ALPHA(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_ALPHA(blip);
+		return NativeFunction.Natives.GET_BLIP_ALPHA<int>(blip);
 	}
 	public static void SET_BLIP_FADE(Blip blip, int opacity, int duration)
 	{
@@ -10679,7 +10679,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_BLIP_FADE_DIRECTION(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_FADE_DIRECTION(blip);
+		return NativeFunction.Natives.GET_BLIP_FADE_DIRECTION<int>(blip);
 	}
 	/// <summary>
 	/// 	After some testing, looks like you need to use CEIL() on the rotation (vehicle/ped heading) before using it there.
@@ -10697,7 +10697,7 @@ public static class Natives
 	}
 	public static int GET_BLIP_ROTATION(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_ROTATION(blip);
+		return NativeFunction.Natives.GET_BLIP_ROTATION<int>(blip);
 	}
 	/// <summary>
 	/// 	Adds up after viewing multiple R* scripts. I believe that the duration is in miliseconds.
@@ -10726,23 +10726,23 @@ public static class Natives
 	}
 	public static int GET_BLIP_COLOUR(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_COLOUR(blip);
+		return NativeFunction.Natives.GET_BLIP_COLOUR<int>(blip);
 	}
 	public static int GET_BLIP_HUD_COLOUR(Blip blip)
 	{
-		return NativeFunction.Natives.GET_BLIP_HUD_COLOUR(blip);
+		return NativeFunction.Natives.GET_BLIP_HUD_COLOUR<int>(blip);
 	}
 	public static bool IS_BLIP_SHORT_RANGE(Blip blip)
 	{
-		return NativeFunction.Natives.IS_BLIP_SHORT_RANGE(blip);
+		return NativeFunction.Natives.IS_BLIP_SHORT_RANGE<bool>(blip);
 	}
 	public static bool IS_BLIP_ON_MINIMAP(Blip blip)
 	{
-		return NativeFunction.Natives.IS_BLIP_ON_MINIMAP(blip);
+		return NativeFunction.Natives.IS_BLIP_ON_MINIMAP<bool>(blip);
 	}
 	public static bool DOES_BLIP_HAVE_GPS_ROUTE(Blip blip)
 	{
-		return NativeFunction.Natives.DOES_BLIP_HAVE_GPS_ROUTE(blip);
+		return NativeFunction.Natives.DOES_BLIP_HAVE_GPS_ROUTE<bool>(blip);
 	}
 	public static void SET_BLIP_HIDDEN_ON_LEGEND(Blip blip, bool toggle)
 	{
@@ -10758,15 +10758,15 @@ public static class Natives
 	}
 	public static bool IS_MISSION_CREATOR_BLIP(Blip blip)
 	{
-		return NativeFunction.Natives.IS_MISSION_CREATOR_BLIP(blip);
+		return NativeFunction.Natives.IS_MISSION_CREATOR_BLIP<bool>(blip);
 	}
 	public static Blip GET_NEW_SELECTED_MISSION_CREATOR_BLIP()
 	{
-		return NativeFunction.Natives.GET_NEW_SELECTED_MISSION_CREATOR_BLIP();
+		return NativeFunction.Natives.GET_NEW_SELECTED_MISSION_CREATOR_BLIP<Blip>();
 	}
 	public static bool IS_HOVERING_OVER_MISSION_CREATOR_BLIP()
 	{
-		return NativeFunction.Natives.IS_HOVERING_OVER_MISSION_CREATOR_BLIP();
+		return NativeFunction.Natives.IS_HOVERING_OVER_MISSION_CREATOR_BLIP<bool>();
 	}
 	public static void SHOW_START_MISSION_INSTRUCTIONAL_BUTTON(bool toggle)
 	{
@@ -10794,7 +10794,7 @@ public static class Natives
 	}
 	public static bool IS_BLIP_FLASHING(Blip blip)
 	{
-		return NativeFunction.Natives.IS_BLIP_FLASHING(blip);
+		return NativeFunction.Natives.IS_BLIP_FLASHING<bool>(blip);
 	}
 	/// <summary>
 	/// 	Sets whether or not the specified blip should only be displayed when nearby, or on the minimap.
@@ -11002,7 +11002,7 @@ public static class Natives
 	}
 	public static bool DOES_BLIP_EXIST(Blip blip)
 	{
-		return NativeFunction.Natives.DOES_BLIP_EXIST(blip);
+		return NativeFunction.Natives.DOES_BLIP_EXIST<bool>(blip);
 	}
 	/// <summary>
 	/// 	This native removes the current waypoint from the map.<br/>
@@ -11028,7 +11028,7 @@ public static class Natives
 	}
 	public static bool IS_WAYPOINT_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_WAYPOINT_ACTIVE();
+		return NativeFunction.Natives.IS_WAYPOINT_ACTIVE<bool>();
 	}
 	public static void SET_NEW_WAYPOINT(float x, float y)
 	{
@@ -11077,7 +11077,7 @@ public static class Natives
 	/// </summary>
 	public static bool SET_MINIMAP_COMPONENT(int componentId, bool toggle, int overrideColor)
 	{
-		return NativeFunction.Natives.SET_MINIMAP_COMPONENT(componentId, toggle, overrideColor);
+		return NativeFunction.Natives.SET_MINIMAP_COMPONENT<bool>(componentId, toggle, overrideColor);
 	}
 	public static void SET_MINIMAP_SONAR_SWEEP(bool toggle)
 	{
@@ -11089,7 +11089,7 @@ public static class Natives
 	}
 	public static Blip GET_MAIN_PLAYER_BLIP_ID()
 	{
-		return NativeFunction.Natives.GET_MAIN_PLAYER_BLIP_ID();
+		return NativeFunction.Natives.GET_MAIN_PLAYER_BLIP_ID<Blip>();
 	}
 	public static void SET_PM_WARNINGSCREEN_ACTIVE(bool p0)
 	{
@@ -11137,7 +11137,7 @@ public static class Natives
 	}
 	public static bool IS_PAUSEMAP_IN_INTERIOR_MODE()
 	{
-		return NativeFunction.Natives.IS_PAUSEMAP_IN_INTERIOR_MODE();
+		return NativeFunction.Natives.IS_PAUSEMAP_IN_INTERIOR_MODE<bool>();
 	}
 	public static void HIDE_MINIMAP_EXTERIOR_MAP_THIS_FRAME()
 	{
@@ -11265,7 +11265,7 @@ public static class Natives
 	}
 	public static bool IS_IME_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.IS_IME_IN_PROGRESS();
+		return NativeFunction.Natives.IS_IME_IN_PROGRESS<bool>();
 	}
 	/// <summary>
 	/// 	The messages are localized strings.<br/>
@@ -11313,7 +11313,7 @@ public static class Natives
 	/// </summary>
 	public static ulong HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED()
 	{
-		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED();
+		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED<ulong>();
 	}
 	/// <summary>
 	/// 	Set the active slotIndex in the wheel weapon to the slot associated with the provided Weapon hash
@@ -11327,7 +11327,7 @@ public static class Natives
 	/// </summary>
 	public static ulong HUD_GET_WEAPON_WHEEL_TOP_SLOT(int weaponTypeIndex)
 	{
-		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_TOP_SLOT(weaponTypeIndex);
+		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_TOP_SLOT<ulong>(weaponTypeIndex);
 	}
 	/// <summary>
 	/// 	Sets a global that disables many weapon input tasks (shooting, aiming, etc.). Does not work with vehicle weapons, only used in selector.ysc
@@ -11497,11 +11497,11 @@ public static class Natives
 	}
 	public static float GET_MINIMAP_FOW_DISCOVERY_RATIO()
 	{
-		return NativeFunction.Natives.GET_MINIMAP_FOW_DISCOVERY_RATIO();
+		return NativeFunction.Natives.GET_MINIMAP_FOW_DISCOVERY_RATIO<float>();
 	}
 	public static bool GET_MINIMAP_FOW_COORDINATE_IS_REVEALED(float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_MINIMAP_FOW_COORDINATE_IS_REVEALED(x, y, z);
+		return NativeFunction.Natives.GET_MINIMAP_FOW_COORDINATE_IS_REVEALED<bool>(x, y, z);
 	}
 	public static void SET_MINIMAP_FOW_DO_NOT_UPDATE(bool p0)
 	{
@@ -11609,11 +11609,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_HUD_COMPONENT_ACTIVE(int id)
 	{
-		return NativeFunction.Natives.IS_HUD_COMPONENT_ACTIVE(id);
+		return NativeFunction.Natives.IS_HUD_COMPONENT_ACTIVE<bool>(id);
 	}
 	public static bool IS_SCRIPTED_HUD_COMPONENT_ACTIVE(int id)
 	{
-		return NativeFunction.Natives.IS_SCRIPTED_HUD_COMPONENT_ACTIVE(id);
+		return NativeFunction.Natives.IS_SCRIPTED_HUD_COMPONENT_ACTIVE<bool>(id);
 	}
 	public static void HIDE_SCRIPTED_HUD_COMPONENT_THIS_FRAME(int id)
 	{
@@ -11625,7 +11625,7 @@ public static class Natives
 	}
 	public static bool IS_SCRIPTED_HUD_COMPONENT_HIDDEN_THIS_FRAME(int id)
 	{
-		return NativeFunction.Natives.IS_SCRIPTED_HUD_COMPONENT_HIDDEN_THIS_FRAME(id);
+		return NativeFunction.Natives.IS_SCRIPTED_HUD_COMPONENT_HIDDEN_THIS_FRAME<bool>(id);
 	}
 	/// <summary>
 	/// 	This function hides various HUD (Heads-up Display) components.<br/>
@@ -11712,7 +11712,7 @@ public static class Natives
 	}
 	public static Vector3 GET_HUD_COMPONENT_POSITION(int id)
 	{
-		return NativeFunction.Natives.GET_HUD_COMPONENT_POSITION(id);
+		return NativeFunction.Natives.GET_HUD_COMPONENT_POSITION<Vector3>(id);
 	}
 	/// <summary>
 	/// 	This native does absolutely nothing, just a nullsub
@@ -11726,7 +11726,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_HUD_SCREEN_POSITION_FROM_WORLD_POSITION(float worldX, float worldY, float worldZ, out float screenX, out float screenY)
 	{
-		return NativeFunction.Natives.GET_HUD_SCREEN_POSITION_FROM_WORLD_POSITION(worldX, worldY, worldZ, out screenX, out screenY);
+		return NativeFunction.Natives.GET_HUD_SCREEN_POSITION_FROM_WORLD_POSITION<int>(worldX, worldY, worldZ, out screenX, out screenY);
 	}
 	/// <summary>
 	/// 	Shows a menu for reporting UGC content.
@@ -11741,11 +11741,11 @@ public static class Natives
 	}
 	public static bool IS_REPORTUGC_MENU_OPEN()
 	{
-		return NativeFunction.Natives.IS_REPORTUGC_MENU_OPEN();
+		return NativeFunction.Natives.IS_REPORTUGC_MENU_OPEN<bool>();
 	}
 	public static bool IS_FLOATING_HELP_TEXT_ON_SCREEN(int hudIndex)
 	{
-		return NativeFunction.Natives.IS_FLOATING_HELP_TEXT_ON_SCREEN(hudIndex);
+		return NativeFunction.Natives.IS_FLOATING_HELP_TEXT_ON_SCREEN<bool>(hudIndex);
 	}
 	public static void SET_FLOATING_HELP_TEXT_SCREEN_POSITION(int hudIndex, float x, float y)
 	{
@@ -11776,14 +11776,14 @@ public static class Natives
 	}
 	public static bool IS_MP_GAMER_TAG_MOVIE_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_MP_GAMER_TAG_MOVIE_ACTIVE();
+		return NativeFunction.Natives.IS_MP_GAMER_TAG_MOVIE_ACTIVE<bool>();
 	}
 	/// <summary>
 	/// 	clanFlag: takes a number 0-5
 	/// </summary>
 	public static int CREATE_FAKE_MP_GAMER_TAG(Ped ped, string username, bool pointedClanTag, bool isRockstarClan, string clanTag, int clanFlag)
 	{
-		return NativeFunction.Natives.CREATE_FAKE_MP_GAMER_TAG(ped, username, pointedClanTag, isRockstarClan, clanTag, clanFlag);
+		return NativeFunction.Natives.CREATE_FAKE_MP_GAMER_TAG<int>(ped, username, pointedClanTag, isRockstarClan, clanTag, clanFlag);
 	}
 	public static void REMOVE_MP_GAMER_TAG(int gamerTagId)
 	{
@@ -11791,11 +11791,11 @@ public static class Natives
 	}
 	public static bool IS_MP_GAMER_TAG_ACTIVE(int gamerTagId)
 	{
-		return NativeFunction.Natives.IS_MP_GAMER_TAG_ACTIVE(gamerTagId);
+		return NativeFunction.Natives.IS_MP_GAMER_TAG_ACTIVE<bool>(gamerTagId);
 	}
 	public static bool IS_MP_GAMER_TAG_FREE(int gamerTagId)
 	{
-		return NativeFunction.Natives.IS_MP_GAMER_TAG_FREE(gamerTagId);
+		return NativeFunction.Natives.IS_MP_GAMER_TAG_FREE<bool>(gamerTagId);
 	}
 	/// <summary>
 	/// 	enum eMpGamerTagComponent<br/>
@@ -11900,7 +11900,7 @@ public static class Natives
 	}
 	public static bool IS_UPDATING_MP_GAMER_TAG_NAME_AND_CREW_DETAILS(int gamerTagId)
 	{
-		return NativeFunction.Natives.IS_UPDATING_MP_GAMER_TAG_NAME_AND_CREW_DETAILS(gamerTagId);
+		return NativeFunction.Natives.IS_UPDATING_MP_GAMER_TAG_NAME_AND_CREW_DETAILS<bool>(gamerTagId);
 	}
 	public static void SET_MP_GAMER_TAG_BIG_TEXT(int gamerTagId, string _string)
 	{
@@ -11908,11 +11908,11 @@ public static class Natives
 	}
 	public static int GET_CURRENT_WEBPAGE_ID()
 	{
-		return NativeFunction.Natives.GET_CURRENT_WEBPAGE_ID();
+		return NativeFunction.Natives.GET_CURRENT_WEBPAGE_ID<int>();
 	}
 	public static int GET_CURRENT_WEBSITE_ID()
 	{
-		return NativeFunction.Natives.GET_CURRENT_WEBSITE_ID();
+		return NativeFunction.Natives.GET_CURRENT_WEBSITE_ID<int>();
 	}
 	/// <summary>
 	/// 	Returns the ActionScript flagValue.<br/>
@@ -11927,7 +11927,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_GLOBAL_ACTIONSCRIPT_FLAG(int flagIndex)
 	{
-		return NativeFunction.Natives.GET_GLOBAL_ACTIONSCRIPT_FLAG(flagIndex);
+		return NativeFunction.Natives.GET_GLOBAL_ACTIONSCRIPT_FLAG<int>(flagIndex);
 	}
 	public static void RESET_GLOBAL_ACTIONSCRIPT_FLAG(int flagIndex)
 	{
@@ -11935,7 +11935,7 @@ public static class Natives
 	}
 	public static bool IS_WARNING_MESSAGE_READY_FOR_CONTROL()
 	{
-		return NativeFunction.Natives.IS_WARNING_MESSAGE_READY_FOR_CONTROL();
+		return NativeFunction.Natives.IS_WARNING_MESSAGE_READY_FOR_CONTROL<bool>();
 	}
 	/// <summary>
 	/// 	You can only use text entries. No custom text.<br/>
@@ -12049,7 +12049,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_WARNING_SCREEN_MESSAGE_HASH()
 	{
-		return NativeFunction.Natives.GET_WARNING_SCREEN_MESSAGE_HASH();
+		return NativeFunction.Natives.GET_WARNING_SCREEN_MESSAGE_HASH<ulong>();
 	}
 	/// <summary>
 	/// 	Some sort of list displayed in a warning message. Yet unknown how to prevent repeating.<br/>
@@ -12058,11 +12058,11 @@ public static class Natives
 	/// </summary>
 	public static bool SET_WARNING_MESSAGE_OPTION_ITEMS(int index, string name, int cash, int rp, int lvl, int colour)
 	{
-		return NativeFunction.Natives.SET_WARNING_MESSAGE_OPTION_ITEMS(index, name, cash, rp, lvl, colour);
+		return NativeFunction.Natives.SET_WARNING_MESSAGE_OPTION_ITEMS<bool>(index, name, cash, rp, lvl, colour);
 	}
 	public static bool SET_WARNING_MESSAGE_OPTION_HIGHLIGHT()
 	{
-		return NativeFunction.Natives.SET_WARNING_MESSAGE_OPTION_HIGHLIGHT(0);
+		return NativeFunction.Natives.SET_WARNING_MESSAGE_OPTION_HIGHLIGHT<bool>(0);
 	}
 	public static void REMOVE_WARNING_MESSAGE_OPTION_ITEMS()
 	{
@@ -12070,7 +12070,7 @@ public static class Natives
 	}
 	public static bool IS_WARNING_MESSAGE_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_WARNING_MESSAGE_ACTIVE();
+		return NativeFunction.Natives.IS_WARNING_MESSAGE_ACTIVE<bool>();
 	}
 	public static void CLEAR_DYNAMIC_PAUSE_MENU_ERROR_MESSAGE()
 	{
@@ -12096,7 +12096,7 @@ public static class Natives
 	/// </summary>
 	public static int CUSTOM_MINIMAP_CREATE_BLIP(float x, float y, float z)
 	{
-		return NativeFunction.Natives.CUSTOM_MINIMAP_CREATE_BLIP(x, y, z);
+		return NativeFunction.Natives.CUSTOM_MINIMAP_CREATE_BLIP<int>(x, y, z);
 	}
 	public static void CUSTOM_MINIMAP_CLEAR_BLIPS()
 	{
@@ -12107,11 +12107,11 @@ public static class Natives
 	/// </summary>
 	public static bool FORCE_SONAR_BLIPS_THIS_FRAME()
 	{
-		return NativeFunction.Natives.FORCE_SONAR_BLIPS_THIS_FRAME();
+		return NativeFunction.Natives.FORCE_SONAR_BLIPS_THIS_FRAME<bool>();
 	}
 	public static Blip GET_NORTH_BLID_INDEX()
 	{
-		return NativeFunction.Natives.GET_NORTH_BLID_INDEX();
+		return NativeFunction.Natives.GET_NORTH_BLID_INDEX<Blip>();
 	}
 	/// <summary>
 	/// 	Toggles whether or not name labels are shown on the expanded minimap next to player blips, like in GTA:O.<br/>
@@ -12204,7 +12204,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_CURRENT_FRONTEND_MENU_VERSION()
 	{
-		return NativeFunction.Natives.GET_CURRENT_FRONTEND_MENU_VERSION();
+		return NativeFunction.Natives.GET_CURRENT_FRONTEND_MENU_VERSION<ulong>();
 	}
 	public static void SET_PAUSE_MENU_ACTIVE(bool toggle)
 	{
@@ -12231,11 +12231,11 @@ public static class Natives
 	}
 	public static bool IS_PAUSE_MENU_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_PAUSE_MENU_ACTIVE();
+		return NativeFunction.Natives.IS_PAUSE_MENU_ACTIVE<bool>();
 	}
 	public static bool IS_STORE_PENDING_NETWORK_SHUTDOWN_TO_OPEN()
 	{
-		return NativeFunction.Natives.IS_STORE_PENDING_NETWORK_SHUTDOWN_TO_OPEN();
+		return NativeFunction.Natives.IS_STORE_PENDING_NETWORK_SHUTDOWN_TO_OPEN<bool>();
 	}
 	/// <summary>
 	/// 	Returns:<br/>
@@ -12252,15 +12252,15 @@ public static class Natives
 	/// </summary>
 	public static int GET_PAUSE_MENU_STATE()
 	{
-		return NativeFunction.Natives.GET_PAUSE_MENU_STATE();
+		return NativeFunction.Natives.GET_PAUSE_MENU_STATE<int>();
 	}
 	public static Vector3 GET_PAUSE_MENU_POSITION()
 	{
-		return NativeFunction.Natives.GET_PAUSE_MENU_POSITION();
+		return NativeFunction.Natives.GET_PAUSE_MENU_POSITION<Vector3>();
 	}
 	public static bool IS_PAUSE_MENU_RESTARTING()
 	{
-		return NativeFunction.Natives.IS_PAUSE_MENU_RESTARTING();
+		return NativeFunction.Natives.IS_PAUSE_MENU_RESTARTING<bool>();
 	}
 	/// <summary>
 	/// 	Not present in retail version of the game, actual definiton seems to be<br/>
@@ -12299,27 +12299,27 @@ public static class Natives
 	}
 	public static bool PAUSE_MENU_IS_CONTEXT_ACTIVE(ulong contextHash)
 	{
-		return NativeFunction.Natives.PAUSE_MENU_IS_CONTEXT_ACTIVE(contextHash);
+		return NativeFunction.Natives.PAUSE_MENU_IS_CONTEXT_ACTIVE<bool>(contextHash);
 	}
 	public static bool PAUSE_MENU_IS_CONTEXT_MENU_ACTIVE()
 	{
-		return NativeFunction.Natives.PAUSE_MENU_IS_CONTEXT_MENU_ACTIVE();
+		return NativeFunction.Natives.PAUSE_MENU_IS_CONTEXT_MENU_ACTIVE<bool>();
 	}
 	public static int PAUSE_MENU_GET_HAIR_COLOUR_INDEX()
 	{
-		return NativeFunction.Natives.PAUSE_MENU_GET_HAIR_COLOUR_INDEX();
+		return NativeFunction.Natives.PAUSE_MENU_GET_HAIR_COLOUR_INDEX<int>();
 	}
 	public static int PAUSE_MENU_GET_MOUSE_HOVER_INDEX()
 	{
-		return NativeFunction.Natives.PAUSE_MENU_GET_MOUSE_HOVER_INDEX();
+		return NativeFunction.Natives.PAUSE_MENU_GET_MOUSE_HOVER_INDEX<int>();
 	}
 	public static int PAUSE_MENU_GET_MOUSE_HOVER_UNIQUE_ID()
 	{
-		return NativeFunction.Natives.PAUSE_MENU_GET_MOUSE_HOVER_UNIQUE_ID();
+		return NativeFunction.Natives.PAUSE_MENU_GET_MOUSE_HOVER_UNIQUE_ID<int>();
 	}
 	public static bool PAUSE_MENU_GET_MOUSE_CLICK_EVENT()
 	{
-		return NativeFunction.Natives.PAUSE_MENU_GET_MOUSE_CLICK_EVENT(0, 0, 0);
+		return NativeFunction.Natives.PAUSE_MENU_GET_MOUSE_CLICK_EVENT<bool>(0, 0, 0);
 	}
 	public static void PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(int p0)
 	{
@@ -12335,7 +12335,7 @@ public static class Natives
 	}
 	public static bool IS_FRONTEND_READY_FOR_CONTROL()
 	{
-		return NativeFunction.Natives.IS_FRONTEND_READY_FOR_CONTROL();
+		return NativeFunction.Natives.IS_FRONTEND_READY_FOR_CONTROL<bool>();
 	}
 	/// <summary>
 	/// 	Disables frontend (works in custom frontends, not sure about regular pause menu) navigation keys on keyboard. Not sure about controller. Does not disable mouse controls. No need to call this every tick.<br/>
@@ -12356,23 +12356,23 @@ public static class Natives
 	}
 	public static bool CODE_WANTS_SCRIPT_TO_TAKE_CONTROL()
 	{
-		return NativeFunction.Natives.CODE_WANTS_SCRIPT_TO_TAKE_CONTROL();
+		return NativeFunction.Natives.CODE_WANTS_SCRIPT_TO_TAKE_CONTROL<bool>();
 	}
 	public static int GET_SCREEN_CODE_WANTS_SCRIPT_TO_CONTROL()
 	{
-		return NativeFunction.Natives.GET_SCREEN_CODE_WANTS_SCRIPT_TO_CONTROL();
+		return NativeFunction.Natives.GET_SCREEN_CODE_WANTS_SCRIPT_TO_CONTROL<int>();
 	}
 	public static bool IS_NAVIGATING_MENU_CONTENT()
 	{
-		return NativeFunction.Natives.IS_NAVIGATING_MENU_CONTENT();
+		return NativeFunction.Natives.IS_NAVIGATING_MENU_CONTENT<bool>();
 	}
 	public static bool HAS_MENU_TRIGGER_EVENT_OCCURRED()
 	{
-		return NativeFunction.Natives.HAS_MENU_TRIGGER_EVENT_OCCURRED();
+		return NativeFunction.Natives.HAS_MENU_TRIGGER_EVENT_OCCURRED<bool>();
 	}
 	public static bool HAS_MENU_LAYOUT_CHANGED_EVENT_OCCURRED()
 	{
-		return NativeFunction.Natives.HAS_MENU_LAYOUT_CHANGED_EVENT_OCCURRED();
+		return NativeFunction.Natives.HAS_MENU_LAYOUT_CHANGED_EVENT_OCCURRED<bool>();
 	}
 	public static void SET_SAVEGAME_LIST_UNIQUE_ID()
 	{
@@ -12408,38 +12408,38 @@ public static class Natives
 	}
 	public static bool GET_PM_PLAYER_CREW_COLOR(out int r, out int g, out int b)
 	{
-		return NativeFunction.Natives.GET_PM_PLAYER_CREW_COLOR(out r, out g, out b);
+		return NativeFunction.Natives.GET_PM_PLAYER_CREW_COLOR<bool>(out r, out g, out b);
 	}
 	public static bool GET_MENU_PED_INT_STAT()
 	{
-		return NativeFunction.Natives.GET_MENU_PED_INT_STAT(0, 0);
+		return NativeFunction.Natives.GET_MENU_PED_INT_STAT<bool>(0, 0);
 	}
 	public static bool GET_CHARACTER_MENU_PED_INT_STAT()
 	{
-		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_INT_STAT(0, 0, 0);
+		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_INT_STAT<bool>(0, 0, 0);
 	}
 	public static bool GET_MENU_PED_MASKED_INT_STAT(ulong statHash, out int outValue, int mask, bool p3)
 	{
-		return NativeFunction.Natives.GET_MENU_PED_MASKED_INT_STAT(statHash, out outValue, mask, p3);
+		return NativeFunction.Natives.GET_MENU_PED_MASKED_INT_STAT<bool>(statHash, out outValue, mask, p3);
 	}
 	public static bool GET_CHARACTER_MENU_PED_MASKED_INT_STAT(ulong statHash, int p2, int mask, bool p4)
 	{
-		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_MASKED_INT_STAT(statHash, 0, p2, mask, p4);
+		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_MASKED_INT_STAT<bool>(statHash, 0, p2, mask, p4);
 	}
 	public static bool GET_MENU_PED_FLOAT_STAT(ulong statHash, out float outValue)
 	{
-		return NativeFunction.Natives.GET_MENU_PED_FLOAT_STAT(statHash, out outValue);
+		return NativeFunction.Natives.GET_MENU_PED_FLOAT_STAT<bool>(statHash, out outValue);
 	}
 	public static bool GET_CHARACTER_MENU_PED_FLOAT_STAT(float statHash, out float outValue, bool p2)
 	{
-		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_FLOAT_STAT(statHash, out outValue, p2);
+		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_FLOAT_STAT<bool>(statHash, out outValue, p2);
 	}
 	/// <summary>
 	/// 	p0 was always 0xAE2602A3.
 	/// </summary>
-	public static bool GET_MENU_PED_BOOL_STAT(ulong statHash, bool outValue)
+	public static bool GET_MENU_PED_BOOL_STAT(ulong statHash, out bool outValue)
 	{
-		return NativeFunction.Natives.GET_MENU_PED_BOOL_STAT(statHash, outValue);
+		return NativeFunction.Natives.GET_MENU_PED_BOOL_STAT<bool>(statHash, out outValue);
 	}
 	public static void CLEAR_PED_IN_PAUSE_MENU()
 	{
@@ -12483,14 +12483,14 @@ public static class Natives
 	}
 	public static bool ARE_ONLINE_POLICIES_UP_TO_DATE()
 	{
-		return NativeFunction.Natives.ARE_ONLINE_POLICIES_UP_TO_DATE();
+		return NativeFunction.Natives.ARE_ONLINE_POLICIES_UP_TO_DATE<bool>();
 	}
 	/// <summary>
 	/// 	Returns the same as IS_SOCIAL_CLUB_ACTIVE
 	/// </summary>
 	public static bool IS_ONLINE_POLICIES_MENU_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_ONLINE_POLICIES_MENU_ACTIVE();
+		return NativeFunction.Natives.IS_ONLINE_POLICIES_MENU_ACTIVE<bool>();
 	}
 	/// <summary>
 	/// 	Uses the `SOCIAL_CLUB2` scaleform.<br/>
@@ -12516,7 +12516,7 @@ public static class Natives
 	}
 	public static bool IS_SOCIAL_CLUB_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_SOCIAL_CLUB_ACTIVE();
+		return NativeFunction.Natives.IS_SOCIAL_CLUB_ACTIVE<bool>();
 	}
 	public static void SET_TEXT_INPUT_BOX_ENABLED(bool p0)
 	{
@@ -12539,7 +12539,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_MP_TEXT_CHAT_TYPING()
 	{
-		return NativeFunction.Natives.IS_MP_TEXT_CHAT_TYPING();
+		return NativeFunction.Natives.IS_MP_TEXT_CHAT_TYPING<bool>();
 	}
 	public static void CLOSE_MP_TEXT_CHAT()
 	{
@@ -12582,7 +12582,7 @@ public static class Natives
 	}
 	public static bool DOES_PED_HAVE_AI_BLIP(Ped ped)
 	{
-		return NativeFunction.Natives.DOES_PED_HAVE_AI_BLIP(ped);
+		return NativeFunction.Natives.DOES_PED_HAVE_AI_BLIP<bool>(ped);
 	}
 	public static void SET_PED_AI_BLIP_GANG_ID(Ped ped, int gangId)
 	{
@@ -12606,18 +12606,18 @@ public static class Natives
 	}
 	public static Blip GET_AI_PED_PED_BLIP_INDEX(Ped ped)
 	{
-		return NativeFunction.Natives.GET_AI_PED_PED_BLIP_INDEX(ped);
+		return NativeFunction.Natives.GET_AI_PED_PED_BLIP_INDEX<Blip>(ped);
 	}
 	/// <summary>
 	/// 	Returns the current AI BLIP for the specified ped
 	/// </summary>
 	public static Blip GET_AI_PED_VEHICLE_BLIP_INDEX(Ped ped)
 	{
-		return NativeFunction.Natives.GET_AI_PED_VEHICLE_BLIP_INDEX(ped);
+		return NativeFunction.Natives.GET_AI_PED_VEHICLE_BLIP_INDEX<Blip>(ped);
 	}
 	public static bool HAS_DIRECTOR_MODE_BEEN_LAUNCHED_BY_CODE()
 	{
-		return NativeFunction.Natives.HAS_DIRECTOR_MODE_BEEN_LAUNCHED_BY_CODE();
+		return NativeFunction.Natives.HAS_DIRECTOR_MODE_BEEN_LAUNCHED_BY_CODE<bool>();
 	}
 	public static void SET_DIRECTOR_MODE_LAUNCHED_BY_SCRIPT()
 	{
@@ -12644,11 +12644,11 @@ public static class Natives
 	*/
 	public static float GET_INTERIOR_HEADING(uint interior)
 	{
-		return NativeFunction.Natives.GET_INTERIOR_HEADING(interior);
+		return NativeFunction.Natives.GET_INTERIOR_HEADING<float>(interior);
 	}
-	public static void GET_INTERIOR_LOCATION_AND_NAMEHASH(uint interior, out Vector3 position, ulong nameHash)
+	public static void GET_INTERIOR_LOCATION_AND_NAMEHASH(uint interior, out Vector3 position, out ulong nameHash)
 	{
-		NativeFunction.Natives.GET_INTERIOR_LOCATION_AND_NAMEHASH(interior, out position, nameHash);
+		NativeFunction.Natives.GET_INTERIOR_LOCATION_AND_NAMEHASH(interior, out position, out nameHash);
 	}
 	/// <summary>
 	/// 	Returns the group ID of the specified interior.<br/>
@@ -12669,19 +12669,19 @@ public static class Natives
 	/// </summary>
 	public static int GET_INTERIOR_GROUP_ID(uint interior)
 	{
-		return NativeFunction.Natives.GET_INTERIOR_GROUP_ID(interior);
+		return NativeFunction.Natives.GET_INTERIOR_GROUP_ID<int>(interior);
 	}
 	public static Vector3 GET_OFFSET_FROM_INTERIOR_IN_WORLD_COORDS(uint interior, float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_OFFSET_FROM_INTERIOR_IN_WORLD_COORDS(interior, x, y, z);
+		return NativeFunction.Natives.GET_OFFSET_FROM_INTERIOR_IN_WORLD_COORDS<Vector3>(interior, x, y, z);
 	}
 	public static bool IS_INTERIOR_SCENE()
 	{
-		return NativeFunction.Natives.IS_INTERIOR_SCENE();
+		return NativeFunction.Natives.IS_INTERIOR_SCENE<bool>();
 	}
 	public static bool IS_VALID_INTERIOR(uint interior)
 	{
-		return NativeFunction.Natives.IS_VALID_INTERIOR(interior);
+		return NativeFunction.Natives.IS_VALID_INTERIOR<bool>(interior);
 	}
 	public static void CLEAR_ROOM_FOR_ENTITY(Entity entity)
 	{
@@ -12696,21 +12696,21 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_ROOM_KEY_FROM_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ROOM_KEY_FROM_ENTITY(entity);
+		return NativeFunction.Natives.GET_ROOM_KEY_FROM_ENTITY<ulong>(entity);
 	}
 	/// <summary>
 	/// 	Seems to do the exact same as INTERIOR::GET_ROOM_KEY_FROM_ENTITY
 	/// </summary>
 	public static ulong GET_KEY_FOR_ENTITY_IN_ROOM(Entity entity)
 	{
-		return NativeFunction.Natives.GET_KEY_FOR_ENTITY_IN_ROOM(entity);
+		return NativeFunction.Natives.GET_KEY_FOR_ENTITY_IN_ROOM<ulong>(entity);
 	}
 	/// <summary>
 	/// 	Returns the handle of the interior that the entity is in. Returns 0 if outside.
 	/// </summary>
 	public static uint GET_INTERIOR_FROM_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_INTERIOR_FROM_ENTITY(entity);
+		return NativeFunction.Natives.GET_INTERIOR_FROM_ENTITY<uint>(entity);
 	}
 	public static void RETAIN_ENTITY_IN_INTERIOR(Entity entity, uint interior)
 	{
@@ -12748,7 +12748,7 @@ public static class Natives
 	}
 	public static ulong GET_ROOM_KEY_FOR_GAME_VIEWPORT()
 	{
-		return NativeFunction.Natives.GET_ROOM_KEY_FOR_GAME_VIEWPORT();
+		return NativeFunction.Natives.GET_ROOM_KEY_FOR_GAME_VIEWPORT<ulong>();
 	}
 	public static void CLEAR_ROOM_FOR_GAME_VIEWPORT()
 	{
@@ -12759,7 +12759,7 @@ public static class Natives
 	/// </summary>
 	public static uint GET_INTERIOR_FROM_PRIMARY_VIEW()
 	{
-		return NativeFunction.Natives.GET_INTERIOR_FROM_PRIMARY_VIEW();
+		return NativeFunction.Natives.GET_INTERIOR_FROM_PRIMARY_VIEW<uint>();
 	}
 	/// <summary>
 	/// 	Returns interior ID from specified coordinates. If coordinates are outside, then it returns 0.<br/>
@@ -12769,7 +12769,7 @@ public static class Natives
 	/// </summary>
 	public static uint GET_INTERIOR_AT_COORDS(float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_INTERIOR_AT_COORDS(x, y, z);
+		return NativeFunction.Natives.GET_INTERIOR_AT_COORDS<uint>(x, y, z);
 	}
 	public static void ADD_PICKUP_TO_INTERIOR_ROOM_BY_NAME(uint pickup, string roomName)
 	{
@@ -12790,7 +12790,7 @@ public static class Natives
 	}
 	public static bool IS_INTERIOR_READY(uint interior)
 	{
-		return NativeFunction.Natives.IS_INTERIOR_READY(interior);
+		return NativeFunction.Natives.IS_INTERIOR_READY<bool>(interior);
 	}
 	/// <summary>
 	/// 	Only used once in the entire game scripts.<br/>
@@ -12798,7 +12798,7 @@ public static class Natives
 	/// </summary>
 	public static bool SET_INTERIOR_IN_USE(uint interior)
 	{
-		return NativeFunction.Natives.SET_INTERIOR_IN_USE(interior);
+		return NativeFunction.Natives.SET_INTERIOR_IN_USE<bool>(interior);
 	}
 	/// <summary>
 	/// 	Returns the interior ID representing the requested interior at that location (if found?). The supplied interior string is not the same as the one used to load the interior.<br/>
@@ -12811,14 +12811,14 @@ public static class Natives
 	/// </summary>
 	public static uint GET_INTERIOR_AT_COORDS_WITH_TYPE(float x, float y, float z, string interiorType)
 	{
-		return NativeFunction.Natives.GET_INTERIOR_AT_COORDS_WITH_TYPE(x, y, z, interiorType);
+		return NativeFunction.Natives.GET_INTERIOR_AT_COORDS_WITH_TYPE<uint>(x, y, z, interiorType);
 	}
 	/// <summary>
 	/// 	Hashed version of GET_INTERIOR_AT_COORDS_WITH_TYPE
 	/// </summary>
 	public static uint GET_INTERIOR_AT_COORDS_WITH_TYPEHASH(float x, float y, float z, ulong typeHash)
 	{
-		return NativeFunction.Natives.GET_INTERIOR_AT_COORDS_WITH_TYPEHASH(x, y, z, typeHash);
+		return NativeFunction.Natives.GET_INTERIOR_AT_COORDS_WITH_TYPEHASH<uint>(x, y, z, typeHash);
 	}
 	public static void ACTIVATE_INTERIOR_GROUPS_USING_CAMERA()
 	{
@@ -12829,11 +12829,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_COLLISION_MARKED_OUTSIDE(float x, float y, float z)
 	{
-		return NativeFunction.Natives.IS_COLLISION_MARKED_OUTSIDE(x, y, z);
+		return NativeFunction.Natives.IS_COLLISION_MARKED_OUTSIDE<bool>(x, y, z);
 	}
 	public static uint GET_INTERIOR_FROM_COLLISION(float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_INTERIOR_FROM_COLLISION(x, y, z);
+		return NativeFunction.Natives.GET_INTERIOR_FROM_COLLISION<uint>(x, y, z);
 	}
 	public static void ENABLE_STADIUM_PROBES_THIS_FRAME(bool toggle)
 	{
@@ -12860,7 +12860,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_INTERIOR_ENTITY_SET_ACTIVE(uint interior, string entitySetName)
 	{
-		return NativeFunction.Natives.IS_INTERIOR_ENTITY_SET_ACTIVE(interior, entitySetName);
+		return NativeFunction.Natives.IS_INTERIOR_ENTITY_SET_ACTIVE<bool>(interior, entitySetName);
 	}
 	/// <summary>
 	/// 	Full list of IPLs and interior entity sets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ipls.json
@@ -12898,7 +12898,7 @@ public static class Natives
 	}
 	public static bool IS_INTERIOR_DISABLED(uint interior)
 	{
-		return NativeFunction.Natives.IS_INTERIOR_DISABLED(interior);
+		return NativeFunction.Natives.IS_INTERIOR_DISABLED<bool>(interior);
 	}
 	/// <summary>
 	/// 	Does something similar to INTERIOR::DISABLE_INTERIOR
@@ -12909,7 +12909,7 @@ public static class Natives
 	}
 	public static bool IS_INTERIOR_CAPPED(uint interior)
 	{
-		return NativeFunction.Natives.IS_INTERIOR_CAPPED(interior);
+		return NativeFunction.Natives.IS_INTERIOR_CAPPED<bool>(interior);
 	}
 	public static void DISABLE_METRO_SYSTEM(bool toggle)
 	{
@@ -12927,7 +12927,7 @@ public static class Natives
 	*/
 	public static uint CREATE_ITEMSET(bool p0)
 	{
-		return NativeFunction.Natives.CREATE_ITEMSET(p0);
+		return NativeFunction.Natives.CREATE_ITEMSET<uint>(p0);
 	}
 	public static void DESTROY_ITEMSET(uint itemset)
 	{
@@ -12935,11 +12935,11 @@ public static class Natives
 	}
 	public static bool IS_ITEMSET_VALID(uint itemset)
 	{
-		return NativeFunction.Natives.IS_ITEMSET_VALID(itemset);
+		return NativeFunction.Natives.IS_ITEMSET_VALID<bool>(itemset);
 	}
 	public static bool ADD_TO_ITEMSET(uint item, uint itemset)
 	{
-		return NativeFunction.Natives.ADD_TO_ITEMSET(item, itemset);
+		return NativeFunction.Natives.ADD_TO_ITEMSET<bool>(item, itemset);
 	}
 	public static void REMOVE_FROM_ITEMSET(uint item, uint itemset)
 	{
@@ -12947,15 +12947,15 @@ public static class Natives
 	}
 	public static int GET_ITEMSET_SIZE(uint itemset)
 	{
-		return NativeFunction.Natives.GET_ITEMSET_SIZE(itemset);
+		return NativeFunction.Natives.GET_ITEMSET_SIZE<int>(itemset);
 	}
 	public static uint GET_INDEXED_ITEM_IN_ITEMSET(int index, uint itemset)
 	{
-		return NativeFunction.Natives.GET_INDEXED_ITEM_IN_ITEMSET(index, itemset);
+		return NativeFunction.Natives.GET_INDEXED_ITEM_IN_ITEMSET<uint>(index, itemset);
 	}
 	public static bool IS_IN_ITEMSET(uint item, uint itemset)
 	{
-		return NativeFunction.Natives.IS_IN_ITEMSET(item, itemset);
+		return NativeFunction.Natives.IS_IN_ITEMSET<bool>(item, itemset);
 	}
 	public static void CLEAN_ITEMSET(uint itemset)
 	{
@@ -12969,11 +12969,11 @@ public static class Natives
 	/// </summary>
 	public static bool LOBBY_AUTO_MULTIPLAYER_MENU()
 	{
-		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_MENU();
+		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_MENU<bool>();
 	}
 	public static bool LOBBY_AUTO_MULTIPLAYER_FREEMODE()
 	{
-		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_FREEMODE();
+		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_FREEMODE<bool>();
 	}
 	public static void LOBBY_SET_AUTO_MULTIPLAYER(bool toggle)
 	{
@@ -12981,7 +12981,7 @@ public static class Natives
 	}
 	public static bool LOBBY_AUTO_MULTIPLAYER_EVENT()
 	{
-		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_EVENT();
+		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_EVENT<bool>();
 	}
 	public static void LOBBY_SET_AUTO_MULTIPLAYER_EVENT(bool toggle)
 	{
@@ -12989,7 +12989,7 @@ public static class Natives
 	}
 	public static bool LOBBY_AUTO_MULTIPLAYER_RANDOM_JOB()
 	{
-		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_RANDOM_JOB();
+		return NativeFunction.Natives.LOBBY_AUTO_MULTIPLAYER_RANDOM_JOB<bool>();
 	}
 	public static void LOBBY_SET_AUTO_MP_RANDOM_JOB(bool toggle)
 	{
@@ -13007,7 +13007,7 @@ public static class Natives
 	/// </summary>
 	public static int LOCALIZATION_GET_SYSTEM_LANGUAGE()
 	{
-		return NativeFunction.Natives.LOCALIZATION_GET_SYSTEM_LANGUAGE();
+		return NativeFunction.Natives.LOCALIZATION_GET_SYSTEM_LANGUAGE<int>();
 	}
 	/// <summary>
 	/// 	0 = american (en-US)<br/>
@@ -13026,25 +13026,25 @@ public static class Natives
 	/// </summary>
 	public static int GET_CURRENT_LANGUAGE()
 	{
-		return NativeFunction.Natives.GET_CURRENT_LANGUAGE();
+		return NativeFunction.Natives.GET_CURRENT_LANGUAGE<int>();
 	}
 	/// <summary>
 	/// 	Possible return values: 0, 1, 2
 	/// </summary>
 	public static int LOCALIZATION_GET_SYSTEM_DATE_TYPE()
 	{
-		return NativeFunction.Natives.LOCALIZATION_GET_SYSTEM_DATE_TYPE();
+		return NativeFunction.Natives.LOCALIZATION_GET_SYSTEM_DATE_TYPE<int>();
 	}
 	/*
 		MISC
 	*/
 	public static int GET_ALLOCATED_STACK_SIZE()
 	{
-		return NativeFunction.Natives.GET_ALLOCATED_STACK_SIZE();
+		return NativeFunction.Natives.GET_ALLOCATED_STACK_SIZE<int>();
 	}
 	public static int GET_NUMBER_OF_FREE_STACKS_OF_THIS_SIZE(int stackSize)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_FREE_STACKS_OF_THIS_SIZE(stackSize);
+		return NativeFunction.Natives.GET_NUMBER_OF_FREE_STACKS_OF_THIS_SIZE<int>(stackSize);
 	}
 	public static void SET_RANDOM_SEED(int seed)
 	{
@@ -13076,7 +13076,7 @@ public static class Natives
 	}
 	public static bool GET_MISSION_FLAG()
 	{
-		return NativeFunction.Natives.GET_MISSION_FLAG();
+		return NativeFunction.Natives.GET_MISSION_FLAG<bool>();
 	}
 	/// <summary>
 	/// 	If the parameter is true, sets the random event flag to true, if the parameter is false, the function does nothing at all.<br/>
@@ -13088,14 +13088,14 @@ public static class Natives
 	}
 	public static bool GET_RANDOM_EVENT_FLAG()
 	{
-		return NativeFunction.Natives.GET_RANDOM_EVENT_FLAG();
+		return NativeFunction.Natives.GET_RANDOM_EVENT_FLAG<bool>();
 	}
 	/// <summary>
 	/// 	Returns pointer to an empty string.
 	/// </summary>
 	public static string GET_CONTENT_TO_LOAD()
 	{
-		return NativeFunction.Natives.GET_CONTENT_TO_LOAD();
+		return NativeFunction.Natives.GET_CONTENT_TO_LOAD<string>();
 	}
 	/// <summary>
 	/// 	Does nothing (it&amp;apos;s a nullsub). Seems to be PS4 specific.
@@ -13167,7 +13167,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_RESUMED_FROM_SUSPEND()
 	{
-		return NativeFunction.Natives.HAS_RESUMED_FROM_SUSPEND();
+		return NativeFunction.Natives.HAS_RESUMED_FROM_SUSPEND<bool>();
 	}
 	/// <summary>
 	/// 	Sets GtaThread+0x14A
@@ -13189,29 +13189,29 @@ public static class Natives
 	}
 	public static bool GET_BASE_ELEMENT_LOCATION_FROM_METADATA_BLOCK(bool p3)
 	{
-		return NativeFunction.Natives.GET_BASE_ELEMENT_LOCATION_FROM_METADATA_BLOCK(0, 0, 0, p3);
+		return NativeFunction.Natives.GET_BASE_ELEMENT_LOCATION_FROM_METADATA_BLOCK<bool>(0, 0, 0, p3);
 	}
 	/// <summary>
 	/// 	Returns current weather name hash
 	/// </summary>
 	public static ulong GET_PREV_WEATHER_TYPE_HASH_NAME()
 	{
-		return NativeFunction.Natives.GET_PREV_WEATHER_TYPE_HASH_NAME();
+		return NativeFunction.Natives.GET_PREV_WEATHER_TYPE_HASH_NAME<ulong>();
 	}
 	/// <summary>
 	/// 	Returns weather name hash
 	/// </summary>
 	public static ulong GET_NEXT_WEATHER_TYPE_HASH_NAME()
 	{
-		return NativeFunction.Natives.GET_NEXT_WEATHER_TYPE_HASH_NAME();
+		return NativeFunction.Natives.GET_NEXT_WEATHER_TYPE_HASH_NAME<ulong>();
 	}
 	public static bool IS_PREV_WEATHER_TYPE(string weatherType)
 	{
-		return NativeFunction.Natives.IS_PREV_WEATHER_TYPE(weatherType);
+		return NativeFunction.Natives.IS_PREV_WEATHER_TYPE<bool>(weatherType);
 	}
 	public static bool IS_NEXT_WEATHER_TYPE(string weatherType)
 	{
-		return NativeFunction.Natives.IS_NEXT_WEATHER_TYPE(weatherType);
+		return NativeFunction.Natives.IS_NEXT_WEATHER_TYPE<bool>(weatherType);
 	}
 	/// <summary>
 	/// 	The following weatherTypes are used in the scripts:<br/>
@@ -13295,9 +13295,9 @@ public static class Natives
 	{
 		NativeFunction.Natives.CLEAR_WEATHER_TYPE_NOW_PERSIST_NETWORK(milliseconds);
 	}
-	public static void GET_CURR_WEATHER_STATE(ulong weatherType1, ulong weatherType2, out float percentWeather2)
+	public static void GET_CURR_WEATHER_STATE(out ulong weatherType1, out ulong weatherType2, out float percentWeather2)
 	{
-		NativeFunction.Natives.GET_CURR_WEATHER_STATE(weatherType1, weatherType2, out percentWeather2);
+		NativeFunction.Natives.GET_CURR_WEATHER_STATE(out weatherType1, out weatherType2, out percentWeather2);
 	}
 	/// <summary>
 	/// 	Mixes two weather types. If percentWeather2 is set to 0.0f, then the weather will be entirely of weatherType1, if it is set to 1.0f it will be entirely of weatherType2. If it&amp;apos;s set somewhere in between, there will be a mixture of weather behaviors. To test, try this in the RPH console, and change the float to different values between 0 and 1:<br/>
@@ -13433,7 +13433,7 @@ public static class Natives
 	}
 	public static float GET_WIND_SPEED()
 	{
-		return NativeFunction.Natives.GET_WIND_SPEED();
+		return NativeFunction.Natives.GET_WIND_SPEED<float>();
 	}
 	/// <summary>
 	/// 	The wind direction in radians<br/>
@@ -13445,7 +13445,7 @@ public static class Natives
 	}
 	public static Vector3 GET_WIND_DIRECTION()
 	{
-		return NativeFunction.Natives.GET_WIND_DIRECTION();
+		return NativeFunction.Natives.GET_WIND_DIRECTION<Vector3>();
 	}
 	/// <summary>
 	/// 	With an `intensity` higher than `0.5f`, only the creation of puddles gets faster, rain and rain sound won&amp;apos;t increase after that.<br/>
@@ -13458,7 +13458,7 @@ public static class Natives
 	}
 	public static float GET_RAIN_LEVEL()
 	{
-		return NativeFunction.Natives.GET_RAIN_LEVEL();
+		return NativeFunction.Natives.GET_RAIN_LEVEL<float>();
 	}
 	public static void SET_SNOW(float level)
 	{
@@ -13466,7 +13466,7 @@ public static class Natives
 	}
 	public static float GET_SNOW_LEVEL()
 	{
-		return NativeFunction.Natives.GET_SNOW_LEVEL();
+		return NativeFunction.Natives.GET_SNOW_LEVEL<float>();
 	}
 	/// <summary>
 	/// 	creates single lightning+thunder at random position
@@ -13525,35 +13525,35 @@ public static class Natives
 	}
 	public static float GET_CLOUDS_ALPHA()
 	{
-		return NativeFunction.Natives.GET_CLOUDS_ALPHA();
+		return NativeFunction.Natives.GET_CLOUDS_ALPHA<float>();
 	}
 	public static int GET_GAME_TIMER()
 	{
-		return NativeFunction.Natives.GET_GAME_TIMER();
+		return NativeFunction.Natives.GET_GAME_TIMER<int>();
 	}
 	public static float GET_FRAME_TIME()
 	{
-		return NativeFunction.Natives.GET_FRAME_TIME();
+		return NativeFunction.Natives.GET_FRAME_TIME<float>();
 	}
 	public static float GET_SYSTEM_TIME_STEP()
 	{
-		return NativeFunction.Natives.GET_SYSTEM_TIME_STEP();
+		return NativeFunction.Natives.GET_SYSTEM_TIME_STEP<float>();
 	}
 	public static int GET_FRAME_COUNT()
 	{
-		return NativeFunction.Natives.GET_FRAME_COUNT();
+		return NativeFunction.Natives.GET_FRAME_COUNT<int>();
 	}
 	public static float GET_RANDOM_FLOAT_IN_RANGE(float startRange, float endRange)
 	{
-		return NativeFunction.Natives.GET_RANDOM_FLOAT_IN_RANGE(startRange, endRange);
+		return NativeFunction.Natives.GET_RANDOM_FLOAT_IN_RANGE<float>(startRange, endRange);
 	}
 	public static int GET_RANDOM_INT_IN_RANGE(int startRange, int endRange)
 	{
-		return NativeFunction.Natives.GET_RANDOM_INT_IN_RANGE(startRange, endRange);
+		return NativeFunction.Natives.GET_RANDOM_INT_IN_RANGE<int>(startRange, endRange);
 	}
 	public static int GET_RANDOM_MWC_INT_IN_RANGE(int startRange, int endRange)
 	{
-		return NativeFunction.Natives.GET_RANDOM_MWC_INT_IN_RANGE(startRange, endRange);
+		return NativeFunction.Natives.GET_RANDOM_MWC_INT_IN_RANGE<int>(startRange, endRange);
 	}
 	/// <summary>
 	/// 	Gets the ground elevation at the specified position. Note that if the specified position is below ground level, the function will output zero!<br/>
@@ -13568,35 +13568,35 @@ public static class Natives
 	/// </summary>
 	public static bool GET_GROUND_Z_FOR_3D_COORD(float x, float y, float z, out float groundZ, bool ignoreWater, bool p5)
 	{
-		return NativeFunction.Natives.GET_GROUND_Z_FOR_3D_COORD(x, y, z, out groundZ, ignoreWater, p5);
+		return NativeFunction.Natives.GET_GROUND_Z_FOR_3D_COORD<bool>(x, y, z, out groundZ, ignoreWater, p5);
 	}
 	public static bool GET_GROUND_Z_AND_NORMAL_FOR_3D_COORD(float x, float y, float z, out float groundZ, out Vector3 normal)
 	{
-		return NativeFunction.Natives.GET_GROUND_Z_AND_NORMAL_FOR_3D_COORD(x, y, z, out groundZ, out normal);
+		return NativeFunction.Natives.GET_GROUND_Z_AND_NORMAL_FOR_3D_COORD<bool>(x, y, z, out groundZ, out normal);
 	}
 	public static bool GET_GROUND_Z_EXCLUDING_OBJECTS_FOR_3D_COORD(float x, float y, float z, out float groundZ, bool p4, bool p5)
 	{
-		return NativeFunction.Natives.GET_GROUND_Z_EXCLUDING_OBJECTS_FOR_3D_COORD(x, y, z, out groundZ, p4, p5);
+		return NativeFunction.Natives.GET_GROUND_Z_EXCLUDING_OBJECTS_FOR_3D_COORD<bool>(x, y, z, out groundZ, p4, p5);
 	}
 	public static float ASIN(float p0)
 	{
-		return NativeFunction.Natives.ASIN(p0);
+		return NativeFunction.Natives.ASIN<float>(p0);
 	}
 	public static float ACOS(float p0)
 	{
-		return NativeFunction.Natives.ACOS(p0);
+		return NativeFunction.Natives.ACOS<float>(p0);
 	}
 	public static float TAN(float p0)
 	{
-		return NativeFunction.Natives.TAN(p0);
+		return NativeFunction.Natives.TAN<float>(p0);
 	}
 	public static float ATAN(float p0)
 	{
-		return NativeFunction.Natives.ATAN(p0);
+		return NativeFunction.Natives.ATAN<float>(p0);
 	}
 	public static float ATAN2(float p0, float p1)
 	{
-		return NativeFunction.Natives.ATAN2(p0, p1);
+		return NativeFunction.Natives.ATAN2<float>(p0, p1);
 	}
 	/// <summary>
 	/// 	Returns the distance between two three-dimensional points, optionally ignoring the Z values.<br/>
@@ -13606,11 +13606,11 @@ public static class Natives
 	/// </summary>
 	public static float GET_DISTANCE_BETWEEN_COORDS(float x1, float y1, float z1, float x2, float y2, float z2, bool useZ)
 	{
-		return NativeFunction.Natives.GET_DISTANCE_BETWEEN_COORDS(x1, y1, z1, x2, y2, z2, useZ);
+		return NativeFunction.Natives.GET_DISTANCE_BETWEEN_COORDS<float>(x1, y1, z1, x2, y2, z2, useZ);
 	}
 	public static float GET_ANGLE_BETWEEN_2D_VECTORS(float x1, float y1, float x2, float y2)
 	{
-		return NativeFunction.Natives.GET_ANGLE_BETWEEN_2D_VECTORS(x1, y1, x2, y2);
+		return NativeFunction.Natives.GET_ANGLE_BETWEEN_2D_VECTORS<float>(x1, y1, x2, y2);
 	}
 	/// <summary>
 	/// 	dx = x1 - x2<br/>
@@ -13618,29 +13618,29 @@ public static class Natives
 	/// </summary>
 	public static float GET_HEADING_FROM_VECTOR_2D(float dx, float dy)
 	{
-		return NativeFunction.Natives.GET_HEADING_FROM_VECTOR_2D(dx, dy);
+		return NativeFunction.Natives.GET_HEADING_FROM_VECTOR_2D<float>(dx, dy);
 	}
 	/// <summary>
 	/// 	returns a float between 0.0 and 1.0, clamp: sets whether the product should be clamped between the given coordinates
 	/// </summary>
 	public static float GET_RATIO_OF_CLOSEST_POINT_ON_LINE(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3, bool clamp)
 	{
-		return NativeFunction.Natives.GET_RATIO_OF_CLOSEST_POINT_ON_LINE(x1, y1, z1, x2, y2, z2, x3, y3, z3, clamp);
+		return NativeFunction.Natives.GET_RATIO_OF_CLOSEST_POINT_ON_LINE<float>(x1, y1, z1, x2, y2, z2, x3, y3, z3, clamp);
 	}
 	/// <summary>
 	/// 	clamp: sets whether the product should be clamped between the given coordinates
 	/// </summary>
 	public static Vector3 GET_CLOSEST_POINT_ON_LINE(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3, bool clamp)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_POINT_ON_LINE(x1, y1, z1, x2, y2, z2, x3, y3, z3, clamp);
+		return NativeFunction.Natives.GET_CLOSEST_POINT_ON_LINE<Vector3>(x1, y1, z1, x2, y2, z2, x3, y3, z3, clamp);
 	}
 	public static bool GET_LINE_PLANE_INTERSECTION(float p0, float p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float p9, float p10, float p11, out float p12)
 	{
-		return NativeFunction.Natives.GET_LINE_PLANE_INTERSECTION(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, out p12);
+		return NativeFunction.Natives.GET_LINE_PLANE_INTERSECTION<bool>(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, out p12);
 	}
 	public static bool GET_POINT_AREA_OVERLAP()
 	{
-		return NativeFunction.Natives.GET_POINT_AREA_OVERLAP(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.GET_POINT_AREA_OVERLAP<bool>(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 	}
 	/// <summary>
 	/// 	This sets bit [offset] of [address] to on.<br/>
@@ -13677,7 +13677,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_HASH_KEY(string _string)
 	{
-		return NativeFunction.Natives.GET_HASH_KEY(_string);
+		return NativeFunction.Natives.GET_HASH_KEY<ulong>(_string);
 	}
 	/// <summary>
 	/// 	This native always come right before SET_ENTITY_QUATERNION where its final 4 parameters are SLERP_NEAR_QUATERNION p9 to p12
@@ -13688,11 +13688,11 @@ public static class Natives
 	}
 	public static bool IS_AREA_OCCUPIED(float p0, float p1, float p2, float p3, float p4, float p5, bool p6, bool p7, bool p8, bool p9, bool p10, bool p12)
 	{
-		return NativeFunction.Natives.IS_AREA_OCCUPIED(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, 0, p12);
+		return NativeFunction.Natives.IS_AREA_OCCUPIED<bool>(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, 0, p12);
 	}
 	public static bool IS_AREA_OCCUPIED_SLOW()
 	{
-		return NativeFunction.Natives.IS_AREA_OCCUPIED_SLOW(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.IS_AREA_OCCUPIED_SLOW<bool>(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 	}
 	/// <summary>
 	/// 	`range`: The range, seems to not be very accurate during testing.<br/>
@@ -13706,11 +13706,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_POSITION_OCCUPIED(float x, float y, float z, float range, bool p4, bool checkVehicles, bool checkPeds, bool p7, bool p8, Entity ignoreEntity, bool p10)
 	{
-		return NativeFunction.Natives.IS_POSITION_OCCUPIED(x, y, z, range, p4, checkVehicles, checkPeds, p7, p8, ignoreEntity, p10);
+		return NativeFunction.Natives.IS_POSITION_OCCUPIED<bool>(x, y, z, range, p4, checkVehicles, checkPeds, p7, p8, ignoreEntity, p10);
 	}
 	public static bool IS_POINT_OBSCURED_BY_A_MISSION_ENTITY(float p0, float p1, float p2, float p3, float p4, float p5)
 	{
-		return NativeFunction.Natives.IS_POINT_OBSCURED_BY_A_MISSION_ENTITY(p0, p1, p2, p3, p4, p5, 0);
+		return NativeFunction.Natives.IS_POINT_OBSCURED_BY_A_MISSION_ENTITY<bool>(p0, p1, p2, p3, p4, p5, 0);
 	}
 	/// <summary>
 	/// 	Example: CLEAR_AREA(0, 0, 0, 30, true, false, false, false);
@@ -13782,7 +13782,7 @@ public static class Natives
 	}
 	public static int GET_STATUS_OF_MANUAL_SAVE()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_MANUAL_SAVE();
+		return NativeFunction.Natives.GET_STATUS_OF_MANUAL_SAVE<int>();
 	}
 	public static void SET_CREDITS_ACTIVE(bool toggle)
 	{
@@ -13794,11 +13794,11 @@ public static class Natives
 	}
 	public static bool HAVE_CREDITS_REACHED_END()
 	{
-		return NativeFunction.Natives.HAVE_CREDITS_REACHED_END();
+		return NativeFunction.Natives.HAVE_CREDITS_REACHED_END<bool>();
 	}
 	public static bool ARE_CREDITS_RUNNING()
 	{
-		return NativeFunction.Natives.ARE_CREDITS_RUNNING();
+		return NativeFunction.Natives.ARE_CREDITS_RUNNING<bool>();
 	}
 	public static void TERMINATE_ALL_SCRIPTS_WITH_THIS_NAME(string scriptName)
 	{
@@ -13815,7 +13815,7 @@ public static class Natives
 	/// </summary>
 	public static int ADD_HOSPITAL_RESTART(float x, float y, float z, float p3)
 	{
-		return NativeFunction.Natives.ADD_HOSPITAL_RESTART(x, y, z, p3, 0);
+		return NativeFunction.Natives.ADD_HOSPITAL_RESTART<int>(x, y, z, p3, 0);
 	}
 	/// <summary>
 	/// 	The game by default has 5 hospital respawn points. Disabling them all will cause the player to respawn at the last position they were.
@@ -13826,7 +13826,7 @@ public static class Natives
 	}
 	public static int ADD_POLICE_RESTART(float p0, float p1, float p2, float p3)
 	{
-		return NativeFunction.Natives.ADD_POLICE_RESTART(p0, p1, p2, p3, 0);
+		return NativeFunction.Natives.ADD_POLICE_RESTART<int>(p0, p1, p2, p3, 0);
 	}
 	/// <summary>
 	/// 	Disables the spawn point at the police house on the specified index.<br/>
@@ -13886,7 +13886,7 @@ public static class Natives
 	/// </summary>
 	public static int REGISTER_SAVE_HOUSE(float x, float y, float z, float p3, string p4)
 	{
-		return NativeFunction.Natives.REGISTER_SAVE_HOUSE(x, y, z, p3, p4, 0, 0);
+		return NativeFunction.Natives.REGISTER_SAVE_HOUSE<int>(x, y, z, p3, p4, 0, 0);
 	}
 	public static void SET_SAVE_HOUSE(int savehouseHandle, bool p1, bool p2)
 	{
@@ -13894,11 +13894,11 @@ public static class Natives
 	}
 	public static bool OVERRIDE_SAVE_HOUSE(bool p0, float p1, float p2, float p3, float p4, bool p5, float p6, float p7)
 	{
-		return NativeFunction.Natives.OVERRIDE_SAVE_HOUSE(p0, p1, p2, p3, p4, p5, p6, p7);
+		return NativeFunction.Natives.OVERRIDE_SAVE_HOUSE<bool>(p0, p1, p2, p3, p4, p5, p6, p7);
 	}
-	public static bool GET_SAVE_HOUSE_DETAILS_AFTER_SUCCESSFUL_LOAD(out Vector3 p0, out float p1, bool fadeInAfterLoad, bool p3)
+	public static bool GET_SAVE_HOUSE_DETAILS_AFTER_SUCCESSFUL_LOAD(out Vector3 p0, out float p1, out bool fadeInAfterLoad, out bool p3)
 	{
-		return NativeFunction.Natives.GET_SAVE_HOUSE_DETAILS_AFTER_SUCCESSFUL_LOAD(out p0, out p1, fadeInAfterLoad, p3);
+		return NativeFunction.Natives.GET_SAVE_HOUSE_DETAILS_AFTER_SUCCESSFUL_LOAD<bool>(out p0, out p1, out fadeInAfterLoad, out p3);
 	}
 	public static void DO_AUTO_SAVE()
 	{
@@ -13909,15 +13909,15 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_AUTO_SAVE_OFF()
 	{
-		return NativeFunction.Natives.GET_IS_AUTO_SAVE_OFF();
+		return NativeFunction.Natives.GET_IS_AUTO_SAVE_OFF<bool>();
 	}
 	public static bool IS_AUTO_SAVE_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.IS_AUTO_SAVE_IN_PROGRESS();
+		return NativeFunction.Natives.IS_AUTO_SAVE_IN_PROGRESS<bool>();
 	}
 	public static bool HAS_CODE_REQUESTED_AUTOSAVE()
 	{
-		return NativeFunction.Natives.HAS_CODE_REQUESTED_AUTOSAVE();
+		return NativeFunction.Natives.HAS_CODE_REQUESTED_AUTOSAVE<bool>();
 	}
 	public static void CLEAR_CODE_REQUESTED_AUTOSAVE()
 	{
@@ -13937,23 +13937,23 @@ public static class Natives
 	}
 	public static bool HAVE_REPLAY_STATS_BEEN_STORED()
 	{
-		return NativeFunction.Natives.HAVE_REPLAY_STATS_BEEN_STORED();
+		return NativeFunction.Natives.HAVE_REPLAY_STATS_BEEN_STORED<bool>();
 	}
 	public static int GET_REPLAY_STAT_MISSION_ID()
 	{
-		return NativeFunction.Natives.GET_REPLAY_STAT_MISSION_ID();
+		return NativeFunction.Natives.GET_REPLAY_STAT_MISSION_ID<int>();
 	}
 	public static int GET_REPLAY_STAT_MISSION_TYPE()
 	{
-		return NativeFunction.Natives.GET_REPLAY_STAT_MISSION_TYPE();
+		return NativeFunction.Natives.GET_REPLAY_STAT_MISSION_TYPE<int>();
 	}
 	public static int GET_REPLAY_STAT_COUNT()
 	{
-		return NativeFunction.Natives.GET_REPLAY_STAT_COUNT();
+		return NativeFunction.Natives.GET_REPLAY_STAT_COUNT<int>();
 	}
 	public static int GET_REPLAY_STAT_AT_INDEX(int index)
 	{
-		return NativeFunction.Natives.GET_REPLAY_STAT_AT_INDEX(index);
+		return NativeFunction.Natives.GET_REPLAY_STAT_AT_INDEX<int>(index);
 	}
 	public static void CLEAR_REPLAY_STATS()
 	{
@@ -13961,7 +13961,7 @@ public static class Natives
 	}
 	public static bool QUEUE_MISSION_REPEAT_LOAD()
 	{
-		return NativeFunction.Natives.QUEUE_MISSION_REPEAT_LOAD();
+		return NativeFunction.Natives.QUEUE_MISSION_REPEAT_LOAD<bool>();
 	}
 	/// <summary>
 	/// 	Shows the screen which is visible before you redo a mission? The game will make a restoration point where you will cameback when the mission is over.<br/>
@@ -13969,19 +13969,19 @@ public static class Natives
 	/// </summary>
 	public static bool QUEUE_MISSION_REPEAT_SAVE()
 	{
-		return NativeFunction.Natives.QUEUE_MISSION_REPEAT_SAVE();
+		return NativeFunction.Natives.QUEUE_MISSION_REPEAT_SAVE<bool>();
 	}
 	public static bool QUEUE_MISSION_REPEAT_SAVE_FOR_BENCHMARK_TEST()
 	{
-		return NativeFunction.Natives.QUEUE_MISSION_REPEAT_SAVE_FOR_BENCHMARK_TEST();
+		return NativeFunction.Natives.QUEUE_MISSION_REPEAT_SAVE_FOR_BENCHMARK_TEST<bool>();
 	}
 	public static int GET_STATUS_OF_MISSION_REPEAT_SAVE()
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_MISSION_REPEAT_SAVE();
+		return NativeFunction.Natives.GET_STATUS_OF_MISSION_REPEAT_SAVE<int>();
 	}
 	public static bool IS_MEMORY_CARD_IN_USE()
 	{
-		return NativeFunction.Natives.IS_MEMORY_CARD_IN_USE();
+		return NativeFunction.Natives.IS_MEMORY_CARD_IN_USE<bool>();
 	}
 	public static void SHOOT_SINGLE_BULLET_BETWEEN_COORDS(float x1, float y1, float z1, float x2, float y2, float z2, int damage, bool p7, ulong weaponHash, Ped ownerPed, bool isAudible, bool isInvisible, float speed)
 	{
@@ -14024,7 +14024,7 @@ public static class Natives
 	}
 	public static int GET_FAKE_WANTED_LEVEL()
 	{
-		return NativeFunction.Natives.GET_FAKE_WANTED_LEVEL();
+		return NativeFunction.Natives.GET_FAKE_WANTED_LEVEL<int>();
 	}
 	public static void USING_MISSION_CREATOR(bool toggle)
 	{
@@ -14040,33 +14040,33 @@ public static class Natives
 	}
 	public static bool IS_MINIGAME_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.IS_MINIGAME_IN_PROGRESS();
+		return NativeFunction.Natives.IS_MINIGAME_IN_PROGRESS<bool>();
 	}
 	public static bool IS_THIS_A_MINIGAME_SCRIPT()
 	{
-		return NativeFunction.Natives.IS_THIS_A_MINIGAME_SCRIPT();
+		return NativeFunction.Natives.IS_THIS_A_MINIGAME_SCRIPT<bool>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static bool IS_SNIPER_INVERTED()
 	{
-		return NativeFunction.Natives.IS_SNIPER_INVERTED();
+		return NativeFunction.Natives.IS_SNIPER_INVERTED<bool>();
 	}
 	/// <summary>
 	/// 	Returns true if the game is using the metric measurement system (profile setting 227), false if imperial is used.
 	/// </summary>
 	public static bool SHOULD_USE_METRIC_MEASUREMENTS()
 	{
-		return NativeFunction.Natives.SHOULD_USE_METRIC_MEASUREMENTS();
+		return NativeFunction.Natives.SHOULD_USE_METRIC_MEASUREMENTS<bool>();
 	}
 	public static int GET_PROFILE_SETTING(int profileSetting)
 	{
-		return NativeFunction.Natives.GET_PROFILE_SETTING(profileSetting);
+		return NativeFunction.Natives.GET_PROFILE_SETTING<int>(profileSetting);
 	}
 	public static bool ARE_STRINGS_EQUAL(string string1, string string2)
 	{
-		return NativeFunction.Natives.ARE_STRINGS_EQUAL(string1, string2);
+		return NativeFunction.Natives.ARE_STRINGS_EQUAL<bool>(string1, string2);
 	}
 	/// <summary>
 	/// 	Compares two strings up to a specified number of characters.<br/>
@@ -14096,22 +14096,22 @@ public static class Natives
 	/// </summary>
 	public static int COMPARE_STRINGS(string str1, string str2, bool matchCase, int maxLength)
 	{
-		return NativeFunction.Natives.COMPARE_STRINGS(str1, str2, matchCase, maxLength);
+		return NativeFunction.Natives.COMPARE_STRINGS<int>(str1, str2, matchCase, maxLength);
 	}
 	public static int ABSI(int value)
 	{
-		return NativeFunction.Natives.ABSI(value);
+		return NativeFunction.Natives.ABSI<int>(value);
 	}
 	public static float ABSF(float value)
 	{
-		return NativeFunction.Natives.ABSF(value);
+		return NativeFunction.Natives.ABSF<float>(value);
 	}
 	/// <summary>
 	/// 	Determines whether there is a sniper bullet within the specified coordinates. The coordinates form an axis-aligned bounding box.
 	/// </summary>
 	public static bool IS_SNIPER_BULLET_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.IS_SNIPER_BULLET_IN_AREA(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.IS_SNIPER_BULLET_IN_AREA<bool>(x1, y1, z1, x2, y2, z2);
 	}
 	/// <summary>
 	/// 	Determines whether there is a projectile within the specified coordinates. The coordinates form a rectangle.<br/>
@@ -14123,41 +14123,41 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PROJECTILE_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.IS_PROJECTILE_IN_AREA(x1, y1, z1, x2, y2, z2, ownedByPlayer);
+		return NativeFunction.Natives.IS_PROJECTILE_IN_AREA<bool>(x1, y1, z1, x2, y2, z2, ownedByPlayer);
 	}
 	/// <summary>
 	/// 	Determines whether there is a projectile of a specific type within the specified coordinates. The coordinates form a axis-aligned bounding box.
 	/// </summary>
 	public static bool IS_PROJECTILE_TYPE_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2, int type, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.IS_PROJECTILE_TYPE_IN_AREA(x1, y1, z1, x2, y2, z2, type, ownedByPlayer);
+		return NativeFunction.Natives.IS_PROJECTILE_TYPE_IN_AREA<bool>(x1, y1, z1, x2, y2, z2, type, ownedByPlayer);
 	}
 	/// <summary>
 	/// 	See IS_POINT_IN_ANGLED_AREA for the definition of an angled area.
 	/// </summary>
 	public static bool IS_PROJECTILE_TYPE_IN_ANGLED_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float width, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.IS_PROJECTILE_TYPE_IN_ANGLED_AREA(x1, y1, z1, x2, y2, z2, width, 0, ownedByPlayer);
+		return NativeFunction.Natives.IS_PROJECTILE_TYPE_IN_ANGLED_AREA<bool>(x1, y1, z1, x2, y2, z2, width, 0, ownedByPlayer);
 	}
 	public static bool IS_PROJECTILE_TYPE_WITHIN_DISTANCE(float x, float y, float z, ulong projectileHash, float radius, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.IS_PROJECTILE_TYPE_WITHIN_DISTANCE(x, y, z, projectileHash, radius, ownedByPlayer);
+		return NativeFunction.Natives.IS_PROJECTILE_TYPE_WITHIN_DISTANCE<bool>(x, y, z, projectileHash, radius, ownedByPlayer);
 	}
 	public static bool GET_COORDS_OF_PROJECTILE_TYPE_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2, ulong projectileHash, out Vector3 projectilePos, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_IN_AREA(x1, y1, z1, x2, y2, z2, projectileHash, out projectilePos, ownedByPlayer);
+		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_IN_AREA<bool>(x1, y1, z1, x2, y2, z2, projectileHash, out projectilePos, ownedByPlayer);
 	}
 	public static bool GET_COORDS_OF_PROJECTILE_TYPE_IN_ANGLED_AREA(float vecAngledAreaPoint1X, float vecAngledAreaPoint1Y, float vecAngledAreaPoint1Z, float vecAngledAreaPoint2X, float vecAngledAreaPoint2Y, float vecAngledAreaPoint2Z, float distanceOfOppositeFace, ulong weaponType, out Vector3 positionOut, bool bIsPlayer)
 	{
-		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_IN_ANGLED_AREA(vecAngledAreaPoint1X, vecAngledAreaPoint1Y, vecAngledAreaPoint1Z, vecAngledAreaPoint2X, vecAngledAreaPoint2Y, vecAngledAreaPoint2Z, distanceOfOppositeFace, weaponType, out positionOut, bIsPlayer);
+		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_IN_ANGLED_AREA<bool>(vecAngledAreaPoint1X, vecAngledAreaPoint1Y, vecAngledAreaPoint1Z, vecAngledAreaPoint2X, vecAngledAreaPoint2Y, vecAngledAreaPoint2Z, distanceOfOppositeFace, weaponType, out positionOut, bIsPlayer);
 	}
 	public static bool GET_COORDS_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(Ped ped, ulong weaponHash, float distance, out Vector3 outCoords, bool p4)
 	{
-		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(ped, weaponHash, distance, out outCoords, p4);
+		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_WITHIN_DISTANCE<bool>(ped, weaponHash, distance, out outCoords, p4);
 	}
 	public static bool GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(Ped ped, ulong weaponHash, float distance, out Vector3 outCoords, out Object outProjectile, bool p5)
 	{
-		return NativeFunction.Natives.GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(ped, weaponHash, distance, out outCoords, out outProjectile, p5);
+		return NativeFunction.Natives.GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE<bool>(ped, weaponHash, distance, out outCoords, out outProjectile, p5);
 	}
 	/// <summary>
 	/// 	For projectiles, see: IS_PROJECTILE_TYPE_IN_ANGLED_AREA<br/>
@@ -14166,97 +14166,97 @@ public static class Natives
 	/// </summary>
 	public static bool IS_BULLET_IN_ANGLED_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float width, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.IS_BULLET_IN_ANGLED_AREA(x1, y1, z1, x2, y2, z2, width, ownedByPlayer);
+		return NativeFunction.Natives.IS_BULLET_IN_ANGLED_AREA<bool>(x1, y1, z1, x2, y2, z2, width, ownedByPlayer);
 	}
 	public static bool IS_BULLET_IN_AREA(float x, float y, float z, float radius, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.IS_BULLET_IN_AREA(x, y, z, radius, ownedByPlayer);
+		return NativeFunction.Natives.IS_BULLET_IN_AREA<bool>(x, y, z, radius, ownedByPlayer);
 	}
 	public static bool IS_BULLET_IN_BOX(float x1, float y1, float z1, float x2, float y2, float z2, bool ownedByPlayer)
 	{
-		return NativeFunction.Natives.IS_BULLET_IN_BOX(x1, y1, z1, x2, y2, z2, ownedByPlayer);
+		return NativeFunction.Natives.IS_BULLET_IN_BOX<bool>(x1, y1, z1, x2, y2, z2, ownedByPlayer);
 	}
 	/// <summary>
 	/// 	p3 - possibly radius?
 	/// </summary>
 	public static bool HAS_BULLET_IMPACTED_IN_AREA(float x, float y, float z, float p3, bool p4, bool p5)
 	{
-		return NativeFunction.Natives.HAS_BULLET_IMPACTED_IN_AREA(x, y, z, p3, p4, p5);
+		return NativeFunction.Natives.HAS_BULLET_IMPACTED_IN_AREA<bool>(x, y, z, p3, p4, p5);
 	}
 	public static bool HAS_BULLET_IMPACTED_IN_BOX(float p0, float p1, float p2, float p3, float p4, float p5, bool p6, bool p7)
 	{
-		return NativeFunction.Natives.HAS_BULLET_IMPACTED_IN_BOX(p0, p1, p2, p3, p4, p5, p6, p7);
+		return NativeFunction.Natives.HAS_BULLET_IMPACTED_IN_BOX<bool>(p0, p1, p2, p3, p4, p5, p6, p7);
 	}
 	/// <summary>
 	/// 	PS4
 	/// </summary>
 	public static bool IS_ORBIS_VERSION()
 	{
-		return NativeFunction.Natives.IS_ORBIS_VERSION();
+		return NativeFunction.Natives.IS_ORBIS_VERSION<bool>();
 	}
 	/// <summary>
 	/// 	XBOX ONE
 	/// </summary>
 	public static bool IS_DURANGO_VERSION()
 	{
-		return NativeFunction.Natives.IS_DURANGO_VERSION();
+		return NativeFunction.Natives.IS_DURANGO_VERSION<bool>();
 	}
 	public static bool IS_XBOX360_VERSION()
 	{
-		return NativeFunction.Natives.IS_XBOX360_VERSION();
+		return NativeFunction.Natives.IS_XBOX360_VERSION<bool>();
 	}
 	public static bool IS_PS3_VERSION()
 	{
-		return NativeFunction.Natives.IS_PS3_VERSION();
+		return NativeFunction.Natives.IS_PS3_VERSION<bool>();
 	}
 	public static bool IS_PC_VERSION()
 	{
-		return NativeFunction.Natives.IS_PC_VERSION();
+		return NativeFunction.Natives.IS_PC_VERSION<bool>();
 	}
 	public static bool IS_STEAM_VERSION()
 	{
-		return NativeFunction.Natives.IS_STEAM_VERSION();
+		return NativeFunction.Natives.IS_STEAM_VERSION<bool>();
 	}
 	/// <summary>
 	/// 	Used to block some of the prostitute stuff due to laws in Australia.
 	/// </summary>
 	public static bool IS_AUSSIE_VERSION()
 	{
-		return NativeFunction.Natives.IS_AUSSIE_VERSION();
+		return NativeFunction.Natives.IS_AUSSIE_VERSION<bool>();
 	}
 	public static bool IS_JAPANESE_VERSION()
 	{
-		return NativeFunction.Natives.IS_JAPANESE_VERSION();
+		return NativeFunction.Natives.IS_JAPANESE_VERSION<bool>();
 	}
 	public static bool IS_XBOX_PLATFORM()
 	{
-		return NativeFunction.Natives.IS_XBOX_PLATFORM();
+		return NativeFunction.Natives.IS_XBOX_PLATFORM<bool>();
 	}
 	/// <summary>
 	/// 	Xbox Series (Scarlett) version...
 	/// </summary>
 	public static bool IS_SCARLETT_VERSION()
 	{
-		return NativeFunction.Natives.IS_SCARLETT_VERSION();
+		return NativeFunction.Natives.IS_SCARLETT_VERSION<bool>();
 	}
 	public static bool IS_SCE_PLATFORM()
 	{
-		return NativeFunction.Natives.IS_SCE_PLATFORM();
+		return NativeFunction.Natives.IS_SCE_PLATFORM<bool>();
 	}
 	/// <summary>
 	/// 	PS5 (Prospero) version...
 	/// </summary>
 	public static bool IS_PROSPERO_VERSION()
 	{
-		return NativeFunction.Natives.IS_PROSPERO_VERSION();
+		return NativeFunction.Natives.IS_PROSPERO_VERSION<bool>();
 	}
 	public static bool IS_STRING_NULL(string _string)
 	{
-		return NativeFunction.Natives.IS_STRING_NULL(_string);
+		return NativeFunction.Natives.IS_STRING_NULL<bool>(_string);
 	}
 	public static bool IS_STRING_NULL_OR_EMPTY(string _string)
 	{
-		return NativeFunction.Natives.IS_STRING_NULL_OR_EMPTY(_string);
+		return NativeFunction.Natives.IS_STRING_NULL_OR_EMPTY<bool>(_string);
 	}
 	/// <summary>
 	/// 	Returns false if it&amp;apos;s a null or empty string or if the string is too long. outInteger will be set to -999 in that case.<br/>
@@ -14265,7 +14265,7 @@ public static class Natives
 	/// </summary>
 	public static bool STRING_TO_INT(string _string, out int outInteger)
 	{
-		return NativeFunction.Natives.STRING_TO_INT(_string, out outInteger);
+		return NativeFunction.Natives.STRING_TO_INT<bool>(_string, out outInteger);
 	}
 	public static void SET_BITS_IN_RANGE(out int var, int rangeStart, int rangeEnd, int p3)
 	{
@@ -14273,14 +14273,14 @@ public static class Natives
 	}
 	public static int GET_BITS_IN_RANGE(int var, int rangeStart, int rangeEnd)
 	{
-		return NativeFunction.Natives.GET_BITS_IN_RANGE(var, rangeStart, rangeEnd);
+		return NativeFunction.Natives.GET_BITS_IN_RANGE<int>(var, rangeStart, rangeEnd);
 	}
 	/// <summary>
 	/// 	See description of `ADD_STUNT_JUMP_ANGLED` for detailed info. The only difference really is this one does not have the radius (or angle, not sure) floats parameters for entry and landing zones.
 	/// </summary>
 	public static int ADD_STUNT_JUMP(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3, float x4, float y4, float z4, float camX, float camY, float camZ, int p15, int p16, int p17)
 	{
-		return NativeFunction.Natives.ADD_STUNT_JUMP(x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, camX, camY, camZ, p15, p16, p17);
+		return NativeFunction.Natives.ADD_STUNT_JUMP<int>(x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, camX, camY, camZ, p15, p16, p17);
 	}
 	/// <summary>
 	/// 	Creates a new stunt jump.<br/>
@@ -14313,7 +14313,7 @@ public static class Natives
 	/// </summary>
 	public static int ADD_STUNT_JUMP_ANGLED(float x1, float y1, float z1, float x2, float y2, float z2, float radius1, float x3, float y3, float z3, float x4, float y4, float z4, float radius2, float camX, float camY, float camZ, int p17, int p18, int p19)
 	{
-		return NativeFunction.Natives.ADD_STUNT_JUMP_ANGLED(x1, y1, z1, x2, y2, z2, radius1, x3, y3, z3, x4, y4, z4, radius2, camX, camY, camZ, p17, p18, p19);
+		return NativeFunction.Natives.ADD_STUNT_JUMP_ANGLED<int>(x1, y1, z1, x2, y2, z2, radius1, x3, y3, z3, x4, y4, z4, radius2, camX, camY, camZ, p17, p18, p19);
 	}
 	/// <summary>
 	/// 	Toggles some stunt jump stuff.
@@ -14340,19 +14340,19 @@ public static class Natives
 	}
 	public static bool IS_STUNT_JUMP_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.IS_STUNT_JUMP_IN_PROGRESS();
+		return NativeFunction.Natives.IS_STUNT_JUMP_IN_PROGRESS<bool>();
 	}
 	public static bool IS_STUNT_JUMP_MESSAGE_SHOWING()
 	{
-		return NativeFunction.Natives.IS_STUNT_JUMP_MESSAGE_SHOWING();
+		return NativeFunction.Natives.IS_STUNT_JUMP_MESSAGE_SHOWING<bool>();
 	}
 	public static int GET_NUM_SUCCESSFUL_STUNT_JUMPS()
 	{
-		return NativeFunction.Natives.GET_NUM_SUCCESSFUL_STUNT_JUMPS();
+		return NativeFunction.Natives.GET_NUM_SUCCESSFUL_STUNT_JUMPS<int>();
 	}
 	public static int GET_TOTAL_SUCCESSFUL_STUNT_JUMPS()
 	{
-		return NativeFunction.Natives.GET_TOTAL_SUCCESSFUL_STUNT_JUMPS();
+		return NativeFunction.Natives.GET_TOTAL_SUCCESSFUL_STUNT_JUMPS<int>();
 	}
 	public static void CANCEL_STUNT_JUMP()
 	{
@@ -14380,7 +14380,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_CHEAT_WITH_HASH_BEEN_ACTIVATED(ulong hash, int amount)
 	{
-		return NativeFunction.Natives.HAS_CHEAT_WITH_HASH_BEEN_ACTIVATED(hash, amount);
+		return NativeFunction.Natives.HAS_CHEAT_WITH_HASH_BEEN_ACTIVATED<bool>(hash, amount);
 	}
 	/// <summary>
 	/// 	Get inputted &amp;quot;Cheat code&amp;quot;, for example:<br/>
@@ -14399,7 +14399,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_PC_CHEAT_WITH_HASH_BEEN_ACTIVATED(ulong hash)
 	{
-		return NativeFunction.Natives.HAS_PC_CHEAT_WITH_HASH_BEEN_ACTIVATED(hash);
+		return NativeFunction.Natives.HAS_PC_CHEAT_WITH_HASH_BEEN_ACTIVATED<bool>(hash);
 	}
 	public static void OVERRIDE_FREEZE_FLAGS(bool p0)
 	{
@@ -14427,7 +14427,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_FRONTEND_FADING()
 	{
-		return NativeFunction.Natives.IS_FRONTEND_FADING();
+		return NativeFunction.Natives.IS_FRONTEND_FADING<bool>();
 	}
 	/// <summary>
 	/// 	spawns a few distant/out-of-sight peds, vehicles, animals etc each time it is called
@@ -14438,7 +14438,7 @@ public static class Natives
 	}
 	public static int GET_INDEX_OF_CURRENT_LEVEL()
 	{
-		return NativeFunction.Natives.GET_INDEX_OF_CURRENT_LEVEL();
+		return NativeFunction.Natives.GET_INDEX_OF_CURRENT_LEVEL<int>();
 	}
 	/// <summary>
 	/// 	level can be from 0 to 3<br/>
@@ -14461,7 +14461,7 @@ public static class Natives
 	}
 	public static int GET_SIZE_OF_SAVE_DATA(bool p0)
 	{
-		return NativeFunction.Natives.GET_SIZE_OF_SAVE_DATA(p0);
+		return NativeFunction.Natives.GET_SIZE_OF_SAVE_DATA<int>(p0);
 	}
 	public static void REGISTER_INT_TO_SAVE(string name)
 	{
@@ -14566,7 +14566,7 @@ public static class Natives
 	}
 	public static int GET_NUMBER_RESOURCES_ALLOCATED_TO_WANTED_LEVEL(int dispatchService)
 	{
-		return NativeFunction.Natives.GET_NUMBER_RESOURCES_ALLOCATED_TO_WANTED_LEVEL(dispatchService);
+		return NativeFunction.Natives.GET_NUMBER_RESOURCES_ALLOCATED_TO_WANTED_LEVEL<int>(dispatchService);
 	}
 	/// <summary>
 	/// 	As for the &amp;apos;police&amp;apos; incident, it will call police cars to you, but unlike PedsInCavalcades &amp; Merryweather they won&amp;apos;t start shooting at you unless you shoot first or shoot at them. The top 2 however seem to cancel theirselves if there is noone dead around you or a fire. I only figured them out as I found out the 3rd param is definately the amountOfPeople and they called incident 3 in scripts with 4 people (which the firetruck has) and incident 5 with 2 people (which the ambulence has). The 4 param I cant say is radius, but for the pedsInCavalcades and Merryweather R* uses 0.0f and for the top 3 (Emergency Services) they use 3.0f. <br/>
@@ -14579,7 +14579,7 @@ public static class Natives
 	/// </summary>
 	public static bool CREATE_INCIDENT(int dispatchService, float x, float y, float z, int numUnits, float radius, out int outIncidentID)
 	{
-		return NativeFunction.Natives.CREATE_INCIDENT(dispatchService, x, y, z, numUnits, radius, out outIncidentID, 0, 0);
+		return NativeFunction.Natives.CREATE_INCIDENT<bool>(dispatchService, x, y, z, numUnits, radius, out outIncidentID, 0, 0);
 	}
 	/// <summary>
 	/// 	As for the &amp;apos;police&amp;apos; incident, it will call police cars to you, but unlike PedsInCavalcades &amp; Merryweather they won&amp;apos;t start shooting at you unless you shoot first or shoot at them. The top 2 however seem to cancel theirselves if there is noone dead around you or a fire. I only figured them out as I found out the 3rd param is definately the amountOfPeople and they called incident 3 in scripts with 4 people (which the firetruck has) and incident 5 with 2 people (which the ambulence has). The 4 param I cant say is radius, but for the pedsInCavalcades and Merryweather R* uses 0.0f and for the top 3 (Emergency Services) they use 3.0f. <br/>
@@ -14592,7 +14592,7 @@ public static class Natives
 	/// </summary>
 	public static bool CREATE_INCIDENT_WITH_ENTITY(int dispatchService, Ped ped, int numUnits, float radius, out int outIncidentID)
 	{
-		return NativeFunction.Natives.CREATE_INCIDENT_WITH_ENTITY(dispatchService, ped, numUnits, radius, out outIncidentID, 0, 0);
+		return NativeFunction.Natives.CREATE_INCIDENT_WITH_ENTITY<bool>(dispatchService, ped, numUnits, radius, out outIncidentID, 0, 0);
 	}
 	/// <summary>
 	/// 	Delete an incident with a given id.<br/>
@@ -14616,7 +14616,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_INCIDENT_VALID(int incidentId)
 	{
-		return NativeFunction.Natives.IS_INCIDENT_VALID(incidentId);
+		return NativeFunction.Natives.IS_INCIDENT_VALID<bool>(incidentId);
 	}
 	public static void SET_INCIDENT_REQUESTED_UNITS(int incidentId, int dispatchService, int numUnits)
 	{
@@ -14633,15 +14633,15 @@ public static class Natives
 	/// </summary>
 	public static bool FIND_SPAWN_POINT_IN_DIRECTION(float posX, float posY, float posZ, float fwdVecX, float fwdVecY, float fwdVecZ, float distance, out Vector3 spawnPoint)
 	{
-		return NativeFunction.Natives.FIND_SPAWN_POINT_IN_DIRECTION(posX, posY, posZ, fwdVecX, fwdVecY, fwdVecZ, distance, out spawnPoint);
+		return NativeFunction.Natives.FIND_SPAWN_POINT_IN_DIRECTION<bool>(posX, posY, posZ, fwdVecX, fwdVecY, fwdVecZ, distance, out spawnPoint);
 	}
 	public static int ADD_POP_MULTIPLIER_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float p6, float p7, bool p8, bool p9)
 	{
-		return NativeFunction.Natives.ADD_POP_MULTIPLIER_AREA(x1, y1, z1, x2, y2, z2, p6, p7, p8, p9);
+		return NativeFunction.Natives.ADD_POP_MULTIPLIER_AREA<int>(x1, y1, z1, x2, y2, z2, p6, p7, p8, p9);
 	}
 	public static bool DOES_POP_MULTIPLIER_AREA_EXIST(int id)
 	{
-		return NativeFunction.Natives.DOES_POP_MULTIPLIER_AREA_EXIST(id);
+		return NativeFunction.Natives.DOES_POP_MULTIPLIER_AREA_EXIST<bool>(id);
 	}
 	public static void REMOVE_POP_MULTIPLIER_AREA(int id, bool p1)
 	{
@@ -14649,18 +14649,18 @@ public static class Natives
 	}
 	public static bool IS_POP_MULTIPLIER_AREA_NETWORKED(int id)
 	{
-		return NativeFunction.Natives.IS_POP_MULTIPLIER_AREA_NETWORKED(id);
+		return NativeFunction.Natives.IS_POP_MULTIPLIER_AREA_NETWORKED<bool>(id);
 	}
 	/// <summary>
 	/// 	This native is adding a zone, where you can change density settings. For example, you can add a zone on 0.0, 0.0, 0.0 with radius 900.0 and vehicleMultiplier 0.0, and you will not see any new population vehicle spawned in a radius of 900.0 from 0.0, 0.0, 0.0. Returns the id. You can have only 15 zones at the same time. You can remove zone using REMOVE_POP_MULTIPLIER_SPHERE
 	/// </summary>
 	public static int ADD_POP_MULTIPLIER_SPHERE(float x, float y, float z, float radius, float pedMultiplier, float vehicleMultiplier, bool p6, bool p7)
 	{
-		return NativeFunction.Natives.ADD_POP_MULTIPLIER_SPHERE(x, y, z, radius, pedMultiplier, vehicleMultiplier, p6, p7);
+		return NativeFunction.Natives.ADD_POP_MULTIPLIER_SPHERE<int>(x, y, z, radius, pedMultiplier, vehicleMultiplier, p6, p7);
 	}
 	public static bool DOES_POP_MULTIPLIER_SPHERE_EXIST(int id)
 	{
-		return NativeFunction.Natives.DOES_POP_MULTIPLIER_SPHERE_EXIST(id);
+		return NativeFunction.Natives.DOES_POP_MULTIPLIER_SPHERE_EXIST<bool>(id);
 	}
 	/// <summary>
 	/// 	Removes population multiplier sphere
@@ -14678,7 +14678,7 @@ public static class Natives
 	}
 	public static bool IS_TENNIS_MODE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_TENNIS_MODE(ped);
+		return NativeFunction.Natives.IS_TENNIS_MODE<bool>(ped);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -14689,15 +14689,15 @@ public static class Natives
 	}
 	public static bool GET_TENNIS_SWING_ANIM_COMPLETE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_TENNIS_SWING_ANIM_COMPLETE(ped);
+		return NativeFunction.Natives.GET_TENNIS_SWING_ANIM_COMPLETE<bool>(ped);
 	}
 	public static bool GET_TENNIS_SWING_ANIM_CAN_BE_INTERRUPTED(Ped ped)
 	{
-		return NativeFunction.Natives.GET_TENNIS_SWING_ANIM_CAN_BE_INTERRUPTED(ped);
+		return NativeFunction.Natives.GET_TENNIS_SWING_ANIM_CAN_BE_INTERRUPTED<bool>(ped);
 	}
 	public static bool GET_TENNIS_SWING_ANIM_SWUNG(Ped ped)
 	{
-		return NativeFunction.Natives.GET_TENNIS_SWING_ANIM_SWUNG(ped);
+		return NativeFunction.Natives.GET_TENNIS_SWING_ANIM_SWUNG<bool>(ped);
 	}
 	public static void PLAY_TENNIS_DIVE_ANIM(Ped ped, int p1, float p2, float p3, float p4, bool p5)
 	{
@@ -14748,11 +14748,11 @@ public static class Natives
 	/// </summary>
 	public static int ADD_DISPATCH_SPAWN_ANGLED_BLOCKING_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float width)
 	{
-		return NativeFunction.Natives.ADD_DISPATCH_SPAWN_ANGLED_BLOCKING_AREA(x1, y1, z1, x2, y2, z2, width);
+		return NativeFunction.Natives.ADD_DISPATCH_SPAWN_ANGLED_BLOCKING_AREA<int>(x1, y1, z1, x2, y2, z2, width);
 	}
 	public static int ADD_DISPATCH_SPAWN_SPHERE_BLOCKING_AREA(float x1, float y1, float x2, float y2)
 	{
-		return NativeFunction.Natives.ADD_DISPATCH_SPAWN_SPHERE_BLOCKING_AREA(x1, y1, x2, y2);
+		return NativeFunction.Natives.ADD_DISPATCH_SPAWN_SPHERE_BLOCKING_AREA<int>(x1, y1, x2, y2);
 	}
 	public static void REMOVE_DISPATCH_SPAWN_BLOCKING_AREA(int p0)
 	{
@@ -14839,14 +14839,14 @@ public static class Natives
 	/// </summary>
 	public static int UPDATE_ONSCREEN_KEYBOARD()
 	{
-		return NativeFunction.Natives.UPDATE_ONSCREEN_KEYBOARD();
+		return NativeFunction.Natives.UPDATE_ONSCREEN_KEYBOARD<int>();
 	}
 	/// <summary>
 	/// 	Returns NULL unless UPDATE_ONSCREEN_KEYBOARD() returns 1 in the same tick.
 	/// </summary>
 	public static string GET_ONSCREEN_KEYBOARD_RESULT()
 	{
-		return NativeFunction.Natives.GET_ONSCREEN_KEYBOARD_RESULT();
+		return NativeFunction.Natives.GET_ONSCREEN_KEYBOARD_RESULT<string>();
 	}
 	/// <summary>
 	/// 	DO NOT use this as it doesn&amp;apos;t clean up the text input box properly and your script will get stuck in the UPDATE_ONSCREEN_KEYBOARD() loop.<br/>
@@ -14876,7 +14876,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_REAL_WORLD_TIME()
 	{
-		return NativeFunction.Natives.GET_REAL_WORLD_TIME();
+		return NativeFunction.Natives.GET_REAL_WORLD_TIME<int>();
 	}
 	public static void SUPRESS_RANDOM_EVENT_THIS_FRAME(int eventType, bool suppress)
 	{
@@ -14908,7 +14908,7 @@ public static class Natives
 	}
 	public static bool HAS_GAME_INSTALLED_THIS_SESSION()
 	{
-		return NativeFunction.Natives.HAS_GAME_INSTALLED_THIS_SESSION();
+		return NativeFunction.Natives.HAS_GAME_INSTALLED_THIS_SESSION<bool>();
 	}
 	public static void SET_TICKER_JOHNMARSTON_IS_DONE()
 	{
@@ -14916,7 +14916,7 @@ public static class Natives
 	}
 	public static bool ARE_PROFILE_SETTINGS_VALID()
 	{
-		return NativeFunction.Natives.ARE_PROFILE_SETTINGS_VALID();
+		return NativeFunction.Natives.ARE_PROFILE_SETTINGS_VALID<bool>();
 	}
 	public static void PREVENT_ARREST_STATE_THIS_FRAME()
 	{
@@ -14953,7 +14953,7 @@ public static class Natives
 	}
 	public static bool SCRIPT_RACE_GET_PLAYER_SPLIT_TIME(Player player, out int p1, out int p2)
 	{
-		return NativeFunction.Natives.SCRIPT_RACE_GET_PLAYER_SPLIT_TIME(player, out p1, out p2);
+		return NativeFunction.Natives.SCRIPT_RACE_GET_PLAYER_SPLIT_TIME<bool>(player, out p1, out p2);
 	}
 	public static void START_END_USER_BENCHMARK()
 	{
@@ -14979,35 +14979,35 @@ public static class Natives
 	/// </summary>
 	public static bool UI_STARTED_END_USER_BENCHMARK()
 	{
-		return NativeFunction.Natives.UI_STARTED_END_USER_BENCHMARK();
+		return NativeFunction.Natives.UI_STARTED_END_USER_BENCHMARK<bool>();
 	}
 	/// <summary>
 	/// 	Returns true if the current frontend menu is FE_MENU_VERSION_LANDING_MENU
 	/// </summary>
 	public static bool LANDING_SCREEN_STARTED_END_USER_BENCHMARK()
 	{
-		return NativeFunction.Natives.LANDING_SCREEN_STARTED_END_USER_BENCHMARK();
+		return NativeFunction.Natives.LANDING_SCREEN_STARTED_END_USER_BENCHMARK<bool>();
 	}
 	/// <summary>
 	/// 	Returns true if command line option &amp;apos;-benchmark&amp;apos; is set.
 	/// </summary>
 	public static bool IS_COMMANDLINE_END_USER_BENCHMARK()
 	{
-		return NativeFunction.Natives.IS_COMMANDLINE_END_USER_BENCHMARK();
+		return NativeFunction.Natives.IS_COMMANDLINE_END_USER_BENCHMARK<bool>();
 	}
 	/// <summary>
 	/// 	Returns value of the &amp;apos;-benchmarkIterations&amp;apos; command line option.
 	/// </summary>
 	public static int GET_BENCHMARK_ITERATIONS()
 	{
-		return NativeFunction.Natives.GET_BENCHMARK_ITERATIONS();
+		return NativeFunction.Natives.GET_BENCHMARK_ITERATIONS<int>();
 	}
 	/// <summary>
 	/// 	Returns value of the &amp;apos;-benchmarkPass&amp;apos; command line option.
 	/// </summary>
 	public static int GET_BENCHMARK_PASS()
 	{
-		return NativeFunction.Natives.GET_BENCHMARK_PASS();
+		return NativeFunction.Natives.GET_BENCHMARK_PASS<int>();
 	}
 	/// <summary>
 	/// 	In singleplayer it does exactly what the name implies. In FiveM / GTA:Online it shows `Disconnecting from GTA Online` HUD and then quits the game.
@@ -15028,7 +15028,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ASYNC_INSTALL_FINISHED()
 	{
-		return NativeFunction.Natives.HAS_ASYNC_INSTALL_FINISHED();
+		return NativeFunction.Natives.HAS_ASYNC_INSTALL_FINISHED<bool>();
 	}
 	public static void CLEANUP_ASYNC_INSTALL()
 	{
@@ -15039,14 +15039,14 @@ public static class Natives
 	/// </summary>
 	public static bool PLM_IS_IN_CONSTRAINED_MODE()
 	{
-		return NativeFunction.Natives.PLM_IS_IN_CONSTRAINED_MODE();
+		return NativeFunction.Natives.PLM_IS_IN_CONSTRAINED_MODE<bool>();
 	}
 	/// <summary>
 	/// 	Returns duration of how long the game has been in power-saving mode (aka &amp;quot;constrained&amp;quot;) in milliseconds.
 	/// </summary>
 	public static int PLM_GET_CONSTRAINED_DURATION_MS()
 	{
-		return NativeFunction.Natives.PLM_GET_CONSTRAINED_DURATION_MS();
+		return NativeFunction.Natives.PLM_GET_CONSTRAINED_DURATION_MS<int>();
 	}
 	/// <summary>
 	/// 	If toggle is true, the ped&amp;apos;s head is shown in the pause menu<br/>
@@ -15061,7 +15061,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_PLAYER_IN_ANIMAL_FORM()
 	{
-		return NativeFunction.Natives.GET_IS_PLAYER_IN_ANIMAL_FORM();
+		return NativeFunction.Natives.GET_IS_PLAYER_IN_ANIMAL_FORM<bool>();
 	}
 	public static void SET_PLAYER_IS_REPEATING_A_MISSION(bool toggle)
 	{
@@ -15076,7 +15076,7 @@ public static class Natives
 	}
 	public static float GET_CITY_DENSITY()
 	{
-		return NativeFunction.Natives.GET_CITY_DENSITY();
+		return NativeFunction.Natives.GET_CITY_DENSITY<float>();
 	}
 	public static void USE_ACTIVE_CAMERA_FOR_TIMESLICING_CENTRE()
 	{
@@ -15088,7 +15088,7 @@ public static class Natives
 	}
 	public static int GET_CONTENT_ID_INDEX(ulong contentId)
 	{
-		return NativeFunction.Natives.GET_CONTENT_ID_INDEX(contentId);
+		return NativeFunction.Natives.GET_CONTENT_ID_INDEX<int>(contentId);
 	}
 	public static void _SET_CONTENT_PROP_TYPE(ulong model, int type)
 	{
@@ -15099,7 +15099,7 @@ public static class Natives
 	/// </summary>
 	public static int _GET_CONTENT_PROP_TYPE(ulong model)
 	{
-		return NativeFunction.Natives._GET_CONTENT_PROP_TYPE(model);
+		return NativeFunction.Natives._GET_CONTENT_PROP_TYPE<int>(model);
 	}
 	/*
 		MOBILE
@@ -15170,7 +15170,7 @@ public static class Natives
 	/// </summary>
 	public static bool CAN_PHONE_BE_SEEN_ON_SCREEN()
 	{
-		return NativeFunction.Natives.CAN_PHONE_BE_SEEN_ON_SCREEN();
+		return NativeFunction.Natives.CAN_PHONE_BE_SEEN_ON_SCREEN<bool>();
 	}
 	public static void SET_MOBILE_PHONE_DOF_STATE(bool toggle)
 	{
@@ -15237,7 +15237,7 @@ public static class Natives
 	}
 	public static bool CELL_CAM_IS_CHAR_VISIBLE_NO_FACE_CHECK(Entity entity)
 	{
-		return NativeFunction.Natives.CELL_CAM_IS_CHAR_VISIBLE_NO_FACE_CHECK(entity);
+		return NativeFunction.Natives.CELL_CAM_IS_CHAR_VISIBLE_NO_FACE_CHECK<bool>(entity);
 	}
 	public static void GET_MOBILE_PHONE_RENDER_ID(out int renderId)
 	{
@@ -15263,7 +15263,7 @@ public static class Natives
 	}
 	public static bool NETWORK_GET_PLAYER_IS_HIGH_EARNER()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_IS_HIGH_EARNER();
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_IS_HIGH_EARNER<bool>();
 	}
 	public static void NETWORK_CLEAR_CHARACTER_WALLET(int characterSlot)
 	{
@@ -15279,7 +15279,7 @@ public static class Natives
 	}
 	public static bool NETWORK_CAN_SHARE_JOB_CASH()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_SHARE_JOB_CASH();
+		return NativeFunction.Natives.NETWORK_CAN_SHARE_JOB_CASH<bool>();
 	}
 	/// <summary>
 	/// 	index<br/>
@@ -15330,11 +15330,11 @@ public static class Natives
 	}
 	public static bool NETWORK_MONEY_CAN_BET(int amount, bool p1, bool p2)
 	{
-		return NativeFunction.Natives.NETWORK_MONEY_CAN_BET(amount, p1, p2);
+		return NativeFunction.Natives.NETWORK_MONEY_CAN_BET<bool>(amount, p1, p2);
 	}
 	public static bool NETWORK_CAN_BET(int amount)
 	{
-		return NativeFunction.Natives.NETWORK_CAN_BET(amount);
+		return NativeFunction.Natives.NETWORK_CAN_BET<bool>(amount);
 	}
 	/// <summary>
 	/// 	GTAO_CASINO_HOUSE<br/>
@@ -15349,27 +15349,27 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_CASINO_CAN_BET(ulong hash)
 	{
-		return NativeFunction.Natives.NETWORK_CASINO_CAN_BET(hash);
+		return NativeFunction.Natives.NETWORK_CASINO_CAN_BET<bool>(hash);
 	}
 	public static bool NETWORK_CASINO_CAN_BET_PVC()
 	{
-		return NativeFunction.Natives.NETWORK_CASINO_CAN_BET_PVC();
+		return NativeFunction.Natives.NETWORK_CASINO_CAN_BET_PVC<bool>();
 	}
 	public static bool NETWORK_CASINO_CAN_BET_AMOUNT()
 	{
-		return NativeFunction.Natives.NETWORK_CASINO_CAN_BET_AMOUNT(0);
+		return NativeFunction.Natives.NETWORK_CASINO_CAN_BET_AMOUNT<bool>(0);
 	}
 	public static bool NETWORK_CASINO_CAN_BUY_CHIPS_PVC()
 	{
-		return NativeFunction.Natives.NETWORK_CASINO_CAN_BUY_CHIPS_PVC();
+		return NativeFunction.Natives.NETWORK_CASINO_CAN_BUY_CHIPS_PVC<bool>();
 	}
 	public static bool NETWORK_CASINO_BUY_CHIPS(int p0, int p1)
 	{
-		return NativeFunction.Natives.NETWORK_CASINO_BUY_CHIPS(p0, p1);
+		return NativeFunction.Natives.NETWORK_CASINO_BUY_CHIPS<bool>(p0, p1);
 	}
 	public static bool NETWORK_CASINO_SELL_CHIPS(int p0, int p1)
 	{
-		return NativeFunction.Natives.NETWORK_CASINO_SELL_CHIPS(p0, p1);
+		return NativeFunction.Natives.NETWORK_CASINO_SELL_CHIPS<bool>(p0, p1);
 	}
 	/// <summary>
 	/// 	Does nothing (it&amp;apos;s a nullsub).
@@ -15380,7 +15380,7 @@ public static class Natives
 	}
 	public static bool CAN_PAY_AMOUNT_TO_BOSS(int p0, int p1, int amount, out int p3)
 	{
-		return NativeFunction.Natives.CAN_PAY_AMOUNT_TO_BOSS(p0, p1, amount, out p3);
+		return NativeFunction.Natives.CAN_PAY_AMOUNT_TO_BOSS<bool>(p0, p1, amount, out p3);
 	}
 	public static void NETWORK_EARN_FROM_PICKUP(int amount)
 	{
@@ -15578,11 +15578,11 @@ public static class Natives
 	}
 	public static bool NETWORK_CAN_SPEND_MONEY(bool p1, bool p2, bool p3)
 	{
-		return NativeFunction.Natives.NETWORK_CAN_SPEND_MONEY(0, p1, p2, p3, 0, 0);
+		return NativeFunction.Natives.NETWORK_CAN_SPEND_MONEY<bool>(0, p1, p2, p3, 0, 0);
 	}
 	public static bool NETWORK_CAN_SPEND_MONEY2(bool p1, bool p2, bool p3)
 	{
-		return NativeFunction.Natives.NETWORK_CAN_SPEND_MONEY2(0, p1, p2, p3, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_CAN_SPEND_MONEY2<bool>(0, p1, p2, p3, 0, 0, 0);
 	}
 	public static void NETWORK_BUY_ITEM(int amount, ulong item, bool p4, string item_name, bool p9)
 	{
@@ -15766,14 +15766,14 @@ public static class Natives
 	/// </summary>
 	public static int NETWORK_SPEND_EARNED_FROM_BANK_AND_WALLETS(int amount)
 	{
-		return NativeFunction.Natives.NETWORK_SPEND_EARNED_FROM_BANK_AND_WALLETS(amount);
+		return NativeFunction.Natives.NETWORK_SPEND_EARNED_FROM_BANK_AND_WALLETS<int>(amount);
 	}
 	/// <summary>
 	/// 	This isn&amp;apos;t a hash collision.
 	/// </summary>
 	public static string PROCESS_CASH_GIFT(out int p0, out int p1, string p2)
 	{
-		return NativeFunction.Natives.PROCESS_CASH_GIFT(out p0, out p1, p2);
+		return NativeFunction.Natives.PROCESS_CASH_GIFT<string>(out p0, out p1, p2);
 	}
 	public static void NETWORK_SPENT_MOVE_SUBMARINE()
 	{
@@ -15813,7 +15813,7 @@ public static class Natives
 	}
 	public static bool NETWORK_ECONOMY_HAS_FIXED_CRAZY_NUMBERS()
 	{
-		return NativeFunction.Natives.NETWORK_ECONOMY_HAS_FIXED_CRAZY_NUMBERS();
+		return NativeFunction.Natives.NETWORK_ECONOMY_HAS_FIXED_CRAZY_NUMBERS<bool>();
 	}
 	public static void NETWORK_SPENT_JOB_SKIP(int amount, string matchId, bool p2, bool p3)
 	{
@@ -15821,7 +15821,7 @@ public static class Natives
 	}
 	public static bool NETWORK_SPENT_BOSS_GOON(int amount, bool p1, bool p2)
 	{
-		return NativeFunction.Natives.NETWORK_SPENT_BOSS_GOON(amount, p1, p2);
+		return NativeFunction.Natives.NETWORK_SPENT_BOSS_GOON<bool>(amount, p1, p2);
 	}
 	public static void NETWORK_SPEND_GOON(int p0, int p1, int amount)
 	{
@@ -16730,287 +16730,287 @@ public static class Natives
 	}
 	public static int NETWORK_GET_VC_BANK_BALANCE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_VC_BANK_BALANCE();
+		return NativeFunction.Natives.NETWORK_GET_VC_BANK_BALANCE<int>();
 	}
 	public static int NETWORK_GET_VC_WALLET_BALANCE(int characterSlot)
 	{
-		return NativeFunction.Natives.NETWORK_GET_VC_WALLET_BALANCE(characterSlot);
+		return NativeFunction.Natives.NETWORK_GET_VC_WALLET_BALANCE<int>(characterSlot);
 	}
 	public static int NETWORK_GET_VC_BALANCE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_VC_BALANCE();
+		return NativeFunction.Natives.NETWORK_GET_VC_BALANCE<int>();
 	}
 	public static int NETWORK_GET_EVC_BALANCE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_EVC_BALANCE();
+		return NativeFunction.Natives.NETWORK_GET_EVC_BALANCE<int>();
 	}
 	public static int NETWORK_GET_PVC_BALANCE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PVC_BALANCE();
+		return NativeFunction.Natives.NETWORK_GET_PVC_BALANCE<int>();
 	}
 	public static string NETWORK_GET_STRING_WALLET_BALANCE(int characterSlot)
 	{
-		return NativeFunction.Natives.NETWORK_GET_STRING_WALLET_BALANCE(characterSlot);
+		return NativeFunction.Natives.NETWORK_GET_STRING_WALLET_BALANCE<string>(characterSlot);
 	}
 	public static string NETWORK_GET_STRING_BANK_BALANCE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_STRING_BANK_BALANCE();
+		return NativeFunction.Natives.NETWORK_GET_STRING_BANK_BALANCE<string>();
 	}
 	public static string NETWORK_GET_STRING_BANK_WALLET_BALANCE(int character)
 	{
-		return NativeFunction.Natives.NETWORK_GET_STRING_BANK_WALLET_BALANCE(character);
+		return NativeFunction.Natives.NETWORK_GET_STRING_BANK_WALLET_BALANCE<string>(character);
 	}
 	/// <summary>
 	/// 	Returns true if wallet balance &amp;gt;= amount.
 	/// </summary>
 	public static bool NETWORK_GET_CAN_SPEND_FROM_WALLET(int amount, int characterSlot)
 	{
-		return NativeFunction.Natives.NETWORK_GET_CAN_SPEND_FROM_WALLET(amount, characterSlot);
+		return NativeFunction.Natives.NETWORK_GET_CAN_SPEND_FROM_WALLET<bool>(amount, characterSlot);
 	}
 	/// <summary>
 	/// 	Returns true if bank balance &amp;gt;= amount.
 	/// </summary>
 	public static bool NETWORK_GET_CAN_SPEND_FROM_BANK(int amount)
 	{
-		return NativeFunction.Natives.NETWORK_GET_CAN_SPEND_FROM_BANK(amount);
+		return NativeFunction.Natives.NETWORK_GET_CAN_SPEND_FROM_BANK<bool>(amount);
 	}
 	/// <summary>
 	/// 	Returns true if bank balance + wallet balance &amp;gt;= amount.
 	/// </summary>
 	public static bool NETWORK_GET_CAN_SPEND_FROM_BANK_AND_WALLET(int amount, int characterSlot)
 	{
-		return NativeFunction.Natives.NETWORK_GET_CAN_SPEND_FROM_BANK_AND_WALLET(amount, characterSlot);
+		return NativeFunction.Natives.NETWORK_GET_CAN_SPEND_FROM_BANK_AND_WALLET<bool>(amount, characterSlot);
 	}
 	/// <summary>
 	/// 	Retturns the same value as NETWORK_GET_REMAINING_TRANSFER_BALANCE.
 	/// </summary>
 	public static int NETWORK_GET_PVC_TRANSFER_BALANCE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PVC_TRANSFER_BALANCE();
+		return NativeFunction.Natives.NETWORK_GET_PVC_TRANSFER_BALANCE<int>();
 	}
 	/// <summary>
 	/// 	Returns false if amount &amp;gt; wallet balance or daily transfer limit has been hit.
 	/// </summary>
 	public static bool NETWORK_GET_CAN_TRANSFER_CASH(int amount)
 	{
-		return NativeFunction.Natives.NETWORK_GET_CAN_TRANSFER_CASH(amount);
+		return NativeFunction.Natives.NETWORK_GET_CAN_TRANSFER_CASH<bool>(amount);
 	}
 	public static bool NETWORK_CAN_RECEIVE_PLAYER_CASH()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_RECEIVE_PLAYER_CASH(0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_CAN_RECEIVE_PLAYER_CASH<bool>(0, 0, 0, 0);
 	}
 	/// <summary>
 	/// 	Returns the same value as NETWORK_GET_PVC_TRANSFER_BALANCE.
 	/// </summary>
 	public static int NETWORK_GET_REMAINING_TRANSFER_BALANCE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_REMAINING_TRANSFER_BALANCE();
+		return NativeFunction.Natives.NETWORK_GET_REMAINING_TRANSFER_BALANCE<int>();
 	}
 	/// <summary>
 	/// 	Does nothing and always returns 0.
 	/// </summary>
 	public static int WITHDRAW_VC(int amount)
 	{
-		return NativeFunction.Natives.WITHDRAW_VC(amount);
+		return NativeFunction.Natives.WITHDRAW_VC<int>(amount);
 	}
 	/// <summary>
 	/// 	Does nothing and always returns false.
 	/// </summary>
 	public static bool DEPOSIT_VC(int amount)
 	{
-		return NativeFunction.Natives.DEPOSIT_VC(amount);
+		return NativeFunction.Natives.DEPOSIT_VC<bool>(amount);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool HAS_VC_WITHDRAWAL_COMPLETED()
 	{
-		return NativeFunction.Natives.HAS_VC_WITHDRAWAL_COMPLETED(0);
+		return NativeFunction.Natives.HAS_VC_WITHDRAWAL_COMPLETED<bool>(0);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool WAS_VC_WITHDRAWAL_SUCCESSFUL()
 	{
-		return NativeFunction.Natives.WAS_VC_WITHDRAWAL_SUCCESSFUL(0);
+		return NativeFunction.Natives.WAS_VC_WITHDRAWAL_SUCCESSFUL<bool>(0);
 	}
 	/*
 		NETSHOPPING
 	*/
 	public static bool NET_GAMESERVER_USE_SERVER_TRANSACTIONS()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_USE_SERVER_TRANSACTIONS();
+		return NativeFunction.Natives.NET_GAMESERVER_USE_SERVER_TRANSACTIONS<bool>();
 	}
 	public static bool NET_GAMESERVER_CATALOG_ITEM_IS_VALID(string name)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_ITEM_IS_VALID(name);
+		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_ITEM_IS_VALID<bool>(name);
 	}
 	public static bool NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID(ulong hash)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID(hash);
+		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID<bool>(hash);
 	}
 	/// <summary>
 	/// 	bool is always true in game scripts
 	/// </summary>
 	public static int NET_GAMESERVER_GET_PRICE(ulong itemHash, ulong categoryHash, bool p2)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_GET_PRICE(itemHash, categoryHash, p2);
+		return NativeFunction.Natives.NET_GAMESERVER_GET_PRICE<int>(itemHash, categoryHash, p2);
 	}
 	public static bool NET_GAMESERVER_CATALOG_IS_VALID()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_IS_VALID();
+		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_IS_VALID<bool>();
 	}
 	public static bool NET_GAMESERVER_IS_CATALOG_CURRENT()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_IS_CATALOG_CURRENT();
+		return NativeFunction.Natives.NET_GAMESERVER_IS_CATALOG_CURRENT<bool>();
 	}
 	public static ulong NET_GAMESERVER_GET_CATALOG_CLOUD_CRC()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_GET_CATALOG_CLOUD_CRC();
+		return NativeFunction.Natives.NET_GAMESERVER_GET_CATALOG_CLOUD_CRC<ulong>();
 	}
 	public static bool NET_GAMESERVER_REFRESH_SERVER_CATALOG()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_REFRESH_SERVER_CATALOG();
+		return NativeFunction.Natives.NET_GAMESERVER_REFRESH_SERVER_CATALOG<bool>();
 	}
 	public static bool NET_GAMESERVER_RETRIEVE_CATALOG_REFRESH_STATUS(out int state)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_CATALOG_REFRESH_STATUS(out state);
+		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_CATALOG_REFRESH_STATUS<bool>(out state);
 	}
 	public static bool NET_GAMESERVER_INIT_SESSION()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_INIT_SESSION();
+		return NativeFunction.Natives.NET_GAMESERVER_INIT_SESSION<bool>();
 	}
 	public static bool NET_GAMESERVER_RETRIEVE_INIT_SESSION_STATUS(out int p0)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_INIT_SESSION_STATUS(out p0);
+		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_INIT_SESSION_STATUS<bool>(out p0);
 	}
 	public static bool NET_GAMESERVER_START_SESSION(int charSlot)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_START_SESSION(charSlot);
+		return NativeFunction.Natives.NET_GAMESERVER_START_SESSION<bool>(charSlot);
 	}
 	public static bool NET_GAMESERVER_START_SESSION_PENDING()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_START_SESSION_PENDING();
+		return NativeFunction.Natives.NET_GAMESERVER_START_SESSION_PENDING<bool>();
 	}
 	public static bool NET_GAMESERVER_RETRIEVE_START_SESSION_STATUS(out int p0)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_START_SESSION_STATUS(out p0);
+		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_START_SESSION_STATUS<bool>(out p0);
 	}
 	public static bool NET_GAMESERVER_RETRIEVE_SESSION_ERROR_CODE(out int p0)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_SESSION_ERROR_CODE(out p0);
+		return NativeFunction.Natives.NET_GAMESERVER_RETRIEVE_SESSION_ERROR_CODE<bool>(out p0);
 	}
 	public static bool NET_GAMESERVER_IS_SESSION_VALID(int charSlot)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_IS_SESSION_VALID(charSlot);
+		return NativeFunction.Natives.NET_GAMESERVER_IS_SESSION_VALID<bool>(charSlot);
 	}
 	public static bool NET_GAMESERVER_CLEAR_SESSION(int p0)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_CLEAR_SESSION(p0);
+		return NativeFunction.Natives.NET_GAMESERVER_CLEAR_SESSION<bool>(p0);
 	}
 	public static bool NET_GAMESERVER_SESSION_APPLY_RECEIVED_DATA(int charSlot)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_SESSION_APPLY_RECEIVED_DATA(charSlot);
+		return NativeFunction.Natives.NET_GAMESERVER_SESSION_APPLY_RECEIVED_DATA<bool>(charSlot);
 	}
 	public static bool NET_GAMESERVER_IS_SESSION_REFRESH_PENDING()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_IS_SESSION_REFRESH_PENDING();
+		return NativeFunction.Natives.NET_GAMESERVER_IS_SESSION_REFRESH_PENDING<bool>();
 	}
 	/// <summary>
 	/// 	Note: only one of the arguments can be set to true at a time
 	/// </summary>
 	public static bool NET_GAMESERVER_START_SESSION_RESTART(bool inventory, bool playerbalance)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_START_SESSION_RESTART(inventory, playerbalance);
+		return NativeFunction.Natives.NET_GAMESERVER_START_SESSION_RESTART<bool>(inventory, playerbalance);
 	}
 	public static bool NET_GAMESERVER_TRANSACTION_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_TRANSACTION_IN_PROGRESS();
+		return NativeFunction.Natives.NET_GAMESERVER_TRANSACTION_IN_PROGRESS<bool>();
 	}
-	public static bool NET_GAMESERVER_GET_SESSION_STATE_AND_STATUS(out int p0, bool p1)
+	public static bool NET_GAMESERVER_GET_SESSION_STATE_AND_STATUS(out int p0, out bool p1)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_GET_SESSION_STATE_AND_STATUS(out p0, p1);
+		return NativeFunction.Natives.NET_GAMESERVER_GET_SESSION_STATE_AND_STATUS<bool>(out p0, out p1);
 	}
 	public static bool NET_GAMESERVER_BASKET_START(out int transactionId, ulong categoryHash, ulong actionHash, int flags)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_BASKET_START(out transactionId, categoryHash, actionHash, flags);
+		return NativeFunction.Natives.NET_GAMESERVER_BASKET_START<bool>(out transactionId, categoryHash, actionHash, flags);
 	}
 	public static bool NET_GAMESERVER_BASKET_END()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_BASKET_END();
+		return NativeFunction.Natives.NET_GAMESERVER_BASKET_END<bool>();
 	}
 	public static bool NET_GAMESERVER_BASKET_IS_ACTIVE()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_BASKET_IS_ACTIVE();
+		return NativeFunction.Natives.NET_GAMESERVER_BASKET_IS_ACTIVE<bool>();
 	}
 	public static bool NET_GAMESERVER_BASKET_ADD_ITEM(int quantity)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_BASKET_ADD_ITEM(0, quantity);
+		return NativeFunction.Natives.NET_GAMESERVER_BASKET_ADD_ITEM<bool>(0, quantity);
 	}
 	public static bool NET_GAMESERVER_BASKET_IS_FULL()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_BASKET_IS_FULL();
+		return NativeFunction.Natives.NET_GAMESERVER_BASKET_IS_FULL<bool>();
 	}
 	public static bool NET_GAMESERVER_BASKET_APPLY_SERVER_DATA()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_BASKET_APPLY_SERVER_DATA(0, 0);
+		return NativeFunction.Natives.NET_GAMESERVER_BASKET_APPLY_SERVER_DATA<bool>(0, 0);
 	}
 	public static bool NET_GAMESERVER_CHECKOUT_START(int transactionId)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_CHECKOUT_START(transactionId);
+		return NativeFunction.Natives.NET_GAMESERVER_CHECKOUT_START<bool>(transactionId);
 	}
 	public static bool NET_GAMESERVER_BEGIN_SERVICE(out int transactionId, ulong categoryHash, ulong itemHash, ulong actionTypeHash, int value, int flags)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_BEGIN_SERVICE(out transactionId, categoryHash, itemHash, actionTypeHash, value, flags);
+		return NativeFunction.Natives.NET_GAMESERVER_BEGIN_SERVICE<bool>(out transactionId, categoryHash, itemHash, actionTypeHash, value, flags);
 	}
 	public static bool NET_GAMESERVER_END_SERVICE(int transactionId)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_END_SERVICE(transactionId);
+		return NativeFunction.Natives.NET_GAMESERVER_END_SERVICE<bool>(transactionId);
 	}
 	public static bool NET_GAMESERVER_DELETE_CHARACTER(int slot, bool transfer, ulong reason)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_DELETE_CHARACTER(slot, transfer, reason);
+		return NativeFunction.Natives.NET_GAMESERVER_DELETE_CHARACTER<bool>(slot, transfer, reason);
 	}
 	public static int NET_GAMESERVER_DELETE_CHARACTER_GET_STATUS()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_DELETE_CHARACTER_GET_STATUS();
+		return NativeFunction.Natives.NET_GAMESERVER_DELETE_CHARACTER_GET_STATUS<int>();
 	}
 	public static bool NET_GAMESERVER_DELETE_SET_TELEMETRY_NONCE_SEED()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_DELETE_SET_TELEMETRY_NONCE_SEED();
+		return NativeFunction.Natives.NET_GAMESERVER_DELETE_SET_TELEMETRY_NONCE_SEED<bool>();
 	}
 	public static bool NET_GAMESERVER_TRANSFER_BANK_TO_WALLET(int charSlot, int amount)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_BANK_TO_WALLET(charSlot, amount);
+		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_BANK_TO_WALLET<bool>(charSlot, amount);
 	}
 	public static bool NET_GAMESERVER_TRANSFER_WALLET_TO_BANK(int charSlot, int amount)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_WALLET_TO_BANK(charSlot, amount);
+		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_WALLET_TO_BANK<bool>(charSlot, amount);
 	}
 	/// <summary>
 	/// 	Same as 0x350AA5EBC03D3BD2
 	/// </summary>
 	public static int NET_GAMESERVER_TRANSFER_BANK_TO_WALLET_GET_STATUS()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_BANK_TO_WALLET_GET_STATUS();
+		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_BANK_TO_WALLET_GET_STATUS<int>();
 	}
 	/// <summary>
 	/// 	Same as 0x23789E777D14CE44
 	/// </summary>
 	public static int NET_GAMESERVER_TRANSFER_WALLET_TO_BANK_GET_STATUS()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_WALLET_TO_BANK_GET_STATUS();
+		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_WALLET_TO_BANK_GET_STATUS<int>();
 	}
 	/// <summary>
 	/// 	Used to be NETWORK_SHOP_CASH_TRANSFER_SET_TELEMETRY_NONCE_SEED
 	/// </summary>
 	public static bool NET_GAMESERVER_TRANSFER_CASH_SET_TELEMETRY_NONCE_SEED()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_CASH_SET_TELEMETRY_NONCE_SEED();
+		return NativeFunction.Natives.NET_GAMESERVER_TRANSFER_CASH_SET_TELEMETRY_NONCE_SEED<bool>();
 	}
 	public static bool NET_GAMESERVER_SET_TELEMETRY_NONCE_SEED(int p0)
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_SET_TELEMETRY_NONCE_SEED(p0);
+		return NativeFunction.Natives.NET_GAMESERVER_SET_TELEMETRY_NONCE_SEED<bool>(p0);
 	}
 	/*
 		NETWORK
@@ -17027,14 +17027,14 @@ public static class Natives
 	/// </summary>
 	public static string GET_ONLINE_VERSION()
 	{
-		return NativeFunction.Natives.GET_ONLINE_VERSION();
+		return NativeFunction.Natives.GET_ONLINE_VERSION<string>();
 	}
 	/// <summary>
 	/// 	Returns whether the player is signed into Social Club.
 	/// </summary>
 	public static bool NETWORK_IS_SIGNED_IN()
 	{
-		return NativeFunction.Natives.NETWORK_IS_SIGNED_IN();
+		return NativeFunction.Natives.NETWORK_IS_SIGNED_IN<bool>();
 	}
 	/// <summary>
 	/// 	Returns whether the game is not in offline mode.<br/>
@@ -17043,21 +17043,21 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_IS_SIGNED_ONLINE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_SIGNED_ONLINE();
+		return NativeFunction.Natives.NETWORK_IS_SIGNED_ONLINE<bool>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool NETWORK_IS_NP_AVAILABLE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_NP_AVAILABLE();
+		return NativeFunction.Natives.NETWORK_IS_NP_AVAILABLE<bool>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool NETWORK_IS_NP_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_NP_PENDING();
+		return NativeFunction.Natives.NETWORK_IS_NP_PENDING<bool>();
 	}
 	/// <summary>
 	/// 	Hardcoded to return zero.<br/>
@@ -17077,125 +17077,125 @@ public static class Natives
 	/// </summary>
 	public static int NETWORK_GET_NP_UNAVAILABLE_REASON()
 	{
-		return NativeFunction.Natives.NETWORK_GET_NP_UNAVAILABLE_REASON();
+		return NativeFunction.Natives.NETWORK_GET_NP_UNAVAILABLE_REASON<int>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool NETWORK_IS_CONNETED_TO_NP_PRESENCE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_CONNETED_TO_NP_PRESENCE();
+		return NativeFunction.Natives.NETWORK_IS_CONNETED_TO_NP_PRESENCE<bool>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static bool NETWORK_IS_LOGGED_IN_TO_PSN()
 	{
-		return NativeFunction.Natives.NETWORK_IS_LOGGED_IN_TO_PSN();
+		return NativeFunction.Natives.NETWORK_IS_LOGGED_IN_TO_PSN<bool>();
 	}
 	/// <summary>
 	/// 	Returns whether the signed-in user has valid Rockstar Online Services (ROS) credentials.
 	/// </summary>
 	public static bool NETWORK_HAS_VALID_ROS_CREDENTIALS()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_VALID_ROS_CREDENTIALS();
+		return NativeFunction.Natives.NETWORK_HAS_VALID_ROS_CREDENTIALS<bool>();
 	}
 	public static bool NETWORK_IS_REFRESHING_ROS_CREDENTIALS()
 	{
-		return NativeFunction.Natives.NETWORK_IS_REFRESHING_ROS_CREDENTIALS();
+		return NativeFunction.Natives.NETWORK_IS_REFRESHING_ROS_CREDENTIALS<bool>();
 	}
 	public static bool NETWORK_IS_CLOUD_AVAILABLE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_CLOUD_AVAILABLE();
+		return NativeFunction.Natives.NETWORK_IS_CLOUD_AVAILABLE<bool>();
 	}
 	public static bool NETWORK_HAS_SOCIAL_CLUB_ACCOUNT()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_SOCIAL_CLUB_ACCOUNT();
+		return NativeFunction.Natives.NETWORK_HAS_SOCIAL_CLUB_ACCOUNT<bool>();
 	}
 	public static bool NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT()
 	{
-		return NativeFunction.Natives.NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT();
+		return NativeFunction.Natives.NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT<bool>();
 	}
 	/// <summary>
 	/// 	If you are host, returns true else returns false.
 	/// </summary>
 	public static bool NETWORK_IS_HOST()
 	{
-		return NativeFunction.Natives.NETWORK_IS_HOST();
+		return NativeFunction.Natives.NETWORK_IS_HOST<bool>();
 	}
 	public static Player NETWORK_GET_HOST_PLAYER_INDEX()
 	{
-		return NativeFunction.Natives.NETWORK_GET_HOST_PLAYER_INDEX();
+		return NativeFunction.Natives.NETWORK_GET_HOST_PLAYER_INDEX<Player>();
 	}
 	public static bool NETWORK_WAS_GAME_SUSPENDED()
 	{
-		return NativeFunction.Natives.NETWORK_WAS_GAME_SUSPENDED();
+		return NativeFunction.Natives.NETWORK_WAS_GAME_SUSPENDED<bool>();
 	}
 	public static bool NETWORK_HAVE_ONLINE_PRIVILEGES()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_ONLINE_PRIVILEGES();
+		return NativeFunction.Natives.NETWORK_HAVE_ONLINE_PRIVILEGES<bool>();
 	}
 	public static bool NETWORK_HAS_AGE_RESTRICTIONS()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_AGE_RESTRICTIONS();
+		return NativeFunction.Natives.NETWORK_HAS_AGE_RESTRICTIONS<bool>();
 	}
 	public static bool NETWORK_HAVE_USER_CONTENT_PRIVILEGES(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_USER_CONTENT_PRIVILEGES(p0);
+		return NativeFunction.Natives.NETWORK_HAVE_USER_CONTENT_PRIVILEGES<bool>(p0);
 	}
 	public static bool NETWORK_HAVE_COMMUNICATION_PRIVILEGES(int p0, Player player)
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_COMMUNICATION_PRIVILEGES(p0, player);
+		return NativeFunction.Natives.NETWORK_HAVE_COMMUNICATION_PRIVILEGES<bool>(p0, player);
 	}
 	/// <summary>
 	/// 	Appears to be PlayStation-specific. Always returns true on other platforms if signed in with the primary user profile
 	/// </summary>
 	public static bool _NETWORK_HAVE_PLATFORM_COMMUNICATION_PRIVILEGES()
 	{
-		return NativeFunction.Natives._NETWORK_HAVE_PLATFORM_COMMUNICATION_PRIVILEGES();
+		return NativeFunction.Natives._NETWORK_HAVE_PLATFORM_COMMUNICATION_PRIVILEGES<bool>();
 	}
 	public static bool NETWORK_CHECK_ONLINE_PRIVILEGES(bool p1)
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_ONLINE_PRIVILEGES(0, p1);
+		return NativeFunction.Natives.NETWORK_CHECK_ONLINE_PRIVILEGES<bool>(0, p1);
 	}
 	public static bool NETWORK_CHECK_USER_CONTENT_PRIVILEGES(int p0, int p1, bool p2)
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_USER_CONTENT_PRIVILEGES(p0, p1, p2);
+		return NativeFunction.Natives.NETWORK_CHECK_USER_CONTENT_PRIVILEGES<bool>(p0, p1, p2);
 	}
 	public static bool NETWORK_CHECK_COMMUNICATION_PRIVILEGES(int p0, int p1, bool p2)
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_COMMUNICATION_PRIVILEGES(p0, p1, p2);
+		return NativeFunction.Natives.NETWORK_CHECK_COMMUNICATION_PRIVILEGES<bool>(p0, p1, p2);
 	}
 	public static bool NETWORK_CHECK_TEXT_COMMUNICATION_PRIVILEGES()
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_TEXT_COMMUNICATION_PRIVILEGES(0, 0, 0);
+		return NativeFunction.Natives.NETWORK_CHECK_TEXT_COMMUNICATION_PRIVILEGES<bool>(0, 0, 0);
 	}
 	public static bool NETWORK_IS_USING_ONLINE_PROMOTION()
 	{
-		return NativeFunction.Natives.NETWORK_IS_USING_ONLINE_PROMOTION();
+		return NativeFunction.Natives.NETWORK_IS_USING_ONLINE_PROMOTION<bool>();
 	}
 	public static bool NETWORK_SHOULD_SHOW_PROMOTION_ALERT_SCREEN()
 	{
-		return NativeFunction.Natives.NETWORK_SHOULD_SHOW_PROMOTION_ALERT_SCREEN();
+		return NativeFunction.Natives.NETWORK_SHOULD_SHOW_PROMOTION_ALERT_SCREEN<bool>();
 	}
 	public static bool NETWORK_HAS_SOCIAL_NETWORKING_SHARING_PRIV()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_SOCIAL_NETWORKING_SHARING_PRIV();
+		return NativeFunction.Natives.NETWORK_HAS_SOCIAL_NETWORKING_SHARING_PRIV<bool>();
 	}
 	public static int NETWORK_GET_AGE_GROUP()
 	{
-		return NativeFunction.Natives.NETWORK_GET_AGE_GROUP();
+		return NativeFunction.Natives.NETWORK_GET_AGE_GROUP<int>();
 	}
 	public static bool NETWORK_CHECK_PRIVILEGES()
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_PRIVILEGES(0, 0, 0);
+		return NativeFunction.Natives.NETWORK_CHECK_PRIVILEGES<bool>(0, 0, 0);
 	}
 	/// <summary>
 	/// 	Hardcoded to return false.
 	/// </summary>
 	public static bool NETWORK_IS_PRIVILEGE_CHECK_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.NETWORK_IS_PRIVILEGE_CHECK_IN_PROGRESS();
+		return NativeFunction.Natives.NETWORK_IS_PRIVILEGE_CHECK_IN_PROGRESS<bool>();
 	}
 	public static void NETWORK_SET_PRIVILEGE_CHECK_RESULT_NOT_NEEDED()
 	{
@@ -17206,15 +17206,15 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_RESOLVE_PRIVILEGE_USER_CONTENT()
 	{
-		return NativeFunction.Natives.NETWORK_RESOLVE_PRIVILEGE_USER_CONTENT();
+		return NativeFunction.Natives.NETWORK_RESOLVE_PRIVILEGE_USER_CONTENT<bool>();
 	}
 	public static bool NETWORK_HAVE_PLATFORM_SUBSCRIPTION()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_PLATFORM_SUBSCRIPTION();
+		return NativeFunction.Natives.NETWORK_HAVE_PLATFORM_SUBSCRIPTION<bool>();
 	}
 	public static bool NETWORK_IS_PLATFORM_SUBSCRIPTION_CHECK_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLATFORM_SUBSCRIPTION_CHECK_PENDING();
+		return NativeFunction.Natives.NETWORK_IS_PLATFORM_SUBSCRIPTION_CHECK_PENDING<bool>();
 	}
 	public static void NETWORK_SHOW_ACCOUNT_UPGRADE_UI()
 	{
@@ -17222,15 +17222,15 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_SHOWING_SYSTEM_UI_OR_RECENTLY_REQUESTED_UPSELL()
 	{
-		return NativeFunction.Natives.NETWORK_IS_SHOWING_SYSTEM_UI_OR_RECENTLY_REQUESTED_UPSELL();
+		return NativeFunction.Natives.NETWORK_IS_SHOWING_SYSTEM_UI_OR_RECENTLY_REQUESTED_UPSELL<bool>();
 	}
 	public static bool NETWORK_NEED_TO_START_NEW_GAME_BUT_BLOCKED()
 	{
-		return NativeFunction.Natives.NETWORK_NEED_TO_START_NEW_GAME_BUT_BLOCKED();
+		return NativeFunction.Natives.NETWORK_NEED_TO_START_NEW_GAME_BUT_BLOCKED<bool>();
 	}
 	public static bool NETWORK_CAN_BAIL()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_BAIL();
+		return NativeFunction.Natives.NETWORK_CAN_BAIL<bool>();
 	}
 	public static void NETWORK_BAIL(int p0, int p1, int p2)
 	{
@@ -17242,15 +17242,15 @@ public static class Natives
 	}
 	public static bool NETWORK_TRANSITION_START(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_TRANSITION_START(p0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_TRANSITION_START<bool>(p0, 0, 0, 0);
 	}
 	public static bool NETWORK_TRANSITION_ADD_STAGE(ulong hash, int p1, int p2, int state, int p4)
 	{
-		return NativeFunction.Natives.NETWORK_TRANSITION_ADD_STAGE(hash, p1, p2, state, p4);
+		return NativeFunction.Natives.NETWORK_TRANSITION_ADD_STAGE<bool>(hash, p1, p2, state, p4);
 	}
 	public static bool NETWORK_TRANSITION_FINISH()
 	{
-		return NativeFunction.Natives.NETWORK_TRANSITION_FINISH(0, 0, 0);
+		return NativeFunction.Natives.NETWORK_TRANSITION_FINISH<bool>(0, 0, 0);
 	}
 	/// <summary>
 	/// 	11 - Need to download tunables.<br/>
@@ -17260,72 +17260,72 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_CAN_ACCESS_MULTIPLAYER(out int loadingState)
 	{
-		return NativeFunction.Natives.NETWORK_CAN_ACCESS_MULTIPLAYER(out loadingState);
+		return NativeFunction.Natives.NETWORK_CAN_ACCESS_MULTIPLAYER<bool>(out loadingState);
 	}
 	public static bool NETWORK_IS_MULTIPLAYER_DISABLED()
 	{
-		return NativeFunction.Natives.NETWORK_IS_MULTIPLAYER_DISABLED();
+		return NativeFunction.Natives.NETWORK_IS_MULTIPLAYER_DISABLED<bool>();
 	}
 	public static bool NETWORK_CAN_ENTER_MULTIPLAYER()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_ENTER_MULTIPLAYER();
+		return NativeFunction.Natives.NETWORK_CAN_ENTER_MULTIPLAYER<bool>();
 	}
 	public static bool NETWORK_SESSION_DO_FREEROAM_QUICKMATCH()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_DO_FREEROAM_QUICKMATCH(0, 0, 0);
+		return NativeFunction.Natives.NETWORK_SESSION_DO_FREEROAM_QUICKMATCH<bool>(0, 0, 0);
 	}
 	public static bool NETWORK_SESSION_DO_FRIEND_MATCHMAKING(int p0, int p1, int p2)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_DO_FRIEND_MATCHMAKING(p0, p1, p2);
+		return NativeFunction.Natives.NETWORK_SESSION_DO_FRIEND_MATCHMAKING<bool>(p0, p1, p2);
 	}
 	/// <summary>
 	/// 	p4 seems to be unused in 1.60/build 2628
 	/// </summary>
 	public static bool NETWORK_SESSION_DO_CREW_MATCHMAKING(int crewId, int p1, int p2, int maxPlayers)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_DO_CREW_MATCHMAKING(crewId, p1, p2, maxPlayers);
+		return NativeFunction.Natives.NETWORK_SESSION_DO_CREW_MATCHMAKING<bool>(crewId, p1, p2, maxPlayers);
 	}
 	public static bool NETWORK_SESSION_DO_ACTIVITY_QUICKMATCH()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_DO_ACTIVITY_QUICKMATCH(0, 0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_SESSION_DO_ACTIVITY_QUICKMATCH<bool>(0, 0, 0, 0, 0);
 	}
 	/// <summary>
 	/// 	Does nothing in online but in offline it will cause the screen to fade to black. Nothing happens past then, the screen will sit at black until you restart GTA. Other stuff must be needed to actually host a session.
 	/// </summary>
 	public static bool NETWORK_SESSION_HOST(int p0, int maxPlayers, bool p2)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_HOST(p0, maxPlayers, p2);
+		return NativeFunction.Natives.NETWORK_SESSION_HOST<bool>(p0, maxPlayers, p2);
 	}
 	public static bool NETWORK_SESSION_HOST_CLOSED(int p0, int maxPlayers)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_HOST_CLOSED(p0, maxPlayers);
+		return NativeFunction.Natives.NETWORK_SESSION_HOST_CLOSED<bool>(p0, maxPlayers);
 	}
 	/// <summary>
 	/// 	Does nothing in online but in offline it will cause the screen to fade to black. Nothing happens past then, the screen will sit at black until you restart GTA. Other stuff must be needed to actually host a session.
 	/// </summary>
 	public static bool NETWORK_SESSION_HOST_FRIENDS_ONLY(int p0, int maxPlayers)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_HOST_FRIENDS_ONLY(p0, maxPlayers);
+		return NativeFunction.Natives.NETWORK_SESSION_HOST_FRIENDS_ONLY<bool>(p0, maxPlayers);
 	}
 	public static bool NETWORK_SESSION_IS_CLOSED_FRIENDS()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_CLOSED_FRIENDS();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_CLOSED_FRIENDS<bool>();
 	}
 	public static bool NETWORK_SESSION_IS_CLOSED_CREW()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_CLOSED_CREW();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_CLOSED_CREW<bool>();
 	}
 	public static bool NETWORK_SESSION_IS_SOLO()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_SOLO();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_SOLO<bool>();
 	}
 	public static bool NETWORK_SESSION_IS_PRIVATE()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_PRIVATE();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_PRIVATE<bool>();
 	}
 	public static bool _NETWORK_SESSION_LEAVE_INCLUDING_REASON(int leaveFlags, int leaveReason)
 	{
-		return NativeFunction.Natives._NETWORK_SESSION_LEAVE_INCLUDING_REASON(leaveFlags, leaveReason);
+		return NativeFunction.Natives._NETWORK_SESSION_LEAVE_INCLUDING_REASON<bool>(leaveFlags, leaveReason);
 	}
 	/// <summary>
 	/// 	p0 is always false and p1 varies.<br/>
@@ -17335,11 +17335,11 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_SESSION_END(bool p0, bool p1)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_END(p0, p1);
+		return NativeFunction.Natives.NETWORK_SESSION_END<bool>(p0, p1);
 	}
 	public static bool NETWORK_SESSION_LEAVE()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_LEAVE(0);
+		return NativeFunction.Natives.NETWORK_SESSION_LEAVE<bool>(0);
 	}
 	/// <summary>
 	/// 	Only works as host.
@@ -17350,19 +17350,19 @@ public static class Natives
 	}
 	public static bool NETWORK_SESSION_GET_KICK_VOTE(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_GET_KICK_VOTE(player);
+		return NativeFunction.Natives.NETWORK_SESSION_GET_KICK_VOTE<bool>(player);
 	}
 	public static bool NETWORK_SESSION_RESERVE_SLOTS_TRANSITION()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_RESERVE_SLOTS_TRANSITION(0, 0, 0);
+		return NativeFunction.Natives.NETWORK_SESSION_RESERVE_SLOTS_TRANSITION<bool>(0, 0, 0);
 	}
 	public static bool NETWORK_JOIN_PREVIOUSLY_FAILED_SESSION()
 	{
-		return NativeFunction.Natives.NETWORK_JOIN_PREVIOUSLY_FAILED_SESSION();
+		return NativeFunction.Natives.NETWORK_JOIN_PREVIOUSLY_FAILED_SESSION<bool>();
 	}
 	public static bool NETWORK_JOIN_PREVIOUSLY_FAILED_TRANSITION()
 	{
-		return NativeFunction.Natives.NETWORK_JOIN_PREVIOUSLY_FAILED_TRANSITION();
+		return NativeFunction.Natives.NETWORK_JOIN_PREVIOUSLY_FAILED_TRANSITION<bool>();
 	}
 	public static void NETWORK_SESSION_SET_MATCHMAKING_GROUP(int matchmakingGroup)
 	{
@@ -17379,7 +17379,7 @@ public static class Natives
 	}
 	public static int NETWORK_SESSION_GET_MATCHMAKING_GROUP_FREE(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_GET_MATCHMAKING_GROUP_FREE(p0);
+		return NativeFunction.Natives.NETWORK_SESSION_GET_MATCHMAKING_GROUP_FREE<int>(p0);
 	}
 	/// <summary>
 	/// 	groupId range: [0, 4]
@@ -17394,7 +17394,7 @@ public static class Natives
 	}
 	public static int NETWORK_SESSION_GET_UNIQUE_CREW_LIMIT()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_GET_UNIQUE_CREW_LIMIT();
+		return NativeFunction.Natives.NETWORK_SESSION_GET_UNIQUE_CREW_LIMIT<int>();
 	}
 	public static void NETWORK_SESSION_SET_UNIQUE_CREW_LIMIT_TRANSITION()
 	{
@@ -17452,11 +17452,11 @@ public static class Natives
 	}
 	public static int NETWORK_SESSION_GET_HOST_AIM_PREFERENCE()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_GET_HOST_AIM_PREFERENCE();
+		return NativeFunction.Natives.NETWORK_SESSION_GET_HOST_AIM_PREFERENCE<int>();
 	}
 	public static bool NETWORK_FIND_GAMERS_IN_CREW(int crewId)
 	{
-		return NativeFunction.Natives.NETWORK_FIND_GAMERS_IN_CREW(crewId);
+		return NativeFunction.Natives.NETWORK_FIND_GAMERS_IN_CREW<bool>(crewId);
 	}
 	/// <summary>
 	/// 	Uses attributes to find players with similar stats. Upper/Lower limit must be above zero or the fallback limit +/-0.1 is used.<br/>
@@ -17475,23 +17475,23 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_FIND_MATCHED_GAMERS(int attribute, float fallbackLimit, float lowerLimit, float upperLimit)
 	{
-		return NativeFunction.Natives.NETWORK_FIND_MATCHED_GAMERS(attribute, fallbackLimit, lowerLimit, upperLimit);
+		return NativeFunction.Natives.NETWORK_FIND_MATCHED_GAMERS<bool>(attribute, fallbackLimit, lowerLimit, upperLimit);
 	}
 	public static bool NETWORK_IS_FINDING_GAMERS()
 	{
-		return NativeFunction.Natives.NETWORK_IS_FINDING_GAMERS();
+		return NativeFunction.Natives.NETWORK_IS_FINDING_GAMERS<bool>();
 	}
 	public static bool NETWORK_DID_FIND_GAMERS_SUCCEED()
 	{
-		return NativeFunction.Natives.NETWORK_DID_FIND_GAMERS_SUCCEED();
+		return NativeFunction.Natives.NETWORK_DID_FIND_GAMERS_SUCCEED<bool>();
 	}
 	public static int NETWORK_GET_NUM_FOUND_GAMERS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUM_FOUND_GAMERS();
+		return NativeFunction.Natives.NETWORK_GET_NUM_FOUND_GAMERS<int>();
 	}
 	public static bool NETWORK_GET_FOUND_GAMER()
 	{
-		return NativeFunction.Natives.NETWORK_GET_FOUND_GAMER(0, 0);
+		return NativeFunction.Natives.NETWORK_GET_FOUND_GAMER<bool>(0, 0);
 	}
 	public static void NETWORK_CLEAR_FOUND_GAMERS()
 	{
@@ -17499,23 +17499,23 @@ public static class Natives
 	}
 	public static bool NETWORK_QUEUE_GAMER_FOR_STATUS()
 	{
-		return NativeFunction.Natives.NETWORK_QUEUE_GAMER_FOR_STATUS(0);
+		return NativeFunction.Natives.NETWORK_QUEUE_GAMER_FOR_STATUS<bool>(0);
 	}
 	public static bool NETWORK_GET_GAMER_STATUS_FROM_QUEUE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_GAMER_STATUS_FROM_QUEUE();
+		return NativeFunction.Natives.NETWORK_GET_GAMER_STATUS_FROM_QUEUE<bool>();
 	}
 	public static bool NETWORK_IS_GETTING_GAMER_STATUS()
 	{
-		return NativeFunction.Natives.NETWORK_IS_GETTING_GAMER_STATUS();
+		return NativeFunction.Natives.NETWORK_IS_GETTING_GAMER_STATUS<bool>();
 	}
 	public static bool NETWORK_DID_GET_GAMER_STATUS_SUCCEED()
 	{
-		return NativeFunction.Natives.NETWORK_DID_GET_GAMER_STATUS_SUCCEED();
+		return NativeFunction.Natives.NETWORK_DID_GET_GAMER_STATUS_SUCCEED<bool>();
 	}
 	public static bool NETWORK_GET_GAMER_STATUS_RESULT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_GAMER_STATUS_RESULT(0, 0);
+		return NativeFunction.Natives.NETWORK_GET_GAMER_STATUS_RESULT<bool>(0, 0);
 	}
 	public static void NETWORK_CLEAR_GET_GAMER_STATUS()
 	{
@@ -17535,22 +17535,22 @@ public static class Natives
 	}
 	public static bool NETWORK_HAS_PENDING_INVITE()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_PENDING_INVITE();
+		return NativeFunction.Natives.NETWORK_HAS_PENDING_INVITE<bool>();
 	}
 	public static bool NETWORK_HAS_CONFIRMED_INVITE()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_CONFIRMED_INVITE();
+		return NativeFunction.Natives.NETWORK_HAS_CONFIRMED_INVITE<bool>();
 	}
 	/// <summary>
 	/// 	Triggers a CEventNetworkInviteConfirmed event
 	/// </summary>
 	public static bool NETWORK_REQUEST_INVITE_CONFIRMED_EVENT()
 	{
-		return NativeFunction.Natives.NETWORK_REQUEST_INVITE_CONFIRMED_EVENT();
+		return NativeFunction.Natives.NETWORK_REQUEST_INVITE_CONFIRMED_EVENT<bool>();
 	}
 	public static bool NETWORK_SESSION_WAS_INVITED()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_WAS_INVITED();
+		return NativeFunction.Natives.NETWORK_SESSION_WAS_INVITED<bool>();
 	}
 	public static void NETWORK_SESSION_GET_INVITER()
 	{
@@ -17561,11 +17561,11 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_SESSION_IS_AWAITING_INVITE_RESPONSE()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_AWAITING_INVITE_RESPONSE();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_AWAITING_INVITE_RESPONSE<bool>();
 	}
 	public static bool NETWORK_SESSION_IS_DISPLAYING_INVITE_CONFIRMATION()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_DISPLAYING_INVITE_CONFIRMATION();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_DISPLAYING_INVITE_CONFIRMATION<bool>();
 	}
 	public static void NETWORK_SUPPRESS_INVITE(bool toggle)
 	{
@@ -17597,7 +17597,7 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_OFFLINE_INVITE_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_OFFLINE_INVITE_PENDING();
+		return NativeFunction.Natives.NETWORK_IS_OFFLINE_INVITE_PENDING<bool>();
 	}
 	public static void NETWORK_CLEAR_OFFLINE_INVITE_PENDING()
 	{
@@ -17608,7 +17608,7 @@ public static class Natives
 	/// </summary>
 	public static string _NETWORK_INVITE_GET_JOIN_FAIL_REASON()
 	{
-		return NativeFunction.Natives._NETWORK_INVITE_GET_JOIN_FAIL_REASON();
+		return NativeFunction.Natives._NETWORK_INVITE_GET_JOIN_FAIL_REASON<string>();
 	}
 	/// <summary>
 	/// 	Clears the failed invite join alert reason
@@ -17634,22 +17634,22 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_GAME_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.NETWORK_IS_GAME_IN_PROGRESS();
+		return NativeFunction.Natives.NETWORK_IS_GAME_IN_PROGRESS<bool>();
 	}
 	public static bool NETWORK_IS_SESSION_ACTIVE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_SESSION_ACTIVE();
+		return NativeFunction.Natives.NETWORK_IS_SESSION_ACTIVE<bool>();
 	}
 	public static bool NETWORK_IS_IN_SESSION()
 	{
-		return NativeFunction.Natives.NETWORK_IS_IN_SESSION();
+		return NativeFunction.Natives.NETWORK_IS_IN_SESSION<bool>();
 	}
 	/// <summary>
 	/// 	Hardcoded to return 0.
 	/// </summary>
 	public static bool _NETWORK_IS_AMERICAS_VERSION()
 	{
-		return NativeFunction.Natives._NETWORK_IS_AMERICAS_VERSION();
+		return NativeFunction.Natives._NETWORK_IS_AMERICAS_VERSION<bool>();
 	}
 	/// <summary>
 	/// 	This checks if player is playing on gta online or not.<br/>
@@ -17657,19 +17657,19 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_IS_SESSION_STARTED()
 	{
-		return NativeFunction.Natives.NETWORK_IS_SESSION_STARTED();
+		return NativeFunction.Natives.NETWORK_IS_SESSION_STARTED<bool>();
 	}
 	public static bool NETWORK_IS_SESSION_BUSY()
 	{
-		return NativeFunction.Natives.NETWORK_IS_SESSION_BUSY();
+		return NativeFunction.Natives.NETWORK_IS_SESSION_BUSY<bool>();
 	}
 	public static bool NETWORK_CAN_SESSION_END()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_SESSION_END();
+		return NativeFunction.Natives.NETWORK_CAN_SESSION_END<bool>();
 	}
 	public static int NETWORK_GET_GAME_MODE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_GAME_MODE();
+		return NativeFunction.Natives.NETWORK_GET_GAME_MODE<int>();
 	}
 	public static void NETWORK_SESSION_MARK_VISIBLE(bool toggle)
 	{
@@ -17677,7 +17677,7 @@ public static class Natives
 	}
 	public static bool NETWORK_SESSION_IS_VISIBLE()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_VISIBLE();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_VISIBLE<bool>();
 	}
 	public static void NETWORK_SESSION_BLOCK_JOIN_REQUESTS(bool toggle)
 	{
@@ -17692,15 +17692,15 @@ public static class Natives
 	}
 	public static int NETWORK_SESSION_GET_PRIVATE_SLOTS()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_GET_PRIVATE_SLOTS();
+		return NativeFunction.Natives.NETWORK_SESSION_GET_PRIVATE_SLOTS<int>();
 	}
 	public static bool NETWORK_SESSION_VOICE_HOST()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_VOICE_HOST();
+		return NativeFunction.Natives.NETWORK_SESSION_VOICE_HOST<bool>();
 	}
 	public static bool NETWORK_SESSION_VOICE_LEAVE()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_VOICE_LEAVE();
+		return NativeFunction.Natives.NETWORK_SESSION_VOICE_LEAVE<bool>();
 	}
 	public static void NETWORK_SESSION_VOICE_CONNECT_TO_PLAYER()
 	{
@@ -17716,22 +17716,22 @@ public static class Natives
 	}
 	public static bool NETWORK_SESSION_IS_IN_VOICE_SESSION()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_IN_VOICE_SESSION();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_IN_VOICE_SESSION<bool>();
 	}
 	public static bool NETWORK_SESSION_IS_VOICE_SESSION_ACTIVE()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_VOICE_SESSION_ACTIVE();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_VOICE_SESSION_ACTIVE<bool>();
 	}
 	public static bool NETWORK_SESSION_IS_VOICE_SESSION_BUSY()
 	{
-		return NativeFunction.Natives.NETWORK_SESSION_IS_VOICE_SESSION_BUSY();
+		return NativeFunction.Natives.NETWORK_SESSION_IS_VOICE_SESSION_BUSY<bool>();
 	}
 	/// <summary>
 	/// 	Message is limited to 64 characters.
 	/// </summary>
 	public static bool NETWORK_SEND_TEXT_MESSAGE(string message)
 	{
-		return NativeFunction.Natives.NETWORK_SEND_TEXT_MESSAGE(message, 0);
+		return NativeFunction.Natives.NETWORK_SEND_TEXT_MESSAGE<bool>(message, 0);
 	}
 	public static void NETWORK_SET_ACTIVITY_SPECTATOR(bool toggle)
 	{
@@ -17739,7 +17739,7 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_ACTIVITY_SPECTATOR()
 	{
-		return NativeFunction.Natives.NETWORK_IS_ACTIVITY_SPECTATOR();
+		return NativeFunction.Natives.NETWORK_IS_ACTIVITY_SPECTATOR<bool>();
 	}
 	public static void NETWORK_SET_ACTIVITY_PLAYER_MAX()
 	{
@@ -17751,11 +17751,11 @@ public static class Natives
 	}
 	public static int NETWORK_GET_ACTIVITY_PLAYER_NUM(bool p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_ACTIVITY_PLAYER_NUM(p0);
+		return NativeFunction.Natives.NETWORK_GET_ACTIVITY_PLAYER_NUM<int>(p0);
 	}
 	public static bool NETWORK_IS_ACTIVITY_SPECTATOR_FROM_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_ACTIVITY_SPECTATOR_FROM_HANDLE(0);
+		return NativeFunction.Natives.NETWORK_IS_ACTIVITY_SPECTATOR_FROM_HANDLE<bool>(0);
 	}
 	/// <summary>
 	/// 	p0: Unknown int<br/>
@@ -17775,23 +17775,23 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_HOST_TRANSITION(int p0, int p1, int p2, int p3, bool p5, bool p6, int p7, int p9)
 	{
-		return NativeFunction.Natives.NETWORK_HOST_TRANSITION(p0, p1, p2, p3, 0, p5, p6, p7, 0, p9);
+		return NativeFunction.Natives.NETWORK_HOST_TRANSITION<bool>(p0, p1, p2, p3, 0, p5, p6, p7, 0, p9);
 	}
 	public static bool NETWORK_DO_TRANSITION_QUICKMATCH()
 	{
-		return NativeFunction.Natives.NETWORK_DO_TRANSITION_QUICKMATCH(0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_DO_TRANSITION_QUICKMATCH<bool>(0, 0, 0, 0, 0, 0);
 	}
 	public static bool NETWORK_DO_TRANSITION_QUICKMATCH_ASYNC()
 	{
-		return NativeFunction.Natives.NETWORK_DO_TRANSITION_QUICKMATCH_ASYNC(0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_DO_TRANSITION_QUICKMATCH_ASYNC<bool>(0, 0, 0, 0, 0, 0);
 	}
 	public static bool NETWORK_DO_TRANSITION_QUICKMATCH_WITH_GROUP()
 	{
-		return NativeFunction.Natives.NETWORK_DO_TRANSITION_QUICKMATCH_WITH_GROUP(0, 0, 0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_DO_TRANSITION_QUICKMATCH_WITH_GROUP<bool>(0, 0, 0, 0, 0, 0, 0, 0);
 	}
 	public static bool NETWORK_JOIN_GROUP_ACTIVITY()
 	{
-		return NativeFunction.Natives.NETWORK_JOIN_GROUP_ACTIVITY();
+		return NativeFunction.Natives.NETWORK_JOIN_GROUP_ACTIVITY<bool>();
 	}
 	public static void NETWORK_CLEAR_GROUP_ACTIVITY()
 	{
@@ -17803,23 +17803,23 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_TRANSITION_CLOSED_FRIENDS()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_CLOSED_FRIENDS();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_CLOSED_FRIENDS<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_CLOSED_CREW()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_CLOSED_CREW();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_CLOSED_CREW<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_SOLO()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_SOLO();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_SOLO<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_PRIVATE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_PRIVATE();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_PRIVATE<bool>();
 	}
 	public static int NETWORK_GET_NUM_TRANSITION_NON_ASYNC_GAMERS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUM_TRANSITION_NON_ASYNC_GAMERS();
+		return NativeFunction.Natives.NETWORK_GET_NUM_TRANSITION_NON_ASYNC_GAMERS<int>();
 	}
 	public static void NETWORK_MARK_AS_PREFERRED_ACTIVITY(bool p0)
 	{
@@ -17843,7 +17843,7 @@ public static class Natives
 	}
 	public static bool NETWORK_INVITE_GAMERS_TO_TRANSITION()
 	{
-		return NativeFunction.Natives.NETWORK_INVITE_GAMERS_TO_TRANSITION(0, 0);
+		return NativeFunction.Natives.NETWORK_INVITE_GAMERS_TO_TRANSITION<bool>(0, 0);
 	}
 	public static void NETWORK_SET_GAMER_INVITED_TO_TRANSITION()
 	{
@@ -17851,11 +17851,11 @@ public static class Natives
 	}
 	public static bool NETWORK_LEAVE_TRANSITION()
 	{
-		return NativeFunction.Natives.NETWORK_LEAVE_TRANSITION();
+		return NativeFunction.Natives.NETWORK_LEAVE_TRANSITION<bool>();
 	}
 	public static bool NETWORK_LAUNCH_TRANSITION()
 	{
-		return NativeFunction.Natives.NETWORK_LAUNCH_TRANSITION();
+		return NativeFunction.Natives.NETWORK_LAUNCH_TRANSITION<bool>();
 	}
 	/// <summary>
 	/// 	Appears to set whether a transition should be started when the session is migrating.
@@ -17874,11 +17874,11 @@ public static class Natives
 	}
 	public static bool NETWORK_DO_TRANSITION_TO_GAME(bool p0, int maxPlayers)
 	{
-		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_GAME(p0, maxPlayers);
+		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_GAME<bool>(p0, maxPlayers);
 	}
 	public static bool NETWORK_DO_TRANSITION_TO_NEW_GAME(bool p0, int maxPlayers, bool p2)
 	{
-		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_NEW_GAME(p0, maxPlayers, p2);
+		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_NEW_GAME<bool>(p0, maxPlayers, p2);
 	}
 	/// <summary>
 	/// 	p2 is true 3/4 of the occurrences I found.<br/>
@@ -17886,22 +17886,22 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_DO_TRANSITION_TO_FREEMODE(bool p2, int players, bool p4)
 	{
-		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_FREEMODE(0, 0, p2, players, p4);
+		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_FREEMODE<bool>(0, 0, p2, players, p4);
 	}
 	public static bool NETWORK_DO_TRANSITION_TO_NEW_FREEMODE(int players, bool p3, bool p4, bool p5)
 	{
-		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_NEW_FREEMODE(0, 0, players, p3, p4, p5);
+		return NativeFunction.Natives.NETWORK_DO_TRANSITION_TO_NEW_FREEMODE<bool>(0, 0, players, p3, p4, p5);
 	}
 	public static bool NETWORK_IS_TRANSITION_TO_GAME()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_TO_GAME();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_TO_GAME<bool>();
 	}
 	/// <summary>
 	/// 	Returns count.
 	/// </summary>
 	public static int NETWORK_GET_TRANSITION_MEMBERS(int dataCount)
 	{
-		return NativeFunction.Natives.NETWORK_GET_TRANSITION_MEMBERS(0, dataCount);
+		return NativeFunction.Natives.NETWORK_GET_TRANSITION_MEMBERS<int>(0, dataCount);
 	}
 	public static void NETWORK_APPLY_TRANSITION_PARAMETER(int p0, int p1)
 	{
@@ -17913,43 +17913,43 @@ public static class Natives
 	}
 	public static bool NETWORK_SEND_TRANSITION_GAMER_INSTRUCTION(string p1, int p2, int p3, bool p4)
 	{
-		return NativeFunction.Natives.NETWORK_SEND_TRANSITION_GAMER_INSTRUCTION(0, p1, p2, p3, p4);
+		return NativeFunction.Natives.NETWORK_SEND_TRANSITION_GAMER_INSTRUCTION<bool>(0, p1, p2, p3, p4);
 	}
 	public static bool NETWORK_MARK_TRANSITION_GAMER_AS_FULLY_JOINED()
 	{
-		return NativeFunction.Natives.NETWORK_MARK_TRANSITION_GAMER_AS_FULLY_JOINED(0);
+		return NativeFunction.Natives.NETWORK_MARK_TRANSITION_GAMER_AS_FULLY_JOINED<bool>(0);
 	}
 	public static bool NETWORK_IS_TRANSITION_HOST()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_HOST();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_HOST<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_HOST_FROM_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_HOST_FROM_HANDLE(0);
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_HOST_FROM_HANDLE<bool>(0);
 	}
 	public static bool NETWORK_GET_TRANSITION_HOST()
 	{
-		return NativeFunction.Natives.NETWORK_GET_TRANSITION_HOST(0);
+		return NativeFunction.Natives.NETWORK_GET_TRANSITION_HOST<bool>(0);
 	}
 	public static bool NETWORK_IS_IN_TRANSITION()
 	{
-		return NativeFunction.Natives.NETWORK_IS_IN_TRANSITION();
+		return NativeFunction.Natives.NETWORK_IS_IN_TRANSITION<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_STARTED()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_STARTED();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_STARTED<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_BUSY()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_BUSY();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_BUSY<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_MATCHMAKING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_MATCHMAKING();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_MATCHMAKING<bool>();
 	}
 	public static bool NETWORK_IS_TRANSITION_LEAVE_POSTPONED()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_LEAVE_POSTPONED();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_LEAVE_POSTPONED<bool>();
 	}
 	public static void NETWORK_TRANSITION_SET_IN_PROGRESS()
 	{
@@ -17973,7 +17973,7 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_TRANSITION_OPEN_TO_MATCHMAKING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_OPEN_TO_MATCHMAKING();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_OPEN_TO_MATCHMAKING<bool>();
 	}
 	public static void NETWORK_SET_TRANSITION_VISIBILITY_LOCK(bool p0, bool p1)
 	{
@@ -17981,7 +17981,7 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_TRANSITION_VISIBILITY_LOCKED()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TRANSITION_VISIBILITY_LOCKED();
+		return NativeFunction.Natives.NETWORK_IS_TRANSITION_VISIBILITY_LOCKED<bool>();
 	}
 	public static void NETWORK_SET_TRANSITION_ACTIVITY_ID()
 	{
@@ -17997,11 +17997,11 @@ public static class Natives
 	}
 	public static bool NETWORK_HAS_PLAYER_STARTED_TRANSITION(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_PLAYER_STARTED_TRANSITION(player);
+		return NativeFunction.Natives.NETWORK_HAS_PLAYER_STARTED_TRANSITION<bool>(player);
 	}
 	public static bool NETWORK_ARE_TRANSITION_DETAILS_VALID()
 	{
-		return NativeFunction.Natives.NETWORK_ARE_TRANSITION_DETAILS_VALID(0);
+		return NativeFunction.Natives.NETWORK_ARE_TRANSITION_DETAILS_VALID<bool>(0);
 	}
 	/// <summary>
 	/// 	int handle[76];<br/>
@@ -18012,19 +18012,19 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_JOIN_TRANSITION(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_JOIN_TRANSITION(player);
+		return NativeFunction.Natives.NETWORK_JOIN_TRANSITION<bool>(player);
 	}
 	public static bool NETWORK_HAS_INVITED_GAMER_TO_TRANSITION()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_INVITED_GAMER_TO_TRANSITION(0);
+		return NativeFunction.Natives.NETWORK_HAS_INVITED_GAMER_TO_TRANSITION<bool>(0);
 	}
 	public static bool NETWORK_HAS_TRANSITION_INVITE_BEEN_ACKED()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_TRANSITION_INVITE_BEEN_ACKED(0);
+		return NativeFunction.Natives.NETWORK_HAS_TRANSITION_INVITE_BEEN_ACKED<bool>(0);
 	}
 	public static bool NETWORK_IS_ACTIVITY_SESSION()
 	{
-		return NativeFunction.Natives.NETWORK_IS_ACTIVITY_SESSION();
+		return NativeFunction.Natives.NETWORK_IS_ACTIVITY_SESSION<bool>();
 	}
 	public static void NETWORK_DISABLE_REALTIME_MULTIPLAYER()
 	{
@@ -18039,82 +18039,82 @@ public static class Natives
 	}
 	public static bool NETWORK_SEND_INVITE_VIA_PRESENCE(string p1, int dataCount, int p3)
 	{
-		return NativeFunction.Natives.NETWORK_SEND_INVITE_VIA_PRESENCE(0, p1, dataCount, p3);
+		return NativeFunction.Natives.NETWORK_SEND_INVITE_VIA_PRESENCE<bool>(0, p1, dataCount, p3);
 	}
 	public static bool NETWORK_SEND_TRANSITION_INVITE_VIA_PRESENCE(string p1, int dataCount, int p3)
 	{
-		return NativeFunction.Natives.NETWORK_SEND_TRANSITION_INVITE_VIA_PRESENCE(0, p1, dataCount, p3);
+		return NativeFunction.Natives.NETWORK_SEND_TRANSITION_INVITE_VIA_PRESENCE<bool>(0, p1, dataCount, p3);
 	}
 	/// <summary>
 	/// 	Contains the string &amp;quot;NETWORK_SEND_PRESENCE_TRANSITION_INVITE&amp;quot; but so does 0xC116FF9B4D488291; seems to fit alphabetically here, tho.
 	/// </summary>
 	public static bool NETWORK_SEND_IMPORTANT_TRANSITION_INVITE_VIA_PRESENCE(string p1, int dataCount, int p3)
 	{
-		return NativeFunction.Natives.NETWORK_SEND_IMPORTANT_TRANSITION_INVITE_VIA_PRESENCE(0, p1, dataCount, p3);
+		return NativeFunction.Natives.NETWORK_SEND_IMPORTANT_TRANSITION_INVITE_VIA_PRESENCE<bool>(0, p1, dataCount, p3);
 	}
 	public static int NETWORK_GET_PRESENCE_INVITE_INDEX_BY_ID(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_INDEX_BY_ID(p0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_INDEX_BY_ID<int>(p0);
 	}
 	public static int NETWORK_GET_NUM_PRESENCE_INVITES()
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUM_PRESENCE_INVITES();
+		return NativeFunction.Natives.NETWORK_GET_NUM_PRESENCE_INVITES<int>();
 	}
 	public static bool NETWORK_ACCEPT_PRESENCE_INVITE(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_ACCEPT_PRESENCE_INVITE(p0);
+		return NativeFunction.Natives.NETWORK_ACCEPT_PRESENCE_INVITE<bool>(p0);
 	}
 	public static bool NETWORK_REMOVE_PRESENCE_INVITE(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_REMOVE_PRESENCE_INVITE(p0);
+		return NativeFunction.Natives.NETWORK_REMOVE_PRESENCE_INVITE<bool>(p0);
 	}
 	public static int NETWORK_GET_PRESENCE_INVITE_ID(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_ID(p0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_ID<int>(p0);
 	}
 	public static string NETWORK_GET_PRESENCE_INVITE_INVITER(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_INVITER(p0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_INVITER<string>(p0);
 	}
 	public static bool NETWORK_GET_PRESENCE_INVITE_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_HANDLE(0, 0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_HANDLE<bool>(0, 0);
 	}
 	public static int NETWORK_GET_PRESENCE_INVITE_SESSION_ID()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_SESSION_ID(0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_SESSION_ID<int>(0);
 	}
 	public static string NETWORK_GET_PRESENCE_INVITE_CONTENT_ID(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_CONTENT_ID(p0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_CONTENT_ID<string>(p0);
 	}
 	public static int NETWORK_GET_PRESENCE_INVITE_PLAYLIST_LENGTH(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_PLAYLIST_LENGTH(p0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_PLAYLIST_LENGTH<int>(p0);
 	}
 	public static int NETWORK_GET_PRESENCE_INVITE_PLAYLIST_CURRENT(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_PLAYLIST_CURRENT(p0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_PLAYLIST_CURRENT<int>(p0);
 	}
 	public static bool NETWORK_GET_PRESENCE_INVITE_FROM_ADMIN(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_FROM_ADMIN(p0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_FROM_ADMIN<bool>(p0);
 	}
 	public static bool NETWORK_GET_PRESENCE_INVITE_IS_TOURNAMENT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_IS_TOURNAMENT(0);
+		return NativeFunction.Natives.NETWORK_GET_PRESENCE_INVITE_IS_TOURNAMENT<bool>(0);
 	}
 	public static bool NETWORK_HAS_FOLLOW_INVITE()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_FOLLOW_INVITE();
+		return NativeFunction.Natives.NETWORK_HAS_FOLLOW_INVITE<bool>();
 	}
 	public static bool NETWORK_ACTION_FOLLOW_INVITE()
 	{
-		return NativeFunction.Natives.NETWORK_ACTION_FOLLOW_INVITE();
+		return NativeFunction.Natives.NETWORK_ACTION_FOLLOW_INVITE<bool>();
 	}
 	public static bool NETWORK_CLEAR_FOLLOW_INVITE()
 	{
-		return NativeFunction.Natives.NETWORK_CLEAR_FOLLOW_INVITE();
+		return NativeFunction.Natives.NETWORK_CLEAR_FOLLOW_INVITE<bool>();
 	}
 	public static void NETWORK_REMOVE_AND_CANCEL_ALL_INVITES()
 	{
@@ -18134,27 +18134,27 @@ public static class Natives
 	}
 	public static bool NETWORK_INVITE_GAMERS()
 	{
-		return NativeFunction.Natives.NETWORK_INVITE_GAMERS(0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_INVITE_GAMERS<bool>(0, 0, 0, 0);
 	}
 	public static bool NETWORK_HAS_INVITED_GAMER()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_INVITED_GAMER(0);
+		return NativeFunction.Natives.NETWORK_HAS_INVITED_GAMER<bool>(0);
 	}
 	public static bool NETWORK_HAS_MADE_INVITE_DECISION()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_MADE_INVITE_DECISION(0);
+		return NativeFunction.Natives.NETWORK_HAS_MADE_INVITE_DECISION<bool>(0);
 	}
 	public static int NETWORK_GET_INVITE_REPLY_STATUS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_INVITE_REPLY_STATUS(0);
+		return NativeFunction.Natives.NETWORK_GET_INVITE_REPLY_STATUS<int>(0);
 	}
 	public static bool NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU()
 	{
-		return NativeFunction.Natives.NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(0);
+		return NativeFunction.Natives.NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU<bool>(0);
 	}
 	public static bool NETWORK_SET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU()
 	{
-		return NativeFunction.Natives.NETWORK_SET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(0);
+		return NativeFunction.Natives.NETWORK_SET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU<bool>(0);
 	}
 	public static void NETWORK_SET_INVITE_ON_CALL_FOR_INVITE_MENU()
 	{
@@ -18162,11 +18162,11 @@ public static class Natives
 	}
 	public static bool NETWORK_CHECK_DATA_MANAGER_SUCCEEDED_FOR_HANDLE(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_DATA_MANAGER_SUCCEEDED_FOR_HANDLE(p0, 0);
+		return NativeFunction.Natives.NETWORK_CHECK_DATA_MANAGER_SUCCEEDED_FOR_HANDLE<bool>(p0, 0);
 	}
 	public static bool NETWORK_CHECK_DATA_MANAGER_FOR_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_DATA_MANAGER_FOR_HANDLE(0, 0);
+		return NativeFunction.Natives.NETWORK_CHECK_DATA_MANAGER_FOR_HANDLE<bool>(0, 0);
 	}
 	public static void NETWORK_SET_INVITE_FAILED_MESSAGE_FOR_INVITE_MENU()
 	{
@@ -18174,41 +18174,41 @@ public static class Natives
 	}
 	public static bool FILLOUT_PM_PLAYER_LIST()
 	{
-		return NativeFunction.Natives.FILLOUT_PM_PLAYER_LIST(0, 0, 0);
+		return NativeFunction.Natives.FILLOUT_PM_PLAYER_LIST<bool>(0, 0, 0);
 	}
 	public static bool FILLOUT_PM_PLAYER_LIST_WITH_NAMES()
 	{
-		return NativeFunction.Natives.FILLOUT_PM_PLAYER_LIST_WITH_NAMES(0, 0, 0, 0);
+		return NativeFunction.Natives.FILLOUT_PM_PLAYER_LIST_WITH_NAMES<bool>(0, 0, 0, 0);
 	}
 	public static bool REFRESH_PLAYER_LIST_STATS(int p0)
 	{
-		return NativeFunction.Natives.REFRESH_PLAYER_LIST_STATS(p0);
+		return NativeFunction.Natives.REFRESH_PLAYER_LIST_STATS<bool>(p0);
 	}
 	public static bool NETWORK_SET_CURRENT_DATA_MANAGER_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_SET_CURRENT_DATA_MANAGER_HANDLE(0);
+		return NativeFunction.Natives.NETWORK_SET_CURRENT_DATA_MANAGER_HANDLE<bool>(0);
 	}
 	/// <summary>
 	/// 	Hardcoded to return false.
 	/// </summary>
 	public static bool NETWORK_IS_IN_PLATFORM_PARTY()
 	{
-		return NativeFunction.Natives.NETWORK_IS_IN_PLATFORM_PARTY();
+		return NativeFunction.Natives.NETWORK_IS_IN_PLATFORM_PARTY<bool>();
 	}
 	public static int NETWORK_GET_PLATFORM_PARTY_MEMBER_COUNT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLATFORM_PARTY_MEMBER_COUNT();
+		return NativeFunction.Natives.NETWORK_GET_PLATFORM_PARTY_MEMBER_COUNT<int>();
 	}
 	public static int NETWORK_GET_PLATFORM_PARTY_MEMBERS(int dataSize)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLATFORM_PARTY_MEMBERS(0, dataSize);
+		return NativeFunction.Natives.NETWORK_GET_PLATFORM_PARTY_MEMBERS<int>(0, dataSize);
 	}
 	/// <summary>
 	/// 	Hardcoded to return false.
 	/// </summary>
 	public static bool NETWORK_IS_IN_PLATFORM_PARTY_CHAT()
 	{
-		return NativeFunction.Natives.NETWORK_IS_IN_PLATFORM_PARTY_CHAT();
+		return NativeFunction.Natives.NETWORK_IS_IN_PLATFORM_PARTY_CHAT<bool>();
 	}
 	/// <summary>
 	/// 	This would be nice to see if someone is in party chat, but 2 sad notes.<br/>
@@ -18217,15 +18217,15 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_IS_CHATTING_IN_PLATFORM_PARTY()
 	{
-		return NativeFunction.Natives.NETWORK_IS_CHATTING_IN_PLATFORM_PARTY(0);
+		return NativeFunction.Natives.NETWORK_IS_CHATTING_IN_PLATFORM_PARTY<bool>(0);
 	}
 	public static bool NETWORK_CAN_QUEUE_FOR_PREVIOUS_SESSION_JOIN()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_QUEUE_FOR_PREVIOUS_SESSION_JOIN();
+		return NativeFunction.Natives.NETWORK_CAN_QUEUE_FOR_PREVIOUS_SESSION_JOIN<bool>();
 	}
 	public static bool NETWORK_IS_QUEUING_FOR_SESSION_JOIN()
 	{
-		return NativeFunction.Natives.NETWORK_IS_QUEUING_FOR_SESSION_JOIN();
+		return NativeFunction.Natives.NETWORK_IS_QUEUING_FOR_SESSION_JOIN<bool>();
 	}
 	public static void NETWORK_CLEAR_QUEUED_JOIN_REQUEST()
 	{
@@ -18245,38 +18245,38 @@ public static class Natives
 	}
 	public static int NETWORK_GET_RANDOM_INT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_RANDOM_INT();
+		return NativeFunction.Natives.NETWORK_GET_RANDOM_INT<int>();
 	}
 	/// <summary>
 	/// 	Same as GET_RANDOM_INT_IN_RANGE
 	/// </summary>
 	public static int NETWORK_GET_RANDOM_INT_RANGED(int rangeStart, int rangeEnd)
 	{
-		return NativeFunction.Natives.NETWORK_GET_RANDOM_INT_RANGED(rangeStart, rangeEnd);
+		return NativeFunction.Natives.NETWORK_GET_RANDOM_INT_RANGED<int>(rangeStart, rangeEnd);
 	}
 	public static float _NETWORK_GET_RANDOM_FLOAT_RANGED(float rangeStart, float rangeEnd)
 	{
-		return NativeFunction.Natives._NETWORK_GET_RANDOM_FLOAT_RANGED(rangeStart, rangeEnd);
+		return NativeFunction.Natives._NETWORK_GET_RANDOM_FLOAT_RANGED<float>(rangeStart, rangeEnd);
 	}
 	public static bool NETWORK_PLAYER_IS_CHEATER()
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_IS_CHEATER();
+		return NativeFunction.Natives.NETWORK_PLAYER_IS_CHEATER<bool>();
 	}
 	public static int NETWORK_PLAYER_GET_CHEATER_REASON()
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_GET_CHEATER_REASON();
+		return NativeFunction.Natives.NETWORK_PLAYER_GET_CHEATER_REASON<int>();
 	}
 	public static bool NETWORK_PLAYER_IS_BADSPORT()
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_IS_BADSPORT();
+		return NativeFunction.Natives.NETWORK_PLAYER_IS_BADSPORT<bool>();
 	}
 	public static bool REMOTE_CHEATER_PLAYER_DETECTED(Player player, int a, int b)
 	{
-		return NativeFunction.Natives.REMOTE_CHEATER_PLAYER_DETECTED(player, a, b);
+		return NativeFunction.Natives.REMOTE_CHEATER_PLAYER_DETECTED<bool>(player, a, b);
 	}
 	public static bool BAD_SPORT_PLAYER_LEFT_DETECTED(int _event, int amountReceived)
 	{
-		return NativeFunction.Natives.BAD_SPORT_PLAYER_LEFT_DETECTED(0, _event, amountReceived);
+		return NativeFunction.Natives.BAD_SPORT_PLAYER_LEFT_DETECTED<bool>(0, _event, amountReceived);
 	}
 	public static void NETWORK_ADD_INVALID_OBJECT_MODEL(ulong modelHash)
 	{
@@ -18300,23 +18300,23 @@ public static class Natives
 	}
 	public static bool NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(bool p1)
 	{
-		return NativeFunction.Natives.NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(0, p1, 0);
+		return NativeFunction.Natives.NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT<bool>(0, p1, 0);
 	}
 	public static bool NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT();
+		return NativeFunction.Natives.NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT<bool>();
 	}
 	public static int NETWORK_GET_MAX_NUM_PARTICIPANTS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_MAX_NUM_PARTICIPANTS();
+		return NativeFunction.Natives.NETWORK_GET_MAX_NUM_PARTICIPANTS<int>();
 	}
 	public static int NETWORK_GET_NUM_PARTICIPANTS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUM_PARTICIPANTS();
+		return NativeFunction.Natives.NETWORK_GET_NUM_PARTICIPANTS<int>();
 	}
 	public static int NETWORK_GET_SCRIPT_STATUS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_SCRIPT_STATUS();
+		return NativeFunction.Natives.NETWORK_GET_SCRIPT_STATUS<int>();
 	}
 	public static void NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(out int vars, int numVars, string debugName)
 	{
@@ -18340,57 +18340,57 @@ public static class Natives
 	}
 	public static bool NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA();
+		return NativeFunction.Natives.NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA<bool>();
 	}
 	public static Player NETWORK_GET_PLAYER_INDEX(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_INDEX(player);
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_INDEX<Player>(player);
 	}
 	public static int NETWORK_GET_PARTICIPANT_INDEX(int index)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PARTICIPANT_INDEX(index);
+		return NativeFunction.Natives.NETWORK_GET_PARTICIPANT_INDEX<int>(index);
 	}
 	/// <summary>
 	/// 	Returns the Player associated to a given Ped when in an online session.
 	/// </summary>
 	public static Player NETWORK_GET_PLAYER_INDEX_FROM_PED(Ped ped)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_INDEX_FROM_PED(ped);
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_INDEX_FROM_PED<Player>(ped);
 	}
 	/// <summary>
 	/// 	Returns the amount of players connected in the current session. Only works when connected to a session/server.
 	/// </summary>
 	public static int NETWORK_GET_NUM_CONNECTED_PLAYERS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUM_CONNECTED_PLAYERS();
+		return NativeFunction.Natives.NETWORK_GET_NUM_CONNECTED_PLAYERS<int>();
 	}
 	public static bool NETWORK_IS_PLAYER_CONNECTED(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_CONNECTED(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_CONNECTED<bool>(player);
 	}
 	public static int NETWORK_GET_TOTAL_NUM_PLAYERS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_TOTAL_NUM_PLAYERS();
+		return NativeFunction.Natives.NETWORK_GET_TOTAL_NUM_PLAYERS<int>();
 	}
 	public static bool NETWORK_IS_PARTICIPANT_ACTIVE(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PARTICIPANT_ACTIVE(p0);
+		return NativeFunction.Natives.NETWORK_IS_PARTICIPANT_ACTIVE<bool>(p0);
 	}
 	public static bool NETWORK_IS_PLAYER_ACTIVE(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_ACTIVE(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_ACTIVE<bool>(player);
 	}
 	public static bool NETWORK_IS_PLAYER_A_PARTICIPANT(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_A_PARTICIPANT(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_A_PARTICIPANT<bool>(player);
 	}
 	public static bool NETWORK_IS_HOST_OF_THIS_SCRIPT()
 	{
-		return NativeFunction.Natives.NETWORK_IS_HOST_OF_THIS_SCRIPT();
+		return NativeFunction.Natives.NETWORK_IS_HOST_OF_THIS_SCRIPT<bool>();
 	}
 	public static Player NETWORK_GET_HOST_OF_THIS_SCRIPT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_HOST_OF_THIS_SCRIPT();
+		return NativeFunction.Natives.NETWORK_GET_HOST_OF_THIS_SCRIPT<Player>();
 	}
 	/// <summary>
 	/// 	scriptName examples:<br/>
@@ -18402,7 +18402,7 @@ public static class Natives
 	/// </summary>
 	public static Player NETWORK_GET_HOST_OF_SCRIPT(string scriptName, int instance_id, int position_hash)
 	{
-		return NativeFunction.Natives.NETWORK_GET_HOST_OF_SCRIPT(scriptName, instance_id, position_hash);
+		return NativeFunction.Natives.NETWORK_GET_HOST_OF_SCRIPT<Player>(scriptName, instance_id, position_hash);
 	}
 	public static void NETWORK_SET_MISSION_FINISHED()
 	{
@@ -18410,31 +18410,31 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_SCRIPT_ACTIVE(string scriptName, int instance_id, bool p2, int position_hash)
 	{
-		return NativeFunction.Natives.NETWORK_IS_SCRIPT_ACTIVE(scriptName, instance_id, p2, position_hash);
+		return NativeFunction.Natives.NETWORK_IS_SCRIPT_ACTIVE<bool>(scriptName, instance_id, p2, position_hash);
 	}
 	public static bool NETWORK_IS_SCRIPT_ACTIVE_BY_HASH(ulong scriptHash, int p1, bool p2, int p3)
 	{
-		return NativeFunction.Natives.NETWORK_IS_SCRIPT_ACTIVE_BY_HASH(scriptHash, p1, p2, p3);
+		return NativeFunction.Natives.NETWORK_IS_SCRIPT_ACTIVE_BY_HASH<bool>(scriptHash, p1, p2, p3);
 	}
 	public static bool NETWORK_IS_THREAD_A_NETWORK_SCRIPT(int threadId)
 	{
-		return NativeFunction.Natives.NETWORK_IS_THREAD_A_NETWORK_SCRIPT(threadId);
+		return NativeFunction.Natives.NETWORK_IS_THREAD_A_NETWORK_SCRIPT<bool>(threadId);
 	}
 	public static int NETWORK_GET_NUM_SCRIPT_PARTICIPANTS(string scriptName, int instance_id, int position_hash)
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUM_SCRIPT_PARTICIPANTS(scriptName, instance_id, position_hash);
+		return NativeFunction.Natives.NETWORK_GET_NUM_SCRIPT_PARTICIPANTS<int>(scriptName, instance_id, position_hash);
 	}
 	public static int NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT();
+		return NativeFunction.Natives.NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT<int>();
 	}
 	public static ulong NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT();
+		return NativeFunction.Natives.NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT<ulong>();
 	}
 	public static bool NETWORK_IS_PLAYER_A_PARTICIPANT_ON_SCRIPT(Player player, string script, int instance_id)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_A_PARTICIPANT_ON_SCRIPT(player, script, instance_id);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_A_PARTICIPANT_ON_SCRIPT<bool>(player, script, instance_id);
 	}
 	public static void NETWORK_PREVENT_SCRIPT_HOST_MIGRATION()
 	{
@@ -18449,7 +18449,7 @@ public static class Natives
 	/// </summary>
 	public static Player PARTICIPANT_ID()
 	{
-		return NativeFunction.Natives.PARTICIPANT_ID();
+		return NativeFunction.Natives.PARTICIPANT_ID<Player>();
 	}
 	/// <summary>
 	/// 	Return the local Participant ID.<br/>
@@ -18458,34 +18458,34 @@ public static class Natives
 	/// </summary>
 	public static int PARTICIPANT_ID_TO_INT()
 	{
-		return NativeFunction.Natives.PARTICIPANT_ID_TO_INT();
+		return NativeFunction.Natives.PARTICIPANT_ID_TO_INT<int>();
 	}
-	public static Player NETWORK_GET_KILLER_OF_PLAYER(Player player, ulong weaponHash)
+	public static Player NETWORK_GET_KILLER_OF_PLAYER(Player player, out ulong weaponHash)
 	{
-		return NativeFunction.Natives.NETWORK_GET_KILLER_OF_PLAYER(player, weaponHash);
+		return NativeFunction.Natives.NETWORK_GET_KILLER_OF_PLAYER<Player>(player, out weaponHash);
 	}
-	public static Player NETWORK_GET_DESTROYER_OF_NETWORK_ID(int netId, ulong weaponHash)
+	public static Player NETWORK_GET_DESTROYER_OF_NETWORK_ID(int netId, out ulong weaponHash)
 	{
-		return NativeFunction.Natives.NETWORK_GET_DESTROYER_OF_NETWORK_ID(netId, weaponHash);
+		return NativeFunction.Natives.NETWORK_GET_DESTROYER_OF_NETWORK_ID<Player>(netId, out weaponHash);
 	}
-	public static Player NETWORK_GET_DESTROYER_OF_ENTITY(Entity entity, ulong weaponHash)
+	public static Player NETWORK_GET_DESTROYER_OF_ENTITY(Entity entity, out ulong weaponHash)
 	{
-		return NativeFunction.Natives.NETWORK_GET_DESTROYER_OF_ENTITY(entity, weaponHash);
+		return NativeFunction.Natives.NETWORK_GET_DESTROYER_OF_ENTITY<Player>(entity, out weaponHash);
 	}
 	/// <summary>
 	/// 	NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY that ensures the entity is dead (IS_ENTITY_DEAD)
 	/// </summary>
 	public static bool NETWORK_GET_ASSISTED_KILL_OF_ENTITY(Player player, Entity entity, out int p2)
 	{
-		return NativeFunction.Natives.NETWORK_GET_ASSISTED_KILL_OF_ENTITY(player, entity, out p2);
+		return NativeFunction.Natives.NETWORK_GET_ASSISTED_KILL_OF_ENTITY<bool>(player, entity, out p2);
 	}
 	public static bool NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY(Player player, Entity entity, out int p2)
 	{
-		return NativeFunction.Natives.NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY(player, entity, out p2);
+		return NativeFunction.Natives.NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY<bool>(player, entity, out p2);
 	}
-	public static Entity NETWORK_GET_ENTITY_KILLER_OF_PLAYER(Player player, ulong weaponHash)
+	public static Entity NETWORK_GET_ENTITY_KILLER_OF_PLAYER(Player player, out ulong weaponHash)
 	{
-		return NativeFunction.Natives.NETWORK_GET_ENTITY_KILLER_OF_PLAYER(player, weaponHash);
+		return NativeFunction.Natives.NETWORK_GET_ENTITY_KILLER_OF_PLAYER<Entity>(player, out weaponHash);
 	}
 	public static void NETWORK_SET_CURRENT_PUBLIC_CONTENT_ID(string missionId)
 	{
@@ -18551,7 +18551,7 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_LOCAL_PLAYER_INVINCIBLE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_LOCAL_PLAYER_INVINCIBLE();
+		return NativeFunction.Natives.NETWORK_IS_LOCAL_PLAYER_INVINCIBLE<bool>();
 	}
 	public static void NETWORK_DISABLE_INVINCIBLE_FLASHING(Player player, bool toggle)
 	{
@@ -18567,23 +18567,23 @@ public static class Natives
 	}
 	public static bool NETWORK_HAS_ENTITY_BEEN_REGISTERED_WITH_THIS_THREAD(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_ENTITY_BEEN_REGISTERED_WITH_THIS_THREAD(entity);
+		return NativeFunction.Natives.NETWORK_HAS_ENTITY_BEEN_REGISTERED_WITH_THIS_THREAD<bool>(entity);
 	}
 	public static int NETWORK_GET_NETWORK_ID_FROM_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_GET_NETWORK_ID_FROM_ENTITY(entity);
+		return NativeFunction.Natives.NETWORK_GET_NETWORK_ID_FROM_ENTITY<int>(entity);
 	}
 	public static Entity NETWORK_GET_ENTITY_FROM_NETWORK_ID(int netId)
 	{
-		return NativeFunction.Natives.NETWORK_GET_ENTITY_FROM_NETWORK_ID(netId);
+		return NativeFunction.Natives.NETWORK_GET_ENTITY_FROM_NETWORK_ID<Entity>(netId);
 	}
 	public static bool NETWORK_GET_ENTITY_IS_NETWORKED(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_GET_ENTITY_IS_NETWORKED(entity);
+		return NativeFunction.Natives.NETWORK_GET_ENTITY_IS_NETWORKED<bool>(entity);
 	}
 	public static bool NETWORK_GET_ENTITY_IS_LOCAL(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_GET_ENTITY_IS_LOCAL(entity);
+		return NativeFunction.Natives.NETWORK_GET_ENTITY_IS_LOCAL<bool>(entity);
 	}
 	public static void NETWORK_REGISTER_ENTITY_AS_NETWORKED(Entity entity)
 	{
@@ -18595,50 +18595,50 @@ public static class Natives
 	}
 	public static bool NETWORK_DOES_NETWORK_ID_EXIST(int netId)
 	{
-		return NativeFunction.Natives.NETWORK_DOES_NETWORK_ID_EXIST(netId);
+		return NativeFunction.Natives.NETWORK_DOES_NETWORK_ID_EXIST<bool>(netId);
 	}
 	public static bool NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(int netId)
 	{
-		return NativeFunction.Natives.NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(netId);
+		return NativeFunction.Natives.NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID<bool>(netId);
 	}
 	public static bool NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(int netId)
 	{
-		return NativeFunction.Natives.NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(netId);
+		return NativeFunction.Natives.NETWORK_REQUEST_CONTROL_OF_NETWORK_ID<bool>(netId);
 	}
 	public static bool NETWORK_HAS_CONTROL_OF_NETWORK_ID(int netId)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_NETWORK_ID(netId);
+		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_NETWORK_ID<bool>(netId);
 	}
 	/// <summary>
 	/// 	Returns true if the specified network id is controlled by someone else.
 	/// </summary>
 	public static bool NETWORK_IS_NETWORK_ID_REMOTELY_CONTROLLED(int netId)
 	{
-		return NativeFunction.Natives.NETWORK_IS_NETWORK_ID_REMOTELY_CONTROLLED(netId);
+		return NativeFunction.Natives.NETWORK_IS_NETWORK_ID_REMOTELY_CONTROLLED<bool>(netId);
 	}
 	public static bool NETWORK_REQUEST_CONTROL_OF_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_REQUEST_CONTROL_OF_ENTITY(entity);
+		return NativeFunction.Natives.NETWORK_REQUEST_CONTROL_OF_ENTITY<bool>(entity);
 	}
 	public static bool NETWORK_REQUEST_CONTROL_OF_DOOR(int doorID)
 	{
-		return NativeFunction.Natives.NETWORK_REQUEST_CONTROL_OF_DOOR(doorID);
+		return NativeFunction.Natives.NETWORK_REQUEST_CONTROL_OF_DOOR<bool>(doorID);
 	}
 	public static bool NETWORK_HAS_CONTROL_OF_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_ENTITY(entity);
+		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_ENTITY<bool>(entity);
 	}
 	public static bool NETWORK_HAS_CONTROL_OF_PICKUP(uint pickup)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_PICKUP(pickup);
+		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_PICKUP<bool>(pickup);
 	}
 	public static bool NETWORK_HAS_CONTROL_OF_DOOR(ulong doorHash)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_DOOR(doorHash);
+		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_DOOR<bool>(doorHash);
 	}
 	public static bool NETWORK_IS_DOOR_NETWORKED(ulong doorHash)
 	{
-		return NativeFunction.Natives.NETWORK_IS_DOOR_NETWORKED(doorHash);
+		return NativeFunction.Natives.NETWORK_IS_DOOR_NETWORKED<bool>(doorHash);
 	}
 	/// <summary>
 	/// 	calls from vehicle to net.<br/>
@@ -18646,14 +18646,14 @@ public static class Natives
 	/// </summary>
 	public static int VEH_TO_NET(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.VEH_TO_NET(vehicle);
+		return NativeFunction.Natives.VEH_TO_NET<int>(vehicle);
 	}
 	/// <summary>
 	/// 	gets the network id of a ped
 	/// </summary>
 	public static int PED_TO_NET(Ped ped)
 	{
-		return NativeFunction.Natives.PED_TO_NET(ped);
+		return NativeFunction.Natives.PED_TO_NET<int>(ped);
 	}
 	/// <summary>
 	/// 	Lets objects spawn online simply do it like this:<br/>
@@ -18662,32 +18662,32 @@ public static class Natives
 	/// </summary>
 	public static int OBJ_TO_NET(Object _object)
 	{
-		return NativeFunction.Natives.OBJ_TO_NET(_object);
+		return NativeFunction.Natives.OBJ_TO_NET<int>(_object);
 	}
 	public static Vehicle NET_TO_VEH(int netHandle)
 	{
-		return NativeFunction.Natives.NET_TO_VEH(netHandle);
+		return NativeFunction.Natives.NET_TO_VEH<Vehicle>(netHandle);
 	}
 	/// <summary>
 	/// 	gets the ped id of a network id
 	/// </summary>
 	public static Ped NET_TO_PED(int netHandle)
 	{
-		return NativeFunction.Natives.NET_TO_PED(netHandle);
+		return NativeFunction.Natives.NET_TO_PED<Ped>(netHandle);
 	}
 	/// <summary>
 	/// 	gets the object id of a network id
 	/// </summary>
 	public static Object NET_TO_OBJ(int netHandle)
 	{
-		return NativeFunction.Natives.NET_TO_OBJ(netHandle);
+		return NativeFunction.Natives.NET_TO_OBJ<Object>(netHandle);
 	}
 	/// <summary>
 	/// 	gets the entity id of a network id
 	/// </summary>
 	public static Entity NET_TO_ENT(int netHandle)
 	{
-		return NativeFunction.Natives.NET_TO_ENT(netHandle);
+		return NativeFunction.Natives.NET_TO_ENT<Entity>(netHandle);
 	}
 	public static void NETWORK_GET_LOCAL_HANDLE(int gamerHandleSize)
 	{
@@ -18707,11 +18707,11 @@ public static class Natives
 	}
 	public static ulong NETWORK_HASH_FROM_PLAYER_HANDLE(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_HASH_FROM_PLAYER_HANDLE(player);
+		return NativeFunction.Natives.NETWORK_HASH_FROM_PLAYER_HANDLE<ulong>(player);
 	}
 	public static ulong NETWORK_HASH_FROM_GAMER_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_HASH_FROM_GAMER_HANDLE(0);
+		return NativeFunction.Natives.NETWORK_HASH_FROM_GAMER_HANDLE<ulong>(0);
 	}
 	public static void NETWORK_HANDLE_FROM_FRIEND(int friendIndex, int gamerHandleSize)
 	{
@@ -18719,53 +18719,53 @@ public static class Natives
 	}
 	public static bool NETWORK_GAMERTAG_FROM_HANDLE_START()
 	{
-		return NativeFunction.Natives.NETWORK_GAMERTAG_FROM_HANDLE_START(0);
+		return NativeFunction.Natives.NETWORK_GAMERTAG_FROM_HANDLE_START<bool>(0);
 	}
 	public static bool NETWORK_GAMERTAG_FROM_HANDLE_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_GAMERTAG_FROM_HANDLE_PENDING();
+		return NativeFunction.Natives.NETWORK_GAMERTAG_FROM_HANDLE_PENDING<bool>();
 	}
 	public static bool NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED()
 	{
-		return NativeFunction.Natives.NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED();
+		return NativeFunction.Natives.NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED<bool>();
 	}
 	public static string NETWORK_GET_GAMERTAG_FROM_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_GAMERTAG_FROM_HANDLE(0);
+		return NativeFunction.Natives.NETWORK_GET_GAMERTAG_FROM_HANDLE<string>(0);
 	}
 	/// <summary>
 	/// 	Hardcoded to return -1.
 	/// </summary>
 	public static int NETWORK_DISPLAYNAMES_FROM_HANDLES_START()
 	{
-		return NativeFunction.Natives.NETWORK_DISPLAYNAMES_FROM_HANDLES_START(0, 0);
+		return NativeFunction.Natives.NETWORK_DISPLAYNAMES_FROM_HANDLES_START<int>(0, 0);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static int NETWORK_GET_DISPLAYNAMES_FROM_HANDLES()
 	{
-		return NativeFunction.Natives.NETWORK_GET_DISPLAYNAMES_FROM_HANDLES(0, 0, 0);
+		return NativeFunction.Natives.NETWORK_GET_DISPLAYNAMES_FROM_HANDLES<int>(0, 0, 0);
 	}
 	public static bool NETWORK_ARE_HANDLES_THE_SAME()
 	{
-		return NativeFunction.Natives.NETWORK_ARE_HANDLES_THE_SAME(0, 0);
+		return NativeFunction.Natives.NETWORK_ARE_HANDLES_THE_SAME<bool>(0, 0);
 	}
 	public static bool NETWORK_IS_HANDLE_VALID(int gamerHandleSize)
 	{
-		return NativeFunction.Natives.NETWORK_IS_HANDLE_VALID(0, gamerHandleSize);
+		return NativeFunction.Natives.NETWORK_IS_HANDLE_VALID<bool>(0, gamerHandleSize);
 	}
 	public static Player NETWORK_GET_PLAYER_FROM_GAMER_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(0);
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_FROM_GAMER_HANDLE<Player>(0);
 	}
 	public static string NETWORK_MEMBER_ID_FROM_GAMER_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_MEMBER_ID_FROM_GAMER_HANDLE(0);
+		return NativeFunction.Natives.NETWORK_MEMBER_ID_FROM_GAMER_HANDLE<string>(0);
 	}
 	public static bool NETWORK_IS_GAMER_IN_MY_SESSION()
 	{
-		return NativeFunction.Natives.NETWORK_IS_GAMER_IN_MY_SESSION(0);
+		return NativeFunction.Natives.NETWORK_IS_GAMER_IN_MY_SESSION<bool>(0);
 	}
 	public static void NETWORK_SHOW_PROFILE_UI()
 	{
@@ -18776,7 +18776,7 @@ public static class Natives
 	/// </summary>
 	public static string NETWORK_PLAYER_GET_NAME(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_GET_NAME(player);
+		return NativeFunction.Natives.NETWORK_PLAYER_GET_NAME<string>(player);
 	}
 	/// <summary>
 	/// 	Returns a string of the player&amp;apos;s Rockstar Id. <br/>
@@ -18784,7 +18784,7 @@ public static class Natives
 	/// </summary>
 	public static string NETWORK_PLAYER_GET_USERID(Player player, out int userID)
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_GET_USERID(player, out userID);
+		return NativeFunction.Natives.NETWORK_PLAYER_GET_USERID<string>(player, out userID);
 	}
 	/// <summary>
 	/// 	Checks if a specific value (BYTE) in CNetGamePlayer is nonzero.<br/>
@@ -18796,15 +18796,15 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_PLAYER_IS_ROCKSTAR_DEV(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_IS_ROCKSTAR_DEV(player);
+		return NativeFunction.Natives.NETWORK_PLAYER_IS_ROCKSTAR_DEV<bool>(player);
 	}
 	public static bool NETWORK_PLAYER_INDEX_IS_CHEATER(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_INDEX_IS_CHEATER(player);
+		return NativeFunction.Natives.NETWORK_PLAYER_INDEX_IS_CHEATER<bool>(player);
 	}
 	public static int NETWORK_ENTITY_GET_OBJECT_ID(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_ENTITY_GET_OBJECT_ID(entity);
+		return NativeFunction.Natives.NETWORK_ENTITY_GET_OBJECT_ID<int>(entity);
 	}
 	/// <summary>
 	/// 	I&amp;apos;ve had this return the player&amp;apos;s ped handle sometimes, but also other random entities.<br/>
@@ -18816,76 +18816,76 @@ public static class Natives
 	/// </summary>
 	public static Entity NETWORK_GET_ENTITY_FROM_OBJECT_ID()
 	{
-		return NativeFunction.Natives.NETWORK_GET_ENTITY_FROM_OBJECT_ID(0);
+		return NativeFunction.Natives.NETWORK_GET_ENTITY_FROM_OBJECT_ID<Entity>(0);
 	}
 	public static bool NETWORK_IS_INACTIVE_PROFILE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_INACTIVE_PROFILE(0);
+		return NativeFunction.Natives.NETWORK_IS_INACTIVE_PROFILE<bool>(0);
 	}
 	/// <summary>
 	/// 	Returns the name from given friend gamer handle.
 	/// </summary>
 	public static string _NETWORK_LOAD_GAMER_DISPLAY_NAME()
 	{
-		return NativeFunction.Natives._NETWORK_LOAD_GAMER_DISPLAY_NAME(0);
+		return NativeFunction.Natives._NETWORK_LOAD_GAMER_DISPLAY_NAME<string>(0);
 	}
 	public static int NETWORK_GET_MAX_FRIENDS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_MAX_FRIENDS();
+		return NativeFunction.Natives.NETWORK_GET_MAX_FRIENDS<int>();
 	}
 	public static int NETWORK_GET_FRIEND_COUNT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_FRIEND_COUNT();
+		return NativeFunction.Natives.NETWORK_GET_FRIEND_COUNT<int>();
 	}
 	public static string NETWORK_GET_FRIEND_NAME(int friendIndex)
 	{
-		return NativeFunction.Natives.NETWORK_GET_FRIEND_NAME(friendIndex);
+		return NativeFunction.Natives.NETWORK_GET_FRIEND_NAME<string>(friendIndex);
 	}
 	public static string NETWORK_GET_FRIEND_DISPLAY_NAME(int friendIndex)
 	{
-		return NativeFunction.Natives.NETWORK_GET_FRIEND_DISPLAY_NAME(friendIndex);
+		return NativeFunction.Natives.NETWORK_GET_FRIEND_DISPLAY_NAME<string>(friendIndex);
 	}
 	public static bool NETWORK_IS_FRIEND_ONLINE(string name)
 	{
-		return NativeFunction.Natives.NETWORK_IS_FRIEND_ONLINE(name);
+		return NativeFunction.Natives.NETWORK_IS_FRIEND_ONLINE<bool>(name);
 	}
 	public static bool NETWORK_IS_FRIEND_HANDLE_ONLINE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_FRIEND_HANDLE_ONLINE(0);
+		return NativeFunction.Natives.NETWORK_IS_FRIEND_HANDLE_ONLINE<bool>(0);
 	}
 	/// <summary>
 	/// 	In scripts R* calls &amp;apos;NETWORK_GET_FRIEND_NAME&amp;apos; in this param.
 	/// </summary>
 	public static bool NETWORK_IS_FRIEND_IN_SAME_TITLE(string friendName)
 	{
-		return NativeFunction.Natives.NETWORK_IS_FRIEND_IN_SAME_TITLE(friendName);
+		return NativeFunction.Natives.NETWORK_IS_FRIEND_IN_SAME_TITLE<bool>(friendName);
 	}
 	public static bool NETWORK_IS_FRIEND_IN_MULTIPLAYER(string friendName)
 	{
-		return NativeFunction.Natives.NETWORK_IS_FRIEND_IN_MULTIPLAYER(friendName);
+		return NativeFunction.Natives.NETWORK_IS_FRIEND_IN_MULTIPLAYER<bool>(friendName);
 	}
 	public static bool NETWORK_IS_FRIEND()
 	{
-		return NativeFunction.Natives.NETWORK_IS_FRIEND(0);
+		return NativeFunction.Natives.NETWORK_IS_FRIEND<bool>(0);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static bool NETWORK_IS_PENDING_FRIEND()
 	{
-		return NativeFunction.Natives.NETWORK_IS_PENDING_FRIEND(0);
+		return NativeFunction.Natives.NETWORK_IS_PENDING_FRIEND<bool>(0);
 	}
 	public static bool NETWORK_IS_ADDING_FRIEND()
 	{
-		return NativeFunction.Natives.NETWORK_IS_ADDING_FRIEND();
+		return NativeFunction.Natives.NETWORK_IS_ADDING_FRIEND<bool>();
 	}
 	public static bool NETWORK_ADD_FRIEND(string message)
 	{
-		return NativeFunction.Natives.NETWORK_ADD_FRIEND(0, message);
+		return NativeFunction.Natives.NETWORK_ADD_FRIEND<bool>(0, message);
 	}
 	public static bool NETWORK_IS_FRIEND_INDEX_ONLINE(int friendIndex)
 	{
-		return NativeFunction.Natives.NETWORK_IS_FRIEND_INDEX_ONLINE(friendIndex);
+		return NativeFunction.Natives.NETWORK_IS_FRIEND_INDEX_ONLINE<bool>(friendIndex);
 	}
 	public static void NETWORK_SET_PLAYER_IS_PASSIVE(bool toggle)
 	{
@@ -18893,11 +18893,11 @@ public static class Natives
 	}
 	public static bool NETWORK_GET_PLAYER_OWNS_WAYPOINT(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_OWNS_WAYPOINT(player);
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_OWNS_WAYPOINT<bool>(player);
 	}
 	public static bool NETWORK_CAN_SET_WAYPOINT()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_SET_WAYPOINT();
+		return NativeFunction.Natives.NETWORK_CAN_SET_WAYPOINT<bool>();
 	}
 	public static void NETWORK_IGNORE_REMOTE_WAYPOINTS()
 	{
@@ -18908,7 +18908,7 @@ public static class Natives
 	/// </summary>
 	public static bool _NETWORK_DOES_COMMUNICATION_GROUP_EXIST(int communicationType)
 	{
-		return NativeFunction.Natives._NETWORK_DOES_COMMUNICATION_GROUP_EXIST(communicationType);
+		return NativeFunction.Natives._NETWORK_DOES_COMMUNICATION_GROUP_EXIST<bool>(communicationType);
 	}
 	/// <summary>
 	/// 	Returns communicationGroupFlag<br/>
@@ -18928,7 +18928,7 @@ public static class Natives
 	/// </summary>
 	public static int _NETWORK_GET_COMMUNICATION_GROUP_FLAGS(int communicationType)
 	{
-		return NativeFunction.Natives._NETWORK_GET_COMMUNICATION_GROUP_FLAGS(communicationType);
+		return NativeFunction.Natives._NETWORK_GET_COMMUNICATION_GROUP_FLAGS<int>(communicationType);
 	}
 	/// <summary>
 	/// 	communicationType: see 0xDBDF80673BBA3D65<br/>
@@ -18944,23 +18944,23 @@ public static class Natives
 	/// </summary>
 	public static bool _NETWORK_HAS_PLAYER_PASSED_CHECK_TYPE(int checkType)
 	{
-		return NativeFunction.Natives._NETWORK_HAS_PLAYER_PASSED_CHECK_TYPE(checkType, 0);
+		return NativeFunction.Natives._NETWORK_HAS_PLAYER_PASSED_CHECK_TYPE<bool>(checkType, 0);
 	}
 	public static bool NETWORK_IS_PLAYER_ON_BLOCKLIST()
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_ON_BLOCKLIST(0);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_ON_BLOCKLIST<bool>(0);
 	}
 	public static bool NETWORK_SET_SCRIPT_AUTOMUTED()
 	{
-		return NativeFunction.Natives.NETWORK_SET_SCRIPT_AUTOMUTED(0);
+		return NativeFunction.Natives.NETWORK_SET_SCRIPT_AUTOMUTED<bool>(0);
 	}
 	public static bool NETWORK_HAS_AUTOMUTE_OVERRIDE()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_AUTOMUTE_OVERRIDE();
+		return NativeFunction.Natives.NETWORK_HAS_AUTOMUTE_OVERRIDE<bool>();
 	}
 	public static bool NETWORK_HAS_HEADSET()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_HEADSET();
+		return NativeFunction.Natives.NETWORK_HAS_HEADSET<bool>();
 	}
 	public static void NETWORK_SET_LOOK_AT_TALKERS(bool p0)
 	{
@@ -18968,105 +18968,105 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_PUSH_TO_TALK_ACTIVE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_PUSH_TO_TALK_ACTIVE();
+		return NativeFunction.Natives.NETWORK_IS_PUSH_TO_TALK_ACTIVE<bool>();
 	}
 	public static bool NETWORK_GAMER_HAS_HEADSET()
 	{
-		return NativeFunction.Natives.NETWORK_GAMER_HAS_HEADSET(0);
+		return NativeFunction.Natives.NETWORK_GAMER_HAS_HEADSET<bool>(0);
 	}
 	public static bool NETWORK_IS_GAMER_TALKING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_GAMER_TALKING(0);
+		return NativeFunction.Natives.NETWORK_IS_GAMER_TALKING<bool>(0);
 	}
 	public static bool NETWORK_PERMISSIONS_HAS_GAMER_RECORD()
 	{
-		return NativeFunction.Natives.NETWORK_PERMISSIONS_HAS_GAMER_RECORD(0);
+		return NativeFunction.Natives.NETWORK_PERMISSIONS_HAS_GAMER_RECORD<bool>(0);
 	}
 	public static bool NETWORK_CAN_COMMUNICATE_WITH_GAMER()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_COMMUNICATE_WITH_GAMER(0);
+		return NativeFunction.Natives.NETWORK_CAN_COMMUNICATE_WITH_GAMER<bool>(0);
 	}
 	public static bool NETWORK_CAN_TEXT_CHAT_WITH_GAMER()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_TEXT_CHAT_WITH_GAMER(0);
+		return NativeFunction.Natives.NETWORK_CAN_TEXT_CHAT_WITH_GAMER<bool>(0);
 	}
 	public static bool NETWORK_IS_GAMER_MUTED_BY_ME()
 	{
-		return NativeFunction.Natives.NETWORK_IS_GAMER_MUTED_BY_ME(0);
+		return NativeFunction.Natives.NETWORK_IS_GAMER_MUTED_BY_ME<bool>(0);
 	}
 	public static bool NETWORK_AM_I_MUTED_BY_GAMER()
 	{
-		return NativeFunction.Natives.NETWORK_AM_I_MUTED_BY_GAMER(0);
+		return NativeFunction.Natives.NETWORK_AM_I_MUTED_BY_GAMER<bool>(0);
 	}
 	public static bool NETWORK_IS_GAMER_BLOCKED_BY_ME()
 	{
-		return NativeFunction.Natives.NETWORK_IS_GAMER_BLOCKED_BY_ME(0);
+		return NativeFunction.Natives.NETWORK_IS_GAMER_BLOCKED_BY_ME<bool>(0);
 	}
 	public static bool NETWORK_AM_I_BLOCKED_BY_GAMER()
 	{
-		return NativeFunction.Natives.NETWORK_AM_I_BLOCKED_BY_GAMER(0);
+		return NativeFunction.Natives.NETWORK_AM_I_BLOCKED_BY_GAMER<bool>(0);
 	}
 	public static bool NETWORK_CAN_VIEW_GAMER_USER_CONTENT()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_VIEW_GAMER_USER_CONTENT(0);
+		return NativeFunction.Natives.NETWORK_CAN_VIEW_GAMER_USER_CONTENT<bool>(0);
 	}
 	public static bool NETWORK_HAS_VIEW_GAMER_USER_CONTENT_RESULT()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_VIEW_GAMER_USER_CONTENT_RESULT(0);
+		return NativeFunction.Natives.NETWORK_HAS_VIEW_GAMER_USER_CONTENT_RESULT<bool>(0);
 	}
 	/// <summary>
 	/// 	NETWORK_CAN_*
 	/// </summary>
 	public static bool _NETWORK_CAN_TEXT_FROM_GAMER_BE_VIEWED()
 	{
-		return NativeFunction.Natives._NETWORK_CAN_TEXT_FROM_GAMER_BE_VIEWED(0);
+		return NativeFunction.Natives._NETWORK_CAN_TEXT_FROM_GAMER_BE_VIEWED<bool>(0);
 	}
 	public static bool NETWORK_CAN_PLAY_MULTIPLAYER_WITH_GAMER()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_PLAY_MULTIPLAYER_WITH_GAMER(0);
+		return NativeFunction.Natives.NETWORK_CAN_PLAY_MULTIPLAYER_WITH_GAMER<bool>(0);
 	}
 	public static bool NETWORK_CAN_GAMER_PLAY_MULTIPLAYER_WITH_ME()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_GAMER_PLAY_MULTIPLAYER_WITH_ME(0);
+		return NativeFunction.Natives.NETWORK_CAN_GAMER_PLAY_MULTIPLAYER_WITH_ME<bool>(0);
 	}
 	public static bool NETWORK_CAN_SEND_LOCAL_INVITE()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_SEND_LOCAL_INVITE(0);
+		return NativeFunction.Natives.NETWORK_CAN_SEND_LOCAL_INVITE<bool>(0);
 	}
 	public static bool NETWORK_CAN_RECEIVE_LOCAL_INVITE()
 	{
-		return NativeFunction.Natives.NETWORK_CAN_RECEIVE_LOCAL_INVITE(0);
+		return NativeFunction.Natives.NETWORK_CAN_RECEIVE_LOCAL_INVITE<bool>(0);
 	}
 	/// <summary>
 	/// 	returns true if someone is screaming or talking in a microphone
 	/// </summary>
 	public static bool NETWORK_IS_PLAYER_TALKING(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_TALKING(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_TALKING<bool>(player);
 	}
 	public static bool NETWORK_PLAYER_HAS_HEADSET(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_HAS_HEADSET(player);
+		return NativeFunction.Natives.NETWORK_PLAYER_HAS_HEADSET<bool>(player);
 	}
 	public static bool NETWORK_IS_PLAYER_MUTED_BY_ME(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_MUTED_BY_ME(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_MUTED_BY_ME<bool>(player);
 	}
 	public static bool NETWORK_AM_I_MUTED_BY_PLAYER(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_AM_I_MUTED_BY_PLAYER(player);
+		return NativeFunction.Natives.NETWORK_AM_I_MUTED_BY_PLAYER<bool>(player);
 	}
 	public static bool NETWORK_IS_PLAYER_BLOCKED_BY_ME(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_BLOCKED_BY_ME(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_BLOCKED_BY_ME<bool>(player);
 	}
 	public static bool NETWORK_AM_I_BLOCKED_BY_PLAYER(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_AM_I_BLOCKED_BY_PLAYER(player);
+		return NativeFunction.Natives.NETWORK_AM_I_BLOCKED_BY_PLAYER<bool>(player);
 	}
 	public static float NETWORK_GET_PLAYER_LOUDNESS(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_LOUDNESS(player);
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_LOUDNESS<float>(player);
 	}
 	public static void NETWORK_SET_TALKER_PROXIMITY(float value)
 	{
@@ -19074,7 +19074,7 @@ public static class Natives
 	}
 	public static float NETWORK_GET_TALKER_PROXIMITY()
 	{
-		return NativeFunction.Natives.NETWORK_GET_TALKER_PROXIMITY();
+		return NativeFunction.Natives.NETWORK_GET_TALKER_PROXIMITY<float>();
 	}
 	public static void NETWORK_SET_VOICE_ACTIVE(bool toggle)
 	{
@@ -19098,7 +19098,7 @@ public static class Natives
 	}
 	public static bool NETWORK_SET_SAME_TEAM_AS_LOCAL_PLAYER()
 	{
-		return NativeFunction.Natives.NETWORK_SET_SAME_TEAM_AS_LOCAL_PLAYER(0, 0);
+		return NativeFunction.Natives.NETWORK_SET_SAME_TEAM_AS_LOCAL_PLAYER<bool>(0, 0);
 	}
 	public static void NETWORK_OVERRIDE_TEAM_RESTRICTIONS(int team, bool toggle)
 	{
@@ -19198,7 +19198,7 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_TEXT_CHAT_IS_TYPING()
 	{
-		return NativeFunction.Natives.NETWORK_TEXT_CHAT_IS_TYPING();
+		return NativeFunction.Natives.NETWORK_TEXT_CHAT_IS_TYPING<bool>();
 	}
 	/// <summary>
 	/// 	Starts a new singleplayer game (at the prologue).
@@ -19218,7 +19218,7 @@ public static class Natives
 	/// </summary>
 	public static bool SHUTDOWN_AND_LOAD_MOST_RECENT_SAVE()
 	{
-		return NativeFunction.Natives.SHUTDOWN_AND_LOAD_MOST_RECENT_SAVE();
+		return NativeFunction.Natives.SHUTDOWN_AND_LOAD_MOST_RECENT_SAVE<bool>();
 	}
 	public static void NETWORK_SET_FRIENDLY_FIRE_OPTION(bool toggle)
 	{
@@ -19240,7 +19240,7 @@ public static class Natives
 	}
 	public static int NETWORK_GET_TIMEOUT_TIME()
 	{
-		return NativeFunction.Natives.NETWORK_GET_TIMEOUT_TIME();
+		return NativeFunction.Natives.NETWORK_GET_TIMEOUT_TIME<int>();
 	}
 	/// <summary>
 	/// 	p4 and p5 are always 0 in scripts
@@ -19266,15 +19266,15 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_ANY_PLAYER_NEAR()
 	{
-		return NativeFunction.Natives.NETWORK_IS_ANY_PLAYER_NEAR(0, 0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.NETWORK_IS_ANY_PLAYER_NEAR<bool>(0, 0, 0, 0, 0, 0, 0);
 	}
 	public static bool NETWORK_CLAN_SERVICE_IS_VALID()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_SERVICE_IS_VALID();
+		return NativeFunction.Natives.NETWORK_CLAN_SERVICE_IS_VALID<bool>();
 	}
 	public static bool NETWORK_CLAN_PLAYER_IS_ACTIVE()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_PLAYER_IS_ACTIVE(0);
+		return NativeFunction.Natives.NETWORK_CLAN_PLAYER_IS_ACTIVE<bool>(0);
 	}
 	/// <summary>
 	/// 	bufferSize is 35 in the scripts.<br/>
@@ -19287,14 +19287,14 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_CLAN_PLAYER_GET_DESC(int bufferSize)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_PLAYER_GET_DESC(0, bufferSize, 0);
+		return NativeFunction.Natives.NETWORK_CLAN_PLAYER_GET_DESC<bool>(0, bufferSize, 0);
 	}
 	/// <summary>
 	/// 	bufferSize is 35 in the scripts.
 	/// </summary>
 	public static bool NETWORK_CLAN_IS_ROCKSTAR_CLAN(int bufferSize)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_IS_ROCKSTAR_CLAN(0, bufferSize);
+		return NativeFunction.Natives.NETWORK_CLAN_IS_ROCKSTAR_CLAN<bool>(0, bufferSize);
 	}
 	/// <summary>
 	/// 	bufferSize is 35 in the scripts.
@@ -19305,43 +19305,43 @@ public static class Natives
 	}
 	public static int NETWORK_CLAN_GET_LOCAL_MEMBERSHIPS_COUNT()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_GET_LOCAL_MEMBERSHIPS_COUNT();
+		return NativeFunction.Natives.NETWORK_CLAN_GET_LOCAL_MEMBERSHIPS_COUNT<int>();
 	}
 	public static bool NETWORK_CLAN_GET_MEMBERSHIP_DESC(int p1)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP_DESC(0, p1);
+		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP_DESC<bool>(0, p1);
 	}
 	public static bool NETWORK_CLAN_DOWNLOAD_MEMBERSHIP()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_DOWNLOAD_MEMBERSHIP(0);
+		return NativeFunction.Natives.NETWORK_CLAN_DOWNLOAD_MEMBERSHIP<bool>(0);
 	}
 	public static bool NETWORK_CLAN_DOWNLOAD_MEMBERSHIP_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_DOWNLOAD_MEMBERSHIP_PENDING(0);
+		return NativeFunction.Natives.NETWORK_CLAN_DOWNLOAD_MEMBERSHIP_PENDING<bool>(0);
 	}
 	public static bool NETWORK_CLAN_ANY_DOWNLOAD_MEMBERSHIP_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_ANY_DOWNLOAD_MEMBERSHIP_PENDING();
+		return NativeFunction.Natives.NETWORK_CLAN_ANY_DOWNLOAD_MEMBERSHIP_PENDING<bool>();
 	}
 	public static bool NETWORK_CLAN_REMOTE_MEMBERSHIPS_ARE_IN_CACHE(out int p0)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_REMOTE_MEMBERSHIPS_ARE_IN_CACHE(out p0);
+		return NativeFunction.Natives.NETWORK_CLAN_REMOTE_MEMBERSHIPS_ARE_IN_CACHE<bool>(out p0);
 	}
 	public static int NETWORK_CLAN_GET_MEMBERSHIP_COUNT(out int p0)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP_COUNT(out p0);
+		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP_COUNT<int>(out p0);
 	}
 	public static bool NETWORK_CLAN_GET_MEMBERSHIP_VALID(out int p0)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP_VALID(out p0, 0);
+		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP_VALID<bool>(out p0, 0);
 	}
 	public static bool NETWORK_CLAN_GET_MEMBERSHIP(out int p0, int p2)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP(out p0, 0, p2);
+		return NativeFunction.Natives.NETWORK_CLAN_GET_MEMBERSHIP<bool>(out p0, 0, p2);
 	}
 	public static bool NETWORK_CLAN_JOIN(int clanDesc)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_JOIN(clanDesc);
+		return NativeFunction.Natives.NETWORK_CLAN_JOIN<bool>(clanDesc);
 	}
 	/// <summary>
 	/// 	Only documented...<br/>
@@ -19350,27 +19350,27 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_CLAN_CREWINFO_GET_STRING_VALUE(string animDict, string animName)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_CREWINFO_GET_STRING_VALUE(animDict, animName);
+		return NativeFunction.Natives.NETWORK_CLAN_CREWINFO_GET_STRING_VALUE<bool>(animDict, animName);
 	}
 	public static bool NETWORK_CLAN_CREWINFO_GET_CREWRANKTITLE(int p0, string p1)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_CREWINFO_GET_CREWRANKTITLE(p0, p1);
+		return NativeFunction.Natives.NETWORK_CLAN_CREWINFO_GET_CREWRANKTITLE<bool>(p0, p1);
 	}
 	public static bool NETWORK_CLAN_HAS_CREWINFO_METADATA_BEEN_RECEIVED()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_HAS_CREWINFO_METADATA_BEEN_RECEIVED();
+		return NativeFunction.Natives.NETWORK_CLAN_HAS_CREWINFO_METADATA_BEEN_RECEIVED<bool>();
 	}
 	public static bool NETWORK_CLAN_GET_EMBLEM_TXD_NAME(out char txdName)
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_GET_EMBLEM_TXD_NAME(0, out txdName);
+		return NativeFunction.Natives.NETWORK_CLAN_GET_EMBLEM_TXD_NAME<bool>(0, out txdName);
 	}
 	public static bool NETWORK_CLAN_REQUEST_EMBLEM()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_REQUEST_EMBLEM(0);
+		return NativeFunction.Natives.NETWORK_CLAN_REQUEST_EMBLEM<bool>(0);
 	}
 	public static bool NETWORK_CLAN_IS_EMBLEM_READY()
 	{
-		return NativeFunction.Natives.NETWORK_CLAN_IS_EMBLEM_READY(0, 0);
+		return NativeFunction.Natives.NETWORK_CLAN_IS_EMBLEM_READY<bool>(0, 0);
 	}
 	public static void NETWORK_CLAN_RELEASE_EMBLEM()
 	{
@@ -19378,7 +19378,7 @@ public static class Natives
 	}
 	public static bool NETWORK_GET_PRIMARY_CLAN_DATA_CLEAR()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_CLEAR();
+		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_CLEAR<bool>();
 	}
 	public static void NETWORK_GET_PRIMARY_CLAN_DATA_CANCEL()
 	{
@@ -19386,19 +19386,19 @@ public static class Natives
 	}
 	public static bool NETWORK_GET_PRIMARY_CLAN_DATA_START()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_START(0, 0);
+		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_START<bool>(0, 0);
 	}
 	public static bool NETWORK_GET_PRIMARY_CLAN_DATA_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_PENDING();
+		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_PENDING<bool>();
 	}
 	public static bool NETWORK_GET_PRIMARY_CLAN_DATA_SUCCESS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_SUCCESS();
+		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_SUCCESS<bool>();
 	}
 	public static bool NETWORK_GET_PRIMARY_CLAN_DATA_NEW()
 	{
-		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_NEW(0, 0);
+		return NativeFunction.Natives.NETWORK_GET_PRIMARY_CLAN_DATA_NEW<bool>(0, 0);
 	}
 	/// <summary>
 	/// 	Whether or not another player is allowed to take control of the entity
@@ -19465,7 +19465,7 @@ public static class Natives
 	/// </summary>
 	public static bool ARE_CUTSCENE_ENTITIES_NETWORKED()
 	{
-		return NativeFunction.Natives.ARE_CUTSCENE_ENTITIES_NETWORKED();
+		return NativeFunction.Natives.ARE_CUTSCENE_ENTITIES_NETWORKED<bool>();
 	}
 	public static void SET_NETWORK_ID_PASS_CONTROL_IN_TUTORIAL(int netId, bool state)
 	{
@@ -19473,7 +19473,7 @@ public static class Natives
 	}
 	public static bool IS_NETWORK_ID_OWNED_BY_PARTICIPANT(int netId)
 	{
-		return NativeFunction.Natives.IS_NETWORK_ID_OWNED_BY_PARTICIPANT(netId);
+		return NativeFunction.Natives.IS_NETWORK_ID_OWNED_BY_PARTICIPANT<bool>(netId);
 	}
 	public static void SET_REMOTE_PLAYER_VISIBLE_IN_CUTSCENE(Player player, bool locallyVisible)
 	{
@@ -19527,15 +19527,15 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_PLAYER_FADING(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_FADING(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_FADING<bool>(player);
 	}
 	public static bool NETWORK_IS_ENTITY_FADING(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_IS_ENTITY_FADING(entity);
+		return NativeFunction.Natives.NETWORK_IS_ENTITY_FADING<bool>(entity);
 	}
 	public static bool IS_PLAYER_IN_CUTSCENE(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_IN_CUTSCENE(player);
+		return NativeFunction.Natives.IS_PLAYER_IN_CUTSCENE<bool>(player);
 	}
 	public static void SET_ENTITY_VISIBLE_IN_CUTSCENE(bool p1, bool p2)
 	{
@@ -19554,7 +19554,7 @@ public static class Natives
 	}
 	public static bool IS_DAMAGE_TRACKER_ACTIVE_ON_NETWORK_ID(int netID)
 	{
-		return NativeFunction.Natives.IS_DAMAGE_TRACKER_ACTIVE_ON_NETWORK_ID(netID);
+		return NativeFunction.Natives.IS_DAMAGE_TRACKER_ACTIVE_ON_NETWORK_ID<bool>(netID);
 	}
 	public static void ACTIVATE_DAMAGE_TRACKER_ON_NETWORK_ID(int netID, bool toggle)
 	{
@@ -19562,7 +19562,7 @@ public static class Natives
 	}
 	public static bool IS_DAMAGE_TRACKER_ACTIVE_ON_PLAYER(Player player)
 	{
-		return NativeFunction.Natives.IS_DAMAGE_TRACKER_ACTIVE_ON_PLAYER(player);
+		return NativeFunction.Natives.IS_DAMAGE_TRACKER_ACTIVE_ON_PLAYER<bool>(player);
 	}
 	public static void ACTIVATE_DAMAGE_TRACKER_ON_PLAYER(Player player, bool toggle)
 	{
@@ -19570,11 +19570,11 @@ public static class Natives
 	}
 	public static bool IS_SPHERE_VISIBLE_TO_ANOTHER_MACHINE(float p0, float p1, float p2, float p3)
 	{
-		return NativeFunction.Natives.IS_SPHERE_VISIBLE_TO_ANOTHER_MACHINE(p0, p1, p2, p3);
+		return NativeFunction.Natives.IS_SPHERE_VISIBLE_TO_ANOTHER_MACHINE<bool>(p0, p1, p2, p3);
 	}
 	public static bool IS_SPHERE_VISIBLE_TO_PLAYER(float p1, float p2, float p3, float p4)
 	{
-		return NativeFunction.Natives.IS_SPHERE_VISIBLE_TO_PLAYER(0, p1, p2, p3, p4);
+		return NativeFunction.Natives.IS_SPHERE_VISIBLE_TO_PLAYER<bool>(0, p1, p2, p3, p4);
 	}
 	public static void RESERVE_NETWORK_MISSION_OBJECTS(int amount)
 	{
@@ -19602,60 +19602,60 @@ public static class Natives
 	}
 	public static bool CAN_REGISTER_MISSION_OBJECTS(int amount)
 	{
-		return NativeFunction.Natives.CAN_REGISTER_MISSION_OBJECTS(amount);
+		return NativeFunction.Natives.CAN_REGISTER_MISSION_OBJECTS<bool>(amount);
 	}
 	public static bool CAN_REGISTER_MISSION_PEDS(int amount)
 	{
-		return NativeFunction.Natives.CAN_REGISTER_MISSION_PEDS(amount);
+		return NativeFunction.Natives.CAN_REGISTER_MISSION_PEDS<bool>(amount);
 	}
 	public static bool CAN_REGISTER_MISSION_VEHICLES(int amount)
 	{
-		return NativeFunction.Natives.CAN_REGISTER_MISSION_VEHICLES(amount);
+		return NativeFunction.Natives.CAN_REGISTER_MISSION_VEHICLES<bool>(amount);
 	}
 	public static bool CAN_REGISTER_MISSION_PICKUPS(int amount)
 	{
-		return NativeFunction.Natives.CAN_REGISTER_MISSION_PICKUPS(amount);
+		return NativeFunction.Natives.CAN_REGISTER_MISSION_PICKUPS<bool>(amount);
 	}
 	public static bool CAN_REGISTER_MISSION_DOORS()
 	{
-		return NativeFunction.Natives.CAN_REGISTER_MISSION_DOORS(0);
+		return NativeFunction.Natives.CAN_REGISTER_MISSION_DOORS<bool>(0);
 	}
 	public static bool CAN_REGISTER_MISSION_ENTITIES(int ped_amt, int vehicle_amt, int object_amt, int pickup_amt)
 	{
-		return NativeFunction.Natives.CAN_REGISTER_MISSION_ENTITIES(ped_amt, vehicle_amt, object_amt, pickup_amt);
+		return NativeFunction.Natives.CAN_REGISTER_MISSION_ENTITIES<bool>(ped_amt, vehicle_amt, object_amt, pickup_amt);
 	}
 	/// <summary>
 	/// 	p0 appears to be for MP
 	/// </summary>
 	public static int GET_NUM_RESERVED_MISSION_OBJECTS(bool p0)
 	{
-		return NativeFunction.Natives.GET_NUM_RESERVED_MISSION_OBJECTS(p0, 0);
+		return NativeFunction.Natives.GET_NUM_RESERVED_MISSION_OBJECTS<int>(p0, 0);
 	}
 	/// <summary>
 	/// 	p0 appears to be for MP
 	/// </summary>
 	public static int GET_NUM_RESERVED_MISSION_PEDS(bool p0)
 	{
-		return NativeFunction.Natives.GET_NUM_RESERVED_MISSION_PEDS(p0, 0);
+		return NativeFunction.Natives.GET_NUM_RESERVED_MISSION_PEDS<int>(p0, 0);
 	}
 	/// <summary>
 	/// 	p0 appears to be for MP
 	/// </summary>
 	public static int GET_NUM_RESERVED_MISSION_VEHICLES(bool p0)
 	{
-		return NativeFunction.Natives.GET_NUM_RESERVED_MISSION_VEHICLES(p0, 0);
+		return NativeFunction.Natives.GET_NUM_RESERVED_MISSION_VEHICLES<int>(p0, 0);
 	}
 	public static int GET_NUM_CREATED_MISSION_OBJECTS(bool p0)
 	{
-		return NativeFunction.Natives.GET_NUM_CREATED_MISSION_OBJECTS(p0);
+		return NativeFunction.Natives.GET_NUM_CREATED_MISSION_OBJECTS<int>(p0);
 	}
 	public static int GET_NUM_CREATED_MISSION_PEDS(bool p0)
 	{
-		return NativeFunction.Natives.GET_NUM_CREATED_MISSION_PEDS(p0);
+		return NativeFunction.Natives.GET_NUM_CREATED_MISSION_PEDS<int>(p0);
 	}
 	public static int GET_NUM_CREATED_MISSION_VEHICLES(bool p0)
 	{
-		return NativeFunction.Natives.GET_NUM_CREATED_MISSION_VEHICLES(p0);
+		return NativeFunction.Natives.GET_NUM_CREATED_MISSION_VEHICLES<int>(p0);
 	}
 	public static void GET_RESERVED_MISSION_ENTITIES_IN_AREA(float x, float y, float z)
 	{
@@ -19663,19 +19663,19 @@ public static class Natives
 	}
 	public static int GET_MAX_NUM_NETWORK_OBJECTS()
 	{
-		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_OBJECTS();
+		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_OBJECTS<int>();
 	}
 	public static int GET_MAX_NUM_NETWORK_PEDS()
 	{
-		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_PEDS();
+		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_PEDS<int>();
 	}
 	public static int GET_MAX_NUM_NETWORK_VEHICLES()
 	{
-		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_VEHICLES();
+		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_VEHICLES<int>();
 	}
 	public static int GET_MAX_NUM_NETWORK_PICKUPS()
 	{
-		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_PICKUPS();
+		return NativeFunction.Natives.GET_MAX_NUM_NETWORK_PICKUPS<int>();
 	}
 	public static void NETWORK_SET_OBJECT_SCOPE_DISTANCE(Object _object, float range)
 	{
@@ -19700,7 +19700,7 @@ public static class Natives
 	}
 	public static int GET_NETWORK_TIME()
 	{
-		return NativeFunction.Natives.GET_NETWORK_TIME();
+		return NativeFunction.Natives.GET_NETWORK_TIME<int>();
 	}
 	/// <summary>
 	/// 	Returns the same value as GET_NETWORK_TIME in freemode, but as opposed to `GET_NETWORK_TIME` it always gets the most recent time, instead of once per tick.<br/>
@@ -19708,64 +19708,64 @@ public static class Natives
 	/// </summary>
 	public static int GET_NETWORK_TIME_ACCURATE()
 	{
-		return NativeFunction.Natives.GET_NETWORK_TIME_ACCURATE();
+		return NativeFunction.Natives.GET_NETWORK_TIME_ACCURATE<int>();
 	}
 	public static bool HAS_NETWORK_TIME_STARTED()
 	{
-		return NativeFunction.Natives.HAS_NETWORK_TIME_STARTED();
+		return NativeFunction.Natives.HAS_NETWORK_TIME_STARTED<bool>();
 	}
 	/// <summary>
 	/// 	Adds the first argument to the second.
 	/// </summary>
 	public static int GET_TIME_OFFSET(int timeA, int timeB)
 	{
-		return NativeFunction.Natives.GET_TIME_OFFSET(timeA, timeB);
+		return NativeFunction.Natives.GET_TIME_OFFSET<int>(timeA, timeB);
 	}
 	/// <summary>
 	/// 	Subtracts the second argument from the first, then returns whether the result is negative.
 	/// </summary>
 	public static bool IS_TIME_LESS_THAN(int timeA, int timeB)
 	{
-		return NativeFunction.Natives.IS_TIME_LESS_THAN(timeA, timeB);
+		return NativeFunction.Natives.IS_TIME_LESS_THAN<bool>(timeA, timeB);
 	}
 	/// <summary>
 	/// 	Subtracts the first argument from the second, then returns whether the result is negative.
 	/// </summary>
 	public static bool IS_TIME_MORE_THAN(int timeA, int timeB)
 	{
-		return NativeFunction.Natives.IS_TIME_MORE_THAN(timeA, timeB);
+		return NativeFunction.Natives.IS_TIME_MORE_THAN<bool>(timeA, timeB);
 	}
 	/// <summary>
 	/// 	Returns true if the two times are equal; otherwise returns false.
 	/// </summary>
 	public static bool IS_TIME_EQUAL_TO(int timeA, int timeB)
 	{
-		return NativeFunction.Natives.IS_TIME_EQUAL_TO(timeA, timeB);
+		return NativeFunction.Natives.IS_TIME_EQUAL_TO<bool>(timeA, timeB);
 	}
 	/// <summary>
 	/// 	Subtracts the second argument from the first.
 	/// </summary>
 	public static int GET_TIME_DIFFERENCE(int timeA, int timeB)
 	{
-		return NativeFunction.Natives.GET_TIME_DIFFERENCE(timeA, timeB);
+		return NativeFunction.Natives.GET_TIME_DIFFERENCE<int>(timeA, timeB);
 	}
 	public static string GET_TIME_AS_STRING(int time)
 	{
-		return NativeFunction.Natives.GET_TIME_AS_STRING(time);
+		return NativeFunction.Natives.GET_TIME_AS_STRING<string>(time);
 	}
 	/// <summary>
 	/// 	Same as GET_CLOUD_TIME_AS_INT but returns the value as a hex string (%I64X).
 	/// </summary>
 	public static string GET_CLOUD_TIME_AS_STRING()
 	{
-		return NativeFunction.Natives.GET_CLOUD_TIME_AS_STRING();
+		return NativeFunction.Natives.GET_CLOUD_TIME_AS_STRING<string>();
 	}
 	/// <summary>
 	/// 	Returns POSIX timestamp, an int representing the cloud time.
 	/// </summary>
 	public static int GET_CLOUD_TIME_AS_INT()
 	{
-		return NativeFunction.Natives.GET_CLOUD_TIME_AS_INT();
+		return NativeFunction.Natives.GET_CLOUD_TIME_AS_INT<int>();
 	}
 	/// <summary>
 	/// 	Takes the specified time and writes it to the structure specified in the second argument.<br/>
@@ -19808,7 +19808,7 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_IN_SPECTATOR_MODE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_IN_SPECTATOR_MODE();
+		return NativeFunction.Natives.NETWORK_IS_IN_SPECTATOR_MODE<bool>();
 	}
 	public static void NETWORK_SET_IN_MP_CUTSCENE(bool p0, bool p1)
 	{
@@ -19816,11 +19816,11 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_IN_MP_CUTSCENE()
 	{
-		return NativeFunction.Natives.NETWORK_IS_IN_MP_CUTSCENE();
+		return NativeFunction.Natives.NETWORK_IS_IN_MP_CUTSCENE<bool>();
 	}
 	public static bool NETWORK_IS_PLAYER_IN_MP_CUTSCENE(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_IN_MP_CUTSCENE(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_IN_MP_CUTSCENE<bool>(player);
 	}
 	public static void NETWORK_HIDE_PROJECTILE_IN_CUTSCENE()
 	{
@@ -19832,7 +19832,7 @@ public static class Natives
 	}
 	public static bool IS_NETWORK_VEHICLE_RUNNING_RESPOT_TIMER(int networkID)
 	{
-		return NativeFunction.Natives.IS_NETWORK_VEHICLE_RUNNING_RESPOT_TIMER(networkID);
+		return NativeFunction.Natives.IS_NETWORK_VEHICLE_RUNNING_RESPOT_TIMER<bool>(networkID);
 	}
 	public static void SET_NETWORK_VEHICLE_AS_GHOST(Vehicle vehicle, bool toggle)
 	{
@@ -19858,7 +19858,7 @@ public static class Natives
 	}
 	public static bool IS_ENTITY_A_GHOST(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_A_GHOST(entity);
+		return NativeFunction.Natives.IS_ENTITY_A_GHOST<bool>(entity);
 	}
 	public static void SET_NON_PARTICIPANTS_OF_THIS_SCRIPT_AS_GHOSTS(bool p0)
 	{
@@ -19895,7 +19895,7 @@ public static class Natives
 	}
 	public static bool IS_ENTITY_IN_GHOST_COLLISION(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_IN_GHOST_COLLISION(entity);
+		return NativeFunction.Natives.IS_ENTITY_IN_GHOST_COLLISION<bool>(entity);
 	}
 	/// <summary>
 	/// 	reportData includes mc, ceo, yacht and licenceplate names
@@ -19910,7 +19910,7 @@ public static class Natives
 	}
 	public static int NETWORK_CREATE_SYNCHRONISED_SCENE(float x, float y, float z, float xRot, float yRot, float zRot, int rotationOrder, bool useOcclusionPortal, bool looped, float p9, float animTime, float p11)
 	{
-		return NativeFunction.Natives.NETWORK_CREATE_SYNCHRONISED_SCENE(x, y, z, xRot, yRot, zRot, rotationOrder, useOcclusionPortal, looped, p9, animTime, p11);
+		return NativeFunction.Natives.NETWORK_CREATE_SYNCHRONISED_SCENE<int>(x, y, z, xRot, yRot, zRot, rotationOrder, useOcclusionPortal, looped, p9, animTime, p11);
 	}
 	public static void NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(Ped ped, int netScene, string animDict, string animnName, float speed, float speedMultiplier, int duration, int flag, float playbackRate)
 	{
@@ -19950,7 +19950,7 @@ public static class Natives
 	}
 	public static int NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(int netId)
 	{
-		return NativeFunction.Natives.NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(netId);
+		return NativeFunction.Natives.NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID<int>(netId);
 	}
 	public static void NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA(int netScene)
 	{
@@ -19965,7 +19965,7 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_FIND_LARGEST_BUNCH_OF_PLAYERS(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_FIND_LARGEST_BUNCH_OF_PLAYERS(p0, 0);
+		return NativeFunction.Natives.NETWORK_FIND_LARGEST_BUNCH_OF_PLAYERS<bool>(p0, 0);
 	}
 	/// <summary>
 	/// 	One of the first things it does is get the players ped.<br/>
@@ -19974,18 +19974,18 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_START_RESPAWN_SEARCH_FOR_PLAYER(Player player, float x, float y, float z, float radius, float p5, float p6, float p7, int flags)
 	{
-		return NativeFunction.Natives.NETWORK_START_RESPAWN_SEARCH_FOR_PLAYER(player, x, y, z, radius, p5, p6, p7, flags);
+		return NativeFunction.Natives.NETWORK_START_RESPAWN_SEARCH_FOR_PLAYER<bool>(player, x, y, z, radius, p5, p6, p7, flags);
 	}
 	/// <summary>
 	/// 	p8, p9, p10 is another coordinate, or zero, often related to `GET_BLIP_COORDS in the decompiled scripts.
 	/// </summary>
 	public static bool NETWORK_START_RESPAWN_SEARCH_IN_ANGLED_AREA_FOR_PLAYER(Player player, float x1, float y1, float z1, float x2, float y2, float z2, float width, float p8, float p9, float p10, int flags)
 	{
-		return NativeFunction.Natives.NETWORK_START_RESPAWN_SEARCH_IN_ANGLED_AREA_FOR_PLAYER(player, x1, y1, z1, x2, y2, z2, width, p8, p9, p10, flags);
+		return NativeFunction.Natives.NETWORK_START_RESPAWN_SEARCH_IN_ANGLED_AREA_FOR_PLAYER<bool>(player, x1, y1, z1, x2, y2, z2, width, p8, p9, p10, flags);
 	}
 	public static int NETWORK_QUERY_RESPAWN_RESULTS()
 	{
-		return NativeFunction.Natives.NETWORK_QUERY_RESPAWN_RESULTS(0);
+		return NativeFunction.Natives.NETWORK_QUERY_RESPAWN_RESULTS<int>(0);
 	}
 	public static void NETWORK_CANCEL_RESPAWN_SEARCH()
 	{
@@ -20000,7 +20000,7 @@ public static class Natives
 	}
 	public static int NETWORK_GET_RESPAWN_RESULT_FLAGS(int p0)
 	{
-		return NativeFunction.Natives.NETWORK_GET_RESPAWN_RESULT_FLAGS(p0);
+		return NativeFunction.Natives.NETWORK_GET_RESPAWN_RESULT_FLAGS<int>(p0);
 	}
 	public static void NETWORK_START_SOLO_TUTORIAL_SESSION()
 	{
@@ -20019,23 +20019,23 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_IN_TUTORIAL_SESSION()
 	{
-		return NativeFunction.Natives.NETWORK_IS_IN_TUTORIAL_SESSION();
+		return NativeFunction.Natives.NETWORK_IS_IN_TUTORIAL_SESSION<bool>();
 	}
 	public static bool NETWORK_WAITING_POP_CLEAR_TUTORIAL_SESSION()
 	{
-		return NativeFunction.Natives.NETWORK_WAITING_POP_CLEAR_TUTORIAL_SESSION();
+		return NativeFunction.Natives.NETWORK_WAITING_POP_CLEAR_TUTORIAL_SESSION<bool>();
 	}
 	public static bool NETWORK_IS_TUTORIAL_SESSION_CHANGE_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TUTORIAL_SESSION_CHANGE_PENDING();
+		return NativeFunction.Natives.NETWORK_IS_TUTORIAL_SESSION_CHANGE_PENDING<bool>();
 	}
 	public static int NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE(player);
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE<int>(player);
 	}
 	public static bool NETWORK_ARE_PLAYERS_IN_SAME_TUTORIAL_SESSION(Player player, int index)
 	{
-		return NativeFunction.Natives.NETWORK_ARE_PLAYERS_IN_SAME_TUTORIAL_SESSION(player, index);
+		return NativeFunction.Natives.NETWORK_ARE_PLAYERS_IN_SAME_TUTORIAL_SESSION<bool>(player, index);
 	}
 	public static void NETWORK_BLOCK_PROXY_MIGRATION_BETWEEN_TUTORIAL_SESSIONS()
 	{
@@ -20047,7 +20047,7 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_PLAYER_CONCEALED(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_PLAYER_CONCEALED(player);
+		return NativeFunction.Natives.NETWORK_IS_PLAYER_CONCEALED<bool>(player);
 	}
 	public static void NETWORK_CONCEAL_ENTITY(Entity entity, bool toggle)
 	{
@@ -20058,7 +20058,7 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_IS_ENTITY_CONCEALED(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_IS_ENTITY_CONCEALED(entity);
+		return NativeFunction.Natives.NETWORK_IS_ENTITY_CONCEALED<bool>(entity);
 	}
 	/// <summary>
 	/// 	Works in Singleplayer too.<br/>
@@ -20078,11 +20078,11 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_CLOCK_TIME_OVERRIDDEN()
 	{
-		return NativeFunction.Natives.NETWORK_IS_CLOCK_TIME_OVERRIDDEN();
+		return NativeFunction.Natives.NETWORK_IS_CLOCK_TIME_OVERRIDDEN<bool>();
 	}
 	public static int NETWORK_ADD_ENTITY_AREA(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.NETWORK_ADD_ENTITY_AREA(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.NETWORK_ADD_ENTITY_AREA<int>(x1, y1, z1, x2, y2, z2);
 	}
 	/// <summary>
 	/// 	To remove, see: NETWORK_REMOVE_ENTITY_AREA<br/>
@@ -20090,31 +20090,31 @@ public static class Natives
 	/// </summary>
 	public static int NETWORK_ADD_ENTITY_ANGLED_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float width)
 	{
-		return NativeFunction.Natives.NETWORK_ADD_ENTITY_ANGLED_AREA(x1, y1, z1, x2, y2, z2, width);
+		return NativeFunction.Natives.NETWORK_ADD_ENTITY_ANGLED_AREA<int>(x1, y1, z1, x2, y2, z2, width);
 	}
 	public static int NETWORK_ADD_CLIENT_ENTITY_AREA(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.NETWORK_ADD_CLIENT_ENTITY_AREA(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.NETWORK_ADD_CLIENT_ENTITY_AREA<int>(x1, y1, z1, x2, y2, z2);
 	}
 	public static int NETWORK_ADD_CLIENT_ENTITY_ANGLED_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float radius)
 	{
-		return NativeFunction.Natives.NETWORK_ADD_CLIENT_ENTITY_ANGLED_AREA(x1, y1, z1, x2, y2, z2, radius);
+		return NativeFunction.Natives.NETWORK_ADD_CLIENT_ENTITY_ANGLED_AREA<int>(x1, y1, z1, x2, y2, z2, radius);
 	}
 	public static bool NETWORK_REMOVE_ENTITY_AREA(int areaHandle)
 	{
-		return NativeFunction.Natives.NETWORK_REMOVE_ENTITY_AREA(areaHandle);
+		return NativeFunction.Natives.NETWORK_REMOVE_ENTITY_AREA<bool>(areaHandle);
 	}
 	public static bool NETWORK_ENTITY_AREA_DOES_EXIST(int areaHandle)
 	{
-		return NativeFunction.Natives.NETWORK_ENTITY_AREA_DOES_EXIST(areaHandle);
+		return NativeFunction.Natives.NETWORK_ENTITY_AREA_DOES_EXIST<bool>(areaHandle);
 	}
 	public static bool NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(int areaHandle)
 	{
-		return NativeFunction.Natives.NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(areaHandle);
+		return NativeFunction.Natives.NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED<bool>(areaHandle);
 	}
 	public static bool NETWORK_ENTITY_AREA_IS_OCCUPIED(int areaHandle)
 	{
-		return NativeFunction.Natives.NETWORK_ENTITY_AREA_IS_OCCUPIED(areaHandle);
+		return NativeFunction.Natives.NETWORK_ENTITY_AREA_IS_OCCUPIED<bool>(areaHandle);
 	}
 	public static void NETWORK_USE_HIGH_PRECISION_BLENDING(int netID, bool toggle)
 	{
@@ -20130,11 +20130,11 @@ public static class Natives
 	}
 	public static bool NETWORK_REQUEST_CLOUD_BACKGROUND_SCRIPTS()
 	{
-		return NativeFunction.Natives.NETWORK_REQUEST_CLOUD_BACKGROUND_SCRIPTS();
+		return NativeFunction.Natives.NETWORK_REQUEST_CLOUD_BACKGROUND_SCRIPTS<bool>();
 	}
 	public static bool NETWORK_IS_CLOUD_BACKGROUND_SCRIPT_REQUEST_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_CLOUD_BACKGROUND_SCRIPT_REQUEST_PENDING();
+		return NativeFunction.Natives.NETWORK_IS_CLOUD_BACKGROUND_SCRIPT_REQUEST_PENDING<bool>();
 	}
 	public static void NETWORK_REQUEST_CLOUD_TUNABLES()
 	{
@@ -20142,14 +20142,14 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_TUNABLE_CLOUD_REQUEST_PENDING()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TUNABLE_CLOUD_REQUEST_PENDING();
+		return NativeFunction.Natives.NETWORK_IS_TUNABLE_CLOUD_REQUEST_PENDING<bool>();
 	}
 	/// <summary>
 	/// 	Actually returns the version (TUNABLE_VERSION)
 	/// </summary>
 	public static int NETWORK_GET_TUNABLE_CLOUD_CRC()
 	{
-		return NativeFunction.Natives.NETWORK_GET_TUNABLE_CLOUD_CRC();
+		return NativeFunction.Natives.NETWORK_GET_TUNABLE_CLOUD_CRC<int>();
 	}
 	/// <summary>
 	/// 	Sets up tunable contexts for _NETWORK_GET_TUNABLES_REGISTRATION_{BOOL|INT|FLOAT}
@@ -20171,7 +20171,7 @@ public static class Natives
 	/// </summary>
 	public static bool _NETWORK_GET_TUNABLES_REGISTRATION_BOOL(ulong tunableName, bool defaultValue)
 	{
-		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_BOOL(tunableName, defaultValue);
+		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_BOOL<bool>(tunableName, defaultValue);
 	}
 	/// <summary>
 	/// 	Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.<br/>
@@ -20179,7 +20179,7 @@ public static class Natives
 	/// </summary>
 	public static int _NETWORK_GET_TUNABLES_REGISTRATION_INT(ulong tunableName, int defaultValue)
 	{
-		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_INT(tunableName, defaultValue);
+		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_INT<int>(tunableName, defaultValue);
 	}
 	/// <summary>
 	/// 	Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.<br/>
@@ -20187,62 +20187,62 @@ public static class Natives
 	/// </summary>
 	public static float _NETWORK_GET_TUNABLES_REGISTRATION_FLOAT(ulong tunableName, float defaultValue)
 	{
-		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_FLOAT(tunableName, defaultValue);
+		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_FLOAT<float>(tunableName, defaultValue);
 	}
 	public static bool NETWORK_DOES_TUNABLE_EXIST(string tunableContext, string tunableName)
 	{
-		return NativeFunction.Natives.NETWORK_DOES_TUNABLE_EXIST(tunableContext, tunableName);
+		return NativeFunction.Natives.NETWORK_DOES_TUNABLE_EXIST<bool>(tunableContext, tunableName);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_INT(string tunableContext, string tunableName, out int value)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT(tunableContext, tunableName, out value);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT<bool>(tunableContext, tunableName, out value);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_FLOAT(string tunableContext, string tunableName, out float value)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT(tunableContext, tunableName, out value);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT<bool>(tunableContext, tunableName, out value);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_BOOL(string tunableContext, string tunableName)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL(tunableContext, tunableName);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL<bool>(tunableContext, tunableName);
 	}
 	public static bool NETWORK_DOES_TUNABLE_EXIST_HASH(ulong tunableContext, ulong tunableName)
 	{
-		return NativeFunction.Natives.NETWORK_DOES_TUNABLE_EXIST_HASH(tunableContext, tunableName);
+		return NativeFunction.Natives.NETWORK_DOES_TUNABLE_EXIST_HASH<bool>(tunableContext, tunableName);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_MODIFICATION_DETECTION_CLEAR()
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_MODIFICATION_DETECTION_CLEAR();
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_MODIFICATION_DETECTION_CLEAR<bool>();
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_INT_HASH(ulong tunableContext, ulong tunableName, out int value)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT_HASH(tunableContext, tunableName, out value);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT_HASH<bool>(tunableContext, tunableName, out value);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH(ulong contextHash, ulong nameHash, out int value)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH(contextHash, nameHash, out value);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH<bool>(contextHash, nameHash, out value);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_FLOAT_HASH(ulong tunableContext, ulong tunableName, out float value)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT_HASH(tunableContext, tunableName, out value);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT_HASH<bool>(tunableContext, tunableName, out value);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH(ulong contextHash, ulong nameHash, out float value)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH(contextHash, nameHash, out value);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH<bool>(contextHash, nameHash, out value);
 	}
 	public static bool NETWORK_ACCESS_TUNABLE_BOOL_HASH(ulong tunableContext, ulong tunableName)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL_HASH(tunableContext, tunableName);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL_HASH<bool>(tunableContext, tunableName);
 	}
-	public static bool NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH(ulong contextHash, ulong nameHash, bool value)
+	public static bool NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH(ulong contextHash, ulong nameHash, out bool value)
 	{
-		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH(contextHash, nameHash, value);
+		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH<bool>(contextHash, nameHash, out value);
 	}
 	/// <summary>
 	/// 	Returns defaultValue if the tunable doesn&amp;apos;t exist.
 	/// </summary>
 	public static bool NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH(ulong tunableContext, ulong tunableName, bool defaultValue)
 	{
-		return NativeFunction.Natives.NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH(tunableContext, tunableName, defaultValue);
+		return NativeFunction.Natives.NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH<bool>(tunableContext, tunableName, defaultValue);
 	}
 	/// <summary>
 	/// 	Return the content modifier id (the tunables context if you want) of a specific content.<br/>
@@ -20256,11 +20256,11 @@ public static class Natives
 	/// </summary>
 	public static int NETWORK_GET_CONTENT_MODIFIER_LIST_ID(ulong contentHash)
 	{
-		return NativeFunction.Natives.NETWORK_GET_CONTENT_MODIFIER_LIST_ID(contentHash);
+		return NativeFunction.Natives.NETWORK_GET_CONTENT_MODIFIER_LIST_ID<int>(contentHash);
 	}
 	public static int NETWORK_GET_BONE_ID_OF_FATAL_HIT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_BONE_ID_OF_FATAL_HIT();
+		return NativeFunction.Natives.NETWORK_GET_BONE_ID_OF_FATAL_HIT<int>();
 	}
 	public static void NETWORK_RESET_BODY_TRACKER()
 	{
@@ -20268,15 +20268,15 @@ public static class Natives
 	}
 	public static int NETWORK_GET_NUMBER_BODY_TRACKER_HITS()
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUMBER_BODY_TRACKER_HITS();
+		return NativeFunction.Natives.NETWORK_GET_NUMBER_BODY_TRACKER_HITS<int>();
 	}
 	public static bool NETWORK_HAS_BONE_BEEN_HIT_BY_KILLER(int boneIndex)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_BONE_BEEN_HIT_BY_KILLER(boneIndex);
+		return NativeFunction.Natives.NETWORK_HAS_BONE_BEEN_HIT_BY_KILLER<bool>(boneIndex);
 	}
 	public static bool NETWORK_SET_ATTRIBUTE_DAMAGE_TO_PLAYER(Ped ped, Player player)
 	{
-		return NativeFunction.Natives.NETWORK_SET_ATTRIBUTE_DAMAGE_TO_PLAYER(ped, player);
+		return NativeFunction.Natives.NETWORK_SET_ATTRIBUTE_DAMAGE_TO_PLAYER<bool>(ped, player);
 	}
 	/// <summary>
 	/// 	Allows vehicle wheels to be destructible even when the vehicle entity is invincible.
@@ -20322,7 +20322,7 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_EXPLODE_VEHICLE(Vehicle vehicle, bool isAudible, bool isInvisible, int netId)
 	{
-		return NativeFunction.Natives.NETWORK_EXPLODE_VEHICLE(vehicle, isAudible, isInvisible, netId);
+		return NativeFunction.Natives.NETWORK_EXPLODE_VEHICLE<bool>(vehicle, isAudible, isInvisible, netId);
 	}
 	public static void NETWORK_EXPLODE_HELI(Vehicle vehicle, bool isAudible, bool isInvisible, int netId)
 	{
@@ -20372,19 +20372,19 @@ public static class Natives
 	}
 	public static bool NETWORK_HAS_CACHED_PLAYER_HEAD_BLEND_DATA(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_CACHED_PLAYER_HEAD_BLEND_DATA(player);
+		return NativeFunction.Natives.NETWORK_HAS_CACHED_PLAYER_HEAD_BLEND_DATA<bool>(player);
 	}
 	public static bool NETWORK_APPLY_CACHED_PLAYER_HEAD_BLEND_DATA(Ped ped, Player player)
 	{
-		return NativeFunction.Natives.NETWORK_APPLY_CACHED_PLAYER_HEAD_BLEND_DATA(ped, player);
+		return NativeFunction.Natives.NETWORK_APPLY_CACHED_PLAYER_HEAD_BLEND_DATA<bool>(ped, player);
 	}
 	public static int GET_NUM_COMMERCE_ITEMS()
 	{
-		return NativeFunction.Natives.GET_NUM_COMMERCE_ITEMS();
+		return NativeFunction.Natives.GET_NUM_COMMERCE_ITEMS<int>();
 	}
 	public static bool IS_COMMERCE_DATA_VALID()
 	{
-		return NativeFunction.Natives.IS_COMMERCE_DATA_VALID();
+		return NativeFunction.Natives.IS_COMMERCE_DATA_VALID<bool>();
 	}
 	/// <summary>
 	/// 	Does nothing (it&amp;apos;s a nullsub).
@@ -20395,30 +20395,30 @@ public static class Natives
 	}
 	public static bool IS_COMMERCE_DATA_FETCH_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.IS_COMMERCE_DATA_FETCH_IN_PROGRESS();
+		return NativeFunction.Natives.IS_COMMERCE_DATA_FETCH_IN_PROGRESS<bool>();
 	}
 	public static string GET_COMMERCE_ITEM_ID(int index)
 	{
-		return NativeFunction.Natives.GET_COMMERCE_ITEM_ID(index);
+		return NativeFunction.Natives.GET_COMMERCE_ITEM_ID<string>(index);
 	}
 	public static string GET_COMMERCE_ITEM_NAME(int index)
 	{
-		return NativeFunction.Natives.GET_COMMERCE_ITEM_NAME(index);
+		return NativeFunction.Natives.GET_COMMERCE_ITEM_NAME<string>(index);
 	}
 	public static string GET_COMMERCE_PRODUCT_PRICE(int index)
 	{
-		return NativeFunction.Natives.GET_COMMERCE_PRODUCT_PRICE(index);
+		return NativeFunction.Natives.GET_COMMERCE_PRODUCT_PRICE<string>(index);
 	}
 	public static int GET_COMMERCE_ITEM_NUM_CATS(int index)
 	{
-		return NativeFunction.Natives.GET_COMMERCE_ITEM_NUM_CATS(index);
+		return NativeFunction.Natives.GET_COMMERCE_ITEM_NUM_CATS<int>(index);
 	}
 	/// <summary>
 	/// 	index2 is unused
 	/// </summary>
 	public static string GET_COMMERCE_ITEM_CAT(int index, int index2)
 	{
-		return NativeFunction.Natives.GET_COMMERCE_ITEM_CAT(index, index2);
+		return NativeFunction.Natives.GET_COMMERCE_ITEM_CAT<string>(index, index2);
 	}
 	public static void OPEN_COMMERCE_STORE(string p0, string p1, int p2)
 	{
@@ -20426,7 +20426,7 @@ public static class Natives
 	}
 	public static bool IS_COMMERCE_STORE_OPEN()
 	{
-		return NativeFunction.Natives.IS_COMMERCE_STORE_OPEN();
+		return NativeFunction.Natives.IS_COMMERCE_STORE_OPEN<bool>();
 	}
 	/// <summary>
 	/// 	Access to the store for shark cards etc...
@@ -20437,7 +20437,7 @@ public static class Natives
 	}
 	public static bool REQUEST_COMMERCE_ITEM_IMAGE(int index)
 	{
-		return NativeFunction.Natives.REQUEST_COMMERCE_ITEM_IMAGE(index);
+		return NativeFunction.Natives.REQUEST_COMMERCE_ITEM_IMAGE<bool>(index);
 	}
 	public static void RELEASE_ALL_COMMERCE_ITEM_IMAGES()
 	{
@@ -20445,11 +20445,11 @@ public static class Natives
 	}
 	public static string GET_COMMERCE_ITEM_TEXTURENAME(int index)
 	{
-		return NativeFunction.Natives.GET_COMMERCE_ITEM_TEXTURENAME(index);
+		return NativeFunction.Natives.GET_COMMERCE_ITEM_TEXTURENAME<string>(index);
 	}
 	public static bool IS_STORE_AVAILABLE_TO_USER()
 	{
-		return NativeFunction.Natives.IS_STORE_AVAILABLE_TO_USER();
+		return NativeFunction.Natives.IS_STORE_AVAILABLE_TO_USER<bool>();
 	}
 	public static void DELAY_MP_STORE_OPEN()
 	{
@@ -20461,7 +20461,7 @@ public static class Natives
 	}
 	public static bool IS_USER_OLD_ENOUGH_TO_ACCESS_STORE()
 	{
-		return NativeFunction.Natives.IS_USER_OLD_ENOUGH_TO_ACCESS_STORE();
+		return NativeFunction.Natives.IS_USER_OLD_ENOUGH_TO_ACCESS_STORE<bool>();
 	}
 	public static void SET_LAST_VIEWED_SHOP_ITEM(ulong p0, int p1, ulong p2)
 	{
@@ -20472,26 +20472,26 @@ public static class Natives
 	/// </summary>
 	public static int GET_USER_PREMIUM_ACCESS()
 	{
-		return NativeFunction.Natives.GET_USER_PREMIUM_ACCESS();
+		return NativeFunction.Natives.GET_USER_PREMIUM_ACCESS<int>();
 	}
 	/// <summary>
 	/// 	Checks some commerce stuff
 	/// </summary>
 	public static int GET_USER_STARTER_ACCESS()
 	{
-		return NativeFunction.Natives.GET_USER_STARTER_ACCESS();
+		return NativeFunction.Natives.GET_USER_STARTER_ACCESS<int>();
 	}
 	public static int CLOUD_DELETE_MEMBER_FILE(string p0)
 	{
-		return NativeFunction.Natives.CLOUD_DELETE_MEMBER_FILE(p0);
+		return NativeFunction.Natives.CLOUD_DELETE_MEMBER_FILE<int>(p0);
 	}
 	public static bool CLOUD_HAS_REQUEST_COMPLETED(int requestId)
 	{
-		return NativeFunction.Natives.CLOUD_HAS_REQUEST_COMPLETED(requestId);
+		return NativeFunction.Natives.CLOUD_HAS_REQUEST_COMPLETED<bool>(requestId);
 	}
 	public static bool CLOUD_DID_REQUEST_SUCCEED(int requestId)
 	{
-		return NativeFunction.Natives.CLOUD_DID_REQUEST_SUCCEED(requestId);
+		return NativeFunction.Natives.CLOUD_DID_REQUEST_SUCCEED<bool>(requestId);
 	}
 	/// <summary>
 	/// 	Downloads prod.cloud.rockstargames.com/titles/gta5/[platform]/check.json
@@ -20502,32 +20502,32 @@ public static class Natives
 	}
 	public static bool CLOUD_IS_CHECKING_AVAILABILITY()
 	{
-		return NativeFunction.Natives.CLOUD_IS_CHECKING_AVAILABILITY();
+		return NativeFunction.Natives.CLOUD_IS_CHECKING_AVAILABILITY<bool>();
 	}
 	public static bool CLOUD_GET_AVAILABILITY_CHECK_RESULT()
 	{
-		return NativeFunction.Natives.CLOUD_GET_AVAILABILITY_CHECK_RESULT();
+		return NativeFunction.Natives.CLOUD_GET_AVAILABILITY_CHECK_RESULT<bool>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static int GET_CONTENT_TO_LOAD_TYPE()
 	{
-		return NativeFunction.Natives.GET_CONTENT_TO_LOAD_TYPE();
+		return NativeFunction.Natives.GET_CONTENT_TO_LOAD_TYPE<int>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static bool GET_IS_LAUNCH_FROM_LIVE_AREA()
 	{
-		return NativeFunction.Natives.GET_IS_LAUNCH_FROM_LIVE_AREA();
+		return NativeFunction.Natives.GET_IS_LAUNCH_FROM_LIVE_AREA<bool>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static bool GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT()
 	{
-		return NativeFunction.Natives.GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT();
+		return NativeFunction.Natives.GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT<bool>();
 	}
 	/// <summary>
 	/// 	This native does absolutely nothing, just a nullsub
@@ -20538,27 +20538,27 @@ public static class Natives
 	}
 	public static bool UGC_COPY_CONTENT()
 	{
-		return NativeFunction.Natives.UGC_COPY_CONTENT(0, 0);
+		return NativeFunction.Natives.UGC_COPY_CONTENT<bool>(0, 0);
 	}
 	public static bool UGC_IS_CREATING()
 	{
-		return NativeFunction.Natives.UGC_IS_CREATING();
+		return NativeFunction.Natives.UGC_IS_CREATING<bool>();
 	}
 	public static bool UGC_HAS_CREATE_FINISHED()
 	{
-		return NativeFunction.Natives.UGC_HAS_CREATE_FINISHED();
+		return NativeFunction.Natives.UGC_HAS_CREATE_FINISHED<bool>();
 	}
 	public static bool UGC_DID_CREATE_SUCCEED()
 	{
-		return NativeFunction.Natives.UGC_DID_CREATE_SUCCEED();
+		return NativeFunction.Natives.UGC_DID_CREATE_SUCCEED<bool>();
 	}
 	public static int UGC_GET_CREATE_RESULT()
 	{
-		return NativeFunction.Natives.UGC_GET_CREATE_RESULT();
+		return NativeFunction.Natives.UGC_GET_CREATE_RESULT<int>();
 	}
 	public static string UGC_GET_CREATE_CONTENT_ID()
 	{
-		return NativeFunction.Natives.UGC_GET_CREATE_CONTENT_ID();
+		return NativeFunction.Natives.UGC_GET_CREATE_CONTENT_ID<string>();
 	}
 	public static void UGC_CLEAR_CREATE_RESULT()
 	{
@@ -20566,63 +20566,63 @@ public static class Natives
 	}
 	public static bool UGC_QUERY_MY_CONTENT()
 	{
-		return NativeFunction.Natives.UGC_QUERY_MY_CONTENT(0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.UGC_QUERY_MY_CONTENT<bool>(0, 0, 0, 0, 0, 0);
 	}
 	public static bool UGC_QUERY_BY_CATEGORY(string p3, bool p5)
 	{
-		return NativeFunction.Natives.UGC_QUERY_BY_CATEGORY(0, 0, 0, p3, 0, p5);
+		return NativeFunction.Natives.UGC_QUERY_BY_CATEGORY<bool>(0, 0, 0, p3, 0, p5);
 	}
 	public static bool UGC_QUERY_BY_CONTENT_ID(string contentId, bool latestVersion, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_QUERY_BY_CONTENT_ID(contentId, latestVersion, contentTypeName);
+		return NativeFunction.Natives.UGC_QUERY_BY_CONTENT_ID<bool>(contentId, latestVersion, contentTypeName);
 	}
 	public static bool UGC_QUERY_BY_CONTENT_IDS(int count, bool latestVersion, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_QUERY_BY_CONTENT_IDS(0, count, latestVersion, contentTypeName);
+		return NativeFunction.Natives.UGC_QUERY_BY_CONTENT_IDS<bool>(0, count, latestVersion, contentTypeName);
 	}
 	public static bool UGC_QUERY_MOST_RECENTLY_CREATED_CONTENT(int offset, int count, string contentTypeName, int p3)
 	{
-		return NativeFunction.Natives.UGC_QUERY_MOST_RECENTLY_CREATED_CONTENT(offset, count, contentTypeName, p3);
+		return NativeFunction.Natives.UGC_QUERY_MOST_RECENTLY_CREATED_CONTENT<bool>(offset, count, contentTypeName, p3);
 	}
 	public static bool UGC_GET_BOOKMARKED_CONTENT(string p2)
 	{
-		return NativeFunction.Natives.UGC_GET_BOOKMARKED_CONTENT(0, 0, p2, 0);
+		return NativeFunction.Natives.UGC_GET_BOOKMARKED_CONTENT<bool>(0, 0, p2, 0);
 	}
 	public static bool UGC_GET_MY_CONTENT(string p2)
 	{
-		return NativeFunction.Natives.UGC_GET_MY_CONTENT(0, 0, p2, 0);
+		return NativeFunction.Natives.UGC_GET_MY_CONTENT<bool>(0, 0, p2, 0);
 	}
 	public static bool UGC_GET_FRIEND_CONTENT(string p2)
 	{
-		return NativeFunction.Natives.UGC_GET_FRIEND_CONTENT(0, 0, p2, 0);
+		return NativeFunction.Natives.UGC_GET_FRIEND_CONTENT<bool>(0, 0, p2, 0);
 	}
 	public static bool UGC_GET_CREW_CONTENT(string p3)
 	{
-		return NativeFunction.Natives.UGC_GET_CREW_CONTENT(0, 0, 0, p3, 0);
+		return NativeFunction.Natives.UGC_GET_CREW_CONTENT<bool>(0, 0, 0, p3, 0);
 	}
 	public static bool UGC_GET_GET_BY_CATEGORY(string p3)
 	{
-		return NativeFunction.Natives.UGC_GET_GET_BY_CATEGORY(0, 0, 0, p3, 0);
+		return NativeFunction.Natives.UGC_GET_GET_BY_CATEGORY<bool>(0, 0, 0, p3, 0);
 	}
 	public static bool UGC_GET_GET_BY_CONTENT_ID(string contentId, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_GET_GET_BY_CONTENT_ID(contentId, contentTypeName);
+		return NativeFunction.Natives.UGC_GET_GET_BY_CONTENT_ID<bool>(contentId, contentTypeName);
 	}
 	public static bool UGC_GET_GET_BY_CONTENT_IDS(int dataCount, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_GET_GET_BY_CONTENT_IDS(0, dataCount, contentTypeName);
+		return NativeFunction.Natives.UGC_GET_GET_BY_CONTENT_IDS<bool>(0, dataCount, contentTypeName);
 	}
 	public static bool UGC_GET_MOST_RECENTLY_CREATED_CONTENT()
 	{
-		return NativeFunction.Natives.UGC_GET_MOST_RECENTLY_CREATED_CONTENT(0, 0, 0, 0);
+		return NativeFunction.Natives.UGC_GET_MOST_RECENTLY_CREATED_CONTENT<bool>(0, 0, 0, 0);
 	}
 	public static bool UGC_GET_MOST_RECENTLY_PLAYED_CONTENT()
 	{
-		return NativeFunction.Natives.UGC_GET_MOST_RECENTLY_PLAYED_CONTENT(0, 0, 0, 0);
+		return NativeFunction.Natives.UGC_GET_MOST_RECENTLY_PLAYED_CONTENT<bool>(0, 0, 0, 0);
 	}
 	public static bool UGC_GET_TOP_RATED_CONTENT()
 	{
-		return NativeFunction.Natives.UGC_GET_TOP_RATED_CONTENT(0, 0, 0, 0);
+		return NativeFunction.Natives.UGC_GET_TOP_RATED_CONTENT<bool>(0, 0, 0, 0);
 	}
 	public static void UGC_CANCEL_QUERY()
 	{
@@ -20630,35 +20630,35 @@ public static class Natives
 	}
 	public static bool UGC_IS_GETTING()
 	{
-		return NativeFunction.Natives.UGC_IS_GETTING();
+		return NativeFunction.Natives.UGC_IS_GETTING<bool>();
 	}
 	public static bool UGC_HAS_GET_FINISHED()
 	{
-		return NativeFunction.Natives.UGC_HAS_GET_FINISHED();
+		return NativeFunction.Natives.UGC_HAS_GET_FINISHED<bool>();
 	}
 	public static bool UGC_DID_GET_SUCCEED()
 	{
-		return NativeFunction.Natives.UGC_DID_GET_SUCCEED();
+		return NativeFunction.Natives.UGC_DID_GET_SUCCEED<bool>();
 	}
 	public static bool UGC_WAS_QUERY_FORCE_CANCELLED()
 	{
-		return NativeFunction.Natives.UGC_WAS_QUERY_FORCE_CANCELLED();
+		return NativeFunction.Natives.UGC_WAS_QUERY_FORCE_CANCELLED<bool>();
 	}
 	public static int UGC_GET_QUERY_RESULT()
 	{
-		return NativeFunction.Natives.UGC_GET_QUERY_RESULT();
+		return NativeFunction.Natives.UGC_GET_QUERY_RESULT<int>();
 	}
 	public static int UGC_GET_CONTENT_NUM()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_NUM();
+		return NativeFunction.Natives.UGC_GET_CONTENT_NUM<int>();
 	}
 	public static int UGC_GET_CONTENT_TOTAL()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_TOTAL();
+		return NativeFunction.Natives.UGC_GET_CONTENT_TOTAL<int>();
 	}
 	public static ulong UGC_GET_CONTENT_HASH()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_HASH();
+		return NativeFunction.Natives.UGC_GET_CONTENT_HASH<ulong>();
 	}
 	public static void UGC_CLEAR_QUERY_RESULTS()
 	{
@@ -20666,53 +20666,53 @@ public static class Natives
 	}
 	public static string UGC_GET_CONTENT_USER_ID(int p0)
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_USER_ID(p0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_USER_ID<string>(p0);
 	}
 	public static bool UGC_GET_CONTENT_CREATOR_GAMER_HANDLE(int p0)
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_CREATOR_GAMER_HANDLE(p0, 0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_CREATOR_GAMER_HANDLE<bool>(p0, 0);
 	}
 	public static bool UGC_GET_CONTENT_CREATED_BY_LOCAL_PLAYER()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_CREATED_BY_LOCAL_PLAYER(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_CREATED_BY_LOCAL_PLAYER<bool>(0);
 	}
 	public static string UGC_GET_CONTENT_USER_NAME()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_USER_NAME(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_USER_NAME<string>(0);
 	}
 	public static bool UGC_GET_CONTENT_IS_USING_SC_NICKNAME()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_IS_USING_SC_NICKNAME(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_IS_USING_SC_NICKNAME<bool>(0);
 	}
 	public static int UGC_GET_CONTENT_CATEGORY(int p0)
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_CATEGORY(p0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_CATEGORY<int>(p0);
 	}
 	/// <summary>
 	/// 	Return the mission id of a job.
 	/// </summary>
 	public static string UGC_GET_CONTENT_ID(int p0)
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_ID(p0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_ID<string>(p0);
 	}
 	/// <summary>
 	/// 	Return the root content id of a job.
 	/// </summary>
 	public static string UGC_GET_ROOT_CONTENT_ID(int p0)
 	{
-		return NativeFunction.Natives.UGC_GET_ROOT_CONTENT_ID(p0);
+		return NativeFunction.Natives.UGC_GET_ROOT_CONTENT_ID<string>(p0);
 	}
 	public static string UGC_GET_CONTENT_NAME()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_NAME(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_NAME<string>(0);
 	}
 	public static int UGC_GET_CONTENT_DESCRIPTION_HASH()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_DESCRIPTION_HASH(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_DESCRIPTION_HASH<int>(0);
 	}
 	public static string UGC_GET_CONTENT_PATH(int p0, int p1)
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_PATH(p0, p1);
+		return NativeFunction.Natives.UGC_GET_CONTENT_PATH<string>(p0, p1);
 	}
 	public static void UGC_GET_CONTENT_UPDATED_DATE()
 	{
@@ -20720,83 +20720,83 @@ public static class Natives
 	}
 	public static int UGC_GET_CONTENT_FILE_VERSION()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_FILE_VERSION(0, 0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_FILE_VERSION<int>(0, 0);
 	}
 	public static bool UGC_GET_CONTENT_HAS_LO_RES_PHOTO(int p0)
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_LO_RES_PHOTO(p0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_LO_RES_PHOTO<bool>(p0);
 	}
 	public static bool UGC_GET_CONTENT_HAS_HI_RES_PHOTO(int p0)
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_HI_RES_PHOTO(p0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_HI_RES_PHOTO<bool>(p0);
 	}
 	public static int UGC_GET_CONTENT_LANGUAGE()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_LANGUAGE(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_LANGUAGE<int>(0);
 	}
 	public static bool UGC_GET_CONTENT_IS_PUBLISHED()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_IS_PUBLISHED(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_IS_PUBLISHED<bool>(0);
 	}
 	public static bool UGC_GET_CONTENT_IS_VERIFIED()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_IS_VERIFIED(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_IS_VERIFIED<bool>(0);
 	}
 	public static float UGC_GET_CONTENT_RATING()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_RATING(0, 0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_RATING<float>(0, 0);
 	}
 	public static int UGC_GET_CONTENT_RATING_COUNT()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_RATING_COUNT(0, 0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_RATING_COUNT<int>(0, 0);
 	}
 	public static int UGC_GET_CONTENT_RATING_POSITIVE_COUNT()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_RATING_POSITIVE_COUNT(0, 0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_RATING_POSITIVE_COUNT<int>(0, 0);
 	}
 	public static int UGC_GET_CONTENT_RATING_NEGATIVE_COUNT()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_RATING_NEGATIVE_COUNT(0, 0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_RATING_NEGATIVE_COUNT<int>(0, 0);
 	}
 	public static bool UGC_GET_CONTENT_HAS_PLAYER_RECORD()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_PLAYER_RECORD(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_PLAYER_RECORD<bool>(0);
 	}
 	public static bool UGC_GET_CONTENT_HAS_PLAYER_BOOKMARKED()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_PLAYER_BOOKMARKED(0);
+		return NativeFunction.Natives.UGC_GET_CONTENT_HAS_PLAYER_BOOKMARKED<bool>(0);
 	}
 	public static int UGC_REQUEST_CONTENT_DATA_FROM_INDEX(int p0, int p1)
 	{
-		return NativeFunction.Natives.UGC_REQUEST_CONTENT_DATA_FROM_INDEX(p0, p1);
+		return NativeFunction.Natives.UGC_REQUEST_CONTENT_DATA_FROM_INDEX<int>(p0, p1);
 	}
 	public static int UGC_REQUEST_CONTENT_DATA_FROM_PARAMS(string contentTypeName, string contentId, int p2, int p3, int p4)
 	{
-		return NativeFunction.Natives.UGC_REQUEST_CONTENT_DATA_FROM_PARAMS(contentTypeName, contentId, p2, p3, p4);
+		return NativeFunction.Natives.UGC_REQUEST_CONTENT_DATA_FROM_PARAMS<int>(contentTypeName, contentId, p2, p3, p4);
 	}
 	public static int UGC_REQUEST_CACHED_DESCRIPTION(int p0)
 	{
-		return NativeFunction.Natives.UGC_REQUEST_CACHED_DESCRIPTION(p0);
+		return NativeFunction.Natives.UGC_REQUEST_CACHED_DESCRIPTION<int>(p0);
 	}
 	public static bool UGC_IS_DESCRIPTION_REQUEST_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.UGC_IS_DESCRIPTION_REQUEST_IN_PROGRESS(0);
+		return NativeFunction.Natives.UGC_IS_DESCRIPTION_REQUEST_IN_PROGRESS<bool>(0);
 	}
 	public static bool UGC_HAS_DESCRIPTION_REQUEST_FINISHED()
 	{
-		return NativeFunction.Natives.UGC_HAS_DESCRIPTION_REQUEST_FINISHED(0);
+		return NativeFunction.Natives.UGC_HAS_DESCRIPTION_REQUEST_FINISHED<bool>(0);
 	}
 	public static bool UGC_DID_DESCRIPTION_REQUEST_SUCCEED()
 	{
-		return NativeFunction.Natives.UGC_DID_DESCRIPTION_REQUEST_SUCCEED(0);
+		return NativeFunction.Natives.UGC_DID_DESCRIPTION_REQUEST_SUCCEED<bool>(0);
 	}
 	public static string UGC_GET_CACHED_DESCRIPTION()
 	{
-		return NativeFunction.Natives.UGC_GET_CACHED_DESCRIPTION(0, 0);
+		return NativeFunction.Natives.UGC_GET_CACHED_DESCRIPTION<string>(0, 0);
 	}
 	public static bool UGC_RELEASE_CACHED_DESCRIPTION()
 	{
-		return NativeFunction.Natives.UGC_RELEASE_CACHED_DESCRIPTION(0);
+		return NativeFunction.Natives.UGC_RELEASE_CACHED_DESCRIPTION<bool>(0);
 	}
 	public static void UGC_RELEASE_ALL_CACHED_DESCRIPTIONS()
 	{
@@ -20804,35 +20804,35 @@ public static class Natives
 	}
 	public static bool UGC_HAS_PERMISSION_TO_WRITE()
 	{
-		return NativeFunction.Natives.UGC_HAS_PERMISSION_TO_WRITE();
+		return NativeFunction.Natives.UGC_HAS_PERMISSION_TO_WRITE<bool>();
 	}
 	public static bool UGC_PUBLISH(string contentId, string baseContentId, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_PUBLISH(contentId, baseContentId, contentTypeName);
+		return NativeFunction.Natives.UGC_PUBLISH<bool>(contentId, baseContentId, contentTypeName);
 	}
 	public static bool UGC_SET_BOOKMARKED(string contentId, bool bookmarked, string contentTypeName)
 	{
-		return NativeFunction.Natives.UGC_SET_BOOKMARKED(contentId, bookmarked, contentTypeName);
+		return NativeFunction.Natives.UGC_SET_BOOKMARKED<bool>(contentId, bookmarked, contentTypeName);
 	}
 	public static bool UGC_SET_DELETED(bool p1, string p2)
 	{
-		return NativeFunction.Natives.UGC_SET_DELETED(0, p1, p2);
+		return NativeFunction.Natives.UGC_SET_DELETED<bool>(0, p1, p2);
 	}
 	public static bool UGC_IS_MODIFYING()
 	{
-		return NativeFunction.Natives.UGC_IS_MODIFYING();
+		return NativeFunction.Natives.UGC_IS_MODIFYING<bool>();
 	}
 	public static bool UGC_HAS_MODIFY_FINISHED()
 	{
-		return NativeFunction.Natives.UGC_HAS_MODIFY_FINISHED();
+		return NativeFunction.Natives.UGC_HAS_MODIFY_FINISHED<bool>();
 	}
 	public static bool UGC_DID_MODIFY_SUCCEED()
 	{
-		return NativeFunction.Natives.UGC_DID_MODIFY_SUCCEED();
+		return NativeFunction.Natives.UGC_DID_MODIFY_SUCCEED<bool>();
 	}
 	public static int UGC_GET_MODIFY_RESULT()
 	{
-		return NativeFunction.Natives.UGC_GET_MODIFY_RESULT();
+		return NativeFunction.Natives.UGC_GET_MODIFY_RESULT<int>();
 	}
 	public static void UGC_CLEAR_MODIFY_RESULT()
 	{
@@ -20840,23 +20840,23 @@ public static class Natives
 	}
 	public static bool UGC_GET_CREATORS_BY_USER_ID()
 	{
-		return NativeFunction.Natives.UGC_GET_CREATORS_BY_USER_ID(0, 0);
+		return NativeFunction.Natives.UGC_GET_CREATORS_BY_USER_ID<bool>(0, 0);
 	}
 	public static bool UGC_HAS_QUERY_CREATORS_FINISHED()
 	{
-		return NativeFunction.Natives.UGC_HAS_QUERY_CREATORS_FINISHED();
+		return NativeFunction.Natives.UGC_HAS_QUERY_CREATORS_FINISHED<bool>();
 	}
 	public static bool UGC_DID_QUERY_CREATORS_SUCCEED()
 	{
-		return NativeFunction.Natives.UGC_DID_QUERY_CREATORS_SUCCEED();
+		return NativeFunction.Natives.UGC_DID_QUERY_CREATORS_SUCCEED<bool>();
 	}
 	public static int UGC_GET_CREATOR_NUM()
 	{
-		return NativeFunction.Natives.UGC_GET_CREATOR_NUM();
+		return NativeFunction.Natives.UGC_GET_CREATOR_NUM<int>();
 	}
 	public static bool UGC_LOAD_OFFLINE_QUERY()
 	{
-		return NativeFunction.Natives.UGC_LOAD_OFFLINE_QUERY(0);
+		return NativeFunction.Natives.UGC_LOAD_OFFLINE_QUERY<bool>(0);
 	}
 	public static void UGC_CLEAR_OFFLINE_QUERY()
 	{
@@ -20872,43 +20872,43 @@ public static class Natives
 	}
 	public static bool UGC_IS_LANGUAGE_SUPPORTED()
 	{
-		return NativeFunction.Natives.UGC_IS_LANGUAGE_SUPPORTED(0);
+		return NativeFunction.Natives.UGC_IS_LANGUAGE_SUPPORTED<bool>(0);
 	}
 	public static bool FACEBOOK_POST_COMPLETED_HEIST(string heistName, int cashEarned, int xpEarned)
 	{
-		return NativeFunction.Natives.FACEBOOK_POST_COMPLETED_HEIST(heistName, cashEarned, xpEarned);
+		return NativeFunction.Natives.FACEBOOK_POST_COMPLETED_HEIST<bool>(heistName, cashEarned, xpEarned);
 	}
 	public static bool FACEBOOK_POST_CREATE_CHARACTER()
 	{
-		return NativeFunction.Natives.FACEBOOK_POST_CREATE_CHARACTER();
+		return NativeFunction.Natives.FACEBOOK_POST_CREATE_CHARACTER<bool>();
 	}
 	public static bool FACEBOOK_POST_COMPLETED_MILESTONE(int milestoneId)
 	{
-		return NativeFunction.Natives.FACEBOOK_POST_COMPLETED_MILESTONE(milestoneId);
+		return NativeFunction.Natives.FACEBOOK_POST_COMPLETED_MILESTONE<bool>(milestoneId);
 	}
 	public static bool FACEBOOK_HAS_POST_COMPLETED()
 	{
-		return NativeFunction.Natives.FACEBOOK_HAS_POST_COMPLETED();
+		return NativeFunction.Natives.FACEBOOK_HAS_POST_COMPLETED<bool>();
 	}
 	public static bool FACEBOOK_DID_POST_SUCCEED()
 	{
-		return NativeFunction.Natives.FACEBOOK_DID_POST_SUCCEED();
+		return NativeFunction.Natives.FACEBOOK_DID_POST_SUCCEED<bool>();
 	}
 	public static bool FACEBOOK_CAN_POST_TO_FACEBOOK()
 	{
-		return NativeFunction.Natives.FACEBOOK_CAN_POST_TO_FACEBOOK();
+		return NativeFunction.Natives.FACEBOOK_CAN_POST_TO_FACEBOOK<bool>();
 	}
 	public static int TEXTURE_DOWNLOAD_REQUEST(string filePath, string name, bool p3)
 	{
-		return NativeFunction.Natives.TEXTURE_DOWNLOAD_REQUEST(0, filePath, name, p3);
+		return NativeFunction.Natives.TEXTURE_DOWNLOAD_REQUEST<int>(0, filePath, name, p3);
 	}
 	public static int TITLE_TEXTURE_DOWNLOAD_REQUEST(string filePath, string name, bool p2)
 	{
-		return NativeFunction.Natives.TITLE_TEXTURE_DOWNLOAD_REQUEST(filePath, name, p2);
+		return NativeFunction.Natives.TITLE_TEXTURE_DOWNLOAD_REQUEST<int>(filePath, name, p2);
 	}
 	public static int UGC_TEXTURE_DOWNLOAD_REQUEST(string p0, int p1, int p2, int p3, string p4, bool p5)
 	{
-		return NativeFunction.Natives.UGC_TEXTURE_DOWNLOAD_REQUEST(p0, p1, p2, p3, p4, p5);
+		return NativeFunction.Natives.UGC_TEXTURE_DOWNLOAD_REQUEST<int>(p0, p1, p2, p3, p4, p5);
 	}
 	public static void TEXTURE_DOWNLOAD_RELEASE(int p0)
 	{
@@ -20916,11 +20916,11 @@ public static class Natives
 	}
 	public static bool TEXTURE_DOWNLOAD_HAS_FAILED(int p0)
 	{
-		return NativeFunction.Natives.TEXTURE_DOWNLOAD_HAS_FAILED(p0);
+		return NativeFunction.Natives.TEXTURE_DOWNLOAD_HAS_FAILED<bool>(p0);
 	}
 	public static string TEXTURE_DOWNLOAD_GET_NAME(int p0)
 	{
-		return NativeFunction.Natives.TEXTURE_DOWNLOAD_GET_NAME(p0);
+		return NativeFunction.Natives.TEXTURE_DOWNLOAD_GET_NAME<string>(p0);
 	}
 	/// <summary>
 	/// 	0 = succeeded<br/>
@@ -20929,100 +20929,100 @@ public static class Natives
 	/// </summary>
 	public static int GET_STATUS_OF_TEXTURE_DOWNLOAD(int p0)
 	{
-		return NativeFunction.Natives.GET_STATUS_OF_TEXTURE_DOWNLOAD(p0);
+		return NativeFunction.Natives.GET_STATUS_OF_TEXTURE_DOWNLOAD<int>(p0);
 	}
 	/// <summary>
 	/// 	Returns true if profile setting 901 is set to true and sets it to false.
 	/// </summary>
 	public static bool NETWORK_CHECK_ROS_LINK_WENTDOWN_NOT_NET()
 	{
-		return NativeFunction.Natives.NETWORK_CHECK_ROS_LINK_WENTDOWN_NOT_NET();
+		return NativeFunction.Natives.NETWORK_CHECK_ROS_LINK_WENTDOWN_NOT_NET<bool>();
 	}
 	/// <summary>
 	/// 	Returns true if the NAT type is Strict (3) and a certain number of connections have failed.
 	/// </summary>
 	public static bool NETWORK_SHOULD_SHOW_STRICT_NAT_WARNING()
 	{
-		return NativeFunction.Natives.NETWORK_SHOULD_SHOW_STRICT_NAT_WARNING();
+		return NativeFunction.Natives.NETWORK_SHOULD_SHOW_STRICT_NAT_WARNING<bool>();
 	}
 	public static bool NETWORK_IS_CABLE_CONNECTED()
 	{
-		return NativeFunction.Natives.NETWORK_IS_CABLE_CONNECTED();
+		return NativeFunction.Natives.NETWORK_IS_CABLE_CONNECTED<bool>();
 	}
 	public static bool NETWORK_HAVE_SCS_PRIVATE_MSG_PRIV()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_SCS_PRIVATE_MSG_PRIV();
+		return NativeFunction.Natives.NETWORK_HAVE_SCS_PRIVATE_MSG_PRIV<bool>();
 	}
 	public static bool NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV();
+		return NativeFunction.Natives.NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV<bool>();
 	}
 	public static bool NETWORK_HAVE_ROS_BANNED_PRIV()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_ROS_BANNED_PRIV();
+		return NativeFunction.Natives.NETWORK_HAVE_ROS_BANNED_PRIV<bool>();
 	}
 	public static bool NETWORK_HAVE_ROS_CREATE_TICKET_PRIV()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_ROS_CREATE_TICKET_PRIV();
+		return NativeFunction.Natives.NETWORK_HAVE_ROS_CREATE_TICKET_PRIV<bool>();
 	}
 	public static bool NETWORK_HAVE_ROS_MULTIPLAYER_PRIV()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_ROS_MULTIPLAYER_PRIV();
+		return NativeFunction.Natives.NETWORK_HAVE_ROS_MULTIPLAYER_PRIV<bool>();
 	}
 	public static bool NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV()
 	{
-		return NativeFunction.Natives.NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV();
+		return NativeFunction.Natives.NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV<bool>();
 	}
 	/// <summary>
 	/// 	index is always 18 in scripts
 	/// </summary>
 	public static bool NETWORK_HAS_ROS_PRIVILEGE(int index)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE(index);
+		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE<bool>(index);
 	}
 	public static bool NETWORK_HAS_ROS_PRIVILEGE_END_DATE(int privilege, out int banType)
 	{
-		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE_END_DATE(privilege, out banType, 0);
+		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE_END_DATE<bool>(privilege, out banType, 0);
 	}
 	public static bool NETWORK_HAS_ROS_PRIVILEGE_PLAYED_LAST_GEN()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE_PLAYED_LAST_GEN();
+		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE_PLAYED_LAST_GEN<bool>();
 	}
 	public static bool NETWORK_HAS_ROS_PRIVILEGE_SPECIAL_EDITION_CONTENT()
 	{
-		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE_SPECIAL_EDITION_CONTENT();
+		return NativeFunction.Natives.NETWORK_HAS_ROS_PRIVILEGE_SPECIAL_EDITION_CONTENT<bool>();
 	}
 	/// <summary>
 	/// 	Checks for privilege 29
 	/// </summary>
 	public static bool _NETWORK_HAS_ROS_PRIVILEGE_MP_TEXT_COMMUNICATION()
 	{
-		return NativeFunction.Natives._NETWORK_HAS_ROS_PRIVILEGE_MP_TEXT_COMMUNICATION();
+		return NativeFunction.Natives._NETWORK_HAS_ROS_PRIVILEGE_MP_TEXT_COMMUNICATION<bool>();
 	}
 	/// <summary>
 	/// 	Checks for privilege 30
 	/// </summary>
 	public static bool _NETWORK_HAS_ROS_PRIVILEGE_MP_VOICE_COMMUNICATION()
 	{
-		return NativeFunction.Natives._NETWORK_HAS_ROS_PRIVILEGE_MP_VOICE_COMMUNICATION();
+		return NativeFunction.Natives._NETWORK_HAS_ROS_PRIVILEGE_MP_VOICE_COMMUNICATION<bool>();
 	}
 	/// <summary>
 	/// 	Checks for privilege 31
 	/// </summary>
 	public static bool _NETWORK_HAS_ROS_PRIVILEGE_REPORTING()
 	{
-		return NativeFunction.Natives._NETWORK_HAS_ROS_PRIVILEGE_REPORTING();
+		return NativeFunction.Natives._NETWORK_HAS_ROS_PRIVILEGE_REPORTING<bool>();
 	}
 	public static int NETWORK_START_COMMUNICATION_PERMISSIONS_CHECK()
 	{
-		return NativeFunction.Natives.NETWORK_START_COMMUNICATION_PERMISSIONS_CHECK(0);
+		return NativeFunction.Natives.NETWORK_START_COMMUNICATION_PERMISSIONS_CHECK<int>(0);
 	}
 	/// <summary>
 	/// 	Always returns -1. Seems to be XB1 specific.
 	/// </summary>
 	public static int NETWORK_START_USER_CONTENT_PERMISSIONS_CHECK()
 	{
-		return NativeFunction.Natives.NETWORK_START_USER_CONTENT_PERMISSIONS_CHECK(0);
+		return NativeFunction.Natives.NETWORK_START_USER_CONTENT_PERMISSIONS_CHECK<int>(0);
 	}
 	public static void NETWORK_SKIP_RADIO_RESET_NEXT_CLOSE()
 	{
@@ -21038,7 +21038,7 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_SKIP_RADIO_WARNING()
 	{
-		return NativeFunction.Natives.NETWORK_SKIP_RADIO_WARNING();
+		return NativeFunction.Natives.NETWORK_SKIP_RADIO_WARNING<bool>();
 	}
 	/// <summary>
 	/// 	NETWORK_F[I-O]
@@ -21074,7 +21074,7 @@ public static class Natives
 	/// </summary>
 	public static bool NETWORK_IS_TITLE_UPDATE_REQUIRED()
 	{
-		return NativeFunction.Natives.NETWORK_IS_TITLE_UPDATE_REQUIRED();
+		return NativeFunction.Natives.NETWORK_IS_TITLE_UPDATE_REQUIRED<bool>();
 	}
 	public static void NETWORK_QUIT_MP_TO_DESKTOP()
 	{
@@ -21082,34 +21082,34 @@ public static class Natives
 	}
 	public static bool NETWORK_IS_CONNECTED_VIA_RELAY(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_IS_CONNECTED_VIA_RELAY(player);
+		return NativeFunction.Natives.NETWORK_IS_CONNECTED_VIA_RELAY<bool>(player);
 	}
 	public static float NETWORK_GET_AVERAGE_LATENCY(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_AVERAGE_LATENCY(player);
+		return NativeFunction.Natives.NETWORK_GET_AVERAGE_LATENCY<float>(player);
 	}
 	/// <summary>
 	/// 	Same as NETWORK_GET_AVERAGE_LATENCY
 	/// </summary>
 	public static float NETWORK_GET_AVERAGE_PING(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_AVERAGE_PING(player);
+		return NativeFunction.Natives.NETWORK_GET_AVERAGE_PING<float>(player);
 	}
 	public static float NETWORK_GET_AVERAGE_PACKET_LOSS(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_AVERAGE_PACKET_LOSS(player);
+		return NativeFunction.Natives.NETWORK_GET_AVERAGE_PACKET_LOSS<float>(player);
 	}
 	public static int NETWORK_GET_NUM_UNACKED_RELIABLES(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_NUM_UNACKED_RELIABLES(player);
+		return NativeFunction.Natives.NETWORK_GET_NUM_UNACKED_RELIABLES<int>(player);
 	}
 	public static int NETWORK_GET_UNRELIABLE_RESEND_COUNT(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_UNRELIABLE_RESEND_COUNT(player);
+		return NativeFunction.Natives.NETWORK_GET_UNRELIABLE_RESEND_COUNT<int>(player);
 	}
 	public static int NETWORK_GET_HIGHEST_RELIABLE_RESEND_COUNT(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_HIGHEST_RELIABLE_RESEND_COUNT(player);
+		return NativeFunction.Natives.NETWORK_GET_HIGHEST_RELIABLE_RESEND_COUNT<int>(player);
 	}
 	public static void NETWORK_REPORT_CODE_TAMPER()
 	{
@@ -21117,7 +21117,7 @@ public static class Natives
 	}
 	public static Vector3 NETWORK_GET_LAST_ENTITY_POS_RECEIVED_OVER_NETWORK(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_GET_LAST_ENTITY_POS_RECEIVED_OVER_NETWORK(entity);
+		return NativeFunction.Natives.NETWORK_GET_LAST_ENTITY_POS_RECEIVED_OVER_NETWORK<Vector3>(entity);
 	}
 	/// <summary>
 	/// 	Returns the coordinates of another player.<br/>
@@ -21125,18 +21125,18 @@ public static class Natives
 	/// </summary>
 	public static Vector3 NETWORK_GET_LAST_PLAYER_POS_RECEIVED_OVER_NETWORK(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_LAST_PLAYER_POS_RECEIVED_OVER_NETWORK(player);
+		return NativeFunction.Natives.NETWORK_GET_LAST_PLAYER_POS_RECEIVED_OVER_NETWORK<Vector3>(player);
 	}
 	/// <summary>
 	/// 	Used by NetBlender
 	/// </summary>
 	public static Vector3 NETWORK_GET_LAST_VEL_RECEIVED_OVER_NETWORK(Entity entity)
 	{
-		return NativeFunction.Natives.NETWORK_GET_LAST_VEL_RECEIVED_OVER_NETWORK(entity);
+		return NativeFunction.Natives.NETWORK_GET_LAST_VEL_RECEIVED_OVER_NETWORK<Vector3>(entity);
 	}
 	public static Vector3 NETWORK_GET_PREDICTED_VELOCITY(Entity entity, float maxSpeedToPredict)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PREDICTED_VELOCITY(entity, maxSpeedToPredict);
+		return NativeFunction.Natives.NETWORK_GET_PREDICTED_VELOCITY<Vector3>(entity, maxSpeedToPredict);
 	}
 	/// <summary>
 	/// 	Does nothing (it&amp;apos;s a nullsub).
@@ -21161,7 +21161,7 @@ public static class Natives
 	}
 	public static int NETWORK_GET_PLAYER_ACCOUNT_ID(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_GET_PLAYER_ACCOUNT_ID(player);
+		return NativeFunction.Natives.NETWORK_GET_PLAYER_ACCOUNT_ID<int>(player);
 	}
 	public static void NETWORK_UGC_NAV()
 	{
@@ -21175,14 +21175,14 @@ public static class Natives
 	/// </summary>
 	public static Object CREATE_OBJECT(ulong modelHash, float x, float y, float z, bool isNetwork, bool bScriptHostObj, bool dynamic)
 	{
-		return NativeFunction.Natives.CREATE_OBJECT(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic);
+		return NativeFunction.Natives.CREATE_OBJECT<Object>(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic);
 	}
 	/// <summary>
 	/// 	List of object models that can be created without any additional effort like making sure ytyp is loaded etc: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ObjectList.ini
 	/// </summary>
 	public static Object CREATE_OBJECT_NO_OFFSET(ulong modelHash, float x, float y, float z, bool isNetwork, bool bScriptHostObj, bool dynamic)
 	{
-		return NativeFunction.Natives.CREATE_OBJECT_NO_OFFSET(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic, 0);
+		return NativeFunction.Natives.CREATE_OBJECT_NO_OFFSET<Object>(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic, 0);
 	}
 	/// <summary>
 	/// 	Deletes the specified object, then sets the handle pointed to by the pointer to NULL.
@@ -21193,15 +21193,15 @@ public static class Natives
 	}
 	public static bool PLACE_OBJECT_ON_GROUND_PROPERLY(Object _object)
 	{
-		return NativeFunction.Natives.PLACE_OBJECT_ON_GROUND_PROPERLY(_object);
+		return NativeFunction.Natives.PLACE_OBJECT_ON_GROUND_PROPERLY<bool>(_object);
 	}
 	public static bool PLACE_OBJECT_ON_GROUND_OR_OBJECT_PROPERLY(Object _object)
 	{
-		return NativeFunction.Natives.PLACE_OBJECT_ON_GROUND_OR_OBJECT_PROPERLY(_object);
+		return NativeFunction.Natives.PLACE_OBJECT_ON_GROUND_OR_OBJECT_PROPERLY<bool>(_object);
 	}
 	public static bool ROTATE_OBJECT(Object _object, float p1, float p2, bool p3)
 	{
-		return NativeFunction.Natives.ROTATE_OBJECT(_object, p1, p2, p3);
+		return NativeFunction.Natives.ROTATE_OBJECT<bool>(_object, p1, p2, p3);
 	}
 	/// <summary>
 	/// 	Returns true if the object has finished moving.<br/>
@@ -21213,7 +21213,7 @@ public static class Natives
 	/// </summary>
 	public static bool SLIDE_OBJECT(Object _object, float toX, float toY, float toZ, float speedX, float speedY, float speedZ, bool collision)
 	{
-		return NativeFunction.Natives.SLIDE_OBJECT(_object, toX, toY, toZ, speedX, speedY, speedZ, collision);
+		return NativeFunction.Natives.SLIDE_OBJECT<bool>(_object, toX, toY, toZ, speedX, speedY, speedZ, collision);
 	}
 	public static void SET_OBJECT_TARGETTABLE(Object _object, bool targettable)
 	{
@@ -21240,31 +21240,31 @@ public static class Natives
 	/// </summary>
 	public static Object GET_CLOSEST_OBJECT_OF_TYPE(float x, float y, float z, float radius, ulong modelHash, bool isMission, bool p6, bool p7)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_OBJECT_OF_TYPE(x, y, z, radius, modelHash, isMission, p6, p7);
+		return NativeFunction.Natives.GET_CLOSEST_OBJECT_OF_TYPE<Object>(x, y, z, radius, modelHash, isMission, p6, p7);
 	}
 	public static bool HAS_OBJECT_BEEN_BROKEN(Object _object)
 	{
-		return NativeFunction.Natives.HAS_OBJECT_BEEN_BROKEN(_object, 0);
+		return NativeFunction.Natives.HAS_OBJECT_BEEN_BROKEN<bool>(_object, 0);
 	}
 	public static bool HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_BROKEN(float p0, float p1, float p2, float p3, ulong modelHash)
 	{
-		return NativeFunction.Natives.HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_BROKEN(p0, p1, p2, p3, modelHash, 0);
+		return NativeFunction.Natives.HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_BROKEN<bool>(p0, p1, p2, p3, modelHash, 0);
 	}
 	public static bool HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_COMPLETELY_DESTROYED(float x, float y, float z, float radius, ulong modelHash, bool p5)
 	{
-		return NativeFunction.Natives.HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_COMPLETELY_DESTROYED(x, y, z, radius, modelHash, p5);
+		return NativeFunction.Natives.HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_COMPLETELY_DESTROYED<bool>(x, y, z, radius, modelHash, p5);
 	}
 	public static bool GET_HAS_OBJECT_BEEN_COMPLETELY_DESTROYED()
 	{
-		return NativeFunction.Natives.GET_HAS_OBJECT_BEEN_COMPLETELY_DESTROYED(0);
+		return NativeFunction.Natives.GET_HAS_OBJECT_BEEN_COMPLETELY_DESTROYED<bool>(0);
 	}
 	public static Vector3 GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(float xPos, float yPos, float zPos, float heading, float xOffset, float yOffset, float zOffset)
 	{
-		return NativeFunction.Natives.GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(xPos, yPos, zPos, heading, xOffset, yOffset, zOffset);
+		return NativeFunction.Natives.GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS<Vector3>(xPos, yPos, zPos, heading, xOffset, yOffset, zOffset);
 	}
 	public static bool GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE(float x, float y, float z, float radius, ulong modelHash, out Vector3 outPosition, out Vector3 outRotation, int rotationOrder)
 	{
-		return NativeFunction.Natives.GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE(x, y, z, radius, modelHash, out outPosition, out outRotation, rotationOrder);
+		return NativeFunction.Natives.GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE<bool>(x, y, z, radius, modelHash, out outPosition, out outRotation, rotationOrder);
 	}
 	/// <summary>
 	/// 	Hardcoded to not work in multiplayer.<br/>
@@ -21297,9 +21297,9 @@ public static class Natives
 	/// 	-------------<br/>
 	/// 	the locked bool is either 0(unlocked)(false) or 1(locked)(true)
 	/// </summary>
-	public static void GET_STATE_OF_CLOSEST_DOOR_OF_TYPE(ulong type, float x, float y, float z, bool locked, out float heading)
+	public static void GET_STATE_OF_CLOSEST_DOOR_OF_TYPE(ulong type, float x, float y, float z, out bool locked, out float heading)
 	{
-		NativeFunction.Natives.GET_STATE_OF_CLOSEST_DOOR_OF_TYPE(type, x, y, z, locked, out heading);
+		NativeFunction.Natives.GET_STATE_OF_CLOSEST_DOOR_OF_TYPE(type, x, y, z, out locked, out heading);
 	}
 	/// <summary>
 	/// 	Hardcoded not to work in multiplayer environments.<br/>
@@ -21357,11 +21357,11 @@ public static class Natives
 	}
 	public static int DOOR_SYSTEM_GET_DOOR_STATE(ulong doorHash)
 	{
-		return NativeFunction.Natives.DOOR_SYSTEM_GET_DOOR_STATE(doorHash);
+		return NativeFunction.Natives.DOOR_SYSTEM_GET_DOOR_STATE<int>(doorHash);
 	}
 	public static int DOOR_SYSTEM_GET_DOOR_PENDING_STATE(ulong doorHash)
 	{
-		return NativeFunction.Natives.DOOR_SYSTEM_GET_DOOR_PENDING_STATE(doorHash);
+		return NativeFunction.Natives.DOOR_SYSTEM_GET_DOOR_PENDING_STATE<int>(doorHash);
 	}
 	/// <summary>
 	/// 	Includes networking check: ownership vs. or the door itself **isn&amp;apos;t** networked.<br/>
@@ -21389,11 +21389,11 @@ public static class Natives
 	}
 	public static float DOOR_SYSTEM_GET_AUTOMATIC_DISTANCE(ulong doorHash)
 	{
-		return NativeFunction.Natives.DOOR_SYSTEM_GET_AUTOMATIC_DISTANCE(doorHash);
+		return NativeFunction.Natives.DOOR_SYSTEM_GET_AUTOMATIC_DISTANCE<float>(doorHash);
 	}
 	public static float DOOR_SYSTEM_GET_OPEN_RATIO(ulong doorHash)
 	{
-		return NativeFunction.Natives.DOOR_SYSTEM_GET_OPEN_RATIO(doorHash);
+		return NativeFunction.Natives.DOOR_SYSTEM_GET_OPEN_RATIO<float>(doorHash);
 	}
 	/// <summary>
 	/// 	Includes networking check: ownership vs. or the door itself **isn&amp;apos;t** networked.<br/>
@@ -21425,11 +21425,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_DOOR_REGISTERED_WITH_SYSTEM(ulong doorHash)
 	{
-		return NativeFunction.Natives.IS_DOOR_REGISTERED_WITH_SYSTEM(doorHash);
+		return NativeFunction.Natives.IS_DOOR_REGISTERED_WITH_SYSTEM<bool>(doorHash);
 	}
 	public static bool IS_DOOR_CLOSED(ulong doorHash)
 	{
-		return NativeFunction.Natives.IS_DOOR_CLOSED(doorHash);
+		return NativeFunction.Natives.IS_DOOR_CLOSED<bool>(doorHash);
 	}
 	public static void OPEN_ALL_BARRIERS_FOR_RACE(bool p0)
 	{
@@ -21445,48 +21445,48 @@ public static class Natives
 	}
 	public static bool DOOR_SYSTEM_GET_IS_PHYSICS_LOADED()
 	{
-		return NativeFunction.Natives.DOOR_SYSTEM_GET_IS_PHYSICS_LOADED(0);
+		return NativeFunction.Natives.DOOR_SYSTEM_GET_IS_PHYSICS_LOADED<bool>(0);
 	}
 	/// <summary>
 	/// 	Search radius: 0.5
 	/// </summary>
-	public static bool DOOR_SYSTEM_FIND_EXISTING_DOOR(float x, float y, float z, ulong modelHash, ulong outDoorHash)
+	public static bool DOOR_SYSTEM_FIND_EXISTING_DOOR(float x, float y, float z, ulong modelHash, out ulong outDoorHash)
 	{
-		return NativeFunction.Natives.DOOR_SYSTEM_FIND_EXISTING_DOOR(x, y, z, modelHash, outDoorHash);
+		return NativeFunction.Natives.DOOR_SYSTEM_FIND_EXISTING_DOOR<bool>(x, y, z, modelHash, out outDoorHash);
 	}
 	public static bool IS_GARAGE_EMPTY(ulong garageHash, bool p1, int p2)
 	{
-		return NativeFunction.Natives.IS_GARAGE_EMPTY(garageHash, p1, p2);
+		return NativeFunction.Natives.IS_GARAGE_EMPTY<bool>(garageHash, p1, p2);
 	}
 	public static bool IS_PLAYER_ENTIRELY_INSIDE_GARAGE(ulong garageHash, Player player, float p2, int p3)
 	{
-		return NativeFunction.Natives.IS_PLAYER_ENTIRELY_INSIDE_GARAGE(garageHash, player, p2, p3);
+		return NativeFunction.Natives.IS_PLAYER_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, player, p2, p3);
 	}
 	public static bool IS_PLAYER_PARTIALLY_INSIDE_GARAGE(ulong garageHash, Player player, int p2)
 	{
-		return NativeFunction.Natives.IS_PLAYER_PARTIALLY_INSIDE_GARAGE(garageHash, player, p2);
+		return NativeFunction.Natives.IS_PLAYER_PARTIALLY_INSIDE_GARAGE<bool>(garageHash, player, p2);
 	}
 	public static bool ARE_ENTITIES_ENTIRELY_INSIDE_GARAGE(ulong garageHash, bool p1, bool p2, bool p3)
 	{
-		return NativeFunction.Natives.ARE_ENTITIES_ENTIRELY_INSIDE_GARAGE(garageHash, p1, p2, p3, 0);
+		return NativeFunction.Natives.ARE_ENTITIES_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, p1, p2, p3, 0);
 	}
 	public static bool IS_ANY_ENTITY_ENTIRELY_INSIDE_GARAGE(ulong garageHash, bool p1, bool p2, bool p3)
 	{
-		return NativeFunction.Natives.IS_ANY_ENTITY_ENTIRELY_INSIDE_GARAGE(garageHash, p1, p2, p3, 0);
+		return NativeFunction.Natives.IS_ANY_ENTITY_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, p1, p2, p3, 0);
 	}
 	/// <summary>
 	/// 	Despite the name, it does work for any entity type.
 	/// </summary>
 	public static bool IS_OBJECT_ENTIRELY_INSIDE_GARAGE(ulong garageHash, Entity entity, float p2, int p3)
 	{
-		return NativeFunction.Natives.IS_OBJECT_ENTIRELY_INSIDE_GARAGE(garageHash, entity, p2, p3);
+		return NativeFunction.Natives.IS_OBJECT_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, entity, p2, p3);
 	}
 	/// <summary>
 	/// 	Despite the name, it does work for any entity type.
 	/// </summary>
 	public static bool IS_OBJECT_PARTIALLY_INSIDE_GARAGE(ulong garageHash, Entity entity, int p2)
 	{
-		return NativeFunction.Natives.IS_OBJECT_PARTIALLY_INSIDE_GARAGE(garageHash, entity, p2);
+		return NativeFunction.Natives.IS_OBJECT_PARTIALLY_INSIDE_GARAGE<bool>(garageHash, entity, p2);
 	}
 	public static void CLEAR_GARAGE(ulong garageHash, bool isNetwork)
 	{
@@ -21516,7 +21516,7 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(float x, float y, float z, float radius, ulong hash, bool p5)
 	{
-		return NativeFunction.Natives.DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(x, y, z, radius, hash, p5);
+		return NativeFunction.Natives.DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS<bool>(x, y, z, radius, hash, p5);
 	}
 	/// <summary>
 	/// 	An angled area is an X-Z oriented rectangle with three parameters:<br/>
@@ -21530,7 +21530,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_POINT_IN_ANGLED_AREA(float xPos, float yPos, float zPos, float x1, float y1, float z1, float x2, float y2, float z2, float width, bool debug, bool includeZ)
 	{
-		return NativeFunction.Natives.IS_POINT_IN_ANGLED_AREA(xPos, yPos, zPos, x1, y1, z1, x2, y2, z2, width, debug, includeZ);
+		return NativeFunction.Natives.IS_POINT_IN_ANGLED_AREA<bool>(xPos, yPos, zPos, x1, y1, z1, x2, y2, z2, width, debug, includeZ);
 	}
 	/// <summary>
 	/// 	Overrides the climbing/blocking flags of the object, used in the native scripts mostly for &amp;quot;prop_dock_bouy_*&amp;quot;
@@ -21555,7 +21555,7 @@ public static class Natives
 	}
 	public static float GET_OBJECT_FRAGMENT_DAMAGE_HEALTH(bool p1)
 	{
-		return NativeFunction.Natives.GET_OBJECT_FRAGMENT_DAMAGE_HEALTH(0, p1);
+		return NativeFunction.Natives.GET_OBJECT_FRAGMENT_DAMAGE_HEALTH<float>(0, p1);
 	}
 	public static void SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(Object _object, bool toggle)
 	{
@@ -21563,11 +21563,11 @@ public static class Natives
 	}
 	public static bool IS_ANY_OBJECT_NEAR_POINT(float x, float y, float z, float range, bool p4)
 	{
-		return NativeFunction.Natives.IS_ANY_OBJECT_NEAR_POINT(x, y, z, range, p4);
+		return NativeFunction.Natives.IS_ANY_OBJECT_NEAR_POINT<bool>(x, y, z, range, p4);
 	}
 	public static bool IS_OBJECT_NEAR_POINT(ulong objectHash, float x, float y, float z, float range)
 	{
-		return NativeFunction.Natives.IS_OBJECT_NEAR_POINT(objectHash, x, y, z, range);
+		return NativeFunction.Natives.IS_OBJECT_NEAR_POINT<bool>(objectHash, x, y, z, range);
 	}
 	public static void REMOVE_OBJECT_HIGH_DETAIL_MODEL(Object _object)
 	{
@@ -21591,7 +21591,7 @@ public static class Natives
 	}
 	public static bool IS_OBJECT_VISIBLE(Object _object)
 	{
-		return NativeFunction.Natives.IS_OBJECT_VISIBLE(_object);
+		return NativeFunction.Natives.IS_OBJECT_VISIBLE<bool>(_object);
 	}
 	public static void SET_OBJECT_IS_SPECIAL_GOLFBALL(Object _object, bool toggle)
 	{
@@ -21618,7 +21618,7 @@ public static class Natives
 	/// </summary>
 	public static Object GET_RAYFIRE_MAP_OBJECT(float x, float y, float z, float radius, string name)
 	{
-		return NativeFunction.Natives.GET_RAYFIRE_MAP_OBJECT(x, y, z, radius, name);
+		return NativeFunction.Natives.GET_RAYFIRE_MAP_OBJECT<Object>(x, y, z, radius, name);
 	}
 	/// <summary>
 	/// 	Defines the state of a destructible object.<br/>
@@ -21640,14 +21640,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_STATE_OF_RAYFIRE_MAP_OBJECT(Object _object)
 	{
-		return NativeFunction.Natives.GET_STATE_OF_RAYFIRE_MAP_OBJECT(_object);
+		return NativeFunction.Natives.GET_STATE_OF_RAYFIRE_MAP_OBJECT<int>(_object);
 	}
 	/// <summary>
 	/// 	Returns true if a destructible object with this handle exists, false otherwise.  
 	/// </summary>
 	public static bool DOES_RAYFIRE_MAP_OBJECT_EXIST(Object _object)
 	{
-		return NativeFunction.Natives.DOES_RAYFIRE_MAP_OBJECT_EXIST(_object);
+		return NativeFunction.Natives.DOES_RAYFIRE_MAP_OBJECT_EXIST<bool>(_object);
 	}
 	/// <summary>
 	/// 	`object`: The des-object handle to get the animation progress from.<br/>
@@ -21655,14 +21655,14 @@ public static class Natives
 	/// </summary>
 	public static float GET_RAYFIRE_MAP_OBJECT_ANIM_PHASE(Object _object)
 	{
-		return NativeFunction.Natives.GET_RAYFIRE_MAP_OBJECT_ANIM_PHASE(_object);
+		return NativeFunction.Natives.GET_RAYFIRE_MAP_OBJECT_ANIM_PHASE<float>(_object);
 	}
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
 	public static uint CREATE_PICKUP(ulong pickupHash, float posX, float posY, float posZ, int p4, int value, bool p6, ulong modelHash)
 	{
-		return NativeFunction.Natives.CREATE_PICKUP(pickupHash, posX, posY, posZ, p4, value, p6, modelHash);
+		return NativeFunction.Natives.CREATE_PICKUP<uint>(pickupHash, posX, posY, posZ, p4, value, p6, modelHash);
 	}
 	/// <summary>
 	/// 	flags:<br/>
@@ -21673,7 +21673,7 @@ public static class Natives
 	/// </summary>
 	public static uint CREATE_PICKUP_ROTATE(ulong pickupHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, int flag, int amount, bool p10, ulong modelHash)
 	{
-		return NativeFunction.Natives.CREATE_PICKUP_ROTATE(pickupHash, posX, posY, posZ, rotX, rotY, rotZ, flag, amount, 0, p10, modelHash);
+		return NativeFunction.Natives.CREATE_PICKUP_ROTATE<uint>(pickupHash, posX, posY, posZ, rotX, rotY, rotZ, flag, amount, 0, p10, modelHash);
 	}
 	public static void FORCE_PICKUP_ROTATE_FACE_UP()
 	{
@@ -21688,11 +21688,11 @@ public static class Natives
 	/// </summary>
 	public static Object CREATE_AMBIENT_PICKUP(ulong pickupHash, float posX, float posY, float posZ, int flags, int value, ulong modelHash, bool p7, bool p8)
 	{
-		return NativeFunction.Natives.CREATE_AMBIENT_PICKUP(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8);
+		return NativeFunction.Natives.CREATE_AMBIENT_PICKUP<Object>(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8);
 	}
 	public static Object CREATE_NON_NETWORKED_AMBIENT_PICKUP(ulong pickupHash, float posX, float posY, float posZ, int flags, int value, ulong modelHash, bool p7, bool p8)
 	{
-		return NativeFunction.Natives.CREATE_NON_NETWORKED_AMBIENT_PICKUP(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8);
+		return NativeFunction.Natives.CREATE_NON_NETWORKED_AMBIENT_PICKUP<Object>(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8);
 	}
 	public static void BLOCK_PLAYERS_FOR_AMBIENT_PICKUP()
 	{
@@ -21703,14 +21703,14 @@ public static class Natives
 	/// </summary>
 	public static Object CREATE_PORTABLE_PICKUP(ulong pickupHash, float x, float y, float z, bool placeOnGround, ulong modelHash)
 	{
-		return NativeFunction.Natives.CREATE_PORTABLE_PICKUP(pickupHash, x, y, z, placeOnGround, modelHash);
+		return NativeFunction.Natives.CREATE_PORTABLE_PICKUP<Object>(pickupHash, x, y, z, placeOnGround, modelHash);
 	}
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
 	public static Object CREATE_NON_NETWORKED_PORTABLE_PICKUP(ulong pickupHash, float x, float y, float z, bool placeOnGround, ulong modelHash)
 	{
-		return NativeFunction.Natives.CREATE_NON_NETWORKED_PORTABLE_PICKUP(pickupHash, x, y, z, placeOnGround, modelHash);
+		return NativeFunction.Natives.CREATE_NON_NETWORKED_PORTABLE_PICKUP<Object>(pickupHash, x, y, z, placeOnGround, modelHash);
 	}
 	public static void ATTACH_PORTABLE_PICKUP_TO_PED(Object pickupObject, Ped ped)
 	{
@@ -21738,7 +21738,7 @@ public static class Natives
 	}
 	public static Vector3 GET_SAFE_PICKUP_COORDS(float x, float y, float z, float p3, float p4)
 	{
-		return NativeFunction.Natives.GET_SAFE_PICKUP_COORDS(x, y, z, p3, p4);
+		return NativeFunction.Natives.GET_SAFE_PICKUP_COORDS<Vector3>(x, y, z, p3, p4);
 	}
 	/// <summary>
 	/// 	Adds an area that seems to be related to pickup physics behavior.<br/>
@@ -21757,7 +21757,7 @@ public static class Natives
 	}
 	public static Vector3 GET_PICKUP_COORDS(uint pickup)
 	{
-		return NativeFunction.Natives.GET_PICKUP_COORDS(pickup);
+		return NativeFunction.Natives.GET_PICKUP_COORDS<Vector3>(pickup);
 	}
 	public static void SUPPRESS_PICKUP_SOUND_FOR_PICKUP()
 	{
@@ -21772,7 +21772,7 @@ public static class Natives
 	}
 	public static bool HAS_PICKUP_BEEN_COLLECTED(uint pickup)
 	{
-		return NativeFunction.Natives.HAS_PICKUP_BEEN_COLLECTED(pickup);
+		return NativeFunction.Natives.HAS_PICKUP_BEEN_COLLECTED<bool>(pickup);
 	}
 	public static void REMOVE_PICKUP(uint pickup)
 	{
@@ -21803,30 +21803,30 @@ public static class Natives
 	}
 	public static bool DOES_PICKUP_EXIST(uint pickup)
 	{
-		return NativeFunction.Natives.DOES_PICKUP_EXIST(pickup);
+		return NativeFunction.Natives.DOES_PICKUP_EXIST<bool>(pickup);
 	}
 	public static bool DOES_PICKUP_OBJECT_EXIST(Object pickupObject)
 	{
-		return NativeFunction.Natives.DOES_PICKUP_OBJECT_EXIST(pickupObject);
+		return NativeFunction.Natives.DOES_PICKUP_OBJECT_EXIST<bool>(pickupObject);
 	}
 	public static Object GET_PICKUP_OBJECT(uint pickup)
 	{
-		return NativeFunction.Natives.GET_PICKUP_OBJECT(pickup);
+		return NativeFunction.Natives.GET_PICKUP_OBJECT<Object>(pickup);
 	}
 	public static bool IS_OBJECT_A_PICKUP(Object _object)
 	{
-		return NativeFunction.Natives.IS_OBJECT_A_PICKUP(_object);
+		return NativeFunction.Natives.IS_OBJECT_A_PICKUP<bool>(_object);
 	}
 	public static bool IS_OBJECT_A_PORTABLE_PICKUP(Object _object)
 	{
-		return NativeFunction.Natives.IS_OBJECT_A_PORTABLE_PICKUP(_object);
+		return NativeFunction.Natives.IS_OBJECT_A_PORTABLE_PICKUP<bool>(_object);
 	}
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
 	public static bool DOES_PICKUP_OF_TYPE_EXIST_IN_AREA(ulong pickupHash, float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.DOES_PICKUP_OF_TYPE_EXIST_IN_AREA(pickupHash, x, y, z, radius);
+		return NativeFunction.Natives.DOES_PICKUP_OF_TYPE_EXIST_IN_AREA<bool>(pickupHash, x, y, z, radius);
 	}
 	public static void SET_PICKUP_REGENERATION_TIME(uint pickup, int duration)
 	{
@@ -21906,7 +21906,7 @@ public static class Natives
 	}
 	public static int GET_DEFAULT_AMMO_FOR_WEAPON_PICKUP(ulong pickupHash)
 	{
-		return NativeFunction.Natives.GET_DEFAULT_AMMO_FOR_WEAPON_PICKUP(pickupHash);
+		return NativeFunction.Natives.GET_DEFAULT_AMMO_FOR_WEAPON_PICKUP<int>(pickupHash);
 	}
 	public static void SET_PICKUP_GENERATION_RANGE_MULTIPLIER(float multiplier)
 	{
@@ -21914,7 +21914,7 @@ public static class Natives
 	}
 	public static float GET_PICKUP_GENERATION_RANGE_MULTIPLIER()
 	{
-		return NativeFunction.Natives.GET_PICKUP_GENERATION_RANGE_MULTIPLIER();
+		return NativeFunction.Natives.GET_PICKUP_GENERATION_RANGE_MULTIPLIER<float>();
 	}
 	public static void SET_ONLY_ALLOW_AMMO_COLLECTION_WHEN_LOW(bool p0)
 	{
@@ -22028,22 +22028,22 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_WEAPON_TYPE_FROM_PICKUP_TYPE(ulong pickupHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_TYPE_FROM_PICKUP_TYPE(pickupHash);
+		return NativeFunction.Natives.GET_WEAPON_TYPE_FROM_PICKUP_TYPE<ulong>(pickupHash);
 	}
 	/// <summary>
 	/// 	Returns the pickup hash for the given weapon hash
 	/// </summary>
 	public static ulong GET_PICKUP_TYPE_FROM_WEAPON_HASH(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_PICKUP_TYPE_FROM_WEAPON_HASH(weaponHash);
+		return NativeFunction.Natives.GET_PICKUP_TYPE_FROM_WEAPON_HASH<ulong>(weaponHash);
 	}
 	public static bool IS_PICKUP_WEAPON_OBJECT_VALID(Object _object)
 	{
-		return NativeFunction.Natives.IS_PICKUP_WEAPON_OBJECT_VALID(_object);
+		return NativeFunction.Natives.IS_PICKUP_WEAPON_OBJECT_VALID<bool>(_object);
 	}
 	public static int GET_OBJECT_TINT_INDEX(Object _object)
 	{
-		return NativeFunction.Natives.GET_OBJECT_TINT_INDEX(_object);
+		return NativeFunction.Natives.GET_OBJECT_TINT_INDEX<int>(_object);
 	}
 	/// <summary>
 	/// 	enum ObjectPaintVariants<br/>
@@ -22072,7 +22072,7 @@ public static class Natives
 	}
 	public static bool SET_TINT_INDEX_CLOSEST_BUILDING_OF_TYPE(float x, float y, float z, float radius, ulong modelHash, int textureVariation)
 	{
-		return NativeFunction.Natives.SET_TINT_INDEX_CLOSEST_BUILDING_OF_TYPE(x, y, z, radius, modelHash, textureVariation);
+		return NativeFunction.Natives.SET_TINT_INDEX_CLOSEST_BUILDING_OF_TYPE<bool>(x, y, z, radius, modelHash, textureVariation);
 	}
 	public static void SET_PROP_TINT_INDEX()
 	{
@@ -22080,11 +22080,11 @@ public static class Natives
 	}
 	public static bool SET_PROP_LIGHT_COLOR(Object _object, bool p1, int r, int g, int b)
 	{
-		return NativeFunction.Natives.SET_PROP_LIGHT_COLOR(_object, p1, r, g, b);
+		return NativeFunction.Natives.SET_PROP_LIGHT_COLOR<bool>(_object, p1, r, g, b);
 	}
 	public static bool IS_PROP_LIGHT_OVERRIDEN(Object _object)
 	{
-		return NativeFunction.Natives.IS_PROP_LIGHT_OVERRIDEN(_object);
+		return NativeFunction.Natives.IS_PROP_LIGHT_OVERRIDEN<bool>(_object);
 	}
 	public static void SET_OBJECT_IS_VISIBLE_IN_MIRRORS(Object _object, bool toggle)
 	{
@@ -22105,7 +22105,7 @@ public static class Natives
 	/// </summary>
 	public static ulong CONVERT_OLD_PICKUP_TYPE_TO_NEW(ulong pickupHash)
 	{
-		return NativeFunction.Natives.CONVERT_OLD_PICKUP_TYPE_TO_NEW(pickupHash);
+		return NativeFunction.Natives.CONVERT_OLD_PICKUP_TYPE_TO_NEW<ulong>(pickupHash);
 	}
 	public static void SET_FORCE_OBJECT_THIS_FRAME(float x, float y, float z, float p3)
 	{
@@ -22147,11 +22147,11 @@ public static class Natives
 	}
 	public static bool GET_IS_ARTICULATED_JOINT_AT_MIN_ANGLE(Object _object)
 	{
-		return NativeFunction.Natives.GET_IS_ARTICULATED_JOINT_AT_MIN_ANGLE(_object, 0);
+		return NativeFunction.Natives.GET_IS_ARTICULATED_JOINT_AT_MIN_ANGLE<bool>(_object, 0);
 	}
 	public static bool GET_IS_ARTICULATED_JOINT_AT_MAX_ANGLE()
 	{
-		return NativeFunction.Natives.GET_IS_ARTICULATED_JOINT_AT_MAX_ANGLE(0, 0);
+		return NativeFunction.Natives.GET_IS_ARTICULATED_JOINT_AT_MAX_ANGLE<bool>(0, 0);
 	}
 	public static void SET_IS_OBJECT_ARTICULATED(Object _object, bool toggle)
 	{
@@ -22170,7 +22170,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_CONTROL_ENABLED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_CONTROL_ENABLED(control, action);
+		return NativeFunction.Natives.IS_CONTROL_ENABLED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	Returns whether a control is currently pressed.<br/>
@@ -22178,7 +22178,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_CONTROL_PRESSED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_CONTROL_PRESSED(control, action);
+		return NativeFunction.Natives.IS_CONTROL_PRESSED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	Returns whether a control is currently _not_ pressed.<br/>
@@ -22186,7 +22186,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_CONTROL_RELEASED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_CONTROL_RELEASED(control, action);
+		return NativeFunction.Natives.IS_CONTROL_RELEASED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	Returns whether a control was newly pressed since the last check.<br/>
@@ -22194,7 +22194,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_CONTROL_JUST_PRESSED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_CONTROL_JUST_PRESSED(control, action);
+		return NativeFunction.Natives.IS_CONTROL_JUST_PRESSED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	Returns whether a control was newly released since the last check.<br/>
@@ -22202,14 +22202,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_CONTROL_JUST_RELEASED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_CONTROL_JUST_RELEASED(control, action);
+		return NativeFunction.Natives.IS_CONTROL_JUST_RELEASED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
 	/// </summary>
 	public static int GET_CONTROL_VALUE(int control, int action)
 	{
-		return NativeFunction.Natives.GET_CONTROL_VALUE(control, action);
+		return NativeFunction.Natives.GET_CONTROL_VALUE<int>(control, action);
 	}
 	/// <summary>
 	/// 	Returns the value of GET_CONTROL_VALUE normalized (i.e. a real number value between -1 and 1)<br/>
@@ -22218,7 +22218,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_CONTROL_NORMAL(int control, int action)
 	{
-		return NativeFunction.Natives.GET_CONTROL_NORMAL(control, action);
+		return NativeFunction.Natives.GET_CONTROL_NORMAL<float>(control, action);
 	}
 	public static void SET_USE_ADJUSTED_MOUSE_COORDS(bool toggle)
 	{
@@ -22231,7 +22231,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_CONTROL_UNBOUND_NORMAL(int control, int action)
 	{
-		return NativeFunction.Natives.GET_CONTROL_UNBOUND_NORMAL(control, action);
+		return NativeFunction.Natives.GET_CONTROL_UNBOUND_NORMAL<float>(control, action);
 	}
 	/// <summary>
 	/// 	This is for simulating player input.<br/>
@@ -22241,42 +22241,42 @@ public static class Natives
 	/// </summary>
 	public static bool SET_CONTROL_VALUE_NEXT_FRAME(int control, int action, float value)
 	{
-		return NativeFunction.Natives.SET_CONTROL_VALUE_NEXT_FRAME(control, action, value);
+		return NativeFunction.Natives.SET_CONTROL_VALUE_NEXT_FRAME<bool>(control, action, value);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
 	/// </summary>
 	public static bool IS_DISABLED_CONTROL_PRESSED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_DISABLED_CONTROL_PRESSED(control, action);
+		return NativeFunction.Natives.IS_DISABLED_CONTROL_PRESSED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
 	/// </summary>
 	public static bool IS_DISABLED_CONTROL_RELEASED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_DISABLED_CONTROL_RELEASED(control, action);
+		return NativeFunction.Natives.IS_DISABLED_CONTROL_RELEASED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
 	/// </summary>
 	public static bool IS_DISABLED_CONTROL_JUST_PRESSED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_DISABLED_CONTROL_JUST_PRESSED(control, action);
+		return NativeFunction.Natives.IS_DISABLED_CONTROL_JUST_PRESSED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
 	/// </summary>
 	public static bool IS_DISABLED_CONTROL_JUST_RELEASED(int control, int action)
 	{
-		return NativeFunction.Natives.IS_DISABLED_CONTROL_JUST_RELEASED(control, action);
+		return NativeFunction.Natives.IS_DISABLED_CONTROL_JUST_RELEASED<bool>(control, action);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
 	/// </summary>
 	public static float GET_DISABLED_CONTROL_NORMAL(int control, int action)
 	{
-		return NativeFunction.Natives.GET_DISABLED_CONTROL_NORMAL(control, action);
+		return NativeFunction.Natives.GET_DISABLED_CONTROL_NORMAL<float>(control, action);
 	}
 	/// <summary>
 	/// 	The &amp;quot;disabled&amp;quot; variant of GET_CONTROL_UNBOUND_NORMAL.<br/>
@@ -22285,7 +22285,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_DISABLED_CONTROL_UNBOUND_NORMAL(int control, int action)
 	{
-		return NativeFunction.Natives.GET_DISABLED_CONTROL_UNBOUND_NORMAL(control, action);
+		return NativeFunction.Natives.GET_DISABLED_CONTROL_UNBOUND_NORMAL<float>(control, action);
 	}
 	/// <summary>
 	/// 	Returns time in ms since last input.<br/>
@@ -22294,25 +22294,25 @@ public static class Natives
 	/// </summary>
 	public static int GET_CONTROL_HOW_LONG_AGO(int control)
 	{
-		return NativeFunction.Natives.GET_CONTROL_HOW_LONG_AGO(control);
+		return NativeFunction.Natives.GET_CONTROL_HOW_LONG_AGO<int>(control);
 	}
 	/// <summary>
 	/// 	control: unused parameter
 	/// </summary>
 	public static bool IS_USING_KEYBOARD_AND_MOUSE(int control)
 	{
-		return NativeFunction.Natives.IS_USING_KEYBOARD_AND_MOUSE(control);
+		return NativeFunction.Natives.IS_USING_KEYBOARD_AND_MOUSE<bool>(control);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
 	/// </summary>
 	public static bool IS_USING_CURSOR(int control)
 	{
-		return NativeFunction.Natives.IS_USING_CURSOR(control);
+		return NativeFunction.Natives.IS_USING_CURSOR<bool>(control);
 	}
 	public static bool SET_CURSOR_POSITION(float x, float y)
 	{
-		return NativeFunction.Natives.SET_CURSOR_POSITION(x, y);
+		return NativeFunction.Natives.SET_CURSOR_POSITION<bool>(x, y);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED<br/>
@@ -22321,14 +22321,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_USING_REMOTE_PLAY(int control)
 	{
-		return NativeFunction.Natives.IS_USING_REMOTE_PLAY(control);
+		return NativeFunction.Natives.IS_USING_REMOTE_PLAY<bool>(control);
 	}
 	/// <summary>
 	/// 	control: unused parameter
 	/// </summary>
 	public static bool HAVE_CONTROLS_CHANGED(int control)
 	{
-		return NativeFunction.Natives.HAVE_CONTROLS_CHANGED(control);
+		return NativeFunction.Natives.HAVE_CONTROLS_CHANGED<bool>(control);
 	}
 	/// <summary>
 	/// 	allowXOSwap appears to always be true.<br/>
@@ -22344,14 +22344,14 @@ public static class Natives
 	/// </summary>
 	public static string GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(int control, int action, bool allowXOSwap)
 	{
-		return NativeFunction.Natives.GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(control, action, allowXOSwap);
+		return NativeFunction.Natives.GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING<string>(control, action, allowXOSwap);
 	}
 	/// <summary>
 	/// 	control: unused parameter
 	/// </summary>
 	public static string GET_CONTROL_GROUP_INSTRUCTIONAL_BUTTONS_STRING(int control, int controlGroup, bool allowXOSwap)
 	{
-		return NativeFunction.Natives.GET_CONTROL_GROUP_INSTRUCTIONAL_BUTTONS_STRING(control, controlGroup, allowXOSwap);
+		return NativeFunction.Natives.GET_CONTROL_GROUP_INSTRUCTIONAL_BUTTONS_STRING<string>(control, controlGroup, allowXOSwap);
 	}
 	/// <summary>
 	/// 	control: see IS_CONTROL_ENABLED
@@ -22409,7 +22409,7 @@ public static class Natives
 	}
 	public static bool IS_LOOK_INVERTED()
 	{
-		return NativeFunction.Natives.IS_LOOK_INVERTED();
+		return NativeFunction.Natives.IS_LOOK_INVERTED<bool>();
 	}
 	/// <summary>
 	/// 	Used with IS_LOOK_INVERTED() and negates its affect.<br/>
@@ -22431,39 +22431,39 @@ public static class Natives
 	/// </summary>
 	public static bool IS_MOUSE_LOOK_INVERTED()
 	{
-		return NativeFunction.Natives.IS_MOUSE_LOOK_INVERTED();
+		return NativeFunction.Natives.IS_MOUSE_LOOK_INVERTED<bool>();
 	}
 	/// <summary>
 	/// 	Hard-coded to return 3 if using KBM, otherwise same behavior as GET_LOCAL_PLAYER_GAMEPAD_AIM_STATE.
 	/// </summary>
 	public static int GET_LOCAL_PLAYER_AIM_STATE()
 	{
-		return NativeFunction.Natives.GET_LOCAL_PLAYER_AIM_STATE();
+		return NativeFunction.Natives.GET_LOCAL_PLAYER_AIM_STATE<int>();
 	}
 	/// <summary>
 	/// 	Returns the local player&amp;apos;s targeting mode. See PLAYER::SET_PLAYER_TARGETING_MODE.
 	/// </summary>
 	public static int GET_LOCAL_PLAYER_GAMEPAD_AIM_STATE()
 	{
-		return NativeFunction.Natives.GET_LOCAL_PLAYER_GAMEPAD_AIM_STATE();
+		return NativeFunction.Natives.GET_LOCAL_PLAYER_GAMEPAD_AIM_STATE<int>();
 	}
 	public static bool GET_IS_USING_ALTERNATE_HANDBRAKE()
 	{
-		return NativeFunction.Natives.GET_IS_USING_ALTERNATE_HANDBRAKE();
+		return NativeFunction.Natives.GET_IS_USING_ALTERNATE_HANDBRAKE<bool>();
 	}
 	/// <summary>
 	/// 	Returns profile setting 225.
 	/// </summary>
 	public static bool GET_IS_USING_ALTERNATE_DRIVEBY()
 	{
-		return NativeFunction.Natives.GET_IS_USING_ALTERNATE_DRIVEBY();
+		return NativeFunction.Natives.GET_IS_USING_ALTERNATE_DRIVEBY<bool>();
 	}
 	/// <summary>
 	/// 	Returns profile setting 17.
 	/// </summary>
 	public static bool GET_ALLOW_MOVEMENT_WHILE_ZOOMED()
 	{
-		return NativeFunction.Natives.GET_ALLOW_MOVEMENT_WHILE_ZOOMED();
+		return NativeFunction.Natives.GET_ALLOW_MOVEMENT_WHILE_ZOOMED<bool>();
 	}
 	public static void SET_PLAYERPAD_SHAKES_WHEN_CONTROLLER_DISABLED(bool toggle)
 	{
@@ -22509,14 +22509,14 @@ public static class Natives
 	/// </summary>
 	public static bool INIT_PC_SCRIPTED_CONTROLS(string schemeName)
 	{
-		return NativeFunction.Natives.INIT_PC_SCRIPTED_CONTROLS(schemeName);
+		return NativeFunction.Natives.INIT_PC_SCRIPTED_CONTROLS<bool>(schemeName);
 	}
 	/// <summary>
 	/// 	Same as INIT_PC_SCRIPTED_CONTROLS
 	/// </summary>
 	public static bool SWITCH_PC_SCRIPTED_CONTROLS(string schemeName)
 	{
-		return NativeFunction.Natives.SWITCH_PC_SCRIPTED_CONTROLS(schemeName);
+		return NativeFunction.Natives.SWITCH_PC_SCRIPTED_CONTROLS<bool>(schemeName);
 	}
 	public static void SHUTDOWN_PC_SCRIPTED_CONTROLS()
 	{
@@ -22570,21 +22570,21 @@ public static class Natives
 	/// </summary>
 	public static bool GET_SAFE_COORD_FOR_PED(float x, float y, float z, bool onGround, out Vector3 outPosition, int flags)
 	{
-		return NativeFunction.Natives.GET_SAFE_COORD_FOR_PED(x, y, z, onGround, out outPosition, flags);
+		return NativeFunction.Natives.GET_SAFE_COORD_FOR_PED<bool>(x, y, z, onGround, out outPosition, flags);
 	}
 	/// <summary>
 	/// 	https://gtaforums.com/topic/843561-pathfind-node-types
 	/// </summary>
 	public static bool GET_CLOSEST_VEHICLE_NODE(float x, float y, float z, out Vector3 outPosition, int nodeFlags, float p5, float p6)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_VEHICLE_NODE(x, y, z, out outPosition, nodeFlags, p5, p6);
+		return NativeFunction.Natives.GET_CLOSEST_VEHICLE_NODE<bool>(x, y, z, out outPosition, nodeFlags, p5, p6);
 	}
 	/// <summary>
 	/// 	Get the closest vehicle node to a given position.
 	/// </summary>
 	public static bool GET_CLOSEST_MAJOR_VEHICLE_NODE(float x, float y, float z, out Vector3 outPosition, float unknown1, float unknown2)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_MAJOR_VEHICLE_NODE(x, y, z, out outPosition, unknown1, unknown2);
+		return NativeFunction.Natives.GET_CLOSEST_MAJOR_VEHICLE_NODE<bool>(x, y, z, out outPosition, unknown1, unknown2);
 	}
 	/// <summary>
 	/// 	p5, p6 and p7 seems to be about the same as p4, p5 and p6 for GET_CLOSEST_VEHICLE_NODE. p6 and/or p7 has something to do with finding a node on the same path/road and same direction(at least for this native, something to do with the heading maybe). Edit this when you find out more.<br/>
@@ -22609,29 +22609,29 @@ public static class Natives
 	/// </summary>
 	public static bool GET_CLOSEST_VEHICLE_NODE_WITH_HEADING(float x, float y, float z, out Vector3 outPosition, out float outHeading, int nodeType, float p6, float p7)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_VEHICLE_NODE_WITH_HEADING(x, y, z, out outPosition, out outHeading, nodeType, p6, p7);
+		return NativeFunction.Natives.GET_CLOSEST_VEHICLE_NODE_WITH_HEADING<bool>(x, y, z, out outPosition, out outHeading, nodeType, p6, p7);
 	}
 	public static bool GET_NTH_CLOSEST_VEHICLE_NODE(float x, float y, float z, int nthClosest, out Vector3 outPosition, int nodeFlags, float unknown1, float unknown2)
 	{
-		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE(x, y, z, nthClosest, out outPosition, nodeFlags, unknown1, unknown2);
+		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE<bool>(x, y, z, nthClosest, out outPosition, nodeFlags, unknown1, unknown2);
 	}
 	/// <summary>
 	/// 	Returns the id.
 	/// </summary>
 	public static int GET_NTH_CLOSEST_VEHICLE_NODE_ID(float x, float y, float z, int nth, int nodeFlags, float p5, float p6)
 	{
-		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_ID(x, y, z, nth, nodeFlags, p5, p6);
+		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_ID<int>(x, y, z, nth, nodeFlags, p5, p6);
 	}
 	/// <summary>
 	/// 	Get the nth closest vehicle node and its heading.
 	/// </summary>
 	public static bool GET_NTH_CLOSEST_VEHICLE_NODE_WITH_HEADING(float x, float y, float z, int nthClosest, out Vector3 outPosition, out float outHeading, out int outNumLanes, int nodeFlags, float unknown3, float unknown4)
 	{
-		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_WITH_HEADING(x, y, z, nthClosest, out outPosition, out outHeading, out outNumLanes, nodeFlags, unknown3, unknown4);
+		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_WITH_HEADING<bool>(x, y, z, nthClosest, out outPosition, out outHeading, out outNumLanes, nodeFlags, unknown3, unknown4);
 	}
 	public static int GET_NTH_CLOSEST_VEHICLE_NODE_ID_WITH_HEADING(float x, float y, float z, int nthClosest, out Vector3 outPosition, out float outHeading, int nodeFlags, float p7, float p8)
 	{
-		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_ID_WITH_HEADING(x, y, z, nthClosest, out outPosition, out outHeading, nodeFlags, p7, p8);
+		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_ID_WITH_HEADING<int>(x, y, z, nthClosest, out outPosition, out outHeading, nodeFlags, p7, p8);
 	}
 	/// <summary>
 	/// 	See gtaforums.com/topic/843561-pathfind-node-types for node type info. 0 = paved road only, 1 = any road, 3 = water<br/>
@@ -22641,7 +22641,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_NTH_CLOSEST_VEHICLE_NODE_FAVOUR_DIRECTION(float x, float y, float z, float desiredX, float desiredY, float desiredZ, int nthClosest, out Vector3 outPosition, out float outHeading, int nodeFlags, float p10, float p11)
 	{
-		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_FAVOUR_DIRECTION(x, y, z, desiredX, desiredY, desiredZ, nthClosest, out outPosition, out outHeading, nodeFlags, p10, p11);
+		return NativeFunction.Natives.GET_NTH_CLOSEST_VEHICLE_NODE_FAVOUR_DIRECTION<bool>(x, y, z, desiredX, desiredY, desiredZ, nthClosest, out outPosition, out outHeading, nodeFlags, p10, p11);
 	}
 	/// <summary>
 	/// 	Gets the density and flags of the closest node to the specified position.<br/>
@@ -22650,14 +22650,14 @@ public static class Natives
 	/// </summary>
 	public static bool GET_VEHICLE_NODE_PROPERTIES(float x, float y, float z, out int density, out int flags)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NODE_PROPERTIES(x, y, z, out density, out flags);
+		return NativeFunction.Natives.GET_VEHICLE_NODE_PROPERTIES<bool>(x, y, z, out density, out flags);
 	}
 	/// <summary>
 	/// 	Returns true if the id is non zero.
 	/// </summary>
 	public static bool IS_VEHICLE_NODE_ID_VALID(int vehicleNodeId)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_NODE_ID_VALID(vehicleNodeId);
+		return NativeFunction.Natives.IS_VEHICLE_NODE_ID_VALID<bool>(vehicleNodeId);
 	}
 	/// <summary>
 	/// 	Calling this with an invalid node id, will crash the game.<br/>
@@ -22675,7 +22675,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_VEHICLE_NODE_IS_GPS_ALLOWED(int nodeID)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NODE_IS_GPS_ALLOWED(nodeID);
+		return NativeFunction.Natives.GET_VEHICLE_NODE_IS_GPS_ALLOWED<bool>(nodeID);
 	}
 	/// <summary>
 	/// 	Returns true when the node is Offroad. Alleys, some dirt roads, and carparks return true.<br/>
@@ -22683,18 +22683,18 @@ public static class Natives
 	/// </summary>
 	public static bool GET_VEHICLE_NODE_IS_SWITCHED_OFF(int nodeID)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NODE_IS_SWITCHED_OFF(nodeID);
+		return NativeFunction.Natives.GET_VEHICLE_NODE_IS_SWITCHED_OFF<bool>(nodeID);
 	}
 	/// <summary>
 	/// 	p1 seems to be always 1.0f in the scripts
 	/// </summary>
 	public static bool GET_CLOSEST_ROAD(float x, float y, float z, float p3, int p4, out Vector3 p5, out Vector3 p6, out float p9, bool p10)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_ROAD(x, y, z, p3, p4, out p5, out p6, 0, 0, out p9, p10);
+		return NativeFunction.Natives.GET_CLOSEST_ROAD<bool>(x, y, z, p3, p4, out p5, out p6, 0, 0, out p9, p10);
 	}
 	public static bool LOAD_ALL_PATH_NODES(bool set)
 	{
-		return NativeFunction.Natives.LOAD_ALL_PATH_NODES(set);
+		return NativeFunction.Natives.LOAD_ALL_PATH_NODES<bool>(set);
 	}
 	public static void SET_ALLOW_STREAM_PROLOGUE_NODES(bool toggle)
 	{
@@ -22709,14 +22709,14 @@ public static class Natives
 	}
 	public static bool ARE_NODES_LOADED_FOR_AREA(float x1, float y1, float x2, float y2)
 	{
-		return NativeFunction.Natives.ARE_NODES_LOADED_FOR_AREA(x1, y1, x2, y2);
+		return NativeFunction.Natives.ARE_NODES_LOADED_FOR_AREA<bool>(x1, y1, x2, y2);
 	}
 	/// <summary>
 	/// 	Used internally for long range tasks
 	/// </summary>
 	public static bool REQUEST_PATH_NODES_IN_AREA_THIS_FRAME(float x1, float y1, float x2, float y2)
 	{
-		return NativeFunction.Natives.REQUEST_PATH_NODES_IN_AREA_THIS_FRAME(x1, y1, x2, y2);
+		return NativeFunction.Natives.REQUEST_PATH_NODES_IN_AREA_THIS_FRAME<bool>(x1, y1, x2, y2);
 	}
 	public static void SET_ROADS_BACK_TO_ORIGINAL(float p0, float p1, float p2, float p3, float p4, float p5)
 	{
@@ -22747,11 +22747,11 @@ public static class Natives
 	}
 	public static bool GET_RANDOM_VEHICLE_NODE(float x, float y, float z, float radius, bool p4, bool p5, bool p6, out Vector3 outPosition, out int nodeId)
 	{
-		return NativeFunction.Natives.GET_RANDOM_VEHICLE_NODE(x, y, z, radius, p4, p5, p6, out outPosition, out nodeId);
+		return NativeFunction.Natives.GET_RANDOM_VEHICLE_NODE<bool>(x, y, z, radius, p4, p5, p6, out outPosition, out nodeId);
 	}
 	public static Vector3 GET_SPAWN_COORDS_FOR_VEHICLE_NODE(int nodeAddress, float towardsCoorsX, float towardsCoorsY, float towardsCoorsZ, out Vector3 centrePoint, out float heading)
 	{
-		return NativeFunction.Natives.GET_SPAWN_COORDS_FOR_VEHICLE_NODE(nodeAddress, towardsCoorsX, towardsCoorsY, towardsCoorsZ, out centrePoint, out heading);
+		return NativeFunction.Natives.GET_SPAWN_COORDS_FOR_VEHICLE_NODE<Vector3>(nodeAddress, towardsCoorsX, towardsCoorsY, towardsCoorsZ, out centrePoint, out heading);
 	}
 	/// <summary>
 	/// 	Determines the name of the street which is the closest to the given coordinates.<br/>
@@ -22762,9 +22762,9 @@ public static class Natives
 	/// 	<br/>
 	/// 	Note: the names are returned as hashes, the strings can be returned using the function HUD::GET_STREET_NAME_FROM_HASH_KEY.
 	/// </summary>
-	public static void GET_STREET_NAME_AT_COORD(float x, float y, float z, ulong streetName, ulong crossingRoad)
+	public static void GET_STREET_NAME_AT_COORD(float x, float y, float z, out ulong streetName, out ulong crossingRoad)
 	{
-		NativeFunction.Natives.GET_STREET_NAME_AT_COORD(x, y, z, streetName, crossingRoad);
+		NativeFunction.Natives.GET_STREET_NAME_AT_COORD(x, y, z, out streetName, out crossingRoad);
 	}
 	/// <summary>
 	/// 	p3 is 0 in the only game script occurrence (trevor3) but 1 doesn&amp;apos;t seem to make a difference<br/>
@@ -22786,7 +22786,7 @@ public static class Natives
 	/// </summary>
 	public static int GENERATE_DIRECTIONS_TO_COORD(float x, float y, float z, bool p3, out int direction, out float p5, out float distToNxJunction)
 	{
-		return NativeFunction.Natives.GENERATE_DIRECTIONS_TO_COORD(x, y, z, p3, out direction, out p5, out distToNxJunction);
+		return NativeFunction.Natives.GENERATE_DIRECTIONS_TO_COORD<int>(x, y, z, p3, out direction, out p5, out distToNxJunction);
 	}
 	public static void SET_IGNORE_NO_GPS_FLAG(bool toggle)
 	{
@@ -22805,26 +22805,26 @@ public static class Natives
 	}
 	public static int GET_GPS_BLIP_ROUTE_LENGTH()
 	{
-		return NativeFunction.Natives.GET_GPS_BLIP_ROUTE_LENGTH();
+		return NativeFunction.Natives.GET_GPS_BLIP_ROUTE_LENGTH<int>();
 	}
 	/// <summary>
 	/// 	p3 can be 0, 1 or 2.
 	/// </summary>
 	public static bool GET_POS_ALONG_GPS_TYPE_ROUTE(out Vector3 result, bool p1, float p2, int p3)
 	{
-		return NativeFunction.Natives.GET_POS_ALONG_GPS_TYPE_ROUTE(out result, p1, p2, p3);
+		return NativeFunction.Natives.GET_POS_ALONG_GPS_TYPE_ROUTE<bool>(out result, p1, p2, p3);
 	}
 	public static bool GET_GPS_BLIP_ROUTE_FOUND()
 	{
-		return NativeFunction.Natives.GET_GPS_BLIP_ROUTE_FOUND();
+		return NativeFunction.Natives.GET_GPS_BLIP_ROUTE_FOUND<bool>();
 	}
 	public static bool GET_ROAD_BOUNDARY_USING_HEADING(float x, float y, float z, float heading, out Vector3 outPosition)
 	{
-		return NativeFunction.Natives.GET_ROAD_BOUNDARY_USING_HEADING(x, y, z, heading, out outPosition);
+		return NativeFunction.Natives.GET_ROAD_BOUNDARY_USING_HEADING<bool>(x, y, z, heading, out outPosition);
 	}
 	public static bool GET_POSITION_BY_SIDE_OF_ROAD(float x, float y, float z, int p3, out Vector3 outPosition)
 	{
-		return NativeFunction.Natives.GET_POSITION_BY_SIDE_OF_ROAD(x, y, z, p3, out outPosition);
+		return NativeFunction.Natives.GET_POSITION_BY_SIDE_OF_ROAD<bool>(x, y, z, p3, out outPosition);
 	}
 	/// <summary>
 	/// 	Gets a value indicating whether the specified position is on a road.<br/>
@@ -22832,14 +22832,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_POINT_ON_ROAD(float x, float y, float z, Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_POINT_ON_ROAD(x, y, z, vehicle);
+		return NativeFunction.Natives.IS_POINT_ON_ROAD<bool>(x, y, z, vehicle);
 	}
 	/// <summary>
 	/// 	Gets the next zone that has been disabled using SET_GPS_DISABLED_ZONE_AT_INDEX.
 	/// </summary>
 	public static int GET_NEXT_GPS_DISABLED_ZONE_INDEX()
 	{
-		return NativeFunction.Natives.GET_NEXT_GPS_DISABLED_ZONE_INDEX();
+		return NativeFunction.Natives.GET_NEXT_GPS_DISABLED_ZONE_INDEX<int>();
 	}
 	/// <summary>
 	/// 	Disables the GPS route displayed on the minimap while within a certain zone (area). When in a disabled zone and creating a waypoint, the GPS route is not shown on the minimap until you are outside of the zone. When disabled, the direct distance is shown on minimap opposed to distance to travel. Seems to only work before setting a waypoint.<br/>
@@ -22870,7 +22870,7 @@ public static class Natives
 	}
 	public static bool IS_NAVMESH_REQUIRED_REGION_IN_USE()
 	{
-		return NativeFunction.Natives.IS_NAVMESH_REQUIRED_REGION_IN_USE();
+		return NativeFunction.Natives.IS_NAVMESH_REQUIRED_REGION_IN_USE<bool>();
 	}
 	/// <summary>
 	/// 	Set toggle true to disable navmesh.<br/>
@@ -22882,7 +22882,7 @@ public static class Natives
 	}
 	public static bool ARE_ALL_NAVMESH_REGIONS_LOADED()
 	{
-		return NativeFunction.Natives.ARE_ALL_NAVMESH_REGIONS_LOADED();
+		return NativeFunction.Natives.ARE_ALL_NAVMESH_REGIONS_LOADED<bool>();
 	}
 	/// <summary>
 	/// 	Returns whether navmesh for the region is loaded. The region is a rectangular prism defined by it&amp;apos;s top left deepest corner to it&amp;apos;s bottom right shallowest corner.<br/>
@@ -22891,15 +22891,15 @@ public static class Natives
 	/// </summary>
 	public static bool IS_NAVMESH_LOADED_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.IS_NAVMESH_LOADED_IN_AREA(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.IS_NAVMESH_LOADED_IN_AREA<bool>(x1, y1, z1, x2, y2, z2);
 	}
 	public static int GET_NUM_NAVMESHES_EXISTING_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.GET_NUM_NAVMESHES_EXISTING_IN_AREA(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.GET_NUM_NAVMESHES_EXISTING_IN_AREA<int>(x1, y1, z1, x2, y2, z2);
 	}
 	public static int ADD_NAVMESH_BLOCKING_OBJECT(float p0, float p1, float p2, float p3, float p4, float p5, float p6, bool p7)
 	{
-		return NativeFunction.Natives.ADD_NAVMESH_BLOCKING_OBJECT(p0, p1, p2, p3, p4, p5, p6, p7, 0);
+		return NativeFunction.Natives.ADD_NAVMESH_BLOCKING_OBJECT<int>(p0, p1, p2, p3, p4, p5, p6, p7, 0);
 	}
 	public static void UPDATE_NAVMESH_BLOCKING_OBJECT(float p1, float p2, float p3, float p4, float p5, float p6, float p7)
 	{
@@ -22911,35 +22911,35 @@ public static class Natives
 	}
 	public static bool DOES_NAVMESH_BLOCKING_OBJECT_EXIST()
 	{
-		return NativeFunction.Natives.DOES_NAVMESH_BLOCKING_OBJECT_EXIST(0);
+		return NativeFunction.Natives.DOES_NAVMESH_BLOCKING_OBJECT_EXIST<bool>(0);
 	}
 	/// <summary>
 	/// 	Returns CGameWorldHeightMap&amp;apos;s maximum Z value at specified point (grid node).
 	/// </summary>
 	public static float GET_APPROX_HEIGHT_FOR_POINT(float x, float y)
 	{
-		return NativeFunction.Natives.GET_APPROX_HEIGHT_FOR_POINT(x, y);
+		return NativeFunction.Natives.GET_APPROX_HEIGHT_FOR_POINT<float>(x, y);
 	}
 	/// <summary>
 	/// 	Returns CGameWorldHeightMap&amp;apos;s maximum Z among all grid nodes that intersect with the specified rectangle.
 	/// </summary>
 	public static float GET_APPROX_HEIGHT_FOR_AREA(float x1, float y1, float x2, float y2)
 	{
-		return NativeFunction.Natives.GET_APPROX_HEIGHT_FOR_AREA(x1, y1, x2, y2);
+		return NativeFunction.Natives.GET_APPROX_HEIGHT_FOR_AREA<float>(x1, y1, x2, y2);
 	}
 	/// <summary>
 	/// 	Returns CGameWorldHeightMap&amp;apos;s minimum Z value at specified point (grid node).
 	/// </summary>
 	public static float GET_APPROX_FLOOR_FOR_POINT(float x, float y)
 	{
-		return NativeFunction.Natives.GET_APPROX_FLOOR_FOR_POINT(x, y);
+		return NativeFunction.Natives.GET_APPROX_FLOOR_FOR_POINT<float>(x, y);
 	}
 	/// <summary>
 	/// 	Returns CGameWorldHeightMap&amp;apos;s minimum Z among all grid nodes that intersect with the specified rectangle.
 	/// </summary>
 	public static float GET_APPROX_FLOOR_FOR_AREA(float x1, float y1, float x2, float y2)
 	{
-		return NativeFunction.Natives.GET_APPROX_FLOOR_FOR_AREA(x1, y1, x2, y2);
+		return NativeFunction.Natives.GET_APPROX_FLOOR_FOR_AREA<float>(x1, y1, x2, y2);
 	}
 	/// <summary>
 	/// 	Calculates the travel distance between a set of points.<br/>
@@ -22949,7 +22949,7 @@ public static class Natives
 	/// </summary>
 	public static float CALCULATE_TRAVEL_DISTANCE_BETWEEN_POINTS(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.CALCULATE_TRAVEL_DISTANCE_BETWEEN_POINTS(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.CALCULATE_TRAVEL_DISTANCE_BETWEEN_POINTS<float>(x1, y1, z1, x2, y2, z2);
 	}
 	/*
 		PED
@@ -22961,7 +22961,7 @@ public static class Natives
 	/// </summary>
 	public static Ped CREATE_PED(int pedType, ulong modelHash, float x, float y, float z, float heading, bool isNetwork, bool bScriptHostPed)
 	{
-		return NativeFunction.Natives.CREATE_PED(pedType, modelHash, x, y, z, heading, isNetwork, bScriptHostPed);
+		return NativeFunction.Natives.CREATE_PED<Ped>(pedType, modelHash, x, y, z, heading, isNetwork, bScriptHostPed);
 	}
 	/// <summary>
 	/// 	Deletes the specified ped, then sets the handle pointed to by the pointer to NULL.
@@ -22972,11 +22972,11 @@ public static class Natives
 	}
 	public static Ped CLONE_PED(Ped ped, bool isNetwork, bool bScriptHostPed, bool copyHeadBlendFlag)
 	{
-		return NativeFunction.Natives.CLONE_PED(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag);
+		return NativeFunction.Natives.CLONE_PED<Ped>(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag);
 	}
 	public static Ped CLONE_PED_ALT(Ped ped, bool isNetwork, bool bScriptHostPed, bool copyHeadBlendFlag, bool p4)
 	{
-		return NativeFunction.Natives.CLONE_PED_ALT(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag, p4);
+		return NativeFunction.Natives.CLONE_PED_ALT<Ped>(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag, p4);
 	}
 	/// <summary>
 	/// 	Copies ped&amp;apos;s components and props to targetPed.
@@ -22996,11 +22996,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_IN_VEHICLE(Ped ped, Vehicle vehicle, bool atGetIn)
 	{
-		return NativeFunction.Natives.IS_PED_IN_VEHICLE(ped, vehicle, atGetIn);
+		return NativeFunction.Natives.IS_PED_IN_VEHICLE<bool>(ped, vehicle, atGetIn);
 	}
 	public static bool IS_PED_IN_MODEL(Ped ped, ulong modelHash)
 	{
-		return NativeFunction.Natives.IS_PED_IN_MODEL(ped, modelHash);
+		return NativeFunction.Natives.IS_PED_IN_MODEL<bool>(ped, modelHash);
 	}
 	/// <summary>
 	/// 	Gets a value indicating whether the specified ped is in any vehicle.<br/>
@@ -23009,14 +23009,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_IN_ANY_VEHICLE(Ped ped, bool atGetIn)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_VEHICLE(ped, atGetIn);
+		return NativeFunction.Natives.IS_PED_IN_ANY_VEHICLE<bool>(ped, atGetIn);
 	}
 	/// <summary>
 	/// 	xyz - relative to the world origin.
 	/// </summary>
 	public static bool IS_COP_PED_IN_AREA_3D(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.IS_COP_PED_IN_AREA_3D(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.IS_COP_PED_IN_AREA_3D<bool>(x1, y1, z1, x2, y2, z2);
 	}
 	/// <summary>
 	/// 	Gets a value indicating whether this ped&amp;apos;s health is below its injured threshold.<br/>
@@ -23025,14 +23025,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_INJURED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_INJURED(ped);
+		return NativeFunction.Natives.IS_PED_INJURED<bool>(ped);
 	}
 	/// <summary>
 	/// 	Returns whether the specified ped is hurt.
 	/// </summary>
 	public static bool IS_PED_HURT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_HURT(ped);
+		return NativeFunction.Natives.IS_PED_HURT<bool>(ped);
 	}
 	/// <summary>
 	/// 	Gets a value indicating whether this ped&amp;apos;s health is below its fatally injured threshold. The default threshold is 100.<br/>
@@ -23040,7 +23040,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_FATALLY_INJURED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_FATALLY_INJURED(ped);
+		return NativeFunction.Natives.IS_PED_FATALLY_INJURED<bool>(ped);
 	}
 	/// <summary>
 	/// 	Seems to consistently return true if the ped is dead.<br/>
@@ -23055,29 +23055,29 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_DEAD_OR_DYING(Ped ped, bool p1)
 	{
-		return NativeFunction.Natives.IS_PED_DEAD_OR_DYING(ped, p1);
+		return NativeFunction.Natives.IS_PED_DEAD_OR_DYING<bool>(ped, p1);
 	}
 	public static bool IS_CONVERSATION_PED_DEAD(Ped ped)
 	{
-		return NativeFunction.Natives.IS_CONVERSATION_PED_DEAD(ped);
+		return NativeFunction.Natives.IS_CONVERSATION_PED_DEAD<bool>(ped);
 	}
 	public static bool IS_PED_AIMING_FROM_COVER(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_AIMING_FROM_COVER(ped);
+		return NativeFunction.Natives.IS_PED_AIMING_FROM_COVER<bool>(ped);
 	}
 	/// <summary>
 	/// 	Returns whether the specified ped is reloading.
 	/// </summary>
 	public static bool IS_PED_RELOADING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RELOADING(ped);
+		return NativeFunction.Natives.IS_PED_RELOADING<bool>(ped);
 	}
 	/// <summary>
 	/// 	Returns true if the given ped has a valid pointer to CPlayerInfo in its CPed class. That&amp;apos;s all.
 	/// </summary>
 	public static bool IS_PED_A_PLAYER(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_A_PLAYER(ped);
+		return NativeFunction.Natives.IS_PED_A_PLAYER<bool>(ped);
 	}
 	/// <summary>
 	/// 	pedType: see CREATE_PED<br/>
@@ -23086,7 +23086,7 @@ public static class Natives
 	/// </summary>
 	public static Ped CREATE_PED_INSIDE_VEHICLE(Vehicle vehicle, int pedType, ulong modelHash, int seat, bool isNetwork, bool bScriptHostPed)
 	{
-		return NativeFunction.Natives.CREATE_PED_INSIDE_VEHICLE(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
+		return NativeFunction.Natives.CREATE_PED_INSIDE_VEHICLE<Ped>(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 	}
 	public static void SET_PED_DESIRED_HEADING(Ped ped, float heading)
 	{
@@ -23101,7 +23101,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_FACING_PED(Ped ped, Ped otherPed, float angle)
 	{
-		return NativeFunction.Natives.IS_PED_FACING_PED(ped, otherPed, angle);
+		return NativeFunction.Natives.IS_PED_FACING_PED<bool>(ped, otherPed, angle);
 	}
 	/// <summary>
 	/// 	Notes: The function only returns true while the ped is: <br/>
@@ -23115,29 +23115,29 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_IN_MELEE_COMBAT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_MELEE_COMBAT(ped);
+		return NativeFunction.Natives.IS_PED_IN_MELEE_COMBAT<bool>(ped);
 	}
 	/// <summary>
 	/// 	Returns true if the ped doesn&amp;apos;t do any movement. If the ped is being pushed forwards by using APPLY_FORCE_TO_ENTITY for example, the function returns false.
 	/// </summary>
 	public static bool IS_PED_STOPPED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_STOPPED(ped);
+		return NativeFunction.Natives.IS_PED_STOPPED<bool>(ped);
 	}
 	public static bool IS_PED_SHOOTING_IN_AREA(Ped ped, float x1, float y1, float z1, float x2, float y2, float z2, bool p7, bool p8)
 	{
-		return NativeFunction.Natives.IS_PED_SHOOTING_IN_AREA(ped, x1, y1, z1, x2, y2, z2, p7, p8);
+		return NativeFunction.Natives.IS_PED_SHOOTING_IN_AREA<bool>(ped, x1, y1, z1, x2, y2, z2, p7, p8);
 	}
 	public static bool IS_ANY_PED_SHOOTING_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2, bool p6, bool p7)
 	{
-		return NativeFunction.Natives.IS_ANY_PED_SHOOTING_IN_AREA(x1, y1, z1, x2, y2, z2, p6, p7);
+		return NativeFunction.Natives.IS_ANY_PED_SHOOTING_IN_AREA<bool>(x1, y1, z1, x2, y2, z2, p6, p7);
 	}
 	/// <summary>
 	/// 	Returns whether the specified ped is shooting.
 	/// </summary>
 	public static bool IS_PED_SHOOTING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_SHOOTING(ped);
+		return NativeFunction.Natives.IS_PED_SHOOTING<bool>(ped);
 	}
 	/// <summary>
 	/// 	accuracy = 0-100, 100 being perfectly accurate
@@ -23148,7 +23148,7 @@ public static class Natives
 	}
 	public static int GET_PED_ACCURACY(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_ACCURACY(ped);
+		return NativeFunction.Natives.GET_PED_ACCURACY<int>(ped);
 	}
 	public static void SET_AMBIENT_LAW_PED_ACCURACY_MODIFIER(float multiplier)
 	{
@@ -23156,7 +23156,7 @@ public static class Natives
 	}
 	public static bool IS_PED_MODEL(Ped ped, ulong modelHash)
 	{
-		return NativeFunction.Natives.IS_PED_MODEL(ped, modelHash);
+		return NativeFunction.Natives.IS_PED_MODEL<bool>(ped, modelHash);
 	}
 	/// <summary>
 	/// 	Forces the ped to fall back and kills it.<br/>
@@ -23212,7 +23212,7 @@ public static class Natives
 	}
 	public static bool CAN_CREATE_RANDOM_PED(bool p0)
 	{
-		return NativeFunction.Natives.CAN_CREATE_RANDOM_PED(p0);
+		return NativeFunction.Natives.CAN_CREATE_RANDOM_PED<bool>(p0);
 	}
 	/// <summary>
 	/// 	vb.net<br/>
@@ -23227,19 +23227,19 @@ public static class Natives
 	/// </summary>
 	public static Ped CREATE_RANDOM_PED(float posX, float posY, float posZ)
 	{
-		return NativeFunction.Natives.CREATE_RANDOM_PED(posX, posY, posZ);
+		return NativeFunction.Natives.CREATE_RANDOM_PED<Ped>(posX, posY, posZ);
 	}
 	public static Ped CREATE_RANDOM_PED_AS_DRIVER(Vehicle vehicle, bool returnHandle)
 	{
-		return NativeFunction.Natives.CREATE_RANDOM_PED_AS_DRIVER(vehicle, returnHandle);
+		return NativeFunction.Natives.CREATE_RANDOM_PED_AS_DRIVER<Ped>(vehicle, returnHandle);
 	}
 	public static bool CAN_CREATE_RANDOM_DRIVER()
 	{
-		return NativeFunction.Natives.CAN_CREATE_RANDOM_DRIVER();
+		return NativeFunction.Natives.CAN_CREATE_RANDOM_DRIVER<bool>();
 	}
 	public static bool CAN_CREATE_RANDOM_BIKE_RIDER()
 	{
-		return NativeFunction.Natives.CAN_CREATE_RANDOM_BIKE_RIDER();
+		return NativeFunction.Natives.CAN_CREATE_RANDOM_BIKE_RIDER<bool>();
 	}
 	public static void SET_PED_MOVE_ANIMS_BLEND_OUT(Ped ped)
 	{
@@ -23263,21 +23263,21 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_MALE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_MALE(ped);
+		return NativeFunction.Natives.IS_PED_MALE<bool>(ped);
 	}
 	/// <summary>
 	/// 	Returns true/false if the ped is/isn&amp;apos;t humanoid.
 	/// </summary>
 	public static bool IS_PED_HUMAN(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_HUMAN(ped);
+		return NativeFunction.Natives.IS_PED_HUMAN<bool>(ped);
 	}
 	/// <summary>
 	/// 	Gets the vehicle the specified Ped is in. Returns 0 if the ped is/was not in a vehicle.
 	/// </summary>
 	public static Vehicle GET_VEHICLE_PED_IS_IN(Ped ped, bool includeEntering)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_PED_IS_IN(ped, includeEntering);
+		return NativeFunction.Natives.GET_VEHICLE_PED_IS_IN<Vehicle>(ped, includeEntering);
 	}
 	/// <summary>
 	/// 	Resets the value for the last vehicle driven by the Ped.
@@ -23322,7 +23322,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_ON_MOUNT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_ON_MOUNT(ped);
+		return NativeFunction.Natives.IS_PED_ON_MOUNT<bool>(ped);
 	}
 	/// <summary>
 	/// 	<br/>
@@ -23338,7 +23338,7 @@ public static class Natives
 	/// </summary>
 	public static Ped GET_MOUNT(Ped ped)
 	{
-		return NativeFunction.Natives.GET_MOUNT(ped);
+		return NativeFunction.Natives.GET_MOUNT<Ped>(ped);
 	}
 	/// <summary>
 	/// 	Gets a value indicating whether the specified ped is on top of any vehicle.<br/>
@@ -23349,11 +23349,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_ON_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_ON_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_ON_VEHICLE<bool>(ped);
 	}
 	public static bool IS_PED_ON_SPECIFIC_VEHICLE(Ped ped, Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_PED_ON_SPECIFIC_VEHICLE(ped, vehicle);
+		return NativeFunction.Natives.IS_PED_ON_SPECIFIC_VEHICLE<bool>(ped, vehicle);
 	}
 	/// <summary>
 	/// 	Maximum possible amount of money on MP is 2000. ~JX<br/>
@@ -23368,7 +23368,7 @@ public static class Natives
 	}
 	public static int GET_PED_MONEY(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_MONEY(ped);
+		return NativeFunction.Natives.GET_PED_MONEY<int>(ped);
 	}
 	/// <summary>
 	/// 	Related to Peds dropping pickup_health_snack; p0 is a value between [0.0, 1.0] that corresponds to drop rate
@@ -23407,7 +23407,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_SITTING_IN_VEHICLE(Ped ped, Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_PED_SITTING_IN_VEHICLE(ped, vehicle);
+		return NativeFunction.Natives.IS_PED_SITTING_IN_VEHICLE<bool>(ped, vehicle);
 	}
 	/// <summary>
 	/// 	Detect if ped is in any vehicle<br/>
@@ -23415,43 +23415,43 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_SITTING_IN_ANY_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_SITTING_IN_ANY_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_SITTING_IN_ANY_VEHICLE<bool>(ped);
 	}
 	public static bool IS_PED_ON_FOOT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_ON_FOOT(ped);
+		return NativeFunction.Natives.IS_PED_ON_FOOT<bool>(ped);
 	}
 	public static bool IS_PED_ON_ANY_BIKE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_ON_ANY_BIKE(ped);
+		return NativeFunction.Natives.IS_PED_ON_ANY_BIKE<bool>(ped);
 	}
 	public static bool IS_PED_PLANTING_BOMB(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_PLANTING_BOMB(ped);
+		return NativeFunction.Natives.IS_PED_PLANTING_BOMB<bool>(ped);
 	}
 	public static Vector3 GET_DEAD_PED_PICKUP_COORDS(Ped ped, float p1, float p2)
 	{
-		return NativeFunction.Natives.GET_DEAD_PED_PICKUP_COORDS(ped, p1, p2);
+		return NativeFunction.Natives.GET_DEAD_PED_PICKUP_COORDS<Vector3>(ped, p1, p2);
 	}
 	public static bool IS_PED_IN_ANY_BOAT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_BOAT(ped);
+		return NativeFunction.Natives.IS_PED_IN_ANY_BOAT<bool>(ped);
 	}
 	public static bool IS_PED_IN_ANY_SUB(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_SUB(ped);
+		return NativeFunction.Natives.IS_PED_IN_ANY_SUB<bool>(ped);
 	}
 	public static bool IS_PED_IN_ANY_HELI(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_HELI(ped);
+		return NativeFunction.Natives.IS_PED_IN_ANY_HELI<bool>(ped);
 	}
 	public static bool IS_PED_IN_ANY_PLANE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_PLANE(ped);
+		return NativeFunction.Natives.IS_PED_IN_ANY_PLANE<bool>(ped);
 	}
 	public static bool IS_PED_IN_FLYING_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_FLYING_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_IN_FLYING_VEHICLE<bool>(ped);
 	}
 	public static void SET_PED_DIES_IN_WATER(Ped ped, bool toggle)
 	{
@@ -23459,7 +23459,7 @@ public static class Natives
 	}
 	public static bool GET_PED_DIES_IN_WATER(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_DIES_IN_WATER(ped);
+		return NativeFunction.Natives.GET_PED_DIES_IN_WATER<bool>(ped);
 	}
 	public static void SET_PED_DIES_IN_SINKING_VEHICLE(Ped ped, bool toggle)
 	{
@@ -23467,7 +23467,7 @@ public static class Natives
 	}
 	public static int GET_PED_ARMOUR(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_ARMOUR(ped);
+		return NativeFunction.Natives.GET_PED_ARMOUR<int>(ped);
 	}
 	public static void SET_PED_STAY_IN_VEHICLE_WHEN_JACKED(Ped ped, bool toggle)
 	{
@@ -23479,7 +23479,7 @@ public static class Natives
 	}
 	public static bool GET_PED_LAST_DAMAGE_BONE(Ped ped, out int outBone)
 	{
-		return NativeFunction.Natives.GET_PED_LAST_DAMAGE_BONE(ped, out outBone);
+		return NativeFunction.Natives.GET_PED_LAST_DAMAGE_BONE<bool>(ped, out outBone);
 	}
 	public static void CLEAR_PED_LAST_DAMAGE_BONE(Ped ped)
 	{
@@ -23527,7 +23527,7 @@ public static class Natives
 	}
 	public static bool IS_PED_IN_ANY_POLICE_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_POLICE_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_IN_ANY_POLICE_VEHICLE<bool>(ped);
 	}
 	public static void FORCE_PED_TO_OPEN_PARACHUTE(Ped ped)
 	{
@@ -23535,46 +23535,46 @@ public static class Natives
 	}
 	public static bool IS_PED_IN_PARACHUTE_FREE_FALL(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_PARACHUTE_FREE_FALL(ped);
+		return NativeFunction.Natives.IS_PED_IN_PARACHUTE_FREE_FALL<bool>(ped);
 	}
 	public static bool IS_PED_FALLING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_FALLING(ped);
+		return NativeFunction.Natives.IS_PED_FALLING<bool>(ped);
 	}
 	public static bool IS_PED_JUMPING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_JUMPING(ped);
+		return NativeFunction.Natives.IS_PED_JUMPING<bool>(ped);
 	}
 	public static bool IS_PED_LANDING()
 	{
-		return NativeFunction.Natives.IS_PED_LANDING(0);
+		return NativeFunction.Natives.IS_PED_LANDING<bool>(0);
 	}
 	public static bool IS_PED_DOING_A_BEAST_JUMP()
 	{
-		return NativeFunction.Natives.IS_PED_DOING_A_BEAST_JUMP(0);
+		return NativeFunction.Natives.IS_PED_DOING_A_BEAST_JUMP<bool>(0);
 	}
 	public static bool IS_PED_CLIMBING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_CLIMBING(ped);
+		return NativeFunction.Natives.IS_PED_CLIMBING<bool>(ped);
 	}
 	public static bool IS_PED_VAULTING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_VAULTING(ped);
+		return NativeFunction.Natives.IS_PED_VAULTING<bool>(ped);
 	}
 	public static bool IS_PED_DIVING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_DIVING(ped);
+		return NativeFunction.Natives.IS_PED_DIVING<bool>(ped);
 	}
 	public static bool IS_PED_JUMPING_OUT_OF_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_JUMPING_OUT_OF_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_JUMPING_OUT_OF_VEHICLE<bool>(ped);
 	}
 	/// <summary>
 	/// 	Returns true if the ped is currently opening a door (CTaskOpenDoor).
 	/// </summary>
 	public static bool IS_PED_OPENING_DOOR(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_OPENING_DOOR(ped);
+		return NativeFunction.Natives.IS_PED_OPENING_DOOR<bool>(ped);
 	}
 	/// <summary>
 	/// 	Returns:<br/>
@@ -23589,7 +23589,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_PARACHUTE_STATE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_PARACHUTE_STATE(ped);
+		return NativeFunction.Natives.GET_PED_PARACHUTE_STATE<int>(ped);
 	}
 	/// <summary>
 	/// 	-1: no landing<br/>
@@ -23600,7 +23600,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_PARACHUTE_LANDING_TYPE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_PARACHUTE_LANDING_TYPE(ped);
+		return NativeFunction.Natives.GET_PED_PARACHUTE_LANDING_TYPE<int>(ped);
 	}
 	public static void SET_PED_PARACHUTE_TINT_INDEX(Ped ped, int tintIndex)
 	{
@@ -23616,7 +23616,7 @@ public static class Natives
 	}
 	public static Object CREATE_PARACHUTE_BAG_OBJECT(Ped ped, bool p1, bool p2)
 	{
-		return NativeFunction.Natives.CREATE_PARACHUTE_BAG_OBJECT(ped, p1, p2);
+		return NativeFunction.Natives.CREATE_PARACHUTE_BAG_OBJECT<Object>(ped, p1, p2);
 	}
 	/// <summary>
 	/// 	This is the SET_CHAR_DUCKING from GTA IV, that makes Peds duck. This function does nothing in GTA V. It cannot set the ped as ducking in vehicles, and IS_PED_DUCKING will always return false.
@@ -23627,11 +23627,11 @@ public static class Natives
 	}
 	public static bool IS_PED_DUCKING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_DUCKING(ped);
+		return NativeFunction.Natives.IS_PED_DUCKING<bool>(ped);
 	}
 	public static bool IS_PED_IN_ANY_TAXI(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_TAXI(ped);
+		return NativeFunction.Natives.IS_PED_IN_ANY_TAXI<bool>(ped);
 	}
 	public static void SET_PED_ID_RANGE(Ped ped, float value)
 	{
@@ -23694,7 +23694,7 @@ public static class Natives
 	}
 	public static float GET_PED_VISUAL_FIELD_CENTER_ANGLE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_VISUAL_FIELD_CENTER_ANGLE(ped);
+		return NativeFunction.Natives.GET_PED_VISUAL_FIELD_CENTER_ANGLE<float>(ped);
 	}
 	/// <summary>
 	/// 	p1 is usually 0 in the scripts. action is either 0 or a pointer to &amp;quot;DEFAULT_ACTION&amp;quot;.
@@ -23708,7 +23708,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_PED_STEALTH_MOVEMENT(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_STEALTH_MOVEMENT(ped);
+		return NativeFunction.Natives.GET_PED_STEALTH_MOVEMENT<bool>(ped);
 	}
 	/// <summary>
 	/// 	Creates a new ped group.<br/>
@@ -23720,7 +23720,7 @@ public static class Natives
 	/// </summary>
 	public static int CREATE_GROUP(int unused)
 	{
-		return NativeFunction.Natives.CREATE_GROUP(unused);
+		return NativeFunction.Natives.CREATE_GROUP<int>(unused);
 	}
 	public static void SET_PED_AS_GROUP_LEADER(Ped ped, int groupId)
 	{
@@ -23749,11 +23749,11 @@ public static class Natives
 	}
 	public static bool IS_PED_GROUP_MEMBER(Ped ped, int groupId)
 	{
-		return NativeFunction.Natives.IS_PED_GROUP_MEMBER(ped, groupId);
+		return NativeFunction.Natives.IS_PED_GROUP_MEMBER<bool>(ped, groupId);
 	}
 	public static bool IS_PED_HANGING_ON_TO_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_HANGING_ON_TO_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_HANGING_ON_TO_VEHICLE<bool>(ped);
 	}
 	/// <summary>
 	/// 	Sets the range at which members will automatically leave the group.
@@ -23771,7 +23771,7 @@ public static class Natives
 	}
 	public static bool IS_PED_PRONE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_PRONE(ped);
+		return NativeFunction.Natives.IS_PED_PRONE<bool>(ped);
 	}
 	/// <summary>
 	/// 	Checks to see if ped and target are in combat with eachother. Only goes one-way: if target is engaged in combat with ped but ped has not yet reacted, the function will return false until ped starts fighting back.<br/>
@@ -23780,84 +23780,84 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_IN_COMBAT(Ped ped, Ped target)
 	{
-		return NativeFunction.Natives.IS_PED_IN_COMBAT(ped, target);
+		return NativeFunction.Natives.IS_PED_IN_COMBAT<bool>(ped, target);
 	}
 	public static Entity GET_PED_TARGET_FROM_COMBAT_PED(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_TARGET_FROM_COMBAT_PED(ped, 0);
+		return NativeFunction.Natives.GET_PED_TARGET_FROM_COMBAT_PED<Entity>(ped, 0);
 	}
 	public static bool CAN_PED_IN_COMBAT_SEE_TARGET(Ped ped, Ped target)
 	{
-		return NativeFunction.Natives.CAN_PED_IN_COMBAT_SEE_TARGET(ped, target);
+		return NativeFunction.Natives.CAN_PED_IN_COMBAT_SEE_TARGET<bool>(ped, target);
 	}
 	public static bool IS_PED_DOING_DRIVEBY(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_DOING_DRIVEBY(ped);
+		return NativeFunction.Natives.IS_PED_DOING_DRIVEBY<bool>(ped);
 	}
 	public static bool IS_PED_JACKING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_JACKING(ped);
+		return NativeFunction.Natives.IS_PED_JACKING<bool>(ped);
 	}
 	public static bool IS_PED_BEING_JACKED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_BEING_JACKED(ped);
+		return NativeFunction.Natives.IS_PED_BEING_JACKED<bool>(ped);
 	}
 	/// <summary>
 	/// 	p1 is always 0
 	/// </summary>
 	public static bool IS_PED_BEING_STUNNED(Ped ped, int p1)
 	{
-		return NativeFunction.Natives.IS_PED_BEING_STUNNED(ped, p1);
+		return NativeFunction.Natives.IS_PED_BEING_STUNNED<bool>(ped, p1);
 	}
 	public static Ped GET_PEDS_JACKER(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PEDS_JACKER(ped);
+		return NativeFunction.Natives.GET_PEDS_JACKER<Ped>(ped);
 	}
 	public static Ped GET_JACK_TARGET(Ped ped)
 	{
-		return NativeFunction.Natives.GET_JACK_TARGET(ped);
+		return NativeFunction.Natives.GET_JACK_TARGET<Ped>(ped);
 	}
 	public static bool IS_PED_FLEEING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_FLEEING(ped);
+		return NativeFunction.Natives.IS_PED_FLEEING<bool>(ped);
 	}
 	/// <summary>
 	/// 	p1 is nearly always 0 in the scripts. 
 	/// </summary>
 	public static bool IS_PED_IN_COVER(Ped ped, bool exceptUseWeapon)
 	{
-		return NativeFunction.Natives.IS_PED_IN_COVER(ped, exceptUseWeapon);
+		return NativeFunction.Natives.IS_PED_IN_COVER<bool>(ped, exceptUseWeapon);
 	}
 	public static bool IS_PED_IN_COVER_FACING_LEFT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_COVER_FACING_LEFT(ped);
+		return NativeFunction.Natives.IS_PED_IN_COVER_FACING_LEFT<bool>(ped);
 	}
 	public static bool IS_PED_IN_HIGH_COVER(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_HIGH_COVER(ped);
+		return NativeFunction.Natives.IS_PED_IN_HIGH_COVER<bool>(ped);
 	}
 	public static bool IS_PED_GOING_INTO_COVER(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_GOING_INTO_COVER(ped);
+		return NativeFunction.Natives.IS_PED_GOING_INTO_COVER<bool>(ped);
 	}
 	/// <summary>
 	/// 	i could be time. Only example in the decompiled scripts uses it as -1.
 	/// </summary>
 	public static bool SET_PED_PINNED_DOWN(Ped ped, bool pinned, int i)
 	{
-		return NativeFunction.Natives.SET_PED_PINNED_DOWN(ped, pinned, i);
+		return NativeFunction.Natives.SET_PED_PINNED_DOWN<bool>(ped, pinned, i);
 	}
 	public static bool _HAS_PED_CLEAR_LOS_TO_ENTITY(Ped ped, Entity entity, float x, float y, float z, int p5, bool p6, bool p7)
 	{
-		return NativeFunction.Natives._HAS_PED_CLEAR_LOS_TO_ENTITY(ped, entity, x, y, z, p5, p6, p7);
+		return NativeFunction.Natives._HAS_PED_CLEAR_LOS_TO_ENTITY<bool>(ped, entity, x, y, z, p5, p6, p7);
 	}
 	public static int GET_SEAT_PED_IS_TRYING_TO_ENTER(Ped ped)
 	{
-		return NativeFunction.Natives.GET_SEAT_PED_IS_TRYING_TO_ENTER(ped);
+		return NativeFunction.Natives.GET_SEAT_PED_IS_TRYING_TO_ENTER<int>(ped);
 	}
 	public static Vehicle GET_VEHICLE_PED_IS_TRYING_TO_ENTER(Ped ped)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_PED_IS_TRYING_TO_ENTER(ped);
+		return NativeFunction.Natives.GET_VEHICLE_PED_IS_TRYING_TO_ENTER<Vehicle>(ped);
 	}
 	/// <summary>
 	/// 	Returns the Entity (Ped, Vehicle, or ?Object?) that killed the &amp;apos;ped&amp;apos;<br/>
@@ -23866,26 +23866,26 @@ public static class Natives
 	/// </summary>
 	public static Entity GET_PED_SOURCE_OF_DEATH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_SOURCE_OF_DEATH(ped);
+		return NativeFunction.Natives.GET_PED_SOURCE_OF_DEATH<Entity>(ped);
 	}
 	/// <summary>
 	/// 	Returns the hash of the weapon/model/object that killed the ped.
 	/// </summary>
 	public static ulong GET_PED_CAUSE_OF_DEATH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_CAUSE_OF_DEATH(ped);
+		return NativeFunction.Natives.GET_PED_CAUSE_OF_DEATH<ulong>(ped);
 	}
 	public static int GET_PED_TIME_OF_DEATH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_TIME_OF_DEATH(ped);
+		return NativeFunction.Natives.GET_PED_TIME_OF_DEATH<int>(ped);
 	}
 	public static int COUNT_PEDS_IN_COMBAT_WITH_TARGET(Ped ped)
 	{
-		return NativeFunction.Natives.COUNT_PEDS_IN_COMBAT_WITH_TARGET(ped);
+		return NativeFunction.Natives.COUNT_PEDS_IN_COMBAT_WITH_TARGET<int>(ped);
 	}
 	public static int COUNT_PEDS_IN_COMBAT_WITH_TARGET_WITHIN_RADIUS(Ped ped, float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.COUNT_PEDS_IN_COMBAT_WITH_TARGET_WITHIN_RADIUS(ped, x, y, z, radius);
+		return NativeFunction.Natives.COUNT_PEDS_IN_COMBAT_WITH_TARGET_WITHIN_RADIUS<int>(ped, x, y, z, radius);
 	}
 	public static void SET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(Ped ped, ulong hash)
 	{
@@ -23939,9 +23939,9 @@ public static class Natives
 	/// <summary>
 	/// 	Can&amp;apos;t select void. This function returns nothing. The hash of the created relationship group is output in the second parameter.
 	/// </summary>
-	public static bool ADD_RELATIONSHIP_GROUP(string name, ulong groupHash)
+	public static bool ADD_RELATIONSHIP_GROUP(string name, out ulong groupHash)
 	{
-		return NativeFunction.Natives.ADD_RELATIONSHIP_GROUP(name, groupHash);
+		return NativeFunction.Natives.ADD_RELATIONSHIP_GROUP<bool>(name, out groupHash);
 	}
 	public static void REMOVE_RELATIONSHIP_GROUP(ulong groupHash)
 	{
@@ -23949,7 +23949,7 @@ public static class Natives
 	}
 	public static bool DOES_RELATIONSHIP_GROUP_EXIST(ulong groupHash)
 	{
-		return NativeFunction.Natives.DOES_RELATIONSHIP_GROUP_EXIST(groupHash);
+		return NativeFunction.Natives.DOES_RELATIONSHIP_GROUP_EXIST<bool>(groupHash);
 	}
 	/// <summary>
 	/// 	Gets the relationship between two peds. This should be called twice (once for each ped).<br/>
@@ -23970,15 +23970,15 @@ public static class Natives
 	/// </summary>
 	public static int GET_RELATIONSHIP_BETWEEN_PEDS(Ped ped1, Ped ped2)
 	{
-		return NativeFunction.Natives.GET_RELATIONSHIP_BETWEEN_PEDS(ped1, ped2);
+		return NativeFunction.Natives.GET_RELATIONSHIP_BETWEEN_PEDS<int>(ped1, ped2);
 	}
 	public static ulong GET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(ped);
+		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH<ulong>(ped);
 	}
 	public static ulong GET_PED_RELATIONSHIP_GROUP_HASH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_HASH(ped);
+		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_HASH<ulong>(ped);
 	}
 	/// <summary>
 	/// 	Gets the relationship between two groups. This should be called twice (once for each group).<br/>
@@ -23998,7 +23998,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_RELATIONSHIP_BETWEEN_GROUPS(ulong group1, ulong group2)
 	{
-		return NativeFunction.Natives.GET_RELATIONSHIP_BETWEEN_GROUPS(group1, group2);
+		return NativeFunction.Natives.GET_RELATIONSHIP_BETWEEN_GROUPS<int>(group1, group2);
 	}
 	public static void SET_RELATIONSHIP_GROUP_AFFECTS_WANTED_LEVEL(ulong group, bool p1)
 	{
@@ -24018,11 +24018,11 @@ public static class Natives
 	}
 	public static bool IS_PED_RESPONDING_TO_EVENT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RESPONDING_TO_EVENT(ped, 0);
+		return NativeFunction.Natives.IS_PED_RESPONDING_TO_EVENT<bool>(ped, 0);
 	}
 	public static bool GET_POS_FROM_FIRED_EVENT(Ped ped, int eventType)
 	{
-		return NativeFunction.Natives.GET_POS_FROM_FIRED_EVENT(ped, eventType, 0);
+		return NativeFunction.Natives.GET_POS_FROM_FIRED_EVENT<bool>(ped, eventType, 0);
 	}
 	/// <summary>
 	/// 	FIRING_PATTERN_BURST_FIRE = 0xD6FF6D61 ( 1073727030 )<br/>
@@ -24097,7 +24097,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_COMBAT_FLOAT(Ped ped, int p1)
 	{
-		return NativeFunction.Natives.GET_COMBAT_FLOAT(ped, p1);
+		return NativeFunction.Natives.GET_COMBAT_FLOAT<float>(ped, p1);
 	}
 	/// <summary>
 	/// 	p1 may be a BOOL representing whether or not the group even exists
@@ -24108,22 +24108,22 @@ public static class Natives
 	}
 	public static bool DOES_GROUP_EXIST(int groupId)
 	{
-		return NativeFunction.Natives.DOES_GROUP_EXIST(groupId);
+		return NativeFunction.Natives.DOES_GROUP_EXIST<bool>(groupId);
 	}
 	/// <summary>
 	/// 	Returns the group id of which the specified ped is a member of.
 	/// </summary>
 	public static int GET_PED_GROUP_INDEX(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_GROUP_INDEX(ped);
+		return NativeFunction.Natives.GET_PED_GROUP_INDEX<int>(ped);
 	}
 	public static bool IS_PED_IN_GROUP(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_GROUP(ped);
+		return NativeFunction.Natives.IS_PED_IN_GROUP<bool>(ped);
 	}
 	public static Player GET_PLAYER_PED_IS_FOLLOWING(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PLAYER_PED_IS_FOLLOWING(ped);
+		return NativeFunction.Natives.GET_PLAYER_PED_IS_FOLLOWING<Player>(ped);
 	}
 	/// <summary>
 	/// 	0: Default<br/>
@@ -24148,11 +24148,11 @@ public static class Natives
 	/// </summary>
 	public static Vehicle GET_VEHICLE_PED_IS_USING(Ped ped)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_PED_IS_USING(ped);
+		return NativeFunction.Natives.GET_VEHICLE_PED_IS_USING<Vehicle>(ped);
 	}
 	public static Vehicle GET_VEHICLE_PED_IS_ENTERING(Ped ped)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_PED_IS_ENTERING(ped);
+		return NativeFunction.Natives.GET_VEHICLE_PED_IS_ENTERING<Vehicle>(ped);
 	}
 	/// <summary>
 	/// 	enable or disable the gravity of a ped<br/>
@@ -24174,7 +24174,7 @@ public static class Natives
 	}
 	public static int GET_TIME_PED_DAMAGED_BY_WEAPON(Ped ped, ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_TIME_PED_DAMAGED_BY_WEAPON(ped, weaponHash);
+		return NativeFunction.Natives.GET_TIME_PED_DAMAGED_BY_WEAPON<int>(ped, weaponHash);
 	}
 	public static void SET_PED_ALLOWED_TO_DUCK(Ped ped, bool toggle)
 	{
@@ -24189,7 +24189,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_TYPE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_TYPE(ped);
+		return NativeFunction.Natives.GET_PED_TYPE<int>(ped);
 	}
 	/// <summary>
 	/// 	Turns the desired ped into a cop. If you use this on the player ped, you will become almost invisible to cops dispatched for you. You will also report your own crimes, get a generic cop voice, get a cop-vision-cone on the radar, and you will be unable to shoot at other cops. SWAT and Army will still shoot at you. Toggling ped as &amp;quot;false&amp;quot; has no effect; you must change p0&amp;apos;s ped model to disable the effect.
@@ -24211,7 +24211,7 @@ public static class Natives
 	}
 	public static int GET_PED_MAX_HEALTH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_MAX_HEALTH(ped);
+		return NativeFunction.Natives.GET_PED_MAX_HEALTH<int>(ped);
 	}
 	public static void SET_PED_MAX_TIME_IN_WATER(Ped ped, float value)
 	{
@@ -24252,7 +24252,7 @@ public static class Natives
 	}
 	public static bool CAN_KNOCK_PED_OFF_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.CAN_KNOCK_PED_OFF_VEHICLE(ped);
+		return NativeFunction.Natives.CAN_KNOCK_PED_OFF_VEHICLE<bool>(ped);
 	}
 	public static void KNOCK_PED_OFF_VEHICLE(Ped ped)
 	{
@@ -24274,11 +24274,11 @@ public static class Natives
 	/// </summary>
 	public static Ped GET_PED_AS_GROUP_MEMBER(int groupID, int memberNumber)
 	{
-		return NativeFunction.Natives.GET_PED_AS_GROUP_MEMBER(groupID, memberNumber);
+		return NativeFunction.Natives.GET_PED_AS_GROUP_MEMBER<Ped>(groupID, memberNumber);
 	}
 	public static Ped GET_PED_AS_GROUP_LEADER(int groupID)
 	{
-		return NativeFunction.Natives.GET_PED_AS_GROUP_LEADER(groupID);
+		return NativeFunction.Natives.GET_PED_AS_GROUP_LEADER<Ped>(groupID);
 	}
 	public static void SET_PED_KEEP_TASK(Ped ped, bool toggle)
 	{
@@ -24290,11 +24290,11 @@ public static class Natives
 	}
 	public static bool IS_PED_SWIMMING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_SWIMMING(ped);
+		return NativeFunction.Natives.IS_PED_SWIMMING<bool>(ped);
 	}
 	public static bool IS_PED_SWIMMING_UNDER_WATER(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_SWIMMING_UNDER_WATER(ped);
+		return NativeFunction.Natives.IS_PED_SWIMMING_UNDER_WATER<bool>(ped);
 	}
 	/// <summary>
 	/// 	teleports ped to coords along with the vehicle ped is in
@@ -24321,7 +24321,7 @@ public static class Natives
 	}
 	public static bool CAN_CREATE_RANDOM_COPS()
 	{
-		return NativeFunction.Natives.CAN_CREATE_RANDOM_COPS();
+		return NativeFunction.Natives.CAN_CREATE_RANDOM_COPS<bool>();
 	}
 	public static void SET_PED_AS_ENEMY(Ped ped, bool toggle)
 	{
@@ -24333,15 +24333,15 @@ public static class Natives
 	}
 	public static bool IS_PED_IN_ANY_TRAIN(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_ANY_TRAIN(ped);
+		return NativeFunction.Natives.IS_PED_IN_ANY_TRAIN<bool>(ped);
 	}
 	public static bool IS_PED_GETTING_INTO_A_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_GETTING_INTO_A_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_GETTING_INTO_A_VEHICLE<bool>(ped);
 	}
 	public static bool IS_PED_TRYING_TO_ENTER_A_LOCKED_VEHICLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_TRYING_TO_ENTER_A_LOCKED_VEHICLE(ped);
+		return NativeFunction.Natives.IS_PED_TRYING_TO_ENTER_A_LOCKED_VEHICLE<bool>(ped);
 	}
 	/// <summary>
 	/// 	ped can not pull out a weapon when true
@@ -24390,7 +24390,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_ALERTNESS(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_ALERTNESS(ped);
+		return NativeFunction.Natives.GET_PED_ALERTNESS<int>(ped);
 	}
 	/// <summary>
 	/// 	value ranges from 0 to 3.
@@ -24540,7 +24540,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_SCRIPTED_SCENARIO_PED_USING_CONDITIONAL_ANIM(Ped ped, string animDict, string anim)
 	{
-		return NativeFunction.Natives.IS_SCRIPTED_SCENARIO_PED_USING_CONDITIONAL_ANIM(ped, animDict, anim);
+		return NativeFunction.Natives.IS_SCRIPTED_SCENARIO_PED_USING_CONDITIONAL_ANIM<bool>(ped, animDict, anim);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json<br/>
@@ -24591,14 +24591,14 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_ANIM_INITIAL_OFFSET_POSITION(string animDict, string animName, float x, float y, float z, float xRot, float yRot, float zRot, float p8, int p9)
 	{
-		return NativeFunction.Natives.GET_ANIM_INITIAL_OFFSET_POSITION(animDict, animName, x, y, z, xRot, yRot, zRot, p8, p9);
+		return NativeFunction.Natives.GET_ANIM_INITIAL_OFFSET_POSITION<Vector3>(animDict, animName, x, y, z, xRot, yRot, zRot, p8, p9);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
 	/// </summary>
 	public static Vector3 GET_ANIM_INITIAL_OFFSET_ROTATION(string animDict, string animName, float x, float y, float z, float xRot, float yRot, float zRot, float p8, int p9)
 	{
-		return NativeFunction.Natives.GET_ANIM_INITIAL_OFFSET_ROTATION(animDict, animName, x, y, z, xRot, yRot, zRot, p8, p9);
+		return NativeFunction.Natives.GET_ANIM_INITIAL_OFFSET_ROTATION<Vector3>(animDict, animName, x, y, z, xRot, yRot, zRot, p8, p9);
 	}
 	/// <summary>
 	/// 	Ids<br/>
@@ -24617,7 +24617,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_DRAWABLE_VARIATION(Ped ped, int componentId)
 	{
-		return NativeFunction.Natives.GET_PED_DRAWABLE_VARIATION(ped, componentId);
+		return NativeFunction.Natives.GET_PED_DRAWABLE_VARIATION<int>(ped, componentId);
 	}
 	/// <summary>
 	/// 	List of component/props ID<br/>
@@ -24625,7 +24625,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS(Ped ped, int componentId)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS(ped, componentId);
+		return NativeFunction.Natives.GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS<int>(ped, componentId);
 	}
 	/// <summary>
 	/// 	List of component/props ID<br/>
@@ -24633,7 +24633,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_TEXTURE_VARIATION(Ped ped, int componentId)
 	{
-		return NativeFunction.Natives.GET_PED_TEXTURE_VARIATION(ped, componentId);
+		return NativeFunction.Natives.GET_PED_TEXTURE_VARIATION<int>(ped, componentId);
 	}
 	/// <summary>
 	/// 	List of component/props ID<br/>
@@ -24641,7 +24641,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUMBER_OF_PED_TEXTURE_VARIATIONS(Ped ped, int componentId, int drawableId)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_PED_TEXTURE_VARIATIONS(ped, componentId, drawableId);
+		return NativeFunction.Natives.GET_NUMBER_OF_PED_TEXTURE_VARIATIONS<int>(ped, componentId, drawableId);
 	}
 	/// <summary>
 	/// 	List of component/props ID<br/>
@@ -24649,7 +24649,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUMBER_OF_PED_PROP_DRAWABLE_VARIATIONS(Ped ped, int propId)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_PED_PROP_DRAWABLE_VARIATIONS(ped, propId);
+		return NativeFunction.Natives.GET_NUMBER_OF_PED_PROP_DRAWABLE_VARIATIONS<int>(ped, propId);
 	}
 	/// <summary>
 	/// 	Need to check behavior when drawableId = -1<br/>
@@ -24666,7 +24666,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS(Ped ped, int propId, int drawableId)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS(ped, propId, drawableId);
+		return NativeFunction.Natives.GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS<int>(ped, propId, drawableId);
 	}
 	/// <summary>
 	/// 	List of component/props ID<br/>
@@ -24674,19 +24674,19 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_PALETTE_VARIATION(Ped ped, int componentId)
 	{
-		return NativeFunction.Natives.GET_PED_PALETTE_VARIATION(ped, componentId);
+		return NativeFunction.Natives.GET_PED_PALETTE_VARIATION<int>(ped, componentId);
 	}
 	public static bool GET_MP_OUTFIT_DATA_FROM_METADATA()
 	{
-		return NativeFunction.Natives.GET_MP_OUTFIT_DATA_FROM_METADATA(0, 0);
+		return NativeFunction.Natives.GET_MP_OUTFIT_DATA_FROM_METADATA<bool>(0, 0);
 	}
 	public static int GET_FM_MALE_SHOP_PED_APPAREL_ITEM_INDEX(int p0)
 	{
-		return NativeFunction.Natives.GET_FM_MALE_SHOP_PED_APPAREL_ITEM_INDEX(p0);
+		return NativeFunction.Natives.GET_FM_MALE_SHOP_PED_APPAREL_ITEM_INDEX<int>(p0);
 	}
 	public static int GET_FM_FEMALE_SHOP_PED_APPAREL_ITEM_INDEX(int p0)
 	{
-		return NativeFunction.Natives.GET_FM_FEMALE_SHOP_PED_APPAREL_ITEM_INDEX(p0);
+		return NativeFunction.Natives.GET_FM_FEMALE_SHOP_PED_APPAREL_ITEM_INDEX<int>(p0);
 	}
 	/// <summary>
 	/// 	Checks if the component variation is valid, this works great for randomizing components using loops.<br/>
@@ -24698,7 +24698,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_COMPONENT_VARIATION_VALID(Ped ped, int componentId, int drawableId, int textureId)
 	{
-		return NativeFunction.Natives.IS_PED_COMPONENT_VARIATION_VALID(ped, componentId, drawableId, textureId);
+		return NativeFunction.Natives.IS_PED_COMPONENT_VARIATION_VALID<bool>(ped, componentId, drawableId, textureId);
 	}
 	/// <summary>
 	/// 	paletteId: 0 to 3.<br/>
@@ -24809,7 +24809,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_PED_HEAD_BLEND_DATA(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_HEAD_BLEND_DATA(ped, 0);
+		return NativeFunction.Natives.GET_PED_HEAD_BLEND_DATA<bool>(ped, 0);
 	}
 	/// <summary>
 	/// 	See SET_PED_HEAD_BLEND_DATA().
@@ -24863,7 +24863,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_HEAD_BLEND_EYE_COLOR(Ped ped)
 	{
-		return NativeFunction.Natives.GET_HEAD_BLEND_EYE_COLOR(ped);
+		return NativeFunction.Natives.GET_HEAD_BLEND_EYE_COLOR<int>(ped);
 	}
 	/// <summary>
 	/// 	OverlayID ranges from 0 to 12, index from 0 to _GET_NUM_OVERLAY_VALUES(overlayID)-1, and opacity from 0.0 to 1.0. <br/>
@@ -24894,11 +24894,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_HEAD_OVERLAY(Ped ped, int overlayID)
 	{
-		return NativeFunction.Natives.GET_PED_HEAD_OVERLAY(ped, overlayID);
+		return NativeFunction.Natives.GET_PED_HEAD_OVERLAY<int>(ped, overlayID);
 	}
 	public static int GET_PED_HEAD_OVERLAY_NUM(int overlayID)
 	{
-		return NativeFunction.Natives.GET_PED_HEAD_OVERLAY_NUM(overlayID);
+		return NativeFunction.Natives.GET_PED_HEAD_OVERLAY_NUM<int>(overlayID);
 	}
 	/// <summary>
 	/// 	<br/>
@@ -24917,11 +24917,11 @@ public static class Natives
 	}
 	public static int GET_NUM_PED_HAIR_TINTS()
 	{
-		return NativeFunction.Natives.GET_NUM_PED_HAIR_TINTS();
+		return NativeFunction.Natives.GET_NUM_PED_HAIR_TINTS<int>();
 	}
 	public static int GET_NUM_PED_MAKEUP_TINTS()
 	{
-		return NativeFunction.Natives.GET_NUM_PED_MAKEUP_TINTS();
+		return NativeFunction.Natives.GET_NUM_PED_MAKEUP_TINTS<int>();
 	}
 	/// <summary>
 	/// 	Input: Haircolor index, value between 0 and 63 (inclusive).<br/>
@@ -24947,43 +24947,43 @@ public static class Natives
 	}
 	public static bool IS_PED_HAIR_TINT_FOR_CREATOR(int colorId)
 	{
-		return NativeFunction.Natives.IS_PED_HAIR_TINT_FOR_CREATOR(colorId);
+		return NativeFunction.Natives.IS_PED_HAIR_TINT_FOR_CREATOR<bool>(colorId);
 	}
 	public static int GET_DEFAULT_SECONDARY_TINT_FOR_CREATOR(int colorId)
 	{
-		return NativeFunction.Natives.GET_DEFAULT_SECONDARY_TINT_FOR_CREATOR(colorId);
+		return NativeFunction.Natives.GET_DEFAULT_SECONDARY_TINT_FOR_CREATOR<int>(colorId);
 	}
 	public static bool IS_PED_LIPSTICK_TINT_FOR_CREATOR(int colorId)
 	{
-		return NativeFunction.Natives.IS_PED_LIPSTICK_TINT_FOR_CREATOR(colorId);
+		return NativeFunction.Natives.IS_PED_LIPSTICK_TINT_FOR_CREATOR<bool>(colorId);
 	}
 	public static bool IS_PED_BLUSH_TINT_FOR_CREATOR(int colorId)
 	{
-		return NativeFunction.Natives.IS_PED_BLUSH_TINT_FOR_CREATOR(colorId);
+		return NativeFunction.Natives.IS_PED_BLUSH_TINT_FOR_CREATOR<bool>(colorId);
 	}
 	public static bool IS_PED_HAIR_TINT_FOR_BARBER(int colorID)
 	{
-		return NativeFunction.Natives.IS_PED_HAIR_TINT_FOR_BARBER(colorID);
+		return NativeFunction.Natives.IS_PED_HAIR_TINT_FOR_BARBER<bool>(colorID);
 	}
 	public static int GET_DEFAULT_SECONDARY_TINT_FOR_BARBER(int colorID)
 	{
-		return NativeFunction.Natives.GET_DEFAULT_SECONDARY_TINT_FOR_BARBER(colorID);
+		return NativeFunction.Natives.GET_DEFAULT_SECONDARY_TINT_FOR_BARBER<int>(colorID);
 	}
 	public static bool IS_PED_LIPSTICK_TINT_FOR_BARBER(int colorID)
 	{
-		return NativeFunction.Natives.IS_PED_LIPSTICK_TINT_FOR_BARBER(colorID);
+		return NativeFunction.Natives.IS_PED_LIPSTICK_TINT_FOR_BARBER<bool>(colorID);
 	}
 	public static bool IS_PED_BLUSH_TINT_FOR_BARBER(int colorID)
 	{
-		return NativeFunction.Natives.IS_PED_BLUSH_TINT_FOR_BARBER(colorID);
+		return NativeFunction.Natives.IS_PED_BLUSH_TINT_FOR_BARBER<bool>(colorID);
 	}
 	public static bool IS_PED_BLUSH_FACEPAINT_TINT_FOR_BARBER(int colorId)
 	{
-		return NativeFunction.Natives.IS_PED_BLUSH_FACEPAINT_TINT_FOR_BARBER(colorId);
+		return NativeFunction.Natives.IS_PED_BLUSH_FACEPAINT_TINT_FOR_BARBER<bool>(colorId);
 	}
 	public static int GET_TINT_INDEX_FOR_LAST_GEN_HAIR_TEXTURE(ulong modelHash, int drawableId, int textureId)
 	{
-		return NativeFunction.Natives.GET_TINT_INDEX_FOR_LAST_GEN_HAIR_TEXTURE(modelHash, drawableId, textureId);
+		return NativeFunction.Natives.GET_TINT_INDEX_FOR_LAST_GEN_HAIR_TEXTURE<int>(modelHash, drawableId, textureId);
 	}
 	/// <summary>
 	/// 	Sets the various freemode face features, e.g. nose length, chin shape. Scale ranges from -1.0 to 1.0.<br/>
@@ -25036,7 +25036,7 @@ public static class Natives
 	}
 	public static bool HAS_PED_HEAD_BLEND_FINISHED(Ped ped)
 	{
-		return NativeFunction.Natives.HAS_PED_HEAD_BLEND_FINISHED(ped);
+		return NativeFunction.Natives.HAS_PED_HEAD_BLEND_FINISHED<bool>(ped);
 	}
 	public static void FINALIZE_HEAD_BLEND(Ped ped)
 	{
@@ -25061,14 +25061,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_HEAD_BLEND_FIRST_INDEX(int type)
 	{
-		return NativeFunction.Natives.GET_PED_HEAD_BLEND_FIRST_INDEX(type);
+		return NativeFunction.Natives.GET_PED_HEAD_BLEND_FIRST_INDEX<int>(type);
 	}
 	/// <summary>
 	/// 	Type equals 0 for male non-dlc, 1 for female non-dlc, 2 for male dlc, and 3 for female dlc.
 	/// </summary>
 	public static int GET_PED_HEAD_BLEND_NUM_HEADS(int type)
 	{
-		return NativeFunction.Natives.GET_PED_HEAD_BLEND_NUM_HEADS(type);
+		return NativeFunction.Natives.GET_PED_HEAD_BLEND_NUM_HEADS<int>(type);
 	}
 	/// <summary>
 	/// 	from extreme3.c4<br/>
@@ -25078,11 +25078,11 @@ public static class Natives
 	/// </summary>
 	public static int SET_PED_PRELOAD_VARIATION_DATA(Ped ped, int slot, int drawableId, int textureId)
 	{
-		return NativeFunction.Natives.SET_PED_PRELOAD_VARIATION_DATA(ped, slot, drawableId, textureId);
+		return NativeFunction.Natives.SET_PED_PRELOAD_VARIATION_DATA<int>(ped, slot, drawableId, textureId);
 	}
 	public static bool HAS_PED_PRELOAD_VARIATION_DATA_FINISHED(Ped ped)
 	{
-		return NativeFunction.Natives.HAS_PED_PRELOAD_VARIATION_DATA_FINISHED(ped);
+		return NativeFunction.Natives.HAS_PED_PRELOAD_VARIATION_DATA_FINISHED<bool>(ped);
 	}
 	public static void RELEASE_PED_PRELOAD_VARIATION_DATA(Ped ped)
 	{
@@ -25094,11 +25094,11 @@ public static class Natives
 	/// </summary>
 	public static int SET_PED_PRELOAD_PROP_DATA(Ped ped, int componentId, int drawableId, int TextureId)
 	{
-		return NativeFunction.Natives.SET_PED_PRELOAD_PROP_DATA(ped, componentId, drawableId, TextureId);
+		return NativeFunction.Natives.SET_PED_PRELOAD_PROP_DATA<int>(ped, componentId, drawableId, TextureId);
 	}
 	public static bool HAS_PED_PRELOAD_PROP_DATA_FINISHED(Ped ped)
 	{
-		return NativeFunction.Natives.HAS_PED_PRELOAD_PROP_DATA_FINISHED(ped);
+		return NativeFunction.Natives.HAS_PED_PRELOAD_PROP_DATA_FINISHED<bool>(ped);
 	}
 	public static void RELEASE_PED_PRELOAD_PROP_DATA(Ped ped)
 	{
@@ -25110,7 +25110,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_PROP_INDEX(Ped ped, int componentId)
 	{
-		return NativeFunction.Natives.GET_PED_PROP_INDEX(ped, componentId, 0);
+		return NativeFunction.Natives.GET_PED_PROP_INDEX<int>(ped, componentId, 0);
 	}
 	/// <summary>
 	/// 	ComponentId can be set to various things based on what category you&amp;apos;re wanting to set<br/>
@@ -25164,7 +25164,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_PROP_TEXTURE_INDEX(Ped ped, int componentId)
 	{
-		return NativeFunction.Natives.GET_PED_PROP_TEXTURE_INDEX(ped, componentId);
+		return NativeFunction.Natives.GET_PED_PROP_TEXTURE_INDEX<int>(ped, componentId);
 	}
 	public static void CLEAR_PED_PARACHUTE_PACK_VARIATION(Ped ped)
 	{
@@ -25186,7 +25186,7 @@ public static class Natives
 	}
 	public static bool IS_USING_PED_SCUBA_GEAR_VARIATION()
 	{
-		return NativeFunction.Natives.IS_USING_PED_SCUBA_GEAR_VARIATION(0);
+		return NativeFunction.Natives.IS_USING_PED_SCUBA_GEAR_VARIATION<bool>(0);
 	}
 	/// <summary>
 	/// 	works with TASK::TASK_SET_BLOCKING_OF_NON_TEMPORARY_EVENTS to make a ped completely oblivious to all events going on around him
@@ -25231,7 +25231,7 @@ public static class Natives
 	/// </summary>
 	public static Ped GET_RANDOM_PED_AT_COORD(float x, float y, float z, float xRadius, float yRadius, float zRadius, int pedType)
 	{
-		return NativeFunction.Natives.GET_RANDOM_PED_AT_COORD(x, y, z, xRadius, yRadius, zRadius, pedType);
+		return NativeFunction.Natives.GET_RANDOM_PED_AT_COORD<Ped>(x, y, z, xRadius, yRadius, zRadius, pedType);
 	}
 	/// <summary>
 	/// 	Gets the closest ped in a radius.<br/>
@@ -25271,7 +25271,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_CLOSEST_PED(float x, float y, float z, float radius, bool p4, bool p5, out Ped outPed, bool p7, bool p8, int pedType)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_PED(x, y, z, radius, p4, p5, out outPed, p7, p8, pedType);
+		return NativeFunction.Natives.GET_CLOSEST_PED<bool>(x, y, z, radius, p4, p5, out outPed, p7, p8, pedType);
 	}
 	/// <summary>
 	/// 	Sets a value indicating whether scenario peds should be returned by the next call to a command that returns peds. Eg. GET_CLOSEST_PED.
@@ -25282,7 +25282,7 @@ public static class Natives
 	}
 	public static bool GET_CAN_PED_BE_GRABBED_BY_SCRIPT(Ped ped, bool p1, bool p2, bool p3, bool p4, bool p5, bool p6, bool p7)
 	{
-		return NativeFunction.Natives.GET_CAN_PED_BE_GRABBED_BY_SCRIPT(ped, p1, p2, p3, p4, p5, p6, p7, 0);
+		return NativeFunction.Natives.GET_CAN_PED_BE_GRABBED_BY_SCRIPT<bool>(ped, p1, p2, p3, p4, p5, p6, p7, 0);
 	}
 	/// <summary>
 	/// 	Scripts use 0.2, 0.5 and 1.0. Value must be &amp;gt;= 0.0 &amp;&amp; &amp;lt;= 1.0
@@ -25312,7 +25312,7 @@ public static class Natives
 	/// </summary>
 	public static bool CAN_PED_RAGDOLL(Ped ped)
 	{
-		return NativeFunction.Natives.CAN_PED_RAGDOLL(ped);
+		return NativeFunction.Natives.CAN_PED_RAGDOLL<bool>(ped);
 	}
 	/// <summary>
 	/// 	p4/p5: Unused in TU27<br/>
@@ -25341,7 +25341,7 @@ public static class Natives
 	/// </summary>
 	public static bool SET_PED_TO_RAGDOLL(Ped ped, int time1, int time2, int ragdollType, bool p4, bool p5, bool p6)
 	{
-		return NativeFunction.Natives.SET_PED_TO_RAGDOLL(ped, time1, time2, ragdollType, p4, p5, p6);
+		return NativeFunction.Natives.SET_PED_TO_RAGDOLL<bool>(ped, time1, time2, ragdollType, p4, p5, p6);
 	}
 	/// <summary>
 	/// 	Return variable is never used in R*&amp;apos;s scripts.<br/>
@@ -25366,7 +25366,7 @@ public static class Natives
 	/// </summary>
 	public static bool SET_PED_TO_RAGDOLL_WITH_FALL(Ped ped, int time, int p2, int ragdollType, float x, float y, float z, float velocity, float p8, float p9, float p10, float p11, float p12, float p13)
 	{
-		return NativeFunction.Natives.SET_PED_TO_RAGDOLL_WITH_FALL(ped, time, p2, ragdollType, x, y, z, velocity, p8, p9, p10, p11, p12, p13);
+		return NativeFunction.Natives.SET_PED_TO_RAGDOLL_WITH_FALL<bool>(ped, time, p2, ragdollType, x, y, z, velocity, p8, p9, p10, p11, p12, p13);
 	}
 	/// <summary>
 	/// 	Causes Ped to ragdoll on collision with any object (e.g Running into trashcan). If applied to player you will sometimes trip on the sidewalk.
@@ -25380,11 +25380,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_RAGDOLL(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RAGDOLL(ped);
+		return NativeFunction.Natives.IS_PED_RAGDOLL<bool>(ped);
 	}
 	public static bool IS_PED_RUNNING_RAGDOLL_TASK(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RUNNING_RAGDOLL_TASK(ped);
+		return NativeFunction.Natives.IS_PED_RUNNING_RAGDOLL_TASK<bool>(ped);
 	}
 	public static void SET_PED_RAGDOLL_FORCE_FALL(Ped ped)
 	{
@@ -25400,15 +25400,15 @@ public static class Natives
 	}
 	public static bool IS_PED_RUNNING_MELEE_TASK(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RUNNING_MELEE_TASK(ped);
+		return NativeFunction.Natives.IS_PED_RUNNING_MELEE_TASK<bool>(ped);
 	}
 	public static bool IS_PED_RUNNING_MOBILE_PHONE_TASK(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RUNNING_MOBILE_PHONE_TASK(ped);
+		return NativeFunction.Natives.IS_PED_RUNNING_MOBILE_PHONE_TASK<bool>(ped);
 	}
 	public static bool IS_MOBILE_PHONE_TO_PED_EAR(Ped ped)
 	{
-		return NativeFunction.Natives.IS_MOBILE_PHONE_TO_PED_EAR(ped);
+		return NativeFunction.Natives.IS_MOBILE_PHONE_TO_PED_EAR<bool>(ped);
 	}
 	/// <summary>
 	/// 	Works for both player and peds,<br/>
@@ -25481,11 +25481,11 @@ public static class Natives
 	}
 	public static Vector3 GET_PED_DEFENSIVE_AREA_POSITION(Ped ped, bool p1)
 	{
-		return NativeFunction.Natives.GET_PED_DEFENSIVE_AREA_POSITION(ped, p1);
+		return NativeFunction.Natives.GET_PED_DEFENSIVE_AREA_POSITION<Vector3>(ped, p1);
 	}
 	public static bool IS_PED_DEFENSIVE_AREA_ACTIVE(Ped ped, bool p1)
 	{
-		return NativeFunction.Natives.IS_PED_DEFENSIVE_AREA_ACTIVE(ped, p1);
+		return NativeFunction.Natives.IS_PED_DEFENSIVE_AREA_ACTIVE<bool>(ped, p1);
 	}
 	public static void SET_PED_PREFERRED_COVER_SET(Ped ped)
 	{
@@ -25537,7 +25537,7 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_PED_EXTRACTED_DISPLACEMENT(Ped ped, bool worldSpace)
 	{
-		return NativeFunction.Natives.GET_PED_EXTRACTED_DISPLACEMENT(ped, worldSpace);
+		return NativeFunction.Natives.GET_PED_EXTRACTED_DISPLACEMENT<Vector3>(ped, worldSpace);
 	}
 	public static void SET_PED_DIES_WHEN_INJURED(Ped ped, bool toggle)
 	{
@@ -25681,7 +25681,7 @@ public static class Natives
 	}
 	public static int GET_PED_DECORATIONS_STATE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_DECORATIONS_STATE(ped);
+		return NativeFunction.Natives.GET_PED_DECORATIONS_STATE<int>(ped);
 	}
 	public static void MARK_PED_DECORATIONS_AS_CLONED_FROM_LOCAL_PLAYER(Ped ped, bool p1)
 	{
@@ -25783,7 +25783,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_DECORATION_ZONE_FROM_HASHES(ulong collection, ulong overlay)
 	{
-		return NativeFunction.Natives.GET_PED_DECORATION_ZONE_FROM_HASHES(collection, overlay);
+		return NativeFunction.Natives.GET_PED_DECORATION_ZONE_FROM_HASHES<int>(collection, overlay);
 	}
 	public static void CLEAR_PED_DECORATIONS(Ped ped)
 	{
@@ -25798,7 +25798,7 @@ public static class Natives
 	/// </summary>
 	public static bool WAS_PED_SKELETON_UPDATED(Ped ped)
 	{
-		return NativeFunction.Natives.WAS_PED_SKELETON_UPDATED(ped);
+		return NativeFunction.Natives.WAS_PED_SKELETON_UPDATED<bool>(ped);
 	}
 	/// <summary>
 	/// 	Gets the position of the specified bone of the specified ped.<br/>
@@ -25811,7 +25811,7 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_PED_BONE_COORDS(Ped ped, int boneId, float offsetX, float offsetY, float offsetZ)
 	{
-		return NativeFunction.Natives.GET_PED_BONE_COORDS(ped, boneId, offsetX, offsetY, offsetZ);
+		return NativeFunction.Natives.GET_PED_BONE_COORDS<Vector3>(ped, boneId, offsetX, offsetY, offsetZ);
 	}
 	/// <summary>
 	/// 	Creates a new NaturalMotion message.<br/>
@@ -25852,7 +25852,7 @@ public static class Natives
 	}
 	public static int ADD_SCENARIO_BLOCKING_AREA(float x1, float y1, float z1, float x2, float y2, float z2, bool p6, bool p7, bool p8, bool p9)
 	{
-		return NativeFunction.Natives.ADD_SCENARIO_BLOCKING_AREA(x1, y1, z1, x2, y2, z2, p6, p7, p8, p9, 0);
+		return NativeFunction.Natives.ADD_SCENARIO_BLOCKING_AREA<int>(x1, y1, z1, x2, y2, z2, p6, p7, p8, p9, 0);
 	}
 	public static void REMOVE_SCENARIO_BLOCKING_AREAS()
 	{
@@ -25868,22 +25868,22 @@ public static class Natives
 	}
 	public static bool DOES_SCENARIO_BLOCKING_AREA_EXISTS(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.DOES_SCENARIO_BLOCKING_AREA_EXISTS(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.DOES_SCENARIO_BLOCKING_AREA_EXISTS<bool>(x1, y1, z1, x2, y2, z2);
 	}
 	/// <summary>
 	/// 	Full list of ped scenarios by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenariosCompact.json
 	/// </summary>
 	public static bool IS_PED_USING_SCENARIO(Ped ped, string scenario)
 	{
-		return NativeFunction.Natives.IS_PED_USING_SCENARIO(ped, scenario);
+		return NativeFunction.Natives.IS_PED_USING_SCENARIO<bool>(ped, scenario);
 	}
 	public static bool IS_PED_USING_ANY_SCENARIO(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_USING_ANY_SCENARIO(ped);
+		return NativeFunction.Natives.IS_PED_USING_ANY_SCENARIO<bool>(ped);
 	}
 	public static bool SET_PED_PANIC_EXIT_SCENARIO()
 	{
-		return NativeFunction.Natives.SET_PED_PANIC_EXIT_SCENARIO(0, 0, 0, 0);
+		return NativeFunction.Natives.SET_PED_PANIC_EXIT_SCENARIO<bool>(0, 0, 0, 0);
 	}
 	public static void TOGGLE_SCENARIO_PED_COWER_IN_PLACE(Ped ped, bool toggle)
 	{
@@ -25891,11 +25891,11 @@ public static class Natives
 	}
 	public static bool TRIGGER_PED_SCENARIO_PANICEXITTOFLEE()
 	{
-		return NativeFunction.Natives.TRIGGER_PED_SCENARIO_PANICEXITTOFLEE(0, 0, 0, 0);
+		return NativeFunction.Natives.TRIGGER_PED_SCENARIO_PANICEXITTOFLEE<bool>(0, 0, 0, 0);
 	}
 	public static bool SET_PED_SHOULD_PLAY_DIRECTED_NORMAL_SCENARIO_EXIT()
 	{
-		return NativeFunction.Natives.SET_PED_SHOULD_PLAY_DIRECTED_NORMAL_SCENARIO_EXIT(0, 0, 0, 0);
+		return NativeFunction.Natives.SET_PED_SHOULD_PLAY_DIRECTED_NORMAL_SCENARIO_EXIT<bool>(0, 0, 0, 0);
 	}
 	public static void SET_PED_SHOULD_PLAY_NORMAL_SCENARIO_EXIT(Ped ped)
 	{
@@ -25907,7 +25907,7 @@ public static class Natives
 	}
 	public static bool SET_PED_SHOULD_PLAY_FLEE_SCENARIO_EXIT(Ped ped)
 	{
-		return NativeFunction.Natives.SET_PED_SHOULD_PLAY_FLEE_SCENARIO_EXIT(ped, 0, 0, 0);
+		return NativeFunction.Natives.SET_PED_SHOULD_PLAY_FLEE_SCENARIO_EXIT<bool>(ped, 0, 0, 0);
 	}
 	public static void SET_PED_SHOULD_IGNORE_SCENARIO_EXIT_COLLISION_CHECKS(Ped ped, bool p1)
 	{
@@ -25923,7 +25923,7 @@ public static class Natives
 	}
 	public static bool IS_PED_GESTURING()
 	{
-		return NativeFunction.Natives.IS_PED_GESTURING(0);
+		return NativeFunction.Natives.IS_PED_GESTURING<bool>(0);
 	}
 	public static void RESET_FACIAL_IDLE_ANIM(Ped ped)
 	{
@@ -26021,11 +26021,11 @@ public static class Natives
 	}
 	public static bool IS_PED_HEADTRACKING_PED(Ped ped1, Ped ped2)
 	{
-		return NativeFunction.Natives.IS_PED_HEADTRACKING_PED(ped1, ped2);
+		return NativeFunction.Natives.IS_PED_HEADTRACKING_PED<bool>(ped1, ped2);
 	}
 	public static bool IS_PED_HEADTRACKING_ENTITY(Ped ped, Entity entity)
 	{
-		return NativeFunction.Natives.IS_PED_HEADTRACKING_ENTITY(ped, entity);
+		return NativeFunction.Natives.IS_PED_HEADTRACKING_ENTITY<bool>(ped, entity);
 	}
 	/// <summary>
 	/// 	This is only called once in the scripts.<br/>
@@ -26531,11 +26531,11 @@ public static class Natives
 	/// </summary>
 	public static bool GET_PED_CONFIG_FLAG(Ped ped, int flagId, bool p2)
 	{
-		return NativeFunction.Natives.GET_PED_CONFIG_FLAG(ped, flagId, p2);
+		return NativeFunction.Natives.GET_PED_CONFIG_FLAG<bool>(ped, flagId, p2);
 	}
 	public static bool GET_PED_RESET_FLAG(Ped ped, int flagId)
 	{
-		return NativeFunction.Natives.GET_PED_RESET_FLAG(ped, flagId);
+		return NativeFunction.Natives.GET_PED_RESET_FLAG<bool>(ped, flagId);
 	}
 	public static void SET_PED_GROUP_MEMBER_PASSENGER_INDEX(Ped ped, int index)
 	{
@@ -26554,7 +26554,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_EVASIVE_DIVING(Ped ped, out Entity evadingEntity)
 	{
-		return NativeFunction.Natives.IS_PED_EVASIVE_DIVING(ped, out evadingEntity);
+		return NativeFunction.Natives.IS_PED_EVASIVE_DIVING<bool>(ped, out evadingEntity);
 	}
 	public static void SET_PED_SHOOTS_AT_COORD(Ped ped, float x, float y, float z, bool toggle)
 	{
@@ -26610,7 +26610,7 @@ public static class Natives
 	}
 	public static bool IS_PED_TAKING_OFF_HELMET(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_TAKING_OFF_HELMET(ped);
+		return NativeFunction.Natives.IS_PED_TAKING_OFF_HELMET<bool>(ped);
 	}
 	public static void SET_PED_HELMET(Ped ped, bool canWearHelmet)
 	{
@@ -26634,7 +26634,7 @@ public static class Natives
 	}
 	public static bool IS_PED_HELMET_VISOR_UP(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_HELMET_VISOR_UP(ped);
+		return NativeFunction.Natives.IS_PED_HELMET_VISOR_UP<bool>(ped);
 	}
 	public static void SET_PED_HELMET_TEXTURE_INDEX(Ped ped, int textureIndex)
 	{
@@ -26645,7 +26645,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_WEARING_HELMET(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_WEARING_HELMET(ped);
+		return NativeFunction.Natives.IS_PED_WEARING_HELMET<bool>(ped);
 	}
 	public static void CLEAR_PED_STORED_HAT_PROP(Ped ped)
 	{
@@ -26653,15 +26653,15 @@ public static class Natives
 	}
 	public static int GET_PED_HELMET_STORED_HAT_PROP_INDEX(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_HELMET_STORED_HAT_PROP_INDEX(ped);
+		return NativeFunction.Natives.GET_PED_HELMET_STORED_HAT_PROP_INDEX<int>(ped);
 	}
 	public static int GET_PED_HELMET_STORED_HAT_TEX_INDEX(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_HELMET_STORED_HAT_TEX_INDEX(ped);
+		return NativeFunction.Natives.GET_PED_HELMET_STORED_HAT_TEX_INDEX<int>(ped);
 	}
 	public static bool IS_CURRENT_HEAD_PROP_A_HELMET()
 	{
-		return NativeFunction.Natives.IS_CURRENT_HEAD_PROP_A_HELMET(0);
+		return NativeFunction.Natives.IS_CURRENT_HEAD_PROP_A_HELMET<bool>(0);
 	}
 	public static void SET_PED_TO_LOAD_COVER(Ped ped, bool toggle)
 	{
@@ -26739,7 +26739,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_COMBAT_MOVEMENT(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_COMBAT_MOVEMENT(ped);
+		return NativeFunction.Natives.GET_PED_COMBAT_MOVEMENT<int>(ped);
 	}
 	/// <summary>
 	/// 	enum eCombatAbility // 0xE793438C<br/>
@@ -26773,7 +26773,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_COMBAT_RANGE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_COMBAT_RANGE(ped);
+		return NativeFunction.Natives.GET_PED_COMBAT_RANGE<int>(ped);
 	}
 	/// <summary>
 	/// 	enum eCombatAttributes // 0x0E8E7201<br/>
@@ -26890,35 +26890,35 @@ public static class Natives
 	}
 	public static bool IS_PED_PERFORMING_MELEE_ACTION(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_PERFORMING_MELEE_ACTION(ped);
+		return NativeFunction.Natives.IS_PED_PERFORMING_MELEE_ACTION<bool>(ped);
 	}
 	public static bool IS_PED_PERFORMING_STEALTH_KILL(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_PERFORMING_STEALTH_KILL(ped);
+		return NativeFunction.Natives.IS_PED_PERFORMING_STEALTH_KILL<bool>(ped);
 	}
 	public static bool IS_PED_PERFORMING_A_COUNTER_ATTACK(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_PERFORMING_A_COUNTER_ATTACK(ped);
+		return NativeFunction.Natives.IS_PED_PERFORMING_A_COUNTER_ATTACK<bool>(ped);
 	}
 	public static bool IS_PED_BEING_STEALTH_KILLED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_BEING_STEALTH_KILLED(ped);
+		return NativeFunction.Natives.IS_PED_BEING_STEALTH_KILLED<bool>(ped);
 	}
 	public static Ped GET_MELEE_TARGET_FOR_PED(Ped ped)
 	{
-		return NativeFunction.Natives.GET_MELEE_TARGET_FOR_PED(ped);
+		return NativeFunction.Natives.GET_MELEE_TARGET_FOR_PED<Ped>(ped);
 	}
 	public static bool WAS_PED_KILLED_BY_STEALTH(Ped ped)
 	{
-		return NativeFunction.Natives.WAS_PED_KILLED_BY_STEALTH(ped);
+		return NativeFunction.Natives.WAS_PED_KILLED_BY_STEALTH<bool>(ped);
 	}
 	public static bool WAS_PED_KILLED_BY_TAKEDOWN(Ped ped)
 	{
-		return NativeFunction.Natives.WAS_PED_KILLED_BY_TAKEDOWN(ped);
+		return NativeFunction.Natives.WAS_PED_KILLED_BY_TAKEDOWN<bool>(ped);
 	}
 	public static bool WAS_PED_KNOCKED_OUT(Ped ped)
 	{
-		return NativeFunction.Natives.WAS_PED_KNOCKED_OUT(ped);
+		return NativeFunction.Natives.WAS_PED_KNOCKED_OUT<bool>(ped);
 	}
 	/// <summary>
 	/// 	bit 1 (0x2) = use vehicle<br/>
@@ -26969,7 +26969,7 @@ public static class Natives
 	}
 	public static bool IS_ANY_PED_NEAR_POINT(float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.IS_ANY_PED_NEAR_POINT(x, y, z, radius);
+		return NativeFunction.Natives.IS_ANY_PED_NEAR_POINT<bool>(x, y, z, radius);
 	}
 	public static void FORCE_PED_AI_AND_ANIMATION_UPDATE(Ped ped, bool p1, bool p2)
 	{
@@ -26977,7 +26977,7 @@ public static class Natives
 	}
 	public static bool IS_PED_HEADING_TOWARDS_POSITION(Ped ped, float x, float y, float z, float p4)
 	{
-		return NativeFunction.Natives.IS_PED_HEADING_TOWARDS_POSITION(ped, x, y, z, p4);
+		return NativeFunction.Natives.IS_PED_HEADING_TOWARDS_POSITION<bool>(ped, x, y, z, p4);
 	}
 	public static void REQUEST_PED_VISIBILITY_TRACKING(Ped ped)
 	{
@@ -27003,31 +27003,31 @@ public static class Natives
 	/// </summary>
 	public static bool IS_TRACKED_PED_VISIBLE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_TRACKED_PED_VISIBLE(ped);
+		return NativeFunction.Natives.IS_TRACKED_PED_VISIBLE<bool>(ped);
 	}
 	public static int GET_TRACKED_PED_PIXELCOUNT(Ped ped)
 	{
-		return NativeFunction.Natives.GET_TRACKED_PED_PIXELCOUNT(ped);
+		return NativeFunction.Natives.GET_TRACKED_PED_PIXELCOUNT<int>(ped);
 	}
 	public static bool IS_PED_TRACKED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_TRACKED(ped);
+		return NativeFunction.Natives.IS_PED_TRACKED<bool>(ped);
 	}
 	public static bool HAS_PED_RECEIVED_EVENT(Ped ped, int eventId)
 	{
-		return NativeFunction.Natives.HAS_PED_RECEIVED_EVENT(ped, eventId);
+		return NativeFunction.Natives.HAS_PED_RECEIVED_EVENT<bool>(ped, eventId);
 	}
 	public static bool CAN_PED_SEE_HATED_PED(Ped ped1, Ped ped2)
 	{
-		return NativeFunction.Natives.CAN_PED_SEE_HATED_PED(ped1, ped2);
+		return NativeFunction.Natives.CAN_PED_SEE_HATED_PED<bool>(ped1, ped2);
 	}
 	public static bool CAN_PED_SHUFFLE_TO_OR_FROM_TURRET_SEAT(Ped ped, out int p1)
 	{
-		return NativeFunction.Natives.CAN_PED_SHUFFLE_TO_OR_FROM_TURRET_SEAT(ped, out p1);
+		return NativeFunction.Natives.CAN_PED_SHUFFLE_TO_OR_FROM_TURRET_SEAT<bool>(ped, out p1);
 	}
 	public static bool CAN_PED_SHUFFLE_TO_OR_FROM_EXTRA_SEAT(Ped ped, out int p1)
 	{
-		return NativeFunction.Natives.CAN_PED_SHUFFLE_TO_OR_FROM_EXTRA_SEAT(ped, out p1);
+		return NativeFunction.Natives.CAN_PED_SHUFFLE_TO_OR_FROM_EXTRA_SEAT<bool>(ped, out p1);
 	}
 	/// <summary>
 	/// 	no bone= -1<br/>
@@ -27134,11 +27134,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_BONE_INDEX(Ped ped, int boneId)
 	{
-		return NativeFunction.Natives.GET_PED_BONE_INDEX(ped, boneId);
+		return NativeFunction.Natives.GET_PED_BONE_INDEX<int>(ped, boneId);
 	}
 	public static int GET_PED_RAGDOLL_BONE_INDEX(Ped ped, int bone)
 	{
-		return NativeFunction.Natives.GET_PED_RAGDOLL_BONE_INDEX(ped, bone);
+		return NativeFunction.Natives.GET_PED_RAGDOLL_BONE_INDEX<int>(ped, bone);
 	}
 	/// <summary>
 	/// 	Values look to be between 0.0 and 1.0<br/>
@@ -27152,7 +27152,7 @@ public static class Natives
 	}
 	public static float GET_PED_ENVEFF_SCALE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_ENVEFF_SCALE(ped);
+		return NativeFunction.Natives.GET_PED_ENVEFF_SCALE<float>(ped);
 	}
 	public static void SET_ENABLE_PED_ENVEFF_SCALE(Ped ped, bool toggle)
 	{
@@ -27200,11 +27200,11 @@ public static class Natives
 	/// </summary>
 	public static float GET_PED_EMISSIVE_SCALE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_EMISSIVE_SCALE(ped);
+		return NativeFunction.Natives.GET_PED_EMISSIVE_SCALE<float>(ped);
 	}
 	public static bool IS_PED_SHADER_READY(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_SHADER_READY(ped);
+		return NativeFunction.Natives.IS_PED_SHADER_READY<bool>(ped);
 	}
 	public static void SET_PED_ENABLE_CREW_EMBLEM(Ped ped, bool toggle)
 	{
@@ -27226,7 +27226,7 @@ public static class Natives
 	}
 	public static bool IS_PED_SHELTERED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_SHELTERED(ped);
+		return NativeFunction.Natives.IS_PED_SHELTERED<bool>(ped);
 	}
 	/// <summary>
 	/// 	p6 always 2 (but it doesnt seem to matter...)<br/>
@@ -27236,18 +27236,18 @@ public static class Natives
 	/// </summary>
 	public static int CREATE_SYNCHRONIZED_SCENE(float x, float y, float z, float roll, float pitch, float yaw, int p6)
 	{
-		return NativeFunction.Natives.CREATE_SYNCHRONIZED_SCENE(x, y, z, roll, pitch, yaw, p6);
+		return NativeFunction.Natives.CREATE_SYNCHRONIZED_SCENE<int>(x, y, z, roll, pitch, yaw, p6);
 	}
 	public static int CREATE_SYNCHRONIZED_SCENE_AT_MAP_OBJECT(float x, float y, float z, float radius, ulong _object)
 	{
-		return NativeFunction.Natives.CREATE_SYNCHRONIZED_SCENE_AT_MAP_OBJECT(x, y, z, radius, _object);
+		return NativeFunction.Natives.CREATE_SYNCHRONIZED_SCENE_AT_MAP_OBJECT<int>(x, y, z, radius, _object);
 	}
 	/// <summary>
 	/// 	Returns true if a synchronized scene is running
 	/// </summary>
 	public static bool IS_SYNCHRONIZED_SCENE_RUNNING(int sceneId)
 	{
-		return NativeFunction.Natives.IS_SYNCHRONIZED_SCENE_RUNNING(sceneId);
+		return NativeFunction.Natives.IS_SYNCHRONIZED_SCENE_RUNNING<bool>(sceneId);
 	}
 	public static void SET_SYNCHRONIZED_SCENE_ORIGIN(int sceneID, float x, float y, float z, float roll, float pitch, float yaw, bool p7)
 	{
@@ -27259,7 +27259,7 @@ public static class Natives
 	}
 	public static float GET_SYNCHRONIZED_SCENE_PHASE(int sceneID)
 	{
-		return NativeFunction.Natives.GET_SYNCHRONIZED_SCENE_PHASE(sceneID);
+		return NativeFunction.Natives.GET_SYNCHRONIZED_SCENE_PHASE<float>(sceneID);
 	}
 	public static void SET_SYNCHRONIZED_SCENE_RATE(int sceneID, float rate)
 	{
@@ -27267,7 +27267,7 @@ public static class Natives
 	}
 	public static float GET_SYNCHRONIZED_SCENE_RATE(int sceneID)
 	{
-		return NativeFunction.Natives.GET_SYNCHRONIZED_SCENE_RATE(sceneID);
+		return NativeFunction.Natives.GET_SYNCHRONIZED_SCENE_RATE<float>(sceneID);
 	}
 	public static void SET_SYNCHRONIZED_SCENE_LOOPED(int sceneID, bool toggle)
 	{
@@ -27275,7 +27275,7 @@ public static class Natives
 	}
 	public static bool IS_SYNCHRONIZED_SCENE_LOOPED(int sceneID)
 	{
-		return NativeFunction.Natives.IS_SYNCHRONIZED_SCENE_LOOPED(sceneID);
+		return NativeFunction.Natives.IS_SYNCHRONIZED_SCENE_LOOPED<bool>(sceneID);
 	}
 	public static void SET_SYNCHRONIZED_SCENE_HOLD_LAST_FRAME(int sceneID, bool toggle)
 	{
@@ -27283,7 +27283,7 @@ public static class Natives
 	}
 	public static bool IS_SYNCHRONIZED_SCENE_HOLD_LAST_FRAME(int sceneID)
 	{
-		return NativeFunction.Natives.IS_SYNCHRONIZED_SCENE_HOLD_LAST_FRAME(sceneID);
+		return NativeFunction.Natives.IS_SYNCHRONIZED_SCENE_HOLD_LAST_FRAME<bool>(sceneID);
 	}
 	public static void ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(int sceneID, Entity entity, int boneIndex)
 	{
@@ -27330,11 +27330,11 @@ public static class Natives
 	/// </summary>
 	public static bool FORCE_PED_MOTION_STATE(Ped ped, ulong motionStateHash, bool p2, int p3, bool p4)
 	{
-		return NativeFunction.Natives.FORCE_PED_MOTION_STATE(ped, motionStateHash, p2, p3, p4);
+		return NativeFunction.Natives.FORCE_PED_MOTION_STATE<bool>(ped, motionStateHash, p2, p3, p4);
 	}
 	public static bool GET_PED_CURRENT_MOVE_BLEND_RATIO(Ped ped, out float speedX, out float speedY)
 	{
-		return NativeFunction.Natives.GET_PED_CURRENT_MOVE_BLEND_RATIO(ped, out speedX, out speedY);
+		return NativeFunction.Natives.GET_PED_CURRENT_MOVE_BLEND_RATIO<bool>(ped, out speedX, out speedY);
 	}
 	public static void SET_PED_MAX_MOVE_BLEND_RATIO(Ped ped, float value)
 	{
@@ -27378,7 +27378,7 @@ public static class Natives
 	/// </summary>
 	public static bool PED_HAS_SEXINESS_FLAG_SET(Ped ped, int sexinessFlag)
 	{
-		return NativeFunction.Natives.PED_HAS_SEXINESS_FLAG_SET(ped, sexinessFlag);
+		return NativeFunction.Natives.PED_HAS_SEXINESS_FLAG_SET<bool>(ped, sexinessFlag);
 	}
 	/// <summary>
 	/// 	Returns size of array, passed into the second variable.<br/>
@@ -27412,7 +27412,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_NEARBY_VEHICLES(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_NEARBY_VEHICLES(ped, 0);
+		return NativeFunction.Natives.GET_PED_NEARBY_VEHICLES<int>(ped, 0);
 	}
 	/// <summary>
 	/// 	sizeAndPeds - is a pointer to an array. The array is filled with peds found nearby the ped supplied to the first argument.<br/>
@@ -27432,15 +27432,15 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_NEARBY_PEDS(Ped ped, int ignore)
 	{
-		return NativeFunction.Natives.GET_PED_NEARBY_PEDS(ped, 0, ignore);
+		return NativeFunction.Natives.GET_PED_NEARBY_PEDS<int>(ped, 0, ignore);
 	}
 	public static bool HAVE_ALL_STREAMING_REQUESTS_COMPLETED(Ped ped)
 	{
-		return NativeFunction.Natives.HAVE_ALL_STREAMING_REQUESTS_COMPLETED(ped);
+		return NativeFunction.Natives.HAVE_ALL_STREAMING_REQUESTS_COMPLETED<bool>(ped);
 	}
 	public static bool IS_PED_USING_ACTION_MODE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_USING_ACTION_MODE(ped);
+		return NativeFunction.Natives.IS_PED_USING_ACTION_MODE<bool>(ped);
 	}
 	/// <summary>
 	/// 	p2 is usually -1 in the scripts. action is either 0 or &amp;quot;DEFAULT_ACTION&amp;quot;.
@@ -27471,18 +27471,18 @@ public static class Natives
 	/// </summary>
 	public static int REGISTER_PEDHEADSHOT(Ped ped)
 	{
-		return NativeFunction.Natives.REGISTER_PEDHEADSHOT(ped);
+		return NativeFunction.Natives.REGISTER_PEDHEADSHOT<int>(ped);
 	}
 	public static int REGISTER_PEDHEADSHOT_HIRES(Ped ped)
 	{
-		return NativeFunction.Natives.REGISTER_PEDHEADSHOT_HIRES(ped);
+		return NativeFunction.Natives.REGISTER_PEDHEADSHOT_HIRES<int>(ped);
 	}
 	/// <summary>
 	/// 	Similar to REGISTER_PEDHEADSHOT but creates a transparent background instead of black. Example: https://i.imgur.com/iHz8ztn.png
 	/// </summary>
 	public static int REGISTER_PEDHEADSHOT_TRANSPARENT(Ped ped)
 	{
-		return NativeFunction.Natives.REGISTER_PEDHEADSHOT_TRANSPARENT(ped);
+		return NativeFunction.Natives.REGISTER_PEDHEADSHOT_TRANSPARENT<int>(ped);
 	}
 	/// <summary>
 	/// 	gtaforums.com/topic/885580-ped-headshotmugshot-txd/
@@ -27496,25 +27496,25 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PEDHEADSHOT_VALID(int id)
 	{
-		return NativeFunction.Natives.IS_PEDHEADSHOT_VALID(id);
+		return NativeFunction.Natives.IS_PEDHEADSHOT_VALID<bool>(id);
 	}
 	/// <summary>
 	/// 	gtaforums.com/topic/885580-ped-headshotmugshot-txd/
 	/// </summary>
 	public static bool IS_PEDHEADSHOT_READY(int id)
 	{
-		return NativeFunction.Natives.IS_PEDHEADSHOT_READY(id);
+		return NativeFunction.Natives.IS_PEDHEADSHOT_READY<bool>(id);
 	}
 	/// <summary>
 	/// 	gtaforums.com/topic/885580-ped-headshotmugshot-txd/
 	/// </summary>
 	public static string GET_PEDHEADSHOT_TXD_STRING(int id)
 	{
-		return NativeFunction.Natives.GET_PEDHEADSHOT_TXD_STRING(id);
+		return NativeFunction.Natives.GET_PEDHEADSHOT_TXD_STRING<string>(id);
 	}
 	public static bool REQUEST_PEDHEADSHOT_IMG_UPLOAD(int id)
 	{
-		return NativeFunction.Natives.REQUEST_PEDHEADSHOT_IMG_UPLOAD(id);
+		return NativeFunction.Natives.REQUEST_PEDHEADSHOT_IMG_UPLOAD<bool>(id);
 	}
 	public static void RELEASE_PEDHEADSHOT_IMG_UPLOAD(int id)
 	{
@@ -27522,15 +27522,15 @@ public static class Natives
 	}
 	public static bool IS_PEDHEADSHOT_IMG_UPLOAD_AVAILABLE()
 	{
-		return NativeFunction.Natives.IS_PEDHEADSHOT_IMG_UPLOAD_AVAILABLE();
+		return NativeFunction.Natives.IS_PEDHEADSHOT_IMG_UPLOAD_AVAILABLE<bool>();
 	}
 	public static bool HAS_PEDHEADSHOT_IMG_UPLOAD_FAILED()
 	{
-		return NativeFunction.Natives.HAS_PEDHEADSHOT_IMG_UPLOAD_FAILED();
+		return NativeFunction.Natives.HAS_PEDHEADSHOT_IMG_UPLOAD_FAILED<bool>();
 	}
 	public static bool HAS_PEDHEADSHOT_IMG_UPLOAD_SUCCEEDED()
 	{
-		return NativeFunction.Natives.HAS_PEDHEADSHOT_IMG_UPLOAD_SUCCEEDED();
+		return NativeFunction.Natives.HAS_PEDHEADSHOT_IMG_UPLOAD_SUCCEEDED<bool>();
 	}
 	public static void SET_PED_HEATSCALE_OVERRIDE(Ped ped, float heatScale)
 	{
@@ -27554,19 +27554,19 @@ public static class Natives
 	}
 	public static bool SPAWNPOINTS_IS_SEARCH_ACTIVE()
 	{
-		return NativeFunction.Natives.SPAWNPOINTS_IS_SEARCH_ACTIVE();
+		return NativeFunction.Natives.SPAWNPOINTS_IS_SEARCH_ACTIVE<bool>();
 	}
 	public static bool SPAWNPOINTS_IS_SEARCH_COMPLETE()
 	{
-		return NativeFunction.Natives.SPAWNPOINTS_IS_SEARCH_COMPLETE();
+		return NativeFunction.Natives.SPAWNPOINTS_IS_SEARCH_COMPLETE<bool>();
 	}
 	public static bool SPAWNPOINTS_IS_SEARCH_FAILED()
 	{
-		return NativeFunction.Natives.SPAWNPOINTS_IS_SEARCH_FAILED();
+		return NativeFunction.Natives.SPAWNPOINTS_IS_SEARCH_FAILED<bool>();
 	}
 	public static int SPAWNPOINTS_GET_NUM_SEARCH_RESULTS()
 	{
-		return NativeFunction.Natives.SPAWNPOINTS_GET_NUM_SEARCH_RESULTS();
+		return NativeFunction.Natives.SPAWNPOINTS_GET_NUM_SEARCH_RESULTS<int>();
 	}
 	public static void SPAWNPOINTS_GET_SEARCH_RESULT(int randomInt, out float x, out float y, out float z)
 	{
@@ -27590,7 +27590,7 @@ public static class Natives
 	}
 	public static bool HAS_ACTION_MODE_ASSET_LOADED(string asset)
 	{
-		return NativeFunction.Natives.HAS_ACTION_MODE_ASSET_LOADED(asset);
+		return NativeFunction.Natives.HAS_ACTION_MODE_ASSET_LOADED<bool>(asset);
 	}
 	public static void REMOVE_ACTION_MODE_ASSET(string asset)
 	{
@@ -27602,7 +27602,7 @@ public static class Natives
 	}
 	public static bool HAS_STEALTH_MODE_ASSET_LOADED(string asset)
 	{
-		return NativeFunction.Natives.HAS_STEALTH_MODE_ASSET_LOADED(asset);
+		return NativeFunction.Natives.HAS_STEALTH_MODE_ASSET_LOADED<bool>(asset);
 	}
 	public static void REMOVE_STEALTH_MODE_ASSET(string asset)
 	{
@@ -27626,7 +27626,7 @@ public static class Natives
 	}
 	public static bool IS_ANY_HOSTILE_PED_NEAR_POINT(Ped ped, float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.IS_ANY_HOSTILE_PED_NEAR_POINT(ped, x, y, z, radius);
+		return NativeFunction.Natives.IS_ANY_HOSTILE_PED_NEAR_POINT<bool>(ped, x, y, z, radius);
 	}
 	/// <summary>
 	/// 	Toggles config flag CPED_CONFIG_FLAG_CanPlayInCarIdles.
@@ -27637,7 +27637,7 @@ public static class Natives
 	}
 	public static bool IS_TARGET_PED_IN_PERCEPTION_AREA(Ped ped, Ped targetPed, float p2, float p3, float p4, float p5)
 	{
-		return NativeFunction.Natives.IS_TARGET_PED_IN_PERCEPTION_AREA(ped, targetPed, p2, p3, p4, p5);
+		return NativeFunction.Natives.IS_TARGET_PED_IN_PERCEPTION_AREA<bool>(ped, targetPed, p2, p3, p4, p5);
 	}
 	/// <summary>
 	/// 	Min and max are usually 100.0 and 200.0
@@ -27664,7 +27664,7 @@ public static class Natives
 	}
 	public static bool IS_PED_SWITCHING_WEAPON(Ped Ped)
 	{
-		return NativeFunction.Natives.IS_PED_SWITCHING_WEAPON(Ped);
+		return NativeFunction.Natives.IS_PED_SWITCHING_WEAPON<bool>(Ped);
 	}
 	public static void SET_PED_TREATED_AS_FRIENDLY()
 	{
@@ -27680,7 +27680,7 @@ public static class Natives
 	}
 	public static bool GET_MP_LIGHT_ENABLED(Ped ped)
 	{
-		return NativeFunction.Natives.GET_MP_LIGHT_ENABLED(ped);
+		return NativeFunction.Natives.GET_MP_LIGHT_ENABLED<bool>(ped);
 	}
 	public static void CLEAR_COVER_POINT_FOR_PED(Ped ped)
 	{
@@ -27731,7 +27731,7 @@ public static class Natives
 	/// </summary>
 	public static int ADD_ROPE(float x, float y, float z, float rotX, float rotY, float rotZ, float length, int ropeType, float maxLength, float minLength, float windingSpeed, bool p11, bool p12, bool rigid, float p14, bool breakWhenShot)
 	{
-		return NativeFunction.Natives.ADD_ROPE(x, y, z, rotX, rotY, rotZ, length, ropeType, maxLength, minLength, windingSpeed, p11, p12, rigid, p14, breakWhenShot, 0);
+		return NativeFunction.Natives.ADD_ROPE<int>(x, y, z, rotX, rotY, rotZ, length, ropeType, maxLength, minLength, windingSpeed, p11, p12, rigid, p14, breakWhenShot, 0);
 	}
 	public static void DELETE_ROPE(out int ropeId)
 	{
@@ -27743,7 +27743,7 @@ public static class Natives
 	}
 	public static bool DOES_ROPE_EXIST(out int ropeId)
 	{
-		return NativeFunction.Natives.DOES_ROPE_EXIST(out ropeId);
+		return NativeFunction.Natives.DOES_ROPE_EXIST<bool>(out ropeId);
 	}
 	public static void ROPE_DRAW_ENABLED(out int ropeId, bool p1)
 	{
@@ -27770,7 +27770,7 @@ public static class Natives
 	}
 	public static int GET_ROPE_VERTEX_COUNT(int ropeId)
 	{
-		return NativeFunction.Natives.GET_ROPE_VERTEX_COUNT(ropeId);
+		return NativeFunction.Natives.GET_ROPE_VERTEX_COUNT<int>(ropeId);
 	}
 	/// <summary>
 	/// 	Attaches entity 1 to entity 2.
@@ -27804,15 +27804,15 @@ public static class Natives
 	}
 	public static bool IS_ROPE_ATTACHED_AT_BOTH_ENDS(out int ropeId)
 	{
-		return NativeFunction.Natives.IS_ROPE_ATTACHED_AT_BOTH_ENDS(out ropeId);
+		return NativeFunction.Natives.IS_ROPE_ATTACHED_AT_BOTH_ENDS<bool>(out ropeId);
 	}
 	public static Vector3 GET_ROPE_LAST_VERTEX_COORD(int ropeId)
 	{
-		return NativeFunction.Natives.GET_ROPE_LAST_VERTEX_COORD(ropeId);
+		return NativeFunction.Natives.GET_ROPE_LAST_VERTEX_COORD<Vector3>(ropeId);
 	}
 	public static Vector3 GET_ROPE_VERTEX_COORD(int ropeId, int vertex)
 	{
-		return NativeFunction.Natives.GET_ROPE_VERTEX_COORD(ropeId, vertex);
+		return NativeFunction.Natives.GET_ROPE_VERTEX_COORD<Vector3>(ropeId, vertex);
 	}
 	public static void START_ROPE_WINDING(int ropeId)
 	{
@@ -27843,7 +27843,7 @@ public static class Natives
 	}
 	public static bool ROPE_ARE_TEXTURES_LOADED()
 	{
-		return NativeFunction.Natives.ROPE_ARE_TEXTURES_LOADED();
+		return NativeFunction.Natives.ROPE_ARE_TEXTURES_LOADED<bool>();
 	}
 	/// <summary>
 	/// 	Unloads rope textures for all ropes in the current scene.
@@ -27854,7 +27854,7 @@ public static class Natives
 	}
 	public static bool DOES_SCRIPT_OWN_ROPE(int ropeId)
 	{
-		return NativeFunction.Natives.DOES_SCRIPT_OWN_ROPE(ropeId);
+		return NativeFunction.Natives.DOES_SCRIPT_OWN_ROPE<bool>(ropeId);
 	}
 	public static void ROPE_ATTACH_VIRTUAL_BOUND_GEOM(int ropeId, int p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float p9, float p10, float p11, float p12, float p13)
 	{
@@ -27870,7 +27870,7 @@ public static class Natives
 	}
 	public static float ROPE_GET_DISTANCE_BETWEEN_ENDS(int ropeId)
 	{
-		return NativeFunction.Natives.ROPE_GET_DISTANCE_BETWEEN_ENDS(ropeId);
+		return NativeFunction.Natives.ROPE_GET_DISTANCE_BETWEEN_ENDS<float>(ropeId);
 	}
 	/// <summary>
 	/// 	Forces a rope to a certain length.
@@ -27904,7 +27904,7 @@ public static class Natives
 	}
 	public static Vector3 GET_CGOFFSET(Entity entity)
 	{
-		return NativeFunction.Natives.GET_CGOFFSET(entity);
+		return NativeFunction.Natives.GET_CGOFFSET<Vector3>(entity);
 	}
 	public static void SET_CG_AT_BOUNDCENTER(Entity entity)
 	{
@@ -27916,7 +27916,7 @@ public static class Natives
 	}
 	public static bool GET_IS_ENTITY_A_FRAG(Object _object)
 	{
-		return NativeFunction.Natives.GET_IS_ENTITY_A_FRAG(_object);
+		return NativeFunction.Natives.GET_IS_ENTITY_A_FRAG<bool>(_object);
 	}
 	public static void SET_DISABLE_BREAKING(Object _object, bool toggle)
 	{
@@ -27956,14 +27956,14 @@ public static class Natives
 	/// </summary>
 	public static Ped GET_PLAYER_PED(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_PED(player);
+		return NativeFunction.Natives.GET_PLAYER_PED<Ped>(player);
 	}
 	/// <summary>
 	/// 	Does the same like PLAYER::GET_PLAYER_PED
 	/// </summary>
 	public static Ped GET_PLAYER_PED_SCRIPT_INDEX(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_PED_SCRIPT_INDEX(player);
+		return NativeFunction.Natives.GET_PLAYER_PED_SCRIPT_INDEX<Ped>(player);
 	}
 	/// <summary>
 	/// 	Set the model for a specific Player. Be aware that this will destroy the current Ped for the Player and create a new one, any reference to the old ped should be reset<br/>
@@ -27987,7 +27987,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUMBER_OF_PLAYERS()
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_PLAYERS();
+		return NativeFunction.Natives.GET_NUMBER_OF_PLAYERS<int>();
 	}
 	/// <summary>
 	/// 	Gets the player&amp;apos;s team.<br/>
@@ -27995,7 +27995,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PLAYER_TEAM(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_TEAM(player);
+		return NativeFunction.Natives.GET_PLAYER_TEAM<int>(player);
 	}
 	/// <summary>
 	/// 	Set player team on deathmatch and last team standing..
@@ -28006,22 +28006,22 @@ public static class Natives
 	}
 	public static int GET_NUMBER_OF_PLAYERS_IN_TEAM(int team)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_PLAYERS_IN_TEAM(team);
+		return NativeFunction.Natives.GET_NUMBER_OF_PLAYERS_IN_TEAM<int>(team);
 	}
 	public static string GET_PLAYER_NAME(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_NAME(player);
+		return NativeFunction.Natives.GET_PLAYER_NAME<string>(player);
 	}
 	/// <summary>
 	/// 	Remnant from GTA IV. Does nothing in GTA V.
 	/// </summary>
 	public static float GET_WANTED_LEVEL_RADIUS(Player player)
 	{
-		return NativeFunction.Natives.GET_WANTED_LEVEL_RADIUS(player);
+		return NativeFunction.Natives.GET_WANTED_LEVEL_RADIUS<float>(player);
 	}
 	public static Vector3 GET_PLAYER_WANTED_CENTRE_POSITION(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_WANTED_CENTRE_POSITION(player);
+		return NativeFunction.Natives.GET_PLAYER_WANTED_CENTRE_POSITION<Vector3>(player);
 	}
 	/// <summary>
 	/// 	# Predominant call signatures<br/>
@@ -28041,7 +28041,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_WANTED_LEVEL_THRESHOLD(int wantedLevel)
 	{
-		return NativeFunction.Natives.GET_WANTED_LEVEL_THRESHOLD(wantedLevel);
+		return NativeFunction.Natives.GET_WANTED_LEVEL_THRESHOLD<int>(wantedLevel);
 	}
 	/// <summary>
 	/// 	Call SET_PLAYER_WANTED_LEVEL_NOW for immediate effect<br/>
@@ -28075,15 +28075,15 @@ public static class Natives
 	}
 	public static bool ARE_PLAYER_FLASHING_STARS_ABOUT_TO_DROP(Player player)
 	{
-		return NativeFunction.Natives.ARE_PLAYER_FLASHING_STARS_ABOUT_TO_DROP(player);
+		return NativeFunction.Natives.ARE_PLAYER_FLASHING_STARS_ABOUT_TO_DROP<bool>(player);
 	}
 	public static bool ARE_PLAYER_STARS_GREYED_OUT(Player player)
 	{
-		return NativeFunction.Natives.ARE_PLAYER_STARS_GREYED_OUT(player);
+		return NativeFunction.Natives.ARE_PLAYER_STARS_GREYED_OUT<bool>(player);
 	}
 	public static bool IS_WANTED_AND_HAS_BEEN_SEEN_BY_COPS(Player player)
 	{
-		return NativeFunction.Natives.IS_WANTED_AND_HAS_BEEN_SEEN_BY_COPS(player);
+		return NativeFunction.Natives.IS_WANTED_AND_HAS_BEEN_SEEN_BY_COPS<bool>(player);
 	}
 	public static void SET_DISPATCH_COPS_FOR_PLAYER(Player player, bool toggle)
 	{
@@ -28091,7 +28091,7 @@ public static class Natives
 	}
 	public static bool IS_PLAYER_WANTED_LEVEL_GREATER(Player player, int wantedLevel)
 	{
-		return NativeFunction.Natives.IS_PLAYER_WANTED_LEVEL_GREATER(player, wantedLevel);
+		return NativeFunction.Natives.IS_PLAYER_WANTED_LEVEL_GREATER<bool>(player, wantedLevel);
 	}
 	/// <summary>
 	/// 	This executes at the same as speed as PLAYER::SET_PLAYER_WANTED_LEVEL(player, 0, false);<br/>
@@ -28104,11 +28104,11 @@ public static class Natives
 	}
 	public static bool IS_PLAYER_DEAD(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_DEAD(player);
+		return NativeFunction.Natives.IS_PLAYER_DEAD<bool>(player);
 	}
 	public static bool IS_PLAYER_PRESSING_HORN(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_PRESSING_HORN(player);
+		return NativeFunction.Natives.IS_PLAYER_PRESSING_HORN<bool>(player);
 	}
 	/// <summary>
 	/// 	Flags:<br/>
@@ -28133,7 +28133,7 @@ public static class Natives
 	}
 	public static int GET_PLAYER_WANTED_LEVEL(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_WANTED_LEVEL(player);
+		return NativeFunction.Natives.GET_PLAYER_WANTED_LEVEL<int>(player);
 	}
 	public static void SET_MAX_WANTED_LEVEL(int maxWantedLevel)
 	{
@@ -28162,7 +28162,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PLAYER_PLAYING(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_PLAYING(player);
+		return NativeFunction.Natives.IS_PLAYER_PLAYING<bool>(player);
 	}
 	public static void SET_EVERYONE_IGNORE_PLAYER(Player player, bool toggle)
 	{
@@ -28213,7 +28213,7 @@ public static class Natives
 	}
 	public static int GET_WANTED_LEVEL_TIME_TO_ESCAPE()
 	{
-		return NativeFunction.Natives.GET_WANTED_LEVEL_TIME_TO_ESCAPE();
+		return NativeFunction.Natives.GET_WANTED_LEVEL_TIME_TO_ESCAPE<int>();
 	}
 	public static void SET_WANTED_LEVEL_HIDDEN_ESCAPE_TIME(Player player, int wantedLevel, int lossTime)
 	{
@@ -28359,15 +28359,15 @@ public static class Natives
 	}
 	public static bool CAN_PLAYER_START_MISSION(Player player)
 	{
-		return NativeFunction.Natives.CAN_PLAYER_START_MISSION(player);
+		return NativeFunction.Natives.CAN_PLAYER_START_MISSION<bool>(player);
 	}
 	public static bool IS_PLAYER_READY_FOR_CUTSCENE(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_READY_FOR_CUTSCENE(player);
+		return NativeFunction.Natives.IS_PLAYER_READY_FOR_CUTSCENE<bool>(player);
 	}
 	public static bool IS_PLAYER_TARGETTING_ENTITY(Player player, Entity entity)
 	{
-		return NativeFunction.Natives.IS_PLAYER_TARGETTING_ENTITY(player, entity);
+		return NativeFunction.Natives.IS_PLAYER_TARGETTING_ENTITY<bool>(player, entity);
 	}
 	/// <summary>
 	/// 	Assigns the handle of locked-on melee target to *entity that you pass it.<br/>
@@ -28375,21 +28375,21 @@ public static class Natives
 	/// </summary>
 	public static bool GET_PLAYER_TARGET_ENTITY(Player player, out Entity entity)
 	{
-		return NativeFunction.Natives.GET_PLAYER_TARGET_ENTITY(player, out entity);
+		return NativeFunction.Natives.GET_PLAYER_TARGET_ENTITY<bool>(player, out entity);
 	}
 	/// <summary>
 	/// 	Gets a value indicating whether the specified player is currently aiming freely.
 	/// </summary>
 	public static bool IS_PLAYER_FREE_AIMING(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_FREE_AIMING(player);
+		return NativeFunction.Natives.IS_PLAYER_FREE_AIMING<bool>(player);
 	}
 	/// <summary>
 	/// 	Gets a value indicating whether the specified player is currently aiming freely at the specified entity.
 	/// </summary>
 	public static bool IS_PLAYER_FREE_AIMING_AT_ENTITY(Player player, Entity entity)
 	{
-		return NativeFunction.Natives.IS_PLAYER_FREE_AIMING_AT_ENTITY(player, entity);
+		return NativeFunction.Natives.IS_PLAYER_FREE_AIMING_AT_ENTITY<bool>(player, entity);
 	}
 	/// <summary>
 	/// 	Returns TRUE if it found an entity in your crosshair within range of your weapon. Assigns the handle of the target to the *entity that you pass it.<br/>
@@ -28397,7 +28397,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_ENTITY_PLAYER_IS_FREE_AIMING_AT(Player player, out Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_PLAYER_IS_FREE_AIMING_AT(player, out entity);
+		return NativeFunction.Natives.GET_ENTITY_PLAYER_IS_FREE_AIMING_AT<bool>(player, out entity);
 	}
 	/// <summary>
 	/// 	Affects the range of auto aim target.
@@ -28436,11 +28436,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_MAX_WANTED_LEVEL()
 	{
-		return NativeFunction.Natives.GET_MAX_WANTED_LEVEL();
+		return NativeFunction.Natives.GET_MAX_WANTED_LEVEL<int>();
 	}
 	public static bool IS_PLAYER_TARGETTING_ANYTHING(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_TARGETTING_ANYTHING(player);
+		return NativeFunction.Natives.IS_PLAYER_TARGETTING_ANYTHING<bool>(player);
 	}
 	public static void SET_PLAYER_SPRINT(Player player, bool toggle)
 	{
@@ -28456,30 +28456,30 @@ public static class Natives
 	}
 	public static float GET_PLAYER_SPRINT_STAMINA_REMAINING(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_SPRINT_STAMINA_REMAINING(player);
+		return NativeFunction.Natives.GET_PLAYER_SPRINT_STAMINA_REMAINING<float>(player);
 	}
 	public static float GET_PLAYER_SPRINT_TIME_REMAINING(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_SPRINT_TIME_REMAINING(player);
+		return NativeFunction.Natives.GET_PLAYER_SPRINT_TIME_REMAINING<float>(player);
 	}
 	public static float GET_PLAYER_UNDERWATER_TIME_REMAINING(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_UNDERWATER_TIME_REMAINING(player);
+		return NativeFunction.Natives.GET_PLAYER_UNDERWATER_TIME_REMAINING<float>(player);
 	}
 	public static float SET_PLAYER_UNDERWATER_BREATH_PERCENT_REMAINING(Player player, float time)
 	{
-		return NativeFunction.Natives.SET_PLAYER_UNDERWATER_BREATH_PERCENT_REMAINING(player, time);
+		return NativeFunction.Natives.SET_PLAYER_UNDERWATER_BREATH_PERCENT_REMAINING<float>(player, time);
 	}
 	/// <summary>
 	/// 	Returns the group ID the player is member of.
 	/// </summary>
 	public static int GET_PLAYER_GROUP(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_GROUP(player);
+		return NativeFunction.Natives.GET_PLAYER_GROUP<int>(player);
 	}
 	public static int GET_PLAYER_MAX_ARMOUR(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_MAX_ARMOUR(player);
+		return NativeFunction.Natives.GET_PLAYER_MAX_ARMOUR<int>(player);
 	}
 	/// <summary>
 	/// 	Can the player control himself, used to disable controls for player for things like a cutscene.<br/>
@@ -28490,7 +28490,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PLAYER_CONTROL_ON(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_CONTROL_ON(player);
+		return NativeFunction.Natives.IS_PLAYER_CONTROL_ON<bool>(player);
 	}
 	/// <summary>
 	/// 	Returns true when the player is not able to control the cam i.e. when running a benchmark test, switching the player or viewing a cutscene.<br/>
@@ -28499,18 +28499,18 @@ public static class Natives
 	/// </summary>
 	public static bool GET_ARE_CAMERA_CONTROLS_DISABLED()
 	{
-		return NativeFunction.Natives.GET_ARE_CAMERA_CONTROLS_DISABLED();
+		return NativeFunction.Natives.GET_ARE_CAMERA_CONTROLS_DISABLED<bool>();
 	}
 	public static bool IS_PLAYER_SCRIPT_CONTROL_ON(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_SCRIPT_CONTROL_ON(player);
+		return NativeFunction.Natives.IS_PLAYER_SCRIPT_CONTROL_ON<bool>(player);
 	}
 	/// <summary>
 	/// 	Returns TRUE if the player (&amp;apos;s ped) is climbing at the moment.
 	/// </summary>
 	public static bool IS_PLAYER_CLIMBING(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_CLIMBING(player);
+		return NativeFunction.Natives.IS_PLAYER_CLIMBING<bool>(player);
 	}
 	/// <summary>
 	/// 	Return true while player is being arrested / busted.<br/>
@@ -28521,7 +28521,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PLAYER_BEING_ARRESTED(Player player, bool atArresting)
 	{
-		return NativeFunction.Natives.IS_PLAYER_BEING_ARRESTED(player, atArresting);
+		return NativeFunction.Natives.IS_PLAYER_BEING_ARRESTED<bool>(player, atArresting);
 	}
 	public static void RESET_PLAYER_ARREST_STATE(Player player)
 	{
@@ -28532,21 +28532,21 @@ public static class Natives
 	/// </summary>
 	public static Vehicle GET_PLAYERS_LAST_VEHICLE()
 	{
-		return NativeFunction.Natives.GET_PLAYERS_LAST_VEHICLE();
+		return NativeFunction.Natives.GET_PLAYERS_LAST_VEHICLE<Vehicle>();
 	}
 	/// <summary>
 	/// 	Returns the same as PLAYER_ID and NETWORK_PLAYER_ID_TO_INT
 	/// </summary>
 	public static Player GET_PLAYER_INDEX()
 	{
-		return NativeFunction.Natives.GET_PLAYER_INDEX();
+		return NativeFunction.Natives.GET_PLAYER_INDEX<Player>();
 	}
 	/// <summary>
 	/// 	Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
 	/// </summary>
 	public static Player INT_TO_PLAYERINDEX(int value)
 	{
-		return NativeFunction.Natives.INT_TO_PLAYERINDEX(value);
+		return NativeFunction.Natives.INT_TO_PLAYERINDEX<Player>(value);
 	}
 	/// <summary>
 	/// 	Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).<br/>
@@ -28556,27 +28556,27 @@ public static class Natives
 	/// </summary>
 	public static int INT_TO_PARTICIPANTINDEX(int value)
 	{
-		return NativeFunction.Natives.INT_TO_PARTICIPANTINDEX(value);
+		return NativeFunction.Natives.INT_TO_PARTICIPANTINDEX<int>(value);
 	}
 	public static int GET_TIME_SINCE_PLAYER_HIT_VEHICLE(Player player)
 	{
-		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_HIT_VEHICLE(player);
+		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_HIT_VEHICLE<int>(player);
 	}
 	public static int GET_TIME_SINCE_PLAYER_HIT_PED(Player player)
 	{
-		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_HIT_PED(player);
+		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_HIT_PED<int>(player);
 	}
 	public static int GET_TIME_SINCE_PLAYER_DROVE_ON_PAVEMENT(Player player)
 	{
-		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_DROVE_ON_PAVEMENT(player);
+		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_DROVE_ON_PAVEMENT<int>(player);
 	}
 	public static int GET_TIME_SINCE_PLAYER_DROVE_AGAINST_TRAFFIC(Player player)
 	{
-		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_DROVE_AGAINST_TRAFFIC(player);
+		return NativeFunction.Natives.GET_TIME_SINCE_PLAYER_DROVE_AGAINST_TRAFFIC<int>(player);
 	}
 	public static bool IS_PLAYER_FREE_FOR_AMBIENT_TASK(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_FREE_FOR_AMBIENT_TASK(player);
+		return NativeFunction.Natives.IS_PLAYER_FREE_FOR_AMBIENT_TASK<bool>(player);
 	}
 	/// <summary>
 	/// 	This returns YOUR &amp;apos;identity&amp;apos; as a Player type.<br/>
@@ -28585,25 +28585,25 @@ public static class Natives
 	/// </summary>
 	public static Player PLAYER_ID()
 	{
-		return NativeFunction.Natives.PLAYER_ID();
+		return NativeFunction.Natives.PLAYER_ID<Player>();
 	}
 	/// <summary>
 	/// 	Returns current player ped
 	/// </summary>
 	public static Ped PLAYER_PED_ID()
 	{
-		return NativeFunction.Natives.PLAYER_PED_ID();
+		return NativeFunction.Natives.PLAYER_PED_ID<Ped>();
 	}
 	/// <summary>
 	/// 	Does exactly the same thing as PLAYER_ID()
 	/// </summary>
 	public static int NETWORK_PLAYER_ID_TO_INT()
 	{
-		return NativeFunction.Natives.NETWORK_PLAYER_ID_TO_INT();
+		return NativeFunction.Natives.NETWORK_PLAYER_ID_TO_INT<int>();
 	}
 	public static bool HAS_FORCE_CLEANUP_OCCURRED(int cleanupFlags)
 	{
-		return NativeFunction.Natives.HAS_FORCE_CLEANUP_OCCURRED(cleanupFlags);
+		return NativeFunction.Natives.HAS_FORCE_CLEANUP_OCCURRED<bool>(cleanupFlags);
 	}
 	/// <summary>
 	/// 	used with 1,2,8,64,128 in the scripts
@@ -28625,7 +28625,7 @@ public static class Natives
 	}
 	public static int GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP()
 	{
-		return NativeFunction.Natives.GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP();
+		return NativeFunction.Natives.GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP<int>();
 	}
 	public static void SET_PLAYER_MAY_ONLY_ENTER_THIS_VEHICLE(Player player, Vehicle vehicle)
 	{
@@ -28716,7 +28716,7 @@ public static class Natives
 	/// </summary>
 	public static bool GIVE_ACHIEVEMENT_TO_PLAYER(int achievementId)
 	{
-		return NativeFunction.Natives.GIVE_ACHIEVEMENT_TO_PLAYER(achievementId);
+		return NativeFunction.Natives.GIVE_ACHIEVEMENT_TO_PLAYER<bool>(achievementId);
 	}
 	/// <summary>
 	/// 	For Steam.<br/>
@@ -28724,7 +28724,7 @@ public static class Natives
 	/// </summary>
 	public static bool SET_ACHIEVEMENT_PROGRESS(int achievementId, int progress)
 	{
-		return NativeFunction.Natives.SET_ACHIEVEMENT_PROGRESS(achievementId, progress);
+		return NativeFunction.Natives.SET_ACHIEVEMENT_PROGRESS<bool>(achievementId, progress);
 	}
 	/// <summary>
 	/// 	For Steam.<br/>
@@ -28732,14 +28732,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_ACHIEVEMENT_PROGRESS(int achievementId)
 	{
-		return NativeFunction.Natives.GET_ACHIEVEMENT_PROGRESS(achievementId);
+		return NativeFunction.Natives.GET_ACHIEVEMENT_PROGRESS<int>(achievementId);
 	}
 	/// <summary>
 	/// 	See GIVE_ACHIEVEMENT_TO_PLAYER
 	/// </summary>
 	public static bool HAS_ACHIEVEMENT_BEEN_PASSED(int achievementId)
 	{
-		return NativeFunction.Natives.HAS_ACHIEVEMENT_BEEN_PASSED(achievementId);
+		return NativeFunction.Natives.HAS_ACHIEVEMENT_BEEN_PASSED<bool>(achievementId);
 	}
 	/// <summary>
 	/// 	Returns TRUE if the game is in online mode and FALSE if in offline mode.<br/>
@@ -28748,14 +28748,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PLAYER_ONLINE()
 	{
-		return NativeFunction.Natives.IS_PLAYER_ONLINE();
+		return NativeFunction.Natives.IS_PLAYER_ONLINE<bool>();
 	}
 	/// <summary>
 	/// 	this function is hard-coded to always return 0.
 	/// </summary>
 	public static bool IS_PLAYER_LOGGING_IN_NP()
 	{
-		return NativeFunction.Natives.IS_PLAYER_LOGGING_IN_NP();
+		return NativeFunction.Natives.IS_PLAYER_LOGGING_IN_NP<bool>();
 	}
 	/// <summary>
 	/// 	Purpose of the BOOL currently unknown.<br/>
@@ -28767,7 +28767,7 @@ public static class Natives
 	}
 	public static bool IS_SYSTEM_UI_BEING_DISPLAYED()
 	{
-		return NativeFunction.Natives.IS_SYSTEM_UI_BEING_DISPLAYED();
+		return NativeFunction.Natives.IS_SYSTEM_UI_BEING_DISPLAYED<bool>();
 	}
 	/// <summary>
 	/// 	Simply sets you as invincible (Health will not deplete).<br/>
@@ -28801,14 +28801,14 @@ public static class Natives
 	/// </summary>
 	public static bool GET_PLAYER_INVINCIBLE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_INVINCIBLE(player);
+		return NativeFunction.Natives.GET_PLAYER_INVINCIBLE<bool>(player);
 	}
 	/// <summary>
 	/// 	Always returns false.
 	/// </summary>
 	public static bool GET_PLAYER_DEBUG_INVINCIBLE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_DEBUG_INVINCIBLE(player);
+		return NativeFunction.Natives.GET_PLAYER_DEBUG_INVINCIBLE<bool>(player);
 	}
 	public static void SET_PLAYER_INVINCIBLE_BUT_HAS_REACTIONS(Player player, bool toggle)
 	{
@@ -28859,14 +28859,14 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_USING_FPS_THIRD_PERSON_COVER()
 	{
-		return NativeFunction.Natives.GET_IS_USING_FPS_THIRD_PERSON_COVER();
+		return NativeFunction.Natives.GET_IS_USING_FPS_THIRD_PERSON_COVER<bool>();
 	}
 	/// <summary>
 	/// 	Returns profile setting 243.
 	/// </summary>
 	public static bool GET_IS_USING_HOOD_CAMERA()
 	{
-		return NativeFunction.Natives.GET_IS_USING_HOOD_CAMERA();
+		return NativeFunction.Natives.GET_IS_USING_HOOD_CAMERA<bool>();
 	}
 	public static void CLEAR_PLAYER_HAS_DAMAGED_AT_LEAST_ONE_PED(Player player)
 	{
@@ -28874,7 +28874,7 @@ public static class Natives
 	}
 	public static bool HAS_PLAYER_DAMAGED_AT_LEAST_ONE_PED(Player player)
 	{
-		return NativeFunction.Natives.HAS_PLAYER_DAMAGED_AT_LEAST_ONE_PED(player);
+		return NativeFunction.Natives.HAS_PLAYER_DAMAGED_AT_LEAST_ONE_PED<bool>(player);
 	}
 	public static void CLEAR_PLAYER_HAS_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED(Player player)
 	{
@@ -28882,7 +28882,7 @@ public static class Natives
 	}
 	public static bool HAS_PLAYER_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED(Player player)
 	{
-		return NativeFunction.Natives.HAS_PLAYER_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED(player);
+		return NativeFunction.Natives.HAS_PLAYER_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED<bool>(player);
 	}
 	/// <summary>
 	/// 	This can be between 1.0f - 14.9f <br/>
@@ -28931,7 +28931,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_TIME_SINCE_LAST_ARREST()
 	{
-		return NativeFunction.Natives.GET_TIME_SINCE_LAST_ARREST();
+		return NativeFunction.Natives.GET_TIME_SINCE_LAST_ARREST<int>();
 	}
 	/// <summary>
 	/// 	Returns the time since the character died in (ms) milliseconds.<br/>
@@ -28946,7 +28946,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_TIME_SINCE_LAST_DEATH()
 	{
-		return NativeFunction.Natives.GET_TIME_SINCE_LAST_DEATH();
+		return NativeFunction.Natives.GET_TIME_SINCE_LAST_DEATH<int>();
 	}
 	public static void ASSISTED_MOVEMENT_CLOSE_ROUTE()
 	{
@@ -29097,15 +29097,15 @@ public static class Natives
 	}
 	public static bool IS_SPECIAL_ABILITY_UNLOCKED(ulong playerModel)
 	{
-		return NativeFunction.Natives.IS_SPECIAL_ABILITY_UNLOCKED(playerModel);
+		return NativeFunction.Natives.IS_SPECIAL_ABILITY_UNLOCKED<bool>(playerModel);
 	}
 	public static bool IS_SPECIAL_ABILITY_ACTIVE(Player player)
 	{
-		return NativeFunction.Natives.IS_SPECIAL_ABILITY_ACTIVE(player, 0);
+		return NativeFunction.Natives.IS_SPECIAL_ABILITY_ACTIVE<bool>(player, 0);
 	}
 	public static bool IS_SPECIAL_ABILITY_METER_FULL(Player player)
 	{
-		return NativeFunction.Natives.IS_SPECIAL_ABILITY_METER_FULL(player, 0);
+		return NativeFunction.Natives.IS_SPECIAL_ABILITY_METER_FULL<bool>(player, 0);
 	}
 	public static void ENABLE_SPECIAL_ABILITY(Player player, bool toggle)
 	{
@@ -29113,7 +29113,7 @@ public static class Natives
 	}
 	public static bool IS_SPECIAL_ABILITY_ENABLED(Player player)
 	{
-		return NativeFunction.Natives.IS_SPECIAL_ABILITY_ENABLED(player, 0);
+		return NativeFunction.Natives.IS_SPECIAL_ABILITY_ENABLED<bool>(player, 0);
 	}
 	public static void SET_SPECIAL_ABILITY_MULTIPLIER(float multiplier)
 	{
@@ -29128,21 +29128,21 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_PLAYER_DRIVING_ON_HIGHWAY(Player player)
 	{
-		return NativeFunction.Natives.GET_IS_PLAYER_DRIVING_ON_HIGHWAY(player);
+		return NativeFunction.Natives.GET_IS_PLAYER_DRIVING_ON_HIGHWAY<bool>(player);
 	}
 	/// <summary>
 	/// 	Only 1 occurrence. p1 was 2.
 	/// </summary>
 	public static bool GET_IS_PLAYER_DRIVING_WRECKLESS(Player player, int p1)
 	{
-		return NativeFunction.Natives.GET_IS_PLAYER_DRIVING_WRECKLESS(player, p1);
+		return NativeFunction.Natives.GET_IS_PLAYER_DRIVING_WRECKLESS<bool>(player, p1);
 	}
 	/// <summary>
 	/// 	2 occurrences in agency_heist3a. p1 was 0.7f then 0.4f.
 	/// </summary>
 	public static bool GET_IS_MOPPING_AREA_FREE_IN_FRONT_OF_PLAYER(Player player, float p1)
 	{
-		return NativeFunction.Natives.GET_IS_MOPPING_AREA_FREE_IN_FRONT_OF_PLAYER(player, p1);
+		return NativeFunction.Natives.GET_IS_MOPPING_AREA_FREE_IN_FRONT_OF_PLAYER<bool>(player, p1);
 	}
 	/// <summary>
 	/// 	`findCollisionLand`: This teleports the player to land when set to true and will not consider the Z coordinate parameter provided by you. It will automatically put the Z coordinate so that you don&amp;apos;t fall from sky.
@@ -29153,7 +29153,7 @@ public static class Natives
 	}
 	public static bool UPDATE_PLAYER_TELEPORT(Player player)
 	{
-		return NativeFunction.Natives.UPDATE_PLAYER_TELEPORT(player);
+		return NativeFunction.Natives.UPDATE_PLAYER_TELEPORT<bool>(player);
 	}
 	/// <summary>
 	/// 	Disables the player&amp;apos;s teleportation
@@ -29164,11 +29164,11 @@ public static class Natives
 	}
 	public static bool IS_PLAYER_TELEPORT_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_PLAYER_TELEPORT_ACTIVE();
+		return NativeFunction.Natives.IS_PLAYER_TELEPORT_ACTIVE<bool>();
 	}
 	public static float GET_PLAYER_CURRENT_STEALTH_NOISE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_CURRENT_STEALTH_NOISE(player);
+		return NativeFunction.Natives.GET_PLAYER_CURRENT_STEALTH_NOISE<float>(player);
 	}
 	/// <summary>
 	/// 	`regenRate`: The recharge multiplier, a value between 0.0 and 1.0.<br/>
@@ -29180,7 +29180,7 @@ public static class Natives
 	}
 	public static float GET_PLAYER_HEALTH_RECHARGE_MAX_PERCENT(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_HEALTH_RECHARGE_MAX_PERCENT(player);
+		return NativeFunction.Natives.GET_PLAYER_HEALTH_RECHARGE_MAX_PERCENT<float>(player);
 	}
 	public static void SET_PLAYER_HEALTH_RECHARGE_MAX_PERCENT(Player player, float limit)
 	{
@@ -29373,7 +29373,7 @@ public static class Natives
 	}
 	public static bool GET_PLAYER_HAS_RESERVE_PARACHUTE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_HAS_RESERVE_PARACHUTE(player);
+		return NativeFunction.Natives.GET_PLAYER_HAS_RESERVE_PARACHUTE<bool>(player);
 	}
 	public static void SET_PLAYER_CAN_LEAVE_PARACHUTE_SMOKE_TRAIL(Player player, bool enabled)
 	{
@@ -29413,7 +29413,7 @@ public static class Natives
 	}
 	public static bool CAN_PED_HEAR_PLAYER(Player player, Ped ped)
 	{
-		return NativeFunction.Natives.CAN_PED_HEAR_PLAYER(player, ped);
+		return NativeFunction.Natives.CAN_PED_HEAR_PLAYER<bool>(player, ped);
 	}
 	/// <summary>
 	/// 	This is to make the player walk without accepting input from INPUT.<br/>
@@ -29448,7 +29448,7 @@ public static class Natives
 	}
 	public static bool IS_REMOTE_PLAYER_IN_NON_CLONED_VEHICLE(Player player)
 	{
-		return NativeFunction.Natives.IS_REMOTE_PLAYER_IN_NON_CLONED_VEHICLE(player);
+		return NativeFunction.Natives.IS_REMOTE_PLAYER_IN_NON_CLONED_VEHICLE<bool>(player);
 	}
 	public static void INCREASE_PLAYER_JUMP_SUPPRESSION_RANGE(Player player)
 	{
@@ -29494,18 +29494,18 @@ public static class Natives
 	}
 	public static bool HAS_PLAYER_BEEN_SPOTTED_IN_STOLEN_VEHICLE(Player player)
 	{
-		return NativeFunction.Natives.HAS_PLAYER_BEEN_SPOTTED_IN_STOLEN_VEHICLE(player);
+		return NativeFunction.Natives.HAS_PLAYER_BEEN_SPOTTED_IN_STOLEN_VEHICLE<bool>(player);
 	}
 	/// <summary>
 	/// 	Returns true if an unk value is greater than 0.0f
 	/// </summary>
 	public static bool IS_PLAYER_BATTLE_AWARE(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_BATTLE_AWARE(player);
+		return NativeFunction.Natives.IS_PLAYER_BATTLE_AWARE<bool>(player);
 	}
 	public static bool GET_PLAYER_RECEIVED_BATTLE_EVENT_RECENTLY(Player player, int p1, bool p2)
 	{
-		return NativeFunction.Natives.GET_PLAYER_RECEIVED_BATTLE_EVENT_RECENTLY(player, p1, p2);
+		return NativeFunction.Natives.GET_PLAYER_RECEIVED_BATTLE_EVENT_RECENTLY<bool>(player, p1, p2);
 	}
 	/// <summary>
 	/// 	Appears only 3 times in the scripts, more specifically in michael1.ysc<br/>
@@ -29526,11 +29526,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PLAYER_RIDING_TRAIN(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_RIDING_TRAIN(player);
+		return NativeFunction.Natives.IS_PLAYER_RIDING_TRAIN<bool>(player);
 	}
 	public static bool HAS_PLAYER_LEFT_THE_WORLD(Player player)
 	{
-		return NativeFunction.Natives.HAS_PLAYER_LEFT_THE_WORLD(player);
+		return NativeFunction.Natives.HAS_PLAYER_LEFT_THE_WORLD<bool>(player);
 	}
 	public static void SET_PLAYER_LEAVE_PED_BEHIND(Player player, bool toggle)
 	{
@@ -29558,11 +29558,11 @@ public static class Natives
 	}
 	public static ulong GET_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_PARACHUTE_MODEL_OVERRIDE(player);
+		return NativeFunction.Natives.GET_PLAYER_PARACHUTE_MODEL_OVERRIDE<ulong>(player);
 	}
 	public static ulong GET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(player);
+		return NativeFunction.Natives.GET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE<ulong>(player);
 	}
 	public static void CLEAR_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player)
 	{
@@ -29594,7 +29594,7 @@ public static class Natives
 	}
 	public static bool IS_PLAYER_BLUETOOTH_ENABLE(Player player)
 	{
-		return NativeFunction.Natives.IS_PLAYER_BLUETOOTH_ENABLE(player);
+		return NativeFunction.Natives.IS_PLAYER_BLUETOOTH_ENABLE<bool>(player);
 	}
 	public static void DISABLE_CAMERA_VIEW_MODE_CYCLE(Player player)
 	{
@@ -29602,7 +29602,7 @@ public static class Natives
 	}
 	public static int GET_PLAYER_FAKE_WANTED_LEVEL(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_FAKE_WANTED_LEVEL(player);
+		return NativeFunction.Natives.GET_PLAYER_FAKE_WANTED_LEVEL<int>(player);
 	}
 	public static void SET_PLAYER_CAN_DAMAGE_PLAYER(Player player1, Player player2, bool toggle)
 	{
@@ -29614,7 +29614,7 @@ public static class Natives
 	}
 	public static bool IS_PLAYER_VEHICLE_WEAPON_TOGGLED_TO_NON_HOMING()
 	{
-		return NativeFunction.Natives.IS_PLAYER_VEHICLE_WEAPON_TOGGLED_TO_NON_HOMING(0);
+		return NativeFunction.Natives.IS_PLAYER_VEHICLE_WEAPON_TOGGLED_TO_NON_HOMING<bool>(0);
 	}
 	/// <summary>
 	/// 	Unsets playerPed+330 if the current weapon has certain flags.
@@ -29732,7 +29732,7 @@ public static class Natives
 	}
 	public static bool SAVE_REPLAY_RECORDING()
 	{
-		return NativeFunction.Natives.SAVE_REPLAY_RECORDING();
+		return NativeFunction.Natives.SAVE_REPLAY_RECORDING<bool>();
 	}
 	/// <summary>
 	/// 	Checks if you&amp;apos;re recording, returns TRUE when you start recording (F1) or turn on action replay (F2)<br/>
@@ -29742,19 +29742,19 @@ public static class Natives
 	/// </summary>
 	public static bool IS_REPLAY_RECORDING()
 	{
-		return NativeFunction.Natives.IS_REPLAY_RECORDING();
+		return NativeFunction.Natives.IS_REPLAY_RECORDING<bool>();
 	}
 	public static bool IS_REPLAY_INITIALIZED()
 	{
-		return NativeFunction.Natives.IS_REPLAY_INITIALIZED();
+		return NativeFunction.Natives.IS_REPLAY_INITIALIZED<bool>();
 	}
 	public static bool IS_REPLAY_AVAILABLE()
 	{
-		return NativeFunction.Natives.IS_REPLAY_AVAILABLE();
+		return NativeFunction.Natives.IS_REPLAY_AVAILABLE<bool>();
 	}
 	public static bool IS_REPLAY_RECORD_SPACE_AVAILABLE(bool p0)
 	{
-		return NativeFunction.Natives.IS_REPLAY_RECORD_SPACE_AVAILABLE(p0);
+		return NativeFunction.Natives.IS_REPLAY_RECORD_SPACE_AVAILABLE<bool>(p0);
 	}
 	/*
 		REPLAY
@@ -29771,7 +29771,7 @@ public static class Natives
 	/// </summary>
 	public static bool REPLAY_SYSTEM_HAS_REQUESTED_A_SCRIPT_CLEANUP()
 	{
-		return NativeFunction.Natives.REPLAY_SYSTEM_HAS_REQUESTED_A_SCRIPT_CLEANUP();
+		return NativeFunction.Natives.REPLAY_SYSTEM_HAS_REQUESTED_A_SCRIPT_CLEANUP<bool>();
 	}
 	/// <summary>
 	/// 	Disables some other rendering (internal)
@@ -29803,31 +29803,31 @@ public static class Natives
 	*/
 	public static bool SAVEMIGRATION_IS_MP_ENABLED()
 	{
-		return NativeFunction.Natives.SAVEMIGRATION_IS_MP_ENABLED();
+		return NativeFunction.Natives.SAVEMIGRATION_IS_MP_ENABLED<bool>();
 	}
 	public static bool SAVEMIGRATION_MP_REQUEST_ACCOUNTS()
 	{
-		return NativeFunction.Natives.SAVEMIGRATION_MP_REQUEST_ACCOUNTS();
+		return NativeFunction.Natives.SAVEMIGRATION_MP_REQUEST_ACCOUNTS<bool>();
 	}
 	public static int SAVEMIGRATION_MP_GET_ACCOUNTS_STATUS()
 	{
-		return NativeFunction.Natives.SAVEMIGRATION_MP_GET_ACCOUNTS_STATUS();
+		return NativeFunction.Natives.SAVEMIGRATION_MP_GET_ACCOUNTS_STATUS<int>();
 	}
 	public static int SAVEMIGRATION_MP_NUM_ACCOUNTS()
 	{
-		return NativeFunction.Natives.SAVEMIGRATION_MP_NUM_ACCOUNTS();
+		return NativeFunction.Natives.SAVEMIGRATION_MP_NUM_ACCOUNTS<int>();
 	}
 	public static bool SAVEMIGRATION_MP_GET_ACCOUNT(int p0)
 	{
-		return NativeFunction.Natives.SAVEMIGRATION_MP_GET_ACCOUNT(p0, 0);
+		return NativeFunction.Natives.SAVEMIGRATION_MP_GET_ACCOUNT<bool>(p0, 0);
 	}
 	public static bool SAVEMIGRATION_MP_REQUEST_STATUS()
 	{
-		return NativeFunction.Natives.SAVEMIGRATION_MP_REQUEST_STATUS();
+		return NativeFunction.Natives.SAVEMIGRATION_MP_REQUEST_STATUS<bool>();
 	}
 	public static int SAVEMIGRATION_MP_GET_STATUS()
 	{
-		return NativeFunction.Natives.SAVEMIGRATION_MP_GET_STATUS();
+		return NativeFunction.Natives.SAVEMIGRATION_MP_GET_STATUS<int>();
 	}
 	/*
 		SCRIPT
@@ -29845,11 +29845,11 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_SCRIPT_LOADED(string scriptName)
 	{
-		return NativeFunction.Natives.HAS_SCRIPT_LOADED(scriptName);
+		return NativeFunction.Natives.HAS_SCRIPT_LOADED<bool>(scriptName);
 	}
 	public static bool DOES_SCRIPT_EXIST(string scriptName)
 	{
-		return NativeFunction.Natives.DOES_SCRIPT_EXIST(scriptName);
+		return NativeFunction.Natives.DOES_SCRIPT_EXIST<bool>(scriptName);
 	}
 	/// <summary>
 	/// 	formerly _REQUEST_STREAMED_SCRIPT
@@ -29864,11 +29864,11 @@ public static class Natives
 	}
 	public static bool HAS_SCRIPT_WITH_NAME_HASH_LOADED(ulong scriptHash)
 	{
-		return NativeFunction.Natives.HAS_SCRIPT_WITH_NAME_HASH_LOADED(scriptHash);
+		return NativeFunction.Natives.HAS_SCRIPT_WITH_NAME_HASH_LOADED<bool>(scriptHash);
 	}
 	public static bool DOES_SCRIPT_WITH_NAME_HASH_EXIST(ulong scriptHash)
 	{
-		return NativeFunction.Natives.DOES_SCRIPT_WITH_NAME_HASH_EXIST(scriptHash);
+		return NativeFunction.Natives.DOES_SCRIPT_WITH_NAME_HASH_EXIST<bool>(scriptHash);
 	}
 	public static void TERMINATE_THREAD(int threadId)
 	{
@@ -29876,11 +29876,11 @@ public static class Natives
 	}
 	public static bool IS_THREAD_ACTIVE(int threadId)
 	{
-		return NativeFunction.Natives.IS_THREAD_ACTIVE(threadId);
+		return NativeFunction.Natives.IS_THREAD_ACTIVE<bool>(threadId);
 	}
 	public static string GET_NAME_OF_SCRIPT_WITH_THIS_ID(int threadId)
 	{
-		return NativeFunction.Natives.GET_NAME_OF_SCRIPT_WITH_THIS_ID(threadId);
+		return NativeFunction.Natives.GET_NAME_OF_SCRIPT_WITH_THIS_ID<string>(threadId);
 	}
 	/// <summary>
 	/// 	Starts a new iteration of the current threads.<br/>
@@ -29895,11 +29895,11 @@ public static class Natives
 	/// </summary>
 	public static int SCRIPT_THREAD_ITERATOR_GET_NEXT_THREAD_ID()
 	{
-		return NativeFunction.Natives.SCRIPT_THREAD_ITERATOR_GET_NEXT_THREAD_ID();
+		return NativeFunction.Natives.SCRIPT_THREAD_ITERATOR_GET_NEXT_THREAD_ID<int>();
 	}
 	public static int GET_ID_OF_THIS_THREAD()
 	{
-		return NativeFunction.Natives.GET_ID_OF_THIS_THREAD();
+		return NativeFunction.Natives.GET_ID_OF_THIS_THREAD<int>();
 	}
 	public static void TERMINATE_THIS_THREAD()
 	{
@@ -29915,36 +29915,36 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(ulong scriptHash)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(scriptHash);
+		return NativeFunction.Natives.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH<int>(scriptHash);
 	}
 	public static string GET_THIS_SCRIPT_NAME()
 	{
-		return NativeFunction.Natives.GET_THIS_SCRIPT_NAME();
+		return NativeFunction.Natives.GET_THIS_SCRIPT_NAME<string>();
 	}
 	public static ulong GET_HASH_OF_THIS_SCRIPT_NAME()
 	{
-		return NativeFunction.Natives.GET_HASH_OF_THIS_SCRIPT_NAME();
+		return NativeFunction.Natives.GET_HASH_OF_THIS_SCRIPT_NAME<ulong>();
 	}
 	/// <summary>
 	/// 	eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)
 	/// </summary>
 	public static int GET_NUMBER_OF_EVENTS(int eventGroup)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_EVENTS(eventGroup);
+		return NativeFunction.Natives.GET_NUMBER_OF_EVENTS<int>(eventGroup);
 	}
 	/// <summary>
 	/// 	eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)
 	/// </summary>
 	public static bool GET_EVENT_EXISTS(int eventGroup, int eventIndex)
 	{
-		return NativeFunction.Natives.GET_EVENT_EXISTS(eventGroup, eventIndex);
+		return NativeFunction.Natives.GET_EVENT_EXISTS<bool>(eventGroup, eventIndex);
 	}
 	/// <summary>
 	/// 	eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)
 	/// </summary>
 	public static int GET_EVENT_AT_INDEX(int eventGroup, int eventIndex)
 	{
-		return NativeFunction.Natives.GET_EVENT_AT_INDEX(eventGroup, eventIndex);
+		return NativeFunction.Natives.GET_EVENT_AT_INDEX<int>(eventGroup, eventIndex);
 	}
 	/// <summary>
 	/// 	eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)<br/>
@@ -29953,7 +29953,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_EVENT_DATA(int eventGroup, int eventIndex, int eventDataSize)
 	{
-		return NativeFunction.Natives.GET_EVENT_DATA(eventGroup, eventIndex, 0, eventDataSize);
+		return NativeFunction.Natives.GET_EVENT_DATA<bool>(eventGroup, eventIndex, 0, eventDataSize);
 	}
 	/// <summary>
 	/// 	eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)<br/>
@@ -29976,7 +29976,7 @@ public static class Natives
 	}
 	public static bool GET_NO_LOADING_SCREEN()
 	{
-		return NativeFunction.Natives.GET_NO_LOADING_SCREEN();
+		return NativeFunction.Natives.GET_NO_LOADING_SCREEN<bool>();
 	}
 	public static void COMMIT_TO_LOADINGSCREEN_SELCTION()
 	{
@@ -29987,7 +29987,7 @@ public static class Natives
 	/// </summary>
 	public static bool BG_IS_EXITFLAG_SET()
 	{
-		return NativeFunction.Natives.BG_IS_EXITFLAG_SET();
+		return NativeFunction.Natives.BG_IS_EXITFLAG_SET<bool>();
 	}
 	/// <summary>
 	/// 	Sets bit 1 in GtaThread+0x154
@@ -30026,15 +30026,15 @@ public static class Natives
 	}
 	public static bool BG_DOES_LAUNCH_PARAM_EXIST(int scriptIndex, string p1)
 	{
-		return NativeFunction.Natives.BG_DOES_LAUNCH_PARAM_EXIST(scriptIndex, p1);
+		return NativeFunction.Natives.BG_DOES_LAUNCH_PARAM_EXIST<bool>(scriptIndex, p1);
 	}
 	public static int BG_GET_LAUNCH_PARAM_VALUE(int scriptIndex, string p1)
 	{
-		return NativeFunction.Natives.BG_GET_LAUNCH_PARAM_VALUE(scriptIndex, p1);
+		return NativeFunction.Natives.BG_GET_LAUNCH_PARAM_VALUE<int>(scriptIndex, p1);
 	}
 	public static int BG_GET_SCRIPT_ID_FROM_NAME_HASH(ulong p0)
 	{
-		return NativeFunction.Natives.BG_GET_SCRIPT_ID_FROM_NAME_HASH(p0);
+		return NativeFunction.Natives.BG_GET_SCRIPT_ID_FROM_NAME_HASH<int>(p0);
 	}
 	/// <summary>
 	/// 	New variant of SEND_TU_SCRIPT_EVENT that automatically initializes the event data header.<br/>
@@ -30074,26 +30074,26 @@ public static class Natives
 	/// </summary>
 	public static int START_SHAPE_TEST_LOS_PROBE(float x1, float y1, float z1, float x2, float y2, float z2, int flags, Entity entity, int p8)
 	{
-		return NativeFunction.Natives.START_SHAPE_TEST_LOS_PROBE(x1, y1, z1, x2, y2, z2, flags, entity, p8);
+		return NativeFunction.Natives.START_SHAPE_TEST_LOS_PROBE<int>(x1, y1, z1, x2, y2, z2, flags, entity, p8);
 	}
 	/// <summary>
 	/// 	Does the same as 0x7EE9F5D83DD4F90E, except blocking until the shape test completes.
 	/// </summary>
 	public static int START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(float x1, float y1, float z1, float x2, float y2, float z2, int flags, Entity entity, int p8)
 	{
-		return NativeFunction.Natives.START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(x1, y1, z1, x2, y2, z2, flags, entity, p8);
+		return NativeFunction.Natives.START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE<int>(x1, y1, z1, x2, y2, z2, flags, entity, p8);
 	}
 	public static int START_SHAPE_TEST_BOUNDING_BOX(Entity entity, int flags1, int flags2)
 	{
-		return NativeFunction.Natives.START_SHAPE_TEST_BOUNDING_BOX(entity, flags1, flags2);
+		return NativeFunction.Natives.START_SHAPE_TEST_BOUNDING_BOX<int>(entity, flags1, flags2);
 	}
 	public static int START_SHAPE_TEST_BOX(float x, float y, float z, float dimX, float dimY, float dimZ, float rotX, float rotY, float rotZ, int flags, Entity entity)
 	{
-		return NativeFunction.Natives.START_SHAPE_TEST_BOX(x, y, z, dimX, dimY, dimZ, rotX, rotY, rotZ, 0, flags, entity, 0);
+		return NativeFunction.Natives.START_SHAPE_TEST_BOX<int>(x, y, z, dimX, dimY, dimZ, rotX, rotY, rotZ, 0, flags, entity, 0);
 	}
 	public static int START_SHAPE_TEST_BOUND(Entity entity, int flags1, int flags2)
 	{
-		return NativeFunction.Natives.START_SHAPE_TEST_BOUND(entity, flags1, flags2);
+		return NativeFunction.Natives.START_SHAPE_TEST_BOUND<int>(entity, flags1, flags2);
 	}
 	/// <summary>
 	/// 	Raycast from point to point, where the ray has a radius. <br/>
@@ -30110,11 +30110,11 @@ public static class Natives
 	/// </summary>
 	public static int START_SHAPE_TEST_CAPSULE(float x1, float y1, float z1, float x2, float y2, float z2, float radius, int flags, Entity entity, int p9)
 	{
-		return NativeFunction.Natives.START_SHAPE_TEST_CAPSULE(x1, y1, z1, x2, y2, z2, radius, flags, entity, p9);
+		return NativeFunction.Natives.START_SHAPE_TEST_CAPSULE<int>(x1, y1, z1, x2, y2, z2, radius, flags, entity, p9);
 	}
 	public static int START_SHAPE_TEST_SWEPT_SPHERE(float x1, float y1, float z1, float x2, float y2, float z2, float radius, int flags, Entity entity)
 	{
-		return NativeFunction.Natives.START_SHAPE_TEST_SWEPT_SPHERE(x1, y1, z1, x2, y2, z2, radius, flags, entity, 0);
+		return NativeFunction.Natives.START_SHAPE_TEST_SWEPT_SPHERE<int>(x1, y1, z1, x2, y2, z2, radius, flags, entity, 0);
 	}
 	/// <summary>
 	/// 	Returns a ShapeTest handle that can be used with GET_SHAPE_TEST_RESULT.<br/>
@@ -30123,16 +30123,16 @@ public static class Natives
 	/// </summary>
 	public static int START_SHAPE_TEST_MOUSE_CURSOR_LOS_PROBE(out Vector3 pVec1, out Vector3 pVec2, int flag, Entity entity, int flag2)
 	{
-		return NativeFunction.Natives.START_SHAPE_TEST_MOUSE_CURSOR_LOS_PROBE(out pVec1, out pVec2, flag, entity, flag2);
+		return NativeFunction.Natives.START_SHAPE_TEST_MOUSE_CURSOR_LOS_PROBE<int>(out pVec1, out pVec2, flag, entity, flag2);
 	}
 	/// <summary>
 	/// 	Returns the result of a shape test: 0 if the handle is invalid, 1 if the shape test is still pending, or 2 if the shape test has completed, and the handle should be invalidated.<br/>
 	/// 	<br/>
 	/// 	When used with an asynchronous shape test, this native should be looped until returning 0 or 2, after which the handle is invalidated.
 	/// </summary>
-	public static int GET_SHAPE_TEST_RESULT(int shapeTestHandle, bool hit, out Vector3 endCoords, out Vector3 surfaceNormal, out Entity entityHit)
+	public static int GET_SHAPE_TEST_RESULT(int shapeTestHandle, out bool hit, out Vector3 endCoords, out Vector3 surfaceNormal, out Entity entityHit)
 	{
-		return NativeFunction.Natives.GET_SHAPE_TEST_RESULT(shapeTestHandle, hit, out endCoords, out surfaceNormal, out entityHit);
+		return NativeFunction.Natives.GET_SHAPE_TEST_RESULT<int>(shapeTestHandle, out hit, out endCoords, out surfaceNormal, out entityHit);
 	}
 	/// <summary>
 	/// 	Returns the result of a shape test, also returning the material of any touched surface.<br/>
@@ -30141,9 +30141,9 @@ public static class Natives
 	/// 	<br/>
 	/// 	Unless the return value is 2, the other return values are undefined.
 	/// </summary>
-	public static int GET_SHAPE_TEST_RESULT_INCLUDING_MATERIAL(int shapeTestHandle, bool hit, out Vector3 endCoords, out Vector3 surfaceNormal, ulong materialHash, out Entity entityHit)
+	public static int GET_SHAPE_TEST_RESULT_INCLUDING_MATERIAL(int shapeTestHandle, out bool hit, out Vector3 endCoords, out Vector3 surfaceNormal, out ulong materialHash, out Entity entityHit)
 	{
-		return NativeFunction.Natives.GET_SHAPE_TEST_RESULT_INCLUDING_MATERIAL(shapeTestHandle, hit, out endCoords, out surfaceNormal, materialHash, out entityHit);
+		return NativeFunction.Natives.GET_SHAPE_TEST_RESULT_INCLUDING_MATERIAL<int>(shapeTestHandle, out hit, out endCoords, out surfaceNormal, out materialHash, out entityHit);
 	}
 	/// <summary>
 	/// 	Invalidates the entity handle passed by removing the fwScriptGuid from the entity. This should be used when receiving an ambient entity from shape testing natives, but can also be used for other natives returning an &amp;apos;irrelevant&amp;apos; entity handle.
@@ -30157,39 +30157,39 @@ public static class Natives
 	*/
 	public static int SC_INBOX_GET_TOTAL_NUM_MESSAGES()
 	{
-		return NativeFunction.Natives.SC_INBOX_GET_TOTAL_NUM_MESSAGES();
+		return NativeFunction.Natives.SC_INBOX_GET_TOTAL_NUM_MESSAGES<int>();
 	}
 	public static ulong SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX(int msgIndex)
 	{
-		return NativeFunction.Natives.SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX(msgIndex);
+		return NativeFunction.Natives.SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX<ulong>(msgIndex);
 	}
 	public static bool SC_INBOX_GET_MESSAGE_IS_READ_AT_INDEX(int msgIndex)
 	{
-		return NativeFunction.Natives.SC_INBOX_GET_MESSAGE_IS_READ_AT_INDEX(msgIndex);
+		return NativeFunction.Natives.SC_INBOX_GET_MESSAGE_IS_READ_AT_INDEX<bool>(msgIndex);
 	}
 	public static bool SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(int msgIndex)
 	{
-		return NativeFunction.Natives.SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX(msgIndex);
+		return NativeFunction.Natives.SC_INBOX_SET_MESSAGE_AS_READ_AT_INDEX<bool>(msgIndex);
 	}
 	public static bool SC_INBOX_MESSAGE_GET_DATA_INT(int p0, string context, out int _out)
 	{
-		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_DATA_INT(p0, context, out _out);
+		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_DATA_INT<bool>(p0, context, out _out);
 	}
 	public static bool SC_INBOX_MESSAGE_GET_DATA_BOOL(int p0, string p1)
 	{
-		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_DATA_BOOL(p0, p1);
+		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_DATA_BOOL<bool>(p0, p1);
 	}
 	public static bool SC_INBOX_MESSAGE_GET_DATA_STRING(int p0, string context, out char _out)
 	{
-		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_DATA_STRING(p0, context, out _out);
+		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_DATA_STRING<bool>(p0, context, out _out);
 	}
 	public static bool SC_INBOX_MESSAGE_DO_APPLY(int p0)
 	{
-		return NativeFunction.Natives.SC_INBOX_MESSAGE_DO_APPLY(p0);
+		return NativeFunction.Natives.SC_INBOX_MESSAGE_DO_APPLY<bool>(p0);
 	}
 	public static string SC_INBOX_MESSAGE_GET_RAW_TYPE_AT_INDEX(int p0)
 	{
-		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_RAW_TYPE_AT_INDEX(p0);
+		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_RAW_TYPE_AT_INDEX<string>(p0);
 	}
 	public static void SC_INBOX_MESSAGE_PUSH_GAMER_T0_RECIP_LIST()
 	{
@@ -30201,11 +30201,11 @@ public static class Natives
 	}
 	public static bool SC_INBOX_MESSAGE_GET_UGCDATA(int p0)
 	{
-		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_UGCDATA(p0, 0);
+		return NativeFunction.Natives.SC_INBOX_MESSAGE_GET_UGCDATA<bool>(p0, 0);
 	}
 	public static bool SC_INBOX_GET_BOUNTY_DATA_AT_INDEX(int index)
 	{
-		return NativeFunction.Natives.SC_INBOX_GET_BOUNTY_DATA_AT_INDEX(index, 0);
+		return NativeFunction.Natives.SC_INBOX_GET_BOUNTY_DATA_AT_INDEX<bool>(index, 0);
 	}
 	public static void SC_EMAIL_RETRIEVE_EMAILS(int offset, int limit)
 	{
@@ -30213,15 +30213,15 @@ public static class Natives
 	}
 	public static int SC_EMAIL_GET_RETRIEVAL_STATUS()
 	{
-		return NativeFunction.Natives.SC_EMAIL_GET_RETRIEVAL_STATUS();
+		return NativeFunction.Natives.SC_EMAIL_GET_RETRIEVAL_STATUS<int>();
 	}
 	public static int SC_EMAIL_GET_NUM_RETRIEVED_EMAILS()
 	{
-		return NativeFunction.Natives.SC_EMAIL_GET_NUM_RETRIEVED_EMAILS();
+		return NativeFunction.Natives.SC_EMAIL_GET_NUM_RETRIEVED_EMAILS<int>();
 	}
 	public static bool SC_EMAIL_GET_EMAIL_AT_INDEX(int p0)
 	{
-		return NativeFunction.Natives.SC_EMAIL_GET_EMAIL_AT_INDEX(p0, 0);
+		return NativeFunction.Natives.SC_EMAIL_GET_EMAIL_AT_INDEX<bool>(p0, 0);
 	}
 	public static void _SC_EMAIL_MARKETING_EMAIL_OPENED(int index)
 	{
@@ -30245,7 +30245,7 @@ public static class Natives
 	}
 	public static bool SC_EMAIL_SET_CURRENT_EMAIL_TAG()
 	{
-		return NativeFunction.Natives.SC_EMAIL_SET_CURRENT_EMAIL_TAG(0);
+		return NativeFunction.Natives.SC_EMAIL_SET_CURRENT_EMAIL_TAG<bool>(0);
 	}
 	public static void SC_CACHE_NEW_ROCKSTAR_MSGS(bool toggle)
 	{
@@ -30253,47 +30253,47 @@ public static class Natives
 	}
 	public static bool SC_HAS_NEW_ROCKSTAR_MSG()
 	{
-		return NativeFunction.Natives.SC_HAS_NEW_ROCKSTAR_MSG();
+		return NativeFunction.Natives.SC_HAS_NEW_ROCKSTAR_MSG<bool>();
 	}
 	public static string SC_GET_NEW_ROCKSTAR_MSG()
 	{
-		return NativeFunction.Natives.SC_GET_NEW_ROCKSTAR_MSG();
+		return NativeFunction.Natives.SC_GET_NEW_ROCKSTAR_MSG<string>();
 	}
 	public static bool SC_PRESENCE_ATTR_SET_INT(ulong attrHash, int value)
 	{
-		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_INT(attrHash, value);
+		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_INT<bool>(attrHash, value);
 	}
 	public static bool SC_PRESENCE_ATTR_SET_FLOAT(ulong attrHash, float value)
 	{
-		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_FLOAT(attrHash, value);
+		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_FLOAT<bool>(attrHash, value);
 	}
 	public static bool SC_PRESENCE_ATTR_SET_STRING(ulong attrHash, string value)
 	{
-		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_STRING(attrHash, value);
+		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_STRING<bool>(attrHash, value);
 	}
 	public static bool SC_PRESENCE_SET_ACTIVITY_RATING(float p1)
 	{
-		return NativeFunction.Natives.SC_PRESENCE_SET_ACTIVITY_RATING(0, p1);
+		return NativeFunction.Natives.SC_PRESENCE_SET_ACTIVITY_RATING<bool>(0, p1);
 	}
 	public static bool SC_GAMERDATA_GET_INT(string name, out int value)
 	{
-		return NativeFunction.Natives.SC_GAMERDATA_GET_INT(name, out value);
+		return NativeFunction.Natives.SC_GAMERDATA_GET_INT<bool>(name, out value);
 	}
 	public static bool SC_GAMERDATA_GET_FLOAT(string name, out float value)
 	{
-		return NativeFunction.Natives.SC_GAMERDATA_GET_FLOAT(name, out value);
+		return NativeFunction.Natives.SC_GAMERDATA_GET_FLOAT<bool>(name, out value);
 	}
 	public static bool SC_GAMERDATA_GET_BOOL(string name)
 	{
-		return NativeFunction.Natives.SC_GAMERDATA_GET_BOOL(name);
+		return NativeFunction.Natives.SC_GAMERDATA_GET_BOOL<bool>(name);
 	}
 	public static bool SC_GAMERDATA_GET_STRING(string name, out char value)
 	{
-		return NativeFunction.Natives.SC_GAMERDATA_GET_STRING(name, out value);
+		return NativeFunction.Natives.SC_GAMERDATA_GET_STRING<bool>(name, out value);
 	}
 	public static bool SC_GAMERDATA_GET_ACTIVE_XP_BONUS(out float value)
 	{
-		return NativeFunction.Natives.SC_GAMERDATA_GET_ACTIVE_XP_BONUS(out value);
+		return NativeFunction.Natives.SC_GAMERDATA_GET_ACTIVE_XP_BONUS<bool>(out value);
 	}
 	/// <summary>
 	/// 	Starts a task to check an entered string for profanity on the ROS/Social Club services.<br/>
@@ -30302,27 +30302,27 @@ public static class Natives
 	/// </summary>
 	public static bool SC_PROFANITY_CHECK_STRING(string _string, out int token)
 	{
-		return NativeFunction.Natives.SC_PROFANITY_CHECK_STRING(_string, out token);
+		return NativeFunction.Natives.SC_PROFANITY_CHECK_STRING<bool>(_string, out token);
 	}
 	public static bool SC_PROFANITY_CHECK_STRING_UGC(string _string, out int token)
 	{
-		return NativeFunction.Natives.SC_PROFANITY_CHECK_STRING_UGC(_string, out token);
+		return NativeFunction.Natives.SC_PROFANITY_CHECK_STRING_UGC<bool>(_string, out token);
 	}
 	public static bool SC_PROFANITY_GET_CHECK_IS_VALID(int token)
 	{
-		return NativeFunction.Natives.SC_PROFANITY_GET_CHECK_IS_VALID(token);
+		return NativeFunction.Natives.SC_PROFANITY_GET_CHECK_IS_VALID<bool>(token);
 	}
 	public static bool SC_PROFANITY_GET_CHECK_IS_PENDING(int token)
 	{
-		return NativeFunction.Natives.SC_PROFANITY_GET_CHECK_IS_PENDING(token);
+		return NativeFunction.Natives.SC_PROFANITY_GET_CHECK_IS_PENDING<bool>(token);
 	}
 	public static bool SC_PROFANITY_GET_STRING_PASSED(int token)
 	{
-		return NativeFunction.Natives.SC_PROFANITY_GET_STRING_PASSED(token);
+		return NativeFunction.Natives.SC_PROFANITY_GET_STRING_PASSED<bool>(token);
 	}
 	public static int SC_PROFANITY_GET_STRING_STATUS(int token)
 	{
-		return NativeFunction.Natives.SC_PROFANITY_GET_STRING_STATUS(token);
+		return NativeFunction.Natives.SC_PROFANITY_GET_STRING_STATUS<int>(token);
 	}
 	/// <summary>
 	/// 	Retrieves the profane part of the string with max size of 128.<br/>
@@ -30330,147 +30330,147 @@ public static class Natives
 	/// </summary>
 	public static bool SC_PROFANITY_GET_PROFANE_WORD(int token, out char outProfaneWord)
 	{
-		return NativeFunction.Natives.SC_PROFANITY_GET_PROFANE_WORD(token, out outProfaneWord);
+		return NativeFunction.Natives.SC_PROFANITY_GET_PROFANE_WORD<bool>(token, out outProfaneWord);
 	}
 	public static bool SC_LICENSEPLATE_CHECK_STRING(string p0, out int p1)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_CHECK_STRING(p0, out p1);
+		return NativeFunction.Natives.SC_LICENSEPLATE_CHECK_STRING<bool>(p0, out p1);
 	}
 	public static bool SC_LICENSEPLATE_GET_CHECK_IS_VALID()
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_CHECK_IS_VALID(0);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_CHECK_IS_VALID<bool>(0);
 	}
 	public static bool SC_LICENSEPLATE_GET_CHECK_IS_PENDING()
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_CHECK_IS_PENDING(0);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_CHECK_IS_PENDING<bool>(0);
 	}
 	public static int SC_LICENSEPLATE_GET_COUNT(int token)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_COUNT(token);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_COUNT<int>(token);
 	}
 	public static string SC_LICENSEPLATE_GET_PLATE(int token, int plateIndex)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_PLATE(token, plateIndex);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_PLATE<string>(token, plateIndex);
 	}
 	public static string SC_LICENSEPLATE_GET_PLATE_DATA(int token, int plateIndex)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_PLATE_DATA(token, plateIndex);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_PLATE_DATA<string>(token, plateIndex);
 	}
 	public static bool SC_LICENSEPLATE_SET_PLATE_DATA(string oldPlateText, string newPlateText)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_SET_PLATE_DATA(oldPlateText, newPlateText, 0);
+		return NativeFunction.Natives.SC_LICENSEPLATE_SET_PLATE_DATA<bool>(oldPlateText, newPlateText, 0);
 	}
 	public static bool SC_LICENSEPLATE_ADD(string plateText, out int token)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_ADD(plateText, 0, out token);
+		return NativeFunction.Natives.SC_LICENSEPLATE_ADD<bool>(plateText, 0, out token);
 	}
 	public static bool SC_LICENSEPLATE_GET_ADD_IS_PENDING(int token)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ADD_IS_PENDING(token);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ADD_IS_PENDING<bool>(token);
 	}
 	public static int SC_LICENSEPLATE_GET_ADD_STATUS(int token)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ADD_STATUS(token);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ADD_STATUS<int>(token);
 	}
 	public static bool SC_LICENSEPLATE_ISVALID(string plateText, out int token)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_ISVALID(plateText, out token);
+		return NativeFunction.Natives.SC_LICENSEPLATE_ISVALID<bool>(plateText, out token);
 	}
 	public static bool SC_LICENSEPLATE_GET_ISVALID_IS_PENDING(int token)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ISVALID_IS_PENDING(token);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ISVALID_IS_PENDING<bool>(token);
 	}
 	public static int SC_LICENSEPLATE_GET_ISVALID_STATUS(int token)
 	{
-		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ISVALID_STATUS(token);
+		return NativeFunction.Natives.SC_LICENSEPLATE_GET_ISVALID_STATUS<int>(token);
 	}
 	public static bool SC_COMMUNITY_EVENT_IS_ACTIVE()
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_IS_ACTIVE();
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_IS_ACTIVE<bool>();
 	}
 	public static int SC_COMMUNITY_EVENT_GET_EVENT_ID()
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EVENT_ID();
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EVENT_ID<int>();
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT(string p0, out int p1)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT(p0, out p1);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT<bool>(p0, out p1);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT(string p0, out float p1)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT(p0, out p1);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT<bool>(p0, out p1);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING(string p0, out char p1)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING(p0, out p1);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING<bool>(p0, out p1);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_DISPLAY_NAME(out char p0)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_DISPLAY_NAME(out p0);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_DISPLAY_NAME<bool>(out p0);
 	}
 	public static bool SC_COMMUNITY_EVENT_IS_ACTIVE_FOR_TYPE(string p0)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_IS_ACTIVE_FOR_TYPE(p0);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_IS_ACTIVE_FOR_TYPE<bool>(p0);
 	}
 	public static int SC_COMMUNITY_EVENT_GET_EVENT_ID_FOR_TYPE(string p0)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EVENT_ID_FOR_TYPE(p0);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EVENT_ID_FOR_TYPE<int>(p0);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT_FOR_TYPE(string p0, out int p1, string p2)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT_FOR_TYPE(p0, out p1, p2);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT_FOR_TYPE<bool>(p0, out p1, p2);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT_FOR_TYPE(string p0, out float p1, string p2)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT_FOR_TYPE(p0, out p1, p2);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT_FOR_TYPE<bool>(p0, out p1, p2);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING_FOR_TYPE(string p0, out char p1, string p2)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING_FOR_TYPE(p0, out p1, p2);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING_FOR_TYPE<bool>(p0, out p1, p2);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_DISPLAY_NAME_FOR_TYPE(out char p0, string p1)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_DISPLAY_NAME_FOR_TYPE(out p0, p1);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_DISPLAY_NAME_FOR_TYPE<bool>(out p0, p1);
 	}
 	public static bool SC_COMMUNITY_EVENT_IS_ACTIVE_BY_ID(int p0)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_IS_ACTIVE_BY_ID(p0);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_IS_ACTIVE_BY_ID<bool>(p0);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT_BY_ID(int p0, string p1, out int p2)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT_BY_ID(p0, p1, out p2);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT_BY_ID<bool>(p0, p1, out p2);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT_BY_ID(int p0, string p1, out float p2)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT_BY_ID(p0, p1, out p2);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_FLOAT_BY_ID<bool>(p0, p1, out p2);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING_BY_ID(int p0, string p1, out char p2)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING_BY_ID(p0, p1, out p2);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_EXTRA_DATA_STRING_BY_ID<bool>(p0, p1, out p2);
 	}
 	public static bool SC_COMMUNITY_EVENT_GET_DISPLAY_NAME_BY_ID(int p0, out char p1)
 	{
-		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_DISPLAY_NAME_BY_ID(p0, out p1);
+		return NativeFunction.Natives.SC_COMMUNITY_EVENT_GET_DISPLAY_NAME_BY_ID<bool>(p0, out p1);
 	}
 	public static bool SC_TRANSITION_NEWS_SHOW()
 	{
-		return NativeFunction.Natives.SC_TRANSITION_NEWS_SHOW(0);
+		return NativeFunction.Natives.SC_TRANSITION_NEWS_SHOW<bool>(0);
 	}
 	public static bool SC_TRANSITION_NEWS_SHOW_TIMED()
 	{
-		return NativeFunction.Natives.SC_TRANSITION_NEWS_SHOW_TIMED(0, 0);
+		return NativeFunction.Natives.SC_TRANSITION_NEWS_SHOW_TIMED<bool>(0, 0);
 	}
 	public static bool SC_TRANSITION_NEWS_SHOW_NEXT_ITEM()
 	{
-		return NativeFunction.Natives.SC_TRANSITION_NEWS_SHOW_NEXT_ITEM();
+		return NativeFunction.Natives.SC_TRANSITION_NEWS_SHOW_NEXT_ITEM<bool>();
 	}
 	public static bool SC_TRANSITION_NEWS_HAS_EXTRA_DATA_TU()
 	{
-		return NativeFunction.Natives.SC_TRANSITION_NEWS_HAS_EXTRA_DATA_TU();
+		return NativeFunction.Natives.SC_TRANSITION_NEWS_HAS_EXTRA_DATA_TU<bool>();
 	}
 	public static bool SC_TRANSITION_NEWS_GET_EXTRA_DATA_INT_TU(string p0, out int p1)
 	{
-		return NativeFunction.Natives.SC_TRANSITION_NEWS_GET_EXTRA_DATA_INT_TU(p0, out p1);
+		return NativeFunction.Natives.SC_TRANSITION_NEWS_GET_EXTRA_DATA_INT_TU<bool>(p0, out p1);
 	}
 	public static void SC_TRANSITION_NEWS_END()
 	{
@@ -30478,14 +30478,14 @@ public static class Natives
 	}
 	public static bool SC_PAUSE_NEWS_INIT_STARTER_PACK()
 	{
-		return NativeFunction.Natives.SC_PAUSE_NEWS_INIT_STARTER_PACK(0);
+		return NativeFunction.Natives.SC_PAUSE_NEWS_INIT_STARTER_PACK<bool>(0);
 	}
 	/// <summary>
 	/// 	Fills some 0x30 sized struct
 	/// </summary>
 	public static bool SC_PAUSE_NEWS_GET_PENDING_STORY()
 	{
-		return NativeFunction.Natives.SC_PAUSE_NEWS_GET_PENDING_STORY(0);
+		return NativeFunction.Natives.SC_PAUSE_NEWS_GET_PENDING_STORY<bool>(0);
 	}
 	public static void SC_PAUSE_NEWS_SHUTDOWN()
 	{
@@ -30496,18 +30496,18 @@ public static class Natives
 	/// </summary>
 	public static string SC_ACCOUNT_INFO_GET_NICKNAME()
 	{
-		return NativeFunction.Natives.SC_ACCOUNT_INFO_GET_NICKNAME();
+		return NativeFunction.Natives.SC_ACCOUNT_INFO_GET_NICKNAME<string>();
 	}
 	public static bool SC_ACHIEVEMENT_INFO_STATUS(out int p0)
 	{
-		return NativeFunction.Natives.SC_ACHIEVEMENT_INFO_STATUS(out p0);
+		return NativeFunction.Natives.SC_ACHIEVEMENT_INFO_STATUS<bool>(out p0);
 	}
 	/// <summary>
 	/// 	Same as HAS_ACHIEVEMENT_BEEN_PASSED
 	/// </summary>
 	public static bool SC_HAS_ACHIEVEMENT_BEEN_PASSED(int achievementId)
 	{
-		return NativeFunction.Natives.SC_HAS_ACHIEVEMENT_BEEN_PASSED(achievementId);
+		return NativeFunction.Natives.SC_HAS_ACHIEVEMENT_BEEN_PASSED<bool>(achievementId);
 	}
 	/*
 		STATS
@@ -30521,15 +30521,15 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_CLEAR_SLOT_FOR_RELOAD(int statSlot)
 	{
-		return NativeFunction.Natives.STAT_CLEAR_SLOT_FOR_RELOAD(statSlot);
+		return NativeFunction.Natives.STAT_CLEAR_SLOT_FOR_RELOAD<bool>(statSlot);
 	}
 	public static bool STAT_LOAD(int statSlot)
 	{
-		return NativeFunction.Natives.STAT_LOAD(statSlot);
+		return NativeFunction.Natives.STAT_LOAD<bool>(statSlot);
 	}
 	public static bool STAT_SAVE(int p0, bool p1, int p2, bool p3)
 	{
-		return NativeFunction.Natives.STAT_SAVE(p0, p1, p2, p3);
+		return NativeFunction.Natives.STAT_SAVE<bool>(p0, p1, p2, p3);
 	}
 	public static void STAT_SET_OPEN_SAVETYPE_IN_JOB(int p0)
 	{
@@ -30537,34 +30537,34 @@ public static class Natives
 	}
 	public static bool STAT_LOAD_PENDING(int statSlot)
 	{
-		return NativeFunction.Natives.STAT_LOAD_PENDING(statSlot);
+		return NativeFunction.Natives.STAT_LOAD_PENDING<bool>(statSlot);
 	}
 	public static bool STAT_SAVE_PENDING()
 	{
-		return NativeFunction.Natives.STAT_SAVE_PENDING();
+		return NativeFunction.Natives.STAT_SAVE_PENDING<bool>();
 	}
 	public static bool STAT_SAVE_PENDING_OR_REQUESTED()
 	{
-		return NativeFunction.Natives.STAT_SAVE_PENDING_OR_REQUESTED();
+		return NativeFunction.Natives.STAT_SAVE_PENDING_OR_REQUESTED<bool>();
 	}
 	/// <summary>
 	/// 	p0 is characterSlot? seems range from 0 to 2
 	/// </summary>
 	public static bool STAT_DELETE_SLOT(int p0)
 	{
-		return NativeFunction.Natives.STAT_DELETE_SLOT(p0);
+		return NativeFunction.Natives.STAT_DELETE_SLOT<bool>(p0);
 	}
 	public static bool STAT_SLOT_IS_LOADED(int statSlot)
 	{
-		return NativeFunction.Natives.STAT_SLOT_IS_LOADED(statSlot);
+		return NativeFunction.Natives.STAT_SLOT_IS_LOADED<bool>(statSlot);
 	}
 	public static bool STAT_CLOUD_SLOT_LOAD_FAILED(int p0)
 	{
-		return NativeFunction.Natives.STAT_CLOUD_SLOT_LOAD_FAILED(p0);
+		return NativeFunction.Natives.STAT_CLOUD_SLOT_LOAD_FAILED<bool>(p0);
 	}
 	public static int STAT_CLOUD_SLOT_LOAD_FAILED_CODE()
 	{
-		return NativeFunction.Natives.STAT_CLOUD_SLOT_LOAD_FAILED_CODE(0);
+		return NativeFunction.Natives.STAT_CLOUD_SLOT_LOAD_FAILED_CODE<int>(0);
 	}
 	public static void STAT_SET_BLOCK_SAVES(bool toggle)
 	{
@@ -30572,11 +30572,11 @@ public static class Natives
 	}
 	public static bool STAT_GET_BLOCK_SAVES()
 	{
-		return NativeFunction.Natives.STAT_GET_BLOCK_SAVES();
+		return NativeFunction.Natives.STAT_GET_BLOCK_SAVES<bool>();
 	}
 	public static bool STAT_CLOUD_SLOT_SAVE_FAILED()
 	{
-		return NativeFunction.Natives.STAT_CLOUD_SLOT_SAVE_FAILED(0);
+		return NativeFunction.Natives.STAT_CLOUD_SLOT_SAVE_FAILED<bool>(0);
 	}
 	public static void STAT_CLEAR_PENDING_SAVES()
 	{
@@ -30584,7 +30584,7 @@ public static class Natives
 	}
 	public static bool STAT_LOAD_DIRTY_READ_DETECTED()
 	{
-		return NativeFunction.Natives.STAT_LOAD_DIRTY_READ_DETECTED();
+		return NativeFunction.Natives.STAT_LOAD_DIRTY_READ_DETECTED<bool>();
 	}
 	public static void STAT_CLEAR_DIRTY_READ_DETECTED()
 	{
@@ -30592,14 +30592,14 @@ public static class Natives
 	}
 	public static bool STAT_GET_LOAD_SAFE_TO_PROGRESS_TO_MP_FROM_SP()
 	{
-		return NativeFunction.Natives.STAT_GET_LOAD_SAFE_TO_PROGRESS_TO_MP_FROM_SP();
+		return NativeFunction.Natives.STAT_GET_LOAD_SAFE_TO_PROGRESS_TO_MP_FROM_SP<bool>();
 	}
 	/// <summary>
 	/// 	Returns stat hash based on dataType, statIndex/statId and characterSlot. Related to CStatsMpCharacterMappingData
 	/// </summary>
 	public static ulong _GET_STAT_HASH_FOR_CHARACTER_STAT(int dataType, int statIndex, int charSlot)
 	{
-		return NativeFunction.Natives._GET_STAT_HASH_FOR_CHARACTER_STAT(dataType, statIndex, charSlot);
+		return NativeFunction.Natives._GET_STAT_HASH_FOR_CHARACTER_STAT<ulong>(dataType, statIndex, charSlot);
 	}
 	/// <summary>
 	/// 	Example:<br/>
@@ -30607,7 +30607,7 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_SET_INT(ulong statName, int value, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_INT(statName, value, save);
+		return NativeFunction.Natives.STAT_SET_INT<bool>(statName, value, save);
 	}
 	/// <summary>
 	/// 	Example:<br/>
@@ -30615,7 +30615,7 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_SET_FLOAT(ulong statName, float value, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_FLOAT(statName, value, save);
+		return NativeFunction.Natives.STAT_SET_FLOAT<bool>(statName, value, save);
 	}
 	/// <summary>
 	/// 	Example:<br/>
@@ -30623,7 +30623,7 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_SET_BOOL(ulong statName, bool value, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_BOOL(statName, value, save);
+		return NativeFunction.Natives.STAT_SET_BOOL<bool>(statName, value, save);
 	}
 	/// <summary>
 	/// 	The following values have been found in the decompiled scripts:<br/>
@@ -30693,7 +30693,7 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_SET_GXT_LABEL(ulong statName, string value, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_GXT_LABEL(statName, value, save);
+		return NativeFunction.Natives.STAT_SET_GXT_LABEL<bool>(statName, value, save);
 	}
 	/// <summary>
 	/// 	&amp;apos;value&amp;apos; is a structure to a structure, &amp;apos;numFields&amp;apos; is how many fields there are in said structure (usually 7).<br/>
@@ -30712,30 +30712,30 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_SET_DATE(ulong statName, int numFields, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_DATE(statName, 0, numFields, save);
+		return NativeFunction.Natives.STAT_SET_DATE<bool>(statName, 0, numFields, save);
 	}
 	public static bool STAT_SET_STRING(ulong statName, string value, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_STRING(statName, value, save);
+		return NativeFunction.Natives.STAT_SET_STRING<bool>(statName, value, save);
 	}
 	public static bool STAT_SET_POS(ulong statName, float x, float y, float z, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_POS(statName, x, y, z, save);
+		return NativeFunction.Natives.STAT_SET_POS<bool>(statName, x, y, z, save);
 	}
 	public static bool STAT_SET_MASKED_INT(ulong statName, int p1, int p2, int p3, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_MASKED_INT(statName, p1, p2, p3, save);
+		return NativeFunction.Natives.STAT_SET_MASKED_INT<bool>(statName, p1, p2, p3, save);
 	}
 	public static bool STAT_SET_USER_ID(ulong statName, string value, bool save)
 	{
-		return NativeFunction.Natives.STAT_SET_USER_ID(statName, value, save);
+		return NativeFunction.Natives.STAT_SET_USER_ID<bool>(statName, value, save);
 	}
 	/// <summary>
 	/// 	p1 always true.
 	/// </summary>
 	public static bool STAT_SET_CURRENT_POSIX_TIME(ulong statName, bool p1)
 	{
-		return NativeFunction.Natives.STAT_SET_CURRENT_POSIX_TIME(statName, p1);
+		return NativeFunction.Natives.STAT_SET_CURRENT_POSIX_TIME<bool>(statName, p1);
 	}
 	/// <summary>
 	/// 	p2 appears to always be -1<br/>
@@ -30743,58 +30743,58 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_GET_INT(ulong statHash, out int outValue, int p2)
 	{
-		return NativeFunction.Natives.STAT_GET_INT(statHash, out outValue, p2);
+		return NativeFunction.Natives.STAT_GET_INT<bool>(statHash, out outValue, p2);
 	}
 	public static bool STAT_GET_FLOAT(ulong statHash, out float outValue)
 	{
-		return NativeFunction.Natives.STAT_GET_FLOAT(statHash, out outValue, 0);
+		return NativeFunction.Natives.STAT_GET_FLOAT<bool>(statHash, out outValue, 0);
 	}
-	public static bool STAT_GET_BOOL(ulong statHash, bool outValue)
+	public static bool STAT_GET_BOOL(ulong statHash, out bool outValue)
 	{
-		return NativeFunction.Natives.STAT_GET_BOOL(statHash, outValue, 0);
+		return NativeFunction.Natives.STAT_GET_BOOL<bool>(statHash, out outValue, 0);
 	}
 	/// <summary>
 	/// 	p3 is probably characterSlot or BOOL save, always -1
 	/// </summary>
 	public static bool STAT_GET_DATE(ulong statHash, int numFields)
 	{
-		return NativeFunction.Natives.STAT_GET_DATE(statHash, 0, numFields, 0);
+		return NativeFunction.Natives.STAT_GET_DATE<bool>(statHash, 0, numFields, 0);
 	}
 	/// <summary>
 	/// 	p1 is always -1 in the script files
 	/// </summary>
 	public static string STAT_GET_STRING(ulong statHash, int p1)
 	{
-		return NativeFunction.Natives.STAT_GET_STRING(statHash, p1);
+		return NativeFunction.Natives.STAT_GET_STRING<string>(statHash, p1);
 	}
 	/// <summary>
 	/// 	p3 is probably characterSlot or BOOL save, always -1
 	/// </summary>
 	public static bool STAT_GET_POS(ulong statName, out float outX, out float outY, out float outZ)
 	{
-		return NativeFunction.Natives.STAT_GET_POS(statName, out outX, out outY, out outZ, 0);
+		return NativeFunction.Natives.STAT_GET_POS<bool>(statName, out outX, out outY, out outZ, 0);
 	}
 	/// <summary>
 	/// 	p4 is probably characterSlot or BOOL save
 	/// </summary>
 	public static bool STAT_GET_MASKED_INT(ulong statHash, out int outValue, int p2, int p3)
 	{
-		return NativeFunction.Natives.STAT_GET_MASKED_INT(statHash, out outValue, p2, p3, 0);
+		return NativeFunction.Natives.STAT_GET_MASKED_INT<bool>(statHash, out outValue, p2, p3, 0);
 	}
 	/// <summary>
 	/// 	Returns the rockstar ID (user id) value of a given stat. Returns &amp;quot;STAT_UNKNOWN&amp;quot; if the statHash is invalid or the stat has no userId
 	/// </summary>
 	public static string STAT_GET_USER_ID(ulong statHash)
 	{
-		return NativeFunction.Natives.STAT_GET_USER_ID(statHash);
+		return NativeFunction.Natives.STAT_GET_USER_ID<string>(statHash);
 	}
 	public static string STAT_GET_LICENSE_PLATE(ulong statName)
 	{
-		return NativeFunction.Natives.STAT_GET_LICENSE_PLATE(statName);
+		return NativeFunction.Natives.STAT_GET_LICENSE_PLATE<string>(statName);
 	}
 	public static bool STAT_SET_LICENSE_PLATE(ulong statName, string str)
 	{
-		return NativeFunction.Natives.STAT_SET_LICENSE_PLATE(statName, str);
+		return NativeFunction.Natives.STAT_SET_LICENSE_PLATE<bool>(statName, str);
 	}
 	public static void STAT_INCREMENT(ulong statName, float value)
 	{
@@ -30802,15 +30802,15 @@ public static class Natives
 	}
 	public static bool STAT_COMMUNITY_START_SYNCH()
 	{
-		return NativeFunction.Natives.STAT_COMMUNITY_START_SYNCH();
+		return NativeFunction.Natives.STAT_COMMUNITY_START_SYNCH<bool>();
 	}
 	public static bool STAT_COMMUNITY_SYNCH_IS_PENDING()
 	{
-		return NativeFunction.Natives.STAT_COMMUNITY_SYNCH_IS_PENDING();
+		return NativeFunction.Natives.STAT_COMMUNITY_SYNCH_IS_PENDING<bool>();
 	}
 	public static bool STAT_COMMUNITY_GET_HISTORY(ulong statName, int p1, out float outValue)
 	{
-		return NativeFunction.Natives.STAT_COMMUNITY_GET_HISTORY(statName, p1, out outValue);
+		return NativeFunction.Natives.STAT_COMMUNITY_GET_HISTORY<bool>(statName, p1, out outValue);
 	}
 	/// <summary>
 	/// 	p0 seems to range from 0 to 7
@@ -30828,19 +30828,19 @@ public static class Natives
 	}
 	public static int STAT_GET_NUMBER_OF_DAYS(ulong statName)
 	{
-		return NativeFunction.Natives.STAT_GET_NUMBER_OF_DAYS(statName);
+		return NativeFunction.Natives.STAT_GET_NUMBER_OF_DAYS<int>(statName);
 	}
 	public static int STAT_GET_NUMBER_OF_HOURS(ulong statName)
 	{
-		return NativeFunction.Natives.STAT_GET_NUMBER_OF_HOURS(statName);
+		return NativeFunction.Natives.STAT_GET_NUMBER_OF_HOURS<int>(statName);
 	}
 	public static int STAT_GET_NUMBER_OF_MINUTES(ulong statName)
 	{
-		return NativeFunction.Natives.STAT_GET_NUMBER_OF_MINUTES(statName);
+		return NativeFunction.Natives.STAT_GET_NUMBER_OF_MINUTES<int>(statName);
 	}
 	public static int STAT_GET_NUMBER_OF_SECONDS(ulong statName)
 	{
-		return NativeFunction.Natives.STAT_GET_NUMBER_OF_SECONDS(statName);
+		return NativeFunction.Natives.STAT_GET_NUMBER_OF_SECONDS<int>(statName);
 	}
 	/// <summary>
 	/// 	Does not take effect immediately, unfortunately.<br/>
@@ -30863,15 +30863,15 @@ public static class Natives
 	/// </summary>
 	public static int PACKED_STAT_GET_INT_STAT_INDEX(int p0)
 	{
-		return NativeFunction.Natives.PACKED_STAT_GET_INT_STAT_INDEX(p0);
+		return NativeFunction.Natives.PACKED_STAT_GET_INT_STAT_INDEX<int>(p0);
 	}
 	public static ulong GET_PACKED_INT_STAT_KEY(int index, bool spStat, bool charStat, int character)
 	{
-		return NativeFunction.Natives.GET_PACKED_INT_STAT_KEY(index, spStat, charStat, character);
+		return NativeFunction.Natives.GET_PACKED_INT_STAT_KEY<ulong>(index, spStat, charStat, character);
 	}
 	public static ulong GET_PACKED_TU_INT_STAT_KEY(int index, bool spStat, bool charStat, int character)
 	{
-		return NativeFunction.Natives.GET_PACKED_TU_INT_STAT_KEY(index, spStat, charStat, character);
+		return NativeFunction.Natives.GET_PACKED_TU_INT_STAT_KEY<ulong>(index, spStat, charStat, character);
 	}
 	/// <summary>
 	/// 	Needs more research. Gets the stat name of a masked int?<br/>
@@ -30896,15 +30896,15 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_PACKED_NG_INT_STAT_KEY(int index, bool spStat, bool charStat, int character, string section)
 	{
-		return NativeFunction.Natives.GET_PACKED_NG_INT_STAT_KEY(index, spStat, charStat, character, section);
+		return NativeFunction.Natives.GET_PACKED_NG_INT_STAT_KEY<ulong>(index, spStat, charStat, character, section);
 	}
 	public static bool GET_PACKED_STAT_BOOL_CODE(int index, int characterSlot)
 	{
-		return NativeFunction.Natives.GET_PACKED_STAT_BOOL_CODE(index, characterSlot);
+		return NativeFunction.Natives.GET_PACKED_STAT_BOOL_CODE<bool>(index, characterSlot);
 	}
 	public static int GET_PACKED_STAT_INT_CODE(int index, int characterSlot)
 	{
-		return NativeFunction.Natives.GET_PACKED_STAT_INT_CODE(index, characterSlot);
+		return NativeFunction.Natives.GET_PACKED_STAT_INT_CODE<int>(index, characterSlot);
 	}
 	public static void SET_PACKED_STAT_BOOL_CODE(int index, bool value, int characterSlot)
 	{
@@ -30980,7 +30980,7 @@ public static class Natives
 	}
 	public static bool PLAYSTATS_CREATE_MATCH_HISTORY_ID_2(out int playerAccountId, out int posixTime)
 	{
-		return NativeFunction.Natives.PLAYSTATS_CREATE_MATCH_HISTORY_ID_2(out playerAccountId, out posixTime);
+		return NativeFunction.Natives.PLAYSTATS_CREATE_MATCH_HISTORY_ID_2<bool>(out playerAccountId, out posixTime);
 	}
 	public static void PLAYSTATS_MATCH_STARTED()
 	{
@@ -31161,71 +31161,71 @@ public static class Natives
 	}
 	public static int LEADERBOARDS_GET_NUMBER_OF_COLUMNS(int p0)
 	{
-		return NativeFunction.Natives.LEADERBOARDS_GET_NUMBER_OF_COLUMNS(p0, 0);
+		return NativeFunction.Natives.LEADERBOARDS_GET_NUMBER_OF_COLUMNS<int>(p0, 0);
 	}
 	public static int LEADERBOARDS_GET_COLUMN_ID(int p0, int p1, int p2)
 	{
-		return NativeFunction.Natives.LEADERBOARDS_GET_COLUMN_ID(p0, p1, p2);
+		return NativeFunction.Natives.LEADERBOARDS_GET_COLUMN_ID<int>(p0, p1, p2);
 	}
 	public static int LEADERBOARDS_GET_COLUMN_TYPE(int p0)
 	{
-		return NativeFunction.Natives.LEADERBOARDS_GET_COLUMN_TYPE(p0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS_GET_COLUMN_TYPE<int>(p0, 0, 0);
 	}
 	public static int LEADERBOARDS_READ_CLEAR_ALL()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_READ_CLEAR_ALL();
+		return NativeFunction.Natives.LEADERBOARDS_READ_CLEAR_ALL<int>();
 	}
 	public static int LEADERBOARDS_READ_CLEAR()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_READ_CLEAR(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS_READ_CLEAR<int>(0, 0, 0);
 	}
 	public static bool LEADERBOARDS_READ_PENDING()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_READ_PENDING(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS_READ_PENDING<bool>(0, 0, 0);
 	}
 	public static bool LEADERBOARDS_READ_ANY_PENDING()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_READ_ANY_PENDING();
+		return NativeFunction.Natives.LEADERBOARDS_READ_ANY_PENDING<bool>();
 	}
 	public static bool LEADERBOARDS_READ_SUCCESSFUL()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_READ_SUCCESSFUL(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS_READ_SUCCESSFUL<bool>(0, 0, 0);
 	}
 	public static bool LEADERBOARDS2_READ_FRIENDS_BY_ROW(bool p3)
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_FRIENDS_BY_ROW(0, 0, 0, p3, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_FRIENDS_BY_ROW<bool>(0, 0, 0, p3, 0, 0);
 	}
 	public static bool LEADERBOARDS2_READ_BY_HANDLE()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_HANDLE(0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_HANDLE<bool>(0, 0);
 	}
 	public static bool LEADERBOARDS2_READ_BY_RANK()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_RANK(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_RANK<bool>(0, 0, 0);
 	}
 	public static bool LEADERBOARDS2_READ_BY_RADIUS()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_RADIUS(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_RADIUS<bool>(0, 0, 0);
 	}
 	public static bool LEADERBOARDS2_READ_BY_SCORE_INT()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_SCORE_INT(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_SCORE_INT<bool>(0, 0, 0);
 	}
 	public static bool LEADERBOARDS2_READ_BY_SCORE_FLOAT(float p1)
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_SCORE_FLOAT(0, p1, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_SCORE_FLOAT<bool>(0, p1, 0);
 	}
 	public static bool LEADERBOARDS2_READ_RANK_PREDICTION()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_RANK_PREDICTION(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_RANK_PREDICTION<bool>(0, 0, 0);
 	}
 	public static bool LEADERBOARDS2_READ_BY_PLAFORM(string gamerHandleCsv, string platformName)
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_PLAFORM(0, gamerHandleCsv, platformName);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_BY_PLAFORM<bool>(0, gamerHandleCsv, platformName);
 	}
 	public static bool LEADERBOARDS2_READ_GET_ROW_DATA_START()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_START(0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_START<bool>(0);
 	}
 	public static void LEADERBOARDS2_READ_GET_ROW_DATA_END()
 	{
@@ -31233,19 +31233,19 @@ public static class Natives
 	}
 	public static bool LEADERBOARDS2_READ_GET_ROW_DATA_INFO()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_INFO(0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_INFO<bool>(0, 0);
 	}
 	public static int LEADERBOARDS2_READ_GET_ROW_DATA_INT()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_INT(0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_INT<int>(0, 0);
 	}
 	public static float LEADERBOARDS2_READ_GET_ROW_DATA_FLOAT()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_FLOAT(0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_READ_GET_ROW_DATA_FLOAT<float>(0, 0);
 	}
 	public static bool LEADERBOARDS2_WRITE_DATA()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_WRITE_DATA(0);
+		return NativeFunction.Natives.LEADERBOARDS2_WRITE_DATA<bool>(0);
 	}
 	public static void LEADERBOARDS_WRITE_ADD_COLUMN(float p2)
 	{
@@ -31257,7 +31257,7 @@ public static class Natives
 	}
 	public static bool LEADERBOARDS_CACHE_DATA_ROW()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_CACHE_DATA_ROW(0);
+		return NativeFunction.Natives.LEADERBOARDS_CACHE_DATA_ROW<bool>(0);
 	}
 	public static void LEADERBOARDS_CLEAR_CACHE_DATA()
 	{
@@ -31269,19 +31269,19 @@ public static class Natives
 	}
 	public static bool LEADERBOARDS_GET_CACHE_EXISTS()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_EXISTS(0);
+		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_EXISTS<bool>(0);
 	}
 	public static int LEADERBOARDS_GET_CACHE_TIME()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_TIME(0);
+		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_TIME<int>(0);
 	}
 	public static int LEADERBOARDS_GET_CACHE_NUMBER_OF_ROWS()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_NUMBER_OF_ROWS(0);
+		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_NUMBER_OF_ROWS<int>(0);
 	}
 	public static bool LEADERBOARDS_GET_CACHE_DATA_ROW()
 	{
-		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_DATA_ROW(0, 0, 0);
+		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_DATA_ROW<bool>(0, 0, 0);
 	}
 	public static void PRESENCE_EVENT_UPDATESTAT_INT(ulong statHash, int value, int p2)
 	{
@@ -31297,7 +31297,7 @@ public static class Natives
 	}
 	public static bool GET_PLAYER_HAS_DRIVEN_ALL_VEHICLES()
 	{
-		return NativeFunction.Natives.GET_PLAYER_HAS_DRIVEN_ALL_VEHICLES();
+		return NativeFunction.Natives.GET_PLAYER_HAS_DRIVEN_ALL_VEHICLES<bool>();
 	}
 	public static void SET_HAS_POSTED_ALL_VEHICLES_DRIVEN()
 	{
@@ -31360,7 +31360,7 @@ public static class Natives
 	}
 	public static bool LEADERBOARDS2_WRITE_DATA_FOR_EVENT_TYPE()
 	{
-		return NativeFunction.Natives.LEADERBOARDS2_WRITE_DATA_FOR_EVENT_TYPE(0, 0);
+		return NativeFunction.Natives.LEADERBOARDS2_WRITE_DATA_FOR_EVENT_TYPE<bool>(0, 0);
 	}
 	public static void FORCE_CLOUD_MP_STATS_DOWNLOAD_AND_OVERWRITE_LOCAL_SAVE()
 	{
@@ -31375,47 +31375,47 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_MIGRATE_SAVEGAME_START(string platformName)
 	{
-		return NativeFunction.Natives.STAT_MIGRATE_SAVEGAME_START(platformName);
+		return NativeFunction.Natives.STAT_MIGRATE_SAVEGAME_START<bool>(platformName);
 	}
 	public static int STAT_MIGRATE_SAVEGAME_GET_STATUS()
 	{
-		return NativeFunction.Natives.STAT_MIGRATE_SAVEGAME_GET_STATUS();
+		return NativeFunction.Natives.STAT_MIGRATE_SAVEGAME_GET_STATUS<int>();
 	}
 	public static bool STAT_MIGRATE_CHECK_ALREADY_DONE()
 	{
-		return NativeFunction.Natives.STAT_MIGRATE_CHECK_ALREADY_DONE();
+		return NativeFunction.Natives.STAT_MIGRATE_CHECK_ALREADY_DONE<bool>();
 	}
 	public static bool STAT_MIGRATE_CHECK_START()
 	{
-		return NativeFunction.Natives.STAT_MIGRATE_CHECK_START();
+		return NativeFunction.Natives.STAT_MIGRATE_CHECK_START<bool>();
 	}
 	public static int STAT_MIGRATE_CHECK_GET_IS_PLATFORM_AVAILABLE(int p0)
 	{
-		return NativeFunction.Natives.STAT_MIGRATE_CHECK_GET_IS_PLATFORM_AVAILABLE(p0);
+		return NativeFunction.Natives.STAT_MIGRATE_CHECK_GET_IS_PLATFORM_AVAILABLE<int>(p0);
 	}
 	public static int STAT_MIGRATE_CHECK_GET_PLATFORM_STATUS(int p0)
 	{
-		return NativeFunction.Natives.STAT_MIGRATE_CHECK_GET_PLATFORM_STATUS(p0, 0);
+		return NativeFunction.Natives.STAT_MIGRATE_CHECK_GET_PLATFORM_STATUS<int>(p0, 0);
 	}
 	public static int STAT_GET_SAVE_MIGRATION_STATUS()
 	{
-		return NativeFunction.Natives.STAT_GET_SAVE_MIGRATION_STATUS(0);
+		return NativeFunction.Natives.STAT_GET_SAVE_MIGRATION_STATUS<int>(0);
 	}
 	public static bool STAT_SAVE_MIGRATION_CANCEL_PENDING_OPERATION()
 	{
-		return NativeFunction.Natives.STAT_SAVE_MIGRATION_CANCEL_PENDING_OPERATION();
+		return NativeFunction.Natives.STAT_SAVE_MIGRATION_CANCEL_PENDING_OPERATION<bool>();
 	}
 	public static int STAT_GET_CANCEL_SAVE_MIGRATION_STATUS()
 	{
-		return NativeFunction.Natives.STAT_GET_CANCEL_SAVE_MIGRATION_STATUS();
+		return NativeFunction.Natives.STAT_GET_CANCEL_SAVE_MIGRATION_STATUS<int>();
 	}
 	public static bool STAT_SAVE_MIGRATION_CONSUME_CONTENT(ulong contentId, string srcPlatform, string srcGamerHandle)
 	{
-		return NativeFunction.Natives.STAT_SAVE_MIGRATION_CONSUME_CONTENT(contentId, srcPlatform, srcGamerHandle);
+		return NativeFunction.Natives.STAT_SAVE_MIGRATION_CONSUME_CONTENT<bool>(contentId, srcPlatform, srcGamerHandle);
 	}
 	public static int STAT_GET_SAVE_MIGRATION_CONSUME_CONTENT_STATUS(out int p0)
 	{
-		return NativeFunction.Natives.STAT_GET_SAVE_MIGRATION_CONSUME_CONTENT_STATUS(out p0);
+		return NativeFunction.Natives.STAT_GET_SAVE_MIGRATION_CONSUME_CONTENT_STATUS<int>(out p0);
 	}
 	public static void STAT_ENABLE_STATS_TRACKING()
 	{
@@ -31430,7 +31430,7 @@ public static class Natives
 	}
 	public static bool STAT_IS_STATS_TRACKING_ENABLED()
 	{
-		return NativeFunction.Natives.STAT_IS_STATS_TRACKING_ENABLED();
+		return NativeFunction.Natives.STAT_IS_STATS_TRACKING_ENABLED<bool>();
 	}
 	/// <summary>
 	/// 	enum StatTrackingType<br/>
@@ -31477,107 +31477,107 @@ public static class Natives
 	/// </summary>
 	public static bool STAT_START_RECORD_STAT(int statType, int valueType)
 	{
-		return NativeFunction.Natives.STAT_START_RECORD_STAT(statType, valueType);
+		return NativeFunction.Natives.STAT_START_RECORD_STAT<bool>(statType, valueType);
 	}
 	public static bool STAT_STOP_RECORD_STAT()
 	{
-		return NativeFunction.Natives.STAT_STOP_RECORD_STAT();
+		return NativeFunction.Natives.STAT_STOP_RECORD_STAT<bool>();
 	}
 	public static bool STAT_GET_RECORDED_VALUE(out float value)
 	{
-		return NativeFunction.Natives.STAT_GET_RECORDED_VALUE(out value);
+		return NativeFunction.Natives.STAT_GET_RECORDED_VALUE<bool>(out value);
 	}
 	public static bool STAT_IS_RECORDING_STAT()
 	{
-		return NativeFunction.Natives.STAT_IS_RECORDING_STAT();
+		return NativeFunction.Natives.STAT_IS_RECORDING_STAT<bool>();
 	}
 	/// <summary>
 	/// 	Perform the most near misses with other vehicles in a land vehicle without crashing
 	/// </summary>
 	public static int STAT_GET_CURRENT_NEAR_MISS_NOCRASH_PRECISE()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_NEAR_MISS_NOCRASH_PRECISE();
+		return NativeFunction.Natives.STAT_GET_CURRENT_NEAR_MISS_NOCRASH_PRECISE<int>();
 	}
 	/// <summary>
 	/// 	Perform the longest wheelie on a motorcycle
 	/// </summary>
 	public static float STAT_GET_CURRENT_REAR_WHEEL_DISTANCE()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_REAR_WHEEL_DISTANCE();
+		return NativeFunction.Natives.STAT_GET_CURRENT_REAR_WHEEL_DISTANCE<float>();
 	}
 	/// <summary>
 	/// 	Perform the longest stoppie on a motorcycle
 	/// </summary>
 	public static float STAT_GET_CURRENT_FRONT_WHEEL_DISTANCE()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_FRONT_WHEEL_DISTANCE();
+		return NativeFunction.Natives.STAT_GET_CURRENT_FRONT_WHEEL_DISTANCE<float>();
 	}
 	/// <summary>
 	/// 	Perform the longest jump in a land vehicle
 	/// </summary>
 	public static float STAT_GET_CURRENT_JUMP_DISTANCE()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_JUMP_DISTANCE();
+		return NativeFunction.Natives.STAT_GET_CURRENT_JUMP_DISTANCE<float>();
 	}
 	/// <summary>
 	/// 	Drive the furthest distance in a land vehicle without crashing
 	/// </summary>
 	public static float STAT_GET_CURRENT_DRIVE_NOCRASH_DISTANCE()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_DRIVE_NOCRASH_DISTANCE();
+		return NativeFunction.Natives.STAT_GET_CURRENT_DRIVE_NOCRASH_DISTANCE<float>();
 	}
 	/// <summary>
 	/// 	Achieve the highest speed in a land vehicle
 	/// </summary>
 	public static float STAT_GET_CURRENT_SPEED()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_SPEED();
+		return NativeFunction.Natives.STAT_GET_CURRENT_SPEED<float>();
 	}
 	/// <summary>
 	/// 	Reverse the longest distance without crashing
 	/// </summary>
 	public static float STAT_GET_CURRENT_DRIVING_REVERSE_DISTANCE()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_DRIVING_REVERSE_DISTANCE();
+		return NativeFunction.Natives.STAT_GET_CURRENT_DRIVING_REVERSE_DISTANCE<float>();
 	}
 	/// <summary>
 	/// 	Fall the longest distance with a parachute before opening it
 	/// </summary>
 	public static float STAT_GET_CURRENT_SKYDIVING_DISTANCE()
 	{
-		return NativeFunction.Natives.STAT_GET_CURRENT_SKYDIVING_DISTANCE();
+		return NativeFunction.Natives.STAT_GET_CURRENT_SKYDIVING_DISTANCE<float>();
 	}
 	/// <summary>
 	/// 	Fly low to the ground for the longest distance
 	/// </summary>
 	public static float STAT_GET_CHALLENGE_FLYING_DIST()
 	{
-		return NativeFunction.Natives.STAT_GET_CHALLENGE_FLYING_DIST();
+		return NativeFunction.Natives.STAT_GET_CHALLENGE_FLYING_DIST<float>();
 	}
 	public static bool STAT_GET_FLYING_ALTITUDE(out float outValue)
 	{
-		return NativeFunction.Natives.STAT_GET_FLYING_ALTITUDE(out outValue);
+		return NativeFunction.Natives.STAT_GET_FLYING_ALTITUDE<bool>(out outValue);
 	}
 	/// <summary>
 	/// 	Or non-flyable area
 	/// </summary>
 	public static bool STAT_IS_PLAYER_VEHICLE_ABOVE_OCEAN()
 	{
-		return NativeFunction.Natives.STAT_IS_PLAYER_VEHICLE_ABOVE_OCEAN();
+		return NativeFunction.Natives.STAT_IS_PLAYER_VEHICLE_ABOVE_OCEAN<bool>();
 	}
 	/// <summary>
 	/// 	Travel the furthest distance when bailing from a vehicle
 	/// </summary>
 	public static float STAT_GET_VEHICLE_BAIL_DISTANCE()
 	{
-		return NativeFunction.Natives.STAT_GET_VEHICLE_BAIL_DISTANCE();
+		return NativeFunction.Natives.STAT_GET_VEHICLE_BAIL_DISTANCE<float>();
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 1.
 	/// </summary>
 	public static bool STAT_ROLLBACK_SAVE_MIGRATION()
 	{
-		return NativeFunction.Natives.STAT_ROLLBACK_SAVE_MIGRATION();
+		return NativeFunction.Natives.STAT_ROLLBACK_SAVE_MIGRATION<bool>();
 	}
 	/// <summary>
 	/// 	Sets profile setting 866
@@ -32123,11 +32123,11 @@ public static class Natives
 	}
 	public static bool NETWORK_UPDATE_LOAD_SCENE()
 	{
-		return NativeFunction.Natives.NETWORK_UPDATE_LOAD_SCENE();
+		return NativeFunction.Natives.NETWORK_UPDATE_LOAD_SCENE<bool>();
 	}
 	public static bool IS_NETWORK_LOADING_SCENE()
 	{
-		return NativeFunction.Natives.IS_NETWORK_LOADING_SCENE();
+		return NativeFunction.Natives.IS_NETWORK_LOADING_SCENE<bool>();
 	}
 	public static void SET_INTERIOR_ACTIVE(int interiorID, bool toggle)
 	{
@@ -32150,7 +32150,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_MODEL_LOADED(ulong model)
 	{
-		return NativeFunction.Natives.HAS_MODEL_LOADED(model);
+		return NativeFunction.Natives.HAS_MODEL_LOADED<bool>(model);
 	}
 	/// <summary>
 	/// 	STREAMING::REQUEST_MODELS_IN_ROOM(l_13BC, &amp;quot;V_FIB01_cur_elev&amp;quot;);<br/>
@@ -32176,25 +32176,25 @@ public static class Natives
 	/// </summary>
 	public static bool IS_MODEL_IN_CDIMAGE(ulong model)
 	{
-		return NativeFunction.Natives.IS_MODEL_IN_CDIMAGE(model);
+		return NativeFunction.Natives.IS_MODEL_IN_CDIMAGE<bool>(model);
 	}
 	/// <summary>
 	/// 	Returns whether the specified model exists in the game.
 	/// </summary>
 	public static bool IS_MODEL_VALID(ulong model)
 	{
-		return NativeFunction.Natives.IS_MODEL_VALID(model);
+		return NativeFunction.Natives.IS_MODEL_VALID<bool>(model);
 	}
 	public static bool IS_MODEL_A_PED(ulong model)
 	{
-		return NativeFunction.Natives.IS_MODEL_A_PED(model);
+		return NativeFunction.Natives.IS_MODEL_A_PED<bool>(model);
 	}
 	/// <summary>
 	/// 	Returns whether the specified model represents a vehicle.
 	/// </summary>
 	public static bool IS_MODEL_A_VEHICLE(ulong model)
 	{
-		return NativeFunction.Natives.IS_MODEL_A_VEHICLE(model);
+		return NativeFunction.Natives.IS_MODEL_A_VEHICLE<bool>(model);
 	}
 	public static void REQUEST_COLLISION_AT_COORD(float x, float y, float z)
 	{
@@ -32206,7 +32206,7 @@ public static class Natives
 	}
 	public static bool HAS_COLLISION_FOR_MODEL_LOADED(ulong model)
 	{
-		return NativeFunction.Natives.HAS_COLLISION_FOR_MODEL_LOADED(model);
+		return NativeFunction.Natives.HAS_COLLISION_FOR_MODEL_LOADED<bool>(model);
 	}
 	/// <summary>
 	/// 	Alias of REQUEST_COLLISION_AT_COORD.
@@ -32220,7 +32220,7 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_ANIM_DICT_EXIST(string animDict)
 	{
-		return NativeFunction.Natives.DOES_ANIM_DICT_EXIST(animDict);
+		return NativeFunction.Natives.DOES_ANIM_DICT_EXIST<bool>(animDict);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -32234,7 +32234,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ANIM_DICT_LOADED(string animDict)
 	{
-		return NativeFunction.Natives.HAS_ANIM_DICT_LOADED(animDict);
+		return NativeFunction.Natives.HAS_ANIM_DICT_LOADED<bool>(animDict);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -32265,7 +32265,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ANIM_SET_LOADED(string animSet)
 	{
-		return NativeFunction.Natives.HAS_ANIM_SET_LOADED(animSet);
+		return NativeFunction.Natives.HAS_ANIM_SET_LOADED<bool>(animSet);
 	}
 	/// <summary>
 	/// 	Unloads the specified animation set. An animation set provides movement animations for a ped. See SET_PED_MOVEMENT_CLIPSET.<br/>
@@ -32298,7 +32298,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_CLIP_SET_LOADED(string clipSet)
 	{
-		return NativeFunction.Natives.HAS_CLIP_SET_LOADED(clipSet);
+		return NativeFunction.Natives.HAS_CLIP_SET_LOADED<bool>(clipSet);
 	}
 	/// <summary>
 	/// 	Alias for REMOVE_ANIM_SET.<br/>
@@ -32343,7 +32343,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_IPL_ACTIVE(string iplName)
 	{
-		return NativeFunction.Natives.IS_IPL_ACTIVE(iplName);
+		return NativeFunction.Natives.IS_IPL_ACTIVE<bool>(iplName);
 	}
 	public static void SET_STREAMING(bool toggle)
 	{
@@ -32359,7 +32359,7 @@ public static class Natives
 	}
 	public static int GET_GLOBAL_WATER_FILE()
 	{
-		return NativeFunction.Natives.GET_GLOBAL_WATER_FILE();
+		return NativeFunction.Natives.GET_GLOBAL_WATER_FILE<int>();
 	}
 	public static void SET_GAME_PAUSES_FOR_STREAMING(bool toggle)
 	{
@@ -32382,7 +32382,7 @@ public static class Natives
 	}
 	public static int GET_NUMBER_OF_STREAMING_REQUESTS()
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_STREAMING_REQUESTS();
+		return NativeFunction.Natives.GET_NUMBER_OF_STREAMING_REQUESTS<int>();
 	}
 	/// <summary>
 	/// 	maps script name (thread + 0xD0) by lookup via scriptfx.dat - does nothing when script name is empty
@@ -32393,7 +32393,7 @@ public static class Natives
 	}
 	public static bool HAS_PTFX_ASSET_LOADED()
 	{
-		return NativeFunction.Natives.HAS_PTFX_ASSET_LOADED();
+		return NativeFunction.Natives.HAS_PTFX_ASSET_LOADED<bool>();
 	}
 	public static void REMOVE_PTFX_ASSET()
 	{
@@ -32422,7 +32422,7 @@ public static class Natives
 	}
 	public static bool HAS_NAMED_PTFX_ASSET_LOADED(string fxName)
 	{
-		return NativeFunction.Natives.HAS_NAMED_PTFX_ASSET_LOADED(fxName);
+		return NativeFunction.Natives.HAS_NAMED_PTFX_ASSET_LOADED<bool>(fxName);
 	}
 	public static void REMOVE_NAMED_PTFX_ASSET(string fxName)
 	{
@@ -32462,7 +32462,7 @@ public static class Natives
 	}
 	public static bool IS_ENTITY_FOCUS(Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_FOCUS(entity);
+		return NativeFunction.Natives.IS_ENTITY_FOCUS<bool>(entity);
 	}
 	public static void SET_RESTORE_FOCUS_ENTITY(Entity p0)
 	{
@@ -32490,21 +32490,21 @@ public static class Natives
 	/// </summary>
 	public static int STREAMVOL_CREATE_SPHERE(float x, float y, float z, float rad)
 	{
-		return NativeFunction.Natives.STREAMVOL_CREATE_SPHERE(x, y, z, rad, 0, 0);
+		return NativeFunction.Natives.STREAMVOL_CREATE_SPHERE<int>(x, y, z, rad, 0, 0);
 	}
 	/// <summary>
 	/// 	Always returns zero.
 	/// </summary>
 	public static int STREAMVOL_CREATE_FRUSTUM(float p0, float p1, float p2, float p3, float p4, float p5, float p6)
 	{
-		return NativeFunction.Natives.STREAMVOL_CREATE_FRUSTUM(p0, p1, p2, p3, p4, p5, p6, 0, 0);
+		return NativeFunction.Natives.STREAMVOL_CREATE_FRUSTUM<int>(p0, p1, p2, p3, p4, p5, p6, 0, 0);
 	}
 	/// <summary>
 	/// 	Always returns zero.
 	/// </summary>
 	public static int STREAMVOL_CREATE_LINE(float p0, float p1, float p2, float p3, float p4, float p5)
 	{
-		return NativeFunction.Natives.STREAMVOL_CREATE_LINE(p0, p1, p2, p3, p4, p5, 0);
+		return NativeFunction.Natives.STREAMVOL_CREATE_LINE<int>(p0, p1, p2, p3, p4, p5, 0);
 	}
 	public static void STREAMVOL_DELETE()
 	{
@@ -32512,15 +32512,15 @@ public static class Natives
 	}
 	public static bool STREAMVOL_HAS_LOADED()
 	{
-		return NativeFunction.Natives.STREAMVOL_HAS_LOADED(0);
+		return NativeFunction.Natives.STREAMVOL_HAS_LOADED<bool>(0);
 	}
 	public static bool STREAMVOL_IS_VALID()
 	{
-		return NativeFunction.Natives.STREAMVOL_IS_VALID(0);
+		return NativeFunction.Natives.STREAMVOL_IS_VALID<bool>(0);
 	}
 	public static bool IS_STREAMVOL_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_STREAMVOL_ACTIVE();
+		return NativeFunction.Natives.IS_STREAMVOL_ACTIVE<bool>();
 	}
 	/// <summary>
 	/// 	`radius` value is usually between `3f` and `7000f` in original 1868 scripts.<br/>
@@ -32529,11 +32529,11 @@ public static class Natives
 	/// </summary>
 	public static bool NEW_LOAD_SCENE_START(float posX, float posY, float posZ, float offsetX, float offsetY, float offsetZ, float radius, int p7)
 	{
-		return NativeFunction.Natives.NEW_LOAD_SCENE_START(posX, posY, posZ, offsetX, offsetY, offsetZ, radius, p7);
+		return NativeFunction.Natives.NEW_LOAD_SCENE_START<bool>(posX, posY, posZ, offsetX, offsetY, offsetZ, radius, p7);
 	}
 	public static bool NEW_LOAD_SCENE_START_SPHERE(float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.NEW_LOAD_SCENE_START_SPHERE(x, y, z, radius, 0);
+		return NativeFunction.Natives.NEW_LOAD_SCENE_START_SPHERE<bool>(x, y, z, radius, 0);
 	}
 	public static void NEW_LOAD_SCENE_STOP()
 	{
@@ -32541,15 +32541,15 @@ public static class Natives
 	}
 	public static bool IS_NEW_LOAD_SCENE_ACTIVE()
 	{
-		return NativeFunction.Natives.IS_NEW_LOAD_SCENE_ACTIVE();
+		return NativeFunction.Natives.IS_NEW_LOAD_SCENE_ACTIVE<bool>();
 	}
 	public static bool IS_NEW_LOAD_SCENE_LOADED()
 	{
-		return NativeFunction.Natives.IS_NEW_LOAD_SCENE_LOADED();
+		return NativeFunction.Natives.IS_NEW_LOAD_SCENE_LOADED<bool>();
 	}
 	public static bool IS_SAFE_TO_START_PLAYER_SWITCH()
 	{
-		return NativeFunction.Natives.IS_SAFE_TO_START_PLAYER_SWITCH();
+		return NativeFunction.Natives.IS_SAFE_TO_START_PLAYER_SWITCH<bool>();
 	}
 	/// <summary>
 	/// 	// this enum comes directly from R* so don&amp;apos;t edit this<br/>
@@ -32591,11 +32591,11 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PLAYER_SWITCH_IN_PROGRESS()
 	{
-		return NativeFunction.Natives.IS_PLAYER_SWITCH_IN_PROGRESS();
+		return NativeFunction.Natives.IS_PLAYER_SWITCH_IN_PROGRESS<bool>();
 	}
 	public static int GET_PLAYER_SWITCH_TYPE()
 	{
-		return NativeFunction.Natives.GET_PLAYER_SWITCH_TYPE();
+		return NativeFunction.Natives.GET_PLAYER_SWITCH_TYPE<int>();
 	}
 	/// <summary>
 	/// 	x1, y1, z1 -- Coords of your ped model<br/>
@@ -32603,15 +32603,15 @@ public static class Natives
 	/// </summary>
 	public static int GET_IDEAL_PLAYER_SWITCH_TYPE(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
-		return NativeFunction.Natives.GET_IDEAL_PLAYER_SWITCH_TYPE(x1, y1, z1, x2, y2, z2);
+		return NativeFunction.Natives.GET_IDEAL_PLAYER_SWITCH_TYPE<int>(x1, y1, z1, x2, y2, z2);
 	}
 	public static int GET_PLAYER_SWITCH_STATE()
 	{
-		return NativeFunction.Natives.GET_PLAYER_SWITCH_STATE();
+		return NativeFunction.Natives.GET_PLAYER_SWITCH_STATE<int>();
 	}
 	public static int GET_PLAYER_SHORT_SWITCH_STATE()
 	{
-		return NativeFunction.Natives.GET_PLAYER_SHORT_SWITCH_STATE();
+		return NativeFunction.Natives.GET_PLAYER_SHORT_SWITCH_STATE<int>();
 	}
 	public static void SET_PLAYER_SHORT_SWITCH_STYLE(int p0)
 	{
@@ -32619,7 +32619,7 @@ public static class Natives
 	}
 	public static int GET_PLAYER_SWITCH_JUMP_CUT_INDEX()
 	{
-		return NativeFunction.Natives.GET_PLAYER_SWITCH_JUMP_CUT_INDEX();
+		return NativeFunction.Natives.GET_PLAYER_SWITCH_JUMP_CUT_INDEX<int>();
 	}
 	public static void SET_PLAYER_SWITCH_OUTRO(float cameraCoordX, float cameraCoordY, float cameraCoordZ, float camRotationX, float camRotationY, float camRotationZ, float camFov, float camFarClip, int rotationOrder)
 	{
@@ -32650,7 +32650,7 @@ public static class Natives
 	}
 	public static bool IS_SWITCH_READY_FOR_DESCENT()
 	{
-		return NativeFunction.Natives.IS_SWITCH_READY_FOR_DESCENT();
+		return NativeFunction.Natives.IS_SWITCH_READY_FOR_DESCENT<bool>();
 	}
 	public static void ENABLE_SWITCH_PAUSE_BEFORE_DESCENT()
 	{
@@ -32685,19 +32685,19 @@ public static class Natives
 	}
 	public static bool IS_SWITCH_TO_MULTI_FIRSTPART_FINISHED()
 	{
-		return NativeFunction.Natives.IS_SWITCH_TO_MULTI_FIRSTPART_FINISHED();
+		return NativeFunction.Natives.IS_SWITCH_TO_MULTI_FIRSTPART_FINISHED<bool>();
 	}
 	public static int GET_PLAYER_SWITCH_INTERP_OUT_DURATION()
 	{
-		return NativeFunction.Natives.GET_PLAYER_SWITCH_INTERP_OUT_DURATION();
+		return NativeFunction.Natives.GET_PLAYER_SWITCH_INTERP_OUT_DURATION<int>();
 	}
 	public static int GET_PLAYER_SWITCH_INTERP_OUT_CURRENT_TIME()
 	{
-		return NativeFunction.Natives.GET_PLAYER_SWITCH_INTERP_OUT_CURRENT_TIME();
+		return NativeFunction.Natives.GET_PLAYER_SWITCH_INTERP_OUT_CURRENT_TIME<int>();
 	}
 	public static bool IS_SWITCH_SKIPPING_DESCENT()
 	{
-		return NativeFunction.Natives.IS_SWITCH_SKIPPING_DESCENT();
+		return NativeFunction.Natives.IS_SWITCH_SKIPPING_DESCENT<bool>();
 	}
 	public static void SET_SCENE_STREAMING_TRACKS_CAM_POS_THIS_FRAME()
 	{
@@ -32705,7 +32705,7 @@ public static class Natives
 	}
 	public static float GET_LODSCALE()
 	{
-		return NativeFunction.Natives.GET_LODSCALE();
+		return NativeFunction.Natives.GET_LODSCALE<float>();
 	}
 	/// <summary>
 	/// 	This allows you to override &amp;quot;extended distance scaling&amp;quot; setting. Needs to be called each frame.<br/>
@@ -32742,7 +32742,7 @@ public static class Natives
 	}
 	public static bool IPL_GROUP_SWAP_IS_READY()
 	{
-		return NativeFunction.Natives.IPL_GROUP_SWAP_IS_READY();
+		return NativeFunction.Natives.IPL_GROUP_SWAP_IS_READY<bool>();
 	}
 	public static void IPL_GROUP_SWAP_FINISH()
 	{
@@ -32750,7 +32750,7 @@ public static class Natives
 	}
 	public static bool IPL_GROUP_SWAP_IS_ACTIVE()
 	{
-		return NativeFunction.Natives.IPL_GROUP_SWAP_IS_ACTIVE();
+		return NativeFunction.Natives.IPL_GROUP_SWAP_IS_ACTIVE<bool>();
 	}
 	/// <summary>
 	/// 	This native is used to attribute the SRL that BEGIN_SRL is going to load. This is usually used for &amp;apos;in-game&amp;apos; cinematics (not cutscenes but camera stuff) instead of SET_FOCUS_POS_AND_VEL because it loads a specific area of the map which is pretty useful when the camera moves from distant areas.<br/>
@@ -32767,7 +32767,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_SRL_LOADED()
 	{
-		return NativeFunction.Natives.IS_SRL_LOADED();
+		return NativeFunction.Natives.IS_SRL_LOADED<bool>();
 	}
 	public static void BEGIN_SRL()
 	{
@@ -32818,7 +32818,7 @@ public static class Natives
 	}
 	public static bool ADD_MODEL_TO_CREATOR_BUDGET(ulong modelHash)
 	{
-		return NativeFunction.Natives.ADD_MODEL_TO_CREATOR_BUDGET(modelHash);
+		return NativeFunction.Natives.ADD_MODEL_TO_CREATOR_BUDGET<bool>(modelHash);
 	}
 	public static void REMOVE_MODEL_FROM_CREATOR_BUDGET(ulong modelHash)
 	{
@@ -32832,7 +32832,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_USED_CREATOR_BUDGET()
 	{
-		return NativeFunction.Natives.GET_USED_CREATOR_BUDGET();
+		return NativeFunction.Natives.GET_USED_CREATOR_BUDGET<float>();
 	}
 	/// <summary>
 	/// 	Enables the specified island. For more information, see islandhopper.meta
@@ -33193,20 +33193,20 @@ public static class Natives
 	/// 	2 - ???<br/>
 	/// 	3 - Finished Generating 
 	/// </summary>
-	public static int GET_NAVMESH_ROUTE_DISTANCE_REMAINING(Ped ped, out float distanceRemaining, bool isPathReady)
+	public static int GET_NAVMESH_ROUTE_DISTANCE_REMAINING(Ped ped, out float distanceRemaining, out bool isPathReady)
 	{
-		return NativeFunction.Natives.GET_NAVMESH_ROUTE_DISTANCE_REMAINING(ped, out distanceRemaining, isPathReady);
+		return NativeFunction.Natives.GET_NAVMESH_ROUTE_DISTANCE_REMAINING<int>(ped, out distanceRemaining, out isPathReady);
 	}
 	/// <summary>
 	/// 	See GET_NAVMESH_ROUTE_DISTANCE_REMAINING for more details.
 	/// </summary>
 	public static int GET_NAVMESH_ROUTE_RESULT(Ped ped)
 	{
-		return NativeFunction.Natives.GET_NAVMESH_ROUTE_RESULT(ped);
+		return NativeFunction.Natives.GET_NAVMESH_ROUTE_RESULT<int>(ped);
 	}
 	public static bool IS_CONTROLLED_VEHICLE_UNABLE_TO_GET_TO_ROAD(Ped ped)
 	{
-		return NativeFunction.Natives.IS_CONTROLLED_VEHICLE_UNABLE_TO_GET_TO_ROAD(ped);
+		return NativeFunction.Natives.IS_CONTROLLED_VEHICLE_UNABLE_TO_GET_TO_ROAD<bool>(ped);
 	}
 	/// <summary>
 	/// 	example from fm_mission_controller<br/>
@@ -33412,15 +33412,15 @@ public static class Natives
 	}
 	public static bool IS_PLAYING_PHONE_GESTURE_ANIM(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PLAYING_PHONE_GESTURE_ANIM(ped);
+		return NativeFunction.Natives.IS_PLAYING_PHONE_GESTURE_ANIM<bool>(ped);
 	}
 	public static float GET_PHONE_GESTURE_ANIM_CURRENT_TIME(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PHONE_GESTURE_ANIM_CURRENT_TIME(ped);
+		return NativeFunction.Natives.GET_PHONE_GESTURE_ANIM_CURRENT_TIME<float>(ped);
 	}
 	public static float GET_PHONE_GESTURE_ANIM_TOTAL_TIME(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PHONE_GESTURE_ANIM_TOTAL_TIME(ped);
+		return NativeFunction.Natives.GET_PHONE_GESTURE_ANIM_TOTAL_TIME<float>(ped);
 	}
 	/// <summary>
 	/// 	Most probably plays a specific animation on vehicle. For example getting chop out of van etc...<br/>
@@ -33505,14 +33505,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_SEQUENCE_PROGRESS(Ped ped)
 	{
-		return NativeFunction.Natives.GET_SEQUENCE_PROGRESS(ped);
+		return NativeFunction.Natives.GET_SEQUENCE_PROGRESS<int>(ped);
 	}
 	/// <summary>
 	/// 	Task index enum: https://alloc8or.re/gta5/doc/enums/eTaskTypeIndex.txt
 	/// </summary>
 	public static bool GET_IS_TASK_ACTIVE(Ped ped, int taskIndex)
 	{
-		return NativeFunction.Natives.GET_IS_TASK_ACTIVE(ped, taskIndex);
+		return NativeFunction.Natives.GET_IS_TASK_ACTIVE<bool>(ped, taskIndex);
 	}
 	/// <summary>
 	/// 	Gets the status of a script-assigned task.<br/>
@@ -33520,14 +33520,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_SCRIPT_TASK_STATUS(Ped ped, ulong taskHash)
 	{
-		return NativeFunction.Natives.GET_SCRIPT_TASK_STATUS(ped, taskHash);
+		return NativeFunction.Natives.GET_SCRIPT_TASK_STATUS<int>(ped, taskHash);
 	}
 	/// <summary>
 	/// 	https://alloc8or.re/gta5/doc/enums/eVehicleMissionType.txt
 	/// </summary>
 	public static int GET_ACTIVE_VEHICLE_MISSION_TYPE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_ACTIVE_VEHICLE_MISSION_TYPE(vehicle);
+		return NativeFunction.Natives.GET_ACTIVE_VEHICLE_MISSION_TYPE<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Flags are the same flags used in TASK_LEAVE_VEHICLE
@@ -33550,7 +33550,7 @@ public static class Natives
 	}
 	public static string GET_CLIP_SET_FOR_SCRIPTED_GUN_TASK(int gunTaskType)
 	{
-		return NativeFunction.Natives.GET_CLIP_SET_FOR_SCRIPTED_GUN_TASK(gunTaskType);
+		return NativeFunction.Natives.GET_CLIP_SET_FOR_SCRIPTED_GUN_TASK<string>(gunTaskType);
 	}
 	/// <summary>
 	/// 	duration: the amount of time in milliseconds to do the task.  -1 will keep the task going until either another task is applied, or CLEAR_ALL_TASKS() is called with the ped
@@ -33962,7 +33962,7 @@ public static class Natives
 	}
 	public static bool IS_DRIVEBY_TASK_UNDERNEATH_DRIVING_TASK(Ped ped)
 	{
-		return NativeFunction.Natives.IS_DRIVEBY_TASK_UNDERNEATH_DRIVING_TASK(ped);
+		return NativeFunction.Natives.IS_DRIVEBY_TASK_UNDERNEATH_DRIVING_TASK<bool>(ped);
 	}
 	/// <summary>
 	/// 	Forces the ped to use the mounted weapon.<br/>
@@ -33970,7 +33970,7 @@ public static class Natives
 	/// </summary>
 	public static bool CONTROL_MOUNTED_WEAPON(Ped ped)
 	{
-		return NativeFunction.Natives.CONTROL_MOUNTED_WEAPON(ped);
+		return NativeFunction.Natives.CONTROL_MOUNTED_WEAPON<bool>(ped);
 	}
 	/// <summary>
 	/// 	Note: Look in decompiled scripts and the times that p1 and p2 aren&amp;apos;t 0. They are filled with vars. If you look through out that script what other natives those vars are used in, you can tell p1 is a ped and p2 is a vehicle. Which most likely means if you want the mounted weapon to target a ped set targetVehicle to 0 or vice-versa.
@@ -33981,7 +33981,7 @@ public static class Natives
 	}
 	public static bool IS_MOUNTED_WEAPON_TASK_UNDERNEATH_DRIVING_TASK(Ped ped)
 	{
-		return NativeFunction.Natives.IS_MOUNTED_WEAPON_TASK_UNDERNEATH_DRIVING_TASK(ped);
+		return NativeFunction.Natives.IS_MOUNTED_WEAPON_TASK_UNDERNEATH_DRIVING_TASK<bool>(ped);
 	}
 	/// <summary>
 	/// 	Actually has 3 params, not 2.<br/>
@@ -34059,7 +34059,7 @@ public static class Natives
 	}
 	public static int GET_TASK_RAPPEL_DOWN_WALL_STATE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_TASK_RAPPEL_DOWN_WALL_STATE(ped);
+		return NativeFunction.Natives.GET_TASK_RAPPEL_DOWN_WALL_STATE<int>(ped);
 	}
 	/// <summary>
 	/// 	Immediately stops the pedestrian from whatever it&amp;apos;s doing. They stop fighting, animations, etc. they forget what they were doing.
@@ -34088,7 +34088,7 @@ public static class Natives
 	}
 	public static float GET_PED_DESIRED_MOVE_BLEND_RATIO(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_DESIRED_MOVE_BLEND_RATIO(ped);
+		return NativeFunction.Natives.GET_PED_DESIRED_MOVE_BLEND_RATIO<float>(ped);
 	}
 	/// <summary>
 	/// 	eg<br/>
@@ -34129,7 +34129,7 @@ public static class Natives
 	}
 	public static uint ADD_COVER_POINT(float x, float y, float z, float direction, int usage, int height, int arc, bool isPriority)
 	{
-		return NativeFunction.Natives.ADD_COVER_POINT(x, y, z, direction, usage, height, arc, isPriority);
+		return NativeFunction.Natives.ADD_COVER_POINT<uint>(x, y, z, direction, usage, height, arc, isPriority);
 	}
 	public static void REMOVE_COVER_POINT(uint coverpoint)
 	{
@@ -34140,11 +34140,11 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_SCRIPTED_COVER_POINT_EXIST_AT_COORDS(float x, float y, float z)
 	{
-		return NativeFunction.Natives.DOES_SCRIPTED_COVER_POINT_EXIST_AT_COORDS(x, y, z);
+		return NativeFunction.Natives.DOES_SCRIPTED_COVER_POINT_EXIST_AT_COORDS<bool>(x, y, z);
 	}
 	public static Vector3 GET_SCRIPTED_COVER_POINT_COORDS(uint coverpoint)
 	{
-		return NativeFunction.Natives.GET_SCRIPTED_COVER_POINT_COORDS(coverpoint);
+		return NativeFunction.Natives.GET_SCRIPTED_COVER_POINT_COORDS<Vector3>(coverpoint);
 	}
 	public static void ADD_SCRIPTED_COVER_AREA(float x, float y, float z, float radius)
 	{
@@ -34392,19 +34392,19 @@ public static class Natives
 	}
 	public static bool DOES_SCENARIO_EXIST_IN_AREA(float x, float y, float z, float radius, bool mustBeFree)
 	{
-		return NativeFunction.Natives.DOES_SCENARIO_EXIST_IN_AREA(x, y, z, radius, mustBeFree);
+		return NativeFunction.Natives.DOES_SCENARIO_EXIST_IN_AREA<bool>(x, y, z, radius, mustBeFree);
 	}
 	public static bool DOES_SCENARIO_OF_TYPE_EXIST_IN_AREA(float x, float y, float z, string scenarioName, float radius, bool mustBeFree)
 	{
-		return NativeFunction.Natives.DOES_SCENARIO_OF_TYPE_EXIST_IN_AREA(x, y, z, scenarioName, radius, mustBeFree);
+		return NativeFunction.Natives.DOES_SCENARIO_OF_TYPE_EXIST_IN_AREA<bool>(x, y, z, scenarioName, radius, mustBeFree);
 	}
 	public static bool IS_SCENARIO_OCCUPIED(float x, float y, float z, float maxRange, bool onlyUsersActuallyAtScenario)
 	{
-		return NativeFunction.Natives.IS_SCENARIO_OCCUPIED(x, y, z, maxRange, onlyUsersActuallyAtScenario);
+		return NativeFunction.Natives.IS_SCENARIO_OCCUPIED<bool>(x, y, z, maxRange, onlyUsersActuallyAtScenario);
 	}
 	public static bool PED_HAS_USE_SCENARIO_TASK(Ped ped)
 	{
-		return NativeFunction.Natives.PED_HAS_USE_SCENARIO_TASK(ped);
+		return NativeFunction.Natives.PED_HAS_USE_SCENARIO_TASK<bool>(ped);
 	}
 	/// <summary>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -34453,7 +34453,7 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_SCENARIO_GROUP_EXIST(string scenarioGroup)
 	{
-		return NativeFunction.Natives.DOES_SCENARIO_GROUP_EXIST(scenarioGroup);
+		return NativeFunction.Natives.DOES_SCENARIO_GROUP_EXIST<bool>(scenarioGroup);
 	}
 	/// <summary>
 	/// 	Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json<br/>
@@ -34489,7 +34489,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_SCENARIO_GROUP_ENABLED(string scenarioGroup)
 	{
-		return NativeFunction.Natives.IS_SCENARIO_GROUP_ENABLED(scenarioGroup);
+		return NativeFunction.Natives.IS_SCENARIO_GROUP_ENABLED<bool>(scenarioGroup);
 	}
 	/// <summary>
 	/// 	Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json<br/>
@@ -34538,7 +34538,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_SCENARIO_TYPE_ENABLED(string scenarioType)
 	{
-		return NativeFunction.Natives.IS_SCENARIO_TYPE_ENABLED(scenarioType);
+		return NativeFunction.Natives.IS_SCENARIO_TYPE_ENABLED<bool>(scenarioType);
 	}
 	/// <summary>
 	/// 	Full list of scenario types used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenariosCompact.json<br/>
@@ -34586,7 +34586,7 @@ public static class Natives
 	}
 	public static bool IS_PED_ACTIVE_IN_SCENARIO(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_ACTIVE_IN_SCENARIO(ped);
+		return NativeFunction.Natives.IS_PED_ACTIVE_IN_SCENARIO<bool>(ped);
 	}
 	/// <summary>
 	/// 	Used only once (am_mp_property_int)<br/>
@@ -34597,7 +34597,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_PLAYING_BASE_CLIP_IN_SCENARIO(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_PLAYING_BASE_CLIP_IN_SCENARIO(ped);
+		return NativeFunction.Natives.IS_PED_PLAYING_BASE_CLIP_IN_SCENARIO<bool>(ped);
 	}
 	/// <summary>
 	/// 	Appears only in fm_mission_controller and used only 3 times.<br/>
@@ -34665,7 +34665,7 @@ public static class Natives
 	}
 	public static bool IS_PED_GETTING_UP(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_GETTING_UP(ped);
+		return NativeFunction.Natives.IS_PED_GETTING_UP<bool>(ped);
 	}
 	/// <summary>
 	/// 	EX: Function.Call(Ped1, Ped2, Time, 0);<br/>
@@ -34686,7 +34686,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_IN_WRITHE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_IN_WRITHE(ped);
+		return NativeFunction.Natives.IS_PED_IN_WRITHE<bool>(ped);
 	}
 	/// <summary>
 	/// 	 patrolRoutes found in the b617d scripts:<br/>
@@ -34763,7 +34763,7 @@ public static class Natives
 	}
 	public static bool GET_PATROL_TASK_INFO(Ped ped, out int timeLeftAtNode, out int nodeId)
 	{
-		return NativeFunction.Natives.GET_PATROL_TASK_INFO(ped, out timeLeftAtNode, out nodeId);
+		return NativeFunction.Natives.GET_PATROL_TASK_INFO<bool>(ped, out timeLeftAtNode, out nodeId);
 	}
 	/// <summary>
 	/// 	After looking at some scripts the second parameter seems to be an id of some kind. Here are some I found from some R* scripts:<br/>
@@ -34948,7 +34948,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_WAYPOINT_RECORDING_LOADED(string name)
 	{
-		return NativeFunction.Natives.GET_IS_WAYPOINT_RECORDING_LOADED(name);
+		return NativeFunction.Natives.GET_IS_WAYPOINT_RECORDING_LOADED<bool>(name);
 	}
 	/// <summary>
 	/// 	Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json
@@ -34963,7 +34963,7 @@ public static class Natives
 	/// </summary>
 	public static bool WAYPOINT_RECORDING_GET_NUM_POINTS(string name, out int points)
 	{
-		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_NUM_POINTS(name, out points);
+		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_NUM_POINTS<bool>(name, out points);
 	}
 	/// <summary>
 	/// 	Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json<br/>
@@ -34971,14 +34971,14 @@ public static class Natives
 	/// </summary>
 	public static bool WAYPOINT_RECORDING_GET_COORD(string name, int point, out Vector3 coord)
 	{
-		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_COORD(name, point, out coord);
+		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_COORD<bool>(name, point, out coord);
 	}
 	/// <summary>
 	/// 	Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json
 	/// </summary>
 	public static float WAYPOINT_RECORDING_GET_SPEED_AT_POINT(string name, int point)
 	{
-		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_SPEED_AT_POINT(name, point);
+		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_SPEED_AT_POINT<float>(name, point);
 	}
 	/// <summary>
 	/// 	Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json<br/>
@@ -34986,7 +34986,7 @@ public static class Natives
 	/// </summary>
 	public static bool WAYPOINT_RECORDING_GET_CLOSEST_WAYPOINT(string name, float x, float y, float z, out int point)
 	{
-		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_CLOSEST_WAYPOINT(name, x, y, z, out point);
+		return NativeFunction.Natives.WAYPOINT_RECORDING_GET_CLOSEST_WAYPOINT<bool>(name, x, y, z, out point);
 	}
 	public static void TASK_FOLLOW_WAYPOINT_RECORDING(Ped ped, string name, int p2, int p3, int p4)
 	{
@@ -34994,27 +34994,27 @@ public static class Natives
 	}
 	public static bool IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_PED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_PED(ped);
+		return NativeFunction.Natives.IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_PED<bool>(ped);
 	}
 	public static int GET_PED_WAYPOINT_PROGRESS(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_WAYPOINT_PROGRESS(ped);
+		return NativeFunction.Natives.GET_PED_WAYPOINT_PROGRESS<int>(ped);
 	}
 	public static float GET_PED_WAYPOINT_DISTANCE()
 	{
-		return NativeFunction.Natives.GET_PED_WAYPOINT_DISTANCE(0);
+		return NativeFunction.Natives.GET_PED_WAYPOINT_DISTANCE<float>(0);
 	}
 	public static bool SET_PED_WAYPOINT_ROUTE_OFFSET(Ped ped, float x, float y, float z)
 	{
-		return NativeFunction.Natives.SET_PED_WAYPOINT_ROUTE_OFFSET(ped, x, y, z);
+		return NativeFunction.Natives.SET_PED_WAYPOINT_ROUTE_OFFSET<bool>(ped, x, y, z);
 	}
 	public static float GET_WAYPOINT_DISTANCE_ALONG_ROUTE(string name, int point)
 	{
-		return NativeFunction.Natives.GET_WAYPOINT_DISTANCE_ALONG_ROUTE(name, point);
+		return NativeFunction.Natives.GET_WAYPOINT_DISTANCE_ALONG_ROUTE<float>(name, point);
 	}
 	public static bool WAYPOINT_PLAYBACK_GET_IS_PAUSED()
 	{
-		return NativeFunction.Natives.WAYPOINT_PLAYBACK_GET_IS_PAUSED(0);
+		return NativeFunction.Natives.WAYPOINT_PLAYBACK_GET_IS_PAUSED<bool>(0);
 	}
 	public static void WAYPOINT_PLAYBACK_PAUSE(bool p1, bool p2)
 	{
@@ -35069,7 +35069,7 @@ public static class Natives
 	}
 	public static bool ASSISTED_MOVEMENT_IS_ROUTE_LOADED(string route)
 	{
-		return NativeFunction.Natives.ASSISTED_MOVEMENT_IS_ROUTE_LOADED(route);
+		return NativeFunction.Natives.ASSISTED_MOVEMENT_IS_ROUTE_LOADED<bool>(route);
 	}
 	public static void ASSISTED_MOVEMENT_SET_ROUTE_PROPERTIES(string route, int props)
 	{
@@ -35099,15 +35099,15 @@ public static class Natives
 	}
 	public static bool IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_VEHICLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_VEHICLE(vehicle);
+		return NativeFunction.Natives.IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_VEHICLE<bool>(vehicle);
 	}
 	public static int GET_VEHICLE_WAYPOINT_PROGRESS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_WAYPOINT_PROGRESS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_WAYPOINT_PROGRESS<int>(vehicle);
 	}
 	public static int GET_VEHICLE_WAYPOINT_TARGET_POINT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_WAYPOINT_TARGET_POINT(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_WAYPOINT_TARGET_POINT<int>(vehicle);
 	}
 	public static void VEHICLE_WAYPOINT_PLAYBACK_PAUSE(Vehicle vehicle)
 	{
@@ -35176,15 +35176,15 @@ public static class Natives
 	}
 	public static bool IS_TASK_MOVE_NETWORK_ACTIVE(Ped ped)
 	{
-		return NativeFunction.Natives.IS_TASK_MOVE_NETWORK_ACTIVE(ped);
+		return NativeFunction.Natives.IS_TASK_MOVE_NETWORK_ACTIVE<bool>(ped);
 	}
 	public static bool IS_TASK_MOVE_NETWORK_READY_FOR_TRANSITION(Ped ped)
 	{
-		return NativeFunction.Natives.IS_TASK_MOVE_NETWORK_READY_FOR_TRANSITION(ped);
+		return NativeFunction.Natives.IS_TASK_MOVE_NETWORK_READY_FOR_TRANSITION<bool>(ped);
 	}
 	public static bool REQUEST_TASK_MOVE_NETWORK_STATE_TRANSITION(Ped ped, string name)
 	{
-		return NativeFunction.Natives.REQUEST_TASK_MOVE_NETWORK_STATE_TRANSITION(ped, name);
+		return NativeFunction.Natives.REQUEST_TASK_MOVE_NETWORK_STATE_TRANSITION<bool>(ped, name);
 	}
 	/// <summary>
 	/// 	Used only once in the scripts (fm_mission_controller) like so:<br/>
@@ -35193,11 +35193,11 @@ public static class Natives
 	/// </summary>
 	public static bool SET_EXPECTED_CLONE_NEXT_TASK_MOVE_NETWORK_STATE(Ped ped, string state)
 	{
-		return NativeFunction.Natives.SET_EXPECTED_CLONE_NEXT_TASK_MOVE_NETWORK_STATE(ped, state);
+		return NativeFunction.Natives.SET_EXPECTED_CLONE_NEXT_TASK_MOVE_NETWORK_STATE<bool>(ped, state);
 	}
 	public static string GET_TASK_MOVE_NETWORK_STATE(Ped ped)
 	{
-		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_STATE(ped);
+		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_STATE<string>(ped);
 	}
 	public static void SET_TASK_MOVE_NETWORK_ANIM_SET(Ped ped, ulong clipSet, ulong variableClipSet)
 	{
@@ -35227,22 +35227,22 @@ public static class Natives
 	}
 	public static float GET_TASK_MOVE_NETWORK_SIGNAL_FLOAT(Ped ped, string signalName)
 	{
-		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_SIGNAL_FLOAT(ped, signalName);
+		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_SIGNAL_FLOAT<float>(ped, signalName);
 	}
 	public static bool GET_TASK_MOVE_NETWORK_SIGNAL_BOOL(Ped ped, string signalName)
 	{
-		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_SIGNAL_BOOL(ped, signalName);
+		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_SIGNAL_BOOL<bool>(ped, signalName);
 	}
 	public static bool GET_TASK_MOVE_NETWORK_EVENT(Ped ped, string eventName)
 	{
-		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_EVENT(ped, eventName);
+		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_EVENT<bool>(ped, eventName);
 	}
 	/// <summary>
 	/// 	Doesn&amp;apos;t actually return anything.
 	/// </summary>
 	public static bool SET_TASK_MOVE_NETWORK_ENABLE_COLLISION_ON_NETWORK_CLONE_WHEN_FIXED(Ped ped, bool enable)
 	{
-		return NativeFunction.Natives.SET_TASK_MOVE_NETWORK_ENABLE_COLLISION_ON_NETWORK_CLONE_WHEN_FIXED(ped, enable);
+		return NativeFunction.Natives.SET_TASK_MOVE_NETWORK_ENABLE_COLLISION_ON_NETWORK_CLONE_WHEN_FIXED<bool>(ped, enable);
 	}
 	public static void _SET_SCRIPT_TASK_ENABLE_COLLISION_ON_NETWORK_CLONE_WHEN_FIXED(Ped ped, bool enable)
 	{
@@ -35250,42 +35250,42 @@ public static class Natives
 	}
 	public static bool IS_MOVE_BLEND_RATIO_STILL(Ped ped)
 	{
-		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_STILL(ped);
+		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_STILL<bool>(ped);
 	}
 	public static bool IS_MOVE_BLEND_RATIO_WALKING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_WALKING(ped);
+		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_WALKING<bool>(ped);
 	}
 	public static bool IS_MOVE_BLEND_RATIO_RUNNING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_RUNNING(ped);
+		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_RUNNING<bool>(ped);
 	}
 	public static bool IS_MOVE_BLEND_RATIO_SPRINTING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_SPRINTING(ped);
+		return NativeFunction.Natives.IS_MOVE_BLEND_RATIO_SPRINTING<bool>(ped);
 	}
 	public static bool IS_PED_STILL(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_STILL(ped);
+		return NativeFunction.Natives.IS_PED_STILL<bool>(ped);
 	}
 	public static bool IS_PED_WALKING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_WALKING(ped);
+		return NativeFunction.Natives.IS_PED_WALKING<bool>(ped);
 	}
 	public static bool IS_PED_RUNNING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RUNNING(ped);
+		return NativeFunction.Natives.IS_PED_RUNNING<bool>(ped);
 	}
 	public static bool IS_PED_SPRINTING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_SPRINTING(ped);
+		return NativeFunction.Natives.IS_PED_SPRINTING<bool>(ped);
 	}
 	/// <summary>
 	/// 	What&amp;apos;s strafing?
 	/// </summary>
 	public static bool IS_PED_STRAFING(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_STRAFING(ped);
+		return NativeFunction.Natives.IS_PED_STRAFING<bool>(ped);
 	}
 	/// <summary>
 	/// 	 TASK::TASK_SYNCHRONIZED_SCENE(ped, scene, &amp;quot;creatures@rottweiler@in_vehicle@std_car&amp;quot;, &amp;quot;get_in&amp;quot;, 1000.0, -8.0, 4, 0, 0x447a0000, 0);<br/>
@@ -35343,14 +35343,14 @@ public static class Natives
 	}
 	public static bool IS_PED_RUNNING_ARREST_TASK(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_RUNNING_ARREST_TASK(ped);
+		return NativeFunction.Natives.IS_PED_RUNNING_ARREST_TASK<bool>(ped);
 	}
 	/// <summary>
 	/// 	This function is hard-coded to always return 0.
 	/// </summary>
 	public static bool IS_PED_BEING_ARRESTED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_BEING_ARRESTED(ped);
+		return NativeFunction.Natives.IS_PED_BEING_ARRESTED<bool>(ped);
 	}
 	public static void UNCUFF_PED(Ped ped)
 	{
@@ -35358,7 +35358,7 @@ public static class Natives
 	}
 	public static bool IS_PED_CUFFED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_CUFFED(ped);
+		return NativeFunction.Natives.IS_PED_CUFFED<bool>(ped);
 	}
 	/*
 		VEHICLE
@@ -35369,7 +35369,7 @@ public static class Natives
 	/// </summary>
 	public static Vehicle CREATE_VEHICLE(ulong modelHash, float x, float y, float z, float heading, bool isNetwork, bool bScriptHostVeh, bool p7)
 	{
-		return NativeFunction.Natives.CREATE_VEHICLE(modelHash, x, y, z, heading, isNetwork, bScriptHostVeh, p7);
+		return NativeFunction.Natives.CREATE_VEHICLE<Vehicle>(modelHash, x, y, z, heading, isNetwork, bScriptHostVeh, p7);
 	}
 	/// <summary>
 	/// 	Deletes a vehicle.<br/>
@@ -35408,11 +35408,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_HOMING_LOCKON_STATE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_HOMING_LOCKON_STATE(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_HOMING_LOCKON_STATE<int>(vehicle);
 	}
 	public static int GET_VEHICLE_HOMING_LOCKEDONTO_STATE()
 	{
-		return NativeFunction.Natives.GET_VEHICLE_HOMING_LOCKEDONTO_STATE(0);
+		return NativeFunction.Natives.GET_VEHICLE_HOMING_LOCKEDONTO_STATE<int>(0);
 	}
 	public static void SET_VEHICLE_HOMING_LOCKEDONTO_STATE()
 	{
@@ -35420,11 +35420,11 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_MODEL(Vehicle vehicle, ulong model)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_MODEL(vehicle, model);
+		return NativeFunction.Natives.IS_VEHICLE_MODEL<bool>(vehicle, model);
 	}
 	public static bool DOES_SCRIPT_VEHICLE_GENERATOR_EXIST(int vehicleGenerator)
 	{
-		return NativeFunction.Natives.DOES_SCRIPT_VEHICLE_GENERATOR_EXIST(vehicleGenerator);
+		return NativeFunction.Natives.DOES_SCRIPT_VEHICLE_GENERATOR_EXIST<bool>(vehicleGenerator);
 	}
 	/// <summary>
 	/// 	Creates a script vehicle generator at the given coordinates. Most parameters after the model hash are unknown.<br/>
@@ -35446,7 +35446,7 @@ public static class Natives
 	/// </summary>
 	public static int CREATE_SCRIPT_VEHICLE_GENERATOR(float x, float y, float z, float heading, float p4, float p5, ulong modelHash, int p7, int p8, int p9, int p10, bool p11, bool p12, bool p13, bool p14, bool p15, int p16)
 	{
-		return NativeFunction.Natives.CREATE_SCRIPT_VEHICLE_GENERATOR(x, y, z, heading, p4, p5, modelHash, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16);
+		return NativeFunction.Natives.CREATE_SCRIPT_VEHICLE_GENERATOR<int>(x, y, z, heading, p4, p5, modelHash, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16);
 	}
 	public static void DELETE_SCRIPT_VEHICLE_GENERATOR(int vehicleGenerator)
 	{
@@ -35493,15 +35493,15 @@ public static class Natives
 	/// </summary>
 	public static bool SET_VEHICLE_ON_GROUND_PROPERLY(Vehicle vehicle, float p1)
 	{
-		return NativeFunction.Natives.SET_VEHICLE_ON_GROUND_PROPERLY(vehicle, p1);
+		return NativeFunction.Natives.SET_VEHICLE_ON_GROUND_PROPERLY<bool>(vehicle, p1);
 	}
 	public static bool SET_VEHICLE_USE_CUTSCENE_WHEEL_COMPRESSION(Vehicle p0, bool p1, bool p2, bool p3)
 	{
-		return NativeFunction.Natives.SET_VEHICLE_USE_CUTSCENE_WHEEL_COMPRESSION(p0, p1, p2, p3);
+		return NativeFunction.Natives.SET_VEHICLE_USE_CUTSCENE_WHEEL_COMPRESSION<bool>(p0, p1, p2, p3);
 	}
 	public static bool IS_VEHICLE_STUCK_ON_ROOF(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_STUCK_ON_ROOF(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_STUCK_ON_ROOF<bool>(vehicle);
 	}
 	public static void ADD_VEHICLE_UPSIDEDOWN_CHECK(Vehicle vehicle)
 	{
@@ -35518,7 +35518,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_STOPPED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_STOPPED(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_STOPPED<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Gets the number of passengers.<br/>
@@ -35529,11 +35529,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_NUMBER_OF_PASSENGERS(Vehicle vehicle, bool includeDriver, bool includeDeadOccupants)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NUMBER_OF_PASSENGERS(vehicle, includeDriver, includeDeadOccupants);
+		return NativeFunction.Natives.GET_VEHICLE_NUMBER_OF_PASSENGERS<int>(vehicle, includeDriver, includeDeadOccupants);
 	}
 	public static int GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns max number of passengers (including the driver) for the specified vehicle model.<br/>
@@ -35542,22 +35542,22 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_MODEL_NUMBER_OF_SEATS(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_NUMBER_OF_SEATS(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_NUMBER_OF_SEATS<int>(modelHash);
 	}
 	public static bool IS_SEAT_WARP_ONLY(Vehicle vehicle, int seatIndex)
 	{
-		return NativeFunction.Natives.IS_SEAT_WARP_ONLY(vehicle, seatIndex);
+		return NativeFunction.Natives.IS_SEAT_WARP_ONLY<bool>(vehicle, seatIndex);
 	}
 	public static bool IS_TURRET_SEAT(Vehicle vehicle, int seatIndex)
 	{
-		return NativeFunction.Natives.IS_TURRET_SEAT(vehicle, seatIndex);
+		return NativeFunction.Natives.IS_TURRET_SEAT<bool>(vehicle, seatIndex);
 	}
 	/// <summary>
 	/// 	Returns true if the vehicle has the FLAG_ALLOWS_RAPPEL flag set.
 	/// </summary>
 	public static bool DOES_VEHICLE_ALLOW_RAPPEL(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.DOES_VEHICLE_ALLOW_RAPPEL(vehicle);
+		return NativeFunction.Natives.DOES_VEHICLE_ALLOW_RAPPEL<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Use this native inside a looped function.<br/>
@@ -35633,7 +35633,7 @@ public static class Natives
 	}
 	public static bool GET_VEHICLE_DOORS_LOCKED_FOR_PLAYER(Vehicle vehicle, Player player)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DOORS_LOCKED_FOR_PLAYER(vehicle, player);
+		return NativeFunction.Natives.GET_VEHICLE_DOORS_LOCKED_FOR_PLAYER<bool>(vehicle, player);
 	}
 	/// <summary>
 	/// 	After some analysis, I&amp;apos;ve decided that these are what the parameters are.<br/>
@@ -35673,7 +35673,7 @@ public static class Natives
 	}
 	public static float _GET_VEHICLE_THROTTLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_THROTTLE(vehicle);
+		return NativeFunction.Natives._GET_VEHICLE_THROTTLE<float>(vehicle);
 	}
 	/// <summary>
 	/// 	Explodes a selected vehicle.<br/>
@@ -35709,7 +35709,7 @@ public static class Natives
 	}
 	public static bool HAS_VEHICLE_PHONE_EXPLOSIVE_DEVICE()
 	{
-		return NativeFunction.Natives.HAS_VEHICLE_PHONE_EXPLOSIVE_DEVICE();
+		return NativeFunction.Natives.HAS_VEHICLE_PHONE_EXPLOSIVE_DEVICE<bool>();
 	}
 	public static void DETONATE_VEHICLE_PHONE_EXPLOSIVE_DEVICE()
 	{
@@ -35717,7 +35717,7 @@ public static class Natives
 	}
 	public static bool HAVE_VEHICLE_REAR_DOORS_BEEN_BLOWN_OPEN_BY_STICKYBOMB(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.HAVE_VEHICLE_REAR_DOORS_BEEN_BLOWN_OPEN_BY_STICKYBOMB(vehicle);
+		return NativeFunction.Natives.HAVE_VEHICLE_REAR_DOORS_BEEN_BLOWN_OPEN_BY_STICKYBOMB<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	This is not tested - it&amp;apos;s just an assumption.<br/>
@@ -35737,7 +35737,7 @@ public static class Natives
 	}
 	public static bool IS_TAXI_LIGHT_ON(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_TAXI_LIGHT_ON(vehicle);
+		return NativeFunction.Natives.IS_TAXI_LIGHT_ON<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	garageName example &amp;quot;Michael - Beverly Hills&amp;quot;<br/>
@@ -35746,7 +35746,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_IN_GARAGE_AREA(string garageName, Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_IN_GARAGE_AREA(garageName, vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_IN_GARAGE_AREA<bool>(garageName, vehicle);
 	}
 	/// <summary>
 	/// 	colorPrimary &amp; colorSecondary are the paint index for the vehicle.<br/>
@@ -35791,7 +35791,7 @@ public static class Natives
 	}
 	public static bool GET_IS_VEHICLE_PRIMARY_COLOUR_CUSTOM(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_VEHICLE_PRIMARY_COLOUR_CUSTOM(vehicle);
+		return NativeFunction.Natives.GET_IS_VEHICLE_PRIMARY_COLOUR_CUSTOM<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
@@ -35813,7 +35813,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_VEHICLE_SECONDARY_COLOUR_CUSTOM(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_VEHICLE_SECONDARY_COLOUR_CUSTOM(vehicle);
+		return NativeFunction.Natives.GET_IS_VEHICLE_SECONDARY_COLOUR_CUSTOM<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	The parameter fade is a value from 0-1, where 0 is fresh paint.
@@ -35827,7 +35827,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_ENVEFF_SCALE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_ENVEFF_SCALE(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_ENVEFF_SCALE<float>(vehicle);
 	}
 	/// <summary>
 	/// 	Hardcoded to not work in multiplayer.
@@ -35861,11 +35861,11 @@ public static class Natives
 	}
 	public static bool GET_SUBMARINE_IS_UNDER_DESIGN_DEPTH(Vehicle submarine)
 	{
-		return NativeFunction.Natives.GET_SUBMARINE_IS_UNDER_DESIGN_DEPTH(submarine);
+		return NativeFunction.Natives.GET_SUBMARINE_IS_UNDER_DESIGN_DEPTH<bool>(submarine);
 	}
 	public static int GET_SUBMARINE_NUMBER_OF_AIR_LEAKS(Vehicle submarine)
 	{
-		return NativeFunction.Natives.GET_SUBMARINE_NUMBER_OF_AIR_LEAKS(submarine);
+		return NativeFunction.Natives.GET_SUBMARINE_NUMBER_OF_AIR_LEAKS<int>(submarine);
 	}
 	public static void SET_BOAT_IGNORE_LAND_PROBES()
 	{
@@ -35884,11 +35884,11 @@ public static class Natives
 	}
 	public static bool CAN_ANCHOR_BOAT_HERE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.CAN_ANCHOR_BOAT_HERE(vehicle);
+		return NativeFunction.Natives.CAN_ANCHOR_BOAT_HERE<bool>(vehicle);
 	}
 	public static bool CAN_ANCHOR_BOAT_HERE_IGNORE_PLAYERS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.CAN_ANCHOR_BOAT_HERE_IGNORE_PLAYERS(vehicle);
+		return NativeFunction.Natives.CAN_ANCHOR_BOAT_HERE_IGNORE_PLAYERS<bool>(vehicle);
 	}
 	public static void SET_BOAT_REMAINS_ANCHORED_WHILE_PLAYER_IS_DRIVER(Vehicle vehicle, bool toggle)
 	{
@@ -35907,7 +35907,7 @@ public static class Natives
 	}
 	public static bool IS_BOAT_ANCHORED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_BOAT_ANCHORED(vehicle);
+		return NativeFunction.Natives.IS_BOAT_ANCHORED<bool>(vehicle);
 	}
 	public static void SET_BOAT_SINKS_WHEN_WRECKED(Vehicle vehicle, bool toggle)
 	{
@@ -35926,11 +35926,11 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_SIREN_ON(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_SIREN_ON(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_SIREN_ON<bool>(vehicle);
 	}
 	public static bool IS_VEHICLE_SIREN_AUDIO_ON(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_SIREN_AUDIO_ON(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_SIREN_AUDIO_ON<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	If set to true, vehicle will not take crash damage, but is still susceptible to damage from bullets and explosives
@@ -35956,7 +35956,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_SEAT_FREE(Vehicle vehicle, int seatIndex, bool isTaskRunning)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_SEAT_FREE(vehicle, seatIndex, isTaskRunning);
+		return NativeFunction.Natives.IS_VEHICLE_SEAT_FREE<bool>(vehicle, seatIndex, isTaskRunning);
 	}
 	/// <summary>
 	/// 	If there is no ped in the seat, and the game considers the vehicle as ambient population, this will create a random occupant ped in the seat, which may be cleaned up by the game fairly soon if not marked as script-owned mission entity.<br/>
@@ -35974,15 +35974,15 @@ public static class Natives
 	/// </summary>
 	public static Ped GET_PED_IN_VEHICLE_SEAT(Vehicle vehicle, int seatIndex, bool p2)
 	{
-		return NativeFunction.Natives.GET_PED_IN_VEHICLE_SEAT(vehicle, seatIndex, p2);
+		return NativeFunction.Natives.GET_PED_IN_VEHICLE_SEAT<Ped>(vehicle, seatIndex, p2);
 	}
 	public static Ped GET_LAST_PED_IN_VEHICLE_SEAT(Vehicle vehicle, int seatIndex)
 	{
-		return NativeFunction.Natives.GET_LAST_PED_IN_VEHICLE_SEAT(vehicle, seatIndex);
+		return NativeFunction.Natives.GET_LAST_PED_IN_VEHICLE_SEAT<Ped>(vehicle, seatIndex);
 	}
-	public static bool GET_VEHICLE_LIGHTS_STATE(Vehicle vehicle, bool lightsOn, bool highbeamsOn)
+	public static bool GET_VEHICLE_LIGHTS_STATE(Vehicle vehicle, out bool lightsOn, out bool highbeamsOn)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LIGHTS_STATE(vehicle, lightsOn, highbeamsOn);
+		return NativeFunction.Natives.GET_VEHICLE_LIGHTS_STATE<bool>(vehicle, out lightsOn, out highbeamsOn);
 	}
 	/// <summary>
 	/// 	wheelID used for 4 wheelers seem to be (0, 1, 4, 5)<br/>
@@ -35999,7 +35999,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_TYRE_BURST(Vehicle vehicle, int wheelID, bool completely)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_TYRE_BURST(vehicle, wheelID, completely);
+		return NativeFunction.Natives.IS_VEHICLE_TYRE_BURST<bool>(vehicle, wheelID, completely);
 	}
 	/// <summary>
 	/// 	SCALE: Setting the speed to 30 would result in a speed of roughly 60mph, according to speedometer.<br/>
@@ -36054,7 +36054,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_BEING_BROUGHT_TO_HALT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_BEING_BROUGHT_TO_HALT(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_BEING_BROUGHT_TO_HALT<bool>(vehicle);
 	}
 	public static void LOWER_FORKLIFT_FORKS(Vehicle forklift)
 	{
@@ -36069,11 +36069,11 @@ public static class Natives
 	}
 	public static bool IS_ENTITY_ATTACHED_TO_HANDLER_FRAME(Vehicle vehicle, Entity entity)
 	{
-		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_HANDLER_FRAME(vehicle, entity);
+		return NativeFunction.Natives.IS_ENTITY_ATTACHED_TO_HANDLER_FRAME<bool>(vehicle, entity);
 	}
 	public static bool IS_ANY_ENTITY_ATTACHED_TO_HANDLER_FRAME(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_ANY_ENTITY_ATTACHED_TO_HANDLER_FRAME(vehicle);
+		return NativeFunction.Natives.IS_ANY_ENTITY_ATTACHED_TO_HANDLER_FRAME<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Finds the vehicle that is carrying this entity with a handler frame.<br/>
@@ -36081,11 +36081,11 @@ public static class Natives
 	/// </summary>
 	public static Vehicle FIND_HANDLER_VEHICLE_CONTAINER_IS_ATTACHED_TO(Entity entity)
 	{
-		return NativeFunction.Natives.FIND_HANDLER_VEHICLE_CONTAINER_IS_ATTACHED_TO(entity);
+		return NativeFunction.Natives.FIND_HANDLER_VEHICLE_CONTAINER_IS_ATTACHED_TO<Vehicle>(entity);
 	}
 	public static bool IS_HANDLER_FRAME_LINED_UP_WITH_CONTAINER(Vehicle vehicle, Entity entity)
 	{
-		return NativeFunction.Natives.IS_HANDLER_FRAME_LINED_UP_WITH_CONTAINER(vehicle, entity);
+		return NativeFunction.Natives.IS_HANDLER_FRAME_LINED_UP_WITH_CONTAINER<bool>(vehicle, entity);
 	}
 	public static void ATTACH_CONTAINER_TO_HANDLER_FRAME_WHEN_LINED_UP(Vehicle vehicle, Entity entity)
 	{
@@ -36105,7 +36105,7 @@ public static class Natives
 	}
 	public static bool IS_HELI_LANDING_AREA_BLOCKED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_HELI_LANDING_AREA_BLOCKED(vehicle);
+		return NativeFunction.Natives.IS_HELI_LANDING_AREA_BLOCKED<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Used on helicopters and blimps during the CTaskVehicleLand task. Sets a value on the task to 10f
@@ -36160,7 +36160,7 @@ public static class Natives
 	}
 	public static bool GET_VEHICLE_TYRES_CAN_BURST(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_TYRES_CAN_BURST(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_TYRES_CAN_BURST<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_WHEELS_CAN_BREAK(Vehicle vehicle, bool enabled)
 	{
@@ -36333,7 +36333,7 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_ALARM_ACTIVATED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_ALARM_ACTIVATED(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_ALARM_ACTIVATED<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_INTERIORLIGHT(Vehicle vehicle, bool toggle)
 	{
@@ -36379,7 +36379,7 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_ATTACHED_TO_TRAILER(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_ATTACHED_TO_TRAILER(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_ATTACHED_TO_TRAILER<bool>(vehicle);
 	}
 	public static void SET_TRAILER_INVERSE_MASS_SCALE(Vehicle vehicle, float p1)
 	{
@@ -36430,14 +36430,14 @@ public static class Natives
 	/// </summary>
 	public static string GET_VEHICLE_NUMBER_PLATE_TEXT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NUMBER_PLATE_TEXT(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_NUMBER_PLATE_TEXT<string>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns the number of *types* of licence plates, enumerated below in SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX.
 	/// </summary>
 	public static int GET_NUMBER_OF_VEHICLE_NUMBER_PLATES()
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_VEHICLE_NUMBER_PLATES();
+		return NativeFunction.Natives.GET_NUMBER_OF_VEHICLE_NUMBER_PLATES<int>();
 	}
 	/// <summary>
 	/// 	Plates:<br/>
@@ -36463,7 +36463,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_NUMBER_PLATE_TEXT_INDEX<int>(vehicle);
 	}
 	public static void SET_RANDOM_TRAINS(bool toggle)
 	{
@@ -36484,7 +36484,7 @@ public static class Natives
 	/// </summary>
 	public static Vehicle CREATE_MISSION_TRAIN(int variation, float x, float y, float z, bool direction)
 	{
-		return NativeFunction.Natives.CREATE_MISSION_TRAIN(variation, x, y, z, direction, 0, 0);
+		return NativeFunction.Natives.CREATE_MISSION_TRAIN<Vehicle>(variation, x, y, z, direction, 0, 0);
 	}
 	/// <summary>
 	/// 	Toggles whether ambient trains can spawn on the specified track or not<br/>
@@ -36554,14 +36554,14 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_VEHICLE_HAVE_STUCK_VEHICLE_CHECK(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.DOES_VEHICLE_HAVE_STUCK_VEHICLE_CHECK(vehicle);
+		return NativeFunction.Natives.DOES_VEHICLE_HAVE_STUCK_VEHICLE_CHECK<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	See REQUEST_VEHICLE_RECORDING
 	/// </summary>
 	public static int GET_VEHICLE_RECORDING_ID(int recording, string script)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_RECORDING_ID(recording, script);
+		return NativeFunction.Natives.GET_VEHICLE_RECORDING_ID<int>(recording, script);
 	}
 	/// <summary>
 	/// 	Request the vehicle recording defined by the lowercase format string &amp;quot;%s%03d.yvr&amp;quot;. For example, REQUEST_VEHICLE_RECORDING(1, &amp;quot;FBIs1UBER&amp;quot;) corresponds to fbis1uber001.yvr.<br/>
@@ -36577,7 +36577,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_VEHICLE_RECORDING_BEEN_LOADED(int recording, string script)
 	{
-		return NativeFunction.Natives.HAS_VEHICLE_RECORDING_BEEN_LOADED(recording, script);
+		return NativeFunction.Natives.HAS_VEHICLE_RECORDING_BEEN_LOADED<bool>(recording, script);
 	}
 	/// <summary>
 	/// 	See REQUEST_VEHICLE_RECORDING
@@ -36588,7 +36588,7 @@ public static class Natives
 	}
 	public static Vector3 GET_POSITION_OF_VEHICLE_RECORDING_ID_AT_TIME(int id, float time)
 	{
-		return NativeFunction.Natives.GET_POSITION_OF_VEHICLE_RECORDING_ID_AT_TIME(id, time);
+		return NativeFunction.Natives.GET_POSITION_OF_VEHICLE_RECORDING_ID_AT_TIME<Vector3>(id, time);
 	}
 	/// <summary>
 	/// 	This native does no interpolation between pathpoints. The same position will be returned for all times up to the next pathpoint in the recording.<br/>
@@ -36597,11 +36597,11 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(int recording, float time, string script)
 	{
-		return NativeFunction.Natives.GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(recording, time, script);
+		return NativeFunction.Natives.GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME<Vector3>(recording, time, script);
 	}
 	public static Vector3 GET_ROTATION_OF_VEHICLE_RECORDING_ID_AT_TIME(int id, float time)
 	{
-		return NativeFunction.Natives.GET_ROTATION_OF_VEHICLE_RECORDING_ID_AT_TIME(id, time);
+		return NativeFunction.Natives.GET_ROTATION_OF_VEHICLE_RECORDING_ID_AT_TIME<Vector3>(id, time);
 	}
 	/// <summary>
 	/// 	This native does no interpolation between pathpoints. The same rotation will be returned for all times up to the next pathpoint in the recording.<br/>
@@ -36610,32 +36610,32 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_ROTATION_OF_VEHICLE_RECORDING_AT_TIME(int recording, float time, string script)
 	{
-		return NativeFunction.Natives.GET_ROTATION_OF_VEHICLE_RECORDING_AT_TIME(recording, time, script);
+		return NativeFunction.Natives.GET_ROTATION_OF_VEHICLE_RECORDING_AT_TIME<Vector3>(recording, time, script);
 	}
 	public static float GET_TOTAL_DURATION_OF_VEHICLE_RECORDING_ID(int id)
 	{
-		return NativeFunction.Natives.GET_TOTAL_DURATION_OF_VEHICLE_RECORDING_ID(id);
+		return NativeFunction.Natives.GET_TOTAL_DURATION_OF_VEHICLE_RECORDING_ID<float>(id);
 	}
 	/// <summary>
 	/// 	See REQUEST_VEHICLE_RECORDING
 	/// </summary>
 	public static float GET_TOTAL_DURATION_OF_VEHICLE_RECORDING(int recording, string script)
 	{
-		return NativeFunction.Natives.GET_TOTAL_DURATION_OF_VEHICLE_RECORDING(recording, script);
+		return NativeFunction.Natives.GET_TOTAL_DURATION_OF_VEHICLE_RECORDING<float>(recording, script);
 	}
 	/// <summary>
 	/// 	Distance traveled in the vehicles current recording.
 	/// </summary>
 	public static float GET_POSITION_IN_RECORDING(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_POSITION_IN_RECORDING(vehicle);
+		return NativeFunction.Natives.GET_POSITION_IN_RECORDING<float>(vehicle);
 	}
 	/// <summary>
 	/// 	Can be used with GET_TOTAL_DURATION_OF_VEHICLE_RECORDING{_ID} to compute a percentage.
 	/// </summary>
 	public static float GET_TIME_POSITION_IN_RECORDING(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_TIME_POSITION_IN_RECORDING(vehicle);
+		return NativeFunction.Natives.GET_TIME_POSITION_IN_RECORDING<float>(vehicle);
 	}
 	/// <summary>
 	/// 	p3 is some flag related to &amp;apos;trailers&amp;apos; (invokes CVehicle::GetTrailer).<br/>
@@ -36676,15 +36676,15 @@ public static class Natives
 	}
 	public static bool IS_PLAYBACK_GOING_ON_FOR_VEHICLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_PLAYBACK_GOING_ON_FOR_VEHICLE(vehicle);
+		return NativeFunction.Natives.IS_PLAYBACK_GOING_ON_FOR_VEHICLE<bool>(vehicle);
 	}
 	public static bool IS_PLAYBACK_USING_AI_GOING_ON_FOR_VEHICLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_PLAYBACK_USING_AI_GOING_ON_FOR_VEHICLE(vehicle);
+		return NativeFunction.Natives.IS_PLAYBACK_USING_AI_GOING_ON_FOR_VEHICLE<bool>(vehicle);
 	}
 	public static int GET_CURRENT_PLAYBACK_FOR_VEHICLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_CURRENT_PLAYBACK_FOR_VEHICLE(vehicle);
+		return NativeFunction.Natives.GET_CURRENT_PLAYBACK_FOR_VEHICLE<int>(vehicle);
 	}
 	public static void SKIP_TO_END_AND_STOP_PLAYBACK_RECORDED_VEHICLE(Vehicle vehicle)
 	{
@@ -36776,15 +36776,15 @@ public static class Natives
 	/// </summary>
 	public static Vehicle GET_RANDOM_VEHICLE_IN_SPHERE(float x, float y, float z, float radius, ulong modelHash, int flags)
 	{
-		return NativeFunction.Natives.GET_RANDOM_VEHICLE_IN_SPHERE(x, y, z, radius, modelHash, flags);
+		return NativeFunction.Natives.GET_RANDOM_VEHICLE_IN_SPHERE<Vehicle>(x, y, z, radius, modelHash, flags);
 	}
 	public static Vehicle GET_RANDOM_VEHICLE_FRONT_BUMPER_IN_SPHERE(float p0, float p1, float p2, float p3, int p4, int p5, int p6)
 	{
-		return NativeFunction.Natives.GET_RANDOM_VEHICLE_FRONT_BUMPER_IN_SPHERE(p0, p1, p2, p3, p4, p5, p6);
+		return NativeFunction.Natives.GET_RANDOM_VEHICLE_FRONT_BUMPER_IN_SPHERE<Vehicle>(p0, p1, p2, p3, p4, p5, p6);
 	}
 	public static Vehicle GET_RANDOM_VEHICLE_BACK_BUMPER_IN_SPHERE(float p0, float p1, float p2, float p3, int p4, int p5, int p6)
 	{
-		return NativeFunction.Natives.GET_RANDOM_VEHICLE_BACK_BUMPER_IN_SPHERE(p0, p1, p2, p3, p4, p5, p6);
+		return NativeFunction.Natives.GET_RANDOM_VEHICLE_BACK_BUMPER_IN_SPHERE<Vehicle>(p0, p1, p2, p3, p4, p5, p6);
 	}
 	/// <summary>
 	/// 	Example usage<br/>
@@ -36818,18 +36818,18 @@ public static class Natives
 	/// </summary>
 	public static Vehicle GET_CLOSEST_VEHICLE(float x, float y, float z, float radius, ulong modelHash, int flags)
 	{
-		return NativeFunction.Natives.GET_CLOSEST_VEHICLE(x, y, z, radius, modelHash, flags);
+		return NativeFunction.Natives.GET_CLOSEST_VEHICLE<Vehicle>(x, y, z, radius, modelHash, flags);
 	}
 	/// <summary>
 	/// 	Corrected p1. it&amp;apos;s basically the &amp;apos;carriage/trailer number&amp;apos;. So if the train has 3 trailers you&amp;apos;d call the native once with a var or 3 times with 1, 2, 3.
 	/// </summary>
 	public static Vehicle GET_TRAIN_CARRIAGE(Vehicle train, int trailerNumber)
 	{
-		return NativeFunction.Natives.GET_TRAIN_CARRIAGE(train, trailerNumber);
+		return NativeFunction.Natives.GET_TRAIN_CARRIAGE<Vehicle>(train, trailerNumber);
 	}
 	public static bool IS_MISSION_TRAIN(Vehicle train)
 	{
-		return NativeFunction.Natives.IS_MISSION_TRAIN(train);
+		return NativeFunction.Natives.IS_MISSION_TRAIN<bool>(train);
 	}
 	public static void DELETE_MISSION_TRAIN(out Vehicle train)
 	{
@@ -36848,53 +36848,53 @@ public static class Natives
 	}
 	public static bool IS_THIS_MODEL_A_BOAT(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_BOAT(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_BOAT<bool>(model);
 	}
 	/// <summary>
 	/// 	Checks if model is a boat, then checks for FLAG_IS_JETSKI.
 	/// </summary>
 	public static bool IS_THIS_MODEL_A_JETSKI(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_JETSKI(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_JETSKI<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_A_PLANE(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_PLANE(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_PLANE<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_A_HELI(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_HELI(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_HELI<bool>(model);
 	}
 	/// <summary>
 	/// 	To check if the model is an amphibious car, use IS_THIS_MODEL_AN_AMPHIBIOUS_CAR.
 	/// </summary>
 	public static bool IS_THIS_MODEL_A_CAR(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_CAR(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_CAR<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_A_TRAIN(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_TRAIN(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_TRAIN<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_A_BIKE(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_BIKE(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_BIKE<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_A_BICYCLE(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_BICYCLE(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_BICYCLE<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_A_QUADBIKE(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_A_QUADBIKE(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_A_QUADBIKE<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_AN_AMPHIBIOUS_CAR(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_AN_AMPHIBIOUS_CAR(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_AN_AMPHIBIOUS_CAR<bool>(model);
 	}
 	public static bool IS_THIS_MODEL_AN_AMPHIBIOUS_QUADBIKE(ulong model)
 	{
-		return NativeFunction.Natives.IS_THIS_MODEL_AN_AMPHIBIOUS_QUADBIKE(model);
+		return NativeFunction.Natives.IS_THIS_MODEL_AN_AMPHIBIOUS_QUADBIKE<bool>(model);
 	}
 	/// <summary>
 	/// 	Equivalent of SET_HELI_BLADES_SPEED(vehicleHandle, 1.0f);<br/>
@@ -36951,7 +36951,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_DIRT_LEVEL(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DIRT_LEVEL(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_DIRT_LEVEL<float>(vehicle);
 	}
 	/// <summary>
 	/// 	You can&amp;apos;t use values greater than 15.0<br/>
@@ -36966,14 +36966,14 @@ public static class Natives
 	/// </summary>
 	public static bool GET_DOES_VEHICLE_HAVE_DAMAGE_DECALS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_DOES_VEHICLE_HAVE_DAMAGE_DECALS(vehicle);
+		return NativeFunction.Natives.GET_DOES_VEHICLE_HAVE_DAMAGE_DECALS<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	doorId: see SET_VEHICLE_DOOR_SHUT
 	/// </summary>
 	public static bool IS_VEHICLE_DOOR_FULLY_OPEN(Vehicle vehicle, int doorId)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_DOOR_FULLY_OPEN(vehicle, doorId);
+		return NativeFunction.Natives.IS_VEHICLE_DOOR_FULLY_OPEN<bool>(vehicle, doorId);
 	}
 	/// <summary>
 	/// 	Starts or stops the engine on the specified vehicle.<br/>
@@ -37016,14 +37016,14 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_DOOR_ANGLE_RATIO(Vehicle vehicle, int doorId)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DOOR_ANGLE_RATIO(vehicle, doorId);
+		return NativeFunction.Natives.GET_VEHICLE_DOOR_ANGLE_RATIO<float>(vehicle, doorId);
 	}
 	/// <summary>
 	/// 	doorId: see SET_VEHICLE_DOOR_SHUT
 	/// </summary>
 	public static Ped GET_PED_USING_VEHICLE_DOOR(Vehicle vehicle, int doord)
 	{
-		return NativeFunction.Natives.GET_PED_USING_VEHICLE_DOOR(vehicle, doord);
+		return NativeFunction.Natives.GET_PED_USING_VEHICLE_DOOR<Ped>(vehicle, doord);
 	}
 	/// <summary>
 	/// 	enum eDoorId<br/>
@@ -37054,7 +37054,7 @@ public static class Natives
 	}
 	public static bool DOES_VEHICLE_HAVE_ROOF(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.DOES_VEHICLE_HAVE_ROOF(vehicle);
+		return NativeFunction.Natives.DOES_VEHICLE_HAVE_ROOF<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_REMOVE_AGGRESSIVE_CARJACK_MISSION()
 	{
@@ -37073,14 +37073,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_BIG_VEHICLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_BIG_VEHICLE(vehicle);
+		return NativeFunction.Natives.IS_BIG_VEHICLE<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns the total amount of color combinations found in the vehicle&amp;apos;s carvariations.meta entry.
 	/// </summary>
 	public static int GET_NUMBER_OF_VEHICLE_COLOURS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_VEHICLE_COLOURS(vehicle);
+		return NativeFunction.Natives.GET_NUMBER_OF_VEHICLE_COLOURS<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Sets the selected vehicle&amp;apos;s colors to the specified index of the color combination found in the vehicle&amp;apos;s carvariations.meta entry.
@@ -37094,7 +37094,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_COLOUR_COMBINATION(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_COLOUR_COMBINATION(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_COLOUR_COMBINATION<int>(vehicle);
 	}
 	/// <summary>
 	/// 	`color`: is the paint index for the vehicle.<br/>
@@ -37115,7 +37115,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_XENON_LIGHT_COLOR_INDEX(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_XENON_LIGHT_COLOR_INDEX(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_XENON_LIGHT_COLOR_INDEX<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Setting this to false, makes the specified vehicle to where if you press Y your character doesn&amp;apos;t even attempt the animation to enter the vehicle. Hence it&amp;apos;s not considered aka ignored.
@@ -37146,9 +37146,9 @@ public static class Natives
 	/// 	p0 always true (except in one case)<br/>
 	/// 	successIndicator: 0 if success, -1 if failed
 	/// </summary>
-	public static void GET_RANDOM_VEHICLE_MODEL_IN_MEMORY(bool p0, ulong modelHash, out int successIndicator)
+	public static void GET_RANDOM_VEHICLE_MODEL_IN_MEMORY(bool p0, out ulong modelHash, out int successIndicator)
 	{
-		NativeFunction.Natives.GET_RANDOM_VEHICLE_MODEL_IN_MEMORY(p0, modelHash, out successIndicator);
+		NativeFunction.Natives.GET_RANDOM_VEHICLE_MODEL_IN_MEMORY(p0, out modelHash, out successIndicator);
 	}
 	/// <summary>
 	/// 	enum VehicleLockStatus = {<br/>
@@ -37164,21 +37164,21 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_DOOR_LOCK_STATUS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DOOR_LOCK_STATUS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_DOOR_LOCK_STATUS<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns vehicle door lock state previously set with SET_VEHICLE_INDIVIDUAL_DOORS_LOCKED
 	/// </summary>
 	public static int GET_VEHICLE_INDIVIDUAL_DOOR_LOCK_STATUS(Vehicle vehicle, int doorId)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_INDIVIDUAL_DOOR_LOCK_STATUS(vehicle, doorId);
+		return NativeFunction.Natives.GET_VEHICLE_INDIVIDUAL_DOOR_LOCK_STATUS<int>(vehicle, doorId);
 	}
 	/// <summary>
 	/// 	doorID starts at 0, not seeming to skip any numbers. Four door vehicles intuitively range from 0 to 3.
 	/// </summary>
 	public static bool IS_VEHICLE_DOOR_DAMAGED(Vehicle veh, int doorID)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_DOOR_DAMAGED(veh, doorID);
+		return NativeFunction.Natives.IS_VEHICLE_DOOR_DAMAGED<bool>(veh, doorID);
 	}
 	/// <summary>
 	/// 	doorId: see SET_VEHICLE_DOOR_SHUT
@@ -37189,11 +37189,11 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_BUMPER_BOUNCING(Vehicle vehicle, bool frontBumper)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_BUMPER_BOUNCING(vehicle, frontBumper);
+		return NativeFunction.Natives.IS_VEHICLE_BUMPER_BOUNCING<bool>(vehicle, frontBumper);
 	}
 	public static bool IS_VEHICLE_BUMPER_BROKEN_OFF(Vehicle vehicle, bool frontBumper)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_BUMPER_BROKEN_OFF(vehicle, frontBumper);
+		return NativeFunction.Natives.IS_VEHICLE_BUMPER_BROKEN_OFF<bool>(vehicle, frontBumper);
 	}
 	/// <summary>
 	/// 	Usage:<br/>
@@ -37205,7 +37205,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_COP_VEHICLE_IN_AREA_3D(float x1, float x2, float y1, float y2, float z1, float z2)
 	{
-		return NativeFunction.Natives.IS_COP_VEHICLE_IN_AREA_3D(x1, x2, y1, y2, z1, z2);
+		return NativeFunction.Natives.IS_COP_VEHICLE_IN_AREA_3D<bool>(x1, x2, y1, y2, z1, z2);
 	}
 	/// <summary>
 	/// 	 Public Function isVehicleOnAllWheels(vh As Vehicle) As Boolean<br/>
@@ -37215,25 +37215,25 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_ON_ALL_WHEELS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_ON_ALL_WHEELS(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_ON_ALL_WHEELS<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns `nMonetaryValue` from handling.meta for specific model.
 	/// </summary>
 	public static int GET_VEHICLE_MODEL_VALUE(ulong vehicleModel)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_VALUE(vehicleModel);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_VALUE<int>(vehicleModel);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
 	public static ulong GET_VEHICLE_LAYOUT_HASH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LAYOUT_HASH(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_LAYOUT_HASH<ulong>(vehicle);
 	}
 	public static ulong GET_IN_VEHICLE_CLIPSET_HASH_FOR_SEAT(Vehicle vehicle, int p1)
 	{
-		return NativeFunction.Natives.GET_IN_VEHICLE_CLIPSET_HASH_FOR_SEAT(vehicle, p1);
+		return NativeFunction.Natives.GET_IN_VEHICLE_CLIPSET_HASH_FOR_SEAT<ulong>(vehicle, p1);
 	}
 	/// <summary>
 	/// 	Makes the train all jumbled up and derailed as it moves on the tracks (though that wont stop it from its normal operations)
@@ -37359,7 +37359,7 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_EXTRA_TURNED_ON(Vehicle vehicle, int extraId)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_EXTRA_TURNED_ON(vehicle, extraId);
+		return NativeFunction.Natives.IS_VEHICLE_EXTRA_TURNED_ON<bool>(vehicle, extraId);
 	}
 	/// <summary>
 	/// 	Available extraIds are 1-14, however none of the vehicles have extras above 12.
@@ -37373,14 +37373,14 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_EXTRA_EXIST(Vehicle vehicle, int extraId)
 	{
-		return NativeFunction.Natives.DOES_EXTRA_EXIST(vehicle, extraId);
+		return NativeFunction.Natives.DOES_EXTRA_EXIST<bool>(vehicle, extraId);
 	}
 	/// <summary>
 	/// 	Returns true if specified extra part is broken off. It only works for extras that can break off during collisions, non-breakable extras always return false. Also returns true if the breakable extra is toggled off through script.
 	/// </summary>
 	public static bool IS_EXTRA_BROKEN_OFF(Vehicle vehicle, int extraId)
 	{
-		return NativeFunction.Natives.IS_EXTRA_BROKEN_OFF(vehicle, extraId);
+		return NativeFunction.Natives.IS_EXTRA_BROKEN_OFF<bool>(vehicle, extraId);
 	}
 	public static void SET_CONVERTIBLE_ROOF(Vehicle vehicle, bool p1)
 	{
@@ -37402,7 +37402,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_CONVERTIBLE_ROOF_STATE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_CONVERTIBLE_ROOF_STATE(vehicle);
+		return NativeFunction.Natives.GET_CONVERTIBLE_ROOF_STATE<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns true if the vehicle has a convertible roof.<br/>
@@ -37411,14 +37411,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_A_CONVERTIBLE(Vehicle vehicle, bool p1)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_A_CONVERTIBLE(vehicle, p1);
+		return NativeFunction.Natives.IS_VEHICLE_A_CONVERTIBLE<bool>(vehicle, p1);
 	}
 	/// <summary>
 	/// 	Transforms the `stormberg`/`toreador` to its &amp;quot;submarine&amp;quot; variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won&amp;apos;t change at all.
 	/// </summary>
 	public static bool TRANSFORM_TO_SUBMARINE(Vehicle vehicle, bool noAnimation)
 	{
-		return NativeFunction.Natives.TRANSFORM_TO_SUBMARINE(vehicle, noAnimation);
+		return NativeFunction.Natives.TRANSFORM_TO_SUBMARINE<bool>(vehicle, noAnimation);
 	}
 	/// <summary>
 	/// 	Transforms the `stormberg`/`toreador` to its &amp;quot;road vehicle&amp;quot; variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won&amp;apos;t change at all.
@@ -37429,11 +37429,11 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_IN_SUBMARINE_MODE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_IN_SUBMARINE_MODE(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_IN_SUBMARINE_MODE<bool>(vehicle);
 	}
 	public static bool IS_VEHICLE_STOPPED_AT_TRAFFIC_LIGHTS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_STOPPED_AT_TRAFFIC_LIGHTS(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_STOPPED_AT_TRAFFIC_LIGHTS<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Apply damage to vehicle at a location. Location is relative to vehicle model (not world).<br/>
@@ -37462,7 +37462,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_ENGINE_HEALTH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_ENGINE_HEALTH(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_ENGINE_HEALTH<float>(vehicle);
 	}
 	/// <summary>
 	/// 	1000 is max health<br/>
@@ -37493,7 +37493,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_PETROL_TANK_HEALTH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_PETROL_TANK_HEALTH(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_PETROL_TANK_HEALTH<float>(vehicle);
 	}
 	/// <summary>
 	/// 	1000 is max health<br/>
@@ -37510,7 +37510,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_STUCK_TIMER_UP(Vehicle vehicle, int p1, int ms)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_STUCK_TIMER_UP(vehicle, p1, ms);
+		return NativeFunction.Natives.IS_VEHICLE_STUCK_TIMER_UP<bool>(vehicle, p1, ms);
 	}
 	/// <summary>
 	/// 	The inner function has a switch on the second parameter. It&amp;apos;s the stuck timer index.<br/>
@@ -37548,7 +37548,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_DRIVEABLE(Vehicle vehicle, bool isOnFireCheck)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_DRIVEABLE(vehicle, isOnFireCheck);
+		return NativeFunction.Natives.IS_VEHICLE_DRIVEABLE<bool>(vehicle, isOnFireCheck);
 	}
 	public static void SET_VEHICLE_HAS_BEEN_OWNED_BY_PLAYER(Vehicle vehicle, bool owned)
 	{
@@ -37607,7 +37607,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(modelHash);
+		return NativeFunction.Natives.GET_DISPLAY_NAME_FROM_VEHICLE_MODEL<string>(modelHash);
 	}
 	/// <summary>
 	/// 	Will return a vehicle&amp;apos;s manufacturer display label.<br/>
@@ -37617,7 +37617,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_MAKE_NAME_FROM_VEHICLE_MODEL(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_MAKE_NAME_FROM_VEHICLE_MODEL(modelHash);
+		return NativeFunction.Natives.GET_MAKE_NAME_FROM_VEHICLE_MODEL<string>(modelHash);
 	}
 	/// <summary>
 	/// 	The only example I can find of this function in the scripts, is this:<br/>
@@ -37631,7 +37631,7 @@ public static class Natives
 	/// </summary>
 	public static Vector3 GET_VEHICLE_DEFORMATION_AT_POS(Vehicle vehicle, float offsetX, float offsetY, float offsetZ)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DEFORMATION_AT_POS(vehicle, offsetX, offsetY, offsetZ);
+		return NativeFunction.Natives.GET_VEHICLE_DEFORMATION_AT_POS<Vector3>(vehicle, offsetX, offsetY, offsetZ);
 	}
 	public static void SET_VEHICLE_LIVERY(Vehicle vehicle, int livery)
 	{
@@ -37642,14 +37642,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_LIVERY(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LIVERY(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_LIVERY<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns -1 if the vehicle has no livery
 	/// </summary>
 	public static int GET_VEHICLE_LIVERY_COUNT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LIVERY_COUNT(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_LIVERY_COUNT<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Used to set the secondary livery (the roof on Tornado Custom being one such example.)<br/>
@@ -37665,14 +37665,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_LIVERY2(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LIVERY2(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_LIVERY2<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns a number of available secondary liveries, or -1 if vehicle has no secondary liveries available.
 	/// </summary>
 	public static int GET_VEHICLE_LIVERY2_COUNT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LIVERY2_COUNT(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_LIVERY2_COUNT<int>(vehicle);
 	}
 	/// <summary>
 	/// 	This will return false if the window is broken, or rolled down.<br/>
@@ -37687,21 +37687,21 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_WINDOW_INTACT(Vehicle vehicle, int windowIndex)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_WINDOW_INTACT(vehicle, windowIndex);
+		return NativeFunction.Natives.IS_VEHICLE_WINDOW_INTACT<bool>(vehicle, windowIndex);
 	}
 	/// <summary>
 	/// 	Appears to return false if any window is broken.
 	/// </summary>
 	public static bool ARE_ALL_VEHICLE_WINDOWS_INTACT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.ARE_ALL_VEHICLE_WINDOWS_INTACT(vehicle);
+		return NativeFunction.Natives.ARE_ALL_VEHICLE_WINDOWS_INTACT<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns false if every seat is occupied.
 	/// </summary>
 	public static bool ARE_ANY_VEHICLE_SEATS_FREE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.ARE_ANY_VEHICLE_SEATS_FREE(vehicle);
+		return NativeFunction.Natives.ARE_ANY_VEHICLE_SEATS_FREE<bool>(vehicle);
 	}
 	public static void RESET_VEHICLE_WHEELS(Vehicle vehicle, bool toggle)
 	{
@@ -37709,7 +37709,7 @@ public static class Natives
 	}
 	public static bool IS_HELI_PART_BROKEN(Vehicle vehicle, bool p1, bool p2, bool p3)
 	{
-		return NativeFunction.Natives.IS_HELI_PART_BROKEN(vehicle, p1, p2, p3);
+		return NativeFunction.Natives.IS_HELI_PART_BROKEN<bool>(vehicle, p1, p2, p3);
 	}
 	/// <summary>
 	/// 	Max 1000.<br/>
@@ -37717,7 +37717,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_HELI_MAIN_ROTOR_HEALTH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_HELI_MAIN_ROTOR_HEALTH(vehicle);
+		return NativeFunction.Natives.GET_HELI_MAIN_ROTOR_HEALTH<float>(vehicle);
 	}
 	/// <summary>
 	/// 	Max 1000.<br/>
@@ -37725,7 +37725,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_HELI_TAIL_ROTOR_HEALTH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_HELI_TAIL_ROTOR_HEALTH(vehicle);
+		return NativeFunction.Natives.GET_HELI_TAIL_ROTOR_HEALTH<float>(vehicle);
 	}
 	/// <summary>
 	/// 	Max 1000.<br/>
@@ -37733,7 +37733,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_HELI_TAIL_BOOM_HEALTH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_HELI_TAIL_BOOM_HEALTH(vehicle);
+		return NativeFunction.Natives.GET_HELI_TAIL_BOOM_HEALTH<float>(vehicle);
 	}
 	public static void SET_HELI_MAIN_ROTOR_HEALTH(Vehicle vehicle, float health)
 	{
@@ -37745,7 +37745,7 @@ public static class Natives
 	}
 	public static bool SET_HELI_TAIL_BOOM_CAN_BREAK_OFF(Vehicle vehicle, bool toggle)
 	{
-		return NativeFunction.Natives.SET_HELI_TAIL_BOOM_CAN_BREAK_OFF(vehicle, toggle);
+		return NativeFunction.Natives.SET_HELI_TAIL_BOOM_CAN_BREAK_OFF<bool>(vehicle, toggle);
 	}
 	/// <summary>
 	/// 	NOTE: Debugging functions are not present in the retail version of the game.
@@ -37775,7 +37775,7 @@ public static class Natives
 	}
 	public static bool GET_VEHICLE_HAS_LANDING_GEAR(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_HAS_LANDING_GEAR(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_HAS_LANDING_GEAR<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Works for vehicles with a retractable landing gear<br/>
@@ -37804,11 +37804,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_LANDING_GEAR_STATE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_LANDING_GEAR_STATE(vehicle);
+		return NativeFunction.Natives.GET_LANDING_GEAR_STATE<int>(vehicle);
 	}
 	public static bool IS_ANY_VEHICLE_NEAR_POINT(float x, float y, float z, float radius)
 	{
-		return NativeFunction.Natives.IS_ANY_VEHICLE_NEAR_POINT(x, y, z, radius);
+		return NativeFunction.Natives.IS_ANY_VEHICLE_NEAR_POINT<bool>(x, y, z, radius);
 	}
 	public static void REQUEST_VEHICLE_HIGH_DETAIL_MODEL(Vehicle vehicle)
 	{
@@ -37816,15 +37816,15 @@ public static class Natives
 	}
 	public static int _GET_VEHICLE_MODEL_NUM_DRIVE_GEARS(ulong vehicleModel)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_MODEL_NUM_DRIVE_GEARS(vehicleModel);
+		return NativeFunction.Natives._GET_VEHICLE_MODEL_NUM_DRIVE_GEARS<int>(vehicleModel);
 	}
 	public static int _GET_VEHICLE_MAX_DRIVE_GEAR_COUNT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_MAX_DRIVE_GEAR_COUNT(vehicle);
+		return NativeFunction.Natives._GET_VEHICLE_MAX_DRIVE_GEAR_COUNT<int>(vehicle);
 	}
 	public static bool _GET_IS_VEHICLE_ELECTRIC(ulong vehicleModel)
 	{
-		return NativeFunction.Natives._GET_IS_VEHICLE_ELECTRIC(vehicleModel);
+		return NativeFunction.Natives._GET_IS_VEHICLE_ELECTRIC<bool>(vehicleModel);
 	}
 	/// <summary>
 	/// 	Returns the vehicle&amp;apos;s drivetrain type.<br/>
@@ -37841,15 +37841,15 @@ public static class Natives
 	/// </summary>
 	public static int _GET_VEHICLE_DRIVETRAIN_TYPE(ulong vehicleModel)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_DRIVETRAIN_TYPE(vehicleModel);
+		return NativeFunction.Natives._GET_VEHICLE_DRIVETRAIN_TYPE<int>(vehicleModel);
 	}
 	public static int _GET_VEHICLE_CURRENT_DRIVE_GEAR(Vehicle vehicle)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_CURRENT_DRIVE_GEAR(vehicle);
+		return NativeFunction.Natives._GET_VEHICLE_CURRENT_DRIVE_GEAR<int>(vehicle);
 	}
 	public static float _GET_VEHICLE_CURRENT_REV_RATIO(Vehicle vehicle)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_CURRENT_REV_RATIO(vehicle);
+		return NativeFunction.Natives._GET_VEHICLE_CURRENT_REV_RATIO<float>(vehicle);
 	}
 	public static void REMOVE_VEHICLE_HIGH_DETAIL_MODEL(Vehicle vehicle)
 	{
@@ -37857,7 +37857,7 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_HIGH_DETAIL(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_HIGH_DETAIL(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_HIGH_DETAIL<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	REQUEST_VEHICLE_ASSET(GET_HASH_KEY(cargobob3), 3);<br/>
@@ -37873,7 +37873,7 @@ public static class Natives
 	}
 	public static bool HAS_VEHICLE_ASSET_LOADED(int vehicleAsset)
 	{
-		return NativeFunction.Natives.HAS_VEHICLE_ASSET_LOADED(vehicleAsset);
+		return NativeFunction.Natives.HAS_VEHICLE_ASSET_LOADED<bool>(vehicleAsset);
 	}
 	public static void REMOVE_VEHICLE_ASSET(int vehicleAsset)
 	{
@@ -37906,22 +37906,22 @@ public static class Natives
 	}
 	public static bool DETACH_VEHICLE_FROM_ANY_TOW_TRUCK(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.DETACH_VEHICLE_FROM_ANY_TOW_TRUCK(vehicle);
+		return NativeFunction.Natives.DETACH_VEHICLE_FROM_ANY_TOW_TRUCK<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Scripts verify that towTruck is the first parameter, not the second.
 	/// </summary>
 	public static bool IS_VEHICLE_ATTACHED_TO_TOW_TRUCK(Vehicle towTruck, Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_ATTACHED_TO_TOW_TRUCK(towTruck, vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_ATTACHED_TO_TOW_TRUCK<bool>(towTruck, vehicle);
 	}
 	public static Entity GET_ENTITY_ATTACHED_TO_TOW_TRUCK(Vehicle towTruck)
 	{
-		return NativeFunction.Natives.GET_ENTITY_ATTACHED_TO_TOW_TRUCK(towTruck);
+		return NativeFunction.Natives.GET_ENTITY_ATTACHED_TO_TOW_TRUCK<Entity>(towTruck);
 	}
 	public static Entity SET_VEHICLE_AUTOMATICALLY_ATTACHES(Vehicle vehicle, bool p1)
 	{
-		return NativeFunction.Natives.SET_VEHICLE_AUTOMATICALLY_ATTACHES(vehicle, p1, 0);
+		return NativeFunction.Natives.SET_VEHICLE_AUTOMATICALLY_ATTACHES<Entity>(vehicle, p1, 0);
 	}
 	/// <summary>
 	/// 	Sets the arm position of a bulldozer. Position must be a value between 0.0 and 1.0. Ignored when `p2` is set to false, instead incrementing arm position by 0.1 (or 10%).
@@ -37960,7 +37960,7 @@ public static class Natives
 	}
 	public static float GET_VEHICLE_FLIGHT_NOZZLE_POSITION(Vehicle plane)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_FLIGHT_NOZZLE_POSITION(plane);
+		return NativeFunction.Natives.GET_VEHICLE_FLIGHT_NOZZLE_POSITION<float>(plane);
 	}
 	/// <summary>
 	/// 	True stops vtols from switching modes. Doesn&amp;apos;t stop the sound though.
@@ -37971,7 +37971,7 @@ public static class Natives
 	}
 	public static bool GENERATE_VEHICLE_CREATION_POS_FROM_PATHS(out Vector3 outVec, out Vector3 outVec1)
 	{
-		return NativeFunction.Natives.GENERATE_VEHICLE_CREATION_POS_FROM_PATHS(out outVec, 0, out outVec1, 0, 0, 0, 0, 0, 0);
+		return NativeFunction.Natives.GENERATE_VEHICLE_CREATION_POS_FROM_PATHS<bool>(out outVec, 0, out outVec1, 0, 0, 0, 0, 0, 0);
 	}
 	/// <summary>
 	/// 	On accelerating, spins the driven wheels with the others braked, so you don&amp;apos;t go anywhere.
@@ -37991,7 +37991,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_IN_BURNOUT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_IN_BURNOUT(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_IN_BURNOUT<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Reduces grip significantly so it&amp;apos;s hard to go anywhere.
@@ -38038,7 +38038,7 @@ public static class Natives
 	}
 	public static bool HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED()
 	{
-		return NativeFunction.Natives.HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED();
+		return NativeFunction.Natives.HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED<bool>();
 	}
 	public static void NETWORK_ENABLE_EMPTY_CROWDING_VEHICLES_REMOVAL(bool toggle)
 	{
@@ -38056,11 +38056,11 @@ public static class Natives
 	/// </summary>
 	public static bool GET_VEHICLE_TRAILER_VEHICLE(Vehicle vehicle, out Vehicle trailer)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_TRAILER_VEHICLE(vehicle, out trailer);
+		return NativeFunction.Natives.GET_VEHICLE_TRAILER_VEHICLE<bool>(vehicle, out trailer);
 	}
 	public static Vehicle _GET_VEHICLE_TRAILER_PARENT_VEHICLE(Vehicle trailer)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_TRAILER_PARENT_VEHICLE(trailer);
+		return NativeFunction.Natives._GET_VEHICLE_TRAILER_PARENT_VEHICLE<Vehicle>(trailer);
 	}
 	/// <summary>
 	/// 	vehicle must be a plane
@@ -38079,22 +38079,22 @@ public static class Natives
 	}
 	public static float GET_VEHICLE_ESTIMATED_MAX_SPEED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_ESTIMATED_MAX_SPEED(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_ESTIMATED_MAX_SPEED<float>(vehicle);
 	}
 	public static float GET_VEHICLE_MAX_BRAKING(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MAX_BRAKING(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_MAX_BRAKING<float>(vehicle);
 	}
 	public static float GET_VEHICLE_MAX_TRACTION(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MAX_TRACTION(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_MAX_TRACTION<float>(vehicle);
 	}
 	/// <summary>
 	/// 	static - max acceleration
 	/// </summary>
 	public static float GET_VEHICLE_ACCELERATION(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_ACCELERATION(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_ACCELERATION<float>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns max speed (without mods) of the specified vehicle model in m/s.<br/>
@@ -38103,7 +38103,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Returns max braking of the specified vehicle model.<br/>
@@ -38112,14 +38112,14 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_MODEL_MAX_BRAKING(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_BRAKING(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_BRAKING<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
 	public static float GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Returns max traction of the specified vehicle model.<br/>
@@ -38128,7 +38128,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_MODEL_MAX_TRACTION(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_TRACTION(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_TRACTION<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Returns the acceleration of the specified model.<br/>
@@ -38137,7 +38137,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_MODEL_ACCELERATION(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_ACCELERATION(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_ACCELERATION<float>(modelHash);
 	}
 	/// <summary>
 	/// 	9.8 * thrust if air vehicle, else 0.38 + drive force?<br/>
@@ -38146,49 +38146,49 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_MODEL_ACCELERATION_MAX_MODS(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MODEL_ACCELERATION_MAX_MODS(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_MODEL_ACCELERATION_MAX_MODS<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
 	public static float GET_FLYING_VEHICLE_MODEL_AGILITY(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_FLYING_VEHICLE_MODEL_AGILITY(modelHash);
+		return NativeFunction.Natives.GET_FLYING_VEHICLE_MODEL_AGILITY<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
 	public static float GET_BOAT_VEHICLE_MODEL_AGILITY(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_BOAT_VEHICLE_MODEL_AGILITY(modelHash);
+		return NativeFunction.Natives.GET_BOAT_VEHICLE_MODEL_AGILITY<float>(modelHash);
 	}
 	public static float GET_VEHICLE_CLASS_ESTIMATED_MAX_SPEED(int vehicleClass)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CLASS_ESTIMATED_MAX_SPEED(vehicleClass);
+		return NativeFunction.Natives.GET_VEHICLE_CLASS_ESTIMATED_MAX_SPEED<float>(vehicleClass);
 	}
 	public static float GET_VEHICLE_CLASS_MAX_TRACTION(int vehicleClass)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_TRACTION(vehicleClass);
+		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_TRACTION<float>(vehicleClass);
 	}
 	public static float GET_VEHICLE_CLASS_MAX_AGILITY(int vehicleClass)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_AGILITY(vehicleClass);
+		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_AGILITY<float>(vehicleClass);
 	}
 	public static float GET_VEHICLE_CLASS_MAX_ACCELERATION(int vehicleClass)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_ACCELERATION(vehicleClass);
+		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_ACCELERATION<float>(vehicleClass);
 	}
 	public static float GET_VEHICLE_CLASS_MAX_BRAKING(int vehicleClass)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_BRAKING(vehicleClass);
+		return NativeFunction.Natives.GET_VEHICLE_CLASS_MAX_BRAKING<float>(vehicleClass);
 	}
 	public static int ADD_ROAD_NODE_SPEED_ZONE(float x, float y, float z, float radius, float speed, bool p5)
 	{
-		return NativeFunction.Natives.ADD_ROAD_NODE_SPEED_ZONE(x, y, z, radius, speed, p5);
+		return NativeFunction.Natives.ADD_ROAD_NODE_SPEED_ZONE<int>(x, y, z, radius, speed, p5);
 	}
 	public static bool REMOVE_ROAD_NODE_SPEED_ZONE(int speedzone)
 	{
-		return NativeFunction.Natives.REMOVE_ROAD_NODE_SPEED_ZONE(speedzone);
+		return NativeFunction.Natives.REMOVE_ROAD_NODE_SPEED_ZONE<bool>(speedzone);
 	}
 	public static void OPEN_BOMB_BAY_DOORS(Vehicle vehicle)
 	{
@@ -38203,7 +38203,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_ARE_BOMB_BAY_DOORS_OPEN(Vehicle aircraft)
 	{
-		return NativeFunction.Natives.GET_ARE_BOMB_BAY_DOORS_OPEN(aircraft);
+		return NativeFunction.Natives.GET_ARE_BOMB_BAY_DOORS_OPEN<bool>(aircraft);
 	}
 	/// <summary>
 	/// 	Possibly: Returns whether the searchlight (found on police vehicles) is toggled on.<br/>
@@ -38212,7 +38212,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_SEARCHLIGHT_ON(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_SEARCHLIGHT_ON(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_SEARCHLIGHT_ON<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Only works during nighttime.
@@ -38223,7 +38223,7 @@ public static class Natives
 	}
 	public static bool DOES_VEHICLE_HAVE_SEARCHLIGHT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.DOES_VEHICLE_HAVE_SEARCHLIGHT(vehicle);
+		return NativeFunction.Natives.DOES_VEHICLE_HAVE_SEARCHLIGHT<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Check if a vehicle seat is accessible. If you park your vehicle near a wall and the ped cannot enter/exit this side, the return value toggles from true (not blocked) to false (blocked).<br/>
@@ -38235,22 +38235,22 @@ public static class Natives
 	/// </summary>
 	public static bool IS_ENTRY_POINT_FOR_SEAT_CLEAR(Ped ped, Vehicle vehicle, int seatIndex, bool side, bool onEnter)
 	{
-		return NativeFunction.Natives.IS_ENTRY_POINT_FOR_SEAT_CLEAR(ped, vehicle, seatIndex, side, onEnter);
+		return NativeFunction.Natives.IS_ENTRY_POINT_FOR_SEAT_CLEAR<bool>(ped, vehicle, seatIndex, side, onEnter);
 	}
 	/// <summary>
 	/// 	doorId: see SET_VEHICLE_DOOR_SHUT
 	/// </summary>
 	public static Vector3 GET_ENTRY_POINT_POSITION(Vehicle vehicle, int doorId)
 	{
-		return NativeFunction.Natives.GET_ENTRY_POINT_POSITION(vehicle, doorId);
+		return NativeFunction.Natives.GET_ENTRY_POINT_POSITION<Vector3>(vehicle, doorId);
 	}
 	public static bool CAN_SHUFFLE_SEAT(Vehicle vehicle, int seatIndex)
 	{
-		return NativeFunction.Natives.CAN_SHUFFLE_SEAT(vehicle, seatIndex);
+		return NativeFunction.Natives.CAN_SHUFFLE_SEAT<bool>(vehicle, seatIndex);
 	}
 	public static int GET_NUM_MOD_KITS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_NUM_MOD_KITS(vehicle);
+		return NativeFunction.Natives.GET_NUM_MOD_KITS<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Set modKit to 0 if you plan to call SET_VEHICLE_MOD. That&amp;apos;s what the game does. Most body modifications through SET_VEHICLE_MOD will not take effect until this is set to 0.<br/>
@@ -38263,11 +38263,11 @@ public static class Natives
 	}
 	public static int GET_VEHICLE_MOD_KIT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_KIT(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_KIT<int>(vehicle);
 	}
 	public static int GET_VEHICLE_MOD_KIT_TYPE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_KIT_TYPE(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_KIT_TYPE<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns an int<br/>
@@ -38291,7 +38291,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_WHEEL_TYPE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_WHEEL_TYPE(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_WHEEL_TYPE<int>(vehicle);
 	}
 	/// <summary>
 	/// 	0: Sport<br/>
@@ -38324,7 +38324,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_NUM_MOD_COLORS(int paintType, bool p1)
 	{
-		return NativeFunction.Natives.GET_NUM_MOD_COLORS(paintType, p1);
+		return NativeFunction.Natives.GET_NUM_MOD_COLORS<int>(paintType, p1);
 	}
 	/// <summary>
 	/// 	paintType:<br/>
@@ -38380,25 +38380,25 @@ public static class Natives
 	/// </summary>
 	public static string GET_VEHICLE_MOD_COLOR_1_NAME(Vehicle vehicle, bool p1)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_COLOR_1_NAME(vehicle, p1);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_COLOR_1_NAME<string>(vehicle, p1);
 	}
 	/// <summary>
 	/// 	Returns a string which is the codename of the vehicle&amp;apos;s currently selected secondary color
 	/// </summary>
 	public static string GET_VEHICLE_MOD_COLOR_2_NAME(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_COLOR_2_NAME(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_COLOR_2_NAME<string>(vehicle);
 	}
 	public static bool HAVE_VEHICLE_MODS_STREAMED_IN(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.HAVE_VEHICLE_MODS_STREAMED_IN(vehicle);
+		return NativeFunction.Natives.HAVE_VEHICLE_MODS_STREAMED_IN<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns true for any mod part listed in GEN9_EXCLUSIVE_ASSETS_VEHICLES_FILE.
 	/// </summary>
 	public static bool IS_VEHICLE_MOD_GEN9_EXCLUSIVE(Vehicle vehicle, int modType, int modIndex)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_MOD_GEN9_EXCLUSIVE(vehicle, modType, modIndex);
+		return NativeFunction.Natives.IS_VEHICLE_MOD_GEN9_EXCLUSIVE<bool>(vehicle, modType, modIndex);
 	}
 	/// <summary>
 	/// 	In b944, there are 50 (0 - 49) mod types.<br/>
@@ -38451,21 +38451,21 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_MOD(Vehicle vehicle, int modType)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD(vehicle, modType);
+		return NativeFunction.Natives.GET_VEHICLE_MOD<int>(vehicle, modType);
 	}
 	/// <summary>
 	/// 	Only used for wheels(ModType = 23/24) Returns true if the wheels are custom wheels
 	/// </summary>
 	public static int GET_VEHICLE_MOD_VARIATION(Vehicle vehicle, int modType)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_VARIATION(vehicle, modType);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_VARIATION<int>(vehicle, modType);
 	}
 	/// <summary>
 	/// 	Returns how many possible mods a vehicle has for a given mod type
 	/// </summary>
 	public static int GET_NUM_VEHICLE_MODS(Vehicle vehicle, int modType)
 	{
-		return NativeFunction.Natives.GET_NUM_VEHICLE_MODS(vehicle, modType);
+		return NativeFunction.Natives.GET_NUM_VEHICLE_MODS<int>(vehicle, modType);
 	}
 	public static void REMOVE_VEHICLE_MOD(Vehicle vehicle, int modType)
 	{
@@ -38486,7 +38486,7 @@ public static class Natives
 	}
 	public static bool IS_TOGGLE_MOD_ON(Vehicle vehicle, int modType)
 	{
-		return NativeFunction.Natives.IS_TOGGLE_MOD_ON(vehicle, modType);
+		return NativeFunction.Natives.IS_TOGGLE_MOD_ON<bool>(vehicle, modType);
 	}
 	/// <summary>
 	/// 	Returns the text label of a mod type for a given vehicle<br/>
@@ -38495,7 +38495,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_MOD_TEXT_LABEL(Vehicle vehicle, int modType, int modValue)
 	{
-		return NativeFunction.Natives.GET_MOD_TEXT_LABEL(vehicle, modType, modValue);
+		return NativeFunction.Natives.GET_MOD_TEXT_LABEL<string>(vehicle, modType, modValue);
 	}
 	/// <summary>
 	/// 	Returns the name for the type of vehicle mod(Armour, engine etc)<br/>
@@ -38503,7 +38503,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_MOD_SLOT_NAME(Vehicle vehicle, int modType)
 	{
-		return NativeFunction.Natives.GET_MOD_SLOT_NAME(vehicle, modType);
+		return NativeFunction.Natives.GET_MOD_SLOT_NAME<string>(vehicle, modType);
 	}
 	/// <summary>
 	/// 	Returns the text label of the vehicle&amp;apos;s liveryIndex, as specified by the liveryNames section of the vehicle&amp;apos;s modkit data in the carcols file.<br/>
@@ -38533,18 +38533,18 @@ public static class Natives
 	/// </summary>
 	public static string GET_LIVERY_NAME(Vehicle vehicle, int liveryIndex)
 	{
-		return NativeFunction.Natives.GET_LIVERY_NAME(vehicle, liveryIndex);
+		return NativeFunction.Natives.GET_LIVERY_NAME<string>(vehicle, liveryIndex);
 	}
 	public static int GET_VEHICLE_MOD_MODIFIER_VALUE(Vehicle vehicle, int modType, int modIndex)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_MODIFIER_VALUE(vehicle, modType, modIndex);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_MODIFIER_VALUE<int>(vehicle, modType, modIndex);
 	}
 	/// <summary>
 	/// 	Can be used for IS_DLC_VEHICLE_MOD and GET_DLC_VEHICLE_MOD_LOCK_HASH
 	/// </summary>
 	public static ulong GET_VEHICLE_MOD_IDENTIFIER_HASH(Vehicle vehicle, int modType, int modIndex)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_IDENTIFIER_HASH(vehicle, modType, modIndex);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_IDENTIFIER_HASH<ulong>(vehicle, modType, modIndex);
 	}
 	public static void PRELOAD_VEHICLE_MOD(Vehicle vehicle, int modType, int modIndex)
 	{
@@ -38552,7 +38552,7 @@ public static class Natives
 	}
 	public static bool HAS_PRELOAD_MODS_FINISHED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.HAS_PRELOAD_MODS_FINISHED(vehicle);
+		return NativeFunction.Natives.HAS_PRELOAD_MODS_FINISHED<bool>(vehicle);
 	}
 	public static void RELEASE_PRELOAD_MODS(Vehicle vehicle)
 	{
@@ -38595,11 +38595,11 @@ public static class Natives
 	}
 	public static int GET_VEHICLE_WINDOW_TINT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_WINDOW_TINT(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_WINDOW_TINT<int>(vehicle);
 	}
 	public static int GET_NUM_VEHICLE_WINDOW_TINTS()
 	{
-		return NativeFunction.Natives.GET_NUM_VEHICLE_WINDOW_TINTS();
+		return NativeFunction.Natives.GET_NUM_VEHICLE_WINDOW_TINTS<int>();
 	}
 	/// <summary>
 	/// 	What&amp;apos;s this for? Primary and Secondary RGB have their own natives and this one doesn&amp;apos;t seem specific.
@@ -38613,7 +38613,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_COLOURS_WHICH_CAN_BE_SET(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_COLOURS_WHICH_CAN_BE_SET(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_COLOURS_WHICH_CAN_BE_SET<int>(vehicle);
 	}
 	/// <summary>
 	/// 	iVar3 = get_vehicle_cause_of_destruction(uLocal_248[iVar2]);<br/>
@@ -38625,7 +38625,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_VEHICLE_CAUSE_OF_DESTRUCTION(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CAUSE_OF_DESTRUCTION(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_CAUSE_OF_DESTRUCTION<ulong>(vehicle);
 	}
 	/// <summary>
 	/// 	Used for helis.
@@ -38640,28 +38640,28 @@ public static class Natives
 	}
 	public static int _GET_VEHICLE_DESIRED_DRIVE_GEAR(Vehicle vehicle)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_DESIRED_DRIVE_GEAR(vehicle);
+		return NativeFunction.Natives._GET_VEHICLE_DESIRED_DRIVE_GEAR<int>(vehicle);
 	}
 	/// <summary>
 	/// 	From the driver&amp;apos;s perspective, is the left headlight broken.
 	/// </summary>
 	public static bool GET_IS_LEFT_VEHICLE_HEADLIGHT_DAMAGED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_LEFT_VEHICLE_HEADLIGHT_DAMAGED(vehicle);
+		return NativeFunction.Natives.GET_IS_LEFT_VEHICLE_HEADLIGHT_DAMAGED<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	From the driver&amp;apos;s perspective, is the right headlight broken.
 	/// </summary>
 	public static bool GET_IS_RIGHT_VEHICLE_HEADLIGHT_DAMAGED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_RIGHT_VEHICLE_HEADLIGHT_DAMAGED(vehicle);
+		return NativeFunction.Natives.GET_IS_RIGHT_VEHICLE_HEADLIGHT_DAMAGED<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns true when both headlights are broken. This does not include extralights.
 	/// </summary>
 	public static bool GET_BOTH_VEHICLE_HEADLIGHTS_DAMAGED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_BOTH_VEHICLE_HEADLIGHTS_DAMAGED(vehicle);
+		return NativeFunction.Natives.GET_BOTH_VEHICLE_HEADLIGHTS_DAMAGED<bool>(vehicle);
 	}
 	public static void MODIFY_VEHICLE_TOP_SPEED(Vehicle vehicle, float value)
 	{
@@ -38695,7 +38695,7 @@ public static class Natives
 	}
 	public static int ADD_VEHICLE_COMBAT_ANGLED_AVOIDANCE_AREA(float p0, float p1, float p2, float p3, float p4, float p5, float p6)
 	{
-		return NativeFunction.Natives.ADD_VEHICLE_COMBAT_ANGLED_AVOIDANCE_AREA(p0, p1, p2, p3, p4, p5, p6);
+		return NativeFunction.Natives.ADD_VEHICLE_COMBAT_ANGLED_AVOIDANCE_AREA<int>(p0, p1, p2, p3, p4, p5, p6);
 	}
 	public static void REMOVE_VEHICLE_COMBAT_AVOIDANCE_AREA(int p0)
 	{
@@ -38703,7 +38703,7 @@ public static class Natives
 	}
 	public static bool IS_ANY_PED_RAPPELLING_FROM_HELI(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_ANY_PED_RAPPELLING_FROM_HELI(vehicle);
+		return NativeFunction.Natives.IS_ANY_PED_RAPPELLING_FROM_HELI<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	&amp;lt;1.0 - Decreased torque<br/>
@@ -38753,7 +38753,7 @@ public static class Natives
 	}
 	public static float GET_BOAT_BOOM_POSITION_RATIO(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_BOAT_BOOM_POSITION_RATIO(vehicle);
+		return NativeFunction.Natives.GET_BOAT_BOOM_POSITION_RATIO<float>(vehicle);
 	}
 	public static void DISABLE_PLANE_AILERON(Vehicle vehicle, bool p1, bool p2)
 	{
@@ -38764,7 +38764,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_VEHICLE_ENGINE_RUNNING(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_VEHICLE_ENGINE_RUNNING(vehicle);
+		return NativeFunction.Natives.GET_IS_VEHICLE_ENGINE_RUNNING<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_USE_ALTERNATE_HANDLING(Vehicle vehicle, bool toggle)
 	{
@@ -38797,7 +38797,7 @@ public static class Natives
 	}
 	public static Vehicle GET_LAST_DRIVEN_VEHICLE()
 	{
-		return NativeFunction.Natives.GET_LAST_DRIVEN_VEHICLE();
+		return NativeFunction.Natives.GET_LAST_DRIVEN_VEHICLE<Vehicle>();
 	}
 	public static void CLEAR_LAST_DRIVEN_VEHICLE()
 	{
@@ -38824,11 +38824,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_NUM_OF_BROKEN_OFF_PARTS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NUM_OF_BROKEN_OFF_PARTS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_NUM_OF_BROKEN_OFF_PARTS<int>(vehicle);
 	}
 	public static int GET_VEHICLE_NUM_OF_BROKEN_LOOSEN_PARTS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NUM_OF_BROKEN_LOOSEN_PARTS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_NUM_OF_BROKEN_LOOSEN_PARTS<int>(vehicle);
 	}
 	public static void SET_FORCE_VEHICLE_ENGINE_DAMAGE_BY_BULLET(bool p1)
 	{
@@ -38867,7 +38867,7 @@ public static class Natives
 	}
 	public static bool GET_VEHICLE_LOCK_ON_TARGET(Vehicle vehicle, out Entity entity)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LOCK_ON_TARGET(vehicle, out entity);
+		return NativeFunction.Natives.GET_VEHICLE_LOCK_ON_TARGET<bool>(vehicle, out entity);
 	}
 	public static void SET_FORCE_HD_VEHICLE(Vehicle vehicle, bool toggle)
 	{
@@ -38879,7 +38879,7 @@ public static class Natives
 	}
 	public static int GET_VEHICLE_PLATE_TYPE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_PLATE_TYPE(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_PLATE_TYPE<int>(vehicle);
 	}
 	/// <summary>
 	/// 	in script hook .net <br/>
@@ -38898,7 +38898,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_VISIBLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_VISIBLE(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_VISIBLE<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_GRAVITY(Vehicle vehicle, bool toggle)
 	{
@@ -38920,14 +38920,14 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_CURRENT_TIME_IN_SLIP_STREAM(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CURRENT_TIME_IN_SLIP_STREAM(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_CURRENT_TIME_IN_SLIP_STREAM<float>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns true if the vehicle is being slipstreamed by another vehicle
 	/// </summary>
 	public static bool IS_VEHICLE_PRODUCING_SLIP_STREAM(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_PRODUCING_SLIP_STREAM(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_PRODUCING_SLIP_STREAM<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_INACTIVE_DURING_PLAYBACK(Vehicle vehicle, bool toggle)
 	{
@@ -38942,7 +38942,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_SPRAYABLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_SPRAYABLE(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_SPRAYABLE<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_ENGINE_CAN_DEGRADE(Vehicle vehicle, bool toggle)
 	{
@@ -38966,15 +38966,15 @@ public static class Natives
 	}
 	public static bool IS_PLANE_LANDING_GEAR_INTACT(Vehicle plane)
 	{
-		return NativeFunction.Natives.IS_PLANE_LANDING_GEAR_INTACT(plane);
+		return NativeFunction.Natives.IS_PLANE_LANDING_GEAR_INTACT<bool>(plane);
 	}
 	public static bool ARE_PLANE_PROPELLERS_INTACT(Vehicle plane)
 	{
-		return NativeFunction.Natives.ARE_PLANE_PROPELLERS_INTACT(plane);
+		return NativeFunction.Natives.ARE_PLANE_PROPELLERS_INTACT<bool>(plane);
 	}
 	public static bool SET_PLANE_PROPELLER_HEALTH(Vehicle plane, float health)
 	{
-		return NativeFunction.Natives.SET_PLANE_PROPELLER_HEALTH(plane, health);
+		return NativeFunction.Natives.SET_PLANE_PROPELLER_HEALTH<bool>(plane, health);
 	}
 	public static void SET_VEHICLE_CAN_DEFORM_WHEELS(Vehicle vehicle, bool toggle)
 	{
@@ -38985,7 +38985,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_STOLEN(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_STOLEN(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_STOLEN<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_IS_STOLEN(Vehicle vehicle, bool isStolen)
 	{
@@ -39003,7 +39003,7 @@ public static class Natives
 	}
 	public static bool ARE_WINGS_OF_PLANE_INTACT(Vehicle plane)
 	{
-		return NativeFunction.Natives.ARE_WINGS_OF_PLANE_INTACT(plane);
+		return NativeFunction.Natives.ARE_WINGS_OF_PLANE_INTACT<bool>(plane);
 	}
 	/// <summary>
 	/// 	This native doesn&amp;apos;t seem to do anything, might be a debug-only native.<br/>
@@ -39020,26 +39020,26 @@ public static class Natives
 	}
 	public static bool DETACH_VEHICLE_FROM_ANY_CARGOBOB(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.DETACH_VEHICLE_FROM_ANY_CARGOBOB(vehicle);
+		return NativeFunction.Natives.DETACH_VEHICLE_FROM_ANY_CARGOBOB<bool>(vehicle);
 	}
 	public static bool DETACH_ENTITY_FROM_CARGOBOB(Vehicle cargobob, Entity entity)
 	{
-		return NativeFunction.Natives.DETACH_ENTITY_FROM_CARGOBOB(cargobob, entity);
+		return NativeFunction.Natives.DETACH_ENTITY_FROM_CARGOBOB<bool>(cargobob, entity);
 	}
 	public static bool IS_VEHICLE_ATTACHED_TO_CARGOBOB(Vehicle cargobob, Vehicle vehicleAttached)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_ATTACHED_TO_CARGOBOB(cargobob, vehicleAttached);
+		return NativeFunction.Natives.IS_VEHICLE_ATTACHED_TO_CARGOBOB<bool>(cargobob, vehicleAttached);
 	}
 	/// <summary>
 	/// 	Returns attached vehicle (Vehicle in parameter must be cargobob)
 	/// </summary>
 	public static Vehicle GET_VEHICLE_ATTACHED_TO_CARGOBOB(Vehicle cargobob)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_ATTACHED_TO_CARGOBOB(cargobob);
+		return NativeFunction.Natives.GET_VEHICLE_ATTACHED_TO_CARGOBOB<Vehicle>(cargobob);
 	}
 	public static Entity GET_ENTITY_ATTACHED_TO_CARGOBOB()
 	{
-		return NativeFunction.Natives.GET_ENTITY_ATTACHED_TO_CARGOBOB(0);
+		return NativeFunction.Natives.GET_ENTITY_ATTACHED_TO_CARGOBOB<Entity>(0);
 	}
 	public static void ATTACH_VEHICLE_TO_CARGOBOB(Vehicle cargobob, Vehicle vehicle, int p2, float x, float y, float z)
 	{
@@ -39062,21 +39062,21 @@ public static class Natives
 	}
 	public static bool CAN_CARGOBOB_PICK_UP_ENTITY()
 	{
-		return NativeFunction.Natives.CAN_CARGOBOB_PICK_UP_ENTITY(0, 0);
+		return NativeFunction.Natives.CAN_CARGOBOB_PICK_UP_ENTITY<bool>(0, 0);
 	}
 	/// <summary>
 	/// 	Gets the position of the cargobob hook, in world coords.
 	/// </summary>
 	public static Vector3 GET_ATTACHED_PICK_UP_HOOK_POSITION(Vehicle cargobob)
 	{
-		return NativeFunction.Natives.GET_ATTACHED_PICK_UP_HOOK_POSITION(cargobob);
+		return NativeFunction.Natives.GET_ATTACHED_PICK_UP_HOOK_POSITION<Vector3>(cargobob);
 	}
 	/// <summary>
 	/// 	Returns true only when the hook is active, will return false if the magnet is active
 	/// </summary>
 	public static bool DOES_CARGOBOB_HAVE_PICK_UP_ROPE(Vehicle cargobob)
 	{
-		return NativeFunction.Natives.DOES_CARGOBOB_HAVE_PICK_UP_ROPE(cargobob);
+		return NativeFunction.Natives.DOES_CARGOBOB_HAVE_PICK_UP_ROPE<bool>(cargobob);
 	}
 	/// <summary>
 	/// 	Drops the Hook/Magnet on a cargobob<br/>
@@ -39125,7 +39125,7 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_CARGOBOB_HAVE_PICKUP_MAGNET(Vehicle cargobob)
 	{
-		return NativeFunction.Natives.DOES_CARGOBOB_HAVE_PICKUP_MAGNET(cargobob);
+		return NativeFunction.Natives.DOES_CARGOBOB_HAVE_PICKUP_MAGNET<bool>(cargobob);
 	}
 	/// <summary>
 	/// 	Won&amp;apos;t attract or magnetize to any helicopters or planes of course, but that&amp;apos;s common sense.
@@ -39172,7 +39172,7 @@ public static class Natives
 	}
 	public static bool DOES_VEHICLE_HAVE_WEAPONS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.DOES_VEHICLE_HAVE_WEAPONS(vehicle);
+		return NativeFunction.Natives.DOES_VEHICLE_HAVE_WEAPONS<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_WILL_TELL_OTHERS_TO_HURRY(Vehicle vehicle, bool p1)
 	{
@@ -39190,7 +39190,7 @@ public static class Natives
 	/// </summary>
 	public static bool IS_VEHICLE_WEAPON_DISABLED(ulong weaponHash, Vehicle vehicle, Ped owner)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_WEAPON_DISABLED(weaponHash, vehicle, owner);
+		return NativeFunction.Natives.IS_VEHICLE_WEAPON_DISABLED<bool>(weaponHash, vehicle, owner);
 	}
 	public static void SET_VEHICLE_USED_FOR_PILOT_SCHOOL(Vehicle vehicle, bool toggle)
 	{
@@ -39234,7 +39234,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_CLASS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CLASS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_CLASS<int>(vehicle);
 	}
 	/// <summary>
 	/// 	char buffer[128];<br/>
@@ -39246,7 +39246,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_CLASS_FROM_NAME(ulong modelHash)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CLASS_FROM_NAME(modelHash);
+		return NativeFunction.Natives.GET_VEHICLE_CLASS_FROM_NAME<int>(modelHash);
 	}
 	public static void SET_PLAYERS_LAST_VEHICLE(Vehicle vehicle)
 	{
@@ -39319,7 +39319,7 @@ public static class Natives
 	}
 	public static bool ARE_PLANE_CONTROL_PANELS_INTACT(Vehicle vehicle, bool p1)
 	{
-		return NativeFunction.Natives.ARE_PLANE_CONTROL_PANELS_INTACT(vehicle, p1);
+		return NativeFunction.Natives.ARE_PLANE_CONTROL_PANELS_INTACT<bool>(vehicle, p1);
 	}
 	public static void SET_VEHICLE_CEILING_HEIGHT(Vehicle vehicle, float height)
 	{
@@ -39335,7 +39335,7 @@ public static class Natives
 	}
 	public static Vehicle DOES_VEHICLE_EXIST_WITH_DECORATOR(string decorator)
 	{
-		return NativeFunction.Natives.DOES_VEHICLE_EXIST_WITH_DECORATOR(decorator);
+		return NativeFunction.Natives.DOES_VEHICLE_EXIST_WITH_DECORATOR<Vehicle>(decorator);
 	}
 	/// <summary>
 	/// 	Used to be incorrectly named SET_VEHICLE_EXCLUSIVE_DRIVER<br/>
@@ -39356,7 +39356,7 @@ public static class Natives
 	}
 	public static bool IS_PED_EXCLUSIVE_DRIVER_OF_VEHICLE(Ped ped, Vehicle vehicle, out int outIndex)
 	{
-		return NativeFunction.Natives.IS_PED_EXCLUSIVE_DRIVER_OF_VEHICLE(ped, vehicle, out outIndex);
+		return NativeFunction.Natives.IS_PED_EXCLUSIVE_DRIVER_OF_VEHICLE<bool>(ped, vehicle, out outIndex);
 	}
 	public static void DISABLE_INDIVIDUAL_PLANE_PROPELLER(Vehicle vehicle, int propeller)
 	{
@@ -39441,7 +39441,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_VEHICLE_NEON_ENABLED(Vehicle vehicle, int index)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_NEON_ENABLED(vehicle, index);
+		return NativeFunction.Natives.GET_VEHICLE_NEON_ENABLED<bool>(vehicle, index);
 	}
 	public static void SET_AMBIENT_VEHICLE_NEON_ENABLED(bool p0)
 	{
@@ -39466,7 +39466,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_BODY_HEALTH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_BODY_HEALTH(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_BODY_HEALTH<float>(vehicle);
 	}
 	/// <summary>
 	/// 	p2 often set to 1000.0 in the decompiled scripts.
@@ -39492,7 +39492,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_FAKE_SUSPENSION_LOWERING_AMOUNT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_FAKE_SUSPENSION_LOWERING_AMOUNT(vehicle);
+		return NativeFunction.Natives.GET_FAKE_SUSPENSION_LOWERING_AMOUNT<float>(vehicle);
 	}
 	public static void SET_CAR_HIGH_SPEED_BUMP_SEVERITY_MULTIPLIER(float multiplier)
 	{
@@ -39500,7 +39500,7 @@ public static class Natives
 	}
 	public static int GET_NUMBER_OF_VEHICLE_DOORS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_NUMBER_OF_VEHICLE_DOORS(vehicle);
+		return NativeFunction.Natives.GET_NUMBER_OF_VEHICLE_DOORS<int>(vehicle);
 	}
 	/// <summary>
 	/// 	If false, lowers hydraulics (if raised) and disables hydraulics controls. If true, raises hydraulics and enables hydraulics controls.<br/>
@@ -39539,11 +39539,11 @@ public static class Natives
 	/// </summary>
 	public static float GET_VEHICLE_HEALTH_PERCENTAGE(Vehicle vehicle, float maxEngineHealth, float maxPetrolTankHealth, float maxBodyHealth, float maxMainRotorHealth, float maxTailRotorHealth, float maxUnkHealth)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_HEALTH_PERCENTAGE(vehicle, maxEngineHealth, maxPetrolTankHealth, maxBodyHealth, maxMainRotorHealth, maxTailRotorHealth, maxUnkHealth);
+		return NativeFunction.Natives.GET_VEHICLE_HEALTH_PERCENTAGE<float>(vehicle, maxEngineHealth, maxPetrolTankHealth, maxBodyHealth, maxMainRotorHealth, maxTailRotorHealth, maxUnkHealth);
 	}
 	public static bool GET_VEHICLE_IS_MERCENARY(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_IS_MERCENARY(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_IS_MERCENARY<bool>(vehicle);
 	}
 	public static void SET_VEHICLE_BROKEN_PARTS_DONT_AFFECT_AI_HANDLING(Vehicle vehicle, bool p1)
 	{
@@ -39558,7 +39558,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_VEHICLE_HAS_KERS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_HAS_KERS(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_HAS_KERS<bool>(vehicle);
 	}
 	public static void SET_PLANE_RESIST_TO_EXPLOSION(Vehicle vehicle, bool toggle)
 	{
@@ -39581,7 +39581,7 @@ public static class Natives
 	}
 	public static float GET_HYDRAULIC_SUSPENSION_RAISE_FACTOR(Vehicle vehicle, int wheelId)
 	{
-		return NativeFunction.Natives.GET_HYDRAULIC_SUSPENSION_RAISE_FACTOR(vehicle, wheelId);
+		return NativeFunction.Natives.GET_HYDRAULIC_SUSPENSION_RAISE_FACTOR<float>(vehicle, wheelId);
 	}
 	public static void SET_CAN_USE_HYDRAULICS(Vehicle vehicle, bool toggle)
 	{
@@ -39609,7 +39609,7 @@ public static class Natives
 	}
 	public static bool HAS_VEHICLE_PETROLTANK_SET_ON_FIRE_BY_ENTITY()
 	{
-		return NativeFunction.Natives.HAS_VEHICLE_PETROLTANK_SET_ON_FIRE_BY_ENTITY(0, 0);
+		return NativeFunction.Natives.HAS_VEHICLE_PETROLTANK_SET_ON_FIRE_BY_ENTITY<bool>(0, 0);
 	}
 	public static void CLEAR_VEHICLE_PETROLTANK_FIRE_CULPRIT(Vehicle vehicle)
 	{
@@ -39626,19 +39626,19 @@ public static class Natives
 	}
 	public static bool GET_VEHICLE_IS_DUMMY()
 	{
-		return NativeFunction.Natives.GET_VEHICLE_IS_DUMMY(0);
+		return NativeFunction.Natives.GET_VEHICLE_IS_DUMMY<bool>(0);
 	}
 	public static bool SET_VEHICLE_DAMAGE_SCALE(Vehicle vehicle, float p1)
 	{
-		return NativeFunction.Natives.SET_VEHICLE_DAMAGE_SCALE(vehicle, p1);
+		return NativeFunction.Natives.SET_VEHICLE_DAMAGE_SCALE<bool>(vehicle, p1);
 	}
 	public static bool SET_VEHICLE_WEAPON_DAMAGE_SCALE(Vehicle vehicle, float multiplier)
 	{
-		return NativeFunction.Natives.SET_VEHICLE_WEAPON_DAMAGE_SCALE(vehicle, multiplier);
+		return NativeFunction.Natives.SET_VEHICLE_WEAPON_DAMAGE_SCALE<bool>(vehicle, multiplier);
 	}
 	public static bool SET_DISABLE_DAMAGE_WITH_PICKED_UP_ENTITY()
 	{
-		return NativeFunction.Natives.SET_DISABLE_DAMAGE_WITH_PICKED_UP_ENTITY(0, 0);
+		return NativeFunction.Natives.SET_DISABLE_DAMAGE_WITH_PICKED_UP_ENTITY<bool>(0, 0);
 	}
 	public static void SET_VEHICLE_USES_MP_PLAYER_DAMAGE_MULTIPLIER()
 	{
@@ -39686,7 +39686,7 @@ public static class Natives
 	}
 	public static bool GET_IS_BOAT_CAPSIZED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_BOAT_CAPSIZED(vehicle);
+		return NativeFunction.Natives.GET_IS_BOAT_CAPSIZED<bool>(vehicle);
 	}
 	public static void SET_ALLOW_RAMMING_SOOP_OR_RAMP()
 	{
@@ -39701,7 +39701,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_DOOR_VALID(Vehicle vehicle, int doorId)
 	{
-		return NativeFunction.Natives.GET_IS_DOOR_VALID(vehicle, doorId);
+		return NativeFunction.Natives.GET_IS_DOOR_VALID<bool>(vehicle, doorId);
 	}
 	public static void SET_SCRIPT_ROCKET_BOOST_RECHARGE_TIME(Vehicle vehicle, float seconds)
 	{
@@ -39709,11 +39709,11 @@ public static class Natives
 	}
 	public static bool GET_HAS_ROCKET_BOOST(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_HAS_ROCKET_BOOST(vehicle);
+		return NativeFunction.Natives.GET_HAS_ROCKET_BOOST<bool>(vehicle);
 	}
 	public static bool IS_ROCKET_BOOST_ACTIVE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_ROCKET_BOOST_ACTIVE(vehicle);
+		return NativeFunction.Natives.IS_ROCKET_BOOST_ACTIVE<bool>(vehicle);
 	}
 	public static void SET_ROCKET_BOOST_ACTIVE(Vehicle vehicle, bool active)
 	{
@@ -39721,11 +39721,11 @@ public static class Natives
 	}
 	public static bool GET_HAS_RETRACTABLE_WHEELS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_HAS_RETRACTABLE_WHEELS(vehicle);
+		return NativeFunction.Natives.GET_HAS_RETRACTABLE_WHEELS<bool>(vehicle);
 	}
 	public static bool GET_IS_WHEELS_RETRACTED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_WHEELS_RETRACTED(vehicle);
+		return NativeFunction.Natives.GET_IS_WHEELS_RETRACTED<bool>(vehicle);
 	}
 	public static void SET_WHEELS_EXTENDED_INSTANTLY(Vehicle vehicle)
 	{
@@ -39740,7 +39740,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_CAR_HAS_JUMP(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_CAR_HAS_JUMP(vehicle);
+		return NativeFunction.Natives.GET_CAR_HAS_JUMP<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Allows vehicles with the FLAG_JUMPING_CAR flag to jump higher (i.e. Ruiner 2000).
@@ -39764,15 +39764,15 @@ public static class Natives
 	}
 	public static int GET_VEHICLE_WEAPON_RESTRICTED_AMMO(Vehicle vehicle, int weaponIndex)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_WEAPON_RESTRICTED_AMMO(vehicle, weaponIndex);
+		return NativeFunction.Natives.GET_VEHICLE_WEAPON_RESTRICTED_AMMO<int>(vehicle, weaponIndex);
 	}
 	public static bool GET_VEHICLE_HAS_PARACHUTE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_HAS_PARACHUTE(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_HAS_PARACHUTE<bool>(vehicle);
 	}
 	public static bool GET_VEHICLE_CAN_DEPLOY_PARACHUTE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CAN_DEPLOY_PARACHUTE(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_CAN_DEPLOY_PARACHUTE<bool>(vehicle);
 	}
 	public static void VEHICLE_START_PARACHUTING(Vehicle vehicle, bool active)
 	{
@@ -39780,7 +39780,7 @@ public static class Natives
 	}
 	public static bool IS_VEHICLE_PARACHUTE_DEPLOYED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_VEHICLE_PARACHUTE_DEPLOYED(vehicle);
+		return NativeFunction.Natives.IS_VEHICLE_PARACHUTE_DEPLOYED<bool>(vehicle);
 	}
 	public static void VEHICLE_SET_RAMP_AND_RAMMING_CARS_TAKE_DAMAGE(Vehicle vehicle, bool toggle)
 	{
@@ -39840,19 +39840,19 @@ public static class Natives
 	}
 	public static int VEHICLE_SET_OVERRIDE_EXTENABLE_SIDE_RATIO()
 	{
-		return NativeFunction.Natives.VEHICLE_SET_OVERRIDE_EXTENABLE_SIDE_RATIO(0, 0);
+		return NativeFunction.Natives.VEHICLE_SET_OVERRIDE_EXTENABLE_SIDE_RATIO<int>(0, 0);
 	}
 	public static int VEHICLE_SET_EXTENABLE_SIDE_TARGET_RATIO()
 	{
-		return NativeFunction.Natives.VEHICLE_SET_EXTENABLE_SIDE_TARGET_RATIO(0, 0);
+		return NativeFunction.Natives.VEHICLE_SET_EXTENABLE_SIDE_TARGET_RATIO<int>(0, 0);
 	}
 	public static int VEHICLE_SET_OVERRIDE_SIDE_RATIO()
 	{
-		return NativeFunction.Natives.VEHICLE_SET_OVERRIDE_SIDE_RATIO(0, 0);
+		return NativeFunction.Natives.VEHICLE_SET_OVERRIDE_SIDE_RATIO<int>(0, 0);
 	}
 	public static int GET_ALL_VEHICLES()
 	{
-		return NativeFunction.Natives.GET_ALL_VEHICLES(0);
+		return NativeFunction.Natives.GET_ALL_VEHICLES<int>(0);
 	}
 	public static void SET_CARGOBOB_EXTA_PICKUP_RANGE()
 	{
@@ -39948,7 +39948,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_BOMB_AMMO(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_BOMB_AMMO(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_BOMB_AMMO<int>(vehicle);
 	}
 	/// <summary>
 	/// 	Similar to SET_VEHICLE_BOMB_AMMO, this sets the amount of countermeasures that are present on this vehicle.<br/>
@@ -39964,7 +39964,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_VEHICLE_COUNTERMEASURE_AMMO(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_COUNTERMEASURE_AMMO(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_COUNTERMEASURE_AMMO<int>(vehicle);
 	}
 	public static void SET_HELI_COMBAT_OFFSET(Vehicle vehicle, float x, float y, float z)
 	{
@@ -39977,7 +39977,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_CAN_VEHICLE_BE_PLACED_HERE(Vehicle vehicle, float x, float y, float z, float rotX, float rotY, float rotZ, int p7)
 	{
-		return NativeFunction.Natives.GET_CAN_VEHICLE_BE_PLACED_HERE(vehicle, x, y, z, rotX, rotY, rotZ, p7, 0);
+		return NativeFunction.Natives.GET_CAN_VEHICLE_BE_PLACED_HERE<bool>(vehicle, x, y, z, rotX, rotY, rotZ, p7, 0);
 	}
 	/// <summary>
 	/// 	Sets a flag on heli and another vehicle type.
@@ -40042,7 +40042,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_OUTRIGGERS_DEPLOYED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_OUTRIGGERS_DEPLOYED(vehicle);
+		return NativeFunction.Natives.GET_OUTRIGGERS_DEPLOYED<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Native is significantly more complicated than simply generating a random vector &amp; length.<br/>
@@ -40050,7 +40050,7 @@ public static class Natives
 	/// </summary>
 	public static Vector3 FIND_SPAWN_COORDINATES_FOR_HELI(Ped ped)
 	{
-		return NativeFunction.Natives.FIND_SPAWN_COORDINATES_FOR_HELI(ped);
+		return NativeFunction.Natives.FIND_SPAWN_COORDINATES_FOR_HELI<Vector3>(ped);
 	}
 	/// <summary>
 	/// 	Only used with the &amp;quot;akula&amp;quot; and &amp;quot;annihilator2&amp;quot; in the decompiled native scripts.
@@ -40064,7 +40064,7 @@ public static class Natives
 	/// </summary>
 	public static bool ARE_FOLDING_WINGS_DEPLOYED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.ARE_FOLDING_WINGS_DEPLOYED(vehicle);
+		return NativeFunction.Natives.ARE_FOLDING_WINGS_DEPLOYED<bool>(vehicle);
 	}
 	public static void _SET_DEPLOY_MISSILE_BAYS(Vehicle vehicle, bool deploy)
 	{
@@ -40072,7 +40072,7 @@ public static class Natives
 	}
 	public static bool _ARE_MISSILE_BAYS_DEPLOYED(Vehicle vehicle)
 	{
-		return NativeFunction.Natives._ARE_MISSILE_BAYS_DEPLOYED(vehicle);
+		return NativeFunction.Natives._ARE_MISSILE_BAYS_DEPLOYED<bool>(vehicle);
 	}
 	public static void SET_DIP_STRAIGHT_DOWN_WHEN_CRASHING_PLANE(Vehicle vehicle, bool toggle)
 	{
@@ -40137,18 +40137,18 @@ public static class Natives
 	}
 	public static bool GET_IS_VEHICLE_SHUNTING(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_VEHICLE_SHUNTING(vehicle);
+		return NativeFunction.Natives.GET_IS_VEHICLE_SHUNTING<bool>(vehicle);
 	}
 	public static bool GET_HAS_VEHICLE_BEEN_HIT_BY_SHUNT(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_HAS_VEHICLE_BEEN_HIT_BY_SHUNT(vehicle);
+		return NativeFunction.Natives.GET_HAS_VEHICLE_BEEN_HIT_BY_SHUNT<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Returns last vehicle that was rammed by the given vehicle using the shunt boost.
 	/// </summary>
 	public static Vehicle GET_LAST_SHUNT_VEHICLE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_LAST_SHUNT_VEHICLE(vehicle);
+		return NativeFunction.Natives.GET_LAST_SHUNT_VEHICLE<Vehicle>(vehicle);
 	}
 	public static void SET_DISABLE_VEHICLE_EXPLOSIONS_DAMAGE(bool toggle)
 	{
@@ -40183,11 +40183,11 @@ public static class Natives
 	}
 	public static float _GET_REMAINING_NITROUS_DURATION(Vehicle vehicle)
 	{
-		return NativeFunction.Natives._GET_REMAINING_NITROUS_DURATION(vehicle);
+		return NativeFunction.Natives._GET_REMAINING_NITROUS_DURATION<float>(vehicle);
 	}
 	public static bool IS_NITROUS_ACTIVE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.IS_NITROUS_ACTIVE(vehicle);
+		return NativeFunction.Natives.IS_NITROUS_ACTIVE<bool>(vehicle);
 	}
 	public static void CLEAR_NITROUS(Vehicle vehicle)
 	{
@@ -40216,7 +40216,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_DOES_VEHICLE_HAVE_TOMBSTONE(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_DOES_VEHICLE_HAVE_TOMBSTONE(vehicle);
+		return NativeFunction.Natives.GET_DOES_VEHICLE_HAVE_TOMBSTONE<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Disables detachable bumber from domnator4, dominator5, dominator6, see https://gfycat.com/SecondUnluckyGosling
@@ -40234,7 +40234,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_VEHICLE_DISABLED_BY_EMP(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_IS_VEHICLE_DISABLED_BY_EMP(vehicle);
+		return NativeFunction.Natives.GET_IS_VEHICLE_DISABLED_BY_EMP<bool>(vehicle);
 	}
 	public static void SET_DISABLE_RETRACTING_WEAPON_BLADES(bool toggle)
 	{
@@ -40251,7 +40251,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_TYRE_HEALTH(Vehicle vehicle, int wheelIndex)
 	{
-		return NativeFunction.Natives.GET_TYRE_HEALTH(vehicle, wheelIndex);
+		return NativeFunction.Natives.GET_TYRE_HEALTH<float>(vehicle, wheelIndex);
 	}
 	/// <summary>
 	/// 	SET_TYRE_WEAR_RATE must be active, otherwise values set to &amp;lt;1000.0f will default to 350.0f<br/>
@@ -40281,7 +40281,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_TYRE_WEAR_RATE(Vehicle vehicle, int wheelIndex)
 	{
-		return NativeFunction.Natives.GET_TYRE_WEAR_RATE(vehicle, wheelIndex);
+		return NativeFunction.Natives.GET_TYRE_WEAR_RATE<float>(vehicle, wheelIndex);
 	}
 	/// <summary>
 	/// 	Needs to be run for tire wear to work. Multiplier affects the downforce and how fast the tires will wear out, higher values essentially make the vehicle slower on straights and its tires will wear down quicker when cornering. Value must be &amp;gt;0f.<br/>
@@ -40356,7 +40356,7 @@ public static class Natives
 	}
 	public static bool GET_DRIFT_TYRES_SET(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_DRIFT_TYRES_SET(vehicle);
+		return NativeFunction.Natives.GET_DRIFT_TYRES_SET<bool>(vehicle);
 	}
 	/// <summary>
 	/// 	Implemented only for trains.
@@ -40381,15 +40381,15 @@ public static class Natives
 	}
 	public static bool _IS_VEHICLE_GEN9_EXCLUSIVE_MODEL(ulong vehicleModel)
 	{
-		return NativeFunction.Natives._IS_VEHICLE_GEN9_EXCLUSIVE_MODEL(vehicleModel);
+		return NativeFunction.Natives._IS_VEHICLE_GEN9_EXCLUSIVE_MODEL<bool>(vehicleModel);
 	}
 	public static int _GET_VEHICLE_MAX_EXHAUST_BONE_COUNT()
 	{
-		return NativeFunction.Natives._GET_VEHICLE_MAX_EXHAUST_BONE_COUNT();
+		return NativeFunction.Natives._GET_VEHICLE_MAX_EXHAUST_BONE_COUNT<int>();
 	}
-	public static bool _GET_VEHICLE_EXHAUST_BONE(Vehicle vehicle, int index, out int boneIndex, bool axisX)
+	public static bool _GET_VEHICLE_EXHAUST_BONE(Vehicle vehicle, int index, out int boneIndex, out bool axisX)
 	{
-		return NativeFunction.Natives._GET_VEHICLE_EXHAUST_BONE(vehicle, index, out boneIndex, axisX);
+		return NativeFunction.Natives._GET_VEHICLE_EXHAUST_BONE<bool>(vehicle, index, out boneIndex, out axisX);
 	}
 	/*
 		WATER
@@ -40403,15 +40403,15 @@ public static class Natives
 	/// </summary>
 	public static bool GET_WATER_HEIGHT(float x, float y, float z, out float height)
 	{
-		return NativeFunction.Natives.GET_WATER_HEIGHT(x, y, z, out height);
+		return NativeFunction.Natives.GET_WATER_HEIGHT<bool>(x, y, z, out height);
 	}
 	public static bool GET_WATER_HEIGHT_NO_WAVES(float x, float y, float z, out float height)
 	{
-		return NativeFunction.Natives.GET_WATER_HEIGHT_NO_WAVES(x, y, z, out height);
+		return NativeFunction.Natives.GET_WATER_HEIGHT_NO_WAVES<bool>(x, y, z, out height);
 	}
 	public static bool TEST_PROBE_AGAINST_WATER(float x1, float y1, float z1, float x2, float y2, float z2, out Vector3 result)
 	{
-		return NativeFunction.Natives.TEST_PROBE_AGAINST_WATER(x1, y1, z1, x2, y2, z2, out result);
+		return NativeFunction.Natives.TEST_PROBE_AGAINST_WATER<bool>(x1, y1, z1, x2, y2, z2, out result);
 	}
 	/// <summary>
 	/// 	enum eScriptWaterTestResult<br/>
@@ -40423,14 +40423,14 @@ public static class Natives
 	/// </summary>
 	public static int TEST_PROBE_AGAINST_ALL_WATER(float x1, float y1, float z1, float x2, float y2, float z2, int flags, out float waterHeight)
 	{
-		return NativeFunction.Natives.TEST_PROBE_AGAINST_ALL_WATER(x1, y1, z1, x2, y2, z2, flags, out waterHeight);
+		return NativeFunction.Natives.TEST_PROBE_AGAINST_ALL_WATER<int>(x1, y1, z1, x2, y2, z2, flags, out waterHeight);
 	}
 	/// <summary>
 	/// 	See TEST_PROBE_AGAINST_ALL_WATER.
 	/// </summary>
 	public static int TEST_VERTICAL_PROBE_AGAINST_ALL_WATER(float x, float y, float z, int flags, out float waterHeight)
 	{
-		return NativeFunction.Natives.TEST_VERTICAL_PROBE_AGAINST_ALL_WATER(x, y, z, flags, out waterHeight);
+		return NativeFunction.Natives.TEST_VERTICAL_PROBE_AGAINST_ALL_WATER<int>(x, y, z, flags, out waterHeight);
 	}
 	/// <summary>
 	/// 	Sets the water height for a given position and radius.<br/>
@@ -40442,7 +40442,7 @@ public static class Natives
 	}
 	public static int ADD_EXTRA_CALMING_QUAD(float xLow, float yLow, float xHigh, float yHigh, float height)
 	{
-		return NativeFunction.Natives.ADD_EXTRA_CALMING_QUAD(xLow, yLow, xHigh, yHigh, height);
+		return NativeFunction.Natives.ADD_EXTRA_CALMING_QUAD<int>(xLow, yLow, xHigh, yHigh, height);
 	}
 	/// <summary>
 	/// 	p0 is the handle returned from ADD_EXTRA_CALMING_QUAD
@@ -40465,7 +40465,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_DEEP_OCEAN_SCALER()
 	{
-		return NativeFunction.Natives.GET_DEEP_OCEAN_SCALER();
+		return NativeFunction.Natives.GET_DEEP_OCEAN_SCALER<float>();
 	}
 	public static void SET_CALMED_WAVE_HEIGHT_SCALER(float height)
 	{
@@ -40492,7 +40492,7 @@ public static class Natives
 	}
 	public static ulong GET_WEAPON_COMPONENT_TYPE_MODEL(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_COMPONENT_TYPE_MODEL(componentHash);
+		return NativeFunction.Natives.GET_WEAPON_COMPONENT_TYPE_MODEL<ulong>(componentHash);
 	}
 	/// <summary>
 	/// 	Returns the model of any weapon.<br/>
@@ -40502,15 +40502,15 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_WEAPONTYPE_MODEL(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPONTYPE_MODEL(weaponHash);
+		return NativeFunction.Natives.GET_WEAPONTYPE_MODEL<ulong>(weaponHash);
 	}
 	public static ulong GET_WEAPONTYPE_SLOT(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPONTYPE_SLOT(weaponHash);
+		return NativeFunction.Natives.GET_WEAPONTYPE_SLOT<ulong>(weaponHash);
 	}
 	public static ulong GET_WEAPONTYPE_GROUP(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPONTYPE_GROUP(weaponHash);
+		return NativeFunction.Natives.GET_WEAPONTYPE_GROUP<ulong>(weaponHash);
 	}
 	/// <summary>
 	/// 	Returns the amount of extra components the specified component has.<br/>
@@ -40518,14 +40518,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_WEAPON_COMPONENT_VARIANT_EXTRA_COUNT(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_COMPONENT_VARIANT_EXTRA_COUNT(componentHash);
+		return NativeFunction.Natives.GET_WEAPON_COMPONENT_VARIANT_EXTRA_COUNT<int>(componentHash);
 	}
 	/// <summary>
 	/// 	Returns the model hash of the extra component at specified index.
 	/// </summary>
 	public static ulong GET_WEAPON_COMPONENT_VARIANT_EXTRA_MODEL(ulong componentHash, int extraComponentIndex)
 	{
-		return NativeFunction.Natives.GET_WEAPON_COMPONENT_VARIANT_EXTRA_MODEL(componentHash, extraComponentIndex);
+		return NativeFunction.Natives.GET_WEAPON_COMPONENT_VARIANT_EXTRA_MODEL<ulong>(componentHash, extraComponentIndex);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -40547,27 +40547,27 @@ public static class Natives
 	/// 	disassembly said that?<br/>
 	/// 	
 	/// </summary>
-	public static bool GET_CURRENT_PED_WEAPON(Ped ped, ulong weaponHash, bool p2)
+	public static bool GET_CURRENT_PED_WEAPON(Ped ped, out ulong weaponHash, bool p2)
 	{
-		return NativeFunction.Natives.GET_CURRENT_PED_WEAPON(ped, weaponHash, p2);
+		return NativeFunction.Natives.GET_CURRENT_PED_WEAPON<bool>(ped, out weaponHash, p2);
 	}
 	public static Entity GET_CURRENT_PED_WEAPON_ENTITY_INDEX(Ped ped)
 	{
-		return NativeFunction.Natives.GET_CURRENT_PED_WEAPON_ENTITY_INDEX(ped, 0);
+		return NativeFunction.Natives.GET_CURRENT_PED_WEAPON_ENTITY_INDEX<Entity>(ped, 0);
 	}
 	/// <summary>
 	/// 	p1 is always 0 in the scripts.
 	/// </summary>
 	public static ulong GET_BEST_PED_WEAPON(Ped ped, bool p1)
 	{
-		return NativeFunction.Natives.GET_BEST_PED_WEAPON(ped, p1);
+		return NativeFunction.Natives.GET_BEST_PED_WEAPON<ulong>(ped, p1);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static bool SET_CURRENT_PED_VEHICLE_WEAPON(Ped ped, ulong weaponHash)
 	{
-		return NativeFunction.Natives.SET_CURRENT_PED_VEHICLE_WEAPON(ped, weaponHash);
+		return NativeFunction.Natives.SET_CURRENT_PED_VEHICLE_WEAPON<bool>(ped, weaponHash);
 	}
 	/// <summary>
 	/// 	Example in VB<br/>
@@ -40582,9 +40582,9 @@ public static class Natives
 	/// 	If GetVehicleCurrentWeapon(Game.Player.Character) = -821520672 Then ...Do something<br/>
 	/// 	Note: -821520672 = VEHICLE_WEAPON_PLANE_ROCKET
 	/// </summary>
-	public static bool GET_CURRENT_PED_VEHICLE_WEAPON(Ped ped, ulong weaponHash)
+	public static bool GET_CURRENT_PED_VEHICLE_WEAPON(Ped ped, out ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_CURRENT_PED_VEHICLE_WEAPON(ped, weaponHash);
+		return NativeFunction.Natives.GET_CURRENT_PED_VEHICLE_WEAPON<bool>(ped, out weaponHash);
 	}
 	public static void SET_PED_CYCLE_VEHICLE_WEAPONS_ONLY(Ped ped)
 	{
@@ -40612,14 +40612,14 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_ARMED(Ped ped, int typeFlags)
 	{
-		return NativeFunction.Natives.IS_PED_ARMED(ped, typeFlags);
+		return NativeFunction.Natives.IS_PED_ARMED<bool>(ped, typeFlags);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static bool IS_WEAPON_VALID(ulong weaponHash)
 	{
-		return NativeFunction.Natives.IS_WEAPON_VALID(weaponHash);
+		return NativeFunction.Natives.IS_WEAPON_VALID<bool>(weaponHash);
 	}
 	/// <summary>
 	/// 	p2 should be FALSE, otherwise it seems to always return FALSE<br/>
@@ -40629,15 +40629,15 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_PED_GOT_WEAPON(Ped ped, ulong weaponHash, bool p2)
 	{
-		return NativeFunction.Natives.HAS_PED_GOT_WEAPON(ped, weaponHash, p2);
+		return NativeFunction.Natives.HAS_PED_GOT_WEAPON<bool>(ped, weaponHash, p2);
 	}
 	public static bool IS_PED_WEAPON_READY_TO_SHOOT(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_WEAPON_READY_TO_SHOOT(ped);
+		return NativeFunction.Natives.IS_PED_WEAPON_READY_TO_SHOOT<bool>(ped);
 	}
 	public static ulong GET_PED_WEAPONTYPE_IN_SLOT(Ped ped, ulong weaponSlot)
 	{
-		return NativeFunction.Natives.GET_PED_WEAPONTYPE_IN_SLOT(ped, weaponSlot);
+		return NativeFunction.Natives.GET_PED_WEAPONTYPE_IN_SLOT<ulong>(ped, weaponSlot);
 	}
 	/// <summary>
 	/// 	WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), a_0)<br/>
@@ -40651,7 +40651,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_AMMO_IN_PED_WEAPON(Ped ped, ulong weaponhash)
 	{
-		return NativeFunction.Natives.GET_AMMO_IN_PED_WEAPON(ped, weaponhash);
+		return NativeFunction.Natives.GET_AMMO_IN_PED_WEAPON<int>(ped, weaponhash);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -40751,7 +40751,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_PED_BEEN_DAMAGED_BY_WEAPON(Ped ped, ulong weaponHash, int weaponType)
 	{
-		return NativeFunction.Natives.HAS_PED_BEEN_DAMAGED_BY_WEAPON(ped, weaponHash, weaponType);
+		return NativeFunction.Natives.HAS_PED_BEEN_DAMAGED_BY_WEAPON<bool>(ped, weaponHash, weaponType);
 	}
 	/// <summary>
 	/// 	Does NOT seem to work with HAS_PED_BEEN_DAMAGED_BY_WEAPON. Use CLEAR_ENTITY_LAST_WEAPON_DAMAGE and HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON instead.
@@ -40770,7 +40770,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON(Entity entity, ulong weaponHash, int weaponType)
 	{
-		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON(entity, weaponHash, weaponType);
+		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON<bool>(entity, weaponHash, weaponType);
 	}
 	public static void CLEAR_ENTITY_LAST_WEAPON_DAMAGE(Entity entity)
 	{
@@ -40793,35 +40793,35 @@ public static class Natives
 	/// </summary>
 	public static int GET_MAX_AMMO_IN_CLIP(Ped ped, ulong weaponHash, bool p2)
 	{
-		return NativeFunction.Natives.GET_MAX_AMMO_IN_CLIP(ped, weaponHash, p2);
+		return NativeFunction.Natives.GET_MAX_AMMO_IN_CLIP<int>(ped, weaponHash, p2);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static bool GET_AMMO_IN_CLIP(Ped ped, ulong weaponHash, out int ammo)
 	{
-		return NativeFunction.Natives.GET_AMMO_IN_CLIP(ped, weaponHash, out ammo);
+		return NativeFunction.Natives.GET_AMMO_IN_CLIP<bool>(ped, weaponHash, out ammo);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static bool SET_AMMO_IN_CLIP(Ped ped, ulong weaponHash, int ammo)
 	{
-		return NativeFunction.Natives.SET_AMMO_IN_CLIP(ped, weaponHash, ammo);
+		return NativeFunction.Natives.SET_AMMO_IN_CLIP<bool>(ped, weaponHash, ammo);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static bool GET_MAX_AMMO(Ped ped, ulong weaponHash, out int ammo)
 	{
-		return NativeFunction.Natives.GET_MAX_AMMO(ped, weaponHash, out ammo);
+		return NativeFunction.Natives.GET_MAX_AMMO<bool>(ped, weaponHash, out ammo);
 	}
 	/// <summary>
 	/// 	Returns the max ammo for an ammo type. Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
 	/// </summary>
 	public static bool GET_MAX_AMMO_BY_TYPE(Ped ped, ulong ammoTypeHash, out int ammo)
 	{
-		return NativeFunction.Natives.GET_MAX_AMMO_BY_TYPE(ped, ammoTypeHash, out ammo);
+		return NativeFunction.Natives.GET_MAX_AMMO_BY_TYPE<bool>(ped, ammoTypeHash, out ammo);
 	}
 	/// <summary>
 	/// 	Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
@@ -40839,7 +40839,7 @@ public static class Natives
 	}
 	public static int GET_PED_AMMO_BY_TYPE(Ped ped, ulong ammoTypeHash)
 	{
-		return NativeFunction.Natives.GET_PED_AMMO_BY_TYPE(ped, ammoTypeHash);
+		return NativeFunction.Natives.GET_PED_AMMO_BY_TYPE<int>(ped, ammoTypeHash);
 	}
 	public static void SET_PED_AMMO_TO_DROP(Ped ped, int p1)
 	{
@@ -40857,7 +40857,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_PED_AMMO_TYPE_FROM_WEAPON(Ped ped, ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_PED_AMMO_TYPE_FROM_WEAPON(ped, weaponHash);
+		return NativeFunction.Natives.GET_PED_AMMO_TYPE_FROM_WEAPON<ulong>(ped, weaponHash);
 	}
 	/// <summary>
 	/// 	Returns the base/default ammo type of the specified ped&amp;apos;s specified weapon.<br/>
@@ -40866,7 +40866,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_PED_ORIGINAL_AMMO_TYPE_FROM_WEAPON(Ped ped, ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_PED_ORIGINAL_AMMO_TYPE_FROM_WEAPON(ped, weaponHash);
+		return NativeFunction.Natives.GET_PED_ORIGINAL_AMMO_TYPE_FROM_WEAPON<ulong>(ped, weaponHash);
 	}
 	/// <summary>
 	/// 	Pass ped. Pass address of Vector3.<br/>
@@ -40875,7 +40875,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_PED_LAST_WEAPON_IMPACT_COORD(Ped ped, out Vector3 coords)
 	{
-		return NativeFunction.Natives.GET_PED_LAST_WEAPON_IMPACT_COORD(ped, out coords);
+		return NativeFunction.Natives.GET_PED_LAST_WEAPON_IMPACT_COORD<bool>(ped, out coords);
 	}
 	/// <summary>
 	/// 	p1/gadgetHash was always 0xFBAB5776 (&amp;quot;GADGET_PARACHUTE&amp;quot;).<br/>
@@ -40890,7 +40890,7 @@ public static class Natives
 	/// </summary>
 	public static bool GET_IS_PED_GADGET_EQUIPPED(Ped ped, ulong gadgetHash)
 	{
-		return NativeFunction.Natives.GET_IS_PED_GADGET_EQUIPPED(ped, gadgetHash);
+		return NativeFunction.Natives.GET_IS_PED_GADGET_EQUIPPED<bool>(ped, gadgetHash);
 	}
 	/// <summary>
 	/// 	Returns the hash of the weapon. <br/>
@@ -40910,7 +40910,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_SELECTED_PED_WEAPON(Ped ped)
 	{
-		return NativeFunction.Natives.GET_SELECTED_PED_WEAPON(ped);
+		return NativeFunction.Natives.GET_SELECTED_PED_WEAPON<ulong>(ped);
 	}
 	/// <summary>
 	/// 	             WEAPON::EXPLODE_PROJECTILES(PLAYER::PLAYER_PED_ID(), func_221(0x00000003), 0x00000001);
@@ -40928,18 +40928,18 @@ public static class Natives
 	}
 	public static float GET_LOCKON_DISTANCE_OF_CURRENT_PED_WEAPON(Ped ped)
 	{
-		return NativeFunction.Natives.GET_LOCKON_DISTANCE_OF_CURRENT_PED_WEAPON(ped);
+		return NativeFunction.Natives.GET_LOCKON_DISTANCE_OF_CURRENT_PED_WEAPON<float>(ped);
 	}
 	public static float GET_MAX_RANGE_OF_CURRENT_PED_WEAPON(Ped ped)
 	{
-		return NativeFunction.Natives.GET_MAX_RANGE_OF_CURRENT_PED_WEAPON(ped);
+		return NativeFunction.Natives.GET_MAX_RANGE_OF_CURRENT_PED_WEAPON<float>(ped);
 	}
 	/// <summary>
 	/// 	Fourth Parameter = unsure, almost always -1
 	/// </summary>
 	public static bool HAS_VEHICLE_GOT_PROJECTILE_ATTACHED(Ped driver, Vehicle vehicle, ulong weaponHash)
 	{
-		return NativeFunction.Natives.HAS_VEHICLE_GOT_PROJECTILE_ATTACHED(driver, vehicle, weaponHash, 0);
+		return NativeFunction.Natives.HAS_VEHICLE_GOT_PROJECTILE_ATTACHED<bool>(driver, vehicle, weaponHash, 0);
 	}
 	/// <summary>
 	/// 	Full list of weapons &amp; components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -40960,25 +40960,25 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_PED_GOT_WEAPON_COMPONENT(Ped ped, ulong weaponHash, ulong componentHash)
 	{
-		return NativeFunction.Natives.HAS_PED_GOT_WEAPON_COMPONENT(ped, weaponHash, componentHash);
+		return NativeFunction.Natives.HAS_PED_GOT_WEAPON_COMPONENT<bool>(ped, weaponHash, componentHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons &amp; components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static bool IS_PED_WEAPON_COMPONENT_ACTIVE(Ped ped, ulong weaponHash, ulong componentHash)
 	{
-		return NativeFunction.Natives.IS_PED_WEAPON_COMPONENT_ACTIVE(ped, weaponHash, componentHash);
+		return NativeFunction.Natives.IS_PED_WEAPON_COMPONENT_ACTIVE<bool>(ped, weaponHash, componentHash);
 	}
 	public static bool REFILL_AMMO_INSTANTLY(Ped ped)
 	{
-		return NativeFunction.Natives.REFILL_AMMO_INSTANTLY(ped);
+		return NativeFunction.Natives.REFILL_AMMO_INSTANTLY<bool>(ped);
 	}
 	/// <summary>
 	/// 	Forces a ped to reload only if they are able to; if they have a full magazine, they will not reload.
 	/// </summary>
 	public static bool MAKE_PED_RELOAD(Ped ped)
 	{
-		return NativeFunction.Natives.MAKE_PED_RELOAD(ped);
+		return NativeFunction.Natives.MAKE_PED_RELOAD<bool>(ped);
 	}
 	/// <summary>
 	/// 	Nearly every instance of p1 I found was 31. Nearly every instance of p2 I found was 0.<br/>
@@ -40991,7 +40991,7 @@ public static class Natives
 	}
 	public static bool HAS_WEAPON_ASSET_LOADED(ulong weaponHash)
 	{
-		return NativeFunction.Natives.HAS_WEAPON_ASSET_LOADED(weaponHash);
+		return NativeFunction.Natives.HAS_WEAPON_ASSET_LOADED<bool>(weaponHash);
 	}
 	public static void REMOVE_WEAPON_ASSET(ulong weaponHash)
 	{
@@ -41002,7 +41002,7 @@ public static class Natives
 	/// </summary>
 	public static Object CREATE_WEAPON_OBJECT(ulong weaponHash, int ammoCount, float x, float y, float z, bool showWorldModel, float scale)
 	{
-		return NativeFunction.Natives.CREATE_WEAPON_OBJECT(weaponHash, ammoCount, x, y, z, showWorldModel, scale, 0, 0, 0);
+		return NativeFunction.Natives.CREATE_WEAPON_OBJECT<Object>(weaponHash, ammoCount, x, y, z, showWorldModel, scale, 0, 0, 0);
 	}
 	/// <summary>
 	/// 	componentHash:<br/>
@@ -41025,7 +41025,7 @@ public static class Natives
 	/// </summary>
 	public static bool HAS_WEAPON_GOT_WEAPON_COMPONENT(Object weapon, ulong componentHash)
 	{
-		return NativeFunction.Natives.HAS_WEAPON_GOT_WEAPON_COMPONENT(weapon, componentHash);
+		return NativeFunction.Natives.HAS_WEAPON_GOT_WEAPON_COMPONENT<bool>(weapon, componentHash);
 	}
 	public static void GIVE_WEAPON_OBJECT_TO_PED(Object weaponObject, Ped ped)
 	{
@@ -41036,7 +41036,7 @@ public static class Natives
 	/// </summary>
 	public static bool DOES_WEAPON_TAKE_WEAPON_COMPONENT(ulong weaponHash, ulong componentHash)
 	{
-		return NativeFunction.Natives.DOES_WEAPON_TAKE_WEAPON_COMPONENT(weaponHash, componentHash);
+		return NativeFunction.Natives.DOES_WEAPON_TAKE_WEAPON_COMPONENT<bool>(weaponHash, componentHash);
 	}
 	/// <summary>
 	/// 	Drops the current weapon and returns the object<br/>
@@ -41045,7 +41045,7 @@ public static class Natives
 	/// </summary>
 	public static Object GET_WEAPON_OBJECT_FROM_PED(Ped ped, bool p1)
 	{
-		return NativeFunction.Natives.GET_WEAPON_OBJECT_FROM_PED(ped, p1);
+		return NativeFunction.Natives.GET_WEAPON_OBJECT_FROM_PED<Object>(ped, p1);
 	}
 	/// <summary>
 	/// 	Gives the specified loadout to the specified ped. <br/>
@@ -41077,7 +41077,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_WEAPON_TINT_INDEX(Ped ped, ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_PED_WEAPON_TINT_INDEX(ped, weaponHash);
+		return NativeFunction.Natives.GET_PED_WEAPON_TINT_INDEX<int>(ped, weaponHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons, components &amp; tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -41088,14 +41088,14 @@ public static class Natives
 	}
 	public static int GET_WEAPON_OBJECT_TINT_INDEX(Object weapon)
 	{
-		return NativeFunction.Natives.GET_WEAPON_OBJECT_TINT_INDEX(weapon);
+		return NativeFunction.Natives.GET_WEAPON_OBJECT_TINT_INDEX<int>(weapon);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static int GET_WEAPON_TINT_COUNT(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_TINT_COUNT(weaponHash);
+		return NativeFunction.Natives.GET_WEAPON_TINT_COUNT<int>(weaponHash);
 	}
 	/// <summary>
 	/// 	Colors:<br/>
@@ -41143,7 +41143,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_PED_WEAPON_COMPONENT_TINT_INDEX(Ped ped, ulong weaponHash, ulong camoComponentHash)
 	{
-		return NativeFunction.Natives.GET_PED_WEAPON_COMPONENT_TINT_INDEX(ped, weaponHash, camoComponentHash);
+		return NativeFunction.Natives.GET_PED_WEAPON_COMPONENT_TINT_INDEX<int>(ped, weaponHash, camoComponentHash);
 	}
 	/// <summary>
 	/// 	Colors:<br/>
@@ -41191,11 +41191,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_WEAPON_OBJECT_COMPONENT_TINT_INDEX(Object weaponObject, ulong camoComponentHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_OBJECT_COMPONENT_TINT_INDEX(weaponObject, camoComponentHash);
+		return NativeFunction.Natives.GET_WEAPON_OBJECT_COMPONENT_TINT_INDEX<int>(weaponObject, camoComponentHash);
 	}
 	public static int GET_PED_WEAPON_CAMO_INDEX(Ped ped, ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_PED_WEAPON_CAMO_INDEX(ped, weaponHash);
+		return NativeFunction.Natives.GET_PED_WEAPON_CAMO_INDEX<int>(ped, weaponHash);
 	}
 	public static void SET_WEAPON_OBJECT_CAMO_INDEX(Object weaponObject, int p1)
 	{
@@ -41226,11 +41226,11 @@ public static class Natives
 	/// </summary>
 	public static bool GET_WEAPON_HUD_STATS(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_HUD_STATS(weaponHash, 0);
+		return NativeFunction.Natives.GET_WEAPON_HUD_STATS<bool>(weaponHash, 0);
 	}
 	public static bool GET_WEAPON_COMPONENT_HUD_STATS(ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_COMPONENT_HUD_STATS(componentHash, 0);
+		return NativeFunction.Natives.GET_WEAPON_COMPONENT_HUD_STATS<bool>(componentHash, 0);
 	}
 	/// <summary>
 	/// 	This native does not return damages of weapons from the melee and explosive group.<br/>
@@ -41238,7 +41238,7 @@ public static class Natives
 	/// </summary>
 	public static float GET_WEAPON_DAMAGE(ulong weaponHash, ulong componentHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_DAMAGE(weaponHash, componentHash);
+		return NativeFunction.Natives.GET_WEAPON_DAMAGE<float>(weaponHash, componentHash);
 	}
 	/// <summary>
 	/// 	// Returns the size of the default weapon component clip.<br/>
@@ -41260,14 +41260,14 @@ public static class Natives
 	/// </summary>
 	public static int GET_WEAPON_CLIP_SIZE(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_CLIP_SIZE(weaponHash);
+		return NativeFunction.Natives.GET_WEAPON_CLIP_SIZE<int>(weaponHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static float GET_WEAPON_TIME_BETWEEN_SHOTS(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_TIME_BETWEEN_SHOTS(weaponHash);
+		return NativeFunction.Natives.GET_WEAPON_TIME_BETWEEN_SHOTS<float>(weaponHash);
 	}
 	public static void SET_PED_CHANCE_OF_FIRING_BLANKS(Ped ped, float xBias, float yBias)
 	{
@@ -41278,7 +41278,7 @@ public static class Natives
 	/// </summary>
 	public static Object SET_PED_SHOOT_ORDNANCE_WEAPON(Ped ped, float p1)
 	{
-		return NativeFunction.Natives.SET_PED_SHOOT_ORDNANCE_WEAPON(ped, p1);
+		return NativeFunction.Natives.SET_PED_SHOOT_ORDNANCE_WEAPON<Object>(ped, p1);
 	}
 	public static void REQUEST_WEAPON_HIGH_DETAIL_MODEL(Entity weaponObject)
 	{
@@ -41314,15 +41314,15 @@ public static class Natives
 	/// </summary>
 	public static bool IS_PED_CURRENT_WEAPON_SILENCED(Ped ped)
 	{
-		return NativeFunction.Natives.IS_PED_CURRENT_WEAPON_SILENCED(ped);
+		return NativeFunction.Natives.IS_PED_CURRENT_WEAPON_SILENCED<bool>(ped);
 	}
 	public static bool IS_FLASH_LIGHT_ON(Ped ped)
 	{
-		return NativeFunction.Natives.IS_FLASH_LIGHT_ON(ped);
+		return NativeFunction.Natives.IS_FLASH_LIGHT_ON<bool>(ped);
 	}
 	public static bool SET_FLASH_LIGHT_FADE_DISTANCE(float distance)
 	{
-		return NativeFunction.Natives.SET_FLASH_LIGHT_FADE_DISTANCE(distance);
+		return NativeFunction.Natives.SET_FLASH_LIGHT_FADE_DISTANCE<bool>(distance);
 	}
 	/// <summary>
 	/// 	Enables/disables flashlight on ped&amp;apos;s weapon.
@@ -41397,7 +41397,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_WEAPON_DAMAGE_TYPE(ulong weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_DAMAGE_TYPE(weaponHash);
+		return NativeFunction.Natives.GET_WEAPON_DAMAGE_TYPE<int>(weaponHash);
 	}
 	public static void SET_EQIPPED_WEAPON_START_SPINNING_AT_FULL_SPEED(Ped ped)
 	{
@@ -41409,25 +41409,25 @@ public static class Natives
 	/// </summary>
 	public static bool CAN_USE_WEAPON_ON_PARACHUTE(ulong weaponHash)
 	{
-		return NativeFunction.Natives.CAN_USE_WEAPON_ON_PARACHUTE(weaponHash);
+		return NativeFunction.Natives.CAN_USE_WEAPON_ON_PARACHUTE<bool>(weaponHash);
 	}
 	/// <summary>
 	/// 	Both coordinates are from objects in the decompiled scripts. Native related to 0xECDC202B25E5CF48 p1 value. The only weapon hash used in the decompiled scripts is weapon_air_defence_gun. These two natives are used by the yacht script, decompiled scripts suggest it and the weapon hash used (valkyrie&amp;apos;s rockets) are also used by yachts.
 	/// </summary>
 	public static int CREATE_AIR_DEFENCE_SPHERE(float x, float y, float z, float radius, float p4, float p5, float p6, ulong weaponHash)
 	{
-		return NativeFunction.Natives.CREATE_AIR_DEFENCE_SPHERE(x, y, z, radius, p4, p5, p6, weaponHash);
+		return NativeFunction.Natives.CREATE_AIR_DEFENCE_SPHERE<int>(x, y, z, radius, p4, p5, p6, weaponHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
 	public static int CREATE_AIR_DEFENCE_ANGLED_AREA(float p0, float p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float radius, ulong weaponHash)
 	{
-		return NativeFunction.Natives.CREATE_AIR_DEFENCE_ANGLED_AREA(p0, p1, p2, p3, p4, p5, p6, p7, p8, radius, weaponHash);
+		return NativeFunction.Natives.CREATE_AIR_DEFENCE_ANGLED_AREA<int>(p0, p1, p2, p3, p4, p5, p6, p7, p8, radius, weaponHash);
 	}
 	public static bool REMOVE_AIR_DEFENCE_SPHERE(int zoneId)
 	{
-		return NativeFunction.Natives.REMOVE_AIR_DEFENCE_SPHERE(zoneId);
+		return NativeFunction.Natives.REMOVE_AIR_DEFENCE_SPHERE<bool>(zoneId);
 	}
 	public static void REMOVE_ALL_AIR_DEFENCE_SPHERES()
 	{
@@ -41439,7 +41439,7 @@ public static class Natives
 	}
 	public static bool IS_AIR_DEFENCE_SPHERE_IN_AREA(float x, float y, float z, float radius, out int outZoneId)
 	{
-		return NativeFunction.Natives.IS_AIR_DEFENCE_SPHERE_IN_AREA(x, y, z, radius, out outZoneId);
+		return NativeFunction.Natives.IS_AIR_DEFENCE_SPHERE_IN_AREA<bool>(x, y, z, radius, out outZoneId);
 	}
 	public static void FIRE_AIR_DEFENCE_SPHERE_WEAPON_AT_POSITION(int zoneId, float x, float y, float z)
 	{
@@ -41447,7 +41447,7 @@ public static class Natives
 	}
 	public static bool DOES_AIR_DEFENCE_SPHERE_EXIST(int zoneId)
 	{
-		return NativeFunction.Natives.DOES_AIR_DEFENCE_SPHERE_EXIST(zoneId);
+		return NativeFunction.Natives.DOES_AIR_DEFENCE_SPHERE_EXIST<bool>(zoneId);
 	}
 	/// <summary>
 	/// 	Disables selecting the given weapon. Ped isn&amp;apos;t forced to put the gun away. However you can&amp;apos;t reselect the weapon if you holster then unholster. Weapon is also grayed out on the weapon wheel.<br/>
@@ -41469,7 +41469,7 @@ public static class Natives
 	*/
 	public static int GET_ZONE_AT_COORDS(float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_ZONE_AT_COORDS(x, y, z);
+		return NativeFunction.Natives.GET_ZONE_AT_COORDS<int>(x, y, z);
 	}
 	/// <summary>
 	/// 	&amp;apos;zoneName&amp;apos; corresponds to an entry in &amp;apos;popzone.ipl&amp;apos;.<br/>
@@ -41568,11 +41568,11 @@ public static class Natives
 	/// </summary>
 	public static int GET_ZONE_FROM_NAME_ID(string zoneName)
 	{
-		return NativeFunction.Natives.GET_ZONE_FROM_NAME_ID(zoneName);
+		return NativeFunction.Natives.GET_ZONE_FROM_NAME_ID<int>(zoneName);
 	}
 	public static int GET_ZONE_POPSCHEDULE(int zoneId)
 	{
-		return NativeFunction.Natives.GET_ZONE_POPSCHEDULE(zoneId);
+		return NativeFunction.Natives.GET_ZONE_POPSCHEDULE<int>(zoneId);
 	}
 	/// <summary>
 	/// 	AIRP = Los Santos International Airport<br/>
@@ -41669,7 +41669,7 @@ public static class Natives
 	/// </summary>
 	public static string GET_NAME_OF_ZONE(float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_NAME_OF_ZONE(x, y, z);
+		return NativeFunction.Natives.GET_NAME_OF_ZONE<string>(x, y, z);
 	}
 	public static void SET_ZONE_ENABLED(int zoneId, bool toggle)
 	{
@@ -41680,7 +41680,7 @@ public static class Natives
 	/// </summary>
 	public static int GET_ZONE_SCUMMINESS(int zoneId)
 	{
-		return NativeFunction.Natives.GET_ZONE_SCUMMINESS(zoneId);
+		return NativeFunction.Natives.GET_ZONE_SCUMMINESS<int>(zoneId);
 	}
 	/// <summary>
 	/// 	Only used once in the decompiled scripts. Seems to be related to scripted vehicle generators.<br/>
@@ -41724,7 +41724,7 @@ public static class Natives
 	/// </summary>
 	public static ulong GET_HASH_OF_MAP_AREA_AT_COORDS(float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_HASH_OF_MAP_AREA_AT_COORDS(x, y, z);
+		return NativeFunction.Natives.GET_HASH_OF_MAP_AREA_AT_COORDS<ulong>(x, y, z);
 	}
 
 }
