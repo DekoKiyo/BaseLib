@@ -1,0 +1,12 @@
+/.vs/
+/.vscode/settings.json
+bin/
+obj/
+/Memo.txt
+/GTA5Audio/
+/JapaneseCalloutsAudio/
+/Release/
+/HIDEIT.md
+*.psd
+/Discord/
+Archive/
