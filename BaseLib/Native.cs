@@ -8,7 +8,7 @@ namespace BaseLib;
 #pragma warning disable CS1591
 
 /// <summary>
-/// Date this file was generated: 2024/07/15 18:43:21
+/// Date this file was generated: 2024/07/15 18:47:09
 /// </summary>
 public static class Natives
 {
@@ -67,11 +67,11 @@ public static class Natives
 	{
 		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_ARGS<int>(scriptName, 0, argCount, stackSize);
 	}
-	public static int START_NEW_SCRIPT_WITH_NAME_HASH(ulong scriptHash, int stackSize)
+	public static int START_NEW_SCRIPT_WITH_NAME_HASH(uint scriptHash, int stackSize)
 	{
 		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_NAME_HASH<int>(scriptHash, stackSize);
 	}
-	public static int START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(ulong scriptHash, int argCount, int stackSize)
+	public static int START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(uint scriptHash, int argCount, int stackSize)
 	{
 		return NativeFunction.Natives.START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS<int>(scriptHash, 0, argCount, stackSize);
 	}
@@ -586,7 +586,7 @@ public static class Natives
 	/// 	Only used with &amp;quot;formation_flying_blips_soundset&amp;quot; and &amp;quot;biker_formation_blips_soundset&amp;quot;.<br/>
 	/// 	p1 is always the model of p2
 	/// </summary>
-	public static void PLAY_SOUND_FROM_ENTITY_HASH(int soundId, ulong model, Entity entity, ulong soundSetHash)
+	public static void PLAY_SOUND_FROM_ENTITY_HASH(int soundId, uint model, Entity entity, uint soundSetHash)
 	{
 		NativeFunction.Natives.PLAY_SOUND_FROM_ENTITY_HASH(soundId, model, entity, soundSetHash, 0, 0);
 	}
@@ -811,13 +811,13 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_AMBIENT_VOICE_NAME(ped, name);
 	}
-	public static void SET_AMBIENT_VOICE_NAME_HASH(Ped ped, ulong hash)
+	public static void SET_AMBIENT_VOICE_NAME_HASH(Ped ped, uint hash)
 	{
 		NativeFunction.Natives.SET_AMBIENT_VOICE_NAME_HASH(ped, hash);
 	}
-	public static ulong GET_AMBIENT_VOICE_NAME_HASH(Ped ped)
+	public static uint GET_AMBIENT_VOICE_NAME_HASH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_AMBIENT_VOICE_NAME_HASH<ulong>(ped);
+		return NativeFunction.Natives.GET_AMBIENT_VOICE_NAME_HASH<uint>(ped);
 	}
 	/// <summary>
 	/// 	Assigns some ambient voice to the ped.
@@ -826,7 +826,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_PED_VOICE_FULL(ped);
 	}
-	public static void SET_PED_RACE_AND_VOICE_GROUP(Ped ped, int p1, ulong voiceGroup)
+	public static void SET_PED_RACE_AND_VOICE_GROUP(Ped ped, int p1, uint voiceGroup)
 	{
 		NativeFunction.Natives.SET_PED_RACE_AND_VOICE_GROUP(ped, p1, voiceGroup);
 	}
@@ -838,14 +838,14 @@ public static class Natives
 	/// 	AUDIO::SET_PED_VOICE_GROUP(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY(&amp;quot;FEMALE_LOST_BLACK_PVG&amp;quot;));<br/>
 	/// 	AUDIO::SET_PED_VOICE_GROUP(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY(&amp;quot;FEMALE_LOST_WHITE_PVG&amp;quot;));
 	/// </summary>
-	public static void SET_PED_VOICE_GROUP(Ped ped, ulong voiceGroupHash)
+	public static void SET_PED_VOICE_GROUP(Ped ped, uint voiceGroupHash)
 	{
 		NativeFunction.Natives.SET_PED_VOICE_GROUP(ped, voiceGroupHash);
 	}
 	/// <summary>
 	/// 	Dat151RelType == 29
 	/// </summary>
-	public static void SET_PED_VOICE_GROUP_FROM_RACE_TO_PVG(Ped ped, ulong voiceGroupHash)
+	public static void SET_PED_VOICE_GROUP_FROM_RACE_TO_PVG(Ped ped, uint voiceGroupHash)
 	{
 		NativeFunction.Natives.SET_PED_VOICE_GROUP_FROM_RACE_TO_PVG(ped, voiceGroupHash);
 	}
@@ -1179,7 +1179,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_NUM_UNLOCKED_RADIO_STATIONS<int>();
 	}
-	public static int FIND_RADIO_STATION_INDEX(ulong stationNameHash)
+	public static int FIND_RADIO_STATION_INDEX(uint stationNameHash)
 	{
 		return NativeFunction.Natives.FIND_RADIO_STATION_INDEX<int>(stationNameHash);
 	}
@@ -1250,9 +1250,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_CURRENT_TRACK_PLAY_TIME<int>(radioStationName);
 	}
-	public static ulong GET_CURRENT_TRACK_SOUND_NAME(string radioStationName)
+	public static uint GET_CURRENT_TRACK_SOUND_NAME(string radioStationName)
 	{
-		return NativeFunction.Natives.GET_CURRENT_TRACK_SOUND_NAME<ulong>(radioStationName);
+		return NativeFunction.Natives.GET_CURRENT_TRACK_SOUND_NAME<uint>(radioStationName);
 	}
 	public static void SET_VEHICLE_MISSILE_WARNING_ENABLED(Vehicle vehicle, bool toggle)
 	{
@@ -1541,7 +1541,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.FORCE_USE_AUDIO_GAME_OBJECT(vehicle, audioName);
 	}
-	public static void PRELOAD_VEHICLE_AUDIO_BANK(ulong vehicleModel)
+	public static void PRELOAD_VEHICLE_AUDIO_BANK(uint vehicleModel)
 	{
 		NativeFunction.Natives.PRELOAD_VEHICLE_AUDIO_BANK(vehicleModel);
 	}
@@ -1602,7 +1602,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_PLAYER_VEHICLE_ALARM_AUDIO_ACTIVE(vehicle, toggle);
 	}
-	public static void SET_SCRIPT_UPDATE_DOOR_AUDIO(ulong doorHash, bool toggle)
+	public static void SET_SCRIPT_UPDATE_DOOR_AUDIO(uint doorHash, bool toggle)
 	{
 		NativeFunction.Natives.SET_SCRIPT_UPDATE_DOOR_AUDIO(doorHash, toggle);
 	}
@@ -1875,13 +1875,13 @@ public static class Natives
 	/// 	<br/>
 	/// 	Hash is stored in audVehicleAudioEntity
 	/// </summary>
-	public static ulong GET_VEHICLE_DEFAULT_HORN(Vehicle vehicle)
+	public static uint GET_VEHICLE_DEFAULT_HORN(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN<ulong>(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN<uint>(vehicle);
 	}
-	public static ulong GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS(Vehicle vehicle)
+	public static uint GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS<ulong>(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS<uint>(vehicle);
 	}
 	public static void RESET_PED_AUDIO_FLAGS(Ped ped)
 	{
@@ -1904,18 +1904,18 @@ public static class Natives
 	/// <summary>
 	/// 	Sets audio flag &amp;quot;OverridePlayerGroundMaterial&amp;quot;
 	/// </summary>
-	public static void OVERRIDE_PLAYER_GROUND_MATERIAL(ulong hash, bool toggle)
+	public static void OVERRIDE_PLAYER_GROUND_MATERIAL(uint hash, bool toggle)
 	{
 		NativeFunction.Natives.OVERRIDE_PLAYER_GROUND_MATERIAL(hash, toggle);
 	}
-	public static void USE_FOOTSTEP_SCRIPT_SWEETENERS(Ped ped, bool p1, ulong hash)
+	public static void USE_FOOTSTEP_SCRIPT_SWEETENERS(Ped ped, bool p1, uint hash)
 	{
 		NativeFunction.Natives.USE_FOOTSTEP_SCRIPT_SWEETENERS(ped, p1, hash);
 	}
 	/// <summary>
 	/// 	Sets audio flag &amp;quot;OverrideMicrophoneSettings&amp;quot;
 	/// </summary>
-	public static void OVERRIDE_MICROPHONE_SETTINGS(ulong hash, bool toggle)
+	public static void OVERRIDE_MICROPHONE_SETTINGS(uint hash, bool toggle)
 	{
 		NativeFunction.Natives.OVERRIDE_MICROPHONE_SETTINGS(hash, toggle);
 	}
@@ -2178,7 +2178,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Hardcoded to not work in Multiplayer.
 	/// </summary>
-	public static void ADD_SCRIPT_TO_RANDOM_PED(string name, ulong model, float p2, float p3)
+	public static void ADD_SCRIPT_TO_RANDOM_PED(string name, uint model, float p2, float p3)
 	{
 		NativeFunction.Natives.ADD_SCRIPT_TO_RANDOM_PED(name, model, p2, p3);
 	}
@@ -2189,7 +2189,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	- Nacorpio
 	/// </summary>
-	public static void REGISTER_OBJECT_SCRIPT_BRAIN(string scriptName, ulong modelHash, int p2, float activationRange, int p4, int p5)
+	public static void REGISTER_OBJECT_SCRIPT_BRAIN(string scriptName, uint modelHash, int p2, float activationRange, int p4, int p5)
 	{
 		NativeFunction.Natives.REGISTER_OBJECT_SCRIPT_BRAIN(scriptName, modelHash, p2, activationRange, p4, p5);
 	}
@@ -2318,14 +2318,14 @@ public static class Natives
 	{
 		return NativeFunction.Natives.CREATE_CAM_WITH_PARAMS<Camera>(camName, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, p9);
 	}
-	public static Camera CREATE_CAMERA(ulong camHash, bool p1)
+	public static Camera CREATE_CAMERA(uint camHash, bool p1)
 	{
 		return NativeFunction.Natives.CREATE_CAMERA<Camera>(camHash, p1);
 	}
 	/// <summary>
 	/// 	p9 uses 2 by default
 	/// </summary>
-	public static Camera CREATE_CAMERA_WITH_PARAMS(ulong camHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8)
+	public static Camera CREATE_CAMERA_WITH_PARAMS(uint camHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8)
 	{
 		return NativeFunction.Natives.CREATE_CAMERA_WITH_PARAMS<Camera>(camHash, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, 0);
 	}
@@ -3286,7 +3286,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_FOLLOW_VEHICLE_CAM_HIGH_ANGLE_MODE_EVERY_UPDATE(p0, p1);
 	}
-	public static bool SET_TABLE_GAMES_CAMERA_THIS_UPDATE(ulong hash)
+	public static bool SET_TABLE_GAMES_CAMERA_THIS_UPDATE(uint hash)
 	{
 		return NativeFunction.Natives.SET_TABLE_GAMES_CAMERA_THIS_UPDATE<bool>(hash);
 	}
@@ -3611,21 +3611,21 @@ public static class Natives
 	/// <summary>
 	/// 	hash is always JOAAT(&amp;quot;CAMERA_MAN_SHOT&amp;quot;) in decompiled scripts
 	/// </summary>
-	public static void CREATE_CINEMATIC_SHOT(ulong p0, int time, bool p2, Entity entity)
+	public static void CREATE_CINEMATIC_SHOT(uint p0, int time, bool p2, Entity entity)
 	{
 		NativeFunction.Natives.CREATE_CINEMATIC_SHOT(p0, time, p2, entity);
 	}
 	/// <summary>
 	/// 	Hash is always JOAAT(&amp;quot;CAMERA_MAN_SHOT&amp;quot;) in decompiled scripts
 	/// </summary>
-	public static bool IS_CINEMATIC_SHOT_ACTIVE(ulong p0)
+	public static bool IS_CINEMATIC_SHOT_ACTIVE(uint p0)
 	{
 		return NativeFunction.Natives.IS_CINEMATIC_SHOT_ACTIVE<bool>(p0);
 	}
 	/// <summary>
 	/// 	Only used once in carsteal3 with p0 set to -1096069633 (CAMERA_MAN_SHOT)
 	/// </summary>
-	public static void STOP_CINEMATIC_SHOT(ulong p0)
+	public static void STOP_CINEMATIC_SHOT(uint p0)
 	{
 		NativeFunction.Natives.STOP_CINEMATIC_SHOT(p0);
 	}
@@ -3716,7 +3716,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_FIRST_PERSON_FLASH_EFFECT_VEHICLE_MODEL_NAME(vehicleName);
 	}
-	public static void SET_FIRST_PERSON_FLASH_EFFECT_VEHICLE_MODEL_HASH(ulong vehicleModel)
+	public static void SET_FIRST_PERSON_FLASH_EFFECT_VEHICLE_MODEL_HASH(uint vehicleModel)
 	{
 		NativeFunction.Natives.SET_FIRST_PERSON_FLASH_EFFECT_VEHICLE_MODEL_HASH(vehicleModel);
 	}
@@ -4016,7 +4016,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_CUTSCENE_SECTION_PLAYING<int>();
 	}
-	public static Entity GET_ENTITY_INDEX_OF_CUTSCENE_ENTITY(string cutsceneEntName, ulong modelHash)
+	public static Entity GET_ENTITY_INDEX_OF_CUTSCENE_ENTITY(string cutsceneEntName, uint modelHash)
 	{
 		return NativeFunction.Natives.GET_ENTITY_INDEX_OF_CUTSCENE_ENTITY<Entity>(cutsceneEntName, modelHash);
 	}
@@ -4035,18 +4035,18 @@ public static class Natives
 	{
 		return NativeFunction.Natives.DOES_CUTSCENE_HANDLE_EXIST<int>(cutsceneHandle);
 	}
-	public static void REGISTER_ENTITY_FOR_CUTSCENE(Ped cutscenePed, string cutsceneEntName, int p2, ulong modelHash, int p4)
+	public static void REGISTER_ENTITY_FOR_CUTSCENE(Ped cutscenePed, string cutsceneEntName, int p2, uint modelHash, int p4)
 	{
 		NativeFunction.Natives.REGISTER_ENTITY_FOR_CUTSCENE(cutscenePed, cutsceneEntName, p2, modelHash, p4);
 	}
-	public static Entity GET_ENTITY_INDEX_OF_REGISTERED_ENTITY(string cutsceneEntName, ulong modelHash)
+	public static Entity GET_ENTITY_INDEX_OF_REGISTERED_ENTITY(string cutsceneEntName, uint modelHash)
 	{
 		return NativeFunction.Natives.GET_ENTITY_INDEX_OF_REGISTERED_ENTITY<Entity>(cutsceneEntName, modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static void SET_VEHICLE_MODEL_PLAYER_WILL_EXIT_SCENE(ulong modelHash)
+	public static void SET_VEHICLE_MODEL_PLAYER_WILL_EXIT_SCENE(uint modelHash)
 	{
 		NativeFunction.Natives.SET_VEHICLE_MODEL_PLAYER_WILL_EXIT_SCENE(modelHash);
 	}
@@ -4060,11 +4060,11 @@ public static class Natives
 	/// <summary>
 	/// 	modelHash (p1) was always 0 in R* scripts
 	/// </summary>
-	public static bool CAN_SET_ENTER_STATE_FOR_REGISTERED_ENTITY(string cutsceneEntName, ulong modelHash)
+	public static bool CAN_SET_ENTER_STATE_FOR_REGISTERED_ENTITY(string cutsceneEntName, uint modelHash)
 	{
 		return NativeFunction.Natives.CAN_SET_ENTER_STATE_FOR_REGISTERED_ENTITY<bool>(cutsceneEntName, modelHash);
 	}
-	public static bool CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY(string cutsceneEntName, ulong modelHash)
+	public static bool CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY(string cutsceneEntName, uint modelHash)
 	{
 		return NativeFunction.Natives.CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY<bool>(cutsceneEntName, modelHash);
 	}
@@ -4124,15 +4124,15 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
 	/// </summary>
-	public static void SET_CUTSCENE_PED_COMPONENT_VARIATION(string cutsceneEntName, int componentId, int drawableId, int textureId, ulong modelHash)
+	public static void SET_CUTSCENE_PED_COMPONENT_VARIATION(string cutsceneEntName, int componentId, int drawableId, int textureId, uint modelHash)
 	{
 		NativeFunction.Natives.SET_CUTSCENE_PED_COMPONENT_VARIATION(cutsceneEntName, componentId, drawableId, textureId, modelHash);
 	}
-	public static void SET_CUTSCENE_PED_COMPONENT_VARIATION_FROM_PED(string cutsceneEntName, Ped ped, ulong modelHash)
+	public static void SET_CUTSCENE_PED_COMPONENT_VARIATION_FROM_PED(string cutsceneEntName, Ped ped, uint modelHash)
 	{
 		NativeFunction.Natives.SET_CUTSCENE_PED_COMPONENT_VARIATION_FROM_PED(cutsceneEntName, ped, modelHash);
 	}
-	public static bool DOES_CUTSCENE_ENTITY_EXIST(string cutsceneEntName, ulong modelHash)
+	public static bool DOES_CUTSCENE_ENTITY_EXIST(string cutsceneEntName, uint modelHash)
 	{
 		return NativeFunction.Natives.DOES_CUTSCENE_ENTITY_EXIST<bool>(cutsceneEntName, modelHash);
 	}
@@ -4146,7 +4146,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
 	/// </summary>
-	public static void SET_CUTSCENE_PED_PROP_VARIATION(string cutsceneEntName, int componentId, int drawableId, int textureId, ulong modelHash)
+	public static void SET_CUTSCENE_PED_PROP_VARIATION(string cutsceneEntName, int componentId, int drawableId, int textureId, uint modelHash)
 	{
 		NativeFunction.Natives.SET_CUTSCENE_PED_PROP_VARIATION(cutsceneEntName, componentId, drawableId, textureId, modelHash);
 	}
@@ -4499,7 +4499,7 @@ public static class Natives
 	/// <summary>
 	/// 	Returns true if the given DLC pack is present.
 	/// </summary>
-	public static bool IS_DLC_PRESENT(ulong dlcHash)
+	public static bool IS_DLC_PRESENT(uint dlcHash)
 	{
 		return NativeFunction.Natives.IS_DLC_PRESENT<bool>(dlcHash);
 	}
@@ -4660,9 +4660,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives._GET_LAST_ENTITY_HIT_BY_ENTITY<Entity>(entity);
 	}
-	public static ulong GET_LAST_MATERIAL_HIT_BY_ENTITY(Entity entity)
+	public static uint GET_LAST_MATERIAL_HIT_BY_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_LAST_MATERIAL_HIT_BY_ENTITY<ulong>(entity);
+		return NativeFunction.Natives.GET_LAST_MATERIAL_HIT_BY_ENTITY<uint>(entity);
 	}
 	public static Vector3 GET_COLLISION_NORMAL_OF_LAST_HIT_FOR_ENTITY(Entity entity)
 	{
@@ -4816,9 +4816,9 @@ public static class Natives
 	/// <summary>
 	/// 	Returns the model hash from the entity
 	/// </summary>
-	public static ulong GET_ENTITY_MODEL(Entity entity)
+	public static uint GET_ENTITY_MODEL(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ENTITY_MODEL<ulong>(entity);
+		return NativeFunction.Natives.GET_ENTITY_MODEL<uint>(entity);
 	}
 	/// <summary>
 	/// 	Converts world coords (posX - Z) to coords relative to the entity<br/>
@@ -5120,7 +5120,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_ENTITY_TOUCHING_ENTITY<bool>(entity, targetEntity);
 	}
-	public static bool IS_ENTITY_TOUCHING_MODEL(Entity entity, ulong modelHash)
+	public static bool IS_ENTITY_TOUCHING_MODEL(Entity entity, uint modelHash)
 	{
 		return NativeFunction.Natives.IS_ENTITY_TOUCHING_MODEL<bool>(entity, modelHash);
 	}
@@ -5144,7 +5144,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_ENTITY_OCCLUDED<bool>(entity);
 	}
-	public static bool WOULD_ENTITY_BE_OCCLUDED(ulong entityModelHash, float x, float y, float z, bool p4)
+	public static bool WOULD_ENTITY_BE_OCCLUDED(uint entityModelHash, float x, float y, float z, bool p4)
 	{
 		return NativeFunction.Natives.WOULD_ENTITY_BE_OCCLUDED<bool>(entityModelHash, x, y, z, p4);
 	}
@@ -5396,7 +5396,7 @@ public static class Natives
 	/// <summary>
 	/// 	if (ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY(&amp;quot;CreateObject&amp;quot;)))
 	/// </summary>
-	public static bool HAS_ANIM_EVENT_FIRED(Entity entity, ulong actionHash)
+	public static bool HAS_ANIM_EVENT_FIRED(Entity entity, uint actionHash)
 	{
 		return NativeFunction.Natives.HAS_ANIM_EVENT_FIRED<bool>(entity, actionHash);
 	}
@@ -5558,7 +5558,7 @@ public static class Natives
 	/// 	male ped ~= 100 - 200<br/>
 	/// 	female ped ~= 0 - 100
 	/// </summary>
-	public static void SET_ENTITY_HEALTH(Entity entity, int health, Entity instigator, ulong weaponType)
+	public static void SET_ENTITY_HEALTH(Entity entity, int health, Entity instigator, uint weaponType)
 	{
 		NativeFunction.Natives.SET_ENTITY_HEALTH(entity, health, instigator, weaponType);
 	}
@@ -5766,11 +5766,11 @@ public static class Natives
 	/// <summary>
 	/// 	Only works with objects!
 	/// </summary>
-	public static void CREATE_MODEL_SWAP(float x, float y, float z, float radius, ulong originalModel, ulong newModel, bool p6)
+	public static void CREATE_MODEL_SWAP(float x, float y, float z, float radius, uint originalModel, uint newModel, bool p6)
 	{
 		NativeFunction.Natives.CREATE_MODEL_SWAP(x, y, z, radius, originalModel, newModel, p6);
 	}
-	public static void REMOVE_MODEL_SWAP(float x, float y, float z, float radius, ulong originalModel, ulong newModel, bool p6)
+	public static void REMOVE_MODEL_SWAP(float x, float y, float z, float radius, uint originalModel, uint newModel, bool p6)
 	{
 		NativeFunction.Natives.REMOVE_MODEL_SWAP(x, y, z, radius, originalModel, newModel, p6);
 	}
@@ -5780,11 +5780,11 @@ public static class Natives
 	/// 	<br/>
 	/// 	Network players do not see changes done with this.
 	/// </summary>
-	public static void CREATE_MODEL_HIDE(float x, float y, float z, float radius, ulong modelHash, bool p5)
+	public static void CREATE_MODEL_HIDE(float x, float y, float z, float radius, uint modelHash, bool p5)
 	{
 		NativeFunction.Natives.CREATE_MODEL_HIDE(x, y, z, radius, modelHash, p5);
 	}
-	public static void CREATE_MODEL_HIDE_EXCLUDING_SCRIPT_OBJECTS(float x, float y, float z, float radius, ulong modelHash, bool p5)
+	public static void CREATE_MODEL_HIDE_EXCLUDING_SCRIPT_OBJECTS(float x, float y, float z, float radius, uint modelHash, bool p5)
 	{
 		NativeFunction.Natives.CREATE_MODEL_HIDE_EXCLUDING_SCRIPT_OBJECTS(x, y, z, radius, modelHash, p5);
 	}
@@ -5792,15 +5792,15 @@ public static class Natives
 	/// 	This native makes entities visible that are hidden by the native CREATE_MODEL_HIDE.<br/>
 	/// 	p5 should be false, true does nothing
 	/// </summary>
-	public static void REMOVE_MODEL_HIDE(float x, float y, float z, float radius, ulong modelHash, bool p5)
+	public static void REMOVE_MODEL_HIDE(float x, float y, float z, float radius, uint modelHash, bool p5)
 	{
 		NativeFunction.Natives.REMOVE_MODEL_HIDE(x, y, z, radius, modelHash, p5);
 	}
-	public static void CREATE_FORCED_OBJECT(float x, float y, float z, ulong modelHash, bool p5)
+	public static void CREATE_FORCED_OBJECT(float x, float y, float z, uint modelHash, bool p5)
 	{
 		NativeFunction.Natives.CREATE_FORCED_OBJECT(x, y, z, 0, modelHash, p5);
 	}
-	public static void REMOVE_FORCED_OBJECT(float x, float y, float z, float p3, ulong modelHash)
+	public static void REMOVE_FORCED_OBJECT(float x, float y, float z, float p3, uint modelHash)
 	{
 		NativeFunction.Natives.REMOVE_FORCED_OBJECT(x, y, z, p3, modelHash);
 	}
@@ -5906,7 +5906,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	iVar8 = ENTITY::GET_ENTITY_OF_TYPE_ATTACHED_TO_ENTITY(bParam0-&amp;gt;f_9, joaat(&amp;quot;p_cs_clipboard&amp;quot;));
 	/// </summary>
-	public static Entity GET_ENTITY_OF_TYPE_ATTACHED_TO_ENTITY(Entity entity, ulong modelHash)
+	public static Entity GET_ENTITY_OF_TYPE_ATTACHED_TO_ENTITY(Entity entity, uint modelHash)
 	{
 		return NativeFunction.Natives.GET_ENTITY_OF_TYPE_ATTACHED_TO_ENTITY<Entity>(entity, modelHash);
 	}
@@ -5917,14 +5917,14 @@ public static class Natives
 	/*
 		EVENT
 	*/
-	public static void SET_DECISION_MAKER(Ped ped, ulong name)
+	public static void SET_DECISION_MAKER(Ped ped, uint name)
 	{
 		NativeFunction.Natives.SET_DECISION_MAKER(ped, name);
 	}
 	/// <summary>
 	/// 	eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
 	/// </summary>
-	public static void CLEAR_DECISION_MAKER_EVENT_RESPONSE(ulong name, int eventType)
+	public static void CLEAR_DECISION_MAKER_EVENT_RESPONSE(uint name, int eventType)
 	{
 		NativeFunction.Natives.CLEAR_DECISION_MAKER_EVENT_RESPONSE(name, eventType);
 	}
@@ -5933,14 +5933,14 @@ public static class Natives
 	/// 	<br/>
 	/// 	This is limited to 4 blocked events at a time.
 	/// </summary>
-	public static void BLOCK_DECISION_MAKER_EVENT(ulong name, int eventType)
+	public static void BLOCK_DECISION_MAKER_EVENT(uint name, int eventType)
 	{
 		NativeFunction.Natives.BLOCK_DECISION_MAKER_EVENT(name, eventType);
 	}
 	/// <summary>
 	/// 	eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
 	/// </summary>
-	public static void UNBLOCK_DECISION_MAKER_EVENT(ulong name, int eventType)
+	public static void UNBLOCK_DECISION_MAKER_EVENT(uint name, int eventType)
 	{
 		NativeFunction.Natives.UNBLOCK_DECISION_MAKER_EVENT(name, eventType);
 	}
@@ -6055,7 +6055,7 @@ public static class Natives
 	/// 	3 = MPMale, <br/>
 	/// 	4 = MPFemale
 	/// </summary>
-	public static int GET_TATTOO_SHOP_DLC_ITEM_INDEX(ulong overlayHash, int character)
+	public static int GET_TATTOO_SHOP_DLC_ITEM_INDEX(uint overlayHash, int character)
 	{
 		return NativeFunction.Natives.GET_TATTOO_SHOP_DLC_ITEM_INDEX<int>(overlayHash, 0, character);
 	}
@@ -6101,14 +6101,14 @@ public static class Natives
 	/// 	Returns some sort of index/offset for components.<br/>
 	/// 	Needs _GET_NUM_PROPS_FROM_OUTFIT to be called with p3 = false and componentId with the drawable&amp;apos;s component slot first, returns -1 otherwise.
 	/// </summary>
-	public static int GET_SHOP_PED_QUERY_COMPONENT_INDEX(ulong componentHash)
+	public static int GET_SHOP_PED_QUERY_COMPONENT_INDEX(uint componentHash)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_QUERY_COMPONENT_INDEX<int>(componentHash);
 	}
 	/// <summary>
 	/// 	More info here: https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86
 	/// </summary>
-	public static void GET_SHOP_PED_COMPONENT(ulong componentHash)
+	public static void GET_SHOP_PED_COMPONENT(uint componentHash)
 	{
 		NativeFunction.Natives.GET_SHOP_PED_COMPONENT(componentHash, 0);
 	}
@@ -6123,26 +6123,26 @@ public static class Natives
 	/// 	Returns some sort of index/offset for props.<br/>
 	/// 	Needs _GET_NUM_PROPS_FROM_OUTFIT to be called with p3 = true and componentId = -1 first, returns -1 otherwise.
 	/// </summary>
-	public static int GET_SHOP_PED_QUERY_PROP_INDEX(ulong componentHash)
+	public static int GET_SHOP_PED_QUERY_PROP_INDEX(uint componentHash)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_QUERY_PROP_INDEX<int>(componentHash);
 	}
 	/// <summary>
 	/// 	More info here: https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86
 	/// </summary>
-	public static void GET_SHOP_PED_PROP(ulong componentHash)
+	public static void GET_SHOP_PED_PROP(uint componentHash)
 	{
 		NativeFunction.Natives.GET_SHOP_PED_PROP(componentHash, 0);
 	}
-	public static ulong GET_HASH_NAME_FOR_COMPONENT(Entity entity, int componentId, int drawableVariant, int textureVariant)
+	public static uint GET_HASH_NAME_FOR_COMPONENT(Entity entity, int componentId, int drawableVariant, int textureVariant)
 	{
-		return NativeFunction.Natives.GET_HASH_NAME_FOR_COMPONENT<ulong>(entity, componentId, drawableVariant, textureVariant);
+		return NativeFunction.Natives.GET_HASH_NAME_FOR_COMPONENT<uint>(entity, componentId, drawableVariant, textureVariant);
 	}
-	public static ulong GET_HASH_NAME_FOR_PROP(Entity entity, int componentId, int propIndex, int propTextureIndex)
+	public static uint GET_HASH_NAME_FOR_PROP(Entity entity, int componentId, int propIndex, int propTextureIndex)
 	{
-		return NativeFunction.Natives.GET_HASH_NAME_FOR_PROP<ulong>(entity, componentId, propIndex, propTextureIndex);
+		return NativeFunction.Natives.GET_HASH_NAME_FOR_PROP<uint>(entity, componentId, propIndex, propTextureIndex);
 	}
-	public static int GET_SHOP_PED_APPAREL_VARIANT_COMPONENT_COUNT(ulong componentHash)
+	public static int GET_SHOP_PED_APPAREL_VARIANT_COMPONENT_COUNT(uint componentHash)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_VARIANT_COMPONENT_COUNT<int>(componentHash);
 	}
@@ -6150,37 +6150,37 @@ public static class Natives
 	/// 	`propHash`: Ped helmet prop hash?<br/>
 	/// 	This native returns 1 when the player helmet has a visor (there is another prop index for the same helmet with closed/opened visor variant) that can be toggled. 0 if there&amp;apos;s no alternative version with a visor for this helmet prop.
 	/// </summary>
-	public static int GET_SHOP_PED_APPAREL_VARIANT_PROP_COUNT(ulong propHash)
+	public static int GET_SHOP_PED_APPAREL_VARIANT_PROP_COUNT(uint propHash)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_VARIANT_PROP_COUNT<int>(propHash);
 	}
-	public static void GET_VARIANT_COMPONENT(ulong componentHash, int variantComponentIndex, out ulong nameHash, out int enumValue, out int componentType)
+	public static void GET_VARIANT_COMPONENT(uint componentHash, int variantComponentIndex, out uint nameHash, out int enumValue, out int componentType)
 	{
 		NativeFunction.Natives.GET_VARIANT_COMPONENT(componentHash, variantComponentIndex, out nameHash, out enumValue, out componentType);
 	}
-	public static void GET_VARIANT_PROP(ulong componentHash, int variantPropIndex, out ulong nameHash, out int enumValue, out int anchorPoint)
+	public static void GET_VARIANT_PROP(uint componentHash, int variantPropIndex, out uint nameHash, out int enumValue, out int anchorPoint)
 	{
 		NativeFunction.Natives.GET_VARIANT_PROP(componentHash, variantPropIndex, out nameHash, out enumValue, out anchorPoint);
 	}
 	/// <summary>
 	/// 	Returns number of possible values of the forcedComponentIndex argument of GET_FORCED_COMPONENT.
 	/// </summary>
-	public static int GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT(ulong componentHash)
+	public static int GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT(uint componentHash)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT<int>(componentHash);
 	}
 	/// <summary>
 	/// 	Returns number of possible values of the forcedPropIndex argument of GET_FORCED_PROP.
 	/// </summary>
-	public static int GET_SHOP_PED_APPAREL_FORCED_PROP_COUNT(ulong componentHash)
+	public static int GET_SHOP_PED_APPAREL_FORCED_PROP_COUNT(uint componentHash)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_APPAREL_FORCED_PROP_COUNT<int>(componentHash);
 	}
-	public static void GET_FORCED_COMPONENT(ulong componentHash, int forcedComponentIndex, out ulong nameHash, out int enumValue, out int componentType)
+	public static void GET_FORCED_COMPONENT(uint componentHash, int forcedComponentIndex, out uint nameHash, out int enumValue, out int componentType)
 	{
 		NativeFunction.Natives.GET_FORCED_COMPONENT(componentHash, forcedComponentIndex, out nameHash, out enumValue, out componentType);
 	}
-	public static void GET_FORCED_PROP(ulong componentHash, int forcedPropIndex, out ulong nameHash, out int enumValue, out int anchorPoint)
+	public static void GET_FORCED_PROP(uint componentHash, int forcedPropIndex, out uint nameHash, out int enumValue, out int anchorPoint)
 	{
 		NativeFunction.Natives.GET_FORCED_PROP(componentHash, forcedPropIndex, out nameHash, out enumValue, out anchorPoint);
 	}
@@ -6189,15 +6189,15 @@ public static class Natives
 	/// 	<br/>
 	/// 	componentId/last parameter seems to be unused.
 	/// </summary>
-	public static bool DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(ulong componentHash, ulong restrictionTagHash, int componentId)
+	public static bool DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(uint componentHash, uint restrictionTagHash, int componentId)
 	{
 		return NativeFunction.Natives.DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG<bool>(componentHash, restrictionTagHash, componentId);
 	}
-	public static bool DOES_CURRENT_PED_COMPONENT_HAVE_RESTRICTION_TAG(Ped ped, int componentId, ulong restrictionTagHash)
+	public static bool DOES_CURRENT_PED_COMPONENT_HAVE_RESTRICTION_TAG(Ped ped, int componentId, uint restrictionTagHash)
 	{
 		return NativeFunction.Natives.DOES_CURRENT_PED_COMPONENT_HAVE_RESTRICTION_TAG<bool>(ped, componentId, restrictionTagHash);
 	}
-	public static bool DOES_CURRENT_PED_PROP_HAVE_RESTRICTION_TAG(Ped ped, int componentId, ulong restrictionTagHash)
+	public static bool DOES_CURRENT_PED_PROP_HAVE_RESTRICTION_TAG(Ped ped, int componentId, uint restrictionTagHash)
 	{
 		return NativeFunction.Natives.DOES_CURRENT_PED_PROP_HAVE_RESTRICTION_TAG<bool>(ped, componentId, restrictionTagHash);
 	}
@@ -6233,14 +6233,14 @@ public static class Natives
 	/// <summary>
 	/// 	See https://git.io/JtcBH for example and structs.
 	/// </summary>
-	public static bool GET_SHOP_PED_OUTFIT_PROP_VARIANT(ulong outfitHash, int variantIndex)
+	public static bool GET_SHOP_PED_OUTFIT_PROP_VARIANT(uint outfitHash, int variantIndex)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_PROP_VARIANT<bool>(outfitHash, variantIndex, 0);
 	}
 	/// <summary>
 	/// 	See https://git.io/JtcBH for example and structs.
 	/// </summary>
-	public static bool GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(ulong outfitHash, int variantIndex)
+	public static bool GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT(uint outfitHash, int variantIndex)
 	{
 		return NativeFunction.Natives.GET_SHOP_PED_OUTFIT_COMPONENT_VARIANT<bool>(outfitHash, variantIndex, 0);
 	}
@@ -6251,9 +6251,9 @@ public static class Natives
 	/// <summary>
 	/// 	dlcVehicleIndex is 0 to GET_NUM_DLC_VEHICLS() - 1
 	/// </summary>
-	public static ulong GET_DLC_VEHICLE_MODEL(int dlcVehicleIndex)
+	public static uint GET_DLC_VEHICLE_MODEL(int dlcVehicleIndex)
 	{
-		return NativeFunction.Natives.GET_DLC_VEHICLE_MODEL<ulong>(dlcVehicleIndex);
+		return NativeFunction.Natives.GET_DLC_VEHICLE_MODEL<uint>(dlcVehicleIndex);
 	}
 	/// <summary>
 	/// 	dlcVehicleIndex takes a number from 0 - GET_NUM_DLC_VEHICLES() - 1.<br/>
@@ -6364,17 +6364,17 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_DLC_WEAPON_COMPONENT_DATA_SP<bool>(dlcWeaponIndex, dlcWeapCompIndex, 0);
 	}
-	public static bool IS_CONTENT_ITEM_LOCKED(ulong itemHash)
+	public static bool IS_CONTENT_ITEM_LOCKED(uint itemHash)
 	{
 		return NativeFunction.Natives.IS_CONTENT_ITEM_LOCKED<bool>(itemHash);
 	}
-	public static bool IS_DLC_VEHICLE_MOD(ulong hash)
+	public static bool IS_DLC_VEHICLE_MOD(uint hash)
 	{
 		return NativeFunction.Natives.IS_DLC_VEHICLE_MOD<bool>(hash);
 	}
-	public static ulong GET_DLC_VEHICLE_MOD_LOCK_HASH(ulong hash)
+	public static uint GET_DLC_VEHICLE_MOD_LOCK_HASH(uint hash)
 	{
-		return NativeFunction.Natives.GET_DLC_VEHICLE_MOD_LOCK_HASH<ulong>(hash);
+		return NativeFunction.Natives.GET_DLC_VEHICLE_MOD_LOCK_HASH<uint>(hash);
 	}
 	/// <summary>
 	/// 	From fm_deathmatch_creator and fm_race_creator:<br/>
@@ -6382,7 +6382,7 @@ public static class Natives
 	/// 	FILES::REVERT_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat(&amp;quot;GROUP_MAP_SP&amp;quot;));<br/>
 	/// 	FILES::EXECUTE_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat(&amp;quot;GROUP_MAP&amp;quot;));
 	/// </summary>
-	public static void EXECUTE_CONTENT_CHANGESET_GROUP_FOR_ALL(ulong hash)
+	public static void EXECUTE_CONTENT_CHANGESET_GROUP_FOR_ALL(uint hash)
 	{
 		NativeFunction.Natives.EXECUTE_CONTENT_CHANGESET_GROUP_FOR_ALL(hash);
 	}
@@ -6392,7 +6392,7 @@ public static class Natives
 	/// 	FILES::REVERT_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat(&amp;quot;GROUP_MAP_SP&amp;quot;));<br/>
 	/// 	FILES::EXECUTE_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat(&amp;quot;GROUP_MAP&amp;quot;));
 	/// </summary>
-	public static void REVERT_CONTENT_CHANGESET_GROUP_FOR_ALL(ulong hash)
+	public static void REVERT_CONTENT_CHANGESET_GROUP_FOR_ALL(uint hash)
 	{
 		NativeFunction.Natives.REVERT_CONTENT_CHANGESET_GROUP_FOR_ALL(hash);
 	}
@@ -6469,7 +6469,7 @@ public static class Natives
 	/// 	isInvisible: If the explosion is invisible or not.<br/>
 	/// 	explosionType: See ADD_EXPLOSION.
 	/// </summary>
-	public static void ADD_EXPLOSION_WITH_USER_VFX(float x, float y, float z, int explosionType, ulong explosionFx, float damageScale, bool isAudible, bool isInvisible, float cameraShake)
+	public static void ADD_EXPLOSION_WITH_USER_VFX(float x, float y, float z, int explosionType, uint explosionFx, float damageScale, bool isAudible, bool isInvisible, float cameraShake)
 	{
 		NativeFunction.Natives.ADD_EXPLOSION_WITH_USER_VFX(x, y, z, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake);
 	}
@@ -9092,7 +9092,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_PLAYLIST_ON_CHANNEL<bool>(tvChannel, 0);
 	}
-	public static bool IS_TVSHOW_CURRENTLY_PLAYING(ulong videoCliphash)
+	public static bool IS_TVSHOW_CURRENTLY_PLAYING(uint videoCliphash)
 	{
 		return NativeFunction.Natives.IS_TVSHOW_CURRENTLY_PLAYING<bool>(videoCliphash);
 	}
@@ -9104,9 +9104,9 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_TV_PLAYER_WATCHING_THIS_FRAME(0);
 	}
-	public static ulong GET_CURRENT_TV_CLIP_NAMEHASH()
+	public static uint GET_CURRENT_TV_CLIP_NAMEHASH()
 	{
-		return NativeFunction.Natives.GET_CURRENT_TV_CLIP_NAMEHASH<ulong>();
+		return NativeFunction.Natives.GET_CURRENT_TV_CLIP_NAMEHASH<uint>();
 	}
 	public static void ENABLE_MOVIE_SUBTITLES(bool toggle)
 	{
@@ -9929,7 +9929,7 @@ public static class Natives
 	/// <summary>
 	/// 	It adds the localized text of the specified GXT entry name. Eg. if the argument is GET_HASH_KEY(&amp;quot;ES_HELP&amp;quot;), adds &amp;quot;Continue&amp;quot;. Just uses a text labels hash key
 	/// </summary>
-	public static void ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL_HASH_KEY(ulong gxtEntryHash)
+	public static void ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL_HASH_KEY(uint gxtEntryHash)
 	{
 		NativeFunction.Natives.ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL_HASH_KEY(gxtEntryHash);
 	}
@@ -10127,7 +10127,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	For how to get the hashes, see PATHFIND::GET_STREET_NAME_AT_COORD.
 	/// </summary>
-	public static string GET_STREET_NAME_FROM_HASH_KEY(ulong hash)
+	public static string GET_STREET_NAME_FROM_HASH_KEY(uint hash)
 	{
 		return NativeFunction.Natives.GET_STREET_NAME_FROM_HASH_KEY<string>(hash);
 	}
@@ -10452,7 +10452,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.RELEASE_NAMED_RENDERTARGET<bool>(name);
 	}
-	public static void LINK_NAMED_RENDERTARGET(ulong modelHash)
+	public static void LINK_NAMED_RENDERTARGET(uint modelHash)
 	{
 		NativeFunction.Natives.LINK_NAMED_RENDERTARGET(modelHash);
 	}
@@ -10460,7 +10460,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_NAMED_RENDERTARGET_RENDER_ID<int>(name);
 	}
-	public static bool IS_NAMED_RENDERTARGET_LINKED(ulong modelHash)
+	public static bool IS_NAMED_RENDERTARGET_LINKED(uint modelHash)
 	{
 		return NativeFunction.Natives.IS_NAMED_RENDERTARGET_LINKED<bool>(modelHash);
 	}
@@ -11103,7 +11103,7 @@ public static class Natives
 	/// 	List of interior hashes: https://pastebin.com/1FUyXNqY<br/>
 	/// 	Not for every interior zoom &amp;gt; 0 available.
 	/// </summary>
-	public static void SET_RADAR_AS_INTERIOR_THIS_FRAME(ulong interior, float x, float y, int z, int zoom)
+	public static void SET_RADAR_AS_INTERIOR_THIS_FRAME(uint interior, float x, float y, int z, int zoom)
 	{
 		NativeFunction.Natives.SET_RADAR_AS_INTERIOR_THIS_FRAME(interior, x, y, z, zoom);
 	}
@@ -11311,23 +11311,23 @@ public static class Natives
 	/// <summary>
 	/// 	Returns the weapon hash to the selected/highlighted weapon in the wheel
 	/// </summary>
-	public static ulong HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED()
+	public static uint HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED()
 	{
-		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED<ulong>();
+		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED<uint>();
 	}
 	/// <summary>
 	/// 	Set the active slotIndex in the wheel weapon to the slot associated with the provided Weapon hash
 	/// </summary>
-	public static void HUD_SET_WEAPON_WHEEL_TOP_SLOT(ulong weaponHash)
+	public static void HUD_SET_WEAPON_WHEEL_TOP_SLOT(uint weaponHash)
 	{
 		NativeFunction.Natives.HUD_SET_WEAPON_WHEEL_TOP_SLOT(weaponHash);
 	}
 	/// <summary>
 	/// 	Returns the weapon hash active in a specific weapon wheel slotList
 	/// </summary>
-	public static ulong HUD_GET_WEAPON_WHEEL_TOP_SLOT(int weaponTypeIndex)
+	public static uint HUD_GET_WEAPON_WHEEL_TOP_SLOT(int weaponTypeIndex)
 	{
-		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_TOP_SLOT<ulong>(weaponTypeIndex);
+		return NativeFunction.Natives.HUD_GET_WEAPON_WHEEL_TOP_SLOT<uint>(weaponTypeIndex);
 	}
 	/// <summary>
 	/// 	Sets a global that disables many weapon input tasks (shooting, aiming, etc.). Does not work with vehicle weapons, only used in selector.ysc
@@ -12047,9 +12047,9 @@ public static class Natives
 	/// <summary>
 	/// 	Has to do with the confirmation overlay (E.g. confirm exit)
 	/// </summary>
-	public static ulong GET_WARNING_SCREEN_MESSAGE_HASH()
+	public static uint GET_WARNING_SCREEN_MESSAGE_HASH()
 	{
-		return NativeFunction.Natives.GET_WARNING_SCREEN_MESSAGE_HASH<ulong>();
+		return NativeFunction.Natives.GET_WARNING_SCREEN_MESSAGE_HASH<uint>();
 	}
 	/// <summary>
 	/// 	Some sort of list displayed in a warning message. Yet unknown how to prevent repeating.<br/>
@@ -12178,7 +12178,7 @@ public static class Natives
 	/// 	- FE_MENU_VERSION_LANDING_MENU<br/>
 	/// 	- FE_MENU_VERSION_LANDING_KEYMAPPING_MENU
 	/// </summary>
-	public static void ACTIVATE_FRONTEND_MENU(ulong menuhash, bool togglePause, int component)
+	public static void ACTIVATE_FRONTEND_MENU(uint menuhash, bool togglePause, int component)
 	{
 		NativeFunction.Natives.ACTIVATE_FRONTEND_MENU(menuhash, togglePause, component);
 	}
@@ -12195,16 +12195,16 @@ public static class Natives
 	/// 	p1 = Hash of Menu<br/>
 	/// 	p2 = Unknown but always works with -1.
 	/// </summary>
-	public static void RESTART_FRONTEND_MENU(ulong menuHash, int p1)
+	public static void RESTART_FRONTEND_MENU(uint menuHash, int p1)
 	{
 		NativeFunction.Natives.RESTART_FRONTEND_MENU(menuHash, p1);
 	}
 	/// <summary>
 	/// 	if (HUD::GET_CURRENT_FRONTEND_MENU_VERSION() == joaat(&amp;quot;fe_menu_version_empty_no_background&amp;quot;))
 	/// </summary>
-	public static ulong GET_CURRENT_FRONTEND_MENU_VERSION()
+	public static uint GET_CURRENT_FRONTEND_MENU_VERSION()
 	{
-		return NativeFunction.Natives.GET_CURRENT_FRONTEND_MENU_VERSION<ulong>();
+		return NativeFunction.Natives.GET_CURRENT_FRONTEND_MENU_VERSION<uint>();
 	}
 	public static void SET_PAUSE_MENU_ACTIVE(bool toggle)
 	{
@@ -12289,15 +12289,15 @@ public static class Natives
 	/// 	The `*NONE*` part of the context section means that whatever is being defined, will NOT be active if any or all of the conditions after `*NONE*` are met.<br/>
 	/// 	This basically allows you to hide certain menu sections, or things like instructional buttons.
 	/// </summary>
-	public static void PAUSE_MENU_ACTIVATE_CONTEXT(ulong contextHash)
+	public static void PAUSE_MENU_ACTIVATE_CONTEXT(uint contextHash)
 	{
 		NativeFunction.Natives.PAUSE_MENU_ACTIVATE_CONTEXT(contextHash);
 	}
-	public static void PAUSE_MENU_DEACTIVATE_CONTEXT(ulong contextHash)
+	public static void PAUSE_MENU_DEACTIVATE_CONTEXT(uint contextHash)
 	{
 		NativeFunction.Natives.PAUSE_MENU_DEACTIVATE_CONTEXT(contextHash);
 	}
-	public static bool PAUSE_MENU_IS_CONTEXT_ACTIVE(ulong contextHash)
+	public static bool PAUSE_MENU_IS_CONTEXT_ACTIVE(uint contextHash)
 	{
 		return NativeFunction.Natives.PAUSE_MENU_IS_CONTEXT_ACTIVE<bool>(contextHash);
 	}
@@ -12418,15 +12418,15 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_INT_STAT<bool>(0, 0, 0);
 	}
-	public static bool GET_MENU_PED_MASKED_INT_STAT(ulong statHash, out int outValue, int mask, bool p3)
+	public static bool GET_MENU_PED_MASKED_INT_STAT(uint statHash, out int outValue, int mask, bool p3)
 	{
 		return NativeFunction.Natives.GET_MENU_PED_MASKED_INT_STAT<bool>(statHash, out outValue, mask, p3);
 	}
-	public static bool GET_CHARACTER_MENU_PED_MASKED_INT_STAT(ulong statHash, int p2, int mask, bool p4)
+	public static bool GET_CHARACTER_MENU_PED_MASKED_INT_STAT(uint statHash, int p2, int mask, bool p4)
 	{
 		return NativeFunction.Natives.GET_CHARACTER_MENU_PED_MASKED_INT_STAT<bool>(statHash, 0, p2, mask, p4);
 	}
-	public static bool GET_MENU_PED_FLOAT_STAT(ulong statHash, out float outValue)
+	public static bool GET_MENU_PED_FLOAT_STAT(uint statHash, out float outValue)
 	{
 		return NativeFunction.Natives.GET_MENU_PED_FLOAT_STAT<bool>(statHash, out outValue);
 	}
@@ -12437,7 +12437,7 @@ public static class Natives
 	/// <summary>
 	/// 	p0 was always 0xAE2602A3.
 	/// </summary>
-	public static bool GET_MENU_PED_BOOL_STAT(ulong statHash, out bool outValue)
+	public static bool GET_MENU_PED_BOOL_STAT(uint statHash, out bool outValue)
 	{
 		return NativeFunction.Natives.GET_MENU_PED_BOOL_STAT<bool>(statHash, out outValue);
 	}
@@ -12496,7 +12496,7 @@ public static class Natives
 	/// 	Uses the `SOCIAL_CLUB2` scaleform.<br/>
 	/// 	menu: GALLERY, MISSIONS, CREWS, MIGRATE, PLAYLISTS, JOBS
 	/// </summary>
-	public static void OPEN_SOCIAL_CLUB_MENU(ulong menu)
+	public static void OPEN_SOCIAL_CLUB_MENU(uint menu)
 	{
 		NativeFunction.Natives.OPEN_SOCIAL_CLUB_MENU(menu);
 	}
@@ -12530,7 +12530,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_ALLOW_COMMA_ON_TEXT_INPUT(0);
 	}
-	public static void OVERRIDE_MP_TEXT_CHAT_TEAM_STRING(ulong gxtEntryHash)
+	public static void OVERRIDE_MP_TEXT_CHAT_TEAM_STRING(uint gxtEntryHash)
 	{
 		NativeFunction.Natives.OVERRIDE_MP_TEXT_CHAT_TEAM_STRING(gxtEntryHash);
 	}
@@ -12646,7 +12646,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_INTERIOR_HEADING<float>(interior);
 	}
-	public static void GET_INTERIOR_LOCATION_AND_NAMEHASH(uint interior, out Vector3 position, out ulong nameHash)
+	public static void GET_INTERIOR_LOCATION_AND_NAMEHASH(uint interior, out Vector3 position, out uint nameHash)
 	{
 		NativeFunction.Natives.GET_INTERIOR_LOCATION_AND_NAMEHASH(interior, out position, out nameHash);
 	}
@@ -12687,23 +12687,23 @@ public static class Natives
 	{
 		NativeFunction.Natives.CLEAR_ROOM_FOR_ENTITY(entity);
 	}
-	public static void FORCE_ROOM_FOR_ENTITY(Entity entity, uint interior, ulong roomHashKey)
+	public static void FORCE_ROOM_FOR_ENTITY(Entity entity, uint interior, uint roomHashKey)
 	{
 		NativeFunction.Natives.FORCE_ROOM_FOR_ENTITY(entity, interior, roomHashKey);
 	}
 	/// <summary>
 	/// 	Gets the room hash key from the room that the specified entity is in. Each room in every interior has a unique key. Returns 0 if the entity is outside.
 	/// </summary>
-	public static ulong GET_ROOM_KEY_FROM_ENTITY(Entity entity)
+	public static uint GET_ROOM_KEY_FROM_ENTITY(Entity entity)
 	{
-		return NativeFunction.Natives.GET_ROOM_KEY_FROM_ENTITY<ulong>(entity);
+		return NativeFunction.Natives.GET_ROOM_KEY_FROM_ENTITY<uint>(entity);
 	}
 	/// <summary>
 	/// 	Seems to do the exact same as INTERIOR::GET_ROOM_KEY_FROM_ENTITY
 	/// </summary>
-	public static ulong GET_KEY_FOR_ENTITY_IN_ROOM(Entity entity)
+	public static uint GET_KEY_FOR_ENTITY_IN_ROOM(Entity entity)
 	{
-		return NativeFunction.Natives.GET_KEY_FOR_ENTITY_IN_ROOM<ulong>(entity);
+		return NativeFunction.Natives.GET_KEY_FOR_ENTITY_IN_ROOM<uint>(entity);
 	}
 	/// <summary>
 	/// 	Returns the handle of the interior that the entity is in. Returns 0 if outside.
@@ -12727,7 +12727,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.FORCE_ACTIVATING_TRACKING_ON_ENTITY(0, 0);
 	}
-	public static void FORCE_ROOM_FOR_GAME_VIEWPORT(int interiorID, ulong roomHashKey)
+	public static void FORCE_ROOM_FOR_GAME_VIEWPORT(int interiorID, uint roomHashKey)
 	{
 		NativeFunction.Natives.FORCE_ROOM_FOR_GAME_VIEWPORT(interiorID, roomHashKey);
 	}
@@ -12742,13 +12742,13 @@ public static class Natives
 	/// <summary>
 	/// 	Usage: INTERIOR::SET_ROOM_FOR_GAME_VIEWPORT_BY_KEY(INTERIOR::GET_KEY_FOR_ENTITY_IN_ROOM(PLAYER::PLAYER_PED_ID()));
 	/// </summary>
-	public static void SET_ROOM_FOR_GAME_VIEWPORT_BY_KEY(ulong roomHashKey)
+	public static void SET_ROOM_FOR_GAME_VIEWPORT_BY_KEY(uint roomHashKey)
 	{
 		NativeFunction.Natives.SET_ROOM_FOR_GAME_VIEWPORT_BY_KEY(roomHashKey);
 	}
-	public static ulong GET_ROOM_KEY_FOR_GAME_VIEWPORT()
+	public static uint GET_ROOM_KEY_FOR_GAME_VIEWPORT()
 	{
-		return NativeFunction.Natives.GET_ROOM_KEY_FOR_GAME_VIEWPORT<ulong>();
+		return NativeFunction.Natives.GET_ROOM_KEY_FOR_GAME_VIEWPORT<uint>();
 	}
 	public static void CLEAR_ROOM_FOR_GAME_VIEWPORT()
 	{
@@ -12816,7 +12816,7 @@ public static class Natives
 	/// <summary>
 	/// 	Hashed version of GET_INTERIOR_AT_COORDS_WITH_TYPE
 	/// </summary>
-	public static uint GET_INTERIOR_AT_COORDS_WITH_TYPEHASH(float x, float y, float z, ulong typeHash)
+	public static uint GET_INTERIOR_AT_COORDS_WITH_TYPEHASH(float x, float y, float z, uint typeHash)
 	{
 		return NativeFunction.Natives.GET_INTERIOR_AT_COORDS_WITH_TYPEHASH<uint>(x, y, z, typeHash);
 	}
@@ -12878,11 +12878,11 @@ public static class Natives
 	/// 	<br/>
 	/// 	More info: http://gtaforums.com/topic/836301-hiding-gta-online-apartment-exteriors/
 	/// </summary>
-	public static void ENABLE_EXTERIOR_CULL_MODEL_THIS_FRAME(ulong mapObjectHash)
+	public static void ENABLE_EXTERIOR_CULL_MODEL_THIS_FRAME(uint mapObjectHash)
 	{
 		NativeFunction.Natives.ENABLE_EXTERIOR_CULL_MODEL_THIS_FRAME(mapObjectHash);
 	}
-	public static void ENABLE_SHADOW_CULL_MODEL_THIS_FRAME(ulong mapObjectHash)
+	public static void ENABLE_SHADOW_CULL_MODEL_THIS_FRAME(uint mapObjectHash)
 	{
 		NativeFunction.Natives.ENABLE_SHADOW_CULL_MODEL_THIS_FRAME(mapObjectHash);
 	}
@@ -13194,16 +13194,16 @@ public static class Natives
 	/// <summary>
 	/// 	Returns current weather name hash
 	/// </summary>
-	public static ulong GET_PREV_WEATHER_TYPE_HASH_NAME()
+	public static uint GET_PREV_WEATHER_TYPE_HASH_NAME()
 	{
-		return NativeFunction.Natives.GET_PREV_WEATHER_TYPE_HASH_NAME<ulong>();
+		return NativeFunction.Natives.GET_PREV_WEATHER_TYPE_HASH_NAME<uint>();
 	}
 	/// <summary>
 	/// 	Returns weather name hash
 	/// </summary>
-	public static ulong GET_NEXT_WEATHER_TYPE_HASH_NAME()
+	public static uint GET_NEXT_WEATHER_TYPE_HASH_NAME()
 	{
-		return NativeFunction.Natives.GET_NEXT_WEATHER_TYPE_HASH_NAME<ulong>();
+		return NativeFunction.Natives.GET_NEXT_WEATHER_TYPE_HASH_NAME<uint>();
 	}
 	public static bool IS_PREV_WEATHER_TYPE(string weatherType)
 	{
@@ -13295,7 +13295,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.CLEAR_WEATHER_TYPE_NOW_PERSIST_NETWORK(milliseconds);
 	}
-	public static void GET_CURR_WEATHER_STATE(out ulong weatherType1, out ulong weatherType2, out float percentWeather2)
+	public static void GET_CURR_WEATHER_STATE(out uint weatherType1, out uint weatherType2, out float percentWeather2)
 	{
 		NativeFunction.Natives.GET_CURR_WEATHER_STATE(out weatherType1, out weatherType2, out percentWeather2);
 	}
@@ -13330,7 +13330,7 @@ public static class Natives
 	/// 	If an invalid hash is specified for targetWeather, the next weather type will be used.<br/>
 	/// 	If an invalid hash is specified for both sourceWeather and targetWeather, the function just changes the transition time of the current transition.
 	/// </summary>
-	public static void SET_CURR_WEATHER_STATE(ulong weatherType1, ulong weatherType2, float percentWeather2)
+	public static void SET_CURR_WEATHER_STATE(uint weatherType1, uint weatherType2, float percentWeather2)
 	{
 		NativeFunction.Natives.SET_CURR_WEATHER_STATE(weatherType1, weatherType2, percentWeather2);
 	}
@@ -13675,9 +13675,9 @@ public static class Natives
 	/// <summary>
 	/// 	This native converts its past string to hash. It is hashed using jenkins one at a time method.
 	/// </summary>
-	public static ulong GET_HASH_KEY(string _string)
+	public static uint GET_HASH_KEY(string _string)
 	{
-		return NativeFunction.Natives.GET_HASH_KEY<ulong>(_string);
+		return NativeFunction.Natives.GET_HASH_KEY<uint>(_string);
 	}
 	/// <summary>
 	/// 	This native always come right before SET_ENTITY_QUATERNION where its final 4 parameters are SLERP_NEAR_QUATERNION p9 to p12
@@ -13983,14 +13983,14 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_MEMORY_CARD_IN_USE<bool>();
 	}
-	public static void SHOOT_SINGLE_BULLET_BETWEEN_COORDS(float x1, float y1, float z1, float x2, float y2, float z2, int damage, bool p7, ulong weaponHash, Ped ownerPed, bool isAudible, bool isInvisible, float speed)
+	public static void SHOOT_SINGLE_BULLET_BETWEEN_COORDS(float x1, float y1, float z1, float x2, float y2, float z2, int damage, bool p7, uint weaponHash, Ped ownerPed, bool isAudible, bool isInvisible, float speed)
 	{
 		NativeFunction.Natives.SHOOT_SINGLE_BULLET_BETWEEN_COORDS(x1, y1, z1, x2, y2, z2, damage, p7, weaponHash, ownerPed, isAudible, isInvisible, speed);
 	}
 	/// <summary>
 	/// 	entity - entity to ignore
 	/// </summary>
-	public static void SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY(float x1, float y1, float z1, float x2, float y2, float z2, int damage, bool p7, ulong weaponHash, Ped ownerPed, bool isAudible, bool isInvisible, float speed, Entity entity)
+	public static void SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY(float x1, float y1, float z1, float x2, float y2, float z2, int damage, bool p7, uint weaponHash, Ped ownerPed, bool isAudible, bool isInvisible, float speed, Entity entity)
 	{
 		NativeFunction.Natives.SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY(x1, y1, z1, x2, y2, z2, damage, p7, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, 0);
 	}
@@ -13998,7 +13998,7 @@ public static class Natives
 	/// 	entity - entity to ignore<br/>
 	/// 	targetEntity - entity to home in on, if the weapon hash provided supports homing
 	/// </summary>
-	public static void SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(float x1, float y1, float z1, float x2, float y2, float z2, int damage, bool p7, ulong weaponHash, Ped ownerPed, bool isAudible, bool isInvisible, float speed, Entity entity, bool p14, bool p15, Entity targetEntity, bool p17)
+	public static void SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(float x1, float y1, float z1, float x2, float y2, float z2, int damage, bool p7, uint weaponHash, Ped ownerPed, bool isAudible, bool isInvisible, float speed, Entity entity, bool p14, bool p15, Entity targetEntity, bool p17)
 	{
 		NativeFunction.Natives.SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(x1, y1, z1, x2, y2, z2, damage, p7, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, p14, p15, targetEntity, p17, 0, 0, 0);
 	}
@@ -14009,7 +14009,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Example from the scripts: MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), &amp;v_1A, &amp;v_17);
 	/// </summary>
-	public static void GET_MODEL_DIMENSIONS(ulong modelHash, out Vector3 minimum, out Vector3 maximum)
+	public static void GET_MODEL_DIMENSIONS(uint modelHash, out Vector3 minimum, out Vector3 maximum)
 	{
 		NativeFunction.Natives.GET_MODEL_DIMENSIONS(modelHash, out minimum, out maximum);
 	}
@@ -14139,23 +14139,23 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_PROJECTILE_TYPE_IN_ANGLED_AREA<bool>(x1, y1, z1, x2, y2, z2, width, 0, ownedByPlayer);
 	}
-	public static bool IS_PROJECTILE_TYPE_WITHIN_DISTANCE(float x, float y, float z, ulong projectileHash, float radius, bool ownedByPlayer)
+	public static bool IS_PROJECTILE_TYPE_WITHIN_DISTANCE(float x, float y, float z, uint projectileHash, float radius, bool ownedByPlayer)
 	{
 		return NativeFunction.Natives.IS_PROJECTILE_TYPE_WITHIN_DISTANCE<bool>(x, y, z, projectileHash, radius, ownedByPlayer);
 	}
-	public static bool GET_COORDS_OF_PROJECTILE_TYPE_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2, ulong projectileHash, out Vector3 projectilePos, bool ownedByPlayer)
+	public static bool GET_COORDS_OF_PROJECTILE_TYPE_IN_AREA(float x1, float y1, float z1, float x2, float y2, float z2, uint projectileHash, out Vector3 projectilePos, bool ownedByPlayer)
 	{
 		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_IN_AREA<bool>(x1, y1, z1, x2, y2, z2, projectileHash, out projectilePos, ownedByPlayer);
 	}
-	public static bool GET_COORDS_OF_PROJECTILE_TYPE_IN_ANGLED_AREA(float vecAngledAreaPoint1X, float vecAngledAreaPoint1Y, float vecAngledAreaPoint1Z, float vecAngledAreaPoint2X, float vecAngledAreaPoint2Y, float vecAngledAreaPoint2Z, float distanceOfOppositeFace, ulong weaponType, out Vector3 positionOut, bool bIsPlayer)
+	public static bool GET_COORDS_OF_PROJECTILE_TYPE_IN_ANGLED_AREA(float vecAngledAreaPoint1X, float vecAngledAreaPoint1Y, float vecAngledAreaPoint1Z, float vecAngledAreaPoint2X, float vecAngledAreaPoint2Y, float vecAngledAreaPoint2Z, float distanceOfOppositeFace, uint weaponType, out Vector3 positionOut, bool bIsPlayer)
 	{
 		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_IN_ANGLED_AREA<bool>(vecAngledAreaPoint1X, vecAngledAreaPoint1Y, vecAngledAreaPoint1Z, vecAngledAreaPoint2X, vecAngledAreaPoint2Y, vecAngledAreaPoint2Z, distanceOfOppositeFace, weaponType, out positionOut, bIsPlayer);
 	}
-	public static bool GET_COORDS_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(Ped ped, ulong weaponHash, float distance, out Vector3 outCoords, bool p4)
+	public static bool GET_COORDS_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(Ped ped, uint weaponHash, float distance, out Vector3 outCoords, bool p4)
 	{
 		return NativeFunction.Natives.GET_COORDS_OF_PROJECTILE_TYPE_WITHIN_DISTANCE<bool>(ped, weaponHash, distance, out outCoords, p4);
 	}
-	public static bool GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(Ped ped, ulong weaponHash, float distance, out Vector3 outCoords, out Object outProjectile, bool p5)
+	public static bool GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(Ped ped, uint weaponHash, float distance, out Vector3 outCoords, out Object outProjectile, bool p5)
 	{
 		return NativeFunction.Natives.GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE<bool>(ped, weaponHash, distance, out outCoords, out outProjectile, p5);
 	}
@@ -14378,7 +14378,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	INT_SCORES_SCORTED was a hash collision
 	/// </summary>
-	public static bool HAS_CHEAT_WITH_HASH_BEEN_ACTIVATED(ulong hash, int amount)
+	public static bool HAS_CHEAT_WITH_HASH_BEEN_ACTIVATED(uint hash, int amount)
 	{
 		return NativeFunction.Natives.HAS_CHEAT_WITH_HASH_BEEN_ACTIVATED<bool>(hash, amount);
 	}
@@ -14397,7 +14397,7 @@ public static class Natives
 	/// 	Calling this will also set the last saved string hash to zero.<br/>
 	/// 	
 	/// </summary>
-	public static bool HAS_PC_CHEAT_WITH_HASH_BEEN_ACTIVATED(ulong hash)
+	public static bool HAS_PC_CHEAT_WITH_HASH_BEEN_ACTIVATED(uint hash)
 	{
 		return NativeFunction.Natives.HAS_PC_CHEAT_WITH_HASH_BEEN_ACTIVATED<bool>(hash);
 	}
@@ -14867,7 +14867,7 @@ public static class Natives
 	/// <summary>
 	/// 	Appears to remove stealth kill action from memory
 	/// </summary>
-	public static void ACTION_MANAGER_ENABLE_ACTION(ulong hash, bool enable)
+	public static void ACTION_MANAGER_ENABLE_ACTION(uint hash, bool enable)
 	{
 		NativeFunction.Natives.ACTION_MANAGER_ENABLE_ACTION(hash, enable);
 	}
@@ -15082,22 +15082,22 @@ public static class Natives
 	{
 		NativeFunction.Natives.USE_ACTIVE_CAMERA_FOR_TIMESLICING_CENTRE();
 	}
-	public static void SET_CONTENT_ID_INDEX(ulong contentId, int index)
+	public static void SET_CONTENT_ID_INDEX(uint contentId, int index)
 	{
 		NativeFunction.Natives.SET_CONTENT_ID_INDEX(contentId, index);
 	}
-	public static int GET_CONTENT_ID_INDEX(ulong contentId)
+	public static int GET_CONTENT_ID_INDEX(uint contentId)
 	{
 		return NativeFunction.Natives.GET_CONTENT_ID_INDEX<int>(contentId);
 	}
-	public static void _SET_CONTENT_PROP_TYPE(ulong model, int type)
+	public static void _SET_CONTENT_PROP_TYPE(uint model, int type)
 	{
 		NativeFunction.Natives._SET_CONTENT_PROP_TYPE(model, type);
 	}
 	/// <summary>
 	/// 	Returns prop type for given model hash
 	/// </summary>
-	public static int _GET_CONTENT_PROP_TYPE(ulong model)
+	public static int _GET_CONTENT_PROP_TYPE(uint model)
 	{
 		return NativeFunction.Natives._GET_CONTENT_PROP_TYPE<int>(model);
 	}
@@ -15347,7 +15347,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	NETWORK_C*
 	/// </summary>
-	public static bool NETWORK_CASINO_CAN_BET(ulong hash)
+	public static bool NETWORK_CASINO_CAN_BET(uint hash)
 	{
 		return NativeFunction.Natives.NETWORK_CASINO_CAN_BET<bool>(hash);
 	}
@@ -15439,7 +15439,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_EARN_FROM_BOUNTY(amount, 0, 0, 0);
 	}
-	public static void NETWORK_EARN_FROM_IMPORT_EXPORT(int amount, ulong modelHash)
+	public static void NETWORK_EARN_FROM_IMPORT_EXPORT(int amount, uint modelHash)
 	{
 		NativeFunction.Natives.NETWORK_EARN_FROM_IMPORT_EXPORT(amount, modelHash);
 	}
@@ -15447,7 +15447,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_EARN_FROM_HOLDUPS(amount);
 	}
-	public static void NETWORK_EARN_FROM_PROPERTY(int amount, ulong propertyName)
+	public static void NETWORK_EARN_FROM_PROPERTY(int amount, uint propertyName)
 	{
 		NativeFunction.Natives.NETWORK_EARN_FROM_PROPERTY(amount, propertyName);
 	}
@@ -15584,7 +15584,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_CAN_SPEND_MONEY2<bool>(0, p1, p2, p3, 0, 0, 0);
 	}
-	public static void NETWORK_BUY_ITEM(int amount, ulong item, bool p4, string item_name, bool p9)
+	public static void NETWORK_BUY_ITEM(int amount, uint item, bool p4, string item_name, bool p9)
 	{
 		NativeFunction.Natives.NETWORK_BUY_ITEM(amount, item, 0, 0, p4, item_name, 0, 0, 0, p9);
 	}
@@ -15647,7 +15647,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_BUY_BOUNTY(amount, victim, p2, p3, 0);
 	}
-	public static void NETWORK_BUY_PROPERTY(int cost, ulong propertyName, bool p2, bool p3)
+	public static void NETWORK_BUY_PROPERTY(int cost, uint propertyName, bool p2, bool p3)
 	{
 		NativeFunction.Natives.NETWORK_BUY_PROPERTY(cost, propertyName, p2, p3);
 	}
@@ -15745,7 +15745,7 @@ public static class Natives
 	/// 	The fifth and last parameter is a bool that returns true/false depending on if you have the money for the car based on the cost returned by func_5749. In the freemode script eg,<br/>
 	/// 	bool hasTheMoney = MONEY::_GET_BANK_BALANCE() &amp;lt; carCost.
 	/// </summary>
-	public static void NETWORK_SPENT_PAY_VEHICLE_INSURANCE_PREMIUM(int amount, ulong vehicleModel, bool notBankrupt, bool hasTheMoney)
+	public static void NETWORK_SPENT_PAY_VEHICLE_INSURANCE_PREMIUM(int amount, uint vehicleModel, bool notBankrupt, bool hasTheMoney)
 	{
 		NativeFunction.Natives.NETWORK_SPENT_PAY_VEHICLE_INSURANCE_PREMIUM(amount, vehicleModel, 0, notBankrupt, hasTheMoney);
 	}
@@ -15839,7 +15839,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_SPENT_RENAME_ORGANIZATION(0, 0, 0, 0);
 	}
-	public static void NETWORK_BUY_CONTRABAND_MISSION(int p0, int p1, ulong p2, bool p3, bool p4)
+	public static void NETWORK_BUY_CONTRABAND_MISSION(int p0, int p1, uint p2, bool p3, bool p4)
 	{
 		NativeFunction.Natives.NETWORK_BUY_CONTRABAND_MISSION(p0, p1, p2, p3, p4);
 	}
@@ -15987,7 +15987,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_SPENT_UPRADE_BUNKER(0, 0, 0, 0);
 	}
-	public static void NETWORK_EARN_FROM_SELL_BUNKER(int amount, ulong bunkerHash)
+	public static void NETWORK_EARN_FROM_SELL_BUNKER(int amount, uint bunkerHash)
 	{
 		NativeFunction.Natives.NETWORK_EARN_FROM_SELL_BUNKER(amount, bunkerHash);
 	}
@@ -16039,7 +16039,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_SPEND_CASINO_HEIST_SKIP_MISSION(0, 0, 0, 0);
 	}
-	public static void NETWORK_EARN_SELL_BASE(int amount, ulong baseNameHash)
+	public static void NETWORK_EARN_SELL_BASE(int amount, uint baseNameHash)
 	{
 		NativeFunction.Natives.NETWORK_EARN_SELL_BASE(amount, baseNameHash);
 	}
@@ -16059,7 +16059,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_EARN_DAR_CHALLENGE(amount, 0);
 	}
-	public static void NETWORK_EARN_DOOMSDAY_FINALE_BONUS(int amount, ulong vehicleHash)
+	public static void NETWORK_EARN_DOOMSDAY_FINALE_BONUS(int amount, uint vehicleHash)
 	{
 		NativeFunction.Natives.NETWORK_EARN_DOOMSDAY_FINALE_BONUS(amount, vehicleHash);
 	}
@@ -16266,7 +16266,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_EARN_CASINO_MISSION_PARTICIPATION(amount);
 	}
-	public static void NETWORK_EARN_CASINO_AWARD(int amount, ulong hash)
+	public static void NETWORK_EARN_CASINO_AWARD(int amount, uint hash)
 	{
 		NativeFunction.Natives.NETWORK_EARN_CASINO_AWARD(amount, hash);
 	}
@@ -16702,25 +16702,25 @@ public static class Natives
 	/// <summary>
 	/// 	Hash p3 = STEALTH_MODULE
 	/// </summary>
-	public static void _NETWORK_SPENT_STEALTH_MODULE(int amount, bool fromBank, bool fromBankAndWallet, ulong p3)
+	public static void _NETWORK_SPENT_STEALTH_MODULE(int amount, bool fromBank, bool fromBankAndWallet, uint p3)
 	{
 		NativeFunction.Natives._NETWORK_SPENT_STEALTH_MODULE(amount, fromBank, fromBankAndWallet, p3);
 	}
 	/// <summary>
 	/// 	Hash p3 = MISSILE_JAMMER
 	/// </summary>
-	public static void _NETWORK_SPENT_MISSILE_JAMMER(int amount, bool fromBank, bool fromBankAndWallet, ulong p3)
+	public static void _NETWORK_SPENT_MISSILE_JAMMER(int amount, bool fromBank, bool fromBankAndWallet, uint p3)
 	{
 		NativeFunction.Natives._NETWORK_SPENT_MISSILE_JAMMER(amount, fromBank, fromBankAndWallet, p3);
 	}
-	public static void _NETWORK_SPENT_GENERIC(int price, bool p1, bool p2, ulong stat, ulong spent, string p5, string p6)
+	public static void _NETWORK_SPENT_GENERIC(int price, bool p1, bool p2, uint stat, uint spent, string p5, string p6)
 	{
 		NativeFunction.Natives._NETWORK_SPENT_GENERIC(price, p1, p2, stat, spent, p5, p6, 0);
 	}
 	/// <summary>
 	/// 	_NETWORK_EARN_G*
 	/// </summary>
-	public static void _NETWORK_EARN_GENERIC(int amount, ulong earn, string p2, string p3)
+	public static void _NETWORK_EARN_GENERIC(int amount, uint earn, string p2, string p3)
 	{
 		NativeFunction.Natives._NETWORK_EARN_GENERIC(amount, earn, p2, p3, 0);
 	}
@@ -16845,14 +16845,14 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_ITEM_IS_VALID<bool>(name);
 	}
-	public static bool NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID(ulong hash)
+	public static bool NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID(uint hash)
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID<bool>(hash);
 	}
 	/// <summary>
 	/// 	bool is always true in game scripts
 	/// </summary>
-	public static int NET_GAMESERVER_GET_PRICE(ulong itemHash, ulong categoryHash, bool p2)
+	public static int NET_GAMESERVER_GET_PRICE(uint itemHash, uint categoryHash, bool p2)
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_GET_PRICE<int>(itemHash, categoryHash, p2);
 	}
@@ -16864,9 +16864,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_IS_CATALOG_CURRENT<bool>();
 	}
-	public static ulong NET_GAMESERVER_GET_CATALOG_CLOUD_CRC()
+	public static uint NET_GAMESERVER_GET_CATALOG_CLOUD_CRC()
 	{
-		return NativeFunction.Natives.NET_GAMESERVER_GET_CATALOG_CLOUD_CRC<ulong>();
+		return NativeFunction.Natives.NET_GAMESERVER_GET_CATALOG_CLOUD_CRC<uint>();
 	}
 	public static bool NET_GAMESERVER_REFRESH_SERVER_CATALOG()
 	{
@@ -16931,7 +16931,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_GET_SESSION_STATE_AND_STATUS<bool>(out p0, out p1);
 	}
-	public static bool NET_GAMESERVER_BASKET_START(out int transactionId, ulong categoryHash, ulong actionHash, int flags)
+	public static bool NET_GAMESERVER_BASKET_START(out int transactionId, uint categoryHash, uint actionHash, int flags)
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_BASKET_START<bool>(out transactionId, categoryHash, actionHash, flags);
 	}
@@ -16959,7 +16959,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_CHECKOUT_START<bool>(transactionId);
 	}
-	public static bool NET_GAMESERVER_BEGIN_SERVICE(out int transactionId, ulong categoryHash, ulong itemHash, ulong actionTypeHash, int value, int flags)
+	public static bool NET_GAMESERVER_BEGIN_SERVICE(out int transactionId, uint categoryHash, uint itemHash, uint actionTypeHash, int value, int flags)
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_BEGIN_SERVICE<bool>(out transactionId, categoryHash, itemHash, actionTypeHash, value, flags);
 	}
@@ -16967,7 +16967,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_END_SERVICE<bool>(transactionId);
 	}
-	public static bool NET_GAMESERVER_DELETE_CHARACTER(int slot, bool transfer, ulong reason)
+	public static bool NET_GAMESERVER_DELETE_CHARACTER(int slot, bool transfer, uint reason)
 	{
 		return NativeFunction.Natives.NET_GAMESERVER_DELETE_CHARACTER<bool>(slot, transfer, reason);
 	}
@@ -17244,7 +17244,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_TRANSITION_START<bool>(p0, 0, 0, 0);
 	}
-	public static bool NETWORK_TRANSITION_ADD_STAGE(ulong hash, int p1, int p2, int state, int p4)
+	public static bool NETWORK_TRANSITION_ADD_STAGE(uint hash, int p1, int p2, int state, int p4)
 	{
 		return NativeFunction.Natives.NETWORK_TRANSITION_ADD_STAGE<bool>(hash, p1, p2, state, p4);
 	}
@@ -18278,11 +18278,11 @@ public static class Natives
 	{
 		return NativeFunction.Natives.BAD_SPORT_PLAYER_LEFT_DETECTED<bool>(0, _event, amountReceived);
 	}
-	public static void NETWORK_ADD_INVALID_OBJECT_MODEL(ulong modelHash)
+	public static void NETWORK_ADD_INVALID_OBJECT_MODEL(uint modelHash)
 	{
 		NativeFunction.Natives.NETWORK_ADD_INVALID_OBJECT_MODEL(modelHash, 0);
 	}
-	public static void NETWORK_REMOVE_INVALID_OBJECT_MODEL(ulong modelHash)
+	public static void NETWORK_REMOVE_INVALID_OBJECT_MODEL(uint modelHash)
 	{
 		NativeFunction.Natives.NETWORK_REMOVE_INVALID_OBJECT_MODEL(modelHash);
 	}
@@ -18412,7 +18412,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_IS_SCRIPT_ACTIVE<bool>(scriptName, instance_id, p2, position_hash);
 	}
-	public static bool NETWORK_IS_SCRIPT_ACTIVE_BY_HASH(ulong scriptHash, int p1, bool p2, int p3)
+	public static bool NETWORK_IS_SCRIPT_ACTIVE_BY_HASH(uint scriptHash, int p1, bool p2, int p3)
 	{
 		return NativeFunction.Natives.NETWORK_IS_SCRIPT_ACTIVE_BY_HASH<bool>(scriptHash, p1, p2, p3);
 	}
@@ -18428,9 +18428,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT<int>();
 	}
-	public static ulong NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT()
+	public static uint NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT()
 	{
-		return NativeFunction.Natives.NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT<ulong>();
+		return NativeFunction.Natives.NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT<uint>();
 	}
 	public static bool NETWORK_IS_PLAYER_A_PARTICIPANT_ON_SCRIPT(Player player, string script, int instance_id)
 	{
@@ -18460,15 +18460,15 @@ public static class Natives
 	{
 		return NativeFunction.Natives.PARTICIPANT_ID_TO_INT<int>();
 	}
-	public static Player NETWORK_GET_KILLER_OF_PLAYER(Player player, out ulong weaponHash)
+	public static Player NETWORK_GET_KILLER_OF_PLAYER(Player player, out uint weaponHash)
 	{
 		return NativeFunction.Natives.NETWORK_GET_KILLER_OF_PLAYER<Player>(player, out weaponHash);
 	}
-	public static Player NETWORK_GET_DESTROYER_OF_NETWORK_ID(int netId, out ulong weaponHash)
+	public static Player NETWORK_GET_DESTROYER_OF_NETWORK_ID(int netId, out uint weaponHash)
 	{
 		return NativeFunction.Natives.NETWORK_GET_DESTROYER_OF_NETWORK_ID<Player>(netId, out weaponHash);
 	}
-	public static Player NETWORK_GET_DESTROYER_OF_ENTITY(Entity entity, out ulong weaponHash)
+	public static Player NETWORK_GET_DESTROYER_OF_ENTITY(Entity entity, out uint weaponHash)
 	{
 		return NativeFunction.Natives.NETWORK_GET_DESTROYER_OF_ENTITY<Player>(entity, out weaponHash);
 	}
@@ -18483,7 +18483,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY<bool>(player, entity, out p2);
 	}
-	public static Entity NETWORK_GET_ENTITY_KILLER_OF_PLAYER(Player player, out ulong weaponHash)
+	public static Entity NETWORK_GET_ENTITY_KILLER_OF_PLAYER(Player player, out uint weaponHash)
 	{
 		return NativeFunction.Natives.NETWORK_GET_ENTITY_KILLER_OF_PLAYER<Entity>(player, out weaponHash);
 	}
@@ -18523,7 +18523,7 @@ public static class Natives
 	/// 		MP_SETTING_SPAWN_MAX,<br/>
 	/// 	};
 	/// </summary>
-	public static void NETWORK_SET_CURRENT_SPAWN_LOCATION_OPTION(ulong mpSettingSpawn)
+	public static void NETWORK_SET_CURRENT_SPAWN_LOCATION_OPTION(uint mpSettingSpawn)
 	{
 		NativeFunction.Natives.NETWORK_SET_CURRENT_SPAWN_LOCATION_OPTION(mpSettingSpawn);
 	}
@@ -18537,7 +18537,7 @@ public static class Natives
 	/// <summary>
 	/// 	Sets &amp;apos;loc&amp;apos; variable used in MetricVEHICLE_DIST_DRIVEN
 	/// </summary>
-	public static void NETWORK_SET_VEHICLE_DRIVEN_LOCATION(ulong location)
+	public static void NETWORK_SET_VEHICLE_DRIVEN_LOCATION(uint location)
 	{
 		NativeFunction.Natives.NETWORK_SET_VEHICLE_DRIVEN_LOCATION(location);
 	}
@@ -18632,11 +18632,11 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_PICKUP<bool>(pickup);
 	}
-	public static bool NETWORK_HAS_CONTROL_OF_DOOR(ulong doorHash)
+	public static bool NETWORK_HAS_CONTROL_OF_DOOR(uint doorHash)
 	{
 		return NativeFunction.Natives.NETWORK_HAS_CONTROL_OF_DOOR<bool>(doorHash);
 	}
-	public static bool NETWORK_IS_DOOR_NETWORKED(ulong doorHash)
+	public static bool NETWORK_IS_DOOR_NETWORKED(uint doorHash)
 	{
 		return NativeFunction.Natives.NETWORK_IS_DOOR_NETWORKED<bool>(doorHash);
 	}
@@ -18705,13 +18705,13 @@ public static class Natives
 	{
 		NativeFunction.Natives.NETWORK_HANDLE_FROM_PLAYER(player, 0, gamerHandleSize);
 	}
-	public static ulong NETWORK_HASH_FROM_PLAYER_HANDLE(Player player)
+	public static uint NETWORK_HASH_FROM_PLAYER_HANDLE(Player player)
 	{
-		return NativeFunction.Natives.NETWORK_HASH_FROM_PLAYER_HANDLE<ulong>(player);
+		return NativeFunction.Natives.NETWORK_HASH_FROM_PLAYER_HANDLE<uint>(player);
 	}
-	public static ulong NETWORK_HASH_FROM_GAMER_HANDLE()
+	public static uint NETWORK_HASH_FROM_GAMER_HANDLE()
 	{
-		return NativeFunction.Natives.NETWORK_HASH_FROM_GAMER_HANDLE<ulong>(0);
+		return NativeFunction.Natives.NETWORK_HASH_FROM_GAMER_HANDLE<uint>(0);
 	}
 	public static void NETWORK_HANDLE_FROM_FRIEND(int friendIndex, int gamerHandleSize)
 	{
@@ -19928,7 +19928,7 @@ public static class Natives
 	/// 	Similar structure as NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE but it includes this time a hash.<br/>
 	/// 	In casino_slots it is used one time in a synced scene involving a ped and the slot machine?
 	/// </summary>
-	public static void NETWORK_ADD_MAP_ENTITY_TO_SYNCHRONISED_SCENE(int netScene, ulong modelHash, float x, float y, float z, float p5, string p6, float p7, float p8, int flags)
+	public static void NETWORK_ADD_MAP_ENTITY_TO_SYNCHRONISED_SCENE(int netScene, uint modelHash, float x, float y, float z, float p5, string p6, float p7, float p8, int flags)
 	{
 		NativeFunction.Natives.NETWORK_ADD_MAP_ENTITY_TO_SYNCHRONISED_SCENE(netScene, modelHash, x, y, z, p5, p6, p7, p8, flags);
 	}
@@ -20169,7 +20169,7 @@ public static class Natives
 	/// 	Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.<br/>
 	/// 	Possible tunable contexts must first be set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS.
 	/// </summary>
-	public static bool _NETWORK_GET_TUNABLES_REGISTRATION_BOOL(ulong tunableName, bool defaultValue)
+	public static bool _NETWORK_GET_TUNABLES_REGISTRATION_BOOL(uint tunableName, bool defaultValue)
 	{
 		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_BOOL<bool>(tunableName, defaultValue);
 	}
@@ -20177,7 +20177,7 @@ public static class Natives
 	/// 	Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.<br/>
 	/// 	Possible tunable contexts must first be set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS.
 	/// </summary>
-	public static int _NETWORK_GET_TUNABLES_REGISTRATION_INT(ulong tunableName, int defaultValue)
+	public static int _NETWORK_GET_TUNABLES_REGISTRATION_INT(uint tunableName, int defaultValue)
 	{
 		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_INT<int>(tunableName, defaultValue);
 	}
@@ -20185,7 +20185,7 @@ public static class Natives
 	/// 	Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.<br/>
 	/// 	Possible tunable contexts must first be set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS.
 	/// </summary>
-	public static float _NETWORK_GET_TUNABLES_REGISTRATION_FLOAT(ulong tunableName, float defaultValue)
+	public static float _NETWORK_GET_TUNABLES_REGISTRATION_FLOAT(uint tunableName, float defaultValue)
 	{
 		return NativeFunction.Natives._NETWORK_GET_TUNABLES_REGISTRATION_FLOAT<float>(tunableName, defaultValue);
 	}
@@ -20205,7 +20205,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL<bool>(tunableContext, tunableName);
 	}
-	public static bool NETWORK_DOES_TUNABLE_EXIST_HASH(ulong tunableContext, ulong tunableName)
+	public static bool NETWORK_DOES_TUNABLE_EXIST_HASH(uint tunableContext, uint tunableName)
 	{
 		return NativeFunction.Natives.NETWORK_DOES_TUNABLE_EXIST_HASH<bool>(tunableContext, tunableName);
 	}
@@ -20213,34 +20213,34 @@ public static class Natives
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_MODIFICATION_DETECTION_CLEAR<bool>();
 	}
-	public static bool NETWORK_ACCESS_TUNABLE_INT_HASH(ulong tunableContext, ulong tunableName, out int value)
+	public static bool NETWORK_ACCESS_TUNABLE_INT_HASH(uint tunableContext, uint tunableName, out int value)
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT_HASH<bool>(tunableContext, tunableName, out value);
 	}
-	public static bool NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH(ulong contextHash, ulong nameHash, out int value)
+	public static bool NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH(uint contextHash, uint nameHash, out int value)
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH<bool>(contextHash, nameHash, out value);
 	}
-	public static bool NETWORK_ACCESS_TUNABLE_FLOAT_HASH(ulong tunableContext, ulong tunableName, out float value)
+	public static bool NETWORK_ACCESS_TUNABLE_FLOAT_HASH(uint tunableContext, uint tunableName, out float value)
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT_HASH<bool>(tunableContext, tunableName, out value);
 	}
-	public static bool NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH(ulong contextHash, ulong nameHash, out float value)
+	public static bool NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH(uint contextHash, uint nameHash, out float value)
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH<bool>(contextHash, nameHash, out value);
 	}
-	public static bool NETWORK_ACCESS_TUNABLE_BOOL_HASH(ulong tunableContext, ulong tunableName)
+	public static bool NETWORK_ACCESS_TUNABLE_BOOL_HASH(uint tunableContext, uint tunableName)
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL_HASH<bool>(tunableContext, tunableName);
 	}
-	public static bool NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH(ulong contextHash, ulong nameHash, out bool value)
+	public static bool NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH(uint contextHash, uint nameHash, out bool value)
 	{
 		return NativeFunction.Natives.NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH<bool>(contextHash, nameHash, out value);
 	}
 	/// <summary>
 	/// 	Returns defaultValue if the tunable doesn&amp;apos;t exist.
 	/// </summary>
-	public static bool NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH(ulong tunableContext, ulong tunableName, bool defaultValue)
+	public static bool NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH(uint tunableContext, uint tunableName, bool defaultValue)
 	{
 		return NativeFunction.Natives.NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH<bool>(tunableContext, tunableName, defaultValue);
 	}
@@ -20254,7 +20254,7 @@ public static class Natives
 	/// 	&amp;apos;A8M6Bz8MLEC5xngvDCzGwA&amp;apos; is the mission id, so the game hash this and use it as the parameter for this native.<br/>
 	/// 	
 	/// </summary>
-	public static int NETWORK_GET_CONTENT_MODIFIER_LIST_ID(ulong contentHash)
+	public static int NETWORK_GET_CONTENT_MODIFIER_LIST_ID(uint contentHash)
 	{
 		return NativeFunction.Natives.NETWORK_GET_CONTENT_MODIFIER_LIST_ID<int>(contentHash);
 	}
@@ -20463,7 +20463,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_USER_OLD_ENOUGH_TO_ACCESS_STORE<bool>();
 	}
-	public static void SET_LAST_VIEWED_SHOP_ITEM(ulong p0, int p1, ulong p2)
+	public static void SET_LAST_VIEWED_SHOP_ITEM(uint p0, int p1, uint p2)
 	{
 		NativeFunction.Natives.SET_LAST_VIEWED_SHOP_ITEM(p0, p1, p2);
 	}
@@ -20656,9 +20656,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives.UGC_GET_CONTENT_TOTAL<int>();
 	}
-	public static ulong UGC_GET_CONTENT_HASH()
+	public static uint UGC_GET_CONTENT_HASH()
 	{
-		return NativeFunction.Natives.UGC_GET_CONTENT_HASH<ulong>();
+		return NativeFunction.Natives.UGC_GET_CONTENT_HASH<uint>();
 	}
 	public static void UGC_CLEAR_QUERY_RESULTS()
 	{
@@ -21173,14 +21173,14 @@ public static class Natives
 	/// <summary>
 	/// 	List of object models that can be created without any additional effort like making sure ytyp is loaded etc: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ObjectList.ini
 	/// </summary>
-	public static Object CREATE_OBJECT(ulong modelHash, float x, float y, float z, bool isNetwork, bool bScriptHostObj, bool dynamic)
+	public static Object CREATE_OBJECT(uint modelHash, float x, float y, float z, bool isNetwork, bool bScriptHostObj, bool dynamic)
 	{
 		return NativeFunction.Natives.CREATE_OBJECT<Object>(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic);
 	}
 	/// <summary>
 	/// 	List of object models that can be created without any additional effort like making sure ytyp is loaded etc: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ObjectList.ini
 	/// </summary>
-	public static Object CREATE_OBJECT_NO_OFFSET(ulong modelHash, float x, float y, float z, bool isNetwork, bool bScriptHostObj, bool dynamic)
+	public static Object CREATE_OBJECT_NO_OFFSET(uint modelHash, float x, float y, float z, bool isNetwork, bool bScriptHostObj, bool dynamic)
 	{
 		return NativeFunction.Natives.CREATE_OBJECT_NO_OFFSET<Object>(modelHash, x, y, z, isNetwork, bScriptHostObj, dynamic, 0);
 	}
@@ -21238,7 +21238,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	isMission - if true doesn&amp;apos;t return mission objects
 	/// </summary>
-	public static Object GET_CLOSEST_OBJECT_OF_TYPE(float x, float y, float z, float radius, ulong modelHash, bool isMission, bool p6, bool p7)
+	public static Object GET_CLOSEST_OBJECT_OF_TYPE(float x, float y, float z, float radius, uint modelHash, bool isMission, bool p6, bool p7)
 	{
 		return NativeFunction.Natives.GET_CLOSEST_OBJECT_OF_TYPE<Object>(x, y, z, radius, modelHash, isMission, p6, p7);
 	}
@@ -21246,11 +21246,11 @@ public static class Natives
 	{
 		return NativeFunction.Natives.HAS_OBJECT_BEEN_BROKEN<bool>(_object, 0);
 	}
-	public static bool HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_BROKEN(float p0, float p1, float p2, float p3, ulong modelHash)
+	public static bool HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_BROKEN(float p0, float p1, float p2, float p3, uint modelHash)
 	{
 		return NativeFunction.Natives.HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_BROKEN<bool>(p0, p1, p2, p3, modelHash, 0);
 	}
-	public static bool HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_COMPLETELY_DESTROYED(float x, float y, float z, float radius, ulong modelHash, bool p5)
+	public static bool HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_COMPLETELY_DESTROYED(float x, float y, float z, float radius, uint modelHash, bool p5)
 	{
 		return NativeFunction.Natives.HAS_CLOSEST_OBJECT_OF_TYPE_BEEN_COMPLETELY_DESTROYED<bool>(x, y, z, radius, modelHash, p5);
 	}
@@ -21262,7 +21262,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS<Vector3>(xPos, yPos, zPos, heading, xOffset, yOffset, zOffset);
 	}
-	public static bool GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE(float x, float y, float z, float radius, ulong modelHash, out Vector3 outPosition, out Vector3 outRotation, int rotationOrder)
+	public static bool GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE(float x, float y, float z, float radius, uint modelHash, out Vector3 outPosition, out Vector3 outRotation, int rotationOrder)
 	{
 		return NativeFunction.Natives.GET_COORDS_AND_ROTATION_OF_CLOSEST_OBJECT_OF_TYPE<bool>(x, y, z, radius, modelHash, out outPosition, out outRotation, rotationOrder);
 	}
@@ -21285,7 +21285,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	get door info: https://pastebin.com/i14rbekD
 	/// </summary>
-	public static void SET_STATE_OF_CLOSEST_DOOR_OF_TYPE(ulong type, float x, float y, float z, bool locked, float heading, bool p6)
+	public static void SET_STATE_OF_CLOSEST_DOOR_OF_TYPE(uint type, float x, float y, float z, bool locked, float heading, bool p6)
 	{
 		NativeFunction.Natives.SET_STATE_OF_CLOSEST_DOOR_OF_TYPE(type, x, y, z, locked, heading, p6);
 	}
@@ -21297,7 +21297,7 @@ public static class Natives
 	/// 	-------------<br/>
 	/// 	the locked bool is either 0(unlocked)(false) or 1(locked)(true)
 	/// </summary>
-	public static void GET_STATE_OF_CLOSEST_DOOR_OF_TYPE(ulong type, float x, float y, float z, out bool locked, out float heading)
+	public static void GET_STATE_OF_CLOSEST_DOOR_OF_TYPE(uint type, float x, float y, float z, out bool locked, out float heading)
 	{
 		NativeFunction.Natives.GET_STATE_OF_CLOSEST_DOOR_OF_TYPE(type, x, y, z, out locked, out heading);
 	}
@@ -21308,7 +21308,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	OBJECT::SET_LOCKED_UNSTREAMED_IN_DOOR_OF_TYPE(${prop_gate_prison_01}, 1845.0, 2605.0, 45.0, 1, 0.0, 50.0, 0);  //door close
 	/// </summary>
-	public static void SET_LOCKED_UNSTREAMED_IN_DOOR_OF_TYPE(ulong modelHash, float x, float y, float z, bool locked, float xRotMult, float yRotMult, float zRotMult)
+	public static void SET_LOCKED_UNSTREAMED_IN_DOOR_OF_TYPE(uint modelHash, float x, float y, float z, bool locked, float xRotMult, float yRotMult, float zRotMult)
 	{
 		NativeFunction.Natives.SET_LOCKED_UNSTREAMED_IN_DOOR_OF_TYPE(modelHash, x, y, z, locked, xRotMult, yRotMult, zRotMult);
 	}
@@ -21326,7 +21326,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Example: AddDoorToSystem(&amp;quot;PROP_43_DOOR_0&amp;quot;, &amp;quot;hei_v_ilev_fh_heistdoor2&amp;quot;, -1456.818, -520.5037, 69.67043, 0, 0, 0)
 	/// </summary>
-	public static void ADD_DOOR_TO_SYSTEM(ulong doorHash, ulong modelHash, float x, float y, float z, bool p5, bool scriptDoor, bool isLocal)
+	public static void ADD_DOOR_TO_SYSTEM(uint doorHash, uint modelHash, float x, float y, float z, bool p5, bool scriptDoor, bool isLocal)
 	{
 		NativeFunction.Natives.ADD_DOOR_TO_SYSTEM(doorHash, modelHash, x, y, z, p5, scriptDoor, isLocal, 0);
 	}
@@ -21334,7 +21334,7 @@ public static class Natives
 	/// 	CDoor and CDoorSystemData still internally allocated (and their associations between doorHash, modelHash, and coordinates).<br/>
 	/// 	Only its NetObj removed and flag ``*(v2 + 192) |= 8u`` (1604 retail) toggled.
 	/// </summary>
-	public static void REMOVE_DOOR_FROM_SYSTEM(ulong doorHash)
+	public static void REMOVE_DOOR_FROM_SYSTEM(uint doorHash)
 	{
 		NativeFunction.Natives.REMOVE_DOOR_FROM_SYSTEM(doorHash, 0);
 	}
@@ -21351,15 +21351,15 @@ public static class Natives
 	/// 	5: DOORSTATE_FORCE_OPEN_THIS_FRAME<br/>
 	/// 	6: DOORSTATE_FORCE_CLOSED_THIS_FRAME
 	/// </summary>
-	public static void DOOR_SYSTEM_SET_DOOR_STATE(ulong doorHash, int state, bool requestDoor, bool forceUpdate)
+	public static void DOOR_SYSTEM_SET_DOOR_STATE(uint doorHash, int state, bool requestDoor, bool forceUpdate)
 	{
 		NativeFunction.Natives.DOOR_SYSTEM_SET_DOOR_STATE(doorHash, state, requestDoor, forceUpdate);
 	}
-	public static int DOOR_SYSTEM_GET_DOOR_STATE(ulong doorHash)
+	public static int DOOR_SYSTEM_GET_DOOR_STATE(uint doorHash)
 	{
 		return NativeFunction.Natives.DOOR_SYSTEM_GET_DOOR_STATE<int>(doorHash);
 	}
-	public static int DOOR_SYSTEM_GET_DOOR_PENDING_STATE(ulong doorHash)
+	public static int DOOR_SYSTEM_GET_DOOR_PENDING_STATE(uint doorHash)
 	{
 		return NativeFunction.Natives.DOOR_SYSTEM_GET_DOOR_PENDING_STATE<int>(doorHash);
 	}
@@ -21367,14 +21367,14 @@ public static class Natives
 	/// 	Includes networking check: ownership vs. or the door itself **isn&amp;apos;t** networked.<br/>
 	/// 	`forceUpdate` on true invokes DOOR_SYSTEM_SET_DOOR_STATE otherwise requestDoor is unused.
 	/// </summary>
-	public static void DOOR_SYSTEM_SET_AUTOMATIC_RATE(ulong doorHash, float rate, bool requestDoor, bool forceUpdate)
+	public static void DOOR_SYSTEM_SET_AUTOMATIC_RATE(uint doorHash, float rate, bool requestDoor, bool forceUpdate)
 	{
 		NativeFunction.Natives.DOOR_SYSTEM_SET_AUTOMATIC_RATE(doorHash, rate, requestDoor, forceUpdate);
 	}
 	/// <summary>
 	/// 	`forceUpdate` on true invokes DOOR_SYSTEM_SET_DOOR_STATE otherwise requestDoor is unused.
 	/// </summary>
-	public static void DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE(ulong doorHash, float distance, bool requestDoor, bool forceUpdate)
+	public static void DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE(uint doorHash, float distance, bool requestDoor, bool forceUpdate)
 	{
 		NativeFunction.Natives.DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE(doorHash, distance, requestDoor, forceUpdate);
 	}
@@ -21383,15 +21383,15 @@ public static class Natives
 	/// 	Ranges from -1.0 to 1.0, and 0.0 is closed / default.<br/>
 	/// 	`forceUpdate` on true invokes DOOR_SYSTEM_SET_DOOR_STATE otherwise requestDoor is unused.
 	/// </summary>
-	public static void DOOR_SYSTEM_SET_OPEN_RATIO(ulong doorHash, float ajar, bool requestDoor, bool forceUpdate)
+	public static void DOOR_SYSTEM_SET_OPEN_RATIO(uint doorHash, float ajar, bool requestDoor, bool forceUpdate)
 	{
 		NativeFunction.Natives.DOOR_SYSTEM_SET_OPEN_RATIO(doorHash, ajar, requestDoor, forceUpdate);
 	}
-	public static float DOOR_SYSTEM_GET_AUTOMATIC_DISTANCE(ulong doorHash)
+	public static float DOOR_SYSTEM_GET_AUTOMATIC_DISTANCE(uint doorHash)
 	{
 		return NativeFunction.Natives.DOOR_SYSTEM_GET_AUTOMATIC_DISTANCE<float>(doorHash);
 	}
-	public static float DOOR_SYSTEM_GET_OPEN_RATIO(ulong doorHash)
+	public static float DOOR_SYSTEM_GET_OPEN_RATIO(uint doorHash)
 	{
 		return NativeFunction.Natives.DOOR_SYSTEM_GET_OPEN_RATIO<float>(doorHash);
 	}
@@ -21399,21 +21399,21 @@ public static class Natives
 	/// 	Includes networking check: ownership vs. or the door itself **isn&amp;apos;t** networked.<br/>
 	/// 	`forceUpdate` on true invokes DOOR_SYSTEM_SET_DOOR_STATE otherwise requestDoor is unused.
 	/// </summary>
-	public static void DOOR_SYSTEM_SET_SPRING_REMOVED(ulong doorHash, bool removed, bool requestDoor, bool forceUpdate)
+	public static void DOOR_SYSTEM_SET_SPRING_REMOVED(uint doorHash, bool removed, bool requestDoor, bool forceUpdate)
 	{
 		NativeFunction.Natives.DOOR_SYSTEM_SET_SPRING_REMOVED(doorHash, removed, requestDoor, forceUpdate);
 	}
 	/// <summary>
 	/// 	Includes networking check: ownership vs. or the door itself **isn&amp;apos;t** networked.
 	/// </summary>
-	public static void DOOR_SYSTEM_SET_HOLD_OPEN(ulong doorHash, bool toggle)
+	public static void DOOR_SYSTEM_SET_HOLD_OPEN(uint doorHash, bool toggle)
 	{
 		NativeFunction.Natives.DOOR_SYSTEM_SET_HOLD_OPEN(doorHash, toggle);
 	}
 	/// <summary>
 	/// 	Some property related to gates. Native name between ``DOOR_SYSTEM_SET_AUTOMATIC_RATE`` and ``DOOR_SYSTEM_SET_DOOR_STATE``.
 	/// </summary>
-	public static void DOOR_SYSTEM_SET_DOOR_OPEN_FOR_RACES(ulong doorHash, bool p1)
+	public static void DOOR_SYSTEM_SET_DOOR_OPEN_FOR_RACES(uint doorHash, bool p1)
 	{
 		NativeFunction.Natives.DOOR_SYSTEM_SET_DOOR_OPEN_FOR_RACES(doorHash, p1);
 	}
@@ -21423,11 +21423,11 @@ public static class Natives
 	/// 	    OBJECT::REMOVE_DOOR_FROM_SYSTEM(doorHash);<br/>
 	/// 	}
 	/// </summary>
-	public static bool IS_DOOR_REGISTERED_WITH_SYSTEM(ulong doorHash)
+	public static bool IS_DOOR_REGISTERED_WITH_SYSTEM(uint doorHash)
 	{
 		return NativeFunction.Natives.IS_DOOR_REGISTERED_WITH_SYSTEM<bool>(doorHash);
 	}
-	public static bool IS_DOOR_CLOSED(ulong doorHash)
+	public static bool IS_DOOR_CLOSED(uint doorHash)
 	{
 		return NativeFunction.Natives.IS_DOOR_CLOSED<bool>(doorHash);
 	}
@@ -21450,49 +21450,49 @@ public static class Natives
 	/// <summary>
 	/// 	Search radius: 0.5
 	/// </summary>
-	public static bool DOOR_SYSTEM_FIND_EXISTING_DOOR(float x, float y, float z, ulong modelHash, out ulong outDoorHash)
+	public static bool DOOR_SYSTEM_FIND_EXISTING_DOOR(float x, float y, float z, uint modelHash, out uint outDoorHash)
 	{
 		return NativeFunction.Natives.DOOR_SYSTEM_FIND_EXISTING_DOOR<bool>(x, y, z, modelHash, out outDoorHash);
 	}
-	public static bool IS_GARAGE_EMPTY(ulong garageHash, bool p1, int p2)
+	public static bool IS_GARAGE_EMPTY(uint garageHash, bool p1, int p2)
 	{
 		return NativeFunction.Natives.IS_GARAGE_EMPTY<bool>(garageHash, p1, p2);
 	}
-	public static bool IS_PLAYER_ENTIRELY_INSIDE_GARAGE(ulong garageHash, Player player, float p2, int p3)
+	public static bool IS_PLAYER_ENTIRELY_INSIDE_GARAGE(uint garageHash, Player player, float p2, int p3)
 	{
 		return NativeFunction.Natives.IS_PLAYER_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, player, p2, p3);
 	}
-	public static bool IS_PLAYER_PARTIALLY_INSIDE_GARAGE(ulong garageHash, Player player, int p2)
+	public static bool IS_PLAYER_PARTIALLY_INSIDE_GARAGE(uint garageHash, Player player, int p2)
 	{
 		return NativeFunction.Natives.IS_PLAYER_PARTIALLY_INSIDE_GARAGE<bool>(garageHash, player, p2);
 	}
-	public static bool ARE_ENTITIES_ENTIRELY_INSIDE_GARAGE(ulong garageHash, bool p1, bool p2, bool p3)
+	public static bool ARE_ENTITIES_ENTIRELY_INSIDE_GARAGE(uint garageHash, bool p1, bool p2, bool p3)
 	{
 		return NativeFunction.Natives.ARE_ENTITIES_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, p1, p2, p3, 0);
 	}
-	public static bool IS_ANY_ENTITY_ENTIRELY_INSIDE_GARAGE(ulong garageHash, bool p1, bool p2, bool p3)
+	public static bool IS_ANY_ENTITY_ENTIRELY_INSIDE_GARAGE(uint garageHash, bool p1, bool p2, bool p3)
 	{
 		return NativeFunction.Natives.IS_ANY_ENTITY_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, p1, p2, p3, 0);
 	}
 	/// <summary>
 	/// 	Despite the name, it does work for any entity type.
 	/// </summary>
-	public static bool IS_OBJECT_ENTIRELY_INSIDE_GARAGE(ulong garageHash, Entity entity, float p2, int p3)
+	public static bool IS_OBJECT_ENTIRELY_INSIDE_GARAGE(uint garageHash, Entity entity, float p2, int p3)
 	{
 		return NativeFunction.Natives.IS_OBJECT_ENTIRELY_INSIDE_GARAGE<bool>(garageHash, entity, p2, p3);
 	}
 	/// <summary>
 	/// 	Despite the name, it does work for any entity type.
 	/// </summary>
-	public static bool IS_OBJECT_PARTIALLY_INSIDE_GARAGE(ulong garageHash, Entity entity, int p2)
+	public static bool IS_OBJECT_PARTIALLY_INSIDE_GARAGE(uint garageHash, Entity entity, int p2)
 	{
 		return NativeFunction.Natives.IS_OBJECT_PARTIALLY_INSIDE_GARAGE<bool>(garageHash, entity, p2);
 	}
-	public static void CLEAR_GARAGE(ulong garageHash, bool isNetwork)
+	public static void CLEAR_GARAGE(uint garageHash, bool isNetwork)
 	{
 		NativeFunction.Natives.CLEAR_GARAGE(garageHash, isNetwork);
 	}
-	public static void CLEAR_OBJECTS_INSIDE_GARAGE(ulong garageHash, bool vehicles, bool peds, bool objects, bool isNetwork)
+	public static void CLEAR_OBJECTS_INSIDE_GARAGE(uint garageHash, bool vehicles, bool peds, bool objects, bool isNetwork)
 	{
 		NativeFunction.Natives.CLEAR_OBJECTS_INSIDE_GARAGE(garageHash, vehicles, peds, objects, isNetwork);
 	}
@@ -21503,7 +21503,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.DISABLE_TIDYING_UP_IN_GARAGE(id, toggle);
 	}
-	public static void ENABLE_SAVING_IN_GARAGE(ulong garageHash, bool toggle)
+	public static void ENABLE_SAVING_IN_GARAGE(uint garageHash, bool toggle)
 	{
 		NativeFunction.Natives.ENABLE_SAVING_IN_GARAGE(garageHash, toggle);
 	}
@@ -21514,7 +21514,7 @@ public static class Natives
 	/// <summary>
 	/// 	p5 is usually 0.
 	/// </summary>
-	public static bool DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(float x, float y, float z, float radius, ulong hash, bool p5)
+	public static bool DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(float x, float y, float z, float radius, uint hash, bool p5)
 	{
 		return NativeFunction.Natives.DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS<bool>(x, y, z, radius, hash, p5);
 	}
@@ -21565,7 +21565,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_ANY_OBJECT_NEAR_POINT<bool>(x, y, z, range, p4);
 	}
-	public static bool IS_OBJECT_NEAR_POINT(ulong objectHash, float x, float y, float z, float range)
+	public static bool IS_OBJECT_NEAR_POINT(uint objectHash, float x, float y, float z, float range)
 	{
 		return NativeFunction.Natives.IS_OBJECT_NEAR_POINT<bool>(objectHash, x, y, z, range);
 	}
@@ -21660,7 +21660,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static uint CREATE_PICKUP(ulong pickupHash, float posX, float posY, float posZ, int p4, int value, bool p6, ulong modelHash)
+	public static uint CREATE_PICKUP(uint pickupHash, float posX, float posY, float posZ, int p4, int value, bool p6, uint modelHash)
 	{
 		return NativeFunction.Natives.CREATE_PICKUP<uint>(pickupHash, posX, posY, posZ, p4, value, p6, modelHash);
 	}
@@ -21671,7 +21671,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static uint CREATE_PICKUP_ROTATE(ulong pickupHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, int flag, int amount, bool p10, ulong modelHash)
+	public static uint CREATE_PICKUP_ROTATE(uint pickupHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, int flag, int amount, bool p10, uint modelHash)
 	{
 		return NativeFunction.Natives.CREATE_PICKUP_ROTATE<uint>(pickupHash, posX, posY, posZ, rotX, rotY, rotZ, flag, amount, 0, p10, modelHash);
 	}
@@ -21679,18 +21679,18 @@ public static class Natives
 	{
 		NativeFunction.Natives.FORCE_PICKUP_ROTATE_FACE_UP();
 	}
-	public static void SET_CUSTOM_PICKUP_WEAPON_HASH(ulong pickupHash, uint pickup)
+	public static void SET_CUSTOM_PICKUP_WEAPON_HASH(uint pickupHash, uint pickup)
 	{
 		NativeFunction.Natives.SET_CUSTOM_PICKUP_WEAPON_HASH(pickupHash, pickup);
 	}
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static Object CREATE_AMBIENT_PICKUP(ulong pickupHash, float posX, float posY, float posZ, int flags, int value, ulong modelHash, bool p7, bool p8)
+	public static Object CREATE_AMBIENT_PICKUP(uint pickupHash, float posX, float posY, float posZ, int flags, int value, uint modelHash, bool p7, bool p8)
 	{
 		return NativeFunction.Natives.CREATE_AMBIENT_PICKUP<Object>(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8);
 	}
-	public static Object CREATE_NON_NETWORKED_AMBIENT_PICKUP(ulong pickupHash, float posX, float posY, float posZ, int flags, int value, ulong modelHash, bool p7, bool p8)
+	public static Object CREATE_NON_NETWORKED_AMBIENT_PICKUP(uint pickupHash, float posX, float posY, float posZ, int flags, int value, uint modelHash, bool p7, bool p8)
 	{
 		return NativeFunction.Natives.CREATE_NON_NETWORKED_AMBIENT_PICKUP<Object>(pickupHash, posX, posY, posZ, flags, value, modelHash, p7, p8);
 	}
@@ -21701,14 +21701,14 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static Object CREATE_PORTABLE_PICKUP(ulong pickupHash, float x, float y, float z, bool placeOnGround, ulong modelHash)
+	public static Object CREATE_PORTABLE_PICKUP(uint pickupHash, float x, float y, float z, bool placeOnGround, uint modelHash)
 	{
 		return NativeFunction.Natives.CREATE_PORTABLE_PICKUP<Object>(pickupHash, x, y, z, placeOnGround, modelHash);
 	}
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static Object CREATE_NON_NETWORKED_PORTABLE_PICKUP(ulong pickupHash, float x, float y, float z, bool placeOnGround, ulong modelHash)
+	public static Object CREATE_NON_NETWORKED_PORTABLE_PICKUP(uint pickupHash, float x, float y, float z, bool placeOnGround, uint modelHash)
 	{
 		return NativeFunction.Natives.CREATE_NON_NETWORKED_PORTABLE_PICKUP<Object>(pickupHash, x, y, z, placeOnGround, modelHash);
 	}
@@ -21728,7 +21728,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.HIDE_PORTABLE_PICKUP_WHEN_DETACHED(pickupObject, toggle);
 	}
-	public static void SET_MAX_NUM_PORTABLE_PICKUPS_CARRIED_BY_PLAYER(ulong modelHash, int number)
+	public static void SET_MAX_NUM_PORTABLE_PICKUPS_CARRIED_BY_PLAYER(uint modelHash, int number)
 	{
 		NativeFunction.Natives.SET_MAX_NUM_PORTABLE_PICKUPS_CARRIED_BY_PLAYER(modelHash, number);
 	}
@@ -21766,7 +21766,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static void REMOVE_ALL_PICKUPS_OF_TYPE(ulong pickupHash)
+	public static void REMOVE_ALL_PICKUPS_OF_TYPE(uint pickupHash)
 	{
 		NativeFunction.Natives.REMOVE_ALL_PICKUPS_OF_TYPE(pickupHash);
 	}
@@ -21797,7 +21797,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Max is 2000 in MP. So if you put the amount to 20, but the value to $400,000 eg. They will only be able to pickup 20 - $2,000 bags. So, $40,000
 	/// </summary>
-	public static void CREATE_MONEY_PICKUPS(float x, float y, float z, int value, int amount, ulong model)
+	public static void CREATE_MONEY_PICKUPS(float x, float y, float z, int value, int amount, uint model)
 	{
 		NativeFunction.Natives.CREATE_MONEY_PICKUPS(x, y, z, value, amount, model);
 	}
@@ -21824,7 +21824,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static bool DOES_PICKUP_OF_TYPE_EXIST_IN_AREA(ulong pickupHash, float x, float y, float z, float radius)
+	public static bool DOES_PICKUP_OF_TYPE_EXIST_IN_AREA(uint pickupHash, float x, float y, float z, float radius)
 	{
 		return NativeFunction.Natives.DOES_PICKUP_OF_TYPE_EXIST_IN_AREA<bool>(pickupHash, x, y, z, radius);
 	}
@@ -21848,21 +21848,21 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static void SET_PLAYER_PERMITTED_TO_COLLECT_PICKUPS_OF_TYPE(Player player, ulong pickupHash, bool toggle)
+	public static void SET_PLAYER_PERMITTED_TO_COLLECT_PICKUPS_OF_TYPE(Player player, uint pickupHash, bool toggle)
 	{
 		NativeFunction.Natives.SET_PLAYER_PERMITTED_TO_COLLECT_PICKUPS_OF_TYPE(player, pickupHash, toggle);
 	}
 	/// <summary>
 	/// 	Maximum amount of pickup models that can be disallowed is 30.
 	/// </summary>
-	public static void SET_LOCAL_PLAYER_PERMITTED_TO_COLLECT_PICKUPS_WITH_MODEL(ulong modelHash, bool toggle)
+	public static void SET_LOCAL_PLAYER_PERMITTED_TO_COLLECT_PICKUPS_WITH_MODEL(uint modelHash, bool toggle)
 	{
 		NativeFunction.Natives.SET_LOCAL_PLAYER_PERMITTED_TO_COLLECT_PICKUPS_WITH_MODEL(modelHash, toggle);
 	}
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static void ALLOW_ALL_PLAYERS_TO_COLLECT_PICKUPS_OF_TYPE(ulong pickupHash)
+	public static void ALLOW_ALL_PLAYERS_TO_COLLECT_PICKUPS_OF_TYPE(uint pickupHash)
 	{
 		NativeFunction.Natives.ALLOW_ALL_PLAYERS_TO_COLLECT_PICKUPS_OF_TYPE(pickupHash);
 	}
@@ -21904,7 +21904,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.ALLOW_PICKUP_ARROW_MARKER_WHEN_UNCOLLECTABLE(pickup, toggle);
 	}
-	public static int GET_DEFAULT_AMMO_FOR_WEAPON_PICKUP(ulong pickupHash)
+	public static int GET_DEFAULT_AMMO_FOR_WEAPON_PICKUP(uint pickupHash)
 	{
 		return NativeFunction.Natives.GET_DEFAULT_AMMO_FOR_WEAPON_PICKUP<int>(pickupHash);
 	}
@@ -22026,16 +22026,16 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static ulong GET_WEAPON_TYPE_FROM_PICKUP_TYPE(ulong pickupHash)
+	public static uint GET_WEAPON_TYPE_FROM_PICKUP_TYPE(uint pickupHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_TYPE_FROM_PICKUP_TYPE<ulong>(pickupHash);
+		return NativeFunction.Natives.GET_WEAPON_TYPE_FROM_PICKUP_TYPE<uint>(pickupHash);
 	}
 	/// <summary>
 	/// 	Returns the pickup hash for the given weapon hash
 	/// </summary>
-	public static ulong GET_PICKUP_TYPE_FROM_WEAPON_HASH(ulong weaponHash)
+	public static uint GET_PICKUP_TYPE_FROM_WEAPON_HASH(uint weaponHash)
 	{
-		return NativeFunction.Natives.GET_PICKUP_TYPE_FROM_WEAPON_HASH<ulong>(weaponHash);
+		return NativeFunction.Natives.GET_PICKUP_TYPE_FROM_WEAPON_HASH<uint>(weaponHash);
 	}
 	public static bool IS_PICKUP_WEAPON_OBJECT_VALID(Object _object)
 	{
@@ -22070,7 +22070,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_OBJECT_TINT_INDEX(_object, textureVariation);
 	}
-	public static bool SET_TINT_INDEX_CLOSEST_BUILDING_OF_TYPE(float x, float y, float z, float radius, ulong modelHash, int textureVariation)
+	public static bool SET_TINT_INDEX_CLOSEST_BUILDING_OF_TYPE(float x, float y, float z, float radius, uint modelHash, int textureVariation)
 	{
 		return NativeFunction.Natives.SET_TINT_INDEX_CLOSEST_BUILDING_OF_TYPE<bool>(x, y, z, radius, modelHash, textureVariation);
 	}
@@ -22103,9 +22103,9 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
 	/// </summary>
-	public static ulong CONVERT_OLD_PICKUP_TYPE_TO_NEW(ulong pickupHash)
+	public static uint CONVERT_OLD_PICKUP_TYPE_TO_NEW(uint pickupHash)
 	{
-		return NativeFunction.Natives.CONVERT_OLD_PICKUP_TYPE_TO_NEW<ulong>(pickupHash);
+		return NativeFunction.Natives.CONVERT_OLD_PICKUP_TYPE_TO_NEW<uint>(pickupHash);
 	}
 	public static void SET_FORCE_OBJECT_THIS_FRAME(float x, float y, float z, float p3)
 	{
@@ -22762,7 +22762,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Note: the names are returned as hashes, the strings can be returned using the function HUD::GET_STREET_NAME_FROM_HASH_KEY.
 	/// </summary>
-	public static void GET_STREET_NAME_AT_COORD(float x, float y, float z, out ulong streetName, out ulong crossingRoad)
+	public static void GET_STREET_NAME_AT_COORD(float x, float y, float z, out uint streetName, out uint crossingRoad)
 	{
 		NativeFunction.Natives.GET_STREET_NAME_AT_COORD(x, y, z, out streetName, out crossingRoad);
 	}
@@ -22959,7 +22959,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
 	/// </summary>
-	public static Ped CREATE_PED(int pedType, ulong modelHash, float x, float y, float z, float heading, bool isNetwork, bool bScriptHostPed)
+	public static Ped CREATE_PED(int pedType, uint modelHash, float x, float y, float z, float heading, bool isNetwork, bool bScriptHostPed)
 	{
 		return NativeFunction.Natives.CREATE_PED<Ped>(pedType, modelHash, x, y, z, heading, isNetwork, bScriptHostPed);
 	}
@@ -22998,7 +22998,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_PED_IN_VEHICLE<bool>(ped, vehicle, atGetIn);
 	}
-	public static bool IS_PED_IN_MODEL(Ped ped, ulong modelHash)
+	public static bool IS_PED_IN_MODEL(Ped ped, uint modelHash)
 	{
 		return NativeFunction.Natives.IS_PED_IN_MODEL<bool>(ped, modelHash);
 	}
@@ -23084,7 +23084,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
 	/// </summary>
-	public static Ped CREATE_PED_INSIDE_VEHICLE(Vehicle vehicle, int pedType, ulong modelHash, int seat, bool isNetwork, bool bScriptHostPed)
+	public static Ped CREATE_PED_INSIDE_VEHICLE(Vehicle vehicle, int pedType, uint modelHash, int seat, bool isNetwork, bool bScriptHostPed)
 	{
 		return NativeFunction.Natives.CREATE_PED_INSIDE_VEHICLE<Ped>(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 	}
@@ -23154,7 +23154,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_AMBIENT_LAW_PED_ACCURACY_MODIFIER(multiplier);
 	}
-	public static bool IS_PED_MODEL(Ped ped, ulong modelHash)
+	public static bool IS_PED_MODEL(Ped ped, uint modelHash)
 	{
 		return NativeFunction.Natives.IS_PED_MODEL<bool>(ped, modelHash);
 	}
@@ -23163,7 +23163,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	It doesn&amp;apos;t really explode the ped&amp;apos;s head but it kills the ped
 	/// </summary>
-	public static void EXPLODE_PED_HEAD(Ped ped, ulong weaponHash)
+	public static void EXPLODE_PED_HEAD(Ped ped, uint weaponHash)
 	{
 		NativeFunction.Natives.EXPLODE_PED_HEAD(ped, weaponHash);
 	}
@@ -23871,9 +23871,9 @@ public static class Natives
 	/// <summary>
 	/// 	Returns the hash of the weapon/model/object that killed the ped.
 	/// </summary>
-	public static ulong GET_PED_CAUSE_OF_DEATH(Ped ped)
+	public static uint GET_PED_CAUSE_OF_DEATH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_CAUSE_OF_DEATH<ulong>(ped);
+		return NativeFunction.Natives.GET_PED_CAUSE_OF_DEATH<uint>(ped);
 	}
 	public static int GET_PED_TIME_OF_DEATH(Ped ped)
 	{
@@ -23887,11 +23887,11 @@ public static class Natives
 	{
 		return NativeFunction.Natives.COUNT_PEDS_IN_COMBAT_WITH_TARGET_WITHIN_RADIUS<int>(ped, x, y, z, radius);
 	}
-	public static void SET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(Ped ped, ulong hash)
+	public static void SET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(Ped ped, uint hash)
 	{
 		NativeFunction.Natives.SET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(ped, hash);
 	}
-	public static void SET_PED_RELATIONSHIP_GROUP_HASH(Ped ped, ulong hash)
+	public static void SET_PED_RELATIONSHIP_GROUP_HASH(Ped ped, uint hash)
 	{
 		NativeFunction.Natives.SET_PED_RELATIONSHIP_GROUP_HASH(ped, hash);
 	}
@@ -23911,7 +23911,7 @@ public static class Natives
 	/// 	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, l_1017, 0xA49E591C);<br/>
 	/// 	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 0xA49E591C, l_1017);
 	/// </summary>
-	public static void SET_RELATIONSHIP_BETWEEN_GROUPS(int relationship, ulong group1, ulong group2)
+	public static void SET_RELATIONSHIP_BETWEEN_GROUPS(int relationship, uint group1, uint group2)
 	{
 		NativeFunction.Natives.SET_RELATIONSHIP_BETWEEN_GROUPS(relationship, group1, group2);
 	}
@@ -23932,22 +23932,22 @@ public static class Natives
 	/// 	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(2, l_1017, 0xA49E591C);<br/>
 	/// 	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(2, 0xA49E591C, l_1017);
 	/// </summary>
-	public static void CLEAR_RELATIONSHIP_BETWEEN_GROUPS(int relationship, ulong group1, ulong group2)
+	public static void CLEAR_RELATIONSHIP_BETWEEN_GROUPS(int relationship, uint group1, uint group2)
 	{
 		NativeFunction.Natives.CLEAR_RELATIONSHIP_BETWEEN_GROUPS(relationship, group1, group2);
 	}
 	/// <summary>
 	/// 	Can&amp;apos;t select void. This function returns nothing. The hash of the created relationship group is output in the second parameter.
 	/// </summary>
-	public static bool ADD_RELATIONSHIP_GROUP(string name, out ulong groupHash)
+	public static bool ADD_RELATIONSHIP_GROUP(string name, out uint groupHash)
 	{
 		return NativeFunction.Natives.ADD_RELATIONSHIP_GROUP<bool>(name, out groupHash);
 	}
-	public static void REMOVE_RELATIONSHIP_GROUP(ulong groupHash)
+	public static void REMOVE_RELATIONSHIP_GROUP(uint groupHash)
 	{
 		NativeFunction.Natives.REMOVE_RELATIONSHIP_GROUP(groupHash);
 	}
-	public static bool DOES_RELATIONSHIP_GROUP_EXIST(ulong groupHash)
+	public static bool DOES_RELATIONSHIP_GROUP_EXIST(uint groupHash)
 	{
 		return NativeFunction.Natives.DOES_RELATIONSHIP_GROUP_EXIST<bool>(groupHash);
 	}
@@ -23972,13 +23972,13 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_RELATIONSHIP_BETWEEN_PEDS<int>(ped1, ped2);
 	}
-	public static ulong GET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(Ped ped)
+	public static uint GET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH<ulong>(ped);
+		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_DEFAULT_HASH<uint>(ped);
 	}
-	public static ulong GET_PED_RELATIONSHIP_GROUP_HASH(Ped ped)
+	public static uint GET_PED_RELATIONSHIP_GROUP_HASH(Ped ped)
 	{
-		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_HASH<ulong>(ped);
+		return NativeFunction.Natives.GET_PED_RELATIONSHIP_GROUP_HASH<uint>(ped);
 	}
 	/// <summary>
 	/// 	Gets the relationship between two groups. This should be called twice (once for each group).<br/>
@@ -23996,15 +23996,15 @@ public static class Natives
 	/// 	PED::GET_RELATIONSHIP_BETWEEN_GROUPS(l_1017, 0xA49E591C);<br/>
 	/// 	PED::GET_RELATIONSHIP_BETWEEN_GROUPS(0xA49E591C, l_1017);
 	/// </summary>
-	public static int GET_RELATIONSHIP_BETWEEN_GROUPS(ulong group1, ulong group2)
+	public static int GET_RELATIONSHIP_BETWEEN_GROUPS(uint group1, uint group2)
 	{
 		return NativeFunction.Natives.GET_RELATIONSHIP_BETWEEN_GROUPS<int>(group1, group2);
 	}
-	public static void SET_RELATIONSHIP_GROUP_AFFECTS_WANTED_LEVEL(ulong group, bool p1)
+	public static void SET_RELATIONSHIP_GROUP_AFFECTS_WANTED_LEVEL(uint group, bool p1)
 	{
 		NativeFunction.Natives.SET_RELATIONSHIP_GROUP_AFFECTS_WANTED_LEVEL(group, p1);
 	}
-	public static void TELL_GROUP_PEDS_IN_AREA_TO_ATTACK(Ped ped, float p2, ulong hash)
+	public static void TELL_GROUP_PEDS_IN_AREA_TO_ATTACK(Ped ped, float p2, uint hash)
 	{
 		NativeFunction.Natives.TELL_GROUP_PEDS_IN_AREA_TO_ATTACK(ped, 0, p2, hash, 0, 0);
 	}
@@ -24044,7 +24044,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Firing pattern info: https://pastebin.com/Px036isB
 	/// </summary>
-	public static void SET_PED_FIRING_PATTERN(Ped ped, ulong patternHash)
+	public static void SET_PED_FIRING_PATTERN(Ped ped, uint patternHash)
 	{
 		NativeFunction.Natives.SET_PED_FIRING_PATTERN(ped, patternHash);
 	}
@@ -24168,11 +24168,11 @@ public static class Natives
 	/// <summary>
 	/// 	damages a ped with the given amount
 	/// </summary>
-	public static void APPLY_DAMAGE_TO_PED(Ped ped, int damageAmount, bool p2, ulong weaponType)
+	public static void APPLY_DAMAGE_TO_PED(Ped ped, int damageAmount, bool p2, uint weaponType)
 	{
 		NativeFunction.Natives.APPLY_DAMAGE_TO_PED(ped, damageAmount, p2, 0, weaponType);
 	}
-	public static int GET_TIME_PED_DAMAGED_BY_WEAPON(Ped ped, ulong weaponHash)
+	public static int GET_TIME_PED_DAMAGED_BY_WEAPON(Ped ped, uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_TIME_PED_DAMAGED_BY_WEAPON<int>(ped, weaponHash);
 	}
@@ -24527,7 +24527,7 @@ public static class Natives
 	/// 	PED::SET_PED_IN_VEHICLE_CONTEXT(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY(&amp;quot;MISS_ARMENIAN3_FRANKLIN_TENSE&amp;quot;));<br/>
 	/// 	PED::SET_PED_IN_VEHICLE_CONTEXT(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY(&amp;quot;MISSFBI5_TREVOR_DRIVING&amp;quot;));
 	/// </summary>
-	public static void SET_PED_IN_VEHICLE_CONTEXT(Ped ped, ulong context)
+	public static void SET_PED_IN_VEHICLE_CONTEXT(Ped ped, uint context)
 	{
 		NativeFunction.Natives.SET_PED_IN_VEHICLE_CONTEXT(ped, context);
 	}
@@ -24981,7 +24981,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_PED_BLUSH_FACEPAINT_TINT_FOR_BARBER<bool>(colorId);
 	}
-	public static int GET_TINT_INDEX_FOR_LAST_GEN_HAIR_TEXTURE(ulong modelHash, int drawableId, int textureId)
+	public static int GET_TINT_INDEX_FOR_LAST_GEN_HAIR_TEXTURE(uint modelHash, int drawableId, int textureId)
 	{
 		return NativeFunction.Natives.GET_TINT_INDEX_FOR_LAST_GEN_HAIR_TEXTURE<int>(modelHash, drawableId, textureId);
 	}
@@ -25754,14 +25754,14 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
 	/// </summary>
-	public static void ADD_PED_DECORATION_FROM_HASHES(Ped ped, ulong collection, ulong overlay)
+	public static void ADD_PED_DECORATION_FROM_HASHES(Ped ped, uint collection, uint overlay)
 	{
 		NativeFunction.Natives.ADD_PED_DECORATION_FROM_HASHES(ped, collection, overlay);
 	}
 	/// <summary>
 	/// 	Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
 	/// </summary>
-	public static void ADD_PED_DECORATION_FROM_HASHES_IN_CORONA(Ped ped, ulong collection, ulong overlay)
+	public static void ADD_PED_DECORATION_FROM_HASHES_IN_CORONA(Ped ped, uint collection, uint overlay)
 	{
 		NativeFunction.Natives.ADD_PED_DECORATION_FROM_HASHES_IN_CORONA(ped, collection, overlay);
 	}
@@ -25781,7 +25781,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
 	/// </summary>
-	public static int GET_PED_DECORATION_ZONE_FROM_HASHES(ulong collection, ulong overlay)
+	public static int GET_PED_DECORATION_ZONE_FROM_HASHES(uint collection, uint overlay)
 	{
 		return NativeFunction.Natives.GET_PED_DECORATION_ZONE_FROM_HASHES<int>(collection, overlay);
 	}
@@ -26563,7 +26563,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
 	/// </summary>
-	public static void SET_PED_MODEL_IS_SUPPRESSED(ulong modelHash, bool toggle)
+	public static void SET_PED_MODEL_IS_SUPPRESSED(uint modelHash, bool toggle)
 	{
 		NativeFunction.Natives.SET_PED_MODEL_IS_SUPPRESSED(modelHash, toggle);
 	}
@@ -27238,7 +27238,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.CREATE_SYNCHRONIZED_SCENE<int>(x, y, z, roll, pitch, yaw, p6);
 	}
-	public static int CREATE_SYNCHRONIZED_SCENE_AT_MAP_OBJECT(float x, float y, float z, float radius, ulong _object)
+	public static int CREATE_SYNCHRONIZED_SCENE_AT_MAP_OBJECT(float x, float y, float z, float radius, uint _object)
 	{
 		return NativeFunction.Natives.CREATE_SYNCHRONIZED_SCENE_AT_MAP_OBJECT<int>(x, y, z, radius, _object);
 	}
@@ -27328,7 +27328,7 @@ public static class Natives
 	/// 		MotionState_Jetpack = 0x535E6A5E<br/>
 	/// 	};
 	/// </summary>
-	public static bool FORCE_PED_MOTION_STATE(Ped ped, ulong motionStateHash, bool p2, int p3, bool p4)
+	public static bool FORCE_PED_MOTION_STATE(Ped ped, uint motionStateHash, bool p2, int p3, bool p4)
 	{
 		return NativeFunction.Natives.FORCE_PED_MOTION_STATE<bool>(ped, motionStateHash, p2, p3, p4);
 	}
@@ -27969,7 +27969,7 @@ public static class Natives
 	/// 	Set the model for a specific Player. Be aware that this will destroy the current Ped for the Player and create a new one, any reference to the old ped should be reset<br/>
 	/// 	Make sure to request the model first and wait until it has loaded.
 	/// </summary>
-	public static void SET_PLAYER_MODEL(Player player, ulong model)
+	public static void SET_PLAYER_MODEL(Player player, uint model)
 	{
 		NativeFunction.Natives.SET_PLAYER_MODEL(player, model);
 	}
@@ -29087,15 +29087,15 @@ public static class Natives
 	{
 		NativeFunction.Natives.SPECIAL_ABILITY_DEPLETE_METER(player, p1, 0);
 	}
-	public static void SPECIAL_ABILITY_LOCK(ulong playerModel)
+	public static void SPECIAL_ABILITY_LOCK(uint playerModel)
 	{
 		NativeFunction.Natives.SPECIAL_ABILITY_LOCK(playerModel, 0);
 	}
-	public static void SPECIAL_ABILITY_UNLOCK(ulong playerModel)
+	public static void SPECIAL_ABILITY_UNLOCK(uint playerModel)
 	{
 		NativeFunction.Natives.SPECIAL_ABILITY_UNLOCK(playerModel, 0);
 	}
-	public static bool IS_SPECIAL_ABILITY_UNLOCKED(ulong playerModel)
+	public static bool IS_SPECIAL_ABILITY_UNLOCKED(uint playerModel)
 	{
 		return NativeFunction.Natives.IS_SPECIAL_ABILITY_UNLOCKED<bool>(playerModel);
 	}
@@ -29548,21 +29548,21 @@ public static class Natives
 	{
 		NativeFunction.Natives.CLEAR_PLAYER_PARACHUTE_VARIATION_OVERRIDE(player);
 	}
-	public static void SET_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player, ulong model)
+	public static void SET_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player, uint model)
 	{
 		NativeFunction.Natives.SET_PLAYER_PARACHUTE_MODEL_OVERRIDE(player, model);
 	}
-	public static void SET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(Player player, ulong model)
+	public static void SET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(Player player, uint model)
 	{
 		NativeFunction.Natives.SET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(player, model);
 	}
-	public static ulong GET_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player)
+	public static uint GET_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_PARACHUTE_MODEL_OVERRIDE<ulong>(player);
+		return NativeFunction.Natives.GET_PLAYER_PARACHUTE_MODEL_OVERRIDE<uint>(player);
 	}
-	public static ulong GET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(Player player)
+	public static uint GET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(Player player)
 	{
-		return NativeFunction.Natives.GET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE<ulong>(player);
+		return NativeFunction.Natives.GET_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE<uint>(player);
 	}
 	public static void CLEAR_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player)
 	{
@@ -29572,7 +29572,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.CLEAR_PLAYER_RESERVE_PARACHUTE_MODEL_OVERRIDE(player);
 	}
-	public static void SET_PLAYER_PARACHUTE_PACK_MODEL_OVERRIDE(Player player, ulong model)
+	public static void SET_PLAYER_PARACHUTE_PACK_MODEL_OVERRIDE(Player player, uint model)
 	{
 		NativeFunction.Natives.SET_PLAYER_PARACHUTE_PACK_MODEL_OVERRIDE(player, model);
 	}
@@ -29854,19 +29854,19 @@ public static class Natives
 	/// <summary>
 	/// 	formerly _REQUEST_STREAMED_SCRIPT
 	/// </summary>
-	public static void REQUEST_SCRIPT_WITH_NAME_HASH(ulong scriptHash)
+	public static void REQUEST_SCRIPT_WITH_NAME_HASH(uint scriptHash)
 	{
 		NativeFunction.Natives.REQUEST_SCRIPT_WITH_NAME_HASH(scriptHash);
 	}
-	public static void SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(ulong scriptHash)
+	public static void SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(uint scriptHash)
 	{
 		NativeFunction.Natives.SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(scriptHash);
 	}
-	public static bool HAS_SCRIPT_WITH_NAME_HASH_LOADED(ulong scriptHash)
+	public static bool HAS_SCRIPT_WITH_NAME_HASH_LOADED(uint scriptHash)
 	{
 		return NativeFunction.Natives.HAS_SCRIPT_WITH_NAME_HASH_LOADED<bool>(scriptHash);
 	}
-	public static bool DOES_SCRIPT_WITH_NAME_HASH_EXIST(ulong scriptHash)
+	public static bool DOES_SCRIPT_WITH_NAME_HASH_EXIST(uint scriptHash)
 	{
 		return NativeFunction.Natives.DOES_SCRIPT_WITH_NAME_HASH_EXIST<bool>(scriptHash);
 	}
@@ -29913,7 +29913,7 @@ public static class Natives
 	/// 		v3 = rage::scrProgram::GetNumRefs(program) - 1;<br/>
 	/// 	return v3;
 	/// </summary>
-	public static int GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(ulong scriptHash)
+	public static int GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(uint scriptHash)
 	{
 		return NativeFunction.Natives.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH<int>(scriptHash);
 	}
@@ -29921,9 +29921,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_THIS_SCRIPT_NAME<string>();
 	}
-	public static ulong GET_HASH_OF_THIS_SCRIPT_NAME()
+	public static uint GET_HASH_OF_THIS_SCRIPT_NAME()
 	{
-		return NativeFunction.Natives.GET_HASH_OF_THIS_SCRIPT_NAME<ulong>();
+		return NativeFunction.Natives.GET_HASH_OF_THIS_SCRIPT_NAME<uint>();
 	}
 	/// <summary>
 	/// 	eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)
@@ -29999,14 +29999,14 @@ public static class Natives
 	/// <summary>
 	/// 	Hashed version of BG_START_CONTEXT.
 	/// </summary>
-	public static void BG_START_CONTEXT_HASH(ulong contextHash)
+	public static void BG_START_CONTEXT_HASH(uint contextHash)
 	{
 		NativeFunction.Natives.BG_START_CONTEXT_HASH(contextHash);
 	}
 	/// <summary>
 	/// 	Hashed version of BG_END_CONTEXT.
 	/// </summary>
-	public static void BG_END_CONTEXT_HASH(ulong contextHash)
+	public static void BG_END_CONTEXT_HASH(uint contextHash)
 	{
 		NativeFunction.Natives.BG_END_CONTEXT_HASH(contextHash);
 	}
@@ -30032,7 +30032,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.BG_GET_LAUNCH_PARAM_VALUE<int>(scriptIndex, p1);
 	}
-	public static int BG_GET_SCRIPT_ID_FROM_NAME_HASH(ulong p0)
+	public static int BG_GET_SCRIPT_ID_FROM_NAME_HASH(uint p0)
 	{
 		return NativeFunction.Natives.BG_GET_SCRIPT_ID_FROM_NAME_HASH<int>(p0);
 	}
@@ -30040,7 +30040,7 @@ public static class Natives
 	/// 	New variant of SEND_TU_SCRIPT_EVENT that automatically initializes the event data header.<br/>
 	/// 	See TRIGGER_SCRIPT_EVENT for more info.
 	/// </summary>
-	public static void _SEND_TU_SCRIPT_EVENT_NEW(int eventGroup, int eventDataSize, int playerBits, ulong eventType)
+	public static void _SEND_TU_SCRIPT_EVENT_NEW(int eventGroup, int eventDataSize, int playerBits, uint eventType)
 	{
 		NativeFunction.Natives._SEND_TU_SCRIPT_EVENT_NEW(eventGroup, 0, eventDataSize, playerBits, eventType);
 	}
@@ -30141,7 +30141,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Unless the return value is 2, the other return values are undefined.
 	/// </summary>
-	public static int GET_SHAPE_TEST_RESULT_INCLUDING_MATERIAL(int shapeTestHandle, out bool hit, out Vector3 endCoords, out Vector3 surfaceNormal, out ulong materialHash, out Entity entityHit)
+	public static int GET_SHAPE_TEST_RESULT_INCLUDING_MATERIAL(int shapeTestHandle, out bool hit, out Vector3 endCoords, out Vector3 surfaceNormal, out uint materialHash, out Entity entityHit)
 	{
 		return NativeFunction.Natives.GET_SHAPE_TEST_RESULT_INCLUDING_MATERIAL<int>(shapeTestHandle, out hit, out endCoords, out surfaceNormal, out materialHash, out entityHit);
 	}
@@ -30159,9 +30159,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives.SC_INBOX_GET_TOTAL_NUM_MESSAGES<int>();
 	}
-	public static ulong SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX(int msgIndex)
+	public static uint SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX(int msgIndex)
 	{
-		return NativeFunction.Natives.SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX<ulong>(msgIndex);
+		return NativeFunction.Natives.SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX<uint>(msgIndex);
 	}
 	public static bool SC_INBOX_GET_MESSAGE_IS_READ_AT_INDEX(int msgIndex)
 	{
@@ -30259,15 +30259,15 @@ public static class Natives
 	{
 		return NativeFunction.Natives.SC_GET_NEW_ROCKSTAR_MSG<string>();
 	}
-	public static bool SC_PRESENCE_ATTR_SET_INT(ulong attrHash, int value)
+	public static bool SC_PRESENCE_ATTR_SET_INT(uint attrHash, int value)
 	{
 		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_INT<bool>(attrHash, value);
 	}
-	public static bool SC_PRESENCE_ATTR_SET_FLOAT(ulong attrHash, float value)
+	public static bool SC_PRESENCE_ATTR_SET_FLOAT(uint attrHash, float value)
 	{
 		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_FLOAT<bool>(attrHash, value);
 	}
-	public static bool SC_PRESENCE_ATTR_SET_STRING(ulong attrHash, string value)
+	public static bool SC_PRESENCE_ATTR_SET_STRING(uint attrHash, string value)
 	{
 		return NativeFunction.Natives.SC_PRESENCE_ATTR_SET_STRING<bool>(attrHash, value);
 	}
@@ -30597,15 +30597,15 @@ public static class Natives
 	/// <summary>
 	/// 	Returns stat hash based on dataType, statIndex/statId and characterSlot. Related to CStatsMpCharacterMappingData
 	/// </summary>
-	public static ulong _GET_STAT_HASH_FOR_CHARACTER_STAT(int dataType, int statIndex, int charSlot)
+	public static uint _GET_STAT_HASH_FOR_CHARACTER_STAT(int dataType, int statIndex, int charSlot)
 	{
-		return NativeFunction.Natives._GET_STAT_HASH_FOR_CHARACTER_STAT<ulong>(dataType, statIndex, charSlot);
+		return NativeFunction.Natives._GET_STAT_HASH_FOR_CHARACTER_STAT<uint>(dataType, statIndex, charSlot);
 	}
 	/// <summary>
 	/// 	Example:<br/>
 	/// 	 STATS::STAT_SET_INT(MISC::GET_HASH_KEY(&amp;quot;MPPLY_KILLS_PLAYERS&amp;quot;), 1337, true);
 	/// </summary>
-	public static bool STAT_SET_INT(ulong statName, int value, bool save)
+	public static bool STAT_SET_INT(uint statName, int value, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_INT<bool>(statName, value, save);
 	}
@@ -30613,7 +30613,7 @@ public static class Natives
 	/// 	Example:<br/>
 	/// 	 STATS::STAT_SET_FLOAT(MISC::GET_HASH_KEY(&amp;quot;MP0_WEAPON_ACCURACY&amp;quot;), 66.6f, true);
 	/// </summary>
-	public static bool STAT_SET_FLOAT(ulong statName, float value, bool save)
+	public static bool STAT_SET_FLOAT(uint statName, float value, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_FLOAT<bool>(statName, value, save);
 	}
@@ -30621,7 +30621,7 @@ public static class Natives
 	/// 	Example:<br/>
 	/// 	 STATS::STAT_SET_BOOL(MISC::GET_HASH_KEY(&amp;quot;MPPLY_MELEECHLENGECOMPLETED&amp;quot;), trur, true);
 	/// </summary>
-	public static bool STAT_SET_BOOL(ulong statName, bool value, bool save)
+	public static bool STAT_SET_BOOL(uint statName, bool value, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_BOOL<bool>(statName, value, save);
 	}
@@ -30691,7 +30691,7 @@ public static class Natives
 	/// 	&amp;quot;RC_TON4&amp;quot;<br/>
 	/// 	&amp;quot;RC_TON5&amp;quot;
 	/// </summary>
-	public static bool STAT_SET_GXT_LABEL(ulong statName, string value, bool save)
+	public static bool STAT_SET_GXT_LABEL(uint statName, string value, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_GXT_LABEL<bool>(statName, value, save);
 	}
@@ -30710,30 +30710,30 @@ public static class Natives
 	/// 	<br/>
 	/// 	The decompiled scripts use TIME::GET_POSIX_TIME to fill this structure.
 	/// </summary>
-	public static bool STAT_SET_DATE(ulong statName, int numFields, bool save)
+	public static bool STAT_SET_DATE(uint statName, int numFields, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_DATE<bool>(statName, 0, numFields, save);
 	}
-	public static bool STAT_SET_STRING(ulong statName, string value, bool save)
+	public static bool STAT_SET_STRING(uint statName, string value, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_STRING<bool>(statName, value, save);
 	}
-	public static bool STAT_SET_POS(ulong statName, float x, float y, float z, bool save)
+	public static bool STAT_SET_POS(uint statName, float x, float y, float z, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_POS<bool>(statName, x, y, z, save);
 	}
-	public static bool STAT_SET_MASKED_INT(ulong statName, int p1, int p2, int p3, bool save)
+	public static bool STAT_SET_MASKED_INT(uint statName, int p1, int p2, int p3, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_MASKED_INT<bool>(statName, p1, p2, p3, save);
 	}
-	public static bool STAT_SET_USER_ID(ulong statName, string value, bool save)
+	public static bool STAT_SET_USER_ID(uint statName, string value, bool save)
 	{
 		return NativeFunction.Natives.STAT_SET_USER_ID<bool>(statName, value, save);
 	}
 	/// <summary>
 	/// 	p1 always true.
 	/// </summary>
-	public static bool STAT_SET_CURRENT_POSIX_TIME(ulong statName, bool p1)
+	public static bool STAT_SET_CURRENT_POSIX_TIME(uint statName, bool p1)
 	{
 		return NativeFunction.Natives.STAT_SET_CURRENT_POSIX_TIME<bool>(statName, p1);
 	}
@@ -30741,62 +30741,62 @@ public static class Natives
 	/// 	p2 appears to always be -1<br/>
 	/// 	
 	/// </summary>
-	public static bool STAT_GET_INT(ulong statHash, out int outValue, int p2)
+	public static bool STAT_GET_INT(uint statHash, out int outValue, int p2)
 	{
 		return NativeFunction.Natives.STAT_GET_INT<bool>(statHash, out outValue, p2);
 	}
-	public static bool STAT_GET_FLOAT(ulong statHash, out float outValue)
+	public static bool STAT_GET_FLOAT(uint statHash, out float outValue)
 	{
 		return NativeFunction.Natives.STAT_GET_FLOAT<bool>(statHash, out outValue, 0);
 	}
-	public static bool STAT_GET_BOOL(ulong statHash, out bool outValue)
+	public static bool STAT_GET_BOOL(uint statHash, out bool outValue)
 	{
 		return NativeFunction.Natives.STAT_GET_BOOL<bool>(statHash, out outValue, 0);
 	}
 	/// <summary>
 	/// 	p3 is probably characterSlot or BOOL save, always -1
 	/// </summary>
-	public static bool STAT_GET_DATE(ulong statHash, int numFields)
+	public static bool STAT_GET_DATE(uint statHash, int numFields)
 	{
 		return NativeFunction.Natives.STAT_GET_DATE<bool>(statHash, 0, numFields, 0);
 	}
 	/// <summary>
 	/// 	p1 is always -1 in the script files
 	/// </summary>
-	public static string STAT_GET_STRING(ulong statHash, int p1)
+	public static string STAT_GET_STRING(uint statHash, int p1)
 	{
 		return NativeFunction.Natives.STAT_GET_STRING<string>(statHash, p1);
 	}
 	/// <summary>
 	/// 	p3 is probably characterSlot or BOOL save, always -1
 	/// </summary>
-	public static bool STAT_GET_POS(ulong statName, out float outX, out float outY, out float outZ)
+	public static bool STAT_GET_POS(uint statName, out float outX, out float outY, out float outZ)
 	{
 		return NativeFunction.Natives.STAT_GET_POS<bool>(statName, out outX, out outY, out outZ, 0);
 	}
 	/// <summary>
 	/// 	p4 is probably characterSlot or BOOL save
 	/// </summary>
-	public static bool STAT_GET_MASKED_INT(ulong statHash, out int outValue, int p2, int p3)
+	public static bool STAT_GET_MASKED_INT(uint statHash, out int outValue, int p2, int p3)
 	{
 		return NativeFunction.Natives.STAT_GET_MASKED_INT<bool>(statHash, out outValue, p2, p3, 0);
 	}
 	/// <summary>
 	/// 	Returns the rockstar ID (user id) value of a given stat. Returns &amp;quot;STAT_UNKNOWN&amp;quot; if the statHash is invalid or the stat has no userId
 	/// </summary>
-	public static string STAT_GET_USER_ID(ulong statHash)
+	public static string STAT_GET_USER_ID(uint statHash)
 	{
 		return NativeFunction.Natives.STAT_GET_USER_ID<string>(statHash);
 	}
-	public static string STAT_GET_LICENSE_PLATE(ulong statName)
+	public static string STAT_GET_LICENSE_PLATE(uint statName)
 	{
 		return NativeFunction.Natives.STAT_GET_LICENSE_PLATE<string>(statName);
 	}
-	public static bool STAT_SET_LICENSE_PLATE(ulong statName, string str)
+	public static bool STAT_SET_LICENSE_PLATE(uint statName, string str)
 	{
 		return NativeFunction.Natives.STAT_SET_LICENSE_PLATE<bool>(statName, str);
 	}
-	public static void STAT_INCREMENT(ulong statName, float value)
+	public static void STAT_INCREMENT(uint statName, float value)
 	{
 		NativeFunction.Natives.STAT_INCREMENT(statName, value);
 	}
@@ -30808,7 +30808,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.STAT_COMMUNITY_SYNCH_IS_PENDING<bool>();
 	}
-	public static bool STAT_COMMUNITY_GET_HISTORY(ulong statName, int p1, out float outValue)
+	public static bool STAT_COMMUNITY_GET_HISTORY(uint statName, int p1, out float outValue)
 	{
 		return NativeFunction.Natives.STAT_COMMUNITY_GET_HISTORY<bool>(statName, p1, out outValue);
 	}
@@ -30826,19 +30826,19 @@ public static class Natives
 	{
 		NativeFunction.Natives.STAT_LOCAL_RESET_ALL_ONLINE_CHARACTER_STATS(p0);
 	}
-	public static int STAT_GET_NUMBER_OF_DAYS(ulong statName)
+	public static int STAT_GET_NUMBER_OF_DAYS(uint statName)
 	{
 		return NativeFunction.Natives.STAT_GET_NUMBER_OF_DAYS<int>(statName);
 	}
-	public static int STAT_GET_NUMBER_OF_HOURS(ulong statName)
+	public static int STAT_GET_NUMBER_OF_HOURS(uint statName)
 	{
 		return NativeFunction.Natives.STAT_GET_NUMBER_OF_HOURS<int>(statName);
 	}
-	public static int STAT_GET_NUMBER_OF_MINUTES(ulong statName)
+	public static int STAT_GET_NUMBER_OF_MINUTES(uint statName)
 	{
 		return NativeFunction.Natives.STAT_GET_NUMBER_OF_MINUTES<int>(statName);
 	}
-	public static int STAT_GET_NUMBER_OF_SECONDS(ulong statName)
+	public static int STAT_GET_NUMBER_OF_SECONDS(uint statName)
 	{
 		return NativeFunction.Natives.STAT_GET_NUMBER_OF_SECONDS<int>(statName);
 	}
@@ -30865,13 +30865,13 @@ public static class Natives
 	{
 		return NativeFunction.Natives.PACKED_STAT_GET_INT_STAT_INDEX<int>(p0);
 	}
-	public static ulong GET_PACKED_INT_STAT_KEY(int index, bool spStat, bool charStat, int character)
+	public static uint GET_PACKED_INT_STAT_KEY(int index, bool spStat, bool charStat, int character)
 	{
-		return NativeFunction.Natives.GET_PACKED_INT_STAT_KEY<ulong>(index, spStat, charStat, character);
+		return NativeFunction.Natives.GET_PACKED_INT_STAT_KEY<uint>(index, spStat, charStat, character);
 	}
-	public static ulong GET_PACKED_TU_INT_STAT_KEY(int index, bool spStat, bool charStat, int character)
+	public static uint GET_PACKED_TU_INT_STAT_KEY(int index, bool spStat, bool charStat, int character)
 	{
-		return NativeFunction.Natives.GET_PACKED_TU_INT_STAT_KEY<ulong>(index, spStat, charStat, character);
+		return NativeFunction.Natives.GET_PACKED_TU_INT_STAT_KEY<uint>(index, spStat, charStat, character);
 	}
 	/// <summary>
 	/// 	Needs more research. Gets the stat name of a masked int?<br/>
@@ -30894,9 +30894,9 @@ public static class Natives
 	/// 	&amp;quot;_CASINOPSTAT_INT&amp;quot;<br/>
 	/// 	&amp;quot;_CASINOHSTPSTAT_INT&amp;quot;
 	/// </summary>
-	public static ulong GET_PACKED_NG_INT_STAT_KEY(int index, bool spStat, bool charStat, int character, string section)
+	public static uint GET_PACKED_NG_INT_STAT_KEY(int index, bool spStat, bool charStat, int character, string section)
 	{
-		return NativeFunction.Natives.GET_PACKED_NG_INT_STAT_KEY<ulong>(index, spStat, charStat, character, section);
+		return NativeFunction.Natives.GET_PACKED_NG_INT_STAT_KEY<uint>(index, spStat, charStat, character, section);
 	}
 	public static bool GET_PACKED_STAT_BOOL_CODE(int index, int characterSlot)
 	{
@@ -30934,7 +30934,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.PLAYSTATS_NPC_INVITE(p0);
 	}
-	public static void PLAYSTATS_AWARD_XP(int amount, ulong type, ulong category)
+	public static void PLAYSTATS_AWARD_XP(int amount, uint type, uint category)
 	{
 		NativeFunction.Natives.PLAYSTATS_AWARD_XP(amount, type, category);
 	}
@@ -31014,7 +31014,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.PLAYSTATS_ACQUIRED_HIDDEN_PACKAGE(0);
 	}
-	public static void PLAYSTATS_WEBSITE_VISITED(ulong scaleformHash, int p1)
+	public static void PLAYSTATS_WEBSITE_VISITED(uint scaleformHash, int p1)
 	{
 		NativeFunction.Natives.PLAYSTATS_WEBSITE_VISITED(scaleformHash, p1);
 	}
@@ -31040,7 +31040,7 @@ public static class Natives
 	/// <summary>
 	/// 	This is a typo made by R*. It&amp;apos;s supposed to be called PLAYSTATS_WEAPON_MOD_CHANGE.
 	/// </summary>
-	public static void PLAYSTATS_WEAPON_MODE_CHANGE(ulong weaponHash, ulong componentHashTo, ulong componentHashFrom)
+	public static void PLAYSTATS_WEAPON_MODE_CHANGE(uint weaponHash, uint componentHashTo, uint componentHashFrom)
 	{
 		NativeFunction.Natives.PLAYSTATS_WEAPON_MODE_CHANGE(weaponHash, componentHashTo, componentHashFrom);
 	}
@@ -31076,7 +31076,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.PLAYSTATS_SET_JOIN_TYPE(joinType);
 	}
-	public static void PLAYSTATS_HEIST_SAVE_CHEAT(ulong hash, int p1)
+	public static void PLAYSTATS_HEIST_SAVE_CHEAT(uint hash, int p1)
 	{
 		NativeFunction.Natives.PLAYSTATS_HEIST_SAVE_CHEAT(hash, p1);
 	}
@@ -31088,7 +31088,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.PLAYSTATS_AWARD_BAD_SPORT(id);
 	}
-	public static void PLAYSTATS_PEGASUS_AS_PERSONAL_AIRCRAFT(ulong modelHash)
+	public static void PLAYSTATS_PEGASUS_AS_PERSONAL_AIRCRAFT(uint modelHash)
 	{
 		NativeFunction.Natives.PLAYSTATS_PEGASUS_AS_PERSONAL_AIRCRAFT(modelHash);
 	}
@@ -31283,15 +31283,15 @@ public static class Natives
 	{
 		return NativeFunction.Natives.LEADERBOARDS_GET_CACHE_DATA_ROW<bool>(0, 0, 0);
 	}
-	public static void PRESENCE_EVENT_UPDATESTAT_INT(ulong statHash, int value, int p2)
+	public static void PRESENCE_EVENT_UPDATESTAT_INT(uint statHash, int value, int p2)
 	{
 		NativeFunction.Natives.PRESENCE_EVENT_UPDATESTAT_INT(statHash, value, p2);
 	}
-	public static void PRESENCE_EVENT_UPDATESTAT_FLOAT(ulong statHash, float value, int p2)
+	public static void PRESENCE_EVENT_UPDATESTAT_FLOAT(uint statHash, float value, int p2)
 	{
 		NativeFunction.Natives.PRESENCE_EVENT_UPDATESTAT_FLOAT(statHash, value, p2);
 	}
-	public static void PRESENCE_EVENT_UPDATESTAT_INT_WITH_STRING(ulong statHash, int value, int p2, string _string)
+	public static void PRESENCE_EVENT_UPDATESTAT_INT_WITH_STRING(uint statHash, int value, int p2, string _string)
 	{
 		NativeFunction.Natives.PRESENCE_EVENT_UPDATESTAT_INT_WITH_STRING(statHash, value, p2, _string);
 	}
@@ -31409,7 +31409,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.STAT_GET_CANCEL_SAVE_MIGRATION_STATUS<int>();
 	}
-	public static bool STAT_SAVE_MIGRATION_CONSUME_CONTENT(ulong contentId, string srcPlatform, string srcGamerHandle)
+	public static bool STAT_SAVE_MIGRATION_CONSUME_CONTENT(uint contentId, string srcPlatform, string srcGamerHandle)
 	{
 		return NativeFunction.Natives.STAT_SAVE_MIGRATION_CONSUME_CONTENT<bool>(contentId, srcPlatform, srcGamerHandle);
 	}
@@ -31709,7 +31709,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.HIRED_LIMO(0, 0);
 	}
-	public static void ORDER_BOSS_VEHICLE(ulong vehicleHash)
+	public static void ORDER_BOSS_VEHICLE(uint vehicleHash)
 	{
 		NativeFunction.Natives.ORDER_BOSS_VEHICLE(0, 0, vehicleHash);
 	}
@@ -31879,7 +31879,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.PLAYSTATS_SWITCH_PASSIVE_MODE(p0, p1, p2, p3);
 	}
-	public static void PLAYSTATS_COLLECTIBLE_PICKED_UP(int p0, ulong objectHash, int moneyAmount, int rpAmount, int chipsAmount, int p8)
+	public static void PLAYSTATS_COLLECTIBLE_PICKED_UP(int p0, uint objectHash, int moneyAmount, int rpAmount, int chipsAmount, int p8)
 	{
 		NativeFunction.Natives.PLAYSTATS_COLLECTIBLE_PICKED_UP(p0, objectHash, 0, 0, moneyAmount, rpAmount, chipsAmount, 0, p8, 0, 0);
 	}
@@ -32039,7 +32039,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.PLAYSTATS_CARCLUB_CHALLENGE(0, 0, 0, 0);
 	}
-	public static void PLAYSTATS_CARCLUB_PRIZE(int p0, ulong vehicleModel)
+	public static void PLAYSTATS_CARCLUB_PRIZE(int p0, uint vehicleModel)
 	{
 		NativeFunction.Natives.PLAYSTATS_CARCLUB_PRIZE(p0, vehicleModel);
 	}
@@ -32091,7 +32091,7 @@ public static class Natives
 	{
 		NativeFunction.Natives._PLAYSTATS_ATTRITION_STAGE_END(0);
 	}
-	public static void _PLAYSTATS_SHOWROOM_NAV(ulong entity)
+	public static void _PLAYSTATS_SHOWROOM_NAV(uint entity)
 	{
 		NativeFunction.Natives._PLAYSTATS_SHOWROOM_NAV(0, 0, entity);
 	}
@@ -32137,18 +32137,18 @@ public static class Natives
 	/// 	Request a model to be loaded into memory.<br/>
 	/// 	
 	/// </summary>
-	public static void REQUEST_MODEL(ulong model)
+	public static void REQUEST_MODEL(uint model)
 	{
 		NativeFunction.Natives.REQUEST_MODEL(model);
 	}
-	public static void REQUEST_MENU_PED_MODEL(ulong model)
+	public static void REQUEST_MENU_PED_MODEL(uint model)
 	{
 		NativeFunction.Natives.REQUEST_MENU_PED_MODEL(model);
 	}
 	/// <summary>
 	/// 	Checks if the specified model has loaded into memory.
 	/// </summary>
-	public static bool HAS_MODEL_LOADED(ulong model)
+	public static bool HAS_MODEL_LOADED(uint model)
 	{
 		return NativeFunction.Natives.HAS_MODEL_LOADED<bool>(model);
 	}
@@ -32167,32 +32167,32 @@ public static class Natives
 	/// <summary>
 	/// 	Unloads model from memory
 	/// </summary>
-	public static void SET_MODEL_AS_NO_LONGER_NEEDED(ulong model)
+	public static void SET_MODEL_AS_NO_LONGER_NEEDED(uint model)
 	{
 		NativeFunction.Natives.SET_MODEL_AS_NO_LONGER_NEEDED(model);
 	}
 	/// <summary>
 	/// 	Check if model is in cdimage(rpf)
 	/// </summary>
-	public static bool IS_MODEL_IN_CDIMAGE(ulong model)
+	public static bool IS_MODEL_IN_CDIMAGE(uint model)
 	{
 		return NativeFunction.Natives.IS_MODEL_IN_CDIMAGE<bool>(model);
 	}
 	/// <summary>
 	/// 	Returns whether the specified model exists in the game.
 	/// </summary>
-	public static bool IS_MODEL_VALID(ulong model)
+	public static bool IS_MODEL_VALID(uint model)
 	{
 		return NativeFunction.Natives.IS_MODEL_VALID<bool>(model);
 	}
-	public static bool IS_MODEL_A_PED(ulong model)
+	public static bool IS_MODEL_A_PED(uint model)
 	{
 		return NativeFunction.Natives.IS_MODEL_A_PED<bool>(model);
 	}
 	/// <summary>
 	/// 	Returns whether the specified model represents a vehicle.
 	/// </summary>
-	public static bool IS_MODEL_A_VEHICLE(ulong model)
+	public static bool IS_MODEL_A_VEHICLE(uint model)
 	{
 		return NativeFunction.Natives.IS_MODEL_A_VEHICLE<bool>(model);
 	}
@@ -32200,11 +32200,11 @@ public static class Natives
 	{
 		NativeFunction.Natives.REQUEST_COLLISION_AT_COORD(x, y, z);
 	}
-	public static void REQUEST_COLLISION_FOR_MODEL(ulong model)
+	public static void REQUEST_COLLISION_FOR_MODEL(uint model)
 	{
 		NativeFunction.Natives.REQUEST_COLLISION_FOR_MODEL(model);
 	}
-	public static bool HAS_COLLISION_FOR_MODEL_LOADED(ulong model)
+	public static bool HAS_COLLISION_FOR_MODEL_LOADED(uint model)
 	{
 		return NativeFunction.Natives.HAS_COLLISION_FOR_MODEL_LOADED<bool>(model);
 	}
@@ -32816,11 +32816,11 @@ public static class Natives
 	{
 		NativeFunction.Natives.SHUTDOWN_CREATOR_BUDGET();
 	}
-	public static bool ADD_MODEL_TO_CREATOR_BUDGET(ulong modelHash)
+	public static bool ADD_MODEL_TO_CREATOR_BUDGET(uint modelHash)
 	{
 		return NativeFunction.Natives.ADD_MODEL_TO_CREATOR_BUDGET<bool>(modelHash);
 	}
-	public static void REMOVE_MODEL_FROM_CREATOR_BUDGET(ulong modelHash)
+	public static void REMOVE_MODEL_FROM_CREATOR_BUDGET(uint modelHash)
 	{
 		NativeFunction.Natives.REMOVE_MODEL_FROM_CREATOR_BUDGET(modelHash);
 	}
@@ -32976,7 +32976,7 @@ public static class Natives
 	/// <summary>
 	/// 	info about driving modes: https://gtaforums.com/topic/822314-guide-driving-styles/
 	/// </summary>
-	public static void TASK_VEHICLE_DRIVE_TO_COORD(Ped ped, Vehicle vehicle, float x, float y, float z, float speed, ulong vehicleModel, int drivingMode, float stopRange, float straightLineDistance)
+	public static void TASK_VEHICLE_DRIVE_TO_COORD(Ped ped, Vehicle vehicle, float x, float y, float z, float speed, uint vehicleModel, int drivingMode, float stopRange, float straightLineDistance)
 	{
 		NativeFunction.Natives.TASK_VEHICLE_DRIVE_TO_COORD(ped, vehicle, x, y, z, speed, 0, vehicleModel, drivingMode, stopRange, straightLineDistance);
 	}
@@ -33127,7 +33127,7 @@ public static class Natives
 	/// <summary>
 	/// 	known &amp;quot;killTypes&amp;quot; are: &amp;quot;AR_stealth_kill_knife&amp;quot; and &amp;quot;AR_stealth_kill_a&amp;quot;.
 	/// </summary>
-	public static void TASK_STEALTH_KILL(Ped killer, Ped target, ulong stealthKillActionResultHash, float desiredMoveBlendRatio, int stealthFlags)
+	public static void TASK_STEALTH_KILL(Ped killer, Ped target, uint stealthKillActionResultHash, float desiredMoveBlendRatio, int stealthFlags)
 	{
 		NativeFunction.Natives.TASK_STEALTH_KILL(killer, target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags);
 	}
@@ -33518,7 +33518,7 @@ public static class Natives
 	/// 	Gets the status of a script-assigned task.<br/>
 	/// 	taskHash: https://alloc8or.re/gta5/doc/enums/eScriptTaskHash.txt
 	/// </summary>
-	public static int GET_SCRIPT_TASK_STATUS(Ped ped, ulong taskHash)
+	public static int GET_SCRIPT_TASK_STATUS(Ped ped, uint taskHash)
 	{
 		return NativeFunction.Natives.GET_SCRIPT_TASK_STATUS<int>(ped, taskHash);
 	}
@@ -33536,7 +33536,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.TASK_LEAVE_ANY_VEHICLE(ped, delayTime, flags);
 	}
-	public static void TASK_AIM_GUN_SCRIPTED(Ped ped, ulong scriptTask, bool disableBlockingClip, bool instantBlendToAim)
+	public static void TASK_AIM_GUN_SCRIPTED(Ped ped, uint scriptTask, bool disableBlockingClip, bool instantBlendToAim)
 	{
 		NativeFunction.Natives.TASK_AIM_GUN_SCRIPTED(ped, scriptTask, disableBlockingClip, instantBlendToAim);
 	}
@@ -33573,7 +33573,7 @@ public static class Natives
 	/// <summary>
 	/// 	Firing Pattern Hash Information: https://pastebin.com/Px036isB
 	/// </summary>
-	public static void TASK_SHOOT_AT_COORD(Ped ped, float x, float y, float z, int duration, ulong firingPattern)
+	public static void TASK_SHOOT_AT_COORD(Ped ped, float x, float y, float z, int duration, uint firingPattern)
 	{
 		NativeFunction.Natives.TASK_SHOOT_AT_COORD(ped, x, y, z, duration, firingPattern);
 	}
@@ -33945,7 +33945,7 @@ public static class Natives
 	/// 	I marked p6 as distanceToShoot as if you think of GTA&amp;apos;s Logic with the native SET_VEHICLE_SHOOT natives, it won&amp;apos;t shoot till it gets within a certain distance of the target.<br/>
 	/// 	I marked p7 as pedAccuracy as it seems it&amp;apos;s mostly 100 (Completely Accurate), 75, 90, etc. Although this could be the ammo count within the gun, but I highly doubt it. I will change this comment once I find out if it&amp;apos;s ammo count or not.
 	/// </summary>
-	public static void TASK_DRIVE_BY(Ped driverPed, Ped targetPed, Vehicle targetVehicle, float targetX, float targetY, float targetZ, float distanceToShoot, int pedAccuracy, bool pushUnderneathDrivingTaskIfDriving, ulong firingPattern)
+	public static void TASK_DRIVE_BY(Ped driverPed, Ped targetPed, Vehicle targetVehicle, float targetX, float targetY, float targetZ, float distanceToShoot, int pedAccuracy, bool pushUnderneathDrivingTaskIfDriving, uint firingPattern)
 	{
 		NativeFunction.Natives.TASK_DRIVE_BY(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern);
 	}
@@ -34033,7 +34033,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Firing Pattern Hash Information: https://pastebin.com/Px036isB
 	/// </summary>
-	public static void TASK_SHOOT_AT_ENTITY(Entity entity, Entity target, int duration, ulong firingPattern)
+	public static void TASK_SHOOT_AT_ENTITY(Entity entity, Entity target, int duration, uint firingPattern)
 	{
 		NativeFunction.Natives.TASK_SHOOT_AT_ENTITY(entity, target, duration, firingPattern);
 	}
@@ -34107,7 +34107,7 @@ public static class Natives
 	/// <summary>
 	/// 	p1 is always GET_HASH_KEY(&amp;quot;empty&amp;quot;) in scripts, for the rare times this is used
 	/// </summary>
-	public static void TASK_SET_DECISION_MAKER(Ped ped, ulong decisionMakerId)
+	public static void TASK_SET_DECISION_MAKER(Ped ped, uint decisionMakerId)
 	{
 		NativeFunction.Natives.TASK_SET_DECISION_MAKER(ped, decisionMakerId);
 	}
@@ -34859,11 +34859,11 @@ public static class Natives
 	/// 	p13: 0<br/>
 	/// 	firing_pattern: ${firing_pattern_full_auto}, 0xC6EE6B4C
 	/// </summary>
-	public static void TASK_GO_TO_COORD_WHILE_AIMING_AT_COORD(Ped ped, float x, float y, float z, float aimAtX, float aimAtY, float aimAtZ, float moveBlendRatio, bool shoot, float targetRadius, float slowDistance, bool useNavMesh, int navFlags, bool instantBlendToAim, ulong firingPattern)
+	public static void TASK_GO_TO_COORD_WHILE_AIMING_AT_COORD(Ped ped, float x, float y, float z, float aimAtX, float aimAtY, float aimAtZ, float moveBlendRatio, bool shoot, float targetRadius, float slowDistance, bool useNavMesh, int navFlags, bool instantBlendToAim, uint firingPattern)
 	{
 		NativeFunction.Natives.TASK_GO_TO_COORD_WHILE_AIMING_AT_COORD(ped, x, y, z, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern);
 	}
-	public static void TASK_GO_TO_COORD_WHILE_AIMING_AT_ENTITY(Ped ped, float x, float y, float z, Entity aimAtID, float moveBlendRatio, bool shoot, float targetRadius, float slowDistance, bool useNavMesh, int navFlags, bool instantBlendToAim, ulong firingPattern, int time)
+	public static void TASK_GO_TO_COORD_WHILE_AIMING_AT_ENTITY(Ped ped, float x, float y, float z, Entity aimAtID, float moveBlendRatio, bool shoot, float targetRadius, float slowDistance, bool useNavMesh, int navFlags, bool instantBlendToAim, uint firingPattern, int time)
 	{
 		NativeFunction.Natives.TASK_GO_TO_COORD_WHILE_AIMING_AT_ENTITY(ped, x, y, z, aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time);
 	}
@@ -34909,11 +34909,11 @@ public static class Natives
 	/// 	<br/>
 	/// 	2nd example: The ped will walk towards goToLocation2. This time, while walking towards goToLocation2 and aiming at focusLocation, the ped will point his weapon on sight to any enemy in his path without shooting. The ped will stop once he is closer than distanceToStopAt to goToLocation2.
 	/// </summary>
-	public static void TASK_GO_TO_COORD_AND_AIM_AT_HATED_ENTITIES_NEAR_COORD(Ped pedHandle, float goToLocationX, float goToLocationY, float goToLocationZ, float focusLocationX, float focusLocationY, float focusLocationZ, float speed, bool shootAtEnemies, float distanceToStopAt, float noRoadsDistance, bool useNavMesh, int navFlags, int taskFlags, ulong firingPattern)
+	public static void TASK_GO_TO_COORD_AND_AIM_AT_HATED_ENTITIES_NEAR_COORD(Ped pedHandle, float goToLocationX, float goToLocationY, float goToLocationZ, float focusLocationX, float focusLocationY, float focusLocationZ, float speed, bool shootAtEnemies, float distanceToStopAt, float noRoadsDistance, bool useNavMesh, int navFlags, int taskFlags, uint firingPattern)
 	{
 		NativeFunction.Natives.TASK_GO_TO_COORD_AND_AIM_AT_HATED_ENTITIES_NEAR_COORD(pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern);
 	}
-	public static void TASK_GO_TO_ENTITY_WHILE_AIMING_AT_COORD(Ped ped, Entity entity, float aimX, float aimY, float aimZ, float moveBlendRatio, bool shoot, float targetRadius, float slowDistance, bool useNavMesh, bool instantBlendToAim, ulong firingPattern)
+	public static void TASK_GO_TO_ENTITY_WHILE_AIMING_AT_COORD(Ped ped, Entity entity, float aimX, float aimY, float aimZ, float moveBlendRatio, bool shoot, float targetRadius, float slowDistance, bool useNavMesh, bool instantBlendToAim, uint firingPattern)
 	{
 		NativeFunction.Natives.TASK_GO_TO_ENTITY_WHILE_AIMING_AT_COORD(ped, entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 	}
@@ -34922,7 +34922,7 @@ public static class Natives
 	/// 	If true, peds will shoot at Entity till it is dead.<br/>
 	/// 	If false, peds will just walk till they reach the entity and will cease shooting.
 	/// </summary>
-	public static void TASK_GO_TO_ENTITY_WHILE_AIMING_AT_ENTITY(Ped ped, Entity entityToWalkTo, Entity entityToAimAt, float speed, bool shootatEntity, float targetRadius, float slowDistance, bool useNavMesh, bool instantBlendToAim, ulong firingPattern)
+	public static void TASK_GO_TO_ENTITY_WHILE_AIMING_AT_ENTITY(Ped ped, Entity entityToWalkTo, Entity entityToAimAt, float speed, bool shootatEntity, float targetRadius, float slowDistance, bool useNavMesh, bool instantBlendToAim, uint firingPattern)
 	{
 		NativeFunction.Natives.TASK_GO_TO_ENTITY_WHILE_AIMING_AT_ENTITY(ped, entityToWalkTo, entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 	}
@@ -35048,7 +35048,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.WAYPOINT_PLAYBACK_START_SHOOTING_AT_PED(ped, ped2, p2, p3);
 	}
-	public static void WAYPOINT_PLAYBACK_START_SHOOTING_AT_COORD(Ped ped, float x, float y, float z, bool p4, ulong firingPattern)
+	public static void WAYPOINT_PLAYBACK_START_SHOOTING_AT_COORD(Ped ped, float x, float y, float z, bool p4, uint firingPattern)
 	{
 		NativeFunction.Natives.WAYPOINT_PLAYBACK_START_SHOOTING_AT_COORD(ped, x, y, z, p4, firingPattern);
 	}
@@ -35143,7 +35143,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	See FORCE_PED_MOTION_STATE
 	/// </summary>
-	public static void TASK_FORCE_MOTION_STATE(Ped ped, ulong state, bool forceRestart)
+	public static void TASK_FORCE_MOTION_STATE(Ped ped, uint state, bool forceRestart)
 	{
 		NativeFunction.Natives.TASK_FORCE_MOTION_STATE(ped, state, forceRestart);
 	}
@@ -35199,7 +35199,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives.GET_TASK_MOVE_NETWORK_STATE<string>(ped);
 	}
-	public static void SET_TASK_MOVE_NETWORK_ANIM_SET(Ped ped, ulong clipSet, ulong variableClipSet)
+	public static void SET_TASK_MOVE_NETWORK_ANIM_SET(Ped ped, uint clipSet, uint variableClipSet)
 	{
 		NativeFunction.Natives.SET_TASK_MOVE_NETWORK_ANIM_SET(ped, clipSet, variableClipSet);
 	}
@@ -35367,7 +35367,7 @@ public static class Natives
 	/// 	p7 when set to true allows you to spawn vehicles under -100 z.<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static Vehicle CREATE_VEHICLE(ulong modelHash, float x, float y, float z, float heading, bool isNetwork, bool bScriptHostVeh, bool p7)
+	public static Vehicle CREATE_VEHICLE(uint modelHash, float x, float y, float z, float heading, bool isNetwork, bool bScriptHostVeh, bool p7)
 	{
 		return NativeFunction.Natives.CREATE_VEHICLE<Vehicle>(modelHash, x, y, z, heading, isNetwork, bScriptHostVeh, p7);
 	}
@@ -35418,7 +35418,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_VEHICLE_HOMING_LOCKEDONTO_STATE(0, 0);
 	}
-	public static bool IS_VEHICLE_MODEL(Vehicle vehicle, ulong model)
+	public static bool IS_VEHICLE_MODEL(Vehicle vehicle, uint model)
 	{
 		return NativeFunction.Natives.IS_VEHICLE_MODEL<bool>(vehicle, model);
 	}
@@ -35444,7 +35444,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Vector3 coords = GET_ENTITY_COORDS(PLAYER_PED_ID(), 0);    CREATE_SCRIPT_VEHICLE_GENERATOR(coords.x, coords.y, coords.z, 1.0f, 5.0f, 3.0f, GET_HASH_KEY(&amp;quot;adder&amp;quot;), -1. -1, -1, -1, -1, true, false, false, false, true, -1);
 	/// </summary>
-	public static int CREATE_SCRIPT_VEHICLE_GENERATOR(float x, float y, float z, float heading, float p4, float p5, ulong modelHash, int p7, int p8, int p9, int p10, bool p11, bool p12, bool p13, bool p14, bool p15, int p16)
+	public static int CREATE_SCRIPT_VEHICLE_GENERATOR(float x, float y, float z, float heading, float p4, float p5, uint modelHash, int p7, int p8, int p9, int p10, bool p11, bool p12, bool p13, bool p14, bool p15, int p16)
 	{
 		return NativeFunction.Natives.CREATE_SCRIPT_VEHICLE_GENERATOR<int>(x, y, z, heading, p4, p5, modelHash, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16);
 	}
@@ -35540,7 +35540,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static int GET_VEHICLE_MODEL_NUMBER_OF_SEATS(ulong modelHash)
+	public static int GET_VEHICLE_MODEL_NUMBER_OF_SEATS(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_NUMBER_OF_SEATS<int>(modelHash);
 	}
@@ -36758,7 +36758,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static void SET_VEHICLE_MODEL_IS_SUPPRESSED(ulong model, bool suppressed)
+	public static void SET_VEHICLE_MODEL_IS_SUPPRESSED(uint model, bool suppressed)
 	{
 		NativeFunction.Natives.SET_VEHICLE_MODEL_IS_SUPPRESSED(model, suppressed);
 	}
@@ -36774,7 +36774,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static Vehicle GET_RANDOM_VEHICLE_IN_SPHERE(float x, float y, float z, float radius, ulong modelHash, int flags)
+	public static Vehicle GET_RANDOM_VEHICLE_IN_SPHERE(float x, float y, float z, float radius, uint modelHash, int flags)
 	{
 		return NativeFunction.Natives.GET_RANDOM_VEHICLE_IN_SPHERE<Vehicle>(x, y, z, radius, modelHash, flags);
 	}
@@ -36816,7 +36816,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static Vehicle GET_CLOSEST_VEHICLE(float x, float y, float z, float radius, ulong modelHash, int flags)
+	public static Vehicle GET_CLOSEST_VEHICLE(float x, float y, float z, float radius, uint modelHash, int flags)
 	{
 		return NativeFunction.Natives.GET_CLOSEST_VEHICLE<Vehicle>(x, y, z, radius, modelHash, flags);
 	}
@@ -36846,53 +36846,53 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_MISSION_TRAIN_COORDS(train, x, y, z);
 	}
-	public static bool IS_THIS_MODEL_A_BOAT(ulong model)
+	public static bool IS_THIS_MODEL_A_BOAT(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_BOAT<bool>(model);
 	}
 	/// <summary>
 	/// 	Checks if model is a boat, then checks for FLAG_IS_JETSKI.
 	/// </summary>
-	public static bool IS_THIS_MODEL_A_JETSKI(ulong model)
+	public static bool IS_THIS_MODEL_A_JETSKI(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_JETSKI<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_A_PLANE(ulong model)
+	public static bool IS_THIS_MODEL_A_PLANE(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_PLANE<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_A_HELI(ulong model)
+	public static bool IS_THIS_MODEL_A_HELI(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_HELI<bool>(model);
 	}
 	/// <summary>
 	/// 	To check if the model is an amphibious car, use IS_THIS_MODEL_AN_AMPHIBIOUS_CAR.
 	/// </summary>
-	public static bool IS_THIS_MODEL_A_CAR(ulong model)
+	public static bool IS_THIS_MODEL_A_CAR(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_CAR<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_A_TRAIN(ulong model)
+	public static bool IS_THIS_MODEL_A_TRAIN(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_TRAIN<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_A_BIKE(ulong model)
+	public static bool IS_THIS_MODEL_A_BIKE(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_BIKE<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_A_BICYCLE(ulong model)
+	public static bool IS_THIS_MODEL_A_BICYCLE(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_BICYCLE<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_A_QUADBIKE(ulong model)
+	public static bool IS_THIS_MODEL_A_QUADBIKE(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_A_QUADBIKE<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_AN_AMPHIBIOUS_CAR(ulong model)
+	public static bool IS_THIS_MODEL_AN_AMPHIBIOUS_CAR(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_AN_AMPHIBIOUS_CAR<bool>(model);
 	}
-	public static bool IS_THIS_MODEL_AN_AMPHIBIOUS_QUADBIKE(ulong model)
+	public static bool IS_THIS_MODEL_AN_AMPHIBIOUS_QUADBIKE(uint model)
 	{
 		return NativeFunction.Natives.IS_THIS_MODEL_AN_AMPHIBIOUS_QUADBIKE<bool>(model);
 	}
@@ -37146,7 +37146,7 @@ public static class Natives
 	/// 	p0 always true (except in one case)<br/>
 	/// 	successIndicator: 0 if success, -1 if failed
 	/// </summary>
-	public static void GET_RANDOM_VEHICLE_MODEL_IN_MEMORY(bool p0, out ulong modelHash, out int successIndicator)
+	public static void GET_RANDOM_VEHICLE_MODEL_IN_MEMORY(bool p0, out uint modelHash, out int successIndicator)
 	{
 		NativeFunction.Natives.GET_RANDOM_VEHICLE_MODEL_IN_MEMORY(p0, out modelHash, out successIndicator);
 	}
@@ -37220,20 +37220,20 @@ public static class Natives
 	/// <summary>
 	/// 	Returns `nMonetaryValue` from handling.meta for specific model.
 	/// </summary>
-	public static int GET_VEHICLE_MODEL_VALUE(ulong vehicleModel)
+	public static int GET_VEHICLE_MODEL_VALUE(uint vehicleModel)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_VALUE<int>(vehicleModel);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static ulong GET_VEHICLE_LAYOUT_HASH(Vehicle vehicle)
+	public static uint GET_VEHICLE_LAYOUT_HASH(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_LAYOUT_HASH<ulong>(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_LAYOUT_HASH<uint>(vehicle);
 	}
-	public static ulong GET_IN_VEHICLE_CLIPSET_HASH_FOR_SEAT(Vehicle vehicle, int p1)
+	public static uint GET_IN_VEHICLE_CLIPSET_HASH_FOR_SEAT(Vehicle vehicle, int p1)
 	{
-		return NativeFunction.Natives.GET_IN_VEHICLE_CLIPSET_HASH_FOR_SEAT<ulong>(vehicle, p1);
+		return NativeFunction.Natives.GET_IN_VEHICLE_CLIPSET_HASH_FOR_SEAT<uint>(vehicle, p1);
 	}
 	/// <summary>
 	/// 	Makes the train all jumbled up and derailed as it moves on the tracks (though that wont stop it from its normal operations)
@@ -37575,7 +37575,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Note: If a player is in the vehicle, it will only sound briefly.
 	/// </summary>
-	public static void START_VEHICLE_HORN(Vehicle vehicle, int duration, ulong mode, bool forever)
+	public static void START_VEHICLE_HORN(Vehicle vehicle, int duration, uint mode, bool forever)
 	{
 		NativeFunction.Natives.START_VEHICLE_HORN(vehicle, duration, mode, forever);
 	}
@@ -37605,7 +37605,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static string GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(ulong modelHash)
+	public static string GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_DISPLAY_NAME_FROM_VEHICLE_MODEL<string>(modelHash);
 	}
@@ -37615,7 +37615,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static string GET_MAKE_NAME_FROM_VEHICLE_MODEL(ulong modelHash)
+	public static string GET_MAKE_NAME_FROM_VEHICLE_MODEL(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_MAKE_NAME_FROM_VEHICLE_MODEL<string>(modelHash);
 	}
@@ -37814,7 +37814,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.REQUEST_VEHICLE_HIGH_DETAIL_MODEL(vehicle);
 	}
-	public static int _GET_VEHICLE_MODEL_NUM_DRIVE_GEARS(ulong vehicleModel)
+	public static int _GET_VEHICLE_MODEL_NUM_DRIVE_GEARS(uint vehicleModel)
 	{
 		return NativeFunction.Natives._GET_VEHICLE_MODEL_NUM_DRIVE_GEARS<int>(vehicleModel);
 	}
@@ -37822,7 +37822,7 @@ public static class Natives
 	{
 		return NativeFunction.Natives._GET_VEHICLE_MAX_DRIVE_GEAR_COUNT<int>(vehicle);
 	}
-	public static bool _GET_IS_VEHICLE_ELECTRIC(ulong vehicleModel)
+	public static bool _GET_IS_VEHICLE_ELECTRIC(uint vehicleModel)
 	{
 		return NativeFunction.Natives._GET_IS_VEHICLE_ELECTRIC<bool>(vehicleModel);
 	}
@@ -37839,7 +37839,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	_GET_VEHICLE_DE* - _GET_VEHICLE_DI*
 	/// </summary>
-	public static int _GET_VEHICLE_DRIVETRAIN_TYPE(ulong vehicleModel)
+	public static int _GET_VEHICLE_DRIVETRAIN_TYPE(uint vehicleModel)
 	{
 		return NativeFunction.Natives._GET_VEHICLE_DRIVETRAIN_TYPE<int>(vehicleModel);
 	}
@@ -37867,7 +37867,7 @@ public static class Natives
 	/// 	submersible<br/>
 	/// 	blazer
 	/// </summary>
-	public static void REQUEST_VEHICLE_ASSET(ulong vehicleHash, int vehicleAsset)
+	public static void REQUEST_VEHICLE_ASSET(uint vehicleHash, int vehicleAsset)
 	{
 		NativeFunction.Natives.REQUEST_VEHICLE_ASSET(vehicleHash, vehicleAsset);
 	}
@@ -38101,7 +38101,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED(ulong modelHash)
+	public static float GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED<float>(modelHash);
 	}
@@ -38110,14 +38110,14 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_VEHICLE_MODEL_MAX_BRAKING(ulong modelHash)
+	public static float GET_VEHICLE_MODEL_MAX_BRAKING(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_BRAKING<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS(ulong modelHash)
+	public static float GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS<float>(modelHash);
 	}
@@ -38126,7 +38126,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_VEHICLE_MODEL_MAX_TRACTION(ulong modelHash)
+	public static float GET_VEHICLE_MODEL_MAX_TRACTION(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_MAX_TRACTION<float>(modelHash);
 	}
@@ -38135,7 +38135,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_VEHICLE_MODEL_ACCELERATION(ulong modelHash)
+	public static float GET_VEHICLE_MODEL_ACCELERATION(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_ACCELERATION<float>(modelHash);
 	}
@@ -38144,21 +38144,21 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_VEHICLE_MODEL_ACCELERATION_MAX_MODS(ulong modelHash)
+	public static float GET_VEHICLE_MODEL_ACCELERATION_MAX_MODS(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_MODEL_ACCELERATION_MAX_MODS<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_FLYING_VEHICLE_MODEL_AGILITY(ulong modelHash)
+	public static float GET_FLYING_VEHICLE_MODEL_AGILITY(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_FLYING_VEHICLE_MODEL_AGILITY<float>(modelHash);
 	}
 	/// <summary>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static float GET_BOAT_VEHICLE_MODEL_AGILITY(ulong modelHash)
+	public static float GET_BOAT_VEHICLE_MODEL_AGILITY(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_BOAT_VEHICLE_MODEL_AGILITY<float>(modelHash);
 	}
@@ -38542,9 +38542,9 @@ public static class Natives
 	/// <summary>
 	/// 	Can be used for IS_DLC_VEHICLE_MOD and GET_DLC_VEHICLE_MOD_LOCK_HASH
 	/// </summary>
-	public static ulong GET_VEHICLE_MOD_IDENTIFIER_HASH(Vehicle vehicle, int modType, int modIndex)
+	public static uint GET_VEHICLE_MOD_IDENTIFIER_HASH(Vehicle vehicle, int modType, int modIndex)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_MOD_IDENTIFIER_HASH<ulong>(vehicle, modType, modIndex);
+		return NativeFunction.Natives.GET_VEHICLE_MOD_IDENTIFIER_HASH<uint>(vehicle, modType, modIndex);
 	}
 	public static void PRELOAD_VEHICLE_MOD(Vehicle vehicle, int modType, int modIndex)
 	{
@@ -38623,9 +38623,9 @@ public static class Natives
 	/// 		iLocal_260 = 1;<br/>
 	/// 	}
 	/// </summary>
-	public static ulong GET_VEHICLE_CAUSE_OF_DESTRUCTION(Vehicle vehicle)
+	public static uint GET_VEHICLE_CAUSE_OF_DESTRUCTION(Vehicle vehicle)
 	{
-		return NativeFunction.Natives.GET_VEHICLE_CAUSE_OF_DESTRUCTION<ulong>(vehicle);
+		return NativeFunction.Natives.GET_VEHICLE_CAUSE_OF_DESTRUCTION<uint>(vehicle);
 	}
 	/// <summary>
 	/// 	Used for helis.
@@ -39181,14 +39181,14 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void DISABLE_VEHICLE_WEAPON(bool disabled, ulong weaponHash, Vehicle vehicle, Ped owner)
+	public static void DISABLE_VEHICLE_WEAPON(bool disabled, uint weaponHash, Vehicle vehicle, Ped owner)
 	{
 		NativeFunction.Natives.DISABLE_VEHICLE_WEAPON(disabled, weaponHash, vehicle, owner);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool IS_VEHICLE_WEAPON_DISABLED(ulong weaponHash, Vehicle vehicle, Ped owner)
+	public static bool IS_VEHICLE_WEAPON_DISABLED(uint weaponHash, Vehicle vehicle, Ped owner)
 	{
 		return NativeFunction.Natives.IS_VEHICLE_WEAPON_DISABLED<bool>(weaponHash, vehicle, owner);
 	}
@@ -39244,7 +39244,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
 	/// </summary>
-	public static int GET_VEHICLE_CLASS_FROM_NAME(ulong modelHash)
+	public static int GET_VEHICLE_CLASS_FROM_NAME(uint modelHash)
 	{
 		return NativeFunction.Natives.GET_VEHICLE_CLASS_FROM_NAME<int>(modelHash);
 	}
@@ -39284,7 +39284,7 @@ public static class Natives
 	/// <summary>
 	/// 	Use the &amp;quot;AIHandling&amp;quot; string found in handling.meta
 	/// </summary>
-	public static void SET_VEHICLE_HANDLING_OVERRIDE(Vehicle vehicle, ulong hash)
+	public static void SET_VEHICLE_HANDLING_OVERRIDE(Vehicle vehicle, uint hash)
 	{
 		NativeFunction.Natives.SET_VEHICLE_HANDLING_OVERRIDE(vehicle, hash);
 	}
@@ -39819,7 +39819,7 @@ public static class Natives
 	/// 	- imp_prop_impexp_para_s (SecuroServ; Default)<br/>
 	/// 	Plus, many more props can be used as vehicle parachutes, like umbrellas (prop_beach_parasol_03), and unlike SET_PLAYER_PARACHUTE_MODEL_OVERRIDE, you won&amp;apos;t get stuck mid-air when using an umbrella.
 	/// </summary>
-	public static void VEHICLE_SET_PARACHUTE_MODEL_OVERRIDE(Vehicle vehicle, ulong modelHash)
+	public static void VEHICLE_SET_PARACHUTE_MODEL_OVERRIDE(Vehicle vehicle, uint modelHash)
 	{
 		NativeFunction.Natives.VEHICLE_SET_PARACHUTE_MODEL_OVERRIDE(vehicle, modelHash);
 	}
@@ -40379,7 +40379,7 @@ public static class Natives
 	{
 		NativeFunction.Natives._SET_ALLOW_COLLISION_WHEN_IN_VEHICLE(vehicle, toggle);
 	}
-	public static bool _IS_VEHICLE_GEN9_EXCLUSIVE_MODEL(ulong vehicleModel)
+	public static bool _IS_VEHICLE_GEN9_EXCLUSIVE_MODEL(uint vehicleModel)
 	{
 		return NativeFunction.Natives._IS_VEHICLE_GEN9_EXCLUSIVE_MODEL<bool>(vehicleModel);
 	}
@@ -40490,9 +40490,9 @@ public static class Natives
 	{
 		NativeFunction.Natives.ENABLE_LASER_SIGHT_RENDERING(toggle);
 	}
-	public static ulong GET_WEAPON_COMPONENT_TYPE_MODEL(ulong componentHash)
+	public static uint GET_WEAPON_COMPONENT_TYPE_MODEL(uint componentHash)
 	{
-		return NativeFunction.Natives.GET_WEAPON_COMPONENT_TYPE_MODEL<ulong>(componentHash);
+		return NativeFunction.Natives.GET_WEAPON_COMPONENT_TYPE_MODEL<uint>(componentHash);
 	}
 	/// <summary>
 	/// 	Returns the model of any weapon.<br/>
@@ -40500,37 +40500,37 @@ public static class Natives
 	/// 	Can also take an ammo hash?<br/>
 	/// 	sub_6663a(&amp;l_115B, WEAPON::GET_WEAPONTYPE_MODEL(${ammo_rpg}));
 	/// </summary>
-	public static ulong GET_WEAPONTYPE_MODEL(ulong weaponHash)
+	public static uint GET_WEAPONTYPE_MODEL(uint weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPONTYPE_MODEL<ulong>(weaponHash);
+		return NativeFunction.Natives.GET_WEAPONTYPE_MODEL<uint>(weaponHash);
 	}
-	public static ulong GET_WEAPONTYPE_SLOT(ulong weaponHash)
+	public static uint GET_WEAPONTYPE_SLOT(uint weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPONTYPE_SLOT<ulong>(weaponHash);
+		return NativeFunction.Natives.GET_WEAPONTYPE_SLOT<uint>(weaponHash);
 	}
-	public static ulong GET_WEAPONTYPE_GROUP(ulong weaponHash)
+	public static uint GET_WEAPONTYPE_GROUP(uint weaponHash)
 	{
-		return NativeFunction.Natives.GET_WEAPONTYPE_GROUP<ulong>(weaponHash);
+		return NativeFunction.Natives.GET_WEAPONTYPE_GROUP<uint>(weaponHash);
 	}
 	/// <summary>
 	/// 	Returns the amount of extra components the specified component has.<br/>
 	/// 	Returns -1 if the component isn&amp;apos;t of type CWeaponComponentVariantModel.
 	/// </summary>
-	public static int GET_WEAPON_COMPONENT_VARIANT_EXTRA_COUNT(ulong componentHash)
+	public static int GET_WEAPON_COMPONENT_VARIANT_EXTRA_COUNT(uint componentHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_COMPONENT_VARIANT_EXTRA_COUNT<int>(componentHash);
 	}
 	/// <summary>
 	/// 	Returns the model hash of the extra component at specified index.
 	/// </summary>
-	public static ulong GET_WEAPON_COMPONENT_VARIANT_EXTRA_MODEL(ulong componentHash, int extraComponentIndex)
+	public static uint GET_WEAPON_COMPONENT_VARIANT_EXTRA_MODEL(uint componentHash, int extraComponentIndex)
 	{
-		return NativeFunction.Natives.GET_WEAPON_COMPONENT_VARIANT_EXTRA_MODEL<ulong>(componentHash, extraComponentIndex);
+		return NativeFunction.Natives.GET_WEAPON_COMPONENT_VARIANT_EXTRA_MODEL<uint>(componentHash, extraComponentIndex);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_CURRENT_PED_WEAPON(Ped ped, ulong weaponHash, bool bForceInHand)
+	public static void SET_CURRENT_PED_WEAPON(Ped ped, uint weaponHash, bool bForceInHand)
 	{
 		NativeFunction.Natives.SET_CURRENT_PED_WEAPON(ped, weaponHash, bForceInHand);
 	}
@@ -40547,7 +40547,7 @@ public static class Natives
 	/// 	disassembly said that?<br/>
 	/// 	
 	/// </summary>
-	public static bool GET_CURRENT_PED_WEAPON(Ped ped, out ulong weaponHash, bool p2)
+	public static bool GET_CURRENT_PED_WEAPON(Ped ped, out uint weaponHash, bool p2)
 	{
 		return NativeFunction.Natives.GET_CURRENT_PED_WEAPON<bool>(ped, out weaponHash, p2);
 	}
@@ -40558,14 +40558,14 @@ public static class Natives
 	/// <summary>
 	/// 	p1 is always 0 in the scripts.
 	/// </summary>
-	public static ulong GET_BEST_PED_WEAPON(Ped ped, bool p1)
+	public static uint GET_BEST_PED_WEAPON(Ped ped, bool p1)
 	{
-		return NativeFunction.Natives.GET_BEST_PED_WEAPON<ulong>(ped, p1);
+		return NativeFunction.Natives.GET_BEST_PED_WEAPON<uint>(ped, p1);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool SET_CURRENT_PED_VEHICLE_WEAPON(Ped ped, ulong weaponHash)
+	public static bool SET_CURRENT_PED_VEHICLE_WEAPON(Ped ped, uint weaponHash)
 	{
 		return NativeFunction.Natives.SET_CURRENT_PED_VEHICLE_WEAPON<bool>(ped, weaponHash);
 	}
@@ -40582,7 +40582,7 @@ public static class Natives
 	/// 	If GetVehicleCurrentWeapon(Game.Player.Character) = -821520672 Then ...Do something<br/>
 	/// 	Note: -821520672 = VEHICLE_WEAPON_PLANE_ROCKET
 	/// </summary>
-	public static bool GET_CURRENT_PED_VEHICLE_WEAPON(Ped ped, out ulong weaponHash)
+	public static bool GET_CURRENT_PED_VEHICLE_WEAPON(Ped ped, out uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_CURRENT_PED_VEHICLE_WEAPON<bool>(ped, out weaponHash);
 	}
@@ -40617,7 +40617,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool IS_WEAPON_VALID(ulong weaponHash)
+	public static bool IS_WEAPON_VALID(uint weaponHash)
 	{
 		return NativeFunction.Natives.IS_WEAPON_VALID<bool>(weaponHash);
 	}
@@ -40627,7 +40627,7 @@ public static class Natives
 	/// 	Bool does not check if the weapon is current equipped, unfortunately.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool HAS_PED_GOT_WEAPON(Ped ped, ulong weaponHash, bool p2)
+	public static bool HAS_PED_GOT_WEAPON(Ped ped, uint weaponHash, bool p2)
 	{
 		return NativeFunction.Natives.HAS_PED_GOT_WEAPON<bool>(ped, weaponHash, p2);
 	}
@@ -40635,9 +40635,9 @@ public static class Natives
 	{
 		return NativeFunction.Natives.IS_PED_WEAPON_READY_TO_SHOOT<bool>(ped);
 	}
-	public static ulong GET_PED_WEAPONTYPE_IN_SLOT(Ped ped, ulong weaponSlot)
+	public static uint GET_PED_WEAPONTYPE_IN_SLOT(Ped ped, uint weaponSlot)
 	{
-		return NativeFunction.Natives.GET_PED_WEAPONTYPE_IN_SLOT<ulong>(ped, weaponSlot);
+		return NativeFunction.Natives.GET_PED_WEAPONTYPE_IN_SLOT<uint>(ped, weaponSlot);
 	}
 	/// <summary>
 	/// 	WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), a_0)<br/>
@@ -40649,28 +40649,28 @@ public static class Natives
 	/// 	natives.WEAPON.GET_AMMO_IN_PED_WEAPON(plyPed, WeaponHash)<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_AMMO_IN_PED_WEAPON(Ped ped, ulong weaponhash)
+	public static int GET_AMMO_IN_PED_WEAPON(Ped ped, uint weaponhash)
 	{
 		return NativeFunction.Natives.GET_AMMO_IN_PED_WEAPON<int>(ped, weaponhash);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void ADD_AMMO_TO_PED(Ped ped, ulong weaponHash, int ammo)
+	public static void ADD_AMMO_TO_PED(Ped ped, uint weaponHash, int ammo)
 	{
 		NativeFunction.Natives.ADD_AMMO_TO_PED(ped, weaponHash, ammo);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_PED_AMMO(Ped ped, ulong weaponHash, int ammo, bool p3)
+	public static void SET_PED_AMMO(Ped ped, uint weaponHash, int ammo, bool p3)
 	{
 		NativeFunction.Natives.SET_PED_AMMO(ped, weaponHash, ammo, p3);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_PED_INFINITE_AMMO(Ped ped, bool toggle, ulong weaponHash)
+	public static void SET_PED_INFINITE_AMMO(Ped ped, bool toggle, uint weaponHash)
 	{
 		NativeFunction.Natives.SET_PED_INFINITE_AMMO(ped, toggle, weaponHash);
 	}
@@ -40685,7 +40685,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void GIVE_WEAPON_TO_PED(Ped ped, ulong weaponHash, int ammoCount, bool isHidden, bool bForceInHand)
+	public static void GIVE_WEAPON_TO_PED(Ped ped, uint weaponHash, int ammoCount, bool isHidden, bool bForceInHand)
 	{
 		NativeFunction.Natives.GIVE_WEAPON_TO_PED(ped, weaponHash, ammoCount, isHidden, bForceInHand);
 	}
@@ -40695,7 +40695,7 @@ public static class Natives
 	/// 	WEAPON::GIVE_DELAYED_WEAPON_TO_PED(PED::PLAYER_PED_ID(), MISC::GET_HASH_KEY(&amp;quot;WEAPON_PISTOL&amp;quot;), 1000, false)<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void GIVE_DELAYED_WEAPON_TO_PED(Ped ped, ulong weaponHash, int ammoCount, bool bForceInHand)
+	public static void GIVE_DELAYED_WEAPON_TO_PED(Ped ped, uint weaponHash, int ammoCount, bool bForceInHand)
 	{
 		NativeFunction.Natives.GIVE_DELAYED_WEAPON_TO_PED(ped, weaponHash, ammoCount, bForceInHand);
 	}
@@ -40719,7 +40719,7 @@ public static class Natives
 	/// 	The code above removes the knife from the player.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void REMOVE_WEAPON_FROM_PED(Ped ped, ulong weaponHash)
+	public static void REMOVE_WEAPON_FROM_PED(Ped ped, uint weaponHash)
 	{
 		NativeFunction.Natives.REMOVE_WEAPON_FROM_PED(ped, weaponHash);
 	}
@@ -40749,7 +40749,7 @@ public static class Natives
 	/// 	If you want to identify any weapon (firearms, melee, rockets, etc.), second parameter=0, third parameter=2.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool HAS_PED_BEEN_DAMAGED_BY_WEAPON(Ped ped, ulong weaponHash, int weaponType)
+	public static bool HAS_PED_BEEN_DAMAGED_BY_WEAPON(Ped ped, uint weaponHash, int weaponType)
 	{
 		return NativeFunction.Natives.HAS_PED_BEEN_DAMAGED_BY_WEAPON<bool>(ped, weaponHash, weaponType);
 	}
@@ -40768,7 +40768,7 @@ public static class Natives
 	/// 	If you want to identify any weapon (firearms, melee, rockets, etc.), second parameter=0, third parameter=2.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON(Entity entity, ulong weaponHash, int weaponType)
+	public static bool HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON(Entity entity, uint weaponHash, int weaponType)
 	{
 		return NativeFunction.Natives.HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON<bool>(entity, weaponHash, weaponType);
 	}
@@ -40783,7 +40783,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_PED_DROPS_INVENTORY_WEAPON(Ped ped, ulong weaponHash, float xOffset, float yOffset, float zOffset, int ammoCount)
+	public static void SET_PED_DROPS_INVENTORY_WEAPON(Ped ped, uint weaponHash, float xOffset, float yOffset, float zOffset, int ammoCount)
 	{
 		NativeFunction.Natives.SET_PED_DROPS_INVENTORY_WEAPON(ped, weaponHash, xOffset, yOffset, zOffset, ammoCount);
 	}
@@ -40791,53 +40791,53 @@ public static class Natives
 	/// 	p2 is mostly 1 in the scripts.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_MAX_AMMO_IN_CLIP(Ped ped, ulong weaponHash, bool p2)
+	public static int GET_MAX_AMMO_IN_CLIP(Ped ped, uint weaponHash, bool p2)
 	{
 		return NativeFunction.Natives.GET_MAX_AMMO_IN_CLIP<int>(ped, weaponHash, p2);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool GET_AMMO_IN_CLIP(Ped ped, ulong weaponHash, out int ammo)
+	public static bool GET_AMMO_IN_CLIP(Ped ped, uint weaponHash, out int ammo)
 	{
 		return NativeFunction.Natives.GET_AMMO_IN_CLIP<bool>(ped, weaponHash, out ammo);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool SET_AMMO_IN_CLIP(Ped ped, ulong weaponHash, int ammo)
+	public static bool SET_AMMO_IN_CLIP(Ped ped, uint weaponHash, int ammo)
 	{
 		return NativeFunction.Natives.SET_AMMO_IN_CLIP<bool>(ped, weaponHash, ammo);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool GET_MAX_AMMO(Ped ped, ulong weaponHash, out int ammo)
+	public static bool GET_MAX_AMMO(Ped ped, uint weaponHash, out int ammo)
 	{
 		return NativeFunction.Natives.GET_MAX_AMMO<bool>(ped, weaponHash, out ammo);
 	}
 	/// <summary>
 	/// 	Returns the max ammo for an ammo type. Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
 	/// </summary>
-	public static bool GET_MAX_AMMO_BY_TYPE(Ped ped, ulong ammoTypeHash, out int ammo)
+	public static bool GET_MAX_AMMO_BY_TYPE(Ped ped, uint ammoTypeHash, out int ammo)
 	{
 		return NativeFunction.Natives.GET_MAX_AMMO_BY_TYPE<bool>(ped, ammoTypeHash, out ammo);
 	}
 	/// <summary>
 	/// 	Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
 	/// </summary>
-	public static void ADD_PED_AMMO_BY_TYPE(Ped ped, ulong ammoTypeHash, int ammo)
+	public static void ADD_PED_AMMO_BY_TYPE(Ped ped, uint ammoTypeHash, int ammo)
 	{
 		NativeFunction.Natives.ADD_PED_AMMO_BY_TYPE(ped, ammoTypeHash, ammo);
 	}
 	/// <summary>
 	/// 	Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
 	/// </summary>
-	public static void SET_PED_AMMO_BY_TYPE(Ped ped, ulong ammoTypeHash, int ammo)
+	public static void SET_PED_AMMO_BY_TYPE(Ped ped, uint ammoTypeHash, int ammo)
 	{
 		NativeFunction.Natives.SET_PED_AMMO_BY_TYPE(ped, ammoTypeHash, ammo);
 	}
-	public static int GET_PED_AMMO_BY_TYPE(Ped ped, ulong ammoTypeHash)
+	public static int GET_PED_AMMO_BY_TYPE(Ped ped, uint ammoTypeHash)
 	{
 		return NativeFunction.Natives.GET_PED_AMMO_BY_TYPE<int>(ped, ammoTypeHash);
 	}
@@ -40855,18 +40855,18 @@ public static class Natives
 	/// 	Use 0xF489B44DD5AF4BD9 if you always want AMMO_PISTOL.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static ulong GET_PED_AMMO_TYPE_FROM_WEAPON(Ped ped, ulong weaponHash)
+	public static uint GET_PED_AMMO_TYPE_FROM_WEAPON(Ped ped, uint weaponHash)
 	{
-		return NativeFunction.Natives.GET_PED_AMMO_TYPE_FROM_WEAPON<ulong>(ped, weaponHash);
+		return NativeFunction.Natives.GET_PED_AMMO_TYPE_FROM_WEAPON<uint>(ped, weaponHash);
 	}
 	/// <summary>
 	/// 	Returns the base/default ammo type of the specified ped&amp;apos;s specified weapon.<br/>
 	/// 	Use GET_PED_AMMO_TYPE_FROM_WEAPON if you want current ammo type (like AMMO_MG_INCENDIARY/AMMO_MG_TRACER while using MkII magazines) and use this if you want base ammo type. (AMMO_MG)<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static ulong GET_PED_ORIGINAL_AMMO_TYPE_FROM_WEAPON(Ped ped, ulong weaponHash)
+	public static uint GET_PED_ORIGINAL_AMMO_TYPE_FROM_WEAPON(Ped ped, uint weaponHash)
 	{
-		return NativeFunction.Natives.GET_PED_ORIGINAL_AMMO_TYPE_FROM_WEAPON<ulong>(ped, weaponHash);
+		return NativeFunction.Natives.GET_PED_ORIGINAL_AMMO_TYPE_FROM_WEAPON<uint>(ped, weaponHash);
 	}
 	/// <summary>
 	/// 	Pass ped. Pass address of Vector3.<br/>
@@ -40881,14 +40881,14 @@ public static class Natives
 	/// 	p1/gadgetHash was always 0xFBAB5776 (&amp;quot;GADGET_PARACHUTE&amp;quot;).<br/>
 	/// 	p2 is always true.
 	/// </summary>
-	public static void SET_PED_GADGET(Ped ped, ulong gadgetHash, bool p2)
+	public static void SET_PED_GADGET(Ped ped, uint gadgetHash, bool p2)
 	{
 		NativeFunction.Natives.SET_PED_GADGET(ped, gadgetHash, p2);
 	}
 	/// <summary>
 	/// 	gadgetHash - was always 0xFBAB5776 (&amp;quot;GADGET_PARACHUTE&amp;quot;).
 	/// </summary>
-	public static bool GET_IS_PED_GADGET_EQUIPPED(Ped ped, ulong gadgetHash)
+	public static bool GET_IS_PED_GADGET_EQUIPPED(Ped ped, uint gadgetHash)
 	{
 		return NativeFunction.Natives.GET_IS_PED_GADGET_EQUIPPED<bool>(ped, gadgetHash);
 	}
@@ -40908,21 +40908,21 @@ public static class Natives
 	/// 	The difference is that GET_SELECTED_PED_WEAPON simply returns the ped&amp;apos;s current weapon hash but GET_CURRENT_PED_WEAPON also checks the weapon object and returns true if the hash of the weapon object equals the weapon hash<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static ulong GET_SELECTED_PED_WEAPON(Ped ped)
+	public static uint GET_SELECTED_PED_WEAPON(Ped ped)
 	{
-		return NativeFunction.Natives.GET_SELECTED_PED_WEAPON<ulong>(ped);
+		return NativeFunction.Natives.GET_SELECTED_PED_WEAPON<uint>(ped);
 	}
 	/// <summary>
 	/// 	             WEAPON::EXPLODE_PROJECTILES(PLAYER::PLAYER_PED_ID(), func_221(0x00000003), 0x00000001);
 	/// </summary>
-	public static void EXPLODE_PROJECTILES(Ped ped, ulong weaponHash, bool p2)
+	public static void EXPLODE_PROJECTILES(Ped ped, uint weaponHash, bool p2)
 	{
 		NativeFunction.Natives.EXPLODE_PROJECTILES(ped, weaponHash, p2);
 	}
 	/// <summary>
 	/// 	If `explode` true, then removal is done through exploding the projectile. Basically the same as EXPLODE_PROJECTILES but without defining the owner ped.
 	/// </summary>
-	public static void REMOVE_ALL_PROJECTILES_OF_TYPE(ulong weaponHash, bool explode)
+	public static void REMOVE_ALL_PROJECTILES_OF_TYPE(uint weaponHash, bool explode)
 	{
 		NativeFunction.Natives.REMOVE_ALL_PROJECTILES_OF_TYPE(weaponHash, explode);
 	}
@@ -40937,35 +40937,35 @@ public static class Natives
 	/// <summary>
 	/// 	Fourth Parameter = unsure, almost always -1
 	/// </summary>
-	public static bool HAS_VEHICLE_GOT_PROJECTILE_ATTACHED(Ped driver, Vehicle vehicle, ulong weaponHash)
+	public static bool HAS_VEHICLE_GOT_PROJECTILE_ATTACHED(Ped driver, Vehicle vehicle, uint weaponHash)
 	{
 		return NativeFunction.Natives.HAS_VEHICLE_GOT_PROJECTILE_ATTACHED<bool>(driver, vehicle, weaponHash, 0);
 	}
 	/// <summary>
 	/// 	Full list of weapons &amp; components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void GIVE_WEAPON_COMPONENT_TO_PED(Ped ped, ulong weaponHash, ulong componentHash)
+	public static void GIVE_WEAPON_COMPONENT_TO_PED(Ped ped, uint weaponHash, uint componentHash)
 	{
 		NativeFunction.Natives.GIVE_WEAPON_COMPONENT_TO_PED(ped, weaponHash, componentHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons &amp; components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void REMOVE_WEAPON_COMPONENT_FROM_PED(Ped ped, ulong weaponHash, ulong componentHash)
+	public static void REMOVE_WEAPON_COMPONENT_FROM_PED(Ped ped, uint weaponHash, uint componentHash)
 	{
 		NativeFunction.Natives.REMOVE_WEAPON_COMPONENT_FROM_PED(ped, weaponHash, componentHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons &amp; components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool HAS_PED_GOT_WEAPON_COMPONENT(Ped ped, ulong weaponHash, ulong componentHash)
+	public static bool HAS_PED_GOT_WEAPON_COMPONENT(Ped ped, uint weaponHash, uint componentHash)
 	{
 		return NativeFunction.Natives.HAS_PED_GOT_WEAPON_COMPONENT<bool>(ped, weaponHash, componentHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons &amp; components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool IS_PED_WEAPON_COMPONENT_ACTIVE(Ped ped, ulong weaponHash, ulong componentHash)
+	public static bool IS_PED_WEAPON_COMPONENT_ACTIVE(Ped ped, uint weaponHash, uint componentHash)
 	{
 		return NativeFunction.Natives.IS_PED_WEAPON_COMPONENT_ACTIVE<bool>(ped, weaponHash, componentHash);
 	}
@@ -40985,22 +40985,22 @@ public static class Natives
 	/// 	<br/>
 	/// 	REQUEST_WEAPON_ASSET(iLocal_1888, 31, 26);
 	/// </summary>
-	public static void REQUEST_WEAPON_ASSET(ulong weaponHash, int p1, int p2)
+	public static void REQUEST_WEAPON_ASSET(uint weaponHash, int p1, int p2)
 	{
 		NativeFunction.Natives.REQUEST_WEAPON_ASSET(weaponHash, p1, p2);
 	}
-	public static bool HAS_WEAPON_ASSET_LOADED(ulong weaponHash)
+	public static bool HAS_WEAPON_ASSET_LOADED(uint weaponHash)
 	{
 		return NativeFunction.Natives.HAS_WEAPON_ASSET_LOADED<bool>(weaponHash);
 	}
-	public static void REMOVE_WEAPON_ASSET(ulong weaponHash)
+	public static void REMOVE_WEAPON_ASSET(uint weaponHash)
 	{
 		NativeFunction.Natives.REMOVE_WEAPON_ASSET(weaponHash);
 	}
 	/// <summary>
 	/// 	Now has 8 params.
 	/// </summary>
-	public static Object CREATE_WEAPON_OBJECT(ulong weaponHash, int ammoCount, float x, float y, float z, bool showWorldModel, float scale)
+	public static Object CREATE_WEAPON_OBJECT(uint weaponHash, int ammoCount, float x, float y, float z, bool showWorldModel, float scale)
 	{
 		return NativeFunction.Natives.CREATE_WEAPON_OBJECT<Object>(weaponHash, ammoCount, x, y, z, showWorldModel, scale, 0, 0, 0);
 	}
@@ -41009,21 +41009,21 @@ public static class Natives
 	/// 	(use WEAPON::GET_WEAPON_COMPONENT_TYPE_MODEL() to get hash value)<br/>
 	/// 	${component_at_ar_flsh}, ${component_at_ar_supp}, ${component_at_pi_flsh}, ${component_at_scope_large}, ${component_at_ar_supp_02}
 	/// </summary>
-	public static void GIVE_WEAPON_COMPONENT_TO_WEAPON_OBJECT(Object weaponObject, ulong componentHash)
+	public static void GIVE_WEAPON_COMPONENT_TO_WEAPON_OBJECT(Object weaponObject, uint componentHash)
 	{
 		NativeFunction.Natives.GIVE_WEAPON_COMPONENT_TO_WEAPON_OBJECT(weaponObject, componentHash);
 	}
 	/// <summary>
 	/// 	see DOES_WEAPON_TAKE_WEAPON_COMPONENT for full list of weapons &amp; components
 	/// </summary>
-	public static void REMOVE_WEAPON_COMPONENT_FROM_WEAPON_OBJECT(Object _object, ulong componentHash)
+	public static void REMOVE_WEAPON_COMPONENT_FROM_WEAPON_OBJECT(Object _object, uint componentHash)
 	{
 		NativeFunction.Natives.REMOVE_WEAPON_COMPONENT_FROM_WEAPON_OBJECT(_object, componentHash);
 	}
 	/// <summary>
 	/// 	see DOES_WEAPON_TAKE_WEAPON_COMPONENT for full list of weapons &amp; components
 	/// </summary>
-	public static bool HAS_WEAPON_GOT_WEAPON_COMPONENT(Object weapon, ulong componentHash)
+	public static bool HAS_WEAPON_GOT_WEAPON_COMPONENT(Object weapon, uint componentHash)
 	{
 		return NativeFunction.Natives.HAS_WEAPON_GOT_WEAPON_COMPONENT<bool>(weapon, componentHash);
 	}
@@ -41034,7 +41034,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of weapons &amp; components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool DOES_WEAPON_TAKE_WEAPON_COMPONENT(ulong weaponHash, ulong componentHash)
+	public static bool DOES_WEAPON_TAKE_WEAPON_COMPONENT(uint weaponHash, uint componentHash)
 	{
 		return NativeFunction.Natives.DOES_WEAPON_TAKE_WEAPON_COMPONENT<bool>(weaponHash, componentHash);
 	}
@@ -41051,7 +41051,7 @@ public static class Natives
 	/// 	Gives the specified loadout to the specified ped. <br/>
 	/// 	Loadouts are defined in common.rpf\data\ai\loadouts.meta
 	/// </summary>
-	public static void GIVE_LOADOUT_TO_PED(Ped ped, ulong loadoutHash)
+	public static void GIVE_LOADOUT_TO_PED(Ped ped, uint loadoutHash)
 	{
 		NativeFunction.Natives.GIVE_LOADOUT_TO_PED(ped, loadoutHash);
 	}
@@ -41068,14 +41068,14 @@ public static class Natives
 	/// 	7 - Platinum<br/>
 	/// 	Full list of weapons, components &amp; tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_PED_WEAPON_TINT_INDEX(Ped ped, ulong weaponHash, int tintIndex)
+	public static void SET_PED_WEAPON_TINT_INDEX(Ped ped, uint weaponHash, int tintIndex)
 	{
 		NativeFunction.Natives.SET_PED_WEAPON_TINT_INDEX(ped, weaponHash, tintIndex);
 	}
 	/// <summary>
 	/// 	Full list of weapons, components &amp; tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_PED_WEAPON_TINT_INDEX(Ped ped, ulong weaponHash)
+	public static int GET_PED_WEAPON_TINT_INDEX(Ped ped, uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_PED_WEAPON_TINT_INDEX<int>(ped, weaponHash);
 	}
@@ -41093,7 +41093,7 @@ public static class Natives
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_WEAPON_TINT_COUNT(ulong weaponHash)
+	public static int GET_WEAPON_TINT_COUNT(uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_TINT_COUNT<int>(weaponHash);
 	}
@@ -41133,7 +41133,7 @@ public static class Natives
 	/// 	31 = Dark Green<br/>
 	/// 	Full list of weapons, components, tint indexes &amp; weapon liveries by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_PED_WEAPON_COMPONENT_TINT_INDEX(Ped ped, ulong weaponHash, ulong camoComponentHash, int colorIndex)
+	public static void SET_PED_WEAPON_COMPONENT_TINT_INDEX(Ped ped, uint weaponHash, uint camoComponentHash, int colorIndex)
 	{
 		NativeFunction.Natives.SET_PED_WEAPON_COMPONENT_TINT_INDEX(ped, weaponHash, camoComponentHash, colorIndex);
 	}
@@ -41141,7 +41141,7 @@ public static class Natives
 	/// 	Returns -1 if camoComponentHash is invalid/not attached to the weapon.<br/>
 	/// 	Full list of weapons, components, tint indexes &amp; weapon liveries by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_PED_WEAPON_COMPONENT_TINT_INDEX(Ped ped, ulong weaponHash, ulong camoComponentHash)
+	public static int GET_PED_WEAPON_COMPONENT_TINT_INDEX(Ped ped, uint weaponHash, uint camoComponentHash)
 	{
 		return NativeFunction.Natives.GET_PED_WEAPON_COMPONENT_TINT_INDEX<int>(ped, weaponHash, camoComponentHash);
 	}
@@ -41181,7 +41181,7 @@ public static class Natives
 	/// 	31 = Dark Green<br/>
 	/// 	Full list of weapons, components, tint indexes &amp; weapon liveries by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_WEAPON_OBJECT_COMPONENT_TINT_INDEX(Object weaponObject, ulong camoComponentHash, int colorIndex)
+	public static void SET_WEAPON_OBJECT_COMPONENT_TINT_INDEX(Object weaponObject, uint camoComponentHash, int colorIndex)
 	{
 		NativeFunction.Natives.SET_WEAPON_OBJECT_COMPONENT_TINT_INDEX(weaponObject, camoComponentHash, colorIndex);
 	}
@@ -41189,11 +41189,11 @@ public static class Natives
 	/// 	Returns -1 if camoComponentHash is invalid/not attached to the weapon object.<br/>
 	/// 	Full list of weapons, components, tint indexes &amp; weapon liveries by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_WEAPON_OBJECT_COMPONENT_TINT_INDEX(Object weaponObject, ulong camoComponentHash)
+	public static int GET_WEAPON_OBJECT_COMPONENT_TINT_INDEX(Object weaponObject, uint camoComponentHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_OBJECT_COMPONENT_TINT_INDEX<int>(weaponObject, camoComponentHash);
 	}
-	public static int GET_PED_WEAPON_CAMO_INDEX(Ped ped, ulong weaponHash)
+	public static int GET_PED_WEAPON_CAMO_INDEX(Ped ped, uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_PED_WEAPON_CAMO_INDEX<int>(ped, weaponHash);
 	}
@@ -41224,11 +41224,11 @@ public static class Natives
 	/// 	}<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool GET_WEAPON_HUD_STATS(ulong weaponHash)
+	public static bool GET_WEAPON_HUD_STATS(uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_HUD_STATS<bool>(weaponHash, 0);
 	}
-	public static bool GET_WEAPON_COMPONENT_HUD_STATS(ulong componentHash)
+	public static bool GET_WEAPON_COMPONENT_HUD_STATS(uint componentHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_COMPONENT_HUD_STATS<bool>(componentHash, 0);
 	}
@@ -41236,7 +41236,7 @@ public static class Natives
 	/// 	This native does not return damages of weapons from the melee and explosive group.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static float GET_WEAPON_DAMAGE(ulong weaponHash, ulong componentHash)
+	public static float GET_WEAPON_DAMAGE(uint weaponHash, uint componentHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_DAMAGE<float>(weaponHash, componentHash);
 	}
@@ -41258,14 +41258,14 @@ public static class Natives
 	/// 	}<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_WEAPON_CLIP_SIZE(ulong weaponHash)
+	public static int GET_WEAPON_CLIP_SIZE(uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_CLIP_SIZE<int>(weaponHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static float GET_WEAPON_TIME_BETWEEN_SHOTS(ulong weaponHash)
+	public static float GET_WEAPON_TIME_BETWEEN_SHOTS(uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_TIME_BETWEEN_SHOTS<float>(weaponHash);
 	}
@@ -41284,7 +41284,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.REQUEST_WEAPON_HIGH_DETAIL_MODEL(weaponObject);
 	}
-	public static void _SET_WEAPON_PED_DAMAGE_MODIFIER(ulong weapon, float damageModifier)
+	public static void _SET_WEAPON_PED_DAMAGE_MODIFIER(uint weapon, float damageModifier)
 	{
 		NativeFunction.Natives._SET_WEAPON_PED_DAMAGE_MODIFIER(weapon, damageModifier);
 	}
@@ -41292,18 +41292,18 @@ public static class Natives
 	/// 	Changes the weapon damage output by the given multiplier value. Must be run every frame.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_WEAPON_DAMAGE_MODIFIER(ulong weaponHash, float damageMultiplier)
+	public static void SET_WEAPON_DAMAGE_MODIFIER(uint weaponHash, float damageMultiplier)
 	{
 		NativeFunction.Natives.SET_WEAPON_DAMAGE_MODIFIER(weaponHash, damageMultiplier);
 	}
-	public static void SET_WEAPON_AOE_MODIFIER(ulong weaponHash, float multiplier)
+	public static void SET_WEAPON_AOE_MODIFIER(uint weaponHash, float multiplier)
 	{
 		NativeFunction.Natives.SET_WEAPON_AOE_MODIFIER(weaponHash, multiplier);
 	}
 	/// <summary>
 	/// 	ex, WEAPON::SET_WEAPON_EFFECT_DURATION_MODIFIER(joaat(&amp;quot;vehicle_weapon_mine_slick&amp;quot;), 1.0);
 	/// </summary>
-	public static void SET_WEAPON_EFFECT_DURATION_MODIFIER(ulong p0, float p1)
+	public static void SET_WEAPON_EFFECT_DURATION_MODIFIER(uint p0, float p1)
 	{
 		NativeFunction.Natives.SET_WEAPON_EFFECT_DURATION_MODIFIER(p0, p1);
 	}
@@ -41368,7 +41368,7 @@ public static class Natives
 	/// 	  &amp;quot;SuperFat&amp;quot;,<br/>
 	/// 	 &amp;quot;Trevor&amp;quot;
 	/// </summary>
-	public static void SET_WEAPON_ANIMATION_OVERRIDE(Ped ped, ulong animStyle)
+	public static void SET_WEAPON_ANIMATION_OVERRIDE(Ped ped, uint animStyle)
 	{
 		NativeFunction.Natives.SET_WEAPON_ANIMATION_OVERRIDE(ped, animStyle);
 	}
@@ -41395,7 +41395,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int GET_WEAPON_DAMAGE_TYPE(ulong weaponHash)
+	public static int GET_WEAPON_DAMAGE_TYPE(uint weaponHash)
 	{
 		return NativeFunction.Natives.GET_WEAPON_DAMAGE_TYPE<int>(weaponHash);
 	}
@@ -41407,21 +41407,21 @@ public static class Natives
 	/// 	this returns if you can use the weapon while using a parachute<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static bool CAN_USE_WEAPON_ON_PARACHUTE(ulong weaponHash)
+	public static bool CAN_USE_WEAPON_ON_PARACHUTE(uint weaponHash)
 	{
 		return NativeFunction.Natives.CAN_USE_WEAPON_ON_PARACHUTE<bool>(weaponHash);
 	}
 	/// <summary>
 	/// 	Both coordinates are from objects in the decompiled scripts. Native related to 0xECDC202B25E5CF48 p1 value. The only weapon hash used in the decompiled scripts is weapon_air_defence_gun. These two natives are used by the yacht script, decompiled scripts suggest it and the weapon hash used (valkyrie&amp;apos;s rockets) are also used by yachts.
 	/// </summary>
-	public static int CREATE_AIR_DEFENCE_SPHERE(float x, float y, float z, float radius, float p4, float p5, float p6, ulong weaponHash)
+	public static int CREATE_AIR_DEFENCE_SPHERE(float x, float y, float z, float radius, float p4, float p5, float p6, uint weaponHash)
 	{
 		return NativeFunction.Natives.CREATE_AIR_DEFENCE_SPHERE<int>(x, y, z, radius, p4, p5, p6, weaponHash);
 	}
 	/// <summary>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static int CREATE_AIR_DEFENCE_ANGLED_AREA(float p0, float p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float radius, ulong weaponHash)
+	public static int CREATE_AIR_DEFENCE_ANGLED_AREA(float p0, float p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float radius, uint weaponHash)
 	{
 		return NativeFunction.Natives.CREATE_AIR_DEFENCE_ANGLED_AREA<int>(p0, p1, p2, p3, p4, p5, p6, p7, p8, radius, weaponHash);
 	}
@@ -41453,7 +41453,7 @@ public static class Natives
 	/// 	Disables selecting the given weapon. Ped isn&amp;apos;t forced to put the gun away. However you can&amp;apos;t reselect the weapon if you holster then unholster. Weapon is also grayed out on the weapon wheel.<br/>
 	/// 	Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
 	/// </summary>
-	public static void SET_CAN_PED_SELECT_INVENTORY_WEAPON(Ped ped, ulong weaponHash, bool toggle)
+	public static void SET_CAN_PED_SELECT_INVENTORY_WEAPON(Ped ped, uint weaponHash, bool toggle)
 	{
 		NativeFunction.Natives.SET_CAN_PED_SELECT_INVENTORY_WEAPON(ped, weaponHash, toggle);
 	}
@@ -41692,7 +41692,7 @@ public static class Natives
 	/// 	ZONE::OVERRIDE_POPSCHEDULE_VEHICLE_MODEL(popSchedules[index], vehicleHash);<br/>
 	/// 	STREAMING::REQUEST_MODEL(vehicleHash);
 	/// </summary>
-	public static void OVERRIDE_POPSCHEDULE_VEHICLE_MODEL(int scheduleId, ulong vehicleHash)
+	public static void OVERRIDE_POPSCHEDULE_VEHICLE_MODEL(int scheduleId, uint vehicleHash)
 	{
 		NativeFunction.Natives.OVERRIDE_POPSCHEDULE_VEHICLE_MODEL(scheduleId, vehicleHash);
 	}
@@ -41722,9 +41722,9 @@ public static class Natives
 	/// 	Ped player = Game.Player.Character;<br/>
 	/// 	Hash h = Function.Call&amp;lt;Hash&amp;gt;(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Position.X, player.Position.Y, player.Position.Z);
 	/// </summary>
-	public static ulong GET_HASH_OF_MAP_AREA_AT_COORDS(float x, float y, float z)
+	public static uint GET_HASH_OF_MAP_AREA_AT_COORDS(float x, float y, float z)
 	{
-		return NativeFunction.Natives.GET_HASH_OF_MAP_AREA_AT_COORDS<ulong>(x, y, z);
+		return NativeFunction.Natives.GET_HASH_OF_MAP_AREA_AT_COORDS<uint>(x, y, z);
 	}
 
 }
