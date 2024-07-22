@@ -8,7 +8,7 @@ namespace BaseLib;
 #pragma warning disable CS1591
 
 /// <summary>
-/// Date this file was generated: 2024/07/15 18:47:09
+/// Date this file was generated: 2024/07/22 23:37:05
 /// </summary>
 public static class Natives
 {
@@ -2299,9 +2299,9 @@ public static class Natives
 	/// 	&amp;quot;DEFAULT_SCRIPTED_FLY_CAMERA&amp;quot;<br/>
 	/// 	&amp;quot;TIMED_SPLINE_CAMERA&amp;quot;
 	/// </summary>
-	public static Camera CREATE_CAM(string camName, bool p1)
+	public static uint CREATE_CAM(string camName, bool p1)
 	{
-		return NativeFunction.Natives.CREATE_CAM<Camera>(camName, p1);
+		return NativeFunction.Natives.CREATE_CAM<uint>(camName, p1);
 	}
 	/// <summary>
 	/// 	camName is always set to &amp;quot;DEFAULT_SCRIPTED_CAMERA&amp;quot; in Rockstar&amp;apos;s scripts.<br/>
@@ -2314,25 +2314,25 @@ public static class Natives
 	/// 	------------<br/>
 	/// 	Side Note: It seems p8 is basically to represent what would be the bool p1 within CREATE_CAM native. As well as the p9 since it&amp;apos;s always 2 in scripts seems to represent what would be the last param within SET_CAM_ROT native which normally would be 2.
 	/// </summary>
-	public static Camera CREATE_CAM_WITH_PARAMS(string camName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8, int p9)
+	public static uint CREATE_CAM_WITH_PARAMS(string camName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8, int p9)
 	{
-		return NativeFunction.Natives.CREATE_CAM_WITH_PARAMS<Camera>(camName, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, p9);
+		return NativeFunction.Natives.CREATE_CAM_WITH_PARAMS<uint>(camName, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, p9);
 	}
-	public static Camera CREATE_CAMERA(uint camHash, bool p1)
+	public static uint CREATE_CAMERA(uint camHash, bool p1)
 	{
-		return NativeFunction.Natives.CREATE_CAMERA<Camera>(camHash, p1);
+		return NativeFunction.Natives.CREATE_CAMERA<uint>(camHash, p1);
 	}
 	/// <summary>
 	/// 	p9 uses 2 by default
 	/// </summary>
-	public static Camera CREATE_CAMERA_WITH_PARAMS(uint camHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8)
+	public static uint CREATE_CAMERA_WITH_PARAMS(uint camHash, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, bool p8)
 	{
-		return NativeFunction.Natives.CREATE_CAMERA_WITH_PARAMS<Camera>(camHash, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, 0);
+		return NativeFunction.Natives.CREATE_CAMERA_WITH_PARAMS<uint>(camHash, posX, posY, posZ, rotX, rotY, rotZ, fov, p8, 0);
 	}
 	/// <summary>
 	/// 	BOOL param indicates whether the cam should be destroyed if it belongs to the calling script.
 	/// </summary>
-	public static void DESTROY_CAM(Camera cam, bool bScriptHostCam)
+	public static void DESTROY_CAM(uint cam, bool bScriptHostCam)
 	{
 		NativeFunction.Natives.DESTROY_CAM(cam, bScriptHostCam);
 	}
@@ -2346,75 +2346,75 @@ public static class Natives
 	/// <summary>
 	/// 	Returns whether or not the passed camera handle exists.
 	/// </summary>
-	public static bool DOES_CAM_EXIST(Camera cam)
+	public static bool DOES_CAM_EXIST(uint cam)
 	{
 		return NativeFunction.Natives.DOES_CAM_EXIST<bool>(cam);
 	}
 	/// <summary>
 	/// 	Set camera as active/inactive.
 	/// </summary>
-	public static void SET_CAM_ACTIVE(Camera cam, bool active)
+	public static void SET_CAM_ACTIVE(uint cam, bool active)
 	{
 		NativeFunction.Natives.SET_CAM_ACTIVE(cam, active);
 	}
 	/// <summary>
 	/// 	Returns whether or not the passed camera handle is active.
 	/// </summary>
-	public static bool IS_CAM_ACTIVE(Camera cam)
+	public static bool IS_CAM_ACTIVE(uint cam)
 	{
 		return NativeFunction.Natives.IS_CAM_ACTIVE<bool>(cam);
 	}
-	public static bool IS_CAM_RENDERING(Camera cam)
+	public static bool IS_CAM_RENDERING(uint cam)
 	{
 		return NativeFunction.Natives.IS_CAM_RENDERING<bool>(cam);
 	}
-	public static Camera GET_RENDERING_CAM()
+	public static uint GET_RENDERING_CAM()
 	{
-		return NativeFunction.Natives.GET_RENDERING_CAM<Camera>();
+		return NativeFunction.Natives.GET_RENDERING_CAM<uint>();
 	}
-	public static Vector3 GET_CAM_COORD(Camera cam)
+	public static Vector3 GET_CAM_COORD(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_COORD<Vector3>(cam);
 	}
 	/// <summary>
 	/// 	The last parameter, as in other &amp;quot;ROT&amp;quot; methods, is usually 2.
 	/// </summary>
-	public static Vector3 GET_CAM_ROT(Camera cam, int rotationOrder)
+	public static Vector3 GET_CAM_ROT(uint cam, int rotationOrder)
 	{
 		return NativeFunction.Natives.GET_CAM_ROT<Vector3>(cam, rotationOrder);
 	}
-	public static float GET_CAM_FOV(Camera cam)
+	public static float GET_CAM_FOV(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_FOV<float>(cam);
 	}
-	public static float GET_CAM_NEAR_CLIP(Camera cam)
+	public static float GET_CAM_NEAR_CLIP(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_NEAR_CLIP<float>(cam);
 	}
-	public static float GET_CAM_FAR_CLIP(Camera cam)
+	public static float GET_CAM_FAR_CLIP(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_FAR_CLIP<float>(cam);
 	}
-	public static float GET_CAM_NEAR_DOF(Camera cam)
+	public static float GET_CAM_NEAR_DOF(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_NEAR_DOF<float>(cam);
 	}
-	public static float GET_CAM_FAR_DOF(Camera cam)
+	public static float GET_CAM_FAR_DOF(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_FAR_DOF<float>(cam);
 	}
-	public static float GET_CAM_DOF_STRENGTH(Camera cam)
+	public static float GET_CAM_DOF_STRENGTH(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_DOF_STRENGTH<float>(cam);
 	}
-	public static void SET_CAM_PARAMS(Camera cam, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fieldOfView, int p9, int p10, int p11)
+	public static void SET_CAM_PARAMS(uint cam, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fieldOfView, int p9, int p10, int p11)
 	{
 		NativeFunction.Natives.SET_CAM_PARAMS(cam, posX, posY, posZ, rotX, rotY, rotZ, fieldOfView, 0, p9, p10, p11);
 	}
 	/// <summary>
 	/// 	Sets the position of the cam.
 	/// </summary>
-	public static void SET_CAM_COORD(Camera cam, float posX, float posY, float posZ)
+	public static void SET_CAM_COORD(uint cam, float posX, float posY, float posZ)
 	{
 		NativeFunction.Natives.SET_CAM_COORD(cam, posX, posY, posZ);
 	}
@@ -2424,7 +2424,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Last parameter seems to always be set to 2.
 	/// </summary>
-	public static void SET_CAM_ROT(Camera cam, float rotX, float rotY, float rotZ, int rotationOrder)
+	public static void SET_CAM_ROT(uint cam, float rotX, float rotY, float rotZ, int rotationOrder)
 	{
 		NativeFunction.Natives.SET_CAM_ROT(cam, rotX, rotY, rotZ, rotationOrder);
 	}
@@ -2434,43 +2434,43 @@ public static class Natives
 	/// 	Min: 1.0f<br/>
 	/// 	Max: 130.0f
 	/// </summary>
-	public static void SET_CAM_FOV(Camera cam, float fieldOfView)
+	public static void SET_CAM_FOV(uint cam, float fieldOfView)
 	{
 		NativeFunction.Natives.SET_CAM_FOV(cam, fieldOfView);
 	}
-	public static void SET_CAM_NEAR_CLIP(Camera cam, float nearClip)
+	public static void SET_CAM_NEAR_CLIP(uint cam, float nearClip)
 	{
 		NativeFunction.Natives.SET_CAM_NEAR_CLIP(cam, nearClip);
 	}
-	public static void SET_CAM_FAR_CLIP(Camera cam, float farClip)
+	public static void SET_CAM_FAR_CLIP(uint cam, float farClip)
 	{
 		NativeFunction.Natives.SET_CAM_FAR_CLIP(cam, farClip);
 	}
-	public static void FORCE_CAM_FAR_CLIP(Camera cam, float p1)
+	public static void FORCE_CAM_FAR_CLIP(uint cam, float p1)
 	{
 		NativeFunction.Natives.FORCE_CAM_FAR_CLIP(cam, p1);
 	}
-	public static void SET_CAM_MOTION_BLUR_STRENGTH(Camera cam, float strength)
+	public static void SET_CAM_MOTION_BLUR_STRENGTH(uint cam, float strength)
 	{
 		NativeFunction.Natives.SET_CAM_MOTION_BLUR_STRENGTH(cam, strength);
 	}
-	public static void SET_CAM_NEAR_DOF(Camera cam, float nearDOF)
+	public static void SET_CAM_NEAR_DOF(uint cam, float nearDOF)
 	{
 		NativeFunction.Natives.SET_CAM_NEAR_DOF(cam, nearDOF);
 	}
-	public static void SET_CAM_FAR_DOF(Camera cam, float farDOF)
+	public static void SET_CAM_FAR_DOF(uint cam, float farDOF)
 	{
 		NativeFunction.Natives.SET_CAM_FAR_DOF(cam, farDOF);
 	}
-	public static void SET_CAM_DOF_STRENGTH(Camera cam, float dofStrength)
+	public static void SET_CAM_DOF_STRENGTH(uint cam, float dofStrength)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_STRENGTH(cam, dofStrength);
 	}
-	public static void SET_CAM_DOF_PLANES(Camera cam, float p1, float p2, float p3, float p4)
+	public static void SET_CAM_DOF_PLANES(uint cam, float p1, float p2, float p3, float p4)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_PLANES(cam, p1, p2, p3, p4);
 	}
-	public static void SET_CAM_USE_SHALLOW_DOF_MODE(Camera cam, bool toggle)
+	public static void SET_CAM_USE_SHALLOW_DOF_MODE(uint cam, bool toggle)
 	{
 		NativeFunction.Natives.SET_CAM_USE_SHALLOW_DOF_MODE(cam, toggle);
 	}
@@ -2485,7 +2485,7 @@ public static class Natives
 	{
 		NativeFunction.Natives.SET_USE_HI_DOF_ON_SYNCED_SCENE_THIS_UPDATE();
 	}
-	public static void SET_CAM_DOF_OVERRIDDEN_FOCUS_DISTANCE(Camera camera, float p1)
+	public static void SET_CAM_DOF_OVERRIDDEN_FOCUS_DISTANCE(uint camera, float p1)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_OVERRIDDEN_FOCUS_DISTANCE(camera, p1);
 	}
@@ -2497,57 +2497,57 @@ public static class Natives
 	/// 	This native has its name defined inside its codE<br/>
 	/// 	
 	/// </summary>
-	public static void SET_CAM_DOF_FNUMBER_OF_LENS(Camera camera, float p1)
+	public static void SET_CAM_DOF_FNUMBER_OF_LENS(uint camera, float p1)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_FNUMBER_OF_LENS(camera, p1);
 	}
 	/// <summary>
 	/// 	Native name labeled within its code
 	/// </summary>
-	public static void SET_CAM_DOF_FOCAL_LENGTH_MULTIPLIER(Camera camera, float multiplier)
+	public static void SET_CAM_DOF_FOCAL_LENGTH_MULTIPLIER(uint camera, float multiplier)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_FOCAL_LENGTH_MULTIPLIER(camera, multiplier);
 	}
 	/// <summary>
 	/// 	This native has a name defined inside its code
 	/// </summary>
-	public static void SET_CAM_DOF_FOCUS_DISTANCE_BIAS(Camera camera, float p1)
+	public static void SET_CAM_DOF_FOCUS_DISTANCE_BIAS(uint camera, float p1)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_FOCUS_DISTANCE_BIAS(camera, p1);
 	}
 	/// <summary>
 	/// 	This native has a name defined inside its code
 	/// </summary>
-	public static void SET_CAM_DOF_MAX_NEAR_IN_FOCUS_DISTANCE(Camera camera, float p1)
+	public static void SET_CAM_DOF_MAX_NEAR_IN_FOCUS_DISTANCE(uint camera, float p1)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_MAX_NEAR_IN_FOCUS_DISTANCE(camera, p1);
 	}
 	/// <summary>
 	/// 	This native has a name defined inside its code
 	/// </summary>
-	public static void SET_CAM_DOF_MAX_NEAR_IN_FOCUS_DISTANCE_BLEND_LEVEL(Camera camera, float p1)
+	public static void SET_CAM_DOF_MAX_NEAR_IN_FOCUS_DISTANCE_BLEND_LEVEL(uint camera, float p1)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_MAX_NEAR_IN_FOCUS_DISTANCE_BLEND_LEVEL(camera, p1);
 	}
 	/// <summary>
 	/// 	This native has a name defined inside its code
 	/// </summary>
-	public static void SET_CAM_DOF_SHOULD_KEEP_LOOK_AT_TARGET_IN_FOCUS(Camera camera, bool state)
+	public static void SET_CAM_DOF_SHOULD_KEEP_LOOK_AT_TARGET_IN_FOCUS(uint camera, bool state)
 	{
 		NativeFunction.Natives.SET_CAM_DOF_SHOULD_KEEP_LOOK_AT_TARGET_IN_FOCUS(camera, state);
 	}
 	/// <summary>
 	/// 	Last param determines if its relative to the Entity
 	/// </summary>
-	public static void ATTACH_CAM_TO_ENTITY(Camera cam, Entity entity, float xOffset, float yOffset, float zOffset, bool isRelative)
+	public static void ATTACH_CAM_TO_ENTITY(uint cam, Entity entity, float xOffset, float yOffset, float zOffset, bool isRelative)
 	{
 		NativeFunction.Natives.ATTACH_CAM_TO_ENTITY(cam, entity, xOffset, yOffset, zOffset, isRelative);
 	}
-	public static void ATTACH_CAM_TO_PED_BONE(Camera cam, Ped ped, int boneIndex, float x, float y, float z, bool heading)
+	public static void ATTACH_CAM_TO_PED_BONE(uint cam, Ped ped, int boneIndex, float x, float y, float z, bool heading)
 	{
 		NativeFunction.Natives.ATTACH_CAM_TO_PED_BONE(cam, ped, boneIndex, x, y, z, heading);
 	}
-	public static void HARD_ATTACH_CAM_TO_PED_BONE(Camera cam, Ped ped, int boneIndex, float p3, float p4, float p5, float p6, float p7, float p8, bool p9)
+	public static void HARD_ATTACH_CAM_TO_PED_BONE(uint cam, Ped ped, int boneIndex, float p3, float p4, float p5, float p6, float p7, float p8, bool p9)
 	{
 		NativeFunction.Natives.HARD_ATTACH_CAM_TO_PED_BONE(cam, ped, boneIndex, p3, p4, p5, p6, p7, p8, p9);
 	}
@@ -2556,18 +2556,18 @@ public static class Natives
 	/// 	<br/>
 	/// 	CAM::HARD_ATTACH_CAM_TO_ENTITY(Local_190.f_169, NETWORK::NET_TO_OBJ(Local_190.f_159), 0f, 0f, 180f, Var0, 1);
 	/// </summary>
-	public static void HARD_ATTACH_CAM_TO_ENTITY(Camera cam, Entity entity, float xRot, float yRot, float zRot, float xOffset, float yOffset, float zOffset, bool isRelative)
+	public static void HARD_ATTACH_CAM_TO_ENTITY(uint cam, Entity entity, float xRot, float yRot, float zRot, float xOffset, float yOffset, float zOffset, bool isRelative)
 	{
 		NativeFunction.Natives.HARD_ATTACH_CAM_TO_ENTITY(cam, entity, xRot, yRot, zRot, xOffset, yOffset, zOffset, isRelative);
 	}
 	/// <summary>
 	/// 	This native works with vehicles only. Bone indexes are usually given by this native GET_ENTITY_BONE_INDEX_BY_NAME.
 	/// </summary>
-	public static void ATTACH_CAM_TO_VEHICLE_BONE(Camera cam, Vehicle vehicle, int boneIndex, bool relativeRotation, float rotX, float rotY, float rotZ, float offsetX, float offsetY, float offsetZ, bool fixedDirection)
+	public static void ATTACH_CAM_TO_VEHICLE_BONE(uint cam, Vehicle vehicle, int boneIndex, bool relativeRotation, float rotX, float rotY, float rotZ, float offsetX, float offsetY, float offsetZ, bool fixedDirection)
 	{
 		NativeFunction.Natives.ATTACH_CAM_TO_VEHICLE_BONE(cam, vehicle, boneIndex, relativeRotation, rotX, rotY, rotZ, offsetX, offsetY, offsetZ, fixedDirection);
 	}
-	public static void DETACH_CAM(Camera cam)
+	public static void DETACH_CAM(uint cam)
 	{
 		NativeFunction.Natives.DETACH_CAM(cam);
 	}
@@ -2578,43 +2578,43 @@ public static class Natives
 	/// 	CAM::SET_CAM_INHERIT_ROLL_VEHICLE(l_544, getElem(2, &amp;l_525, 4));<br/>
 	/// 	In the exile1 script.
 	/// </summary>
-	public static void SET_CAM_INHERIT_ROLL_VEHICLE(Camera cam, bool p1)
+	public static void SET_CAM_INHERIT_ROLL_VEHICLE(uint cam, bool p1)
 	{
 		NativeFunction.Natives.SET_CAM_INHERIT_ROLL_VEHICLE(cam, p1);
 	}
-	public static void POINT_CAM_AT_COORD(Camera cam, float x, float y, float z)
+	public static void POINT_CAM_AT_COORD(uint cam, float x, float y, float z)
 	{
 		NativeFunction.Natives.POINT_CAM_AT_COORD(cam, x, y, z);
 	}
 	/// <summary>
 	/// 	p5 always seems to be 1 i.e TRUE
 	/// </summary>
-	public static void POINT_CAM_AT_ENTITY(Camera cam, Entity entity, float p2, float p3, float p4, bool p5)
+	public static void POINT_CAM_AT_ENTITY(uint cam, Entity entity, float p2, float p3, float p4, bool p5)
 	{
 		NativeFunction.Natives.POINT_CAM_AT_ENTITY(cam, entity, p2, p3, p4, p5);
 	}
 	/// <summary>
 	/// 	Parameters p0-p5 seems correct. The bool p6 is unknown, but through every X360 script it&amp;apos;s always 1. Please correct p0-p5 if any prove to be wrong. 
 	/// </summary>
-	public static void POINT_CAM_AT_PED_BONE(Camera cam, Ped ped, int boneIndex, float x, float y, float z, bool p6)
+	public static void POINT_CAM_AT_PED_BONE(uint cam, Ped ped, int boneIndex, float x, float y, float z, bool p6)
 	{
 		NativeFunction.Natives.POINT_CAM_AT_PED_BONE(cam, ped, boneIndex, x, y, z, p6);
 	}
-	public static void STOP_CAM_POINTING(Camera cam)
+	public static void STOP_CAM_POINTING(uint cam)
 	{
 		NativeFunction.Natives.STOP_CAM_POINTING(cam);
 	}
 	/// <summary>
 	/// 	Allows you to aim and shoot at the direction the camera is facing.
 	/// </summary>
-	public static void SET_CAM_AFFECTS_AIMING(Camera cam, bool toggle)
+	public static void SET_CAM_AFFECTS_AIMING(uint cam, bool toggle)
 	{
 		NativeFunction.Natives.SET_CAM_AFFECTS_AIMING(cam, toggle);
 	}
 	/// <summary>
 	/// 	Rotates the radar to match the camera&amp;apos;s Z rotation
 	/// </summary>
-	public static void SET_CAM_CONTROLS_MINI_MAP_HEADING(Camera cam, bool toggle)
+	public static void SET_CAM_CONTROLS_MINI_MAP_HEADING(uint cam, bool toggle)
 	{
 		NativeFunction.Natives.SET_CAM_CONTROLS_MINI_MAP_HEADING(cam, toggle);
 	}
@@ -2622,7 +2622,7 @@ public static class Natives
 	/// 	When set to true shadows appear more smooth but less detailed.<br/>
 	/// 	Set to false by default.
 	/// </summary>
-	public static void SET_CAM_IS_INSIDE_VEHICLE(Camera cam, bool toggle)
+	public static void SET_CAM_IS_INSIDE_VEHICLE(uint cam, bool toggle)
 	{
 		NativeFunction.Natives.SET_CAM_IS_INSIDE_VEHICLE(cam, toggle);
 	}
@@ -2633,13 +2633,13 @@ public static class Natives
 	/// <summary>
 	/// 	NOTE: Debugging functions are not present in the retail version of the game.
 	/// </summary>
-	public static void SET_CAM_DEBUG_NAME(Camera camera, string name)
+	public static void SET_CAM_DEBUG_NAME(uint camera, string name)
 	{
 		NativeFunction.Natives.SET_CAM_DEBUG_NAME(camera, name);
 	}
-	public static Camera GET_DEBUG_CAM()
+	public static uint GET_DEBUG_CAM()
 	{
-		return NativeFunction.Natives.GET_DEBUG_CAM<Camera>();
+		return NativeFunction.Natives.GET_DEBUG_CAM<uint>();
 	}
 	/// <summary>
 	/// 	I filled p1-p6 (the floats) as they are as other natives with 6 floats in a row are similar and I see no other method. So if a test from anyone proves them wrong please correct.<br/>
@@ -2650,7 +2650,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	p9 != 0 seems to override the rotation/pitch (bool?)
 	/// </summary>
-	public static void ADD_CAM_SPLINE_NODE(Camera camera, float x, float y, float z, float xRot, float yRot, float zRot, int length, int smoothingStyle, int rotationOrder)
+	public static void ADD_CAM_SPLINE_NODE(uint camera, float x, float y, float z, float xRot, float yRot, float zRot, int length, int smoothingStyle, int rotationOrder)
 	{
 		NativeFunction.Natives.ADD_CAM_SPLINE_NODE(camera, x, y, z, xRot, yRot, zRot, length, smoothingStyle, rotationOrder);
 	}
@@ -2659,7 +2659,7 @@ public static class Natives
 	/// 	p1 is the camera used to create the node.<br/>
 	/// 	p3 is always 3 in scripts. It might be smoothing style or rotation order.
 	/// </summary>
-	public static void ADD_CAM_SPLINE_NODE_USING_CAMERA_FRAME(Camera cam, Camera cam2, int length, int p3)
+	public static void ADD_CAM_SPLINE_NODE_USING_CAMERA_FRAME(uint cam, uint cam2, int length, int p3)
 	{
 		NativeFunction.Natives.ADD_CAM_SPLINE_NODE_USING_CAMERA_FRAME(cam, cam2, length, p3);
 	}
@@ -2668,18 +2668,18 @@ public static class Natives
 	/// 	p1 is the camera used to create the node.<br/>
 	/// 	p3 is always 3 in scripts. It might be smoothing style or rotation order.
 	/// </summary>
-	public static void ADD_CAM_SPLINE_NODE_USING_CAMERA(Camera cam, Camera cam2, int length, int p3)
+	public static void ADD_CAM_SPLINE_NODE_USING_CAMERA(uint cam, uint cam2, int length, int p3)
 	{
 		NativeFunction.Natives.ADD_CAM_SPLINE_NODE_USING_CAMERA(cam, cam2, length, p3);
 	}
 	/// <summary>
 	/// 	p2 is always 2 in scripts. It might be smoothing style or rotation order.
 	/// </summary>
-	public static void ADD_CAM_SPLINE_NODE_USING_GAMEPLAY_FRAME(Camera cam, int length, int p2)
+	public static void ADD_CAM_SPLINE_NODE_USING_GAMEPLAY_FRAME(uint cam, int length, int p2)
 	{
 		NativeFunction.Natives.ADD_CAM_SPLINE_NODE_USING_GAMEPLAY_FRAME(cam, length, p2);
 	}
-	public static void SET_CAM_SPLINE_PHASE(Camera cam, float p1)
+	public static void SET_CAM_SPLINE_PHASE(uint cam, float p1)
 	{
 		NativeFunction.Natives.SET_CAM_SPLINE_PHASE(cam, p1);
 	}
@@ -2688,64 +2688,64 @@ public static class Natives
 	/// 	<br/>
 	/// 	(returns 1.0f when no nodes has been added, reached end of non existing spline)
 	/// </summary>
-	public static float GET_CAM_SPLINE_PHASE(Camera cam)
+	public static float GET_CAM_SPLINE_PHASE(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_SPLINE_PHASE<float>(cam);
 	}
 	/// <summary>
 	/// 	I&amp;apos;m pretty sure the parameter is the camera as usual, but I am not certain so I&amp;apos;m going to leave it as is.
 	/// </summary>
-	public static float GET_CAM_SPLINE_NODE_PHASE(Camera cam)
+	public static float GET_CAM_SPLINE_NODE_PHASE(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_SPLINE_NODE_PHASE<float>(cam);
 	}
 	/// <summary>
 	/// 	I named p1 as timeDuration as it is obvious. I&amp;apos;m assuming tho it is ran in ms(Milliseconds) as usual.
 	/// </summary>
-	public static void SET_CAM_SPLINE_DURATION(Camera cam, int timeDuration)
+	public static void SET_CAM_SPLINE_DURATION(uint cam, int timeDuration)
 	{
 		NativeFunction.Natives.SET_CAM_SPLINE_DURATION(cam, timeDuration);
 	}
-	public static void SET_CAM_SPLINE_SMOOTHING_STYLE(Camera cam, int smoothingStyle)
+	public static void SET_CAM_SPLINE_SMOOTHING_STYLE(uint cam, int smoothingStyle)
 	{
 		NativeFunction.Natives.SET_CAM_SPLINE_SMOOTHING_STYLE(cam, smoothingStyle);
 	}
-	public static int GET_CAM_SPLINE_NODE_INDEX(Camera cam)
+	public static int GET_CAM_SPLINE_NODE_INDEX(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_SPLINE_NODE_INDEX<int>(cam);
 	}
-	public static void SET_CAM_SPLINE_NODE_EASE(Camera cam, int easingFunction, int p2, float p3)
+	public static void SET_CAM_SPLINE_NODE_EASE(uint cam, int easingFunction, int p2, float p3)
 	{
 		NativeFunction.Natives.SET_CAM_SPLINE_NODE_EASE(cam, easingFunction, p2, p3);
 	}
-	public static void SET_CAM_SPLINE_NODE_VELOCITY_SCALE(Camera cam, int p1, float scale)
+	public static void SET_CAM_SPLINE_NODE_VELOCITY_SCALE(uint cam, int p1, float scale)
 	{
 		NativeFunction.Natives.SET_CAM_SPLINE_NODE_VELOCITY_SCALE(cam, p1, scale);
 	}
-	public static void OVERRIDE_CAM_SPLINE_VELOCITY(Camera cam, int p1, float p2, float p3)
+	public static void OVERRIDE_CAM_SPLINE_VELOCITY(uint cam, int p1, float p2, float p3)
 	{
 		NativeFunction.Natives.OVERRIDE_CAM_SPLINE_VELOCITY(cam, p1, p2, p3);
 	}
 	/// <summary>
 	/// 	Max value for p1 is 15.
 	/// </summary>
-	public static void OVERRIDE_CAM_SPLINE_MOTION_BLUR(Camera cam, int p1, float p2, float p3)
+	public static void OVERRIDE_CAM_SPLINE_MOTION_BLUR(uint cam, int p1, float p2, float p3)
 	{
 		NativeFunction.Natives.OVERRIDE_CAM_SPLINE_MOTION_BLUR(cam, p1, p2, p3);
 	}
-	public static void SET_CAM_SPLINE_NODE_EXTRA_FLAGS(Camera cam, int p1, int flags)
+	public static void SET_CAM_SPLINE_NODE_EXTRA_FLAGS(uint cam, int p1, int flags)
 	{
 		NativeFunction.Natives.SET_CAM_SPLINE_NODE_EXTRA_FLAGS(cam, p1, flags);
 	}
-	public static bool IS_CAM_SPLINE_PAUSED(Camera cam)
+	public static bool IS_CAM_SPLINE_PAUSED(uint cam)
 	{
 		return NativeFunction.Natives.IS_CAM_SPLINE_PAUSED<bool>(cam);
 	}
-	public static void _INTERPOLATE_CAM_WITH_PARAMS(Camera camera, float camPosX, float camPosY, float camPosZ, float camRotX, float camRotY, float camRotZ, float fov, int duration, int posCurveType, int rotCurveType, int rotOrder, int fovCurveType)
+	public static void _INTERPOLATE_CAM_WITH_PARAMS(uint camera, float camPosX, float camPosY, float camPosZ, float camRotX, float camRotY, float camRotZ, float fov, int duration, int posCurveType, int rotCurveType, int rotOrder, int fovCurveType)
 	{
 		NativeFunction.Natives._INTERPOLATE_CAM_WITH_PARAMS(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType);
 	}
-	public static void _ACTIVATE_CAM_WITH_INTERP_AND_FOV_CURVE(Camera camTo, Camera camFrom, int duration, int easeLocation, int easeRotation, int easeFov)
+	public static void _ACTIVATE_CAM_WITH_INTERP_AND_FOV_CURVE(uint camTo, uint camFrom, int duration, int easeLocation, int easeRotation, int easeFov)
 	{
 		NativeFunction.Natives._ACTIVATE_CAM_WITH_INTERP_AND_FOV_CURVE(camTo, camFrom, duration, easeLocation, easeRotation, easeFov);
 	}
@@ -2753,11 +2753,11 @@ public static class Natives
 	/// 	Previous declaration void SET_CAM_ACTIVE_WITH_INTERP(Cam camTo, Cam camFrom, int duration, BOOL easeLocation, BOOL easeRotation) is completely wrong. The last two params are integers not BOOLs...<br/>
 	/// 	
 	/// </summary>
-	public static void SET_CAM_ACTIVE_WITH_INTERP(Camera camTo, Camera camFrom, int duration, int easeLocation, int easeRotation)
+	public static void SET_CAM_ACTIVE_WITH_INTERP(uint camTo, uint camFrom, int duration, int easeLocation, int easeRotation)
 	{
 		NativeFunction.Natives.SET_CAM_ACTIVE_WITH_INTERP(camTo, camFrom, duration, easeLocation, easeRotation);
 	}
-	public static bool IS_CAM_INTERPOLATING(Camera cam)
+	public static bool IS_CAM_INTERPOLATING(uint cam)
 	{
 		return NativeFunction.Natives.IS_CAM_INTERPOLATING<bool>(cam);
 	}
@@ -2778,7 +2778,7 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of cam shake types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/camShakeTypesCompact.json
 	/// </summary>
-	public static void SHAKE_CAM(Camera cam, string type, float amplitude)
+	public static void SHAKE_CAM(uint cam, string type, float amplitude)
 	{
 		NativeFunction.Natives.SHAKE_CAM(cam, type, amplitude);
 	}
@@ -2787,19 +2787,19 @@ public static class Natives
 	/// 	<br/>
 	/// 	CAM::ANIMATED_SHAKE_CAM(l_5069, &amp;quot;shake_cam_all@&amp;quot;, &amp;quot;light&amp;quot;, &amp;quot;&amp;quot;, 1f);
 	/// </summary>
-	public static void ANIMATED_SHAKE_CAM(Camera cam, string p1, string p2, string p3, float amplitude)
+	public static void ANIMATED_SHAKE_CAM(uint cam, string p1, string p2, string p3, float amplitude)
 	{
 		NativeFunction.Natives.ANIMATED_SHAKE_CAM(cam, p1, p2, p3, amplitude);
 	}
-	public static bool IS_CAM_SHAKING(Camera cam)
+	public static bool IS_CAM_SHAKING(uint cam)
 	{
 		return NativeFunction.Natives.IS_CAM_SHAKING<bool>(cam);
 	}
-	public static void SET_CAM_SHAKE_AMPLITUDE(Camera cam, float amplitude)
+	public static void SET_CAM_SHAKE_AMPLITUDE(uint cam, float amplitude)
 	{
 		NativeFunction.Natives.SET_CAM_SHAKE_AMPLITUDE(cam, amplitude);
 	}
-	public static void STOP_CAM_SHAKING(Camera cam, bool p1)
+	public static void STOP_CAM_SHAKING(uint cam, bool p1)
 	{
 		NativeFunction.Natives.STOP_CAM_SHAKING(cam, p1);
 	}
@@ -2856,19 +2856,19 @@ public static class Natives
 	/// 	<br/>
 	/// 	Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
 	/// </summary>
-	public static bool PLAY_CAM_ANIM(Camera cam, string animName, string animDictionary, float x, float y, float z, float xRot, float yRot, float zRot, bool p9, int p10)
+	public static bool PLAY_CAM_ANIM(uint cam, string animName, string animDictionary, float x, float y, float z, float xRot, float yRot, float zRot, bool p9, int p10)
 	{
 		return NativeFunction.Natives.PLAY_CAM_ANIM<bool>(cam, animName, animDictionary, x, y, z, xRot, yRot, zRot, p9, p10);
 	}
-	public static bool IS_CAM_PLAYING_ANIM(Camera cam, string animName, string animDictionary)
+	public static bool IS_CAM_PLAYING_ANIM(uint cam, string animName, string animDictionary)
 	{
 		return NativeFunction.Natives.IS_CAM_PLAYING_ANIM<bool>(cam, animName, animDictionary);
 	}
-	public static void SET_CAM_ANIM_CURRENT_PHASE(Camera cam, float phase)
+	public static void SET_CAM_ANIM_CURRENT_PHASE(uint cam, float phase)
 	{
 		NativeFunction.Natives.SET_CAM_ANIM_CURRENT_PHASE(cam, phase);
 	}
-	public static float GET_CAM_ANIM_CURRENT_PHASE(Camera cam)
+	public static float GET_CAM_ANIM_CURRENT_PHASE(uint cam)
 	{
 		return NativeFunction.Natives.GET_CAM_ANIM_CURRENT_PHASE<float>(cam);
 	}
@@ -2883,27 +2883,27 @@ public static class Natives
 	{
 		return NativeFunction.Natives.PLAY_SYNCHRONIZED_CAM_ANIM<bool>(0, 0, animName, animDictionary);
 	}
-	public static void SET_FLY_CAM_HORIZONTAL_RESPONSE(Camera cam, float p1, float p2, float p3)
+	public static void SET_FLY_CAM_HORIZONTAL_RESPONSE(uint cam, float p1, float p2, float p3)
 	{
 		NativeFunction.Natives.SET_FLY_CAM_HORIZONTAL_RESPONSE(cam, p1, p2, p3);
 	}
-	public static void SET_FLY_CAM_VERTICAL_RESPONSE(Camera cam, float p1, float p2, float p3)
+	public static void SET_FLY_CAM_VERTICAL_RESPONSE(uint cam, float p1, float p2, float p3)
 	{
 		NativeFunction.Natives.SET_FLY_CAM_VERTICAL_RESPONSE(cam, p1, p2, p3);
 	}
-	public static void SET_FLY_CAM_MAX_HEIGHT(Camera cam, float height)
+	public static void SET_FLY_CAM_MAX_HEIGHT(uint cam, float height)
 	{
 		NativeFunction.Natives.SET_FLY_CAM_MAX_HEIGHT(cam, height);
 	}
-	public static void SET_FLY_CAM_COORD_AND_CONSTRAIN(Camera cam, float x, float y, float z)
+	public static void SET_FLY_CAM_COORD_AND_CONSTRAIN(uint cam, float x, float y, float z)
 	{
 		NativeFunction.Natives.SET_FLY_CAM_COORD_AND_CONSTRAIN(cam, x, y, z);
 	}
-	public static void SET_FLY_CAM_VERTICAL_CONTROLS_THIS_UPDATE(Camera cam)
+	public static void SET_FLY_CAM_VERTICAL_CONTROLS_THIS_UPDATE(uint cam)
 	{
 		NativeFunction.Natives.SET_FLY_CAM_VERTICAL_CONTROLS_THIS_UPDATE(cam);
 	}
-	public static bool WAS_FLY_CAM_CONSTRAINED_ON_PREVIOUS_UDPATE(Camera cam)
+	public static bool WAS_FLY_CAM_CONSTRAINED_ON_PREVIOUS_UDPATE(uint cam)
 	{
 		return NativeFunction.Natives.WAS_FLY_CAM_CONSTRAINED_ON_PREVIOUS_UDPATE<bool>(cam);
 	}
@@ -19903,6 +19903,10 @@ public static class Natives
 	public static void _SET_FREEMODE_REPORT_DATA()
 	{
 		NativeFunction.Natives._SET_FREEMODE_REPORT_DATA(0, 0);
+	}
+	public static bool IS_OBJECT_REASSIGNMENT_IN_PROGRESS()
+	{
+		return NativeFunction.Natives.IS_OBJECT_REASSIGNMENT_IN_PROGRESS<bool>();
 	}
 	public static void USE_PLAYER_COLOUR_INSTEAD_OF_TEAM_COLOUR(bool toggle)
 	{
